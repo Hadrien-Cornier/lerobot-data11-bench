@@ -1,0 +1,26 @@
+[90mHint: A new version of huggingface_hub (2.0.0) is available! You are using version 1.33.0.
+To update, run: hf update[0m
+[90mHint: The `hf-cli` skill is not installed. Run `hf skills add -g` to teach your AI agents how to use the `hf` CLI.[0m
+
+Downloading bytes:           |  0.00B            [A
+Reconstructing (incomplete total...): |          |  0.00B /  0.00B            [A
+Fetching 8 files:   0%|          | 0/8 [00:00<?, ?it/s][A
+Reconstructing (incomplete total...):   0%|          |  0.00B /   640B            [A
+Reconstructing (incomplete total...):   0%|          |  0.00B /  907MB            [A
+Reconstructing (incomplete total...):   0%|          |  0.00B /  907MB            [A
+Reconstructing (incomplete total...):   0%|          | 4.62kB /  907MB            [A
+Reconstructing (incomplete total...):   0%|          | 5.29kB /  907MB            [A
+Reconstructing (incomplete total...):   0%|          | 7.16kB /  907MB            [A
+Reconstructing (incomplete total...):   0%|          | 8.73kB /  907MB            [A
+Downloading bytes: ██▏       |  196MB,   ???B/s  [A
+Reconstructing (incomplete total...):  30%|██▉       |  268MB /  907MB,   ???B/s  [A
+Downloading bytes: ██████▋   |  602MB,  183MB/s  [A
+Reconstructing (incomplete total...):  89%|████████▉ |  805MB /  907MB,  171MB/s  [A
+Fetching 8 files: 100%|██████████| 8/8 [00:02<00:00,  2.84it/s][AFetching 8 files: 100%|██████████| 8/8 [00:02<00:00,  2.84it/s]
+
+Downloading bytes: ██████████|  784MB,  310MB/s  [A
+Download complete: ██████████|  784MB,  310MB/s  [A
+Reconstruction complete: 100%|██████████|  907MB /  907MB,  344MB/s               [A[32m✓ Downloaded[0m
+  path: /work/hf_home/hub/models--lerobot--smolvla_base/snapshots/d9f33c94a60fb382c90dea2164c96845bd955e28
+Download complete: ██████████|  784MB,  310MB/s  
+Reconstruction complete: 100%|██████████|  907MB /  907MB,  344MB/s  

@@ -1,0 +1,775 @@
+{
+ "n_samples": 16,
+ "n_camera_frames": 48,
+ "n_equal": 48,
+ "rows": [
+  {
+   "episode_index": 11938,
+   "frame_index": 0,
+   "timestamp": 0.0,
+   "ts_minus_fi_over_fps": 0.0,
+   "observation.images.left_wrist": {
+    "equal": true,
+    "max_abs_diff": 0.0,
+    "ref_shape": [
+     3,
+     224,
+     224
+    ],
+    "got_shape": [
+     3,
+     224,
+     224
+    ]
+   },
+   "observation.images.right_wrist": {
+    "equal": true,
+    "max_abs_diff": 0.0,
+    "ref_shape": [
+     3,
+     224,
+     224
+    ],
+    "got_shape": [
+     3,
+     224,
+     224
+    ]
+   },
+   "observation.images.top": {
+    "equal": true,
+    "max_abs_diff": 0.0,
+    "ref_shape": [
+     3,
+     224,
+     224
+    ],
+    "got_shape": [
+     3,
+     224,
+     224
+    ]
+   }
+  },
+  {
+   "episode_index": 69623,
+   "frame_index": 2,
+   "timestamp": 0.06666667014360428,
+   "ts_minus_fi_over_fps": 3.4769376128229723e-09,
+   "observation.images.left_wrist": {
+    "equal": true,
+    "max_abs_diff": 0.0,
+    "ref_shape": [
+     3,
+     224,
+     224
+    ],
+    "got_shape": [
+     3,
+     224,
+     224
+    ]
+   },
+   "observation.images.right_wrist": {
+    "equal": true,
+    "max_abs_diff": 0.0,
+    "ref_shape": [
+     3,
+     224,
+     224
+    ],
+    "got_shape": [
+     3,
+     224,
+     224
+    ]
+   },
+   "observation.images.top": {
+    "equal": true,
+    "max_abs_diff": 0.0,
+    "ref_shape": [
+     3,
+     224,
+     224
+    ],
+    "got_shape": [
+     3,
+     224,
+     224
+    ]
+   }
+  },
+  {
+   "episode_index": 119372,
+   "frame_index": 0,
+   "timestamp": 0.0,
+   "ts_minus_fi_over_fps": 0.0,
+   "observation.images.left_wrist": {
+    "equal": true,
+    "max_abs_diff": 0.0,
+    "ref_shape": [
+     3,
+     224,
+     224
+    ],
+    "got_shape": [
+     3,
+     224,
+     224
+    ]
+   },
+   "observation.images.right_wrist": {
+    "equal": true,
+    "max_abs_diff": 0.0,
+    "ref_shape": [
+     3,
+     224,
+     224
+    ],
+    "got_shape": [
+     3,
+     224,
+     224
+    ]
+   },
+   "observation.images.top": {
+    "equal": true,
+    "max_abs_diff": 0.0,
+    "ref_shape": [
+     3,
+     224,
+     224
+    ],
+    "got_shape": [
+     3,
+     224,
+     224
+    ]
+   }
+  },
+  {
+   "episode_index": 23791,
+   "frame_index": 1,
+   "timestamp": 0.03333333507180214,
+   "ts_minus_fi_over_fps": 1.7384688064114862e-09,
+   "observation.images.left_wrist": {
+    "equal": true,
+    "max_abs_diff": 0.0,
+    "ref_shape": [
+     3,
+     224,
+     224
+    ],
+    "got_shape": [
+     3,
+     224,
+     224
+    ]
+   },
+   "observation.images.right_wrist": {
+    "equal": true,
+    "max_abs_diff": 0.0,
+    "ref_shape": [
+     3,
+     224,
+     224
+    ],
+    "got_shape": [
+     3,
+     224,
+     224
+    ]
+   },
+   "observation.images.top": {
+    "equal": true,
+    "max_abs_diff": 0.0,
+    "ref_shape": [
+     3,
+     224,
+     224
+    ],
+    "got_shape": [
+     3,
+     224,
+     224
+    ]
+   }
+  },
+  {
+   "episode_index": 59591,
+   "frame_index": 0,
+   "timestamp": 0.0,
+   "ts_minus_fi_over_fps": 0.0,
+   "observation.images.left_wrist": {
+    "equal": true,
+    "max_abs_diff": 0.0,
+    "ref_shape": [
+     3,
+     224,
+     224
+    ],
+    "got_shape": [
+     3,
+     224,
+     224
+    ]
+   },
+   "observation.images.right_wrist": {
+    "equal": true,
+    "max_abs_diff": 0.0,
+    "ref_shape": [
+     3,
+     224,
+     224
+    ],
+    "got_shape": [
+     3,
+     224,
+     224
+    ]
+   },
+   "observation.images.top": {
+    "equal": true,
+    "max_abs_diff": 0.0,
+    "ref_shape": [
+     3,
+     224,
+     224
+    ],
+    "got_shape": [
+     3,
+     224,
+     224
+    ]
+   }
+  },
+  {
+   "episode_index": 69623,
+   "frame_index": 1,
+   "timestamp": 0.03333333507180214,
+   "ts_minus_fi_over_fps": 1.7384688064114862e-09,
+   "observation.images.left_wrist": {
+    "equal": true,
+    "max_abs_diff": 0.0,
+    "ref_shape": [
+     3,
+     224,
+     224
+    ],
+    "got_shape": [
+     3,
+     224,
+     224
+    ]
+   },
+   "observation.images.right_wrist": {
+    "equal": true,
+    "max_abs_diff": 0.0,
+    "ref_shape": [
+     3,
+     224,
+     224
+    ],
+    "got_shape": [
+     3,
+     224,
+     224
+    ]
+   },
+   "observation.images.top": {
+    "equal": true,
+    "max_abs_diff": 0.0,
+    "ref_shape": [
+     3,
+     224,
+     224
+    ],
+    "got_shape": [
+     3,
+     224,
+     224
+    ]
+   }
+  },
+  {
+   "episode_index": 99505,
+   "frame_index": 0,
+   "timestamp": 0.0,
+   "ts_minus_fi_over_fps": 0.0,
+   "observation.images.left_wrist": {
+    "equal": true,
+    "max_abs_diff": 0.0,
+    "ref_shape": [
+     3,
+     224,
+     224
+    ],
+    "got_shape": [
+     3,
+     224,
+     224
+    ]
+   },
+   "observation.images.right_wrist": {
+    "equal": true,
+    "max_abs_diff": 0.0,
+    "ref_shape": [
+     3,
+     224,
+     224
+    ],
+    "got_shape": [
+     3,
+     224,
+     224
+    ]
+   },
+   "observation.images.top": {
+    "equal": true,
+    "max_abs_diff": 0.0,
+    "ref_shape": [
+     3,
+     224,
+     224
+    ],
+    "got_shape": [
+     3,
+     224,
+     224
+    ]
+   }
+  },
+  {
+   "episode_index": 5969,
+   "frame_index": 0,
+   "timestamp": 0.0,
+   "ts_minus_fi_over_fps": 0.0,
+   "observation.images.left_wrist": {
+    "equal": true,
+    "max_abs_diff": 0.0,
+    "ref_shape": [
+     3,
+     224,
+     224
+    ],
+    "got_shape": [
+     3,
+     224,
+     224
+    ]
+   },
+   "observation.images.right_wrist": {
+    "equal": true,
+    "max_abs_diff": 0.0,
+    "ref_shape": [
+     3,
+     224,
+     224
+    ],
+    "got_shape": [
+     3,
+     224,
+     224
+    ]
+   },
+   "observation.images.top": {
+    "equal": true,
+    "max_abs_diff": 0.0,
+    "ref_shape": [
+     3,
+     224,
+     224
+    ],
+    "got_shape": [
+     3,
+     224,
+     224
+    ]
+   }
+  },
+  {
+   "episode_index": 59591,
+   "frame_index": 1,
+   "timestamp": 0.03333333507180214,
+   "ts_minus_fi_over_fps": 1.7384688064114862e-09,
+   "observation.images.left_wrist": {
+    "equal": true,
+    "max_abs_diff": 0.0,
+    "ref_shape": [
+     3,
+     224,
+     224
+    ],
+    "got_shape": [
+     3,
+     224,
+     224
+    ]
+   },
+   "observation.images.right_wrist": {
+    "equal": true,
+    "max_abs_diff": 0.0,
+    "ref_shape": [
+     3,
+     224,
+     224
+    ],
+    "got_shape": [
+     3,
+     224,
+     224
+    ]
+   },
+   "observation.images.top": {
+    "equal": true,
+    "max_abs_diff": 0.0,
+    "ref_shape": [
+     3,
+     224,
+     224
+    ],
+    "got_shape": [
+     3,
+     224,
+     224
+    ]
+   }
+  },
+  {
+   "episode_index": 17869,
+   "frame_index": 0,
+   "timestamp": 0.0,
+   "ts_minus_fi_over_fps": 0.0,
+   "observation.images.left_wrist": {
+    "equal": true,
+    "max_abs_diff": 0.0,
+    "ref_shape": [
+     3,
+     224,
+     224
+    ],
+    "got_shape": [
+     3,
+     224,
+     224
+    ]
+   },
+   "observation.images.right_wrist": {
+    "equal": true,
+    "max_abs_diff": 0.0,
+    "ref_shape": [
+     3,
+     224,
+     224
+    ],
+    "got_shape": [
+     3,
+     224,
+     224
+    ]
+   },
+   "observation.images.top": {
+    "equal": true,
+    "max_abs_diff": 0.0,
+    "ref_shape": [
+     3,
+     224,
+     224
+    ],
+    "got_shape": [
+     3,
+     224,
+     224
+    ]
+   }
+  },
+  {
+   "episode_index": 119372,
+   "frame_index": 1,
+   "timestamp": 0.03333333507180214,
+   "ts_minus_fi_over_fps": 1.7384688064114862e-09,
+   "observation.images.left_wrist": {
+    "equal": true,
+    "max_abs_diff": 0.0,
+    "ref_shape": [
+     3,
+     224,
+     224
+    ],
+    "got_shape": [
+     3,
+     224,
+     224
+    ]
+   },
+   "observation.images.right_wrist": {
+    "equal": true,
+    "max_abs_diff": 0.0,
+    "ref_shape": [
+     3,
+     224,
+     224
+    ],
+    "got_shape": [
+     3,
+     224,
+     224
+    ]
+   },
+   "observation.images.top": {
+    "equal": true,
+    "max_abs_diff": 0.0,
+    "ref_shape": [
+     3,
+     224,
+     224
+    ],
+    "got_shape": [
+     3,
+     224,
+     224
+    ]
+   }
+  },
+  {
+   "episode_index": 49663,
+   "frame_index": 1,
+   "timestamp": 0.03333333507180214,
+   "ts_minus_fi_over_fps": 1.7384688064114862e-09,
+   "observation.images.left_wrist": {
+    "equal": true,
+    "max_abs_diff": 0.0,
+    "ref_shape": [
+     3,
+     224,
+     224
+    ],
+    "got_shape": [
+     3,
+     224,
+     224
+    ]
+   },
+   "observation.images.right_wrist": {
+    "equal": true,
+    "max_abs_diff": 0.0,
+    "ref_shape": [
+     3,
+     224,
+     224
+    ],
+    "got_shape": [
+     3,
+     224,
+     224
+    ]
+   },
+   "observation.images.top": {
+    "equal": true,
+    "max_abs_diff": 0.0,
+    "ref_shape": [
+     3,
+     224,
+     224
+    ],
+    "got_shape": [
+     3,
+     224,
+     224
+    ]
+   }
+  },
+  {
+   "episode_index": 109414,
+   "frame_index": 0,
+   "timestamp": 0.0,
+   "ts_minus_fi_over_fps": 0.0,
+   "observation.images.left_wrist": {
+    "equal": true,
+    "max_abs_diff": 0.0,
+    "ref_shape": [
+     3,
+     224,
+     224
+    ],
+    "got_shape": [
+     3,
+     224,
+     224
+    ]
+   },
+   "observation.images.right_wrist": {
+    "equal": true,
+    "max_abs_diff": 0.0,
+    "ref_shape": [
+     3,
+     224,
+     224
+    ],
+    "got_shape": [
+     3,
+     224,
+     224
+    ]
+   },
+   "observation.images.top": {
+    "equal": true,
+    "max_abs_diff": 0.0,
+    "ref_shape": [
+     3,
+     224,
+     224
+    ],
+    "got_shape": [
+     3,
+     224,
+     224
+    ]
+   }
+  },
+  {
+   "episode_index": 119372,
+   "frame_index": 2,
+   "timestamp": 0.06666667014360428,
+   "ts_minus_fi_over_fps": 3.4769376128229723e-09,
+   "observation.images.left_wrist": {
+    "equal": true,
+    "max_abs_diff": 0.0,
+    "ref_shape": [
+     3,
+     224,
+     224
+    ],
+    "got_shape": [
+     3,
+     224,
+     224
+    ]
+   },
+   "observation.images.right_wrist": {
+    "equal": true,
+    "max_abs_diff": 0.0,
+    "ref_shape": [
+     3,
+     224,
+     224
+    ],
+    "got_shape": [
+     3,
+     224,
+     224
+    ]
+   },
+   "observation.images.top": {
+    "equal": true,
+    "max_abs_diff": 0.0,
+    "ref_shape": [
+     3,
+     224,
+     224
+    ],
+    "got_shape": [
+     3,
+     224,
+     224
+    ]
+   }
+  },
+  {
+   "episode_index": 49663,
+   "frame_index": 0,
+   "timestamp": 0.0,
+   "ts_minus_fi_over_fps": 0.0,
+   "observation.images.left_wrist": {
+    "equal": true,
+    "max_abs_diff": 0.0,
+    "ref_shape": [
+     3,
+     224,
+     224
+    ],
+    "got_shape": [
+     3,
+     224,
+     224
+    ]
+   },
+   "observation.images.right_wrist": {
+    "equal": true,
+    "max_abs_diff": 0.0,
+    "ref_shape": [
+     3,
+     224,
+     224
+    ],
+    "got_shape": [
+     3,
+     224,
+     224
+    ]
+   },
+   "observation.images.top": {
+    "equal": true,
+    "max_abs_diff": 0.0,
+    "ref_shape": [
+     3,
+     224,
+     224
+    ],
+    "got_shape": [
+     3,
+     224,
+     224
+    ]
+   }
+  },
+  {
+   "episode_index": 69623,
+   "frame_index": 0,
+   "timestamp": 0.0,
+   "ts_minus_fi_over_fps": 0.0,
+   "observation.images.left_wrist": {
+    "equal": true,
+    "max_abs_diff": 0.0,
+    "ref_shape": [
+     3,
+     224,
+     224
+    ],
+    "got_shape": [
+     3,
+     224,
+     224
+    ]
+   },
+   "observation.images.right_wrist": {
+    "equal": true,
+    "max_abs_diff": 0.0,
+    "ref_shape": [
+     3,
+     224,
+     224
+    ],
+    "got_shape": [
+     3,
+     224,
+     224
+    ]
+   },
+   "observation.images.top": {
+    "equal": true,
+    "max_abs_diff": 0.0,
+    "ref_shape": [
+     3,
+     224,
+     224
+    ],
+    "got_shape": [
+     3,
+     224,
+     224
+    ]
+   }
+  }
+ ]
+}

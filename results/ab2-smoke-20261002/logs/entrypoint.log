@@ -1,0 +1,39 @@
+== DATA-11 ab2 job ab2-smoke-20261002 start 2026-10-02T16:13:24Z SMOKE=1 host=j-hadriencornier-6abfd81d404719ba37625919-4fto228t-0379f-8fszd
+HF_TOKEN present (value not shown); results -> dataset hadriencornier/lerobot-data11-bench:results/ab2-smoke-20261002
+attempt marker attempts/6abfd81d404719ba37625919 recorded
+system ffmpeg: ffmpeg version 7.1.5-0+deb13u1 Copyright (c) 2000-2026 the FFmpeg developers
+== stage system_deps: ok (30s, cgroup peak 842 MB)
+bundle checksums OK
+== stage bundle: ok (1s, cgroup peak 842 MB)
+
+[notice] A new release of pip is available: 25.0.1 -> 26.2.1
+[notice] To update, run: pip install --upgrade pip
+patching file src/lerobot/streaming/manifest.py
+patching file src/lerobot/streaming/mp4.py
+patching file tests/datasets/test_episode_video_streaming.py
+patching file src/lerobot/datasets/streaming_dataset.py
+patching file tests/datasets/test_streaming_production.py
+Using Python 3.12.15 environment at: /work/venv_base
+base venv /work/venv_base/lib/python3.12/site-packages/lerobot/__init__.py 2.11.0+cpu 0.11.1+cpu probe_patch False tfx_patch False
+Using Python 3.12.15 environment at: /work/venv_probe
+probe venv /work/venv_probe/lib/python3.12/site-packages/lerobot/__init__.py 2.11.0+cpu 0.11.1+cpu probe_patch True tfx_patch False
+Using Python 3.12.15 environment at: /work/venv_tfx
+tfx venv /work/venv_tfx/lib/python3.12/site-packages/lerobot/__init__.py 2.11.0+cpu 0.11.1+cpu probe_patch False tfx_patch True
+== stage python_env: ok (71s, cgroup peak 3825 MB)
+uploaded results/ab2-smoke-20261002 (setup done)
+== stage ab2 start 2026-10-02T16:15:10Z
+[16:15:20] eq BASE@default: ok 2.7s
+[16:15:23] eq PROBE@64K: ok 2.6s
+[16:15:26] eq PROBE@256K: ok 2.4s
+[16:15:29] eq PROBE@default: ok 2.3s
+[16:15:34] probe BASE@default r0: ok 9.8 files/s 168 MB reads 1.00 non-faststart 0
+[16:15:38] probe PROBE@64K r0: ok 11.9 files/s 8 MB reads 2.00 non-faststart 0
+[16:15:41] probe PROBE@256K r0: ok 12.1 files/s 12 MB reads 1.23 non-faststart 0
+[16:15:45] probe PROBE@default r0: ok 12.0 files/s 21 MB reads 1.00 non-faststart 0
+tf_digest {"fixed_BASE_vs_TFX": {"a": 4733, "b": 4733, "common": 4733, "identical_samples": 4733, "all_identical": true}, "random_BASE_twice": {"a": 4733, "b": 4733, "common": 4733, "identical_samples": 4733, "all_identical": true}, "random_TFX_twice": {"a": 4733, "b": 4733, "common": 4733, "identical_samples": 0, "all_identical": false}}
+[16:21:47] BASE_D6T_r0: ok sps 83.07866257150205 cpu/sample 15.478746031977613
+[16:23:23] TFX_D6T_r0: ok sps 113.03494921340686 cpu/sample 30.32009533713398
+== stage ab2: ok (493s, cgroup peak 6355 MB)
+uploaded results/ab2-smoke-20261002 (after ab2)
+== done 2026-10-02T16:23:25Z: /results/ab2-smoke-20261002
+== exit code 0 at 2026-10-02T16:23:25Z

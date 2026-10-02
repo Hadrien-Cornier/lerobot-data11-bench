@@ -1,0 +1,330 @@
+probe-run BitRobot/HIW-500-LeRobot PATCH 8 files ok 1.2s
+probe-run BitRobot/HIW-500-LeRobot A1M 8 files ok 1.5s
+probe-run BitRobot/HIW-500-LeRobot BASE 8 files ok 1.1s
+probe-run BitRobot/HIW-500-LeRobot BASE 128 files ok 52.1s
+{"repo": "BitRobot/HIW-500-LeRobot", "rep": 0, "order": 0, "arm": "BASE", "status": "ok", "error": null, "files": 128, "wall_s": 52.05179817136377, "files_per_s": 2.459088917132147, "kib_per_file": 33303.55969238281, "requests_per_file": 2.1953125, "round_trips_per_file": 2.1953125, "tail_hit": 0, "faststart": 97, "file_s_median": 1.352946413680911}
+probe-run BitRobot/HIW-500-LeRobot PATCH 128 files ok 5.9s
+{"repo": "BitRobot/HIW-500-LeRobot", "rep": 0, "order": 1, "arm": "PATCH", "status": "ok", "error": null, "files": 128, "wall_s": 5.932527671568096, "files_per_s": 21.575963414961507, "kib_per_file": 523.7454147338867, "requests_per_file": 1.2109375, "round_trips_per_file": 1.2109375, "tail_hit": 0, "faststart": 101, "file_s_median": 0.439129919745028}
+probe-run BitRobot/HIW-500-LeRobot A1M 128 files ok 8.2s
+{"repo": "BitRobot/HIW-500-LeRobot", "rep": 0, "order": 2, "arm": "A1M", "status": "ok", "error": null, "files": 128, "wall_s": 8.180253478698432, "files_per_s": 15.64743688362652, "kib_per_file": 1536.0, "requests_per_file": 2, "round_trips_per_file": 1, "tail_hit": 20, "faststart": 108, "file_s_median": 0.7672832100652158}
+probe-run BitRobot/HIW-500-LeRobot A3M 128 files ok 8.7s
+{"repo": "BitRobot/HIW-500-LeRobot", "rep": 0, "order": 3, "arm": "A3M", "status": "ok", "error": null, "files": 128, "wall_s": 8.74045929685235, "files_per_s": 14.644539337434576, "kib_per_file": 3584.0, "requests_per_file": 2, "round_trips_per_file": 1, "tail_hit": 25, "faststart": 103, "file_s_median": 0.8317938395775855}
+probe-run BitRobot/HIW-500-LeRobot A1M-c32 128 files ok 6.2s
+{"repo": "BitRobot/HIW-500-LeRobot", "rep": 0, "order": 4, "arm": "A1M-c32", "status": "ok", "error": null, "files": 128, "wall_s": 6.205356178805232, "files_per_s": 20.627341334119016, "kib_per_file": 1536.0, "requests_per_file": 2, "round_trips_per_file": 1, "tail_hit": 29, "faststart": 99, "file_s_median": 0.5094190174713731}
+probe-run BitRobot/HIW-500-LeRobot PATCH 128 files ok 5.7s
+{"repo": "BitRobot/HIW-500-LeRobot", "rep": 1, "order": 0, "arm": "PATCH", "status": "ok", "error": null, "files": 128, "wall_s": 5.678920445032418, "files_per_s": 22.539495180279694, "kib_per_file": 526.8720550537109, "requests_per_file": 1.234375, "round_trips_per_file": 1.234375, "tail_hit": 0, "faststart": 98, "file_s_median": 0.4597625220194459}
+probe-run BitRobot/HIW-500-LeRobot A1M 128 files ok 7.6s
+{"repo": "BitRobot/HIW-500-LeRobot", "rep": 1, "order": 1, "arm": "A1M", "status": "ok", "error": null, "files": 128, "wall_s": 7.599806810729206, "files_per_s": 16.842533394308525, "kib_per_file": 1536.0, "requests_per_file": 2, "round_trips_per_file": 1, "tail_hit": 31, "faststart": 97, "file_s_median": 0.7243906753137708}
+probe-run BitRobot/HIW-500-LeRobot A3M 128 files ok 10.1s
+{"repo": "BitRobot/HIW-500-LeRobot", "rep": 1, "order": 2, "arm": "A3M", "status": "ok", "error": null, "files": 128, "wall_s": 10.120282118208706, "files_per_s": 12.647868755525963, "kib_per_file": 3584.0, "requests_per_file": 2, "round_trips_per_file": 1, "tail_hit": 27, "faststart": 101, "file_s_median": 0.9766639829613268}
+probe-run BitRobot/HIW-500-LeRobot A1M-c32 128 files ok 7.7s
+{"repo": "BitRobot/HIW-500-LeRobot", "rep": 1, "order": 3, "arm": "A1M-c32", "status": "ok", "error": null, "files": 128, "wall_s": 7.7459699315950274, "files_per_s": 16.52472203357012, "kib_per_file": 1536.0, "requests_per_file": 2, "round_trips_per_file": 1, "tail_hit": 28, "faststart": 100, "file_s_median": 0.6601033345796168}
+probe-run BitRobot/HIW-500-LeRobot BASE 128 files ok 42.8s
+{"repo": "BitRobot/HIW-500-LeRobot", "rep": 1, "order": 4, "arm": "BASE", "status": "ok", "error": null, "files": 128, "wall_s": 42.81869519222528, "files_per_s": 2.9893484475734646, "kib_per_file": 27446.345024108887, "requests_per_file": 1.953125, "round_trips_per_file": 1.953125, "tail_hit": 0, "faststart": 103, "file_s_median": 1.443475412670523}
+probe-run BitRobot/HIW-500-LeRobot A1M 128 files ok 7.6s
+{"repo": "BitRobot/HIW-500-LeRobot", "rep": 2, "order": 0, "arm": "A1M", "status": "ok", "error": null, "files": 128, "wall_s": 7.570080677047372, "files_per_s": 16.908670522904522, "kib_per_file": 1536.0, "requests_per_file": 2, "round_trips_per_file": 1, "tail_hit": 25, "faststart": 103, "file_s_median": 0.7130799740552902}
+probe-run BitRobot/HIW-500-LeRobot A3M 128 files ok 10.2s
+{"repo": "BitRobot/HIW-500-LeRobot", "rep": 2, "order": 1, "arm": "A3M", "status": "ok", "error": null, "files": 128, "wall_s": 10.18583511095494, "files_per_s": 12.566470849536437, "kib_per_file": 3584.0, "requests_per_file": 2, "round_trips_per_file": 1, "tail_hit": 23, "faststart": 105, "file_s_median": 0.9129696316085756}
+probe-run BitRobot/HIW-500-LeRobot A1M-c32 128 files ok 7.5s
+{"repo": "BitRobot/HIW-500-LeRobot", "rep": 2, "order": 2, "arm": "A1M-c32", "status": "ok", "error": null, "files": 128, "wall_s": 7.500020360574126, "files_per_s": 17.06662033517488, "kib_per_file": 1536.0, "requests_per_file": 2, "round_trips_per_file": 1, "tail_hit": 26, "faststart": 102, "file_s_median": 0.6721027255989611}
+probe-run BitRobot/HIW-500-LeRobot BASE 128 files ok 47.4s
+{"repo": "BitRobot/HIW-500-LeRobot", "rep": 2, "order": 3, "arm": "BASE", "status": "ok", "error": null, "files": 128, "wall_s": 47.403341909870505, "files_per_s": 2.700231562647429, "kib_per_file": 31706.813194274902, "requests_per_file": 2.125, "round_trips_per_file": 2.125, "tail_hit": 0, "faststart": 99, "file_s_median": 1.292178824543953}
+probe-run BitRobot/HIW-500-LeRobot PATCH 128 files ok 6.0s
+{"repo": "BitRobot/HIW-500-LeRobot", "rep": 2, "order": 4, "arm": "PATCH", "status": "ok", "error": null, "files": 128, "wall_s": 5.960113553330302, "files_per_s": 21.476100892151308, "kib_per_file": 530.1023788452148, "requests_per_file": 1.2734375, "round_trips_per_file": 1.2734375, "tail_hit": 0, "faststart": 93, "file_s_median": 0.4675650610588491}
+probe-run allenai/MolmoAct2-BimanualYAM-Dataset PATCH 8 files ok 1.6s
+probe-run allenai/MolmoAct2-BimanualYAM-Dataset A1M 8 files ok 1.9s
+probe-run allenai/MolmoAct2-BimanualYAM-Dataset BASE 8 files ok 3.5s
+probe-run allenai/MolmoAct2-BimanualYAM-Dataset PATCH 128 files ok 10.9s
+{"repo": "allenai/MolmoAct2-BimanualYAM-Dataset", "rep": 0, "order": 0, "arm": "PATCH", "status": "ok", "error": null, "files": 128, "wall_s": 10.899119111709297, "files_per_s": 11.744068368101898, "kib_per_file": 513.1822357177734, "requests_per_file": 1.046875, "round_trips_per_file": 1.046875, "tail_hit": 0, "faststart": 123, "file_s_median": 0.9810503511689603}
+probe-run allenai/MolmoAct2-BimanualYAM-Dataset A1M 128 files ok 12.8s
+{"repo": "allenai/MolmoAct2-BimanualYAM-Dataset", "rep": 0, "order": 1, "arm": "A1M", "status": "ok", "error": null, "files": 128, "wall_s": 12.796585545875132, "files_per_s": 10.002668254053104, "kib_per_file": 1536.1442337036133, "requests_per_file": 2.0078125, "round_trips_per_file": 1.0078125, "tail_hit": 12, "faststart": 116, "file_s_median": 1.2454934283159673}
+probe-run allenai/MolmoAct2-BimanualYAM-Dataset A3M 128 files ok 14.9s
+{"repo": "allenai/MolmoAct2-BimanualYAM-Dataset", "rep": 0, "order": 2, "arm": "A3M", "status": "ok", "error": null, "files": 128, "wall_s": 14.909508904442191, "files_per_s": 8.585125158741025, "kib_per_file": 3585.358528137207, "requests_per_file": 2.0078125, "round_trips_per_file": 1.0078125, "tail_hit": 6, "faststart": 122, "file_s_median": 1.450472719501704}
+probe-run allenai/MolmoAct2-BimanualYAM-Dataset A1M-c32 128 files ok 11.5s
+{"repo": "allenai/MolmoAct2-BimanualYAM-Dataset", "rep": 0, "order": 3, "arm": "A1M-c32", "status": "ok", "error": null, "files": 128, "wall_s": 11.472471971064806, "files_per_s": 11.157142098305759, "kib_per_file": 1536.2506790161133, "requests_per_file": 2.0078125, "round_trips_per_file": 1.0078125, "tail_hit": 9, "faststart": 119, "file_s_median": 1.0773560334928334}
+probe-run allenai/MolmoAct2-BimanualYAM-Dataset BASE 128 files ok 19.8s
+{"repo": "allenai/MolmoAct2-BimanualYAM-Dataset", "rep": 0, "order": 4, "arm": "BASE", "status": "ok", "error": null, "files": 128, "wall_s": 19.76552507188171, "files_per_s": 6.475922068070524, "kib_per_file": 8390.391151428223, "requests_per_file": 1.1796875, "round_trips_per_file": 1.1796875, "tail_hit": 0, "faststart": 123, "file_s_median": 1.5628680787049234}
+probe-run allenai/MolmoAct2-BimanualYAM-Dataset A1M 128 files ok 11.9s
+{"repo": "allenai/MolmoAct2-BimanualYAM-Dataset", "rep": 1, "order": 0, "arm": "A1M", "status": "ok", "error": null, "files": 128, "wall_s": 11.910281435586512, "files_per_s": 10.747017246590929, "kib_per_file": 1536.0, "requests_per_file": 2, "round_trips_per_file": 1, "tail_hit": 8, "faststart": 120, "file_s_median": 1.061018689069897}
+probe-run allenai/MolmoAct2-BimanualYAM-Dataset A3M 128 files ok 14.6s
+{"repo": "allenai/MolmoAct2-BimanualYAM-Dataset", "rep": 1, "order": 1, "arm": "A3M", "status": "ok", "error": null, "files": 128, "wall_s": 14.589238428510725, "files_per_s": 8.773590247854102, "kib_per_file": 3584.0, "requests_per_file": 2, "round_trips_per_file": 1, "tail_hit": 10, "faststart": 118, "file_s_median": 1.4118107613176107}
+probe-run allenai/MolmoAct2-BimanualYAM-Dataset A1M-c32 128 files ok 11.6s
+{"repo": "allenai/MolmoAct2-BimanualYAM-Dataset", "rep": 1, "order": 2, "arm": "A1M-c32", "status": "ok", "error": null, "files": 128, "wall_s": 11.559455250389874, "files_per_s": 11.07318616901803, "kib_per_file": 1536.2693634033203, "requests_per_file": 2.015625, "round_trips_per_file": 1.015625, "tail_hit": 8, "faststart": 120, "file_s_median": 1.0287296958267689}
+probe-run allenai/MolmoAct2-BimanualYAM-Dataset BASE 128 files ok 20.9s
+{"repo": "allenai/MolmoAct2-BimanualYAM-Dataset", "rep": 1, "order": 3, "arm": "BASE", "status": "ok", "error": null, "files": 128, "wall_s": 20.86513350252062, "files_per_s": 6.1346360417265915, "kib_per_file": 9578.35164642334, "requests_per_file": 1.2734375, "round_trips_per_file": 1.2734375, "tail_hit": 0, "faststart": 118, "file_s_median": 1.5115265822969377}
+probe-run allenai/MolmoAct2-BimanualYAM-Dataset PATCH 128 files ok 9.1s
+{"repo": "allenai/MolmoAct2-BimanualYAM-Dataset", "rep": 1, "order": 4, "arm": "PATCH", "status": "ok", "error": null, "files": 128, "wall_s": 9.066082219593227, "files_per_s": 14.11855715618505, "kib_per_file": 518.088005065918, "requests_per_file": 1.0859375, "round_trips_per_file": 1.0859375, "tail_hit": 0, "faststart": 119, "file_s_median": 0.8302693087607622}
+probe-run allenai/MolmoAct2-BimanualYAM-Dataset A3M 128 files ok 15.3s
+{"repo": "allenai/MolmoAct2-BimanualYAM-Dataset", "rep": 2, "order": 0, "arm": "A3M", "status": "ok", "error": null, "files": 128, "wall_s": 15.291814183816314, "files_per_s": 8.370491457806583, "kib_per_file": 3587.0521850585938, "requests_per_file": 2.03125, "round_trips_per_file": 1.03125, "tail_hit": 9, "faststart": 119, "file_s_median": 1.3919618986546993}
+probe-run allenai/MolmoAct2-BimanualYAM-Dataset A1M-c32 128 files ok 9.8s
+{"repo": "allenai/MolmoAct2-BimanualYAM-Dataset", "rep": 2, "order": 1, "arm": "A1M-c32", "status": "ok", "error": null, "files": 128, "wall_s": 9.752274937927723, "files_per_s": 13.125142678473228, "kib_per_file": 1538.4877471923828, "requests_per_file": 2.015625, "round_trips_per_file": 1.015625, "tail_hit": 13, "faststart": 115, "file_s_median": 0.9972435608506203}
+probe-run allenai/MolmoAct2-BimanualYAM-Dataset BASE 128 files ok 18.7s
+{"repo": "allenai/MolmoAct2-BimanualYAM-Dataset", "rep": 2, "order": 2, "arm": "BASE", "status": "ok", "error": null, "files": 128, "wall_s": 18.67767162900418, "files_per_s": 6.8531025998567925, "kib_per_file": 8788.583984375, "requests_per_file": 1.2265625, "round_trips_per_file": 1.2265625, "tail_hit": 0, "faststart": 120, "file_s_median": 1.3473589774221182}
+probe-run allenai/MolmoAct2-BimanualYAM-Dataset PATCH 128 files ok 8.3s
+{"repo": "allenai/MolmoAct2-BimanualYAM-Dataset", "rep": 2, "order": 3, "arm": "PATCH", "status": "ok", "error": null, "files": 128, "wall_s": 8.27273656334728, "files_per_s": 15.472510096249115, "kib_per_file": 523.8124389648438, "requests_per_file": 1.09375, "round_trips_per_file": 1.09375, "tail_hit": 0, "faststart": 117, "file_s_median": 0.8369903536513448}
+probe-run allenai/MolmoAct2-BimanualYAM-Dataset A1M 128 files ok 10.7s
+{"repo": "allenai/MolmoAct2-BimanualYAM-Dataset", "rep": 2, "order": 4, "arm": "A1M", "status": "ok", "error": null, "files": 128, "wall_s": 10.704941125586629, "files_per_s": 11.957095186077973, "kib_per_file": 1536.2371368408203, "requests_per_file": 2.015625, "round_trips_per_file": 1.015625, "tail_hit": 11, "faststart": 117, "file_s_median": 1.0875527071766555}
+probe-run cadene/agibot_alpha_v30 PATCH 8 files ok 2.0s
+probe-run cadene/agibot_alpha_v30 A1M 8 files ok 1.5s
+probe-run cadene/agibot_alpha_v30 BASE 8 files ok 10.0s
+probe-run cadene/agibot_alpha_v30 A1M 128 files ok 12.7s
+{"repo": "cadene/agibot_alpha_v30", "rep": 0, "order": 0, "arm": "A1M", "status": "ok", "error": null, "files": 128, "wall_s": 12.694228762760758, "files_per_s": 10.083322302769213, "kib_per_file": 1740.784408569336, "requests_per_file": 2.140625, "round_trips_per_file": 1.140625, "tail_hit": 110, "faststart": 0, "file_s_median": 1.2834795620292425}
+probe-run cadene/agibot_alpha_v30 A3M 128 files ok 14.9s
+{"repo": "cadene/agibot_alpha_v30", "rep": 0, "order": 1, "arm": "A3M", "status": "ok", "error": null, "files": 128, "wall_s": 14.868947125039995, "files_per_s": 8.608544971179706, "kib_per_file": 3612.293083190918, "requests_per_file": 2.0078125, "round_trips_per_file": 1.0078125, "tail_hit": 127, "faststart": 0, "file_s_median": 1.5675758183933794}
+probe-run cadene/agibot_alpha_v30 A1M-c32 128 files ok 13.5s
+{"repo": "cadene/agibot_alpha_v30", "rep": 0, "order": 2, "arm": "A1M-c32", "status": "ok", "error": null, "files": 128, "wall_s": 13.452866556122899, "files_per_s": 9.514700786334824, "kib_per_file": 1767.774429321289, "requests_per_file": 2.171875, "round_trips_per_file": 1.171875, "tail_hit": 106, "faststart": 0, "file_s_median": 1.3061997243203223}
+probe-run cadene/agibot_alpha_v30 BASE 128 files ok 154.7s
+{"repo": "cadene/agibot_alpha_v30", "rep": 0, "order": 3, "arm": "BASE", "status": "ok", "error": null, "files": 128, "wall_s": 154.72979279235005, "files_per_s": 0.8272485711383206, "kib_per_file": 127123.02061462402, "requests_per_file": 5.984375, "round_trips_per_file": 5.984375, "tail_hit": 0, "faststart": 0, "file_s_median": 19.07625542487949}
+probe-run cadene/agibot_alpha_v30 PATCH 128 files ok 14.2s
+{"repo": "cadene/agibot_alpha_v30", "rep": 0, "order": 4, "arm": "PATCH", "status": "ok", "error": null, "files": 128, "wall_s": 14.2211958700791, "files_per_s": 9.000649535339537, "kib_per_file": 966.7333221435547, "requests_per_file": 2, "round_trips_per_file": 2, "tail_hit": 0, "faststart": 0, "file_s_median": 1.4777199546806514}
+probe-run cadene/agibot_alpha_v30 A3M 128 files ok 16.0s
+{"repo": "cadene/agibot_alpha_v30", "rep": 1, "order": 0, "arm": "A3M", "status": "ok", "error": null, "files": 128, "wall_s": 16.021533948369324, "files_per_s": 7.989247497305205, "kib_per_file": 3584.0, "requests_per_file": 2, "round_trips_per_file": 1, "tail_hit": 128, "faststart": 0, "file_s_median": 1.7352752508595586}
+probe-run cadene/agibot_alpha_v30 A1M-c32 128 files ok 12.2s
+{"repo": "cadene/agibot_alpha_v30", "rep": 1, "order": 1, "arm": "A1M-c32", "status": "ok", "error": null, "files": 128, "wall_s": 12.24760989099741, "files_per_s": 10.451018699908644, "kib_per_file": 1672.9988555908203, "requests_per_file": 2.109375, "round_trips_per_file": 1.109375, "tail_hit": 114, "faststart": 0, "file_s_median": 1.2353880009613931}
+probe-run cadene/agibot_alpha_v30 BASE 128 files ok 156.0s
+{"repo": "cadene/agibot_alpha_v30", "rep": 1, "order": 2, "arm": "BASE", "status": "ok", "error": null, "files": 128, "wall_s": 155.95570180378854, "files_per_s": 0.8207458818084109, "kib_per_file": 127141.67331695557, "requests_per_file": 5.9921875, "round_trips_per_file": 5.9921875, "tail_hit": 0, "faststart": 0, "file_s_median": 19.45425920980051}
+probe-run cadene/agibot_alpha_v30 PATCH 128 files ok 12.2s
+{"repo": "cadene/agibot_alpha_v30", "rep": 1, "order": 3, "arm": "PATCH", "status": "ok", "error": null, "files": 128, "wall_s": 12.16926518175751, "files_per_s": 10.51830148231793, "kib_per_file": 930.7569961547852, "requests_per_file": 2, "round_trips_per_file": 2, "tail_hit": 0, "faststart": 0, "file_s_median": 1.2877765321172774}
+probe-run cadene/agibot_alpha_v30 A1M 128 files ok 13.8s
+{"repo": "cadene/agibot_alpha_v30", "rep": 1, "order": 4, "arm": "A1M", "status": "ok", "error": null, "files": 128, "wall_s": 13.778932500630617, "files_per_s": 9.289544019040797, "kib_per_file": 1736.1840896606445, "requests_per_file": 2.1484375, "round_trips_per_file": 1.1484375, "tail_hit": 109, "faststart": 0, "file_s_median": 1.3109595933929086}
+probe-run cadene/agibot_alpha_v30 A1M-c32 128 files ok 12.8s
+{"repo": "cadene/agibot_alpha_v30", "rep": 2, "order": 0, "arm": "A1M-c32", "status": "ok", "error": null, "files": 128, "wall_s": 12.838017562404275, "files_per_s": 9.970386734385215, "kib_per_file": 1699.460205078125, "requests_per_file": 2.125, "round_trips_per_file": 1.125, "tail_hit": 112, "faststart": 0, "file_s_median": 1.1910688569769263}
+probe-run cadene/agibot_alpha_v30 BASE 128 files ok 165.8s
+{"repo": "cadene/agibot_alpha_v30", "rep": 2, "order": 1, "arm": "BASE", "status": "ok", "error": null, "files": 128, "wall_s": 165.7547449078411, "files_per_s": 0.772225254071414, "kib_per_file": 125991.10871887207, "requests_per_file": 5.9609375, "round_trips_per_file": 5.9609375, "tail_hit": 0, "faststart": 0, "file_s_median": 19.67674199026078}
+probe-run cadene/agibot_alpha_v30 PATCH 128 files ok 15.2s
+{"repo": "cadene/agibot_alpha_v30", "rep": 2, "order": 2, "arm": "PATCH", "status": "ok", "error": null, "files": 128, "wall_s": 15.175740858539939, "files_per_s": 8.434514083572385, "kib_per_file": 947.6869659423828, "requests_per_file": 2, "round_trips_per_file": 2, "tail_hit": 0, "faststart": 0, "file_s_median": 1.5749141154810786}
+probe-run cadene/agibot_alpha_v30 A1M 128 files ok 16.5s
+{"repo": "cadene/agibot_alpha_v30", "rep": 2, "order": 3, "arm": "A1M", "status": "ok", "error": null, "files": 128, "wall_s": 16.47557116858661, "files_per_s": 7.769078151539478, "kib_per_file": 1750.4725799560547, "requests_per_file": 2.171875, "round_trips_per_file": 1.171875, "tail_hit": 106, "faststart": 0, "file_s_median": 1.570522852241993}
+probe-run cadene/agibot_alpha_v30 A3M 128 files ok 18.6s
+{"repo": "cadene/agibot_alpha_v30", "rep": 2, "order": 4, "arm": "A3M", "status": "ok", "error": null, "files": 128, "wall_s": 18.55523131415248, "files_per_s": 6.8983241347345325, "kib_per_file": 3584.0, "requests_per_file": 2, "round_trips_per_file": 1, "tail_hit": 128, "faststart": 0, "file_s_median": 1.8863032008521259}
+probe-run lerobot/aloha_sim_insertion_human PATCH 1 files ok 0.5s
+probe-run lerobot/aloha_sim_insertion_human A1M 1 files ok 0.2s
+probe-run lerobot/aloha_sim_insertion_human BASE 1 files ok 2.0s
+probe-run lerobot/aloha_sim_insertion_human A3M 1 files ok 0.3s
+{"repo": "lerobot/aloha_sim_insertion_human", "rep": 0, "order": 0, "arm": "A3M", "status": "ok", "error": null, "files": 1, "wall_s": 0.2811801889911294, "files_per_s": 3.5564383237239654, "kib_per_file": 3584.0, "requests_per_file": 2, "round_trips_per_file": 1, "tail_hit": 1, "faststart": 0, "file_s_median": 0.20271902717649937}
+probe-run lerobot/aloha_sim_insertion_human A1M-c32 1 files ok 0.2s
+{"repo": "lerobot/aloha_sim_insertion_human", "rep": 0, "order": 1, "arm": "A1M-c32", "status": "ok", "error": null, "files": 1, "wall_s": 0.19635710213333368, "files_per_s": 5.09276206022313, "kib_per_file": 1536.0, "requests_per_file": 2, "round_trips_per_file": 1, "tail_hit": 1, "faststart": 0, "file_s_median": 0.10843312926590443}
+probe-run lerobot/aloha_sim_insertion_human BASE 1 files ok 2.0s
+{"repo": "lerobot/aloha_sim_insertion_human", "rep": 0, "order": 2, "arm": "BASE", "status": "ok", "error": null, "files": 1, "wall_s": 1.9537758016958833, "files_per_s": 0.5118294530682573, "kib_per_file": 127124.5146484375, "requests_per_file": 6, "round_trips_per_file": 6, "tail_hit": 0, "faststart": 0, "file_s_median": 1.875092824921012}
+probe-run lerobot/aloha_sim_insertion_human PATCH 1 files ok 0.3s
+{"repo": "lerobot/aloha_sim_insertion_human", "rep": 0, "order": 3, "arm": "PATCH", "status": "ok", "error": null, "files": 1, "wall_s": 0.2896145610138774, "files_per_s": 3.4528650648614425, "kib_per_file": 660.5146484375, "requests_per_file": 2, "round_trips_per_file": 2, "tail_hit": 0, "faststart": 0, "file_s_median": 0.20901517756283283}
+probe-run lerobot/aloha_sim_insertion_human A1M 1 files ok 0.2s
+{"repo": "lerobot/aloha_sim_insertion_human", "rep": 0, "order": 4, "arm": "A1M", "status": "ok", "error": null, "files": 1, "wall_s": 0.19665593840181828, "files_per_s": 5.085023153263466, "kib_per_file": 1536.0, "requests_per_file": 2, "round_trips_per_file": 1, "tail_hit": 1, "faststart": 0, "file_s_median": 0.1075387867167592}
+probe-run lerobot/aloha_sim_insertion_human A1M-c32 1 files ok 0.2s
+{"repo": "lerobot/aloha_sim_insertion_human", "rep": 1, "order": 0, "arm": "A1M-c32", "status": "ok", "error": null, "files": 1, "wall_s": 0.20944314170628786, "files_per_s": 4.774565506672679, "kib_per_file": 1536.0, "requests_per_file": 2, "round_trips_per_file": 1, "tail_hit": 1, "faststart": 0, "file_s_median": 0.10062008071690798}
+probe-run lerobot/aloha_sim_insertion_human BASE 1 files ok 1.9s
+{"repo": "lerobot/aloha_sim_insertion_human", "rep": 1, "order": 1, "arm": "BASE", "status": "ok", "error": null, "files": 1, "wall_s": 1.8827482229098678, "files_per_s": 0.5311384644169029, "kib_per_file": 127124.5146484375, "requests_per_file": 6, "round_trips_per_file": 6, "tail_hit": 0, "faststart": 0, "file_s_median": 1.799277713522315}
+probe-run lerobot/aloha_sim_insertion_human PATCH 1 files ok 0.2s
+{"repo": "lerobot/aloha_sim_insertion_human", "rep": 1, "order": 2, "arm": "PATCH", "status": "ok", "error": null, "files": 1, "wall_s": 0.24600181728601456, "files_per_s": 4.065010620784755, "kib_per_file": 660.5146484375, "requests_per_file": 2, "round_trips_per_file": 2, "tail_hit": 0, "faststart": 0, "file_s_median": 0.16045655123889446}
+probe-run lerobot/aloha_sim_insertion_human A1M 1 files ok 0.2s
+{"repo": "lerobot/aloha_sim_insertion_human", "rep": 1, "order": 3, "arm": "A1M", "status": "ok", "error": null, "files": 1, "wall_s": 0.21033854316920042, "files_per_s": 4.754240401843901, "kib_per_file": 1536.0, "requests_per_file": 2, "round_trips_per_file": 1, "tail_hit": 1, "faststart": 0, "file_s_median": 0.1327844262123108}
+probe-run lerobot/aloha_sim_insertion_human A3M 1 files ok 0.4s
+{"repo": "lerobot/aloha_sim_insertion_human", "rep": 1, "order": 4, "arm": "A3M", "status": "ok", "error": null, "files": 1, "wall_s": 0.433671654202044, "files_per_s": 2.3058920044935847, "kib_per_file": 3584.0, "requests_per_file": 2, "round_trips_per_file": 1, "tail_hit": 1, "faststart": 0, "file_s_median": 0.34732573851943016}
+probe-run lerobot/aloha_sim_insertion_human BASE 1 files ok 2.0s
+{"repo": "lerobot/aloha_sim_insertion_human", "rep": 2, "order": 0, "arm": "BASE", "status": "ok", "error": null, "files": 1, "wall_s": 2.008636268787086, "files_per_s": 0.49785021586006184, "kib_per_file": 127124.5146484375, "requests_per_file": 6, "round_trips_per_file": 6, "tail_hit": 0, "faststart": 0, "file_s_median": 1.9098597038537264}
+probe-run lerobot/aloha_sim_insertion_human PATCH 1 files ok 0.3s
+{"repo": "lerobot/aloha_sim_insertion_human", "rep": 2, "order": 1, "arm": "PATCH", "status": "ok", "error": null, "files": 1, "wall_s": 0.27808112371712923, "files_per_s": 3.5960729251699366, "kib_per_file": 660.5146484375, "requests_per_file": 2, "round_trips_per_file": 2, "tail_hit": 0, "faststart": 0, "file_s_median": 0.1829734994098544}
+probe-run lerobot/aloha_sim_insertion_human A1M 1 files ok 0.2s
+{"repo": "lerobot/aloha_sim_insertion_human", "rep": 2, "order": 2, "arm": "A1M", "status": "ok", "error": null, "files": 1, "wall_s": 0.23861125949770212, "files_per_s": 4.19091706780765, "kib_per_file": 1536.0, "requests_per_file": 2, "round_trips_per_file": 1, "tail_hit": 1, "faststart": 0, "file_s_median": 0.15639386791735888}
+probe-run lerobot/aloha_sim_insertion_human A3M 1 files ok 0.2s
+{"repo": "lerobot/aloha_sim_insertion_human", "rep": 2, "order": 3, "arm": "A3M", "status": "ok", "error": null, "files": 1, "wall_s": 0.21035629510879517, "files_per_s": 4.753839192132593, "kib_per_file": 3584.0, "requests_per_file": 2, "round_trips_per_file": 1, "tail_hit": 1, "faststart": 0, "file_s_median": 0.11999746784567833}
+probe-run lerobot/aloha_sim_insertion_human A1M-c32 1 files ok 0.2s
+{"repo": "lerobot/aloha_sim_insertion_human", "rep": 2, "order": 4, "arm": "A1M-c32", "status": "ok", "error": null, "files": 1, "wall_s": 0.18536483496427536, "files_per_s": 5.394766489516343, "kib_per_file": 1536.0, "requests_per_file": 2, "round_trips_per_file": 1, "tail_hit": 1, "faststart": 0, "file_s_median": 0.10495137330144644}
+probe-run lerobot/aloha_sim_insertion_scripted PATCH 1 files ok 0.4s
+probe-run lerobot/aloha_sim_insertion_scripted A1M 1 files ok 0.3s
+probe-run lerobot/aloha_sim_insertion_scripted BASE 1 files ok 2.0s
+probe-run lerobot/aloha_sim_insertion_scripted A1M-c32 1 files ok 0.3s
+{"repo": "lerobot/aloha_sim_insertion_scripted", "rep": 0, "order": 0, "arm": "A1M-c32", "status": "ok", "error": null, "files": 1, "wall_s": 0.29014866799116135, "files_per_s": 3.4465090152695876, "kib_per_file": 1536.0, "requests_per_file": 2, "round_trips_per_file": 1, "tail_hit": 1, "faststart": 0, "file_s_median": 0.13458088785409927}
+probe-run lerobot/aloha_sim_insertion_scripted BASE 1 files ok 1.9s
+{"repo": "lerobot/aloha_sim_insertion_scripted", "rep": 0, "order": 1, "arm": "BASE", "status": "ok", "error": null, "files": 1, "wall_s": 1.9475022228434682, "files_per_s": 0.5134782329233705, "kib_per_file": 127094.8818359375, "requests_per_file": 6, "round_trips_per_file": 6, "tail_hit": 0, "faststart": 0, "file_s_median": 1.846362255513668}
+probe-run lerobot/aloha_sim_insertion_scripted PATCH 1 files ok 0.3s
+{"repo": "lerobot/aloha_sim_insertion_scripted", "rep": 0, "order": 2, "arm": "PATCH", "status": "ok", "error": null, "files": 1, "wall_s": 0.2807718673720956, "files_per_s": 3.561610389814235, "kib_per_file": 630.8818359375, "requests_per_file": 2, "round_trips_per_file": 2, "tail_hit": 0, "faststart": 0, "file_s_median": 0.1818148586899042}
+probe-run lerobot/aloha_sim_insertion_scripted A1M 1 files ok 0.2s
+{"repo": "lerobot/aloha_sim_insertion_scripted", "rep": 0, "order": 3, "arm": "A1M", "status": "ok", "error": null, "files": 1, "wall_s": 0.22732839547097683, "files_per_s": 4.398922527598057, "kib_per_file": 1536.0, "requests_per_file": 2, "round_trips_per_file": 1, "tail_hit": 1, "faststart": 0, "file_s_median": 0.12895506713539362}
+probe-run lerobot/aloha_sim_insertion_scripted A3M 1 files ok 0.3s
+{"repo": "lerobot/aloha_sim_insertion_scripted", "rep": 0, "order": 4, "arm": "A3M", "status": "ok", "error": null, "files": 1, "wall_s": 0.263400056399405, "files_per_s": 3.7965064004529157, "kib_per_file": 3584.0, "requests_per_file": 2, "round_trips_per_file": 1, "tail_hit": 1, "faststart": 0, "file_s_median": 0.18329616263508797}
+probe-run lerobot/aloha_sim_insertion_scripted BASE 1 files ok 2.4s
+{"repo": "lerobot/aloha_sim_insertion_scripted", "rep": 1, "order": 0, "arm": "BASE", "status": "ok", "error": null, "files": 1, "wall_s": 2.436968290247023, "files_per_s": 0.41034592202208553, "kib_per_file": 127094.8818359375, "requests_per_file": 6, "round_trips_per_file": 6, "tail_hit": 0, "faststart": 0, "file_s_median": 2.353171936236322}
+probe-run lerobot/aloha_sim_insertion_scripted PATCH 1 files ok 0.3s
+{"repo": "lerobot/aloha_sim_insertion_scripted", "rep": 1, "order": 1, "arm": "PATCH", "status": "ok", "error": null, "files": 1, "wall_s": 0.2508593574166298, "files_per_s": 3.9862973831157102, "kib_per_file": 630.8818359375, "requests_per_file": 2, "round_trips_per_file": 2, "tail_hit": 0, "faststart": 0, "file_s_median": 0.14600257202982903}
+probe-run lerobot/aloha_sim_insertion_scripted A1M 1 files ok 0.2s
+{"repo": "lerobot/aloha_sim_insertion_scripted", "rep": 1, "order": 2, "arm": "A1M", "status": "ok", "error": null, "files": 1, "wall_s": 0.19768701680004597, "files_per_s": 5.058501140777837, "kib_per_file": 1536.0, "requests_per_file": 2, "round_trips_per_file": 1, "tail_hit": 1, "faststart": 0, "file_s_median": 0.12709736172109842}
+probe-run lerobot/aloha_sim_insertion_scripted A3M 1 files ok 0.2s
+{"repo": "lerobot/aloha_sim_insertion_scripted", "rep": 1, "order": 3, "arm": "A3M", "status": "ok", "error": null, "files": 1, "wall_s": 0.22893035598099232, "files_per_s": 4.368140676298203, "kib_per_file": 3584.0, "requests_per_file": 2, "round_trips_per_file": 1, "tail_hit": 1, "faststart": 0, "file_s_median": 0.14291135873645544}
+probe-run lerobot/aloha_sim_insertion_scripted A1M-c32 1 files ok 0.2s
+{"repo": "lerobot/aloha_sim_insertion_scripted", "rep": 1, "order": 4, "arm": "A1M-c32", "status": "ok", "error": null, "files": 1, "wall_s": 0.20521025359630585, "files_per_s": 4.873050846509951, "kib_per_file": 1536.0, "requests_per_file": 2, "round_trips_per_file": 1, "tail_hit": 1, "faststart": 0, "file_s_median": 0.1341385105624795}
+probe-run lerobot/aloha_sim_insertion_scripted PATCH 1 files ok 0.3s
+{"repo": "lerobot/aloha_sim_insertion_scripted", "rep": 2, "order": 0, "arm": "PATCH", "status": "ok", "error": null, "files": 1, "wall_s": 0.2503140149638057, "files_per_s": 3.994982063407819, "kib_per_file": 630.8818359375, "requests_per_file": 2, "round_trips_per_file": 2, "tail_hit": 0, "faststart": 0, "file_s_median": 0.1448103841394186}
+probe-run lerobot/aloha_sim_insertion_scripted A1M 1 files ok 0.2s
+{"repo": "lerobot/aloha_sim_insertion_scripted", "rep": 2, "order": 1, "arm": "A1M", "status": "ok", "error": null, "files": 1, "wall_s": 0.2189049981534481, "files_per_s": 4.568191719857486, "kib_per_file": 1536.0, "requests_per_file": 2, "round_trips_per_file": 1, "tail_hit": 1, "faststart": 0, "file_s_median": 0.14339210372418165}
+probe-run lerobot/aloha_sim_insertion_scripted A3M 1 files ok 0.2s
+{"repo": "lerobot/aloha_sim_insertion_scripted", "rep": 2, "order": 2, "arm": "A3M", "status": "ok", "error": null, "files": 1, "wall_s": 0.24038500431925058, "files_per_s": 4.159993269263667, "kib_per_file": 3584.0, "requests_per_file": 2, "round_trips_per_file": 1, "tail_hit": 1, "faststart": 0, "file_s_median": 0.14148471783846617}
+probe-run lerobot/aloha_sim_insertion_scripted A1M-c32 1 files ok 0.2s
+{"repo": "lerobot/aloha_sim_insertion_scripted", "rep": 2, "order": 3, "arm": "A1M-c32", "status": "ok", "error": null, "files": 1, "wall_s": 0.20203213300555944, "files_per_s": 4.949707678295325, "kib_per_file": 1536.0, "requests_per_file": 2, "round_trips_per_file": 1, "tail_hit": 1, "faststart": 0, "file_s_median": 0.11884882487356663}
+probe-run lerobot/aloha_sim_insertion_scripted BASE 1 files ok 1.9s
+{"repo": "lerobot/aloha_sim_insertion_scripted", "rep": 2, "order": 4, "arm": "BASE", "status": "ok", "error": null, "files": 1, "wall_s": 1.8856990924105048, "files_per_s": 0.5303073030181563, "kib_per_file": 127094.8818359375, "requests_per_file": 6, "round_trips_per_file": 6, "tail_hit": 0, "faststart": 0, "file_s_median": 1.7851069699972868}
+probe-run lerobot/aloha_sim_transfer_cube_human PATCH 1 files ok 0.6s
+probe-run lerobot/aloha_sim_transfer_cube_human A1M 1 files ok 0.3s
+probe-run lerobot/aloha_sim_transfer_cube_human BASE 1 files ok 1.9s
+probe-run lerobot/aloha_sim_transfer_cube_human BASE 1 files ok 1.8s
+{"repo": "lerobot/aloha_sim_transfer_cube_human", "rep": 0, "order": 0, "arm": "BASE", "status": "ok", "error": null, "files": 1, "wall_s": 1.830570800229907, "files_per_s": 0.5462776964837454, "kib_per_file": 127094.8935546875, "requests_per_file": 6, "round_trips_per_file": 6, "tail_hit": 0, "faststart": 0, "file_s_median": 1.7387674069032073}
+probe-run lerobot/aloha_sim_transfer_cube_human PATCH 1 files ok 0.2s
+{"repo": "lerobot/aloha_sim_transfer_cube_human", "rep": 0, "order": 1, "arm": "PATCH", "status": "ok", "error": null, "files": 1, "wall_s": 0.24833616148680449, "files_per_s": 4.026799778223744, "kib_per_file": 630.8935546875, "requests_per_file": 2, "round_trips_per_file": 2, "tail_hit": 0, "faststart": 0, "file_s_median": 0.16069355513900518}
+probe-run lerobot/aloha_sim_transfer_cube_human A1M 1 files ok 0.2s
+{"repo": "lerobot/aloha_sim_transfer_cube_human", "rep": 0, "order": 2, "arm": "A1M", "status": "ok", "error": null, "files": 1, "wall_s": 0.23688045144081116, "files_per_s": 4.221538729420515, "kib_per_file": 1536.0, "requests_per_file": 2, "round_trips_per_file": 1, "tail_hit": 1, "faststart": 0, "file_s_median": 0.13782702758908272}
+probe-run lerobot/aloha_sim_transfer_cube_human A3M 1 files ok 0.2s
+{"repo": "lerobot/aloha_sim_transfer_cube_human", "rep": 0, "order": 3, "arm": "A3M", "status": "ok", "error": null, "files": 1, "wall_s": 0.24107555858790874, "files_per_s": 4.14807708362251, "kib_per_file": 3584.0, "requests_per_file": 2, "round_trips_per_file": 1, "tail_hit": 1, "faststart": 0, "file_s_median": 0.14879725966602564}
+probe-run lerobot/aloha_sim_transfer_cube_human A1M-c32 1 files ok 0.3s
+{"repo": "lerobot/aloha_sim_transfer_cube_human", "rep": 0, "order": 4, "arm": "A1M-c32", "status": "ok", "error": null, "files": 1, "wall_s": 0.2547678258270025, "files_per_s": 3.925142418411341, "kib_per_file": 1536.0, "requests_per_file": 2, "round_trips_per_file": 1, "tail_hit": 1, "faststart": 0, "file_s_median": 0.16208317317068577}
+probe-run lerobot/aloha_sim_transfer_cube_human PATCH 1 files ok 0.3s
+{"repo": "lerobot/aloha_sim_transfer_cube_human", "rep": 1, "order": 0, "arm": "PATCH", "status": "ok", "error": null, "files": 1, "wall_s": 0.29080337285995483, "files_per_s": 3.4387496615507973, "kib_per_file": 630.8935546875, "requests_per_file": 2, "round_trips_per_file": 2, "tail_hit": 0, "faststart": 0, "file_s_median": 0.19308286253362894}
+probe-run lerobot/aloha_sim_transfer_cube_human A1M 1 files ok 0.2s
+{"repo": "lerobot/aloha_sim_transfer_cube_human", "rep": 1, "order": 1, "arm": "A1M", "status": "ok", "error": null, "files": 1, "wall_s": 0.23956422228366137, "files_per_s": 4.174246014147838, "kib_per_file": 1536.0, "requests_per_file": 2, "round_trips_per_file": 1, "tail_hit": 1, "faststart": 0, "file_s_median": 0.1599751953035593}
+probe-run lerobot/aloha_sim_transfer_cube_human A3M 1 files ok 0.2s
+{"repo": "lerobot/aloha_sim_transfer_cube_human", "rep": 1, "order": 2, "arm": "A3M", "status": "ok", "error": null, "files": 1, "wall_s": 0.22076504584401846, "files_per_s": 4.529702590266712, "kib_per_file": 3584.0, "requests_per_file": 2, "round_trips_per_file": 1, "tail_hit": 1, "faststart": 0, "file_s_median": 0.1309773176908493}
+probe-run lerobot/aloha_sim_transfer_cube_human A1M-c32 1 files ok 0.2s
+{"repo": "lerobot/aloha_sim_transfer_cube_human", "rep": 1, "order": 3, "arm": "A1M-c32", "status": "ok", "error": null, "files": 1, "wall_s": 0.22381069883704185, "files_per_s": 4.468061648509963, "kib_per_file": 1536.0, "requests_per_file": 2, "round_trips_per_file": 1, "tail_hit": 1, "faststart": 0, "file_s_median": 0.13223969750106335}
+probe-run lerobot/aloha_sim_transfer_cube_human BASE 1 files ok 1.9s
+{"repo": "lerobot/aloha_sim_transfer_cube_human", "rep": 1, "order": 4, "arm": "BASE", "status": "ok", "error": null, "files": 1, "wall_s": 1.854749783873558, "files_per_s": 0.5391562833405737, "kib_per_file": 127094.8935546875, "requests_per_file": 6, "round_trips_per_file": 6, "tail_hit": 0, "faststart": 0, "file_s_median": 1.7616108153015375}
+probe-run lerobot/aloha_sim_transfer_cube_human A1M 1 files ok 0.3s
+{"repo": "lerobot/aloha_sim_transfer_cube_human", "rep": 2, "order": 0, "arm": "A1M", "status": "ok", "error": null, "files": 1, "wall_s": 0.28623182512819767, "files_per_s": 3.4936716053573686, "kib_per_file": 1536.0, "requests_per_file": 2, "round_trips_per_file": 1, "tail_hit": 1, "faststart": 0, "file_s_median": 0.16814097855240107}
+probe-run lerobot/aloha_sim_transfer_cube_human A3M 1 files ok 0.3s
+{"repo": "lerobot/aloha_sim_transfer_cube_human", "rep": 2, "order": 1, "arm": "A3M", "status": "ok", "error": null, "files": 1, "wall_s": 0.28181419521570206, "files_per_s": 3.5484372929993637, "kib_per_file": 3584.0, "requests_per_file": 2, "round_trips_per_file": 1, "tail_hit": 1, "faststart": 0, "file_s_median": 0.17134138103574514}
+probe-run lerobot/aloha_sim_transfer_cube_human A1M-c32 1 files ok 0.2s
+{"repo": "lerobot/aloha_sim_transfer_cube_human", "rep": 2, "order": 2, "arm": "A1M-c32", "status": "ok", "error": null, "files": 1, "wall_s": 0.23794426303356886, "files_per_s": 4.202664889881885, "kib_per_file": 1536.0, "requests_per_file": 2, "round_trips_per_file": 1, "tail_hit": 1, "faststart": 0, "file_s_median": 0.15856790449470282}
+probe-run lerobot/aloha_sim_transfer_cube_human BASE 1 files ok 1.9s
+{"repo": "lerobot/aloha_sim_transfer_cube_human", "rep": 2, "order": 3, "arm": "BASE", "status": "ok", "error": null, "files": 1, "wall_s": 1.889297442510724, "files_per_s": 0.5292972813592975, "kib_per_file": 127094.8935546875, "requests_per_file": 6, "round_trips_per_file": 6, "tail_hit": 0, "faststart": 0, "file_s_median": 1.8005732139572501}
+probe-run lerobot/aloha_sim_transfer_cube_human PATCH 1 files ok 0.2s
+{"repo": "lerobot/aloha_sim_transfer_cube_human", "rep": 2, "order": 4, "arm": "PATCH", "status": "ok", "error": null, "files": 1, "wall_s": 0.2424890398979187, "files_per_s": 4.123897725113568, "kib_per_file": 630.8935546875, "requests_per_file": 2, "round_trips_per_file": 2, "tail_hit": 0, "faststart": 0, "file_s_median": 0.1529185939580202}
+probe-run lerobot/droid_1.0.1 PATCH 8 files ok 1.4s
+probe-run lerobot/droid_1.0.1 A1M 8 files ok 1.5s
+probe-run lerobot/droid_1.0.1 BASE 8 files ok 1.5s
+probe-run lerobot/droid_1.0.1 PATCH 53 files ok 7.7s
+{"repo": "lerobot/droid_1.0.1", "rep": 0, "order": 0, "arm": "PATCH", "status": "ok", "error": null, "files": 53, "wall_s": 7.739581690169871, "files_per_s": 6.847915316575299, "kib_per_file": 642.9548385908018, "requests_per_file": 1.9622641509433962, "round_trips_per_file": 1.9622641509433962, "tail_hit": 0, "faststart": 51, "file_s_median": 1.6159454500302672}
+probe-run lerobot/droid_1.0.1 A1M 53 files ok 9.5s
+{"repo": "lerobot/droid_1.0.1", "rep": 0, "order": 1, "arm": "A1M", "status": "ok", "error": null, "files": 53, "wall_s": 9.506198252551258, "files_per_s": 5.5753097707357355, "kib_per_file": 1681.3388671875, "requests_per_file": 2.8867924528301887, "round_trips_per_file": 1.8867924528301887, "tail_hit": 2, "faststart": 51, "file_s_median": 2.171968439593911}
+probe-run lerobot/droid_1.0.1 A3M 53 files ok 9.8s
+{"repo": "lerobot/droid_1.0.1", "rep": 0, "order": 2, "arm": "A3M", "status": "ok", "error": null, "files": 53, "wall_s": 9.807043398730457, "files_per_s": 5.404279133389067, "kib_per_file": 3691.5680829893868, "requests_per_file": 2.811320754716981, "round_trips_per_file": 1.8113207547169812, "tail_hit": 8, "faststart": 45, "file_s_median": 2.226489717140794}
+probe-run lerobot/droid_1.0.1 A1M-c32 53 files ok 8.3s
+{"repo": "lerobot/droid_1.0.1", "rep": 0, "order": 3, "arm": "A1M-c32", "status": "ok", "error": null, "files": 53, "wall_s": 8.277432094328105, "files_per_s": 6.402951953700335, "kib_per_file": 1616.318727889151, "requests_per_file": 2.8679245283018866, "round_trips_per_file": 1.8679245283018868, "tail_hit": 3, "faststart": 50, "file_s_median": 1.6481231711804867}
+probe-run lerobot/droid_1.0.1 BASE 53 files ok 11.6s
+{"repo": "lerobot/droid_1.0.1", "rep": 0, "order": 4, "arm": "BASE", "status": "ok", "error": null, "files": 53, "wall_s": 11.577470852993429, "files_per_s": 4.577856482903303, "kib_per_file": 8749.021852889151, "requests_per_file": 1.1886792452830188, "round_trips_per_file": 1.1886792452830188, "tail_hit": 0, "faststart": 51, "file_s_median": 1.8042168132960796}
+probe-run lerobot/droid_1.0.1 A1M 53 files ok 8.1s
+{"repo": "lerobot/droid_1.0.1", "rep": 1, "order": 0, "arm": "A1M", "status": "ok", "error": null, "files": 53, "wall_s": 8.064320935867727, "files_per_s": 6.572159072225362, "kib_per_file": 1611.8748894457547, "requests_per_file": 2.792452830188679, "round_trips_per_file": 1.7924528301886793, "tail_hit": 2, "faststart": 51, "file_s_median": 1.7357183955609798}
+probe-run lerobot/droid_1.0.1 A3M 53 files ok 8.9s
+{"repo": "lerobot/droid_1.0.1", "rep": 1, "order": 1, "arm": "A3M", "status": "ok", "error": null, "files": 53, "wall_s": 8.893947108648717, "files_per_s": 5.959108970691016, "kib_per_file": 3665.2679282134436, "requests_per_file": 2.849056603773585, "round_trips_per_file": 1.849056603773585, "tail_hit": 1, "faststart": 52, "file_s_median": 2.1861197957769036}
+probe-run lerobot/droid_1.0.1 A1M-c32 53 files ok 8.5s
+{"repo": "lerobot/droid_1.0.1", "rep": 1, "order": 2, "arm": "A1M-c32", "status": "ok", "error": null, "files": 53, "wall_s": 8.508765746839345, "files_per_s": 6.228870505653222, "kib_per_file": 1644.965451798349, "requests_per_file": 2.849056603773585, "round_trips_per_file": 1.849056603773585, "tail_hit": 4, "faststart": 49, "file_s_median": 1.8224147101864219}
+probe-run lerobot/droid_1.0.1 BASE 53 files ok 10.6s
+{"repo": "lerobot/droid_1.0.1", "rep": 1, "order": 3, "arm": "BASE", "status": "ok", "error": null, "files": 53, "wall_s": 10.61040329374373, "files_per_s": 4.995097597397705, "kib_per_file": 6430.207012824292, "requests_per_file": 1.0943396226415094, "round_trips_per_file": 1.0943396226415094, "tail_hit": 0, "faststart": 52, "file_s_median": 1.9348790822550654}
+probe-run lerobot/droid_1.0.1 PATCH 53 files ok 8.0s
+{"repo": "lerobot/droid_1.0.1", "rep": 1, "order": 4, "arm": "PATCH", "status": "ok", "error": null, "files": 53, "wall_s": 7.956648197025061, "files_per_s": 6.661096316890869, "kib_per_file": 671.8715543926887, "requests_per_file": 1.849056603773585, "round_trips_per_file": 1.849056603773585, "tail_hit": 0, "faststart": 48, "file_s_median": 1.617346741259098}
+probe-run lerobot/droid_1.0.1 A3M 53 files ok 10.4s
+{"repo": "lerobot/droid_1.0.1", "rep": 2, "order": 0, "arm": "A3M", "status": "ok", "error": null, "files": 53, "wall_s": 10.373845734633505, "files_per_s": 5.109002134382753, "kib_per_file": 3718.741855837264, "requests_per_file": 2.8679245283018866, "round_trips_per_file": 1.8679245283018868, "tail_hit": 2, "faststart": 51, "file_s_median": 2.2751019708812237}
+probe-run lerobot/droid_1.0.1 A1M-c32 53 files ok 8.9s
+{"repo": "lerobot/droid_1.0.1", "rep": 2, "order": 1, "arm": "A1M-c32", "status": "ok", "error": null, "files": 53, "wall_s": 8.851334164850414, "files_per_s": 5.987797885935503, "kib_per_file": 1652.0237138856132, "requests_per_file": 2.811320754716981, "round_trips_per_file": 1.8113207547169812, "tail_hit": 4, "faststart": 49, "file_s_median": 1.7473639883100986}
+probe-run lerobot/droid_1.0.1 BASE 53 files ok 12.1s
+{"repo": "lerobot/droid_1.0.1", "rep": 2, "order": 2, "arm": "BASE", "status": "ok", "error": null, "files": 53, "wall_s": 12.117624271661043, "files_per_s": 4.373794632661517, "kib_per_file": 8760.684883549528, "requests_per_file": 1.1886792452830188, "round_trips_per_file": 1.1886792452830188, "tail_hit": 0, "faststart": 51, "file_s_median": 2.0039581740275025}
+probe-run lerobot/droid_1.0.1 PATCH 53 files ok 8.1s
+{"repo": "lerobot/droid_1.0.1", "rep": 2, "order": 3, "arm": "PATCH", "status": "ok", "error": null, "files": 53, "wall_s": 8.128072128631175, "files_per_s": 6.5206114268237405, "kib_per_file": 707.7203898879717, "requests_per_file": 1.9622641509433962, "round_trips_per_file": 1.9622641509433962, "tail_hit": 0, "faststart": 48, "file_s_median": 1.819001984782517}
+probe-run lerobot/droid_1.0.1 A1M 53 files ok 8.7s
+{"repo": "lerobot/droid_1.0.1", "rep": 2, "order": 4, "arm": "A1M", "status": "ok", "error": null, "files": 53, "wall_s": 8.74090655054897, "files_per_s": 6.063444299913188, "kib_per_file": 1652.8828125, "requests_per_file": 2.9056603773584904, "round_trips_per_file": 1.9056603773584906, "tail_hit": 2, "faststart": 51, "file_s_median": 1.8359441608190536}
+probe-run lerobot/pusht PATCH 1 files ok 0.3s
+probe-run lerobot/pusht A1M 1 files ok 0.3s
+probe-run lerobot/pusht BASE 1 files ok 0.5s
+probe-run lerobot/pusht A1M 1 files ok 0.3s
+{"repo": "lerobot/pusht", "rep": 0, "order": 0, "arm": "A1M", "status": "ok", "error": null, "files": 1, "wall_s": 0.269976356998086, "files_per_s": 3.704028053119813, "kib_per_file": 1536.0, "requests_per_file": 2, "round_trips_per_file": 1, "tail_hit": 1, "faststart": 0, "file_s_median": 0.16310808528214693}
+probe-run lerobot/pusht A3M 1 files ok 0.3s
+{"repo": "lerobot/pusht", "rep": 0, "order": 1, "arm": "A3M", "status": "ok", "error": null, "files": 1, "wall_s": 0.28833126928657293, "files_per_s": 3.468232919982391, "kib_per_file": 3584.0, "requests_per_file": 2, "round_trips_per_file": 1, "tail_hit": 1, "faststart": 0, "file_s_median": 0.18195577524602413}
+probe-run lerobot/pusht A1M-c32 1 files ok 0.3s
+{"repo": "lerobot/pusht", "rep": 0, "order": 2, "arm": "A1M-c32", "status": "ok", "error": null, "files": 1, "wall_s": 0.322319932281971, "files_per_s": 3.1025074773383325, "kib_per_file": 1536.0, "requests_per_file": 2, "round_trips_per_file": 1, "tail_hit": 1, "faststart": 0, "file_s_median": 0.23509821575134993}
+probe-run lerobot/pusht BASE 1 files ok 0.4s
+{"repo": "lerobot/pusht", "rep": 0, "order": 3, "arm": "BASE", "status": "ok", "error": null, "files": 1, "wall_s": 0.4004584178328514, "files_per_s": 2.4971381683313574, "kib_per_file": 10825.462890625, "requests_per_file": 2, "round_trips_per_file": 2, "tail_hit": 0, "faststart": 0, "file_s_median": 0.3059394797310233}
+probe-run lerobot/pusht PATCH 1 files ok 0.3s
+{"repo": "lerobot/pusht", "rep": 0, "order": 4, "arm": "PATCH", "status": "ok", "error": null, "files": 1, "wall_s": 0.26329224091023207, "files_per_s": 3.7980610311298313, "kib_per_file": 663.353515625, "requests_per_file": 2, "round_trips_per_file": 2, "tail_hit": 0, "faststart": 0, "file_s_median": 0.1714519765228033}
+probe-run lerobot/pusht A3M 1 files ok 0.3s
+{"repo": "lerobot/pusht", "rep": 1, "order": 0, "arm": "A3M", "status": "ok", "error": null, "files": 1, "wall_s": 0.2707156194373965, "files_per_s": 3.6939131996824135, "kib_per_file": 3584.0, "requests_per_file": 2, "round_trips_per_file": 1, "tail_hit": 1, "faststart": 0, "file_s_median": 0.18929259851574898}
+probe-run lerobot/pusht A1M-c32 1 files ok 0.2s
+{"repo": "lerobot/pusht", "rep": 1, "order": 1, "arm": "A1M-c32", "status": "ok", "error": null, "files": 1, "wall_s": 0.23391545936465263, "files_per_s": 4.275048783505549, "kib_per_file": 1536.0, "requests_per_file": 2, "round_trips_per_file": 1, "tail_hit": 1, "faststart": 0, "file_s_median": 0.15717764105647802}
+probe-run lerobot/pusht BASE 1 files ok 0.4s
+{"repo": "lerobot/pusht", "rep": 1, "order": 2, "arm": "BASE", "status": "ok", "error": null, "files": 1, "wall_s": 0.4399000061675906, "files_per_s": 2.2732438872006417, "kib_per_file": 10825.462890625, "requests_per_file": 2, "round_trips_per_file": 2, "tail_hit": 0, "faststart": 0, "file_s_median": 0.341605706140399}
+probe-run lerobot/pusht PATCH 1 files ok 0.4s
+{"repo": "lerobot/pusht", "rep": 1, "order": 3, "arm": "PATCH", "status": "ok", "error": null, "files": 1, "wall_s": 0.36676540318876505, "files_per_s": 2.726538521097435, "kib_per_file": 663.353515625, "requests_per_file": 2, "round_trips_per_file": 2, "tail_hit": 0, "faststart": 0, "file_s_median": 0.24303562194108963}
+probe-run lerobot/pusht A1M 1 files ok 0.2s
+{"repo": "lerobot/pusht", "rep": 1, "order": 4, "arm": "A1M", "status": "ok", "error": null, "files": 1, "wall_s": 0.1932348096743226, "files_per_s": 5.175051025668704, "kib_per_file": 1536.0, "requests_per_file": 2, "round_trips_per_file": 1, "tail_hit": 1, "faststart": 0, "file_s_median": 0.12218281161040068}
+probe-run lerobot/pusht A1M-c32 1 files ok 0.3s
+{"repo": "lerobot/pusht", "rep": 2, "order": 0, "arm": "A1M-c32", "status": "ok", "error": null, "files": 1, "wall_s": 0.31917151529341936, "files_per_s": 3.1331116722013377, "kib_per_file": 1536.0, "requests_per_file": 2, "round_trips_per_file": 1, "tail_hit": 1, "faststart": 0, "file_s_median": 0.20412674266844988}
+probe-run lerobot/pusht BASE 1 files ok 0.4s
+{"repo": "lerobot/pusht", "rep": 2, "order": 1, "arm": "BASE", "status": "ok", "error": null, "files": 1, "wall_s": 0.4178521875292063, "files_per_s": 2.3931907737831426, "kib_per_file": 10825.462890625, "requests_per_file": 2, "round_trips_per_file": 2, "tail_hit": 0, "faststart": 0, "file_s_median": 0.3307279022410512}
+probe-run lerobot/pusht PATCH 1 files ok 0.3s
+{"repo": "lerobot/pusht", "rep": 2, "order": 2, "arm": "PATCH", "status": "ok", "error": null, "files": 1, "wall_s": 0.27281575556844473, "files_per_s": 3.66547744985028, "kib_per_file": 663.353515625, "requests_per_file": 2, "round_trips_per_file": 2, "tail_hit": 0, "faststart": 0, "file_s_median": 0.19126792158931494}
+probe-run lerobot/pusht A1M 1 files ok 0.2s
+{"repo": "lerobot/pusht", "rep": 2, "order": 3, "arm": "A1M", "status": "ok", "error": null, "files": 1, "wall_s": 0.24588667042553425, "files_per_s": 4.066914234388504, "kib_per_file": 1536.0, "requests_per_file": 2, "round_trips_per_file": 1, "tail_hit": 1, "faststart": 0, "file_s_median": 0.14924164861440659}
+probe-run lerobot/pusht A3M 1 files ok 0.2s
+{"repo": "lerobot/pusht", "rep": 2, "order": 4, "arm": "A3M", "status": "ok", "error": null, "files": 1, "wall_s": 0.24070295132696629, "files_per_s": 4.1544982913052, "kib_per_file": 3584.0, "requests_per_file": 2, "round_trips_per_file": 1, "tail_hit": 1, "faststart": 0, "file_s_median": 0.1396387703716755}
+probe-run yaak-ai/L2D PATCH 8 files ok 1.0s
+probe-run yaak-ai/L2D A1M 8 files ok 1.1s
+probe-run yaak-ai/L2D BASE 8 files ok 1.0s
+probe-run yaak-ai/L2D A3M 128 files ok 15.2s
+{"repo": "yaak-ai/L2D", "rep": 0, "order": 0, "arm": "A3M", "status": "ok", "error": null, "files": 128, "wall_s": 15.230021330527961, "files_per_s": 8.404453101022858, "kib_per_file": 3584.0, "requests_per_file": 2, "round_trips_per_file": 1, "tail_hit": 0, "faststart": 128, "file_s_median": 0.8452188102528453}
+probe-run yaak-ai/L2D A1M-c32 128 files ok 7.2s
+{"repo": "yaak-ai/L2D", "rep": 0, "order": 1, "arm": "A1M-c32", "status": "ok", "error": null, "files": 128, "wall_s": 7.212020852603018, "files_per_s": 17.748146132134554, "kib_per_file": 1544.2322006225586, "requests_per_file": 2.0078125, "round_trips_per_file": 1.0078125, "tail_hit": 0, "faststart": 128, "file_s_median": 0.6530090006999671}
+probe-run yaak-ai/L2D BASE 128 files ok 8.0s
+{"repo": "yaak-ai/L2D", "rep": 0, "order": 2, "arm": "BASE", "status": "ok", "error": null, "files": 128, "wall_s": 8.006159350275993, "files_per_s": 15.98769077655037, "kib_per_file": 4096.0, "requests_per_file": 1, "round_trips_per_file": 1, "tail_hit": 0, "faststart": 128, "file_s_median": 0.7399466820061207}
+probe-run yaak-ai/L2D PATCH 128 files ok 5.1s
+{"repo": "yaak-ai/L2D", "rep": 0, "order": 3, "arm": "PATCH", "status": "ok", "error": null, "files": 128, "wall_s": 5.057444986887276, "files_per_s": 25.309222410104873, "kib_per_file": 512.0, "requests_per_file": 1, "round_trips_per_file": 1, "tail_hit": 0, "faststart": 128, "file_s_median": 0.4316323082894087}
+probe-run yaak-ai/L2D A1M 128 files ok 8.4s
+{"repo": "yaak-ai/L2D", "rep": 0, "order": 4, "arm": "A1M", "status": "ok", "error": null, "files": 128, "wall_s": 8.391422596760094, "files_per_s": 15.253671058042109, "kib_per_file": 1551.293472290039, "requests_per_file": 2.015625, "round_trips_per_file": 1.015625, "tail_hit": 0, "faststart": 128, "file_s_median": 0.7609829106368124}
+probe-run yaak-ai/L2D A1M-c32 128 files ok 6.8s
+{"repo": "yaak-ai/L2D", "rep": 1, "order": 0, "arm": "A1M-c32", "status": "ok", "error": null, "files": 128, "wall_s": 6.848787687718868, "files_per_s": 18.689439041821586, "kib_per_file": 1536.0, "requests_per_file": 2, "round_trips_per_file": 1, "tail_hit": 0, "faststart": 128, "file_s_median": 0.6129326215013862}
+probe-run yaak-ai/L2D BASE 128 files ok 7.2s
+{"repo": "yaak-ai/L2D", "rep": 1, "order": 1, "arm": "BASE", "status": "ok", "error": null, "files": 128, "wall_s": 7.213783257640898, "files_per_s": 17.74381006865175, "kib_per_file": 4096.0, "requests_per_file": 1, "round_trips_per_file": 1, "tail_hit": 0, "faststart": 128, "file_s_median": 0.690779872238636}
+probe-run yaak-ai/L2D PATCH 128 files ok 4.8s
+{"repo": "yaak-ai/L2D", "rep": 1, "order": 2, "arm": "PATCH", "status": "ok", "error": null, "files": 128, "wall_s": 4.755024111829698, "files_per_s": 26.918896095933054, "kib_per_file": 512.0, "requests_per_file": 1, "round_trips_per_file": 1, "tail_hit": 0, "faststart": 128, "file_s_median": 0.4035093761049211}
+probe-run yaak-ai/L2D A1M 128 files ok 7.7s
+{"repo": "yaak-ai/L2D", "rep": 1, "order": 3, "arm": "A1M", "status": "ok", "error": null, "files": 128, "wall_s": 7.680277295410633, "files_per_s": 16.66606491883915, "kib_per_file": 1536.0, "requests_per_file": 2, "round_trips_per_file": 1, "tail_hit": 0, "faststart": 128, "file_s_median": 0.7072930573485792}
+probe-run yaak-ai/L2D A3M 128 files ok 8.8s
+{"repo": "yaak-ai/L2D", "rep": 1, "order": 4, "arm": "A3M", "status": "ok", "error": null, "files": 128, "wall_s": 8.778800923377275, "files_per_s": 14.580578955737085, "kib_per_file": 3584.0, "requests_per_file": 2, "round_trips_per_file": 1, "tail_hit": 0, "faststart": 128, "file_s_median": 0.8229396720416844}
+probe-run yaak-ai/L2D BASE 128 files ok 8.2s
+{"repo": "yaak-ai/L2D", "rep": 2, "order": 0, "arm": "BASE", "status": "ok", "error": null, "files": 128, "wall_s": 8.178857802413404, "files_per_s": 15.650107031110135, "kib_per_file": 4096.0, "requests_per_file": 1, "round_trips_per_file": 1, "tail_hit": 0, "faststart": 128, "file_s_median": 0.7097553689964116}
+probe-run yaak-ai/L2D PATCH 128 files ok 4.9s
+{"repo": "yaak-ai/L2D", "rep": 2, "order": 1, "arm": "PATCH", "status": "ok", "error": null, "files": 128, "wall_s": 4.916975185275078, "files_per_s": 26.03226479224932, "kib_per_file": 525.1654586791992, "requests_per_file": 1.0078125, "round_trips_per_file": 1.0078125, "tail_hit": 0, "faststart": 128, "file_s_median": 0.400339690502733}
+probe-run yaak-ai/L2D A1M 128 files ok 8.0s
+{"repo": "yaak-ai/L2D", "rep": 2, "order": 2, "arm": "A1M", "status": "ok", "error": null, "files": 128, "wall_s": 8.03236632887274, "files_per_s": 15.935528181763528, "kib_per_file": 1552.555404663086, "requests_per_file": 2.015625, "round_trips_per_file": 1.015625, "tail_hit": 0, "faststart": 128, "file_s_median": 0.7356714946217835}
+probe-run yaak-ai/L2D A3M 128 files ok 8.8s
+{"repo": "yaak-ai/L2D", "rep": 2, "order": 3, "arm": "A3M", "status": "ok", "error": null, "files": 128, "wall_s": 8.793640029616654, "files_per_s": 14.555974496215532, "kib_per_file": 3584.0, "requests_per_file": 2, "round_trips_per_file": 1, "tail_hit": 0, "faststart": 128, "file_s_median": 0.8210914842784405}
+probe-run yaak-ai/L2D A1M-c32 128 files ok 6.8s
+{"repo": "yaak-ai/L2D", "rep": 2, "order": 4, "arm": "A1M-c32", "status": "ok", "error": null, "files": 128, "wall_s": 6.78395991679281, "files_per_s": 18.86803600993465, "kib_per_file": 1544.0157089233398, "requests_per_file": 2.0078125, "round_trips_per_file": 1.0078125, "tail_hit": 0, "faststart": 128, "file_s_median": 0.5765774133615196}
+probe-run zekaiwang/trex_dataset PATCH 8 files ok 1.3s
+probe-run zekaiwang/trex_dataset A1M 8 files ok 1.7s
+probe-run zekaiwang/trex_dataset BASE 8 files ok 1.0s
+probe-run zekaiwang/trex_dataset A1M-c32 128 files ok 8.3s
+{"repo": "zekaiwang/trex_dataset", "rep": 0, "order": 0, "arm": "A1M-c32", "status": "ok", "error": null, "files": 128, "wall_s": 8.30830036662519, "files_per_s": 15.406279786679555, "kib_per_file": 1561.9421997070312, "requests_per_file": 2.015625, "round_trips_per_file": 1.015625, "tail_hit": 0, "faststart": 128, "file_s_median": 0.7409621411934495}
+probe-run zekaiwang/trex_dataset BASE 128 files ok 10.4s
+{"repo": "zekaiwang/trex_dataset", "rep": 0, "order": 1, "arm": "BASE", "status": "ok", "error": null, "files": 128, "wall_s": 10.372947408817708, "files_per_s": 12.339790703189271, "kib_per_file": 5056.188514709473, "requests_per_file": 1.0390625, "round_trips_per_file": 1.0390625, "tail_hit": 0, "faststart": 127, "file_s_median": 0.9504736745730042}
+probe-run zekaiwang/trex_dataset PATCH 128 files ok 7.1s
+{"repo": "zekaiwang/trex_dataset", "rep": 0, "order": 2, "arm": "PATCH", "status": "ok", "error": null, "files": 128, "wall_s": 7.095852977596223, "files_per_s": 18.038705199238926, "kib_per_file": 524.8634338378906, "requests_per_file": 1.0078125, "round_trips_per_file": 1.0078125, "tail_hit": 0, "faststart": 128, "file_s_median": 0.6886137626133859}
+probe-run zekaiwang/trex_dataset A1M 128 files ok 12.5s
+{"repo": "zekaiwang/trex_dataset", "rep": 0, "order": 3, "arm": "A1M", "status": "ok", "error": null, "files": 128, "wall_s": 12.527315812185407, "files_per_s": 10.21767167995346, "kib_per_file": 1548.6688232421875, "requests_per_file": 2.0078125, "round_trips_per_file": 1.0078125, "tail_hit": 0, "faststart": 128, "file_s_median": 1.1187001317739487}
+probe-run zekaiwang/trex_dataset A3M 128 files ok 12.1s
+{"repo": "zekaiwang/trex_dataset", "rep": 0, "order": 4, "arm": "A3M", "status": "ok", "error": null, "files": 128, "wall_s": 12.098177276551723, "files_per_s": 10.580106165916849, "kib_per_file": 3584.0, "requests_per_file": 2, "round_trips_per_file": 1, "tail_hit": 0, "faststart": 128, "file_s_median": 1.2345047374255955}
+probe-run zekaiwang/trex_dataset BASE 128 files ok 10.3s
+{"repo": "zekaiwang/trex_dataset", "rep": 1, "order": 0, "arm": "BASE", "status": "ok", "error": null, "files": 128, "wall_s": 10.311235126107931, "files_per_s": 12.413643800625344, "kib_per_file": 5056.169960021973, "requests_per_file": 1.0390625, "round_trips_per_file": 1.0390625, "tail_hit": 0, "faststart": 127, "file_s_median": 0.9285837910138071}
+probe-run zekaiwang/trex_dataset PATCH 128 files ok 8.3s
+{"repo": "zekaiwang/trex_dataset", "rep": 1, "order": 1, "arm": "PATCH", "status": "ok", "error": null, "files": 128, "wall_s": 8.26864404603839, "files_per_s": 15.48016812518691, "kib_per_file": 604.1274795532227, "requests_per_file": 1.03125, "round_trips_per_file": 1.03125, "tail_hit": 0, "faststart": 127, "file_s_median": 0.7663581091910601}
+probe-run zekaiwang/trex_dataset A1M 128 files ok 10.5s
+{"repo": "zekaiwang/trex_dataset", "rep": 1, "order": 2, "arm": "A1M", "status": "ok", "error": null, "files": 128, "wall_s": 10.52512102201581, "files_per_s": 12.161380352041308, "kib_per_file": 1546.2624816894531, "requests_per_file": 2.0078125, "round_trips_per_file": 1.0078125, "tail_hit": 1, "faststart": 127, "file_s_median": 1.0925645846873522}
+probe-run zekaiwang/trex_dataset A3M 128 files ok 12.8s
+{"repo": "zekaiwang/trex_dataset", "rep": 1, "order": 3, "arm": "A3M", "status": "ok", "error": null, "files": 128, "wall_s": 12.826953921467066, "files_per_s": 9.978986498562254, "kib_per_file": 3629.744384765625, "requests_per_file": 2.0234375, "round_trips_per_file": 1.0234375, "tail_hit": 0, "faststart": 128, "file_s_median": 1.1356057706288993}
+probe-run zekaiwang/trex_dataset A1M-c32 128 files ok 6.8s
+{"repo": "zekaiwang/trex_dataset", "rep": 1, "order": 4, "arm": "A1M-c32", "status": "ok", "error": null, "files": 128, "wall_s": 6.789722925983369, "files_per_s": 18.852021120060876, "kib_per_file": 1536.0, "requests_per_file": 2, "round_trips_per_file": 1, "tail_hit": 1, "faststart": 127, "file_s_median": 0.66242810850963}
+probe-run zekaiwang/trex_dataset PATCH 128 files ok 7.6s
+{"repo": "zekaiwang/trex_dataset", "rep": 2, "order": 0, "arm": "PATCH", "status": "ok", "error": null, "files": 128, "wall_s": 7.5582878747954965, "files_per_s": 16.93505223938871, "kib_per_file": 540.6467971801758, "requests_per_file": 1.03125, "round_trips_per_file": 1.03125, "tail_hit": 0, "faststart": 127, "file_s_median": 0.6804613601416349}
+probe-run zekaiwang/trex_dataset A1M 128 files ok 10.9s
+{"repo": "zekaiwang/trex_dataset", "rep": 2, "order": 1, "arm": "A1M", "status": "ok", "error": null, "files": 128, "wall_s": 10.86261840723455, "files_per_s": 11.783530931616953, "kib_per_file": 1548.01416015625, "requests_per_file": 2.0078125, "round_trips_per_file": 1.0078125, "tail_hit": 0, "faststart": 128, "file_s_median": 1.1181888477876782}
+probe-run zekaiwang/trex_dataset A3M 128 files ok 13.5s
+{"repo": "zekaiwang/trex_dataset", "rep": 2, "order": 2, "arm": "A3M", "status": "ok", "error": null, "files": 128, "wall_s": 13.456616687588394, "files_per_s": 9.512049200157408, "kib_per_file": 3670.9439697265625, "requests_per_file": 2.03125, "round_trips_per_file": 1.03125, "tail_hit": 0, "faststart": 128, "file_s_median": 1.1948191192932427}
+probe-run zekaiwang/trex_dataset A1M-c32 128 files ok 7.7s
+{"repo": "zekaiwang/trex_dataset", "rep": 2, "order": 3, "arm": "A1M-c32", "status": "ok", "error": null, "files": 128, "wall_s": 7.662887129001319, "files_per_s": 16.7038869090953, "kib_per_file": 1551.5081176757812, "requests_per_file": 2.0078125, "round_trips_per_file": 1.0078125, "tail_hit": 0, "faststart": 128, "file_s_median": 0.6954019609838724}
+probe-run zekaiwang/trex_dataset BASE 128 files ok 11.6s
+{"repo": "zekaiwang/trex_dataset", "rep": 2, "order": 4, "arm": "BASE", "status": "ok", "error": null, "files": 128, "wall_s": 11.639856753870845, "files_per_s": 10.996698903311975, "kib_per_file": 5120.200325012207, "requests_per_file": 1.046875, "round_trips_per_file": 1.046875, "tail_hit": 0, "faststart": 127, "file_s_median": 0.8838755879551172}

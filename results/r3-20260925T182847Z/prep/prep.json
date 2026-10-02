@@ -1,0 +1,3683 @@
+{
+ "family": "ckpt_full",
+ "repo": "hadriencornier/lerobot-data11-bench",
+ "r1_run": "20260925T025221Z",
+ "r1_revision": "93ad048ad87bbe5c78700d878b2ac6f39a56320c",
+ "multi_revision": "a3d31680dba3ed626ee7c5afca85753b23941b52",
+ "parts": 3,
+ "r3_prefix": "variants/r3-20260925T182847Z",
+ "groups": [
+  {
+   "name": "ckpt_full_g000",
+   "episodes": [
+    {
+     "episode": 109685,
+     "length": 2429,
+     "src": {
+      "top": {
+       "path": "videos/observation.images.top/chunk-010/file-584.mp4",
+       "from_timestamp": 447.7,
+       "to_timestamp": 528.6666666666666
+      },
+      "left_wrist": {
+       "path": "videos/observation.images.left_wrist/chunk-010/file-155.mp4",
+       "from_timestamp": 447.7,
+       "to_timestamp": 528.6666666666666
+      },
+      "right_wrist": {
+       "path": "videos/observation.images.right_wrist/chunk-010/file-090.mp4",
+       "from_timestamp": 447.7,
+       "to_timestamp": 528.6666666666666
+      }
+     }
+    },
+    {
+     "episode": 109689,
+     "length": 2304,
+     "src": {
+      "top": {
+       "path": "videos/observation.images.top/chunk-010/file-585.mp4",
+       "from_timestamp": 142.13333333333333,
+       "to_timestamp": 218.93333333333334
+      },
+      "left_wrist": {
+       "path": "videos/observation.images.left_wrist/chunk-010/file-156.mp4",
+       "from_timestamp": 142.13333333333333,
+       "to_timestamp": 218.93333333333334
+      },
+      "right_wrist": {
+       "path": "videos/observation.images.right_wrist/chunk-010/file-091.mp4",
+       "from_timestamp": 142.13333333333333,
+       "to_timestamp": 218.93333333333334
+      }
+     }
+    },
+    {
+     "episode": 109690,
+     "length": 4363,
+     "src": {
+      "top": {
+       "path": "videos/observation.images.top/chunk-010/file-585.mp4",
+       "from_timestamp": 218.93333333333334,
+       "to_timestamp": 364.3666666666667
+      },
+      "left_wrist": {
+       "path": "videos/observation.images.left_wrist/chunk-010/file-156.mp4",
+       "from_timestamp": 218.93333333333334,
+       "to_timestamp": 364.3666666666667
+      },
+      "right_wrist": {
+       "path": "videos/observation.images.right_wrist/chunk-010/file-091.mp4",
+       "from_timestamp": 218.93333333333334,
+       "to_timestamp": 364.3666666666667
+      }
+     }
+    },
+    {
+     "episode": 109691,
+     "length": 2466,
+     "src": {
+      "top": {
+       "path": "videos/observation.images.top/chunk-010/file-585.mp4",
+       "from_timestamp": 364.3666666666667,
+       "to_timestamp": 446.56666666666666
+      },
+      "left_wrist": {
+       "path": "videos/observation.images.left_wrist/chunk-010/file-156.mp4",
+       "from_timestamp": 364.3666666666667,
+       "to_timestamp": 446.56666666666666
+      },
+      "right_wrist": {
+       "path": "videos/observation.images.right_wrist/chunk-010/file-091.mp4",
+       "from_timestamp": 364.3666666666667,
+       "to_timestamp": 446.56666666666666
+      }
+     }
+    },
+    {
+     "episode": 109693,
+     "length": 2519,
+     "src": {
+      "top": {
+       "path": "videos/observation.images.top/chunk-010/file-585.mp4",
+       "from_timestamp": 466.43333333333334,
+       "to_timestamp": 550.4
+      },
+      "left_wrist": {
+       "path": "videos/observation.images.left_wrist/chunk-010/file-156.mp4",
+       "from_timestamp": 466.43333333333334,
+       "to_timestamp": 550.4
+      },
+      "right_wrist": {
+       "path": "videos/observation.images.right_wrist/chunk-010/file-091.mp4",
+       "from_timestamp": 466.43333333333334,
+       "to_timestamp": 550.4
+      }
+     }
+    },
+    {
+     "episode": 109694,
+     "length": 4441,
+     "src": {
+      "top": {
+       "path": "videos/observation.images.top/chunk-010/file-586.mp4",
+       "from_timestamp": 0.0,
+       "to_timestamp": 148.03333333333333
+      },
+      "left_wrist": {
+       "path": "videos/observation.images.left_wrist/chunk-010/file-157.mp4",
+       "from_timestamp": 0.0,
+       "to_timestamp": 148.03333333333333
+      },
+      "right_wrist": {
+       "path": "videos/observation.images.right_wrist/chunk-010/file-092.mp4",
+       "from_timestamp": 0.0,
+       "to_timestamp": 148.03333333333333
+      }
+     }
+    },
+    {
+     "episode": 109696,
+     "length": 2537,
+     "src": {
+      "top": {
+       "path": "videos/observation.images.top/chunk-010/file-586.mp4",
+       "from_timestamp": 212.0,
+       "to_timestamp": 296.56666666666666
+      },
+      "left_wrist": {
+       "path": "videos/observation.images.left_wrist/chunk-010/file-157.mp4",
+       "from_timestamp": 212.0,
+       "to_timestamp": 296.56666666666666
+      },
+      "right_wrist": {
+       "path": "videos/observation.images.right_wrist/chunk-010/file-092.mp4",
+       "from_timestamp": 212.0,
+       "to_timestamp": 296.56666666666666
+      }
+     }
+    },
+    {
+     "episode": 109697,
+     "length": 2321,
+     "src": {
+      "top": {
+       "path": "videos/observation.images.top/chunk-010/file-586.mp4",
+       "from_timestamp": 296.56666666666666,
+       "to_timestamp": 373.93333333333334
+      },
+      "left_wrist": {
+       "path": "videos/observation.images.left_wrist/chunk-010/file-157.mp4",
+       "from_timestamp": 296.56666666666666,
+       "to_timestamp": 373.93333333333334
+      },
+      "right_wrist": {
+       "path": "videos/observation.images.right_wrist/chunk-010/file-092.mp4",
+       "from_timestamp": 296.56666666666666,
+       "to_timestamp": 373.93333333333334
+      }
+     }
+    }
+   ],
+   "frames": 23380
+  },
+  {
+   "name": "ckpt_full_g001",
+   "episodes": [
+    {
+     "episode": 109698,
+     "length": 2848,
+     "src": {
+      "top": {
+       "path": "videos/observation.images.top/chunk-010/file-586.mp4",
+       "from_timestamp": 373.93333333333334,
+       "to_timestamp": 468.8666666666667
+      },
+      "left_wrist": {
+       "path": "videos/observation.images.left_wrist/chunk-010/file-157.mp4",
+       "from_timestamp": 373.93333333333334,
+       "to_timestamp": 468.8666666666667
+      },
+      "right_wrist": {
+       "path": "videos/observation.images.right_wrist/chunk-010/file-092.mp4",
+       "from_timestamp": 373.93333333333334,
+       "to_timestamp": 468.8666666666667
+      }
+     }
+    },
+    {
+     "episode": 109700,
+     "length": 4191,
+     "src": {
+      "top": {
+       "path": "videos/observation.images.top/chunk-010/file-586.mp4",
+       "from_timestamp": 538.9666666666667,
+       "to_timestamp": 678.6666666666667
+      },
+      "left_wrist": {
+       "path": "videos/observation.images.left_wrist/chunk-010/file-157.mp4",
+       "from_timestamp": 538.9666666666667,
+       "to_timestamp": 678.6666666666667
+      },
+      "right_wrist": {
+       "path": "videos/observation.images.right_wrist/chunk-010/file-092.mp4",
+       "from_timestamp": 538.9666666666667,
+       "to_timestamp": 678.6666666666667
+      }
+     }
+    },
+    {
+     "episode": 109701,
+     "length": 2389,
+     "src": {
+      "top": {
+       "path": "videos/observation.images.top/chunk-010/file-586.mp4",
+       "from_timestamp": 678.6666666666667,
+       "to_timestamp": 758.3000000000001
+      },
+      "left_wrist": {
+       "path": "videos/observation.images.left_wrist/chunk-010/file-157.mp4",
+       "from_timestamp": 678.6666666666667,
+       "to_timestamp": 758.3000000000001
+      },
+      "right_wrist": {
+       "path": "videos/observation.images.right_wrist/chunk-010/file-092.mp4",
+       "from_timestamp": 678.6666666666667,
+       "to_timestamp": 758.3000000000001
+      }
+     }
+    },
+    {
+     "episode": 109702,
+     "length": 5992,
+     "src": {
+      "top": {
+       "path": "videos/observation.images.top/chunk-010/file-587.mp4",
+       "from_timestamp": 0.0,
+       "to_timestamp": 199.73333333333332
+      },
+      "left_wrist": {
+       "path": "videos/observation.images.left_wrist/chunk-010/file-158.mp4",
+       "from_timestamp": 0.0,
+       "to_timestamp": 199.73333333333332
+      },
+      "right_wrist": {
+       "path": "videos/observation.images.right_wrist/chunk-010/file-093.mp4",
+       "from_timestamp": 0.0,
+       "to_timestamp": 199.73333333333332
+      }
+     }
+    },
+    {
+     "episode": 109703,
+     "length": 2460,
+     "src": {
+      "top": {
+       "path": "videos/observation.images.top/chunk-010/file-587.mp4",
+       "from_timestamp": 199.73333333333332,
+       "to_timestamp": 281.73333333333335
+      },
+      "left_wrist": {
+       "path": "videos/observation.images.left_wrist/chunk-010/file-158.mp4",
+       "from_timestamp": 199.73333333333332,
+       "to_timestamp": 281.73333333333335
+      },
+      "right_wrist": {
+       "path": "videos/observation.images.right_wrist/chunk-010/file-093.mp4",
+       "from_timestamp": 199.73333333333332,
+       "to_timestamp": 281.73333333333335
+      }
+     }
+    },
+    {
+     "episode": 109704,
+     "length": 4200,
+     "src": {
+      "top": {
+       "path": "videos/observation.images.top/chunk-010/file-587.mp4",
+       "from_timestamp": 281.73333333333335,
+       "to_timestamp": 421.73333333333335
+      },
+      "left_wrist": {
+       "path": "videos/observation.images.left_wrist/chunk-010/file-158.mp4",
+       "from_timestamp": 281.73333333333335,
+       "to_timestamp": 421.73333333333335
+      },
+      "right_wrist": {
+       "path": "videos/observation.images.right_wrist/chunk-010/file-093.mp4",
+       "from_timestamp": 281.73333333333335,
+       "to_timestamp": 421.73333333333335
+      }
+     }
+    },
+    {
+     "episode": 109705,
+     "length": 3679,
+     "src": {
+      "top": {
+       "path": "videos/observation.images.top/chunk-010/file-587.mp4",
+       "from_timestamp": 421.73333333333335,
+       "to_timestamp": 544.3666666666667
+      },
+      "left_wrist": {
+       "path": "videos/observation.images.left_wrist/chunk-010/file-158.mp4",
+       "from_timestamp": 421.73333333333335,
+       "to_timestamp": 544.3666666666667
+      },
+      "right_wrist": {
+       "path": "videos/observation.images.right_wrist/chunk-010/file-093.mp4",
+       "from_timestamp": 421.73333333333335,
+       "to_timestamp": 544.3666666666667
+      }
+     }
+    }
+   ],
+   "frames": 25759
+  },
+  {
+   "name": "ckpt_full_g002",
+   "episodes": [
+    {
+     "episode": 109706,
+     "length": 3756,
+     "src": {
+      "top": {
+       "path": "videos/observation.images.top/chunk-010/file-587.mp4",
+       "from_timestamp": 544.3666666666667,
+       "to_timestamp": 669.5666666666667
+      },
+      "left_wrist": {
+       "path": "videos/observation.images.left_wrist/chunk-010/file-158.mp4",
+       "from_timestamp": 544.3666666666667,
+       "to_timestamp": 669.5666666666667
+      },
+      "right_wrist": {
+       "path": "videos/observation.images.right_wrist/chunk-010/file-093.mp4",
+       "from_timestamp": 544.3666666666667,
+       "to_timestamp": 669.5666666666667
+      }
+     }
+    },
+    {
+     "episode": 109707,
+     "length": 3591,
+     "src": {
+      "top": {
+       "path": "videos/observation.images.top/chunk-010/file-587.mp4",
+       "from_timestamp": 669.5666666666667,
+       "to_timestamp": 789.2666666666668
+      },
+      "left_wrist": {
+       "path": "videos/observation.images.left_wrist/chunk-010/file-158.mp4",
+       "from_timestamp": 669.5666666666667,
+       "to_timestamp": 789.2666666666668
+      },
+      "right_wrist": {
+       "path": "videos/observation.images.right_wrist/chunk-010/file-093.mp4",
+       "from_timestamp": 669.5666666666667,
+       "to_timestamp": 789.2666666666668
+      }
+     }
+    },
+    {
+     "episode": 109708,
+     "length": 3393,
+     "src": {
+      "top": {
+       "path": "videos/observation.images.top/chunk-010/file-587.mp4",
+       "from_timestamp": 789.2666666666668,
+       "to_timestamp": 902.3666666666668
+      },
+      "left_wrist": {
+       "path": "videos/observation.images.left_wrist/chunk-010/file-158.mp4",
+       "from_timestamp": 789.2666666666668,
+       "to_timestamp": 902.3666666666668
+      },
+      "right_wrist": {
+       "path": "videos/observation.images.right_wrist/chunk-010/file-093.mp4",
+       "from_timestamp": 789.2666666666668,
+       "to_timestamp": 902.3666666666668
+      }
+     }
+    },
+    {
+     "episode": 109709,
+     "length": 3693,
+     "src": {
+      "top": {
+       "path": "videos/observation.images.top/chunk-010/file-587.mp4",
+       "from_timestamp": 902.3666666666668,
+       "to_timestamp": 1025.4666666666667
+      },
+      "left_wrist": {
+       "path": "videos/observation.images.left_wrist/chunk-010/file-158.mp4",
+       "from_timestamp": 902.3666666666668,
+       "to_timestamp": 1025.4666666666667
+      },
+      "right_wrist": {
+       "path": "videos/observation.images.right_wrist/chunk-010/file-093.mp4",
+       "from_timestamp": 902.3666666666668,
+       "to_timestamp": 1025.4666666666667
+      }
+     }
+    },
+    {
+     "episode": 109710,
+     "length": 2349,
+     "src": {
+      "top": {
+       "path": "videos/observation.images.top/chunk-010/file-588.mp4",
+       "from_timestamp": 0.0,
+       "to_timestamp": 78.3
+      },
+      "left_wrist": {
+       "path": "videos/observation.images.left_wrist/chunk-010/file-159.mp4",
+       "from_timestamp": 0.0,
+       "to_timestamp": 78.3
+      },
+      "right_wrist": {
+       "path": "videos/observation.images.right_wrist/chunk-010/file-094.mp4",
+       "from_timestamp": 0.0,
+       "to_timestamp": 78.3
+      }
+     }
+    },
+    {
+     "episode": 109711,
+     "length": 3770,
+     "src": {
+      "top": {
+       "path": "videos/observation.images.top/chunk-010/file-588.mp4",
+       "from_timestamp": 78.3,
+       "to_timestamp": 203.96666666666667
+      },
+      "left_wrist": {
+       "path": "videos/observation.images.left_wrist/chunk-010/file-159.mp4",
+       "from_timestamp": 78.3,
+       "to_timestamp": 203.96666666666667
+      },
+      "right_wrist": {
+       "path": "videos/observation.images.right_wrist/chunk-010/file-094.mp4",
+       "from_timestamp": 78.3,
+       "to_timestamp": 203.96666666666667
+      }
+     }
+    },
+    {
+     "episode": 109715,
+     "length": 1250,
+     "src": {
+      "top": {
+       "path": "videos/observation.images.top/chunk-010/file-588.mp4",
+       "from_timestamp": 394.06666666666666,
+       "to_timestamp": 435.73333333333335
+      },
+      "left_wrist": {
+       "path": "videos/observation.images.left_wrist/chunk-010/file-159.mp4",
+       "from_timestamp": 394.06666666666666,
+       "to_timestamp": 435.73333333333335
+      },
+      "right_wrist": {
+       "path": "videos/observation.images.right_wrist/chunk-010/file-094.mp4",
+       "from_timestamp": 394.06666666666666,
+       "to_timestamp": 435.73333333333335
+      }
+     }
+    },
+    {
+     "episode": 109717,
+     "length": 3177,
+     "src": {
+      "top": {
+       "path": "videos/observation.images.top/chunk-010/file-588.mp4",
+       "from_timestamp": 461.2,
+       "to_timestamp": 567.1
+      },
+      "left_wrist": {
+       "path": "videos/observation.images.left_wrist/chunk-010/file-159.mp4",
+       "from_timestamp": 461.2,
+       "to_timestamp": 567.1
+      },
+      "right_wrist": {
+       "path": "videos/observation.images.right_wrist/chunk-010/file-094.mp4",
+       "from_timestamp": 461.2,
+       "to_timestamp": 567.1
+      }
+     }
+    }
+   ],
+   "frames": 24979
+  }
+ ],
+ "fps": 30,
+ "download": {
+  "files": 15,
+  "bytes": 1972187881,
+  "s": 27.02217946498422
+ },
+ "cuts": [
+  {
+   "layout": "STACK",
+   "group": 0,
+   "part": 0,
+   "from_frame": 0,
+   "to_frame": 8266,
+   "frames": 8266,
+   "from_ts_in_source": 0.0,
+   "source": "variants/20260925T025221Z/ckpt_full/STACK/ckpt_full_g000.mp4",
+   "rel": "r3-20260925T182847Z/ckpt_full/STACK/ckpt_full_g000_p0.mp4",
+   "bytes": 70501856,
+   "sha256": "52e568871cf058cd4de99349140c45570cbd0851c2f9b00ea1a064a2aa1991bd",
+   "stack_bytes_in_range": 70450487,
+   "cut_s": 5.128209410002455,
+   "check": {
+    "packets_ok": true,
+    "pts_ok": true,
+    "key_ok": true,
+    "bytes_ok": true,
+    "track0_time_base": [
+     1,
+     90000
+    ],
+    "frames_checked": 32,
+    "frame_mismatch": 0,
+    "equal_to_other_camera": 0,
+    "pass": true
+   }
+  },
+  {
+   "layout": "MULTI",
+   "group": 0,
+   "part": 0,
+   "from_frame": 0,
+   "to_frame": 8266,
+   "frames": 8266,
+   "from_ts_in_source": 0.0,
+   "source": "variants/20260925T025221Z/ckpt_full/MULTI/ckpt_full_g000.mp4",
+   "rel": "r3-20260925T182847Z/ckpt_full/MULTI/ckpt_full_g000_p0.mp4",
+   "bytes": 71893180,
+   "sha256": "6cc00cf7561d8a0750e84eee4da27ad44ebcce52af24ce171bea082ec78804be",
+   "stack_bytes_in_range": 70450487,
+   "cut_s": 3.8814412869978696,
+   "check": {
+    "packets_ok": true,
+    "pts_ok": true,
+    "key_ok": true,
+    "bytes_ok": true,
+    "track0_time_base": [
+     1,
+     90000
+    ],
+    "track1_time_base": [
+     1,
+     90000
+    ],
+    "track2_time_base": [
+     1,
+     90000
+    ],
+    "frames_checked": 192,
+    "frame_mismatch": 0,
+    "equal_to_other_camera": 0,
+    "pass": true
+   }
+  },
+  {
+   "layout": "STACK",
+   "group": 0,
+   "part": 1,
+   "from_frame": 8266,
+   "to_frame": 14066,
+   "frames": 5800,
+   "from_ts_in_source": 275.53333333333336,
+   "source": "variants/20260925T025221Z/ckpt_full/STACK/ckpt_full_g000.mp4",
+   "rel": "r3-20260925T182847Z/ckpt_full/STACK/ckpt_full_g000_p1.mp4",
+   "bytes": 70460780,
+   "sha256": "4e4e0be0bb9eb98370a923842af90bd3c3ba715c81a04551865ac26b1d803960",
+   "stack_bytes_in_range": 70424255,
+   "cut_s": 1.233558186038863,
+   "check": {
+    "packets_ok": true,
+    "pts_ok": true,
+    "key_ok": true,
+    "bytes_ok": true,
+    "track0_time_base": [
+     1,
+     90000
+    ],
+    "frames_checked": 32,
+    "frame_mismatch": 0,
+    "equal_to_other_camera": 0,
+    "pass": true
+   }
+  },
+  {
+   "layout": "MULTI",
+   "group": 0,
+   "part": 1,
+   "from_frame": 8266,
+   "to_frame": 14066,
+   "frames": 5800,
+   "from_ts_in_source": 275.53333333333336,
+   "source": "variants/20260925T025221Z/ckpt_full/MULTI/ckpt_full_g000.mp4",
+   "rel": "r3-20260925T182847Z/ckpt_full/MULTI/ckpt_full_g000_p1.mp4",
+   "bytes": 71578108,
+   "sha256": "47a3ad731b2861357e7d85ffeca55dbbd9465296b312d8e92981a2ba561900d5",
+   "stack_bytes_in_range": 70424255,
+   "cut_s": 3.6541059470037,
+   "check": {
+    "packets_ok": true,
+    "pts_ok": true,
+    "key_ok": true,
+    "bytes_ok": true,
+    "track0_time_base": [
+     1,
+     90000
+    ],
+    "track1_time_base": [
+     1,
+     90000
+    ],
+    "track2_time_base": [
+     1,
+     90000
+    ],
+    "frames_checked": 192,
+    "frame_mismatch": 0,
+    "equal_to_other_camera": 0,
+    "pass": true
+   }
+  },
+  {
+   "layout": "STACK",
+   "group": 0,
+   "part": 2,
+   "from_frame": 14066,
+   "to_frame": 23380,
+   "frames": 9314,
+   "from_ts_in_source": 468.8666666666667,
+   "source": "variants/20260925T025221Z/ckpt_full/STACK/ckpt_full_g000.mp4",
+   "rel": "r3-20260925T182847Z/ckpt_full/STACK/ckpt_full_g000_p2.mp4",
+   "bytes": 70515083,
+   "sha256": "fedb914d59ce5a2bcc22c88a2a2c45f16eb9512a72b0d48d70f5af7bbc128294",
+   "stack_bytes_in_range": 70457378,
+   "cut_s": 1.2328065230394714,
+   "check": {
+    "packets_ok": true,
+    "pts_ok": true,
+    "key_ok": true,
+    "bytes_ok": true,
+    "track0_time_base": [
+     1,
+     90000
+    ],
+    "frames_checked": 32,
+    "frame_mismatch": 0,
+    "equal_to_other_camera": 0,
+    "pass": true
+   }
+  },
+  {
+   "layout": "MULTI",
+   "group": 0,
+   "part": 2,
+   "from_frame": 14066,
+   "to_frame": 23380,
+   "frames": 9314,
+   "from_ts_in_source": 468.8666666666667,
+   "source": "variants/20260925T025221Z/ckpt_full/MULTI/ckpt_full_g000.mp4",
+   "rel": "r3-20260925T182847Z/ckpt_full/MULTI/ckpt_full_g000_p2.mp4",
+   "bytes": 71854126,
+   "sha256": "c5984b77f1954574d7de7d0fc286f6709a1a8acb8e0350c8458df5803b91fbb4",
+   "stack_bytes_in_range": 70457378,
+   "cut_s": 4.519109587999992,
+   "check": {
+    "packets_ok": true,
+    "pts_ok": true,
+    "key_ok": true,
+    "bytes_ok": true,
+    "track0_time_base": [
+     1,
+     90000
+    ],
+    "track1_time_base": [
+     1,
+     90000
+    ],
+    "track2_time_base": [
+     1,
+     90000
+    ],
+    "frames_checked": 192,
+    "frame_mismatch": 0,
+    "equal_to_other_camera": 0,
+    "pass": true
+   }
+  },
+  {
+   "layout": "STACK",
+   "group": 1,
+   "part": 0,
+   "from_frame": 0,
+   "to_frame": 6626,
+   "frames": 6626,
+   "from_ts_in_source": 0.0,
+   "source": "variants/20260925T025221Z/ckpt_full/STACK/ckpt_full_g001.mp4",
+   "rel": "r3-20260925T182847Z/ckpt_full/STACK/ckpt_full_g001_p0.mp4",
+   "bytes": 86841313,
+   "sha256": "7845bea6856657b1c2821f96f93c7e8861218a297eaa047bf5e16d0b8928a2cf",
+   "stack_bytes_in_range": 86799684,
+   "cut_s": 1.11562444397714,
+   "check": {
+    "packets_ok": true,
+    "pts_ok": true,
+    "key_ok": true,
+    "bytes_ok": true,
+    "track0_time_base": [
+     1,
+     90000
+    ],
+    "frames_checked": 32,
+    "frame_mismatch": 0,
+    "equal_to_other_camera": 0,
+    "pass": true
+   }
+  },
+  {
+   "layout": "MULTI",
+   "group": 1,
+   "part": 0,
+   "from_frame": 0,
+   "to_frame": 6626,
+   "frames": 6626,
+   "from_ts_in_source": 0.0,
+   "source": "variants/20260925T025221Z/ckpt_full/MULTI/ckpt_full_g001.mp4",
+   "rel": "r3-20260925T182847Z/ckpt_full/MULTI/ckpt_full_g001_p0.mp4",
+   "bytes": 88094600,
+   "sha256": "ab0823b4207c561fba2d847f84513e75c97a0f37730b9bf851abdd7b4876aec3",
+   "stack_bytes_in_range": 86799684,
+   "cut_s": 4.107907168974634,
+   "check": {
+    "packets_ok": true,
+    "pts_ok": true,
+    "key_ok": true,
+    "bytes_ok": true,
+    "track0_time_base": [
+     1,
+     90000
+    ],
+    "track1_time_base": [
+     1,
+     90000
+    ],
+    "track2_time_base": [
+     1,
+     90000
+    ],
+    "frames_checked": 192,
+    "frame_mismatch": 0,
+    "equal_to_other_camera": 0,
+    "pass": true
+   }
+  },
+  {
+   "layout": "STACK",
+   "group": 1,
+   "part": 1,
+   "from_frame": 6626,
+   "to_frame": 17092,
+   "frames": 10466,
+   "from_ts_in_source": 220.86666666666667,
+   "source": "variants/20260925T025221Z/ckpt_full/STACK/ckpt_full_g001.mp4",
+   "rel": "r3-20260925T182847Z/ckpt_full/STACK/ckpt_full_g001_p1.mp4",
+   "bytes": 86877669,
+   "sha256": "8f0385940134cd1149cc24d9872214fa5edb5f0fee9f4ae7a22fad790fe64e5f",
+   "stack_bytes_in_range": 86812820,
+   "cut_s": 1.314605165971443,
+   "check": {
+    "packets_ok": true,
+    "pts_ok": true,
+    "key_ok": true,
+    "bytes_ok": true,
+    "track0_time_base": [
+     1,
+     90000
+    ],
+    "frames_checked": 32,
+    "frame_mismatch": 0,
+    "equal_to_other_camera": 0,
+    "pass": true
+   }
+  },
+  {
+   "layout": "MULTI",
+   "group": 1,
+   "part": 1,
+   "from_frame": 6626,
+   "to_frame": 17092,
+   "frames": 10466,
+   "from_ts_in_source": 220.86666666666667,
+   "source": "variants/20260925T025221Z/ckpt_full/MULTI/ckpt_full_g001.mp4",
+   "rel": "r3-20260925T182847Z/ckpt_full/MULTI/ckpt_full_g001_p1.mp4",
+   "bytes": 88582829,
+   "sha256": "d2a5dea529af0825d014449412c127329e38c1534d62241ed34b66c30c1d08a2",
+   "stack_bytes_in_range": 86812820,
+   "cut_s": 4.931517630000599,
+   "check": {
+    "packets_ok": true,
+    "pts_ok": true,
+    "key_ok": true,
+    "bytes_ok": true,
+    "track0_time_base": [
+     1,
+     90000
+    ],
+    "track1_time_base": [
+     1,
+     90000
+    ],
+    "track2_time_base": [
+     1,
+     90000
+    ],
+    "frames_checked": 192,
+    "frame_mismatch": 0,
+    "equal_to_other_camera": 0,
+    "pass": true
+   }
+  },
+  {
+   "layout": "STACK",
+   "group": 1,
+   "part": 2,
+   "from_frame": 17092,
+   "to_frame": 25759,
+   "frames": 8667,
+   "from_ts_in_source": 569.7333333333333,
+   "source": "variants/20260925T025221Z/ckpt_full/STACK/ckpt_full_g001.mp4",
+   "rel": "r3-20260925T182847Z/ckpt_full/STACK/ckpt_full_g001_p2.mp4",
+   "bytes": 86849478,
+   "sha256": "87ec23755ead36cd285ad3cc4fb8e9b2e210e4e3967945a00c53ab513a5fcb35",
+   "stack_bytes_in_range": 86795517,
+   "cut_s": 1.4979348549968563,
+   "check": {
+    "packets_ok": true,
+    "pts_ok": true,
+    "key_ok": true,
+    "bytes_ok": true,
+    "track0_time_base": [
+     1,
+     90000
+    ],
+    "frames_checked": 32,
+    "frame_mismatch": 0,
+    "equal_to_other_camera": 0,
+    "pass": true
+   }
+  },
+  {
+   "layout": "MULTI",
+   "group": 1,
+   "part": 2,
+   "from_frame": 17092,
+   "to_frame": 25759,
+   "frames": 8667,
+   "from_ts_in_source": 569.7333333333333,
+   "source": "variants/20260925T025221Z/ckpt_full/MULTI/ckpt_full_g001.mp4",
+   "rel": "r3-20260925T182847Z/ckpt_full/MULTI/ckpt_full_g001_p2.mp4",
+   "bytes": 88520217,
+   "sha256": "df44d954885406c4b1fc6c1ffa63a67c1a1bce81f9867ac86f2fba3d0038bada",
+   "stack_bytes_in_range": 86795517,
+   "cut_s": 4.753710935998242,
+   "check": {
+    "packets_ok": true,
+    "pts_ok": true,
+    "key_ok": true,
+    "bytes_ok": true,
+    "track0_time_base": [
+     1,
+     90000
+    ],
+    "track1_time_base": [
+     1,
+     90000
+    ],
+    "track2_time_base": [
+     1,
+     90000
+    ],
+    "frames_checked": 192,
+    "frame_mismatch": 0,
+    "equal_to_other_camera": 0,
+    "pass": true
+   }
+  },
+  {
+   "layout": "STACK",
+   "group": 2,
+   "part": 0,
+   "from_frame": 0,
+   "to_frame": 7336,
+   "frames": 7336,
+   "from_ts_in_source": 0.0,
+   "source": "variants/20260925T025221Z/ckpt_full/STACK/ckpt_full_g002.mp4",
+   "rel": "r3-20260925T182847Z/ckpt_full/STACK/ckpt_full_g002_p0.mp4",
+   "bytes": 59052596,
+   "sha256": "6747f34a019b69862947dcb6773ebd76704ba247ac329687af23aa2fdf620bc0",
+   "stack_bytes_in_range": 59006923,
+   "cut_s": 1.2295377050177194,
+   "check": {
+    "packets_ok": true,
+    "pts_ok": true,
+    "key_ok": true,
+    "bytes_ok": true,
+    "track0_time_base": [
+     1,
+     90000
+    ],
+    "frames_checked": 32,
+    "frame_mismatch": 0,
+    "equal_to_other_camera": 0,
+    "pass": true
+   }
+  },
+  {
+   "layout": "MULTI",
+   "group": 2,
+   "part": 0,
+   "from_frame": 0,
+   "to_frame": 7336,
+   "frames": 7336,
+   "from_ts_in_source": 0.0,
+   "source": "variants/20260925T025221Z/ckpt_full/MULTI/ckpt_full_g002.mp4",
+   "rel": "r3-20260925T182847Z/ckpt_full/MULTI/ckpt_full_g002_p0.mp4",
+   "bytes": 60279527,
+   "sha256": "38de07e06e854af04631905e05429dd5e60cebc7ebec8424c4401b90f35846e0",
+   "stack_bytes_in_range": 59006923,
+   "cut_s": 4.056608300015796,
+   "check": {
+    "packets_ok": true,
+    "pts_ok": true,
+    "key_ok": true,
+    "bytes_ok": true,
+    "track0_time_base": [
+     1,
+     90000
+    ],
+    "track1_time_base": [
+     1,
+     90000
+    ],
+    "track2_time_base": [
+     1,
+     90000
+    ],
+    "frames_checked": 192,
+    "frame_mismatch": 0,
+    "equal_to_other_camera": 0,
+    "pass": true
+   }
+  },
+  {
+   "layout": "STACK",
+   "group": 2,
+   "part": 1,
+   "from_frame": 7336,
+   "to_frame": 14600,
+   "frames": 7264,
+   "from_ts_in_source": 244.53333333333333,
+   "source": "variants/20260925T025221Z/ckpt_full/STACK/ckpt_full_g002.mp4",
+   "rel": "r3-20260925T182847Z/ckpt_full/STACK/ckpt_full_g002_p1.mp4",
+   "bytes": 59068211,
+   "sha256": "bfbcf9f46cb4f6e9cea0eabad790c99ec302b9f0bc0d077a53f5d93dc945ecbd",
+   "stack_bytes_in_range": 59023114,
+   "cut_s": 1.2036902380059473,
+   "check": {
+    "packets_ok": true,
+    "pts_ok": true,
+    "key_ok": true,
+    "bytes_ok": true,
+    "track0_time_base": [
+     1,
+     90000
+    ],
+    "frames_checked": 32,
+    "frame_mismatch": 0,
+    "equal_to_other_camera": 0,
+    "pass": true
+   }
+  },
+  {
+   "layout": "MULTI",
+   "group": 2,
+   "part": 1,
+   "from_frame": 7336,
+   "to_frame": 14600,
+   "frames": 7264,
+   "from_ts_in_source": 244.53333333333333,
+   "source": "variants/20260925T025221Z/ckpt_full/MULTI/ckpt_full_g002.mp4",
+   "rel": "r3-20260925T182847Z/ckpt_full/MULTI/ckpt_full_g002_p1.mp4",
+   "bytes": 60288336,
+   "sha256": "863172822a47853d61a36bf7475933f45573d833bc5d7a2bb935d68ace330c26",
+   "stack_bytes_in_range": 59023114,
+   "cut_s": 3.227980561030563,
+   "check": {
+    "packets_ok": true,
+    "pts_ok": true,
+    "key_ok": true,
+    "bytes_ok": true,
+    "track0_time_base": [
+     1,
+     90000
+    ],
+    "track1_time_base": [
+     1,
+     90000
+    ],
+    "track2_time_base": [
+     1,
+     90000
+    ],
+    "frames_checked": 192,
+    "frame_mismatch": 0,
+    "equal_to_other_camera": 0,
+    "pass": true
+   }
+  },
+  {
+   "layout": "STACK",
+   "group": 2,
+   "part": 2,
+   "from_frame": 14600,
+   "to_frame": 24979,
+   "frames": 10379,
+   "from_ts_in_source": 486.6666666666667,
+   "source": "variants/20260925T025221Z/ckpt_full/STACK/ckpt_full_g002.mp4",
+   "rel": "r3-20260925T182847Z/ckpt_full/STACK/ckpt_full_g002_p2.mp4",
+   "bytes": 59067025,
+   "sha256": "87efa9eecdfd2ab7935179645792a04164538d003d21028afcf2a14d1fc6b140",
+   "stack_bytes_in_range": 59003092,
+   "cut_s": 1.3333159579779021,
+   "check": {
+    "packets_ok": true,
+    "pts_ok": true,
+    "key_ok": true,
+    "bytes_ok": true,
+    "track0_time_base": [
+     1,
+     90000
+    ],
+    "frames_checked": 32,
+    "frame_mismatch": 0,
+    "equal_to_other_camera": 0,
+    "pass": true
+   }
+  },
+  {
+   "layout": "MULTI",
+   "group": 2,
+   "part": 2,
+   "from_frame": 14600,
+   "to_frame": 24979,
+   "frames": 10379,
+   "from_ts_in_source": 486.6666666666667,
+   "source": "variants/20260925T025221Z/ckpt_full/MULTI/ckpt_full_g002.mp4",
+   "rel": "r3-20260925T182847Z/ckpt_full/MULTI/ckpt_full_g002_p2.mp4",
+   "bytes": 60838916,
+   "sha256": "f741e39f2056f6fe57ba659991714345c783643ad80a7e95e9de38bca91c1281",
+   "stack_bytes_in_range": 59003092,
+   "cut_s": 4.813032192003448,
+   "check": {
+    "packets_ok": true,
+    "pts_ok": true,
+    "key_ok": true,
+    "bytes_ok": true,
+    "track0_time_base": [
+     1,
+     90000
+    ],
+    "track1_time_base": [
+     1,
+     90000
+    ],
+    "track2_time_base": [
+     1,
+     90000
+    ],
+    "frames_checked": 192,
+    "frame_mismatch": 0,
+    "equal_to_other_camera": 0,
+    "pass": true
+   }
+  }
+ ],
+ "checks": [],
+ "keyframe_spacing": {
+  "0": [
+   2
+  ],
+  "1": [
+   2
+  ],
+  "2": [
+   2
+  ]
+ },
+ "multi_interleave": {
+  "r3-20260925T182847Z/ckpt_full/MULTI/ckpt_full_g000_p0.mp4": {
+   "timestamps": 8266,
+   "span_bytes_p50": 10067.0,
+   "span_bytes_p95": 19573.0,
+   "span_bytes_max": 22752,
+   "gap_bytes_p50": 7390.0,
+   "gap_bytes_p95": 14533.0,
+   "packets": 24798,
+   "same_stream_runs": 24798,
+   "mean_packets_per_run": 1.0
+  },
+  "r3-20260925T182847Z/ckpt_full/MULTI/ckpt_full_g000_p1.mp4": {
+   "timestamps": 5800,
+   "span_bytes_p50": 9513.5,
+   "span_bytes_p95": 27428.05,
+   "span_bytes_max": 30145,
+   "gap_bytes_p50": 5733.5,
+   "gap_bytes_p95": 19967.0,
+   "packets": 17400,
+   "same_stream_runs": 17400,
+   "mean_packets_per_run": 1.0
+  },
+  "r3-20260925T182847Z/ckpt_full/MULTI/ckpt_full_g000_p2.mp4": {
+   "timestamps": 9314,
+   "span_bytes_p50": 6163.0,
+   "span_bytes_p95": 18688.4,
+   "span_bytes_max": 29530,
+   "gap_bytes_p50": 4333.5,
+   "gap_bytes_p95": 12194.750000000002,
+   "packets": 27942,
+   "same_stream_runs": 27942,
+   "mean_packets_per_run": 1.0
+  },
+  "r3-20260925T182847Z/ckpt_full/MULTI/ckpt_full_g001_p0.mp4": {
+   "timestamps": 6626,
+   "span_bytes_p50": 9729.0,
+   "span_bytes_p95": 30744.25,
+   "span_bytes_max": 34182,
+   "gap_bytes_p50": 7238.0,
+   "gap_bytes_p95": 21289.0,
+   "packets": 19878,
+   "same_stream_runs": 19878,
+   "mean_packets_per_run": 1.0
+  },
+  "r3-20260925T182847Z/ckpt_full/MULTI/ckpt_full_g001_p1.mp4": {
+   "timestamps": 10466,
+   "span_bytes_p50": 7844.0,
+   "span_bytes_p95": 18618.25,
+   "span_bytes_max": 33510,
+   "gap_bytes_p50": 5649.5,
+   "gap_bytes_p95": 14514.5,
+   "packets": 31398,
+   "same_stream_runs": 31398,
+   "mean_packets_per_run": 1.0
+  },
+  "r3-20260925T182847Z/ckpt_full/MULTI/ckpt_full_g001_p2.mp4": {
+   "timestamps": 8667,
+   "span_bytes_p50": 8405.0,
+   "span_bytes_p95": 22519.0,
+   "span_bytes_max": 28339,
+   "gap_bytes_p50": 6628.0,
+   "gap_bytes_p95": 16401.0,
+   "packets": 26001,
+   "same_stream_runs": 26001,
+   "mean_packets_per_run": 1.0
+  },
+  "r3-20260925T182847Z/ckpt_full/MULTI/ckpt_full_g002_p0.mp4": {
+   "timestamps": 7336,
+   "span_bytes_p50": 7843.5,
+   "span_bytes_p95": 20729.0,
+   "span_bytes_max": 24959,
+   "gap_bytes_p50": 4770.5,
+   "gap_bytes_p95": 13132.75,
+   "packets": 22008,
+   "same_stream_runs": 22008,
+   "mean_packets_per_run": 1.0
+  },
+  "r3-20260925T182847Z/ckpt_full/MULTI/ckpt_full_g002_p1.mp4": {
+   "timestamps": 7264,
+   "span_bytes_p50": 8570.5,
+   "span_bytes_p95": 18524.85,
+   "span_bytes_max": 22782,
+   "gap_bytes_p50": 6522.5,
+   "gap_bytes_p95": 12958.399999999998,
+   "packets": 21792,
+   "same_stream_runs": 21792,
+   "mean_packets_per_run": 1.0
+  },
+  "r3-20260925T182847Z/ckpt_full/MULTI/ckpt_full_g002_p2.mp4": {
+   "timestamps": 10379,
+   "span_bytes_p50": 6767.0,
+   "span_bytes_p95": 15065.300000000001,
+   "span_bytes_max": 20329,
+   "gap_bytes_p50": 5418.0,
+   "gap_bytes_p95": 11374.0,
+   "packets": 31137,
+   "same_stream_runs": 31137,
+   "mean_packets_per_run": 1.0
+  }
+ },
+ "sep_sizes": {
+  "20260925T025221Z/ckpt_full/SEP/ckpt_full_g000__top.mp4": 80307330,
+  "20260925T025221Z/ckpt_full/SEP/ckpt_full_g000__left_wrist.mp4": 68953260,
+  "20260925T025221Z/ckpt_full/SEP/ckpt_full_g000__right_wrist.mp4": 65784032,
+  "20260925T025221Z/ckpt_full/SEP/ckpt_full_g001__top.mp4": 105295605,
+  "20260925T025221Z/ckpt_full/SEP/ckpt_full_g001__left_wrist.mp4": 81931584,
+  "20260925T025221Z/ckpt_full/SEP/ckpt_full_g001__right_wrist.mp4": 77661865,
+  "20260925T025221Z/ckpt_full/SEP/ckpt_full_g002__top.mp4": 67858384,
+  "20260925T025221Z/ckpt_full/SEP/ckpt_full_g002__left_wrist.mp4": 56543978,
+  "20260925T025221Z/ckpt_full/SEP/ckpt_full_g002__right_wrist.mp4": 56704009
+ },
+ "cuts_ok": true,
+ "upload": {
+  "revision": "5efceaf32b5cdcc90e949f391a2ffc3b6d2d714a",
+  "s": 2.4510053020203486,
+  "readback_mismatch": []
+ },
+ "datasets": {
+  "SEP": {
+   "kind": "SEP",
+   "video_keys": [
+    "observation.images.top",
+    "observation.images.left_wrist",
+    "observation.images.right_wrist"
+   ],
+   "video_files_per_key": 24,
+   "copies": 24,
+   "episodes": 232,
+   "frames": 592944,
+   "ep_len_min": 11,
+   "ep_len_max": 5992,
+   "ep_len_mean": 2555.793103448276,
+   "episode_map": [
+    [
+     0,
+     0,
+     2429
+    ],
+    [
+     0,
+     2429,
+     2304
+    ],
+    [
+     0,
+     4733,
+     3533
+    ],
+    [
+     0,
+     8266,
+     830
+    ],
+    [
+     0,
+     9096,
+     2466
+    ],
+    [
+     0,
+     11562,
+     2504
+    ],
+    [
+     0,
+     14066,
+     15
+    ],
+    [
+     0,
+     14081,
+     4441
+    ],
+    [
+     0,
+     18522,
+     2537
+    ],
+    [
+     0,
+     21059,
+     2321
+    ],
+    [
+     1,
+     0,
+     2848
+    ],
+    [
+     1,
+     2848,
+     3778
+    ],
+    [
+     1,
+     6626,
+     413
+    ],
+    [
+     1,
+     7039,
+     2389
+    ],
+    [
+     1,
+     9428,
+     5992
+    ],
+    [
+     1,
+     15420,
+     1672
+    ],
+    [
+     1,
+     17092,
+     788
+    ],
+    [
+     1,
+     17880,
+     4200
+    ],
+    [
+     1,
+     22080,
+     3679
+    ],
+    [
+     2,
+     0,
+     3756
+    ],
+    [
+     2,
+     3756,
+     3580
+    ],
+    [
+     2,
+     7336,
+     11
+    ],
+    [
+     2,
+     7347,
+     3393
+    ],
+    [
+     2,
+     10740,
+     3693
+    ],
+    [
+     2,
+     14433,
+     167
+    ],
+    [
+     2,
+     14600,
+     2182
+    ],
+    [
+     2,
+     16782,
+     3770
+    ],
+    [
+     2,
+     20552,
+     1250
+    ],
+    [
+     2,
+     21802,
+     3177
+    ],
+    [
+     0,
+     0,
+     2429
+    ],
+    [
+     0,
+     2429,
+     2304
+    ],
+    [
+     0,
+     4733,
+     3533
+    ],
+    [
+     0,
+     8266,
+     830
+    ],
+    [
+     0,
+     9096,
+     2466
+    ],
+    [
+     0,
+     11562,
+     2504
+    ],
+    [
+     0,
+     14066,
+     15
+    ],
+    [
+     0,
+     14081,
+     4441
+    ],
+    [
+     0,
+     18522,
+     2537
+    ],
+    [
+     0,
+     21059,
+     2321
+    ],
+    [
+     1,
+     0,
+     2848
+    ],
+    [
+     1,
+     2848,
+     3778
+    ],
+    [
+     1,
+     6626,
+     413
+    ],
+    [
+     1,
+     7039,
+     2389
+    ],
+    [
+     1,
+     9428,
+     5992
+    ],
+    [
+     1,
+     15420,
+     1672
+    ],
+    [
+     1,
+     17092,
+     788
+    ],
+    [
+     1,
+     17880,
+     4200
+    ],
+    [
+     1,
+     22080,
+     3679
+    ],
+    [
+     2,
+     0,
+     3756
+    ],
+    [
+     2,
+     3756,
+     3580
+    ],
+    [
+     2,
+     7336,
+     11
+    ],
+    [
+     2,
+     7347,
+     3393
+    ],
+    [
+     2,
+     10740,
+     3693
+    ],
+    [
+     2,
+     14433,
+     167
+    ],
+    [
+     2,
+     14600,
+     2182
+    ],
+    [
+     2,
+     16782,
+     3770
+    ],
+    [
+     2,
+     20552,
+     1250
+    ],
+    [
+     2,
+     21802,
+     3177
+    ],
+    [
+     0,
+     0,
+     2429
+    ],
+    [
+     0,
+     2429,
+     2304
+    ],
+    [
+     0,
+     4733,
+     3533
+    ],
+    [
+     0,
+     8266,
+     830
+    ],
+    [
+     0,
+     9096,
+     2466
+    ],
+    [
+     0,
+     11562,
+     2504
+    ],
+    [
+     0,
+     14066,
+     15
+    ],
+    [
+     0,
+     14081,
+     4441
+    ],
+    [
+     0,
+     18522,
+     2537
+    ],
+    [
+     0,
+     21059,
+     2321
+    ],
+    [
+     1,
+     0,
+     2848
+    ],
+    [
+     1,
+     2848,
+     3778
+    ],
+    [
+     1,
+     6626,
+     413
+    ],
+    [
+     1,
+     7039,
+     2389
+    ],
+    [
+     1,
+     9428,
+     5992
+    ],
+    [
+     1,
+     15420,
+     1672
+    ],
+    [
+     1,
+     17092,
+     788
+    ],
+    [
+     1,
+     17880,
+     4200
+    ],
+    [
+     1,
+     22080,
+     3679
+    ],
+    [
+     2,
+     0,
+     3756
+    ],
+    [
+     2,
+     3756,
+     3580
+    ],
+    [
+     2,
+     7336,
+     11
+    ],
+    [
+     2,
+     7347,
+     3393
+    ],
+    [
+     2,
+     10740,
+     3693
+    ],
+    [
+     2,
+     14433,
+     167
+    ],
+    [
+     2,
+     14600,
+     2182
+    ],
+    [
+     2,
+     16782,
+     3770
+    ],
+    [
+     2,
+     20552,
+     1250
+    ],
+    [
+     2,
+     21802,
+     3177
+    ],
+    [
+     0,
+     0,
+     2429
+    ],
+    [
+     0,
+     2429,
+     2304
+    ],
+    [
+     0,
+     4733,
+     3533
+    ],
+    [
+     0,
+     8266,
+     830
+    ],
+    [
+     0,
+     9096,
+     2466
+    ],
+    [
+     0,
+     11562,
+     2504
+    ],
+    [
+     0,
+     14066,
+     15
+    ],
+    [
+     0,
+     14081,
+     4441
+    ],
+    [
+     0,
+     18522,
+     2537
+    ],
+    [
+     0,
+     21059,
+     2321
+    ],
+    [
+     1,
+     0,
+     2848
+    ],
+    [
+     1,
+     2848,
+     3778
+    ],
+    [
+     1,
+     6626,
+     413
+    ],
+    [
+     1,
+     7039,
+     2389
+    ],
+    [
+     1,
+     9428,
+     5992
+    ],
+    [
+     1,
+     15420,
+     1672
+    ],
+    [
+     1,
+     17092,
+     788
+    ],
+    [
+     1,
+     17880,
+     4200
+    ],
+    [
+     1,
+     22080,
+     3679
+    ],
+    [
+     2,
+     0,
+     3756
+    ],
+    [
+     2,
+     3756,
+     3580
+    ],
+    [
+     2,
+     7336,
+     11
+    ],
+    [
+     2,
+     7347,
+     3393
+    ],
+    [
+     2,
+     10740,
+     3693
+    ],
+    [
+     2,
+     14433,
+     167
+    ],
+    [
+     2,
+     14600,
+     2182
+    ],
+    [
+     2,
+     16782,
+     3770
+    ],
+    [
+     2,
+     20552,
+     1250
+    ],
+    [
+     2,
+     21802,
+     3177
+    ],
+    [
+     0,
+     0,
+     2429
+    ],
+    [
+     0,
+     2429,
+     2304
+    ],
+    [
+     0,
+     4733,
+     3533
+    ],
+    [
+     0,
+     8266,
+     830
+    ],
+    [
+     0,
+     9096,
+     2466
+    ],
+    [
+     0,
+     11562,
+     2504
+    ],
+    [
+     0,
+     14066,
+     15
+    ],
+    [
+     0,
+     14081,
+     4441
+    ],
+    [
+     0,
+     18522,
+     2537
+    ],
+    [
+     0,
+     21059,
+     2321
+    ],
+    [
+     1,
+     0,
+     2848
+    ],
+    [
+     1,
+     2848,
+     3778
+    ],
+    [
+     1,
+     6626,
+     413
+    ],
+    [
+     1,
+     7039,
+     2389
+    ],
+    [
+     1,
+     9428,
+     5992
+    ],
+    [
+     1,
+     15420,
+     1672
+    ],
+    [
+     1,
+     17092,
+     788
+    ],
+    [
+     1,
+     17880,
+     4200
+    ],
+    [
+     1,
+     22080,
+     3679
+    ],
+    [
+     2,
+     0,
+     3756
+    ],
+    [
+     2,
+     3756,
+     3580
+    ],
+    [
+     2,
+     7336,
+     11
+    ],
+    [
+     2,
+     7347,
+     3393
+    ],
+    [
+     2,
+     10740,
+     3693
+    ],
+    [
+     2,
+     14433,
+     167
+    ],
+    [
+     2,
+     14600,
+     2182
+    ],
+    [
+     2,
+     16782,
+     3770
+    ],
+    [
+     2,
+     20552,
+     1250
+    ],
+    [
+     2,
+     21802,
+     3177
+    ],
+    [
+     0,
+     0,
+     2429
+    ],
+    [
+     0,
+     2429,
+     2304
+    ],
+    [
+     0,
+     4733,
+     3533
+    ],
+    [
+     0,
+     8266,
+     830
+    ],
+    [
+     0,
+     9096,
+     2466
+    ],
+    [
+     0,
+     11562,
+     2504
+    ],
+    [
+     0,
+     14066,
+     15
+    ],
+    [
+     0,
+     14081,
+     4441
+    ],
+    [
+     0,
+     18522,
+     2537
+    ],
+    [
+     0,
+     21059,
+     2321
+    ],
+    [
+     1,
+     0,
+     2848
+    ],
+    [
+     1,
+     2848,
+     3778
+    ],
+    [
+     1,
+     6626,
+     413
+    ],
+    [
+     1,
+     7039,
+     2389
+    ],
+    [
+     1,
+     9428,
+     5992
+    ],
+    [
+     1,
+     15420,
+     1672
+    ],
+    [
+     1,
+     17092,
+     788
+    ],
+    [
+     1,
+     17880,
+     4200
+    ],
+    [
+     1,
+     22080,
+     3679
+    ],
+    [
+     2,
+     0,
+     3756
+    ],
+    [
+     2,
+     3756,
+     3580
+    ],
+    [
+     2,
+     7336,
+     11
+    ],
+    [
+     2,
+     7347,
+     3393
+    ],
+    [
+     2,
+     10740,
+     3693
+    ],
+    [
+     2,
+     14433,
+     167
+    ],
+    [
+     2,
+     14600,
+     2182
+    ],
+    [
+     2,
+     16782,
+     3770
+    ],
+    [
+     2,
+     20552,
+     1250
+    ],
+    [
+     2,
+     21802,
+     3177
+    ],
+    [
+     0,
+     0,
+     2429
+    ],
+    [
+     0,
+     2429,
+     2304
+    ],
+    [
+     0,
+     4733,
+     3533
+    ],
+    [
+     0,
+     8266,
+     830
+    ],
+    [
+     0,
+     9096,
+     2466
+    ],
+    [
+     0,
+     11562,
+     2504
+    ],
+    [
+     0,
+     14066,
+     15
+    ],
+    [
+     0,
+     14081,
+     4441
+    ],
+    [
+     0,
+     18522,
+     2537
+    ],
+    [
+     0,
+     21059,
+     2321
+    ],
+    [
+     1,
+     0,
+     2848
+    ],
+    [
+     1,
+     2848,
+     3778
+    ],
+    [
+     1,
+     6626,
+     413
+    ],
+    [
+     1,
+     7039,
+     2389
+    ],
+    [
+     1,
+     9428,
+     5992
+    ],
+    [
+     1,
+     15420,
+     1672
+    ],
+    [
+     1,
+     17092,
+     788
+    ],
+    [
+     1,
+     17880,
+     4200
+    ],
+    [
+     1,
+     22080,
+     3679
+    ],
+    [
+     2,
+     0,
+     3756
+    ],
+    [
+     2,
+     3756,
+     3580
+    ],
+    [
+     2,
+     7336,
+     11
+    ],
+    [
+     2,
+     7347,
+     3393
+    ],
+    [
+     2,
+     10740,
+     3693
+    ],
+    [
+     2,
+     14433,
+     167
+    ],
+    [
+     2,
+     14600,
+     2182
+    ],
+    [
+     2,
+     16782,
+     3770
+    ],
+    [
+     2,
+     20552,
+     1250
+    ],
+    [
+     2,
+     21802,
+     3177
+    ],
+    [
+     0,
+     0,
+     2429
+    ],
+    [
+     0,
+     2429,
+     2304
+    ],
+    [
+     0,
+     4733,
+     3533
+    ],
+    [
+     0,
+     8266,
+     830
+    ],
+    [
+     0,
+     9096,
+     2466
+    ],
+    [
+     0,
+     11562,
+     2504
+    ],
+    [
+     0,
+     14066,
+     15
+    ],
+    [
+     0,
+     14081,
+     4441
+    ],
+    [
+     0,
+     18522,
+     2537
+    ],
+    [
+     0,
+     21059,
+     2321
+    ],
+    [
+     1,
+     0,
+     2848
+    ],
+    [
+     1,
+     2848,
+     3778
+    ],
+    [
+     1,
+     6626,
+     413
+    ],
+    [
+     1,
+     7039,
+     2389
+    ],
+    [
+     1,
+     9428,
+     5992
+    ],
+    [
+     1,
+     15420,
+     1672
+    ],
+    [
+     1,
+     17092,
+     788
+    ],
+    [
+     1,
+     17880,
+     4200
+    ],
+    [
+     1,
+     22080,
+     3679
+    ],
+    [
+     2,
+     0,
+     3756
+    ],
+    [
+     2,
+     3756,
+     3580
+    ],
+    [
+     2,
+     7336,
+     11
+    ],
+    [
+     2,
+     7347,
+     3393
+    ],
+    [
+     2,
+     10740,
+     3693
+    ],
+    [
+     2,
+     14433,
+     167
+    ],
+    [
+     2,
+     14600,
+     2182
+    ],
+    [
+     2,
+     16782,
+     3770
+    ],
+    [
+     2,
+     20552,
+     1250
+    ],
+    [
+     2,
+     21802,
+     3177
+    ]
+   ],
+   "root": "/work/r3ds/SEP",
+   "repo": "hadriencornier/lerobot-data11-r3-sep",
+   "commit": "31fd7b6605cd41c6c6c7c059ccd261924d74f033",
+   "upload_s": 2.333752117003314,
+   "files": 99,
+   "readback_mismatch": [],
+   "private": true
+  },
+  "STACK": {
+   "kind": "STACK",
+   "video_keys": [
+    "observation.images.stack"
+   ],
+   "video_files_per_key": 72,
+   "copies": 24,
+   "episodes": 232,
+   "frames": 592944,
+   "ep_len_min": 11,
+   "ep_len_max": 5992,
+   "ep_len_mean": 2555.793103448276,
+   "episode_map": [
+    [
+     0,
+     0,
+     2429
+    ],
+    [
+     0,
+     2429,
+     2304
+    ],
+    [
+     0,
+     4733,
+     3533
+    ],
+    [
+     0,
+     8266,
+     830
+    ],
+    [
+     0,
+     9096,
+     2466
+    ],
+    [
+     0,
+     11562,
+     2504
+    ],
+    [
+     0,
+     14066,
+     15
+    ],
+    [
+     0,
+     14081,
+     4441
+    ],
+    [
+     0,
+     18522,
+     2537
+    ],
+    [
+     0,
+     21059,
+     2321
+    ],
+    [
+     1,
+     0,
+     2848
+    ],
+    [
+     1,
+     2848,
+     3778
+    ],
+    [
+     1,
+     6626,
+     413
+    ],
+    [
+     1,
+     7039,
+     2389
+    ],
+    [
+     1,
+     9428,
+     5992
+    ],
+    [
+     1,
+     15420,
+     1672
+    ],
+    [
+     1,
+     17092,
+     788
+    ],
+    [
+     1,
+     17880,
+     4200
+    ],
+    [
+     1,
+     22080,
+     3679
+    ],
+    [
+     2,
+     0,
+     3756
+    ],
+    [
+     2,
+     3756,
+     3580
+    ],
+    [
+     2,
+     7336,
+     11
+    ],
+    [
+     2,
+     7347,
+     3393
+    ],
+    [
+     2,
+     10740,
+     3693
+    ],
+    [
+     2,
+     14433,
+     167
+    ],
+    [
+     2,
+     14600,
+     2182
+    ],
+    [
+     2,
+     16782,
+     3770
+    ],
+    [
+     2,
+     20552,
+     1250
+    ],
+    [
+     2,
+     21802,
+     3177
+    ],
+    [
+     0,
+     0,
+     2429
+    ],
+    [
+     0,
+     2429,
+     2304
+    ],
+    [
+     0,
+     4733,
+     3533
+    ],
+    [
+     0,
+     8266,
+     830
+    ],
+    [
+     0,
+     9096,
+     2466
+    ],
+    [
+     0,
+     11562,
+     2504
+    ],
+    [
+     0,
+     14066,
+     15
+    ],
+    [
+     0,
+     14081,
+     4441
+    ],
+    [
+     0,
+     18522,
+     2537
+    ],
+    [
+     0,
+     21059,
+     2321
+    ],
+    [
+     1,
+     0,
+     2848
+    ],
+    [
+     1,
+     2848,
+     3778
+    ],
+    [
+     1,
+     6626,
+     413
+    ],
+    [
+     1,
+     7039,
+     2389
+    ],
+    [
+     1,
+     9428,
+     5992
+    ],
+    [
+     1,
+     15420,
+     1672
+    ],
+    [
+     1,
+     17092,
+     788
+    ],
+    [
+     1,
+     17880,
+     4200
+    ],
+    [
+     1,
+     22080,
+     3679
+    ],
+    [
+     2,
+     0,
+     3756
+    ],
+    [
+     2,
+     3756,
+     3580
+    ],
+    [
+     2,
+     7336,
+     11
+    ],
+    [
+     2,
+     7347,
+     3393
+    ],
+    [
+     2,
+     10740,
+     3693
+    ],
+    [
+     2,
+     14433,
+     167
+    ],
+    [
+     2,
+     14600,
+     2182
+    ],
+    [
+     2,
+     16782,
+     3770
+    ],
+    [
+     2,
+     20552,
+     1250
+    ],
+    [
+     2,
+     21802,
+     3177
+    ],
+    [
+     0,
+     0,
+     2429
+    ],
+    [
+     0,
+     2429,
+     2304
+    ],
+    [
+     0,
+     4733,
+     3533
+    ],
+    [
+     0,
+     8266,
+     830
+    ],
+    [
+     0,
+     9096,
+     2466
+    ],
+    [
+     0,
+     11562,
+     2504
+    ],
+    [
+     0,
+     14066,
+     15
+    ],
+    [
+     0,
+     14081,
+     4441
+    ],
+    [
+     0,
+     18522,
+     2537
+    ],
+    [
+     0,
+     21059,
+     2321
+    ],
+    [
+     1,
+     0,
+     2848
+    ],
+    [
+     1,
+     2848,
+     3778
+    ],
+    [
+     1,
+     6626,
+     413
+    ],
+    [
+     1,
+     7039,
+     2389
+    ],
+    [
+     1,
+     9428,
+     5992
+    ],
+    [
+     1,
+     15420,
+     1672
+    ],
+    [
+     1,
+     17092,
+     788
+    ],
+    [
+     1,
+     17880,
+     4200
+    ],
+    [
+     1,
+     22080,
+     3679
+    ],
+    [
+     2,
+     0,
+     3756
+    ],
+    [
+     2,
+     3756,
+     3580
+    ],
+    [
+     2,
+     7336,
+     11
+    ],
+    [
+     2,
+     7347,
+     3393
+    ],
+    [
+     2,
+     10740,
+     3693
+    ],
+    [
+     2,
+     14433,
+     167
+    ],
+    [
+     2,
+     14600,
+     2182
+    ],
+    [
+     2,
+     16782,
+     3770
+    ],
+    [
+     2,
+     20552,
+     1250
+    ],
+    [
+     2,
+     21802,
+     3177
+    ],
+    [
+     0,
+     0,
+     2429
+    ],
+    [
+     0,
+     2429,
+     2304
+    ],
+    [
+     0,
+     4733,
+     3533
+    ],
+    [
+     0,
+     8266,
+     830
+    ],
+    [
+     0,
+     9096,
+     2466
+    ],
+    [
+     0,
+     11562,
+     2504
+    ],
+    [
+     0,
+     14066,
+     15
+    ],
+    [
+     0,
+     14081,
+     4441
+    ],
+    [
+     0,
+     18522,
+     2537
+    ],
+    [
+     0,
+     21059,
+     2321
+    ],
+    [
+     1,
+     0,
+     2848
+    ],
+    [
+     1,
+     2848,
+     3778
+    ],
+    [
+     1,
+     6626,
+     413
+    ],
+    [
+     1,
+     7039,
+     2389
+    ],
+    [
+     1,
+     9428,
+     5992
+    ],
+    [
+     1,
+     15420,
+     1672
+    ],
+    [
+     1,
+     17092,
+     788
+    ],
+    [
+     1,
+     17880,
+     4200
+    ],
+    [
+     1,
+     22080,
+     3679
+    ],
+    [
+     2,
+     0,
+     3756
+    ],
+    [
+     2,
+     3756,
+     3580
+    ],
+    [
+     2,
+     7336,
+     11
+    ],
+    [
+     2,
+     7347,
+     3393
+    ],
+    [
+     2,
+     10740,
+     3693
+    ],
+    [
+     2,
+     14433,
+     167
+    ],
+    [
+     2,
+     14600,
+     2182
+    ],
+    [
+     2,
+     16782,
+     3770
+    ],
+    [
+     2,
+     20552,
+     1250
+    ],
+    [
+     2,
+     21802,
+     3177
+    ],
+    [
+     0,
+     0,
+     2429
+    ],
+    [
+     0,
+     2429,
+     2304
+    ],
+    [
+     0,
+     4733,
+     3533
+    ],
+    [
+     0,
+     8266,
+     830
+    ],
+    [
+     0,
+     9096,
+     2466
+    ],
+    [
+     0,
+     11562,
+     2504
+    ],
+    [
+     0,
+     14066,
+     15
+    ],
+    [
+     0,
+     14081,
+     4441
+    ],
+    [
+     0,
+     18522,
+     2537
+    ],
+    [
+     0,
+     21059,
+     2321
+    ],
+    [
+     1,
+     0,
+     2848
+    ],
+    [
+     1,
+     2848,
+     3778
+    ],
+    [
+     1,
+     6626,
+     413
+    ],
+    [
+     1,
+     7039,
+     2389
+    ],
+    [
+     1,
+     9428,
+     5992
+    ],
+    [
+     1,
+     15420,
+     1672
+    ],
+    [
+     1,
+     17092,
+     788
+    ],
+    [
+     1,
+     17880,
+     4200
+    ],
+    [
+     1,
+     22080,
+     3679
+    ],
+    [
+     2,
+     0,
+     3756
+    ],
+    [
+     2,
+     3756,
+     3580
+    ],
+    [
+     2,
+     7336,
+     11
+    ],
+    [
+     2,
+     7347,
+     3393
+    ],
+    [
+     2,
+     10740,
+     3693
+    ],
+    [
+     2,
+     14433,
+     167
+    ],
+    [
+     2,
+     14600,
+     2182
+    ],
+    [
+     2,
+     16782,
+     3770
+    ],
+    [
+     2,
+     20552,
+     1250
+    ],
+    [
+     2,
+     21802,
+     3177
+    ],
+    [
+     0,
+     0,
+     2429
+    ],
+    [
+     0,
+     2429,
+     2304
+    ],
+    [
+     0,
+     4733,
+     3533
+    ],
+    [
+     0,
+     8266,
+     830
+    ],
+    [
+     0,
+     9096,
+     2466
+    ],
+    [
+     0,
+     11562,
+     2504
+    ],
+    [
+     0,
+     14066,
+     15
+    ],
+    [
+     0,
+     14081,
+     4441
+    ],
+    [
+     0,
+     18522,
+     2537
+    ],
+    [
+     0,
+     21059,
+     2321
+    ],
+    [
+     1,
+     0,
+     2848
+    ],
+    [
+     1,
+     2848,
+     3778
+    ],
+    [
+     1,
+     6626,
+     413
+    ],
+    [
+     1,
+     7039,
+     2389
+    ],
+    [
+     1,
+     9428,
+     5992
+    ],
+    [
+     1,
+     15420,
+     1672
+    ],
+    [
+     1,
+     17092,
+     788
+    ],
+    [
+     1,
+     17880,
+     4200
+    ],
+    [
+     1,
+     22080,
+     3679
+    ],
+    [
+     2,
+     0,
+     3756
+    ],
+    [
+     2,
+     3756,
+     3580
+    ],
+    [
+     2,
+     7336,
+     11
+    ],
+    [
+     2,
+     7347,
+     3393
+    ],
+    [
+     2,
+     10740,
+     3693
+    ],
+    [
+     2,
+     14433,
+     167
+    ],
+    [
+     2,
+     14600,
+     2182
+    ],
+    [
+     2,
+     16782,
+     3770
+    ],
+    [
+     2,
+     20552,
+     1250
+    ],
+    [
+     2,
+     21802,
+     3177
+    ],
+    [
+     0,
+     0,
+     2429
+    ],
+    [
+     0,
+     2429,
+     2304
+    ],
+    [
+     0,
+     4733,
+     3533
+    ],
+    [
+     0,
+     8266,
+     830
+    ],
+    [
+     0,
+     9096,
+     2466
+    ],
+    [
+     0,
+     11562,
+     2504
+    ],
+    [
+     0,
+     14066,
+     15
+    ],
+    [
+     0,
+     14081,
+     4441
+    ],
+    [
+     0,
+     18522,
+     2537
+    ],
+    [
+     0,
+     21059,
+     2321
+    ],
+    [
+     1,
+     0,
+     2848
+    ],
+    [
+     1,
+     2848,
+     3778
+    ],
+    [
+     1,
+     6626,
+     413
+    ],
+    [
+     1,
+     7039,
+     2389
+    ],
+    [
+     1,
+     9428,
+     5992
+    ],
+    [
+     1,
+     15420,
+     1672
+    ],
+    [
+     1,
+     17092,
+     788
+    ],
+    [
+     1,
+     17880,
+     4200
+    ],
+    [
+     1,
+     22080,
+     3679
+    ],
+    [
+     2,
+     0,
+     3756
+    ],
+    [
+     2,
+     3756,
+     3580
+    ],
+    [
+     2,
+     7336,
+     11
+    ],
+    [
+     2,
+     7347,
+     3393
+    ],
+    [
+     2,
+     10740,
+     3693
+    ],
+    [
+     2,
+     14433,
+     167
+    ],
+    [
+     2,
+     14600,
+     2182
+    ],
+    [
+     2,
+     16782,
+     3770
+    ],
+    [
+     2,
+     20552,
+     1250
+    ],
+    [
+     2,
+     21802,
+     3177
+    ],
+    [
+     0,
+     0,
+     2429
+    ],
+    [
+     0,
+     2429,
+     2304
+    ],
+    [
+     0,
+     4733,
+     3533
+    ],
+    [
+     0,
+     8266,
+     830
+    ],
+    [
+     0,
+     9096,
+     2466
+    ],
+    [
+     0,
+     11562,
+     2504
+    ],
+    [
+     0,
+     14066,
+     15
+    ],
+    [
+     0,
+     14081,
+     4441
+    ],
+    [
+     0,
+     18522,
+     2537
+    ],
+    [
+     0,
+     21059,
+     2321
+    ],
+    [
+     1,
+     0,
+     2848
+    ],
+    [
+     1,
+     2848,
+     3778
+    ],
+    [
+     1,
+     6626,
+     413
+    ],
+    [
+     1,
+     7039,
+     2389
+    ],
+    [
+     1,
+     9428,
+     5992
+    ],
+    [
+     1,
+     15420,
+     1672
+    ],
+    [
+     1,
+     17092,
+     788
+    ],
+    [
+     1,
+     17880,
+     4200
+    ],
+    [
+     1,
+     22080,
+     3679
+    ],
+    [
+     2,
+     0,
+     3756
+    ],
+    [
+     2,
+     3756,
+     3580
+    ],
+    [
+     2,
+     7336,
+     11
+    ],
+    [
+     2,
+     7347,
+     3393
+    ],
+    [
+     2,
+     10740,
+     3693
+    ],
+    [
+     2,
+     14433,
+     167
+    ],
+    [
+     2,
+     14600,
+     2182
+    ],
+    [
+     2,
+     16782,
+     3770
+    ],
+    [
+     2,
+     20552,
+     1250
+    ],
+    [
+     2,
+     21802,
+     3177
+    ]
+   ],
+   "root": "/work/r3ds/STACK",
+   "repo": "hadriencornier/lerobot-data11-r3-stack",
+   "commit": "aa84869aa0dde48d8247fac535f462462dcc7be7",
+   "upload_s": 2.088705252041109,
+   "files": 99,
+   "readback_mismatch": [],
+   "private": true
+  },
+  "MULTI": {
+   "kind": "MULTI",
+   "video_keys": [
+    "observation.images.top",
+    "observation.images.left_wrist",
+    "observation.images.right_wrist"
+   ],
+   "video_files_per_key": 3,
+   "copies": 1,
+   "episodes": 10,
+   "frames": 23380,
+   "ep_len_min": 15,
+   "ep_len_max": 4441,
+   "ep_len_mean": 2338.0,
+   "episode_map": [
+    [
+     0,
+     0,
+     2429
+    ],
+    [
+     0,
+     2429,
+     2304
+    ],
+    [
+     0,
+     4733,
+     3533
+    ],
+    [
+     0,
+     8266,
+     830
+    ],
+    [
+     0,
+     9096,
+     2466
+    ],
+    [
+     0,
+     11562,
+     2504
+    ],
+    [
+     0,
+     14066,
+     15
+    ],
+    [
+     0,
+     14081,
+     4441
+    ],
+    [
+     0,
+     18522,
+     2537
+    ],
+    [
+     0,
+     21059,
+     2321
+    ]
+   ],
+   "root": "/work/r3ds/MULTI",
+   "upload": "local only"
+  }
+ },
+ "datasets_same_episodes": true,
+ "ok": true
+}

@@ -1,0 +1,85 @@
+[access_eq 12s] SEP|seq|fs5M|-|cold r0: 0.52 sps, fetch/smp 6.00, 31.855 MB/smp, p50 1923 ms, check {'checked': 2, 'mismatch': 0}
+[access_eq 15s] SEP|par|fs5M|-|cold r0: 1.61 sps, fetch/smp 6.00, 31.855 MB/smp, p50 583 ms, check {'checked': 2, 'mismatch': 0}
+[access_eq 17s] SEP|par|rc256K|-|cold r0: 2.71 sps, fetch/smp 6.00, 1.966 MB/smp, p50 303 ms, check {'checked': 2, 'mismatch': 0}
+[access_eq 18s] SEP|par|exact|-|cold r0: 4.24 sps, fetch/smp 6.00, 1.450 MB/smp, p50 235 ms, check {'checked': 2, 'mismatch': 0}
+[access_eq 22s] STACK|-|fs5M|-|cold r0: 1.40 sps, fetch/smp 1.75, 9.291 MB/smp, p50 811 ms, check {'checked': 2, 'mismatch': 0}
+[access_eq 23s] STACK|-|rc256K|-|cold r0: 3.44 sps, fetch/smp 2.00, 0.655 MB/smp, p50 302 ms, check {'checked': 2, 'mismatch': 0}
+[access_eq 24s] STACK|-|exact|-|cold r0: 5.24 sps, fetch/smp 2.00, 0.400 MB/smp, p50 185 ms, check {'checked': 2, 'mismatch': 0}
+[access_eq 28s] MULTI|par|fs5M|shared|cold r0: 1.63 sps, fetch/smp 1.75, 10.487 MB/smp, p50 611 ms, check {'checked': 2, 'mismatch': 0}
+[access_eq 30s] MULTI|par|rc256K|shared|cold r0: 2.92 sps, fetch/smp 2.75, 0.786 MB/smp, p50 315 ms, check {'checked': 2, 'mismatch': 0}
+[access_eq 30s] MULTI|par|exact|shared|cold r0: 5.58 sps, fetch/smp 2.00, 0.619 MB/smp, p50 180 ms, check {'checked': 2, 'mismatch': 0}
+[access_eq 40s] SEP|seq|fs5M|-|warm r0: 1.29 sps, fetch/smp 3.00, 15.625 MB/smp, p50 870 ms, check {'checked': 2, 'mismatch': 0}
+[access_eq 44s] SEP|par|fs5M|-|warm r0: 3.15 sps, fetch/smp 3.00, 15.625 MB/smp, p50 356 ms, check {'checked': 2, 'mismatch': 0}
+[access_eq 47s] SEP|par|rc256K|-|warm r0: 6.26 sps, fetch/smp 3.00, 0.983 MB/smp, p50 161 ms, check {'checked': 2, 'mismatch': 0}
+[access_eq 49s] SEP|par|exact|-|warm r0: 7.92 sps, fetch/smp 3.00, 0.216 MB/smp, p50 102 ms, check {'checked': 2, 'mismatch': 0}
+[access_eq 54s] STACK|-|fs5M|-|warm r0: 3.94 sps, fetch/smp 1.00, 4.807 MB/smp, p50 220 ms, check {'checked': 2, 'mismatch': 0}
+[access_eq 57s] STACK|-|rc256K|-|warm r0: 6.94 sps, fetch/smp 1.00, 0.328 MB/smp, p50 115 ms, check {'checked': 2, 'mismatch': 0}
+[access_eq 59s] STACK|-|exact|-|warm r0: 10.29 sps, fetch/smp 1.00, 0.085 MB/smp, p50 76 ms, check {'checked': 2, 'mismatch': 0}
+[access_eq 65s] MULTI|par|fs5M|shared|warm r0: 3.21 sps, fetch/smp 1.00, 5.175 MB/smp, p50 250 ms, check {'checked': 2, 'mismatch': 0}
+[access_eq 67s] MULTI|par|rc256K|shared|warm r0: 6.52 sps, fetch/smp 1.12, 0.360 MB/smp, p50 96 ms, check {'checked': 2, 'mismatch': 0}
+[access_eq 69s] MULTI|par|exact|shared|warm r0: 10.35 sps, fetch/smp 1.00, 0.098 MB/smp, p50 70 ms, check {'checked': 2, 'mismatch': 0}
+[access_eq] conc8 MULTI|par|exact|shared|warm: 99.6 sps, 99.0 fetch/s, 9 MB/s, p50 70 ms, 429 0
+[access_eq] conc8 MULTI|par|exact|shared|cold: 40.2 sps, 80.2 fetch/s, 25 MB/s, p50 191 ms, 429 0
+[access_eq] conc8 SEP|par|exact|-|warm: 61.4 sps, 182.1 fetch/s, 13 MB/s, p50 105 ms, 429 0
+[access_eq] conc8 SEP|par|exact|-|cold: 28.6 sps, 171.4 fetch/s, 42 MB/s, p50 273 ms, 429 0
+[access_eq] conc8 STACK|-|exact|-|warm: 105.0 sps, 104.4 fetch/s, 9 MB/s, p50 68 ms, 429 0
+[access_eq] conc8 STACK|-|exact|-|cold: 45.9 sps, 91.7 fetch/s, 18 MB/s, p50 169 ms, 429 0
+# DATA-11 round 2: random access over hf:// (family ckpt_full, 3 cameras per sample)
+
+Repo `hadriencornier/lerobot-data11-bench@b1a7e644fc`. sps = samples/s, one reader. fetch = one HTTP request that moves video bytes (CDN). fs* readers also pay 1 resolve per fetch; rc / exact resolve once per file (untimed, shown in `presigned`: 27 resolves for 27 files).
+
+| regime | layout | cams | reader | mode | sps | +-CI | p50 ms | p95 ms | fetch/smp | resolve/smp | API/smp | MB/smp | dec MB/smp | open ms/smp | fallback/smp |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| cold | MULTI | par | fs5M | shared | 1.63 | - | 611 | 780 | 1.75 | 1.75 | 0.00 | 10.487 | 1.130 | 334 | 0.00 |
+| cold | MULTI | par | rc256K | shared | 2.92 | - | 315 | 423 | 2.75 | 0.00 | 0.00 | 0.786 | 1.130 | 188 | 0.00 |
+| cold | MULTI | par | exact | shared | 5.58 | - | 180 | 204 | 2.00 | 0.00 | 0.00 | 0.619 | 1.130 | 92 | 0.00 |
+| cold | SEP | par | fs5M | - | 1.61 | - | 583 | 843 | 6.00 | 6.00 | 0.00 | 31.855 | 0.840 | 669 | 0.00 |
+| cold | SEP | par | rc256K | - | 2.71 | - | 303 | 619 | 6.00 | 0.00 | 0.00 | 1.966 | 0.840 | 349 | 0.00 |
+| cold | SEP | par | exact | - | 4.24 | - | 235 | 295 | 6.00 | 0.00 | 0.00 | 1.450 | 0.840 | 277 | 0.00 |
+| cold | SEP | seq | fs5M | - | 0.52 | - | 1923 | 2749 | 6.00 | 6.00 | 0.00 | 31.855 | 0.840 | 793 | 0.00 |
+| cold | STACK | - | fs5M | - | 1.40 | - | 811 | 855 | 1.75 | 1.75 | 0.00 | 9.291 | 0.180 | 401 | 0.00 |
+| cold | STACK | - | rc256K | - | 3.44 | - | 302 | 408 | 2.00 | 0.00 | 0.00 | 0.655 | 0.180 | 182 | 0.00 |
+| cold | STACK | - | exact | - | 5.24 | - | 185 | 248 | 2.00 | 0.00 | 0.00 | 0.400 | 0.180 | 105 | 0.00 |
+| warm | MULTI | par | fs5M | shared | 3.21 | - | 250 | 592 | 1.00 | 1.00 | 0.00 | 5.175 | 0.197 | 0 | 0.00 |
+| warm | MULTI | par | rc256K | shared | 6.52 | - | 96 | 313 | 1.12 | 0.00 | 0.00 | 0.360 | 0.197 | 0 | 0.00 |
+| warm | MULTI | par | exact | shared | 10.35 | - | 70 | 169 | 1.00 | 0.00 | 0.00 | 0.098 | 0.197 | 0 | 0.00 |
+| warm | SEP | par | fs5M | - | 3.15 | - | 356 | 413 | 3.00 | 3.00 | 0.00 | 15.625 | 0.197 | 0 | 0.00 |
+| warm | SEP | par | rc256K | - | 6.26 | - | 161 | 237 | 3.00 | 0.00 | 0.00 | 0.983 | 0.197 | 0 | 0.00 |
+| warm | SEP | par | exact | - | 7.92 | - | 102 | 233 | 3.00 | 0.00 | 0.00 | 0.216 | 0.197 | 0 | 0.00 |
+| warm | SEP | seq | fs5M | - | 1.29 | - | 870 | 981 | 3.00 | 3.00 | 0.00 | 15.625 | 0.197 | 0 | 0.00 |
+| warm | STACK | - | fs5M | - | 3.94 | - | 220 | 386 | 1.00 | 1.00 | 0.00 | 4.807 | 0.066 | 0 | 0.00 |
+| warm | STACK | - | rc256K | - | 6.94 | - | 115 | 279 | 1.00 | 0.00 | 0.00 | 0.328 | 0.066 | 0 | 0.00 |
+| warm | STACK | - | exact | - | 10.29 | - | 76 | 180 | 1.00 | 0.00 | 0.00 | 0.085 | 0.066 | 0 | 0.00 |
+
+## 8 concurrent reader processes
+
+| config | sps total | fetch/s | resolves/s | MB/s | p50 ms | p95 ms | 429 | other err |
+|---|---|---|---|---|---|---|---|---|
+| MULTI|par|exact|shared|warm | 99.6 | 99.0 | 0.0 | 9.3 | 70 | 130 | 0 | 0 |
+| MULTI|par|exact|shared|cold | 40.2 | 80.2 | 0.0 | 24.7 | 191 | 267 | 0 | 0 |
+| SEP|par|exact|-|warm | 61.4 | 182.1 | 0.0 | 12.9 | 105 | 262 | 0 | 0 |
+| SEP|par|exact|-|cold | 28.6 | 171.4 | 0.0 | 41.6 | 273 | 382 | 0 | 0 |
+| STACK|-|exact|-|warm | 105.0 | 104.4 | 0.0 | 8.6 | 68 | 118 | 0 | 0 |
+| STACK|-|exact|-|cold | 45.9 | 91.7 | 0.0 | 18.3 | 169 | 236 | 0 | 0 |
+
+Checks: remote == local decode (bit-exact) 40/40; pts violations > 1e-4 s: 0; skipped arms 0; 429 total 0.
+[access_orig 343s] STACK|-|exact|-|cold r0: 3.90 sps, fetch/smp 2.00, 0.498 MB/smp, p50 266 ms, check {'checked': 2, 'mismatch': 0}
+[access_orig 344s] STACK|-|rc256K|-|cold r0: 6.47 sps, fetch/smp 2.00, 0.655 MB/smp, p50 149 ms, check {'checked': 2, 'mismatch': 0}
+[access_orig 347s] MULTI|par|exact|shared|cold r0: 2.10 sps, fetch/smp 2.00, 1.099 MB/smp, p50 484 ms, check {'checked': 2, 'mismatch': 0}
+[access_orig 348s] STACK|-|exact|-|warm r0: 10.41 sps, fetch/smp 1.00, 0.085 MB/smp, p50 92 ms, check {'checked': 2, 'mismatch': 0}
+[access_orig 349s] STACK|-|rc256K|-|warm r0: 13.67 sps, fetch/smp 1.00, 0.328 MB/smp, p50 72 ms, check {'checked': 2, 'mismatch': 0}
+[access_orig 351s] MULTI|par|exact|shared|warm r0: 5.79 sps, fetch/smp 1.00, 0.098 MB/smp, p50 147 ms, check {'checked': 2, 'mismatch': 0}
+# DATA-11 round 2: random access over hf:// (family ckpt_full, 3 cameras per sample)
+
+Repo `hadriencornier/lerobot-data11-bench@b1a7e644fc`. sps = samples/s, one reader. fetch = one HTTP request that moves video bytes (CDN). fs* readers also pay 1 resolve per fetch; rc / exact resolve once per file (untimed, shown in `presigned`: 6 resolves for 6 files).
+
+| regime | layout | cams | reader | mode | sps | +-CI | p50 ms | p95 ms | fetch/smp | resolve/smp | API/smp | MB/smp | dec MB/smp | open ms/smp | fallback/smp |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| cold | MULTI | par | exact | shared | 2.10 | - | 484 | 542 | 2.00 | 0.00 | 0.00 | 1.099 | 2.524 | 188 | 0.00 |
+| cold | STACK | - | rc256K | - | 6.47 | - | 149 | 177 | 2.00 | 0.00 | 0.00 | 0.655 | 0.281 | 73 | 0.00 |
+| cold | STACK | - | exact | - | 3.90 | - | 266 | 301 | 2.00 | 0.00 | 0.00 | 0.498 | 0.281 | 145 | 0.00 |
+| warm | MULTI | par | exact | shared | 5.79 | - | 147 | 291 | 1.00 | 0.00 | 0.00 | 0.098 | 0.197 | 0 | 0.00 |
+| warm | STACK | - | rc256K | - | 13.67 | - | 72 | 88 | 1.00 | 0.00 | 0.00 | 0.328 | 0.066 | 0 | 0.00 |
+| warm | STACK | - | exact | - | 10.41 | - | 92 | 129 | 1.00 | 0.00 | 0.00 | 0.085 | 0.066 | 0 | 0.00 |
+
+Checks: remote == local decode (bit-exact) 12/12; pts violations > 1e-4 s: 0; skipped arms 0; 429 total 0.

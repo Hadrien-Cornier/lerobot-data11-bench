@@ -1,0 +1,3 @@
+upload: 45 files, 2342.0 MB, families ['ckpt_1k', 'ckpt_5k', 'ckpt_full'] -> hadriencornier/lerobot-data11-bench:variants/20260925T025221Z
+committed 93ad048ad87bbe5c78700d878b2ac6f39a56320c in 7.2s (323.5 MB/s)
+read back 45 files at 93ad048ad87bbe5c78700d878b2ac6f39a56320c: 0 problems

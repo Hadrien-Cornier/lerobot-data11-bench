@@ -1,0 +1,14 @@
+stage	status	seconds	finished_utc	cgroup_peak_mb
+system_deps	ok	47	2026-09-25T02:34:14Z	835
+bundle	ok	0	2026-09-25T02:34:14Z	835
+python_env	ok	41	2026-09-25T02:34:55Z	2243
+fetch	ok	12	2026-09-25T02:35:20Z	3075
+encode	ok	228	2026-09-25T02:39:09Z	5229
+big	ok	25	2026-09-25T02:39:35Z	5229
+verify	ok	231	2026-09-25T02:43:27Z	5229
+upload	ok	11	2026-09-25T02:43:39Z	5229
+remote	ok	253	2026-09-25T02:47:53Z	6865
+opencost	ok	47	2026-09-25T02:48:41Z	6865
+loader	ok	78	2026-09-25T02:50:00Z	6865
+model	ok	0	2026-09-25T02:50:01Z	6865
+exit	0	-	2026-09-25T02:50:02Z	6865

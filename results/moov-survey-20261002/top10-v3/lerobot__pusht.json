@@ -1,0 +1,45 @@
+{
+ "repo": "lerobot/pusht",
+ "revision": "7628202a2180972f291ba1bc6723834921e72c19",
+ "codebase_version": "v3.0",
+ "fps": 10,
+ "total_videos": null,
+ "video_keys": [
+  "observation.image"
+ ],
+ "files": [
+  {
+   "path": "videos/observation.image/chunk-000/file-000.mp4",
+   "file_size": 6890970,
+   "boxes": [
+    [
+     "ftyp",
+     0,
+     32
+    ],
+    [
+     "free",
+     32,
+     8
+    ],
+    [
+     "mdat",
+     40,
+     6735944
+    ],
+    [
+     "moov",
+     6735984,
+     154986
+    ]
+   ],
+   "moov_size": 154986,
+   "moov_end": 6890970,
+   "moov_first": false,
+   "reads_now": 2,
+   "bytes_now": 11085274,
+   "reads_patched": 2,
+   "bytes_patched": 679274
+  }
+ ]
+}

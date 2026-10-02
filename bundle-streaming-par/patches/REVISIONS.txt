@@ -1,0 +1,13 @@
+origin/main (huggingface/lerobot main): 1bc0bdfb20ad4f4f76dc8a68a0e0746d54f50de9
+#4702 head (fork/fix/streaming-video-timestamps-takeover): a195a91ff815ad730373276ef8a4cc7c04c5c074
+#4702 merge-base with origin/main: c2e066898599b3f30d8f7d0845f1aa26e6bcd98c
+P1 commit (exp/streaming-parallel-cameras): aff21cea aff21ceaae18457828e8b53503f864a5aa1b7474
+P2 commit (exp/streaming-parallel-cameras): 0bffbfaa 0bffbfaa867ae13f508de0defe5127e1e2bc757d
+
+Patches:
+  pr4702.patch             = git diff origin/main...fork/fix/streaming-video-timestamps-takeover
+  p1_parallel_cameras.patch = git diff origin/main aff21cea
+  p2_cache_lock.patch       = git diff aff21cea 0bffbfaa (applies on top of P1)
+
+Apply order checked on a clean origin/main checkout: pr4702, then p1, then p2.
+Generated: 2026-09-25T15:48:25Z

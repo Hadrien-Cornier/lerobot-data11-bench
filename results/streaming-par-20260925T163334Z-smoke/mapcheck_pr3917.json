@@ -1,0 +1,775 @@
+{
+ "n_samples": 16,
+ "n_camera_frames": 48,
+ "n_equal": 48,
+ "rows": [
+  {
+   "episode_index": 16377,
+   "frame_index": 155,
+   "timestamp": 5.166666507720947,
+   "ts_minus_fi_over_fps": -1.5894571969710114e-07,
+   "observation.images.left_wrist": {
+    "equal": true,
+    "max_abs_diff": 0.0,
+    "ref_shape": [
+     3,
+     224,
+     224
+    ],
+    "got_shape": [
+     3,
+     224,
+     224
+    ]
+   },
+   "observation.images.right_wrist": {
+    "equal": true,
+    "max_abs_diff": 0.0,
+    "ref_shape": [
+     3,
+     224,
+     224
+    ],
+    "got_shape": [
+     3,
+     224,
+     224
+    ]
+   },
+   "observation.images.top": {
+    "equal": true,
+    "max_abs_diff": 0.0,
+    "ref_shape": [
+     3,
+     224,
+     224
+    ],
+    "got_shape": [
+     3,
+     224,
+     224
+    ]
+   }
+  },
+  {
+   "episode_index": 91736,
+   "frame_index": 2335,
+   "timestamp": 77.83333587646484,
+   "ts_minus_fi_over_fps": 2.5431315151536182e-06,
+   "observation.images.left_wrist": {
+    "equal": true,
+    "max_abs_diff": 0.0,
+    "ref_shape": [
+     3,
+     224,
+     224
+    ],
+    "got_shape": [
+     3,
+     224,
+     224
+    ]
+   },
+   "observation.images.right_wrist": {
+    "equal": true,
+    "max_abs_diff": 0.0,
+    "ref_shape": [
+     3,
+     224,
+     224
+    ],
+    "got_shape": [
+     3,
+     224,
+     224
+    ]
+   },
+   "observation.images.top": {
+    "equal": true,
+    "max_abs_diff": 0.0,
+    "ref_shape": [
+     3,
+     224,
+     224
+    ],
+    "got_shape": [
+     3,
+     224,
+     224
+    ]
+   }
+  },
+  {
+   "episode_index": 31194,
+   "frame_index": 854,
+   "timestamp": 28.46666717529297,
+   "ts_minus_fi_over_fps": 5.086263037412664e-07,
+   "observation.images.left_wrist": {
+    "equal": true,
+    "max_abs_diff": 0.0,
+    "ref_shape": [
+     3,
+     224,
+     224
+    ],
+    "got_shape": [
+     3,
+     224,
+     224
+    ]
+   },
+   "observation.images.right_wrist": {
+    "equal": true,
+    "max_abs_diff": 0.0,
+    "ref_shape": [
+     3,
+     224,
+     224
+    ],
+    "got_shape": [
+     3,
+     224,
+     224
+    ]
+   },
+   "observation.images.top": {
+    "equal": true,
+    "max_abs_diff": 0.0,
+    "ref_shape": [
+     3,
+     224,
+     224
+    ],
+    "got_shape": [
+     3,
+     224,
+     224
+    ]
+   }
+  },
+  {
+   "episode_index": 5382,
+   "frame_index": 4541,
+   "timestamp": 151.36666870117188,
+   "ts_minus_fi_over_fps": 2.034505200754211e-06,
+   "observation.images.left_wrist": {
+    "equal": true,
+    "max_abs_diff": 0.0,
+    "ref_shape": [
+     3,
+     224,
+     224
+    ],
+    "got_shape": [
+     3,
+     224,
+     224
+    ]
+   },
+   "observation.images.right_wrist": {
+    "equal": true,
+    "max_abs_diff": 0.0,
+    "ref_shape": [
+     3,
+     224,
+     224
+    ],
+    "got_shape": [
+     3,
+     224,
+     224
+    ]
+   },
+   "observation.images.top": {
+    "equal": true,
+    "max_abs_diff": 0.0,
+    "ref_shape": [
+     3,
+     224,
+     224
+    ],
+    "got_shape": [
+     3,
+     224,
+     224
+    ]
+   }
+  },
+  {
+   "episode_index": 83668,
+   "frame_index": 255,
+   "timestamp": 8.5,
+   "ts_minus_fi_over_fps": 0.0,
+   "observation.images.left_wrist": {
+    "equal": true,
+    "max_abs_diff": 0.0,
+    "ref_shape": [
+     3,
+     224,
+     224
+    ],
+    "got_shape": [
+     3,
+     224,
+     224
+    ]
+   },
+   "observation.images.right_wrist": {
+    "equal": true,
+    "max_abs_diff": 0.0,
+    "ref_shape": [
+     3,
+     224,
+     224
+    ],
+    "got_shape": [
+     3,
+     224,
+     224
+    ]
+   },
+   "observation.images.top": {
+    "equal": true,
+    "max_abs_diff": 0.0,
+    "ref_shape": [
+     3,
+     224,
+     224
+    ],
+    "got_shape": [
+     3,
+     224,
+     224
+    ]
+   }
+  },
+  {
+   "episode_index": 71346,
+   "frame_index": 3307,
+   "timestamp": 110.23332977294922,
+   "ts_minus_fi_over_fps": -3.5603841155307236e-06,
+   "observation.images.left_wrist": {
+    "equal": true,
+    "max_abs_diff": 0.0,
+    "ref_shape": [
+     3,
+     224,
+     224
+    ],
+    "got_shape": [
+     3,
+     224,
+     224
+    ]
+   },
+   "observation.images.right_wrist": {
+    "equal": true,
+    "max_abs_diff": 0.0,
+    "ref_shape": [
+     3,
+     224,
+     224
+    ],
+    "got_shape": [
+     3,
+     224,
+     224
+    ]
+   },
+   "observation.images.top": {
+    "equal": true,
+    "max_abs_diff": 0.0,
+    "ref_shape": [
+     3,
+     224,
+     224
+    ],
+    "got_shape": [
+     3,
+     224,
+     224
+    ]
+   }
+  },
+  {
+   "episode_index": 48622,
+   "frame_index": 2607,
+   "timestamp": 86.9000015258789,
+   "ts_minus_fi_over_fps": 1.5258789005656581e-06,
+   "observation.images.left_wrist": {
+    "equal": true,
+    "max_abs_diff": 0.0,
+    "ref_shape": [
+     3,
+     224,
+     224
+    ],
+    "got_shape": [
+     3,
+     224,
+     224
+    ]
+   },
+   "observation.images.right_wrist": {
+    "equal": true,
+    "max_abs_diff": 0.0,
+    "ref_shape": [
+     3,
+     224,
+     224
+    ],
+    "got_shape": [
+     3,
+     224,
+     224
+    ]
+   },
+   "observation.images.top": {
+    "equal": true,
+    "max_abs_diff": 0.0,
+    "ref_shape": [
+     3,
+     224,
+     224
+    ],
+    "got_shape": [
+     3,
+     224,
+     224
+    ]
+   }
+  },
+  {
+   "episode_index": 84790,
+   "frame_index": 2021,
+   "timestamp": 67.36666870117188,
+   "ts_minus_fi_over_fps": 2.0345052149650655e-06,
+   "observation.images.left_wrist": {
+    "equal": true,
+    "max_abs_diff": 0.0,
+    "ref_shape": [
+     3,
+     224,
+     224
+    ],
+    "got_shape": [
+     3,
+     224,
+     224
+    ]
+   },
+   "observation.images.right_wrist": {
+    "equal": true,
+    "max_abs_diff": 0.0,
+    "ref_shape": [
+     3,
+     224,
+     224
+    ],
+    "got_shape": [
+     3,
+     224,
+     224
+    ]
+   },
+   "observation.images.top": {
+    "equal": true,
+    "max_abs_diff": 0.0,
+    "ref_shape": [
+     3,
+     224,
+     224
+    ],
+    "got_shape": [
+     3,
+     224,
+     224
+    ]
+   }
+  },
+  {
+   "episode_index": 91736,
+   "frame_index": 3306,
+   "timestamp": 110.19999694824219,
+   "ts_minus_fi_over_fps": -3.051757815342171e-06,
+   "observation.images.left_wrist": {
+    "equal": true,
+    "max_abs_diff": 0.0,
+    "ref_shape": [
+     3,
+     224,
+     224
+    ],
+    "got_shape": [
+     3,
+     224,
+     224
+    ]
+   },
+   "observation.images.right_wrist": {
+    "equal": true,
+    "max_abs_diff": 0.0,
+    "ref_shape": [
+     3,
+     224,
+     224
+    ],
+    "got_shape": [
+     3,
+     224,
+     224
+    ]
+   },
+   "observation.images.top": {
+    "equal": true,
+    "max_abs_diff": 0.0,
+    "ref_shape": [
+     3,
+     224,
+     224
+    ],
+    "got_shape": [
+     3,
+     224,
+     224
+    ]
+   }
+  },
+  {
+   "episode_index": 5382,
+   "frame_index": 1524,
+   "timestamp": 50.79999923706055,
+   "ts_minus_fi_over_fps": -7.629394502828291e-07,
+   "observation.images.left_wrist": {
+    "equal": true,
+    "max_abs_diff": 0.0,
+    "ref_shape": [
+     3,
+     224,
+     224
+    ],
+    "got_shape": [
+     3,
+     224,
+     224
+    ]
+   },
+   "observation.images.right_wrist": {
+    "equal": true,
+    "max_abs_diff": 0.0,
+    "ref_shape": [
+     3,
+     224,
+     224
+    ],
+    "got_shape": [
+     3,
+     224,
+     224
+    ]
+   },
+   "observation.images.top": {
+    "equal": true,
+    "max_abs_diff": 0.0,
+    "ref_shape": [
+     3,
+     224,
+     224
+    ],
+    "got_shape": [
+     3,
+     224,
+     224
+    ]
+   }
+  },
+  {
+   "episode_index": 112715,
+   "frame_index": 2599,
+   "timestamp": 86.63333129882812,
+   "ts_minus_fi_over_fps": -2.0345052149650655e-06,
+   "observation.images.left_wrist": {
+    "equal": true,
+    "max_abs_diff": 0.0,
+    "ref_shape": [
+     3,
+     224,
+     224
+    ],
+    "got_shape": [
+     3,
+     224,
+     224
+    ]
+   },
+   "observation.images.right_wrist": {
+    "equal": true,
+    "max_abs_diff": 0.0,
+    "ref_shape": [
+     3,
+     224,
+     224
+    ],
+    "got_shape": [
+     3,
+     224,
+     224
+    ]
+   },
+   "observation.images.top": {
+    "equal": true,
+    "max_abs_diff": 0.0,
+    "ref_shape": [
+     3,
+     224,
+     224
+    ],
+    "got_shape": [
+     3,
+     224,
+     224
+    ]
+   }
+  },
+  {
+   "episode_index": 1285,
+   "frame_index": 1859,
+   "timestamp": 61.96666717529297,
+   "ts_minus_fi_over_fps": 5.086263001885527e-07,
+   "observation.images.left_wrist": {
+    "equal": true,
+    "max_abs_diff": 0.0,
+    "ref_shape": [
+     3,
+     224,
+     224
+    ],
+    "got_shape": [
+     3,
+     224,
+     224
+    ]
+   },
+   "observation.images.right_wrist": {
+    "equal": true,
+    "max_abs_diff": 0.0,
+    "ref_shape": [
+     3,
+     224,
+     224
+    ],
+    "got_shape": [
+     3,
+     224,
+     224
+    ]
+   },
+   "observation.images.top": {
+    "equal": true,
+    "max_abs_diff": 0.0,
+    "ref_shape": [
+     3,
+     224,
+     224
+    ],
+    "got_shape": [
+     3,
+     224,
+     224
+    ]
+   }
+  },
+  {
+   "episode_index": 23650,
+   "frame_index": 1666,
+   "timestamp": 55.53333282470703,
+   "ts_minus_fi_over_fps": -5.086263001885527e-07,
+   "observation.images.left_wrist": {
+    "equal": true,
+    "max_abs_diff": 0.0,
+    "ref_shape": [
+     3,
+     224,
+     224
+    ],
+    "got_shape": [
+     3,
+     224,
+     224
+    ]
+   },
+   "observation.images.right_wrist": {
+    "equal": true,
+    "max_abs_diff": 0.0,
+    "ref_shape": [
+     3,
+     224,
+     224
+    ],
+    "got_shape": [
+     3,
+     224,
+     224
+    ]
+   },
+   "observation.images.top": {
+    "equal": true,
+    "max_abs_diff": 0.0,
+    "ref_shape": [
+     3,
+     224,
+     224
+    ],
+    "got_shape": [
+     3,
+     224,
+     224
+    ]
+   }
+  },
+  {
+   "episode_index": 23650,
+   "frame_index": 2695,
+   "timestamp": 89.83333587646484,
+   "ts_minus_fi_over_fps": 2.5431315151536182e-06,
+   "observation.images.left_wrist": {
+    "equal": true,
+    "max_abs_diff": 0.0,
+    "ref_shape": [
+     3,
+     224,
+     224
+    ],
+    "got_shape": [
+     3,
+     224,
+     224
+    ]
+   },
+   "observation.images.right_wrist": {
+    "equal": true,
+    "max_abs_diff": 0.0,
+    "ref_shape": [
+     3,
+     224,
+     224
+    ],
+    "got_shape": [
+     3,
+     224,
+     224
+    ]
+   },
+   "observation.images.top": {
+    "equal": true,
+    "max_abs_diff": 0.0,
+    "ref_shape": [
+     3,
+     224,
+     224
+    ],
+    "got_shape": [
+     3,
+     224,
+     224
+    ]
+   }
+  },
+  {
+   "episode_index": 91736,
+   "frame_index": 4265,
+   "timestamp": 142.1666717529297,
+   "ts_minus_fi_over_fps": 5.0862630303072365e-06,
+   "observation.images.left_wrist": {
+    "equal": true,
+    "max_abs_diff": 0.0,
+    "ref_shape": [
+     3,
+     224,
+     224
+    ],
+    "got_shape": [
+     3,
+     224,
+     224
+    ]
+   },
+   "observation.images.right_wrist": {
+    "equal": true,
+    "max_abs_diff": 0.0,
+    "ref_shape": [
+     3,
+     224,
+     224
+    ],
+    "got_shape": [
+     3,
+     224,
+     224
+    ]
+   },
+   "observation.images.top": {
+    "equal": true,
+    "max_abs_diff": 0.0,
+    "ref_shape": [
+     3,
+     224,
+     224
+    ],
+    "got_shape": [
+     3,
+     224,
+     224
+    ]
+   }
+  },
+  {
+   "episode_index": 112715,
+   "frame_index": 2333,
+   "timestamp": 77.76667022705078,
+   "ts_minus_fi_over_fps": 3.5603841155307236e-06,
+   "observation.images.left_wrist": {
+    "equal": true,
+    "max_abs_diff": 0.0,
+    "ref_shape": [
+     3,
+     224,
+     224
+    ],
+    "got_shape": [
+     3,
+     224,
+     224
+    ]
+   },
+   "observation.images.right_wrist": {
+    "equal": true,
+    "max_abs_diff": 0.0,
+    "ref_shape": [
+     3,
+     224,
+     224
+    ],
+    "got_shape": [
+     3,
+     224,
+     224
+    ]
+   },
+   "observation.images.top": {
+    "equal": true,
+    "max_abs_diff": 0.0,
+    "ref_shape": [
+     3,
+     224,
+     224
+    ],
+    "got_shape": [
+     3,
+     224,
+     224
+    ]
+   }
+  }
+ ]
+}

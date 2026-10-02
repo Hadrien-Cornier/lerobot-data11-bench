@@ -1,0 +1,36 @@
+torchcodec 0.11.1 file 2066448 boxes [('ftyp', 0, 32), ('moov', 32, 6201), ('free', 6233, 8), ('mdat', 6241, 2060207)] moov 32 6201
+{
+ "A_default": {
+  "moov_bytes_read": 6201,
+  "moov_size": 6201,
+  "reads": 2,
+  "bit_exact": true
+ },
+ "B_custom_frame_mappings": {
+  "moov_bytes_read": 6201,
+  "bit_exact": true
+ },
+ "C_moov_zeroed": {
+  "decoded": false,
+  "error": "ValueError: The best video stream is unknown and there is no specified stream. \nThis should never happen. Please report an issue following the steps in\nhttps://github.com/pytorch/torchcodec/issues/new?assignees=&"
+ },
+ "C_moov_zeroed_custom_mappings": {
+  "decoded": false,
+  "error": "ValueError: The best video stream is unknown and there is no specified stream. \nThis should never happen. Please report an issue following the steps in\nhttps://github.com/pytorch/torchcodec/issues/new?assignees=&"
+ },
+ "D_ftyp_mdat_only": {
+  "decoded": false,
+  "error": "RuntimeError: SingleStreamDecoder, /Users/runner/work/torchcodec/torchcodec/meta-pytorch/torchcodec/src/torchcodec/_core/SingleStreamDecoder.cpp:82, Failed to open input buffer: Invalid data found when processing i"
+ },
+ "E_synthetic_mini_mp4": {
+  "packet_bytes": 4664,
+  "extradata_bytes": 17,
+  "mini_file_bytes": 5485,
+  "bit_exact": true,
+  "frames_in_mini": 2
+ },
+ "F_raw_obu_stream": {
+  "decoded": false,
+  "error": "RuntimeError: SingleStreamDecoder, /Users/runner/work/torchcodec/torchcodec/meta-pytorch/torchcodec/src/torchcodec/_core/SingleStreamDecoder.cpp:82, Failed to open input buffer: Invalid data found when processing i"
+ }
+}

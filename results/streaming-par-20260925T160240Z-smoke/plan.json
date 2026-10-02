@@ -1,0 +1,19 @@
+{
+ "arms": [
+  "base",
+  "p1p2",
+  "pr3917"
+ ],
+ "repeats": 1,
+ "n_steady": 50,
+ "cap_s": 180,
+ "hash_n": 32,
+ "save_n": 16,
+ "pr3917_episodes": 400,
+ "regimes_filter": [
+  "w0_cachedef",
+  "w8_cache3",
+  "w0_dt2",
+  "w1_dt8"
+ ]
+}

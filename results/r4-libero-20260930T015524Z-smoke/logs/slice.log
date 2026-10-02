@@ -1,0 +1,9 @@
+[01:56:39] libero: 1693 episodes, cameras ['image', 'image2'], shapes {'image': [256, 256], 'image2': [256, 256]}, fps 10
+
+Resolving data files:   0%|          | 0/377 [00:00<?, ?it/s][AResolving data files: 100%|██████████| 377/377 [00:00<00:00, 27490.48it/s]
+
+Resolving data files:   0%|          | 0/377 [00:00<?, ?it/s][AResolving data files: 100%|██████████| 377/377 [00:00<00:00, 27789.05it/s]
+[01:56:40] real: {"episodes": 1693, "frames": 273465, "episode_length_median": 140.0, "per_camera": {"image": {"video_files": 37, "frames_per_file_median": 6740.0, "mean": 7390.945945945946, "p10": 5998.0, "p90": 10140.2, "max": 10230}, "image2": {"video_files": 37, "frames_per_file_median": 6740.0, "mean": 7390.945945945946, "p10": 5998.0, "p90": 10140.2, "max": 10230}}, "video_files_total": 74, "video_files_per_camera": {"image": 37, "image2": 37}, "frames_per_file_median_all_cameras": 6740.0, "parquet_data_files_from_episodes": 377, "parquet_data_files_in_repo": 377, "hf_streaming_num_shards": 377, "hf_stre
+[01:56:40] slice: 5 episodes, 1406 frames (cap 1500, applied True); real median frames/file 6740
+[01:56:42] downloaded 2 source files, 63 MB in 1.7s
+[01:56:43] encoder defaults: {'repr': "VideoEncoderConfig(vcodec='libsvtav1', pix_fmt='yuv420p', g=2, crf=30, preset=12, fast_decode=0, video_backend='pyav', extra_options={})", 'vcodec': 'libsvtav1', 'pix_fmt': 'yuv420p', 'g': 2, 'crf': 30, 'preset': 12, 'fast_decode': 0, 'codec_options': {'g': '2', 'crf': '30', 'preset': '12', 'svtav1-params': 'fast-decode=0'}}

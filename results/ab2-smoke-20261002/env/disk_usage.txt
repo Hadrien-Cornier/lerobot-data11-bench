@@ -1,0 +1,11 @@
+4.0K	/work/constraints.txt
+884K	/work/dl_bundle
+88M	/work/lerobot_home
+6.6M	/work/pr3917.tar.gz
+29M	/work/src_base
+29M	/work/src_probe
+29M	/work/src_tfx
+30M	/work/venv
+1.5G	/work/venv_base
+1.5G	/work/venv_probe
+1.5G	/work/venv_tfx

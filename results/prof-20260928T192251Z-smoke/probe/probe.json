@@ -1,0 +1,287 @@
+{
+ "dataset": "lerobot/abc_130k_v3_train",
+ "rev": "68651e4929d9fb00f798937b2d62617cab5c771d",
+ "status": "ok",
+ "list_s": 7.388692722000997,
+ "catalog": {
+  "mp4_files": 38164,
+  "total_gb": 3378.199512864,
+  "size_mb_p50": 73.1172985,
+  "size_mb_min": 2.114993,
+  "size_mb_max": 209.714219,
+  "default_probe_bytes_total_gb": 160.060585228
+ },
+ "rows": [
+  {
+   "path": "videos/observation.images.top/chunk-000/file-112.mp4",
+   "size": 196860036,
+   "frames": 61503,
+   "faststart": true,
+   "moov_to_mdat_bytes": 372509,
+   "index_array_bytes": 2706168,
+   "same_index": true,
+   "default": {
+    "s": 1.4040873529957025,
+    "calls": 1,
+    "bytes": 4194304,
+    "err": null
+   },
+   "small": {
+    "s": 0.16702320499462076,
+    "calls": 2,
+    "bytes": 372549,
+    "err": null
+   }
+  },
+  {
+   "path": "videos/observation.images.top/chunk-002/file-427.mp4",
+   "size": 82310929,
+   "frames": 23988,
+   "faststart": true,
+   "moov_to_mdat_bytes": 145761,
+   "index_array_bytes": 1055488,
+   "same_index": true,
+   "default": {
+    "s": 0.1635447770022438,
+    "calls": 1,
+    "bytes": 4194304,
+    "err": null
+   },
+   "small": {
+    "s": 0.636301253005513,
+    "calls": 2,
+    "bytes": 145801,
+    "err": null
+   }
+  },
+  {
+   "path": "videos/observation.images.left_wrist/chunk-002/file-653.mp4",
+   "size": 65954051,
+   "frames": 25103,
+   "faststart": true,
+   "moov_to_mdat_bytes": 152385,
+   "index_array_bytes": 1104544,
+   "same_index": true,
+   "default": {
+    "s": 0.761145894000947,
+    "calls": 1,
+    "bytes": 4194304,
+    "err": null
+   },
+   "small": {
+    "s": 0.13988166499621002,
+    "calls": 2,
+    "bytes": 152425,
+    "err": null
+   }
+  },
+  {
+   "path": "videos/observation.images.right_wrist/chunk-004/file-368.mp4",
+   "size": 60262940,
+   "frames": 23085,
+   "faststart": true,
+   "moov_to_mdat_bytes": 140193,
+   "index_array_bytes": 1015768,
+   "same_index": true,
+   "default": {
+    "s": 0.11041723800008185,
+    "calls": 1,
+    "bytes": 4194304,
+    "err": null
+   },
+   "small": {
+    "s": 0.9447947859953274,
+    "calls": 2,
+    "bytes": 140233,
+    "err": null
+   }
+  },
+  {
+   "path": "videos/observation.images.top/chunk-008/file-371.mp4",
+   "size": 110633587,
+   "frames": 32376,
+   "faststart": true,
+   "moov_to_mdat_bytes": 196581,
+   "index_array_bytes": 1424560,
+   "same_index": true,
+   "default": {
+    "s": 0.8472014549988671,
+    "calls": 1,
+    "bytes": 4194304,
+    "err": null
+   },
+   "small": {
+    "s": 0.2142951549976715,
+    "calls": 2,
+    "bytes": 196621,
+    "err": null
+   }
+  },
+  {
+   "path": "videos/observation.images.top/chunk-006/file-710.mp4",
+   "size": 101150500,
+   "frames": 27269,
+   "faststart": true,
+   "moov_to_mdat_bytes": 165801,
+   "index_array_bytes": 1199840,
+   "same_index": true,
+   "default": {
+    "s": 0.16318946899991715,
+    "calls": 1,
+    "bytes": 4194304,
+    "err": null
+   },
+   "small": {
+    "s": 0.660490446993208,
+    "calls": 2,
+    "bytes": 165841,
+    "err": null
+   }
+  },
+  {
+   "path": "videos/observation.images.top/chunk-001/file-402.mp4",
+   "size": 203914334,
+   "frames": 57523,
+   "faststart": true,
+   "moov_to_mdat_bytes": 348761,
+   "index_array_bytes": 2531064,
+   "same_index": true,
+   "default": {
+    "s": 0.5840650829995866,
+    "calls": 1,
+    "bytes": 4194304,
+    "err": null
+   },
+   "small": {
+    "s": 0.1930434769965359,
+    "calls": 2,
+    "bytes": 348801,
+    "err": null
+   }
+  },
+  {
+   "path": "videos/observation.images.right_wrist/chunk-007/file-277.mp4",
+   "size": 100694205,
+   "frames": 32609,
+   "faststart": true,
+   "moov_to_mdat_bytes": 197937,
+   "index_array_bytes": 1434800,
+   "same_index": true,
+   "default": {
+    "s": 0.1740527040019515,
+    "calls": 1,
+    "bytes": 4194304,
+    "err": null
+   },
+   "small": {
+    "s": 0.9593041599946446,
+    "calls": 2,
+    "bytes": 197977,
+    "err": null
+   }
+  },
+  {
+   "path": "videos/observation.images.top/chunk-006/file-099.mp4",
+   "size": 67532287,
+   "frames": 23332,
+   "faststart": true,
+   "moov_to_mdat_bytes": 141733,
+   "index_array_bytes": 1026624,
+   "same_index": true,
+   "default": {
+    "s": 0.7323102800000925,
+    "calls": 1,
+    "bytes": 4194304,
+    "err": null
+   },
+   "small": {
+    "s": 0.23239650599862216,
+    "calls": 2,
+    "bytes": 141773,
+    "err": null
+   }
+  },
+  {
+   "path": "videos/observation.images.right_wrist/chunk-010/file-865.mp4",
+   "size": 56988614,
+   "frames": 19859,
+   "faststart": true,
+   "moov_to_mdat_bytes": 120785,
+   "index_array_bytes": 873816,
+   "same_index": true,
+   "default": {
+    "s": 0.11685461700108135,
+    "calls": 1,
+    "bytes": 4194304,
+    "err": null
+   },
+   "small": {
+    "s": 0.4769150959982653,
+    "calls": 2,
+    "bytes": 120825,
+    "err": null
+   }
+  }
+ ],
+ "sequential": {
+  "files": 10,
+  "same_index": 10,
+  "default_ms_p50": 584.0650829995866,
+  "small_ms_p50": 476.9150959982653,
+  "default_kb_p50": 4096.0,
+  "small_kb_p50": 161.9541015625,
+  "small_calls_mean": 2.0,
+  "moov_kb_p50": 161.9150390625,
+  "moov_kb_max": 363.7783203125,
+  "frames_p50": 27269,
+  "index_array_kb_p50": 1171.71875,
+  "index_array_bytes_per_frame": 44.00062452739502
+ },
+ "parallel16": {
+  "default": {
+   "files": 32,
+   "wall_s": 2.9466526649994194,
+   "files_per_s": 10.859780109172217,
+   "gb": 0.134217728,
+   "errors": 0
+  },
+  "small": {
+   "files": 32,
+   "wall_s": 1.727605667001626,
+   "files_per_s": 18.52274544545696,
+   "gb": 0.00581705,
+   "errors": 0
+  }
+ },
+ "extrapolate_full_catalog": {
+  "default": {
+   "minutes_at_16_threads": 58.570860576582206,
+   "gb_read": 160.071417856
+  },
+  "small": {
+   "minutes_at_16_threads": 34.339761810130234,
+   "gb_read": 6.93755925625
+  },
+  "index_arrays_gb": 45.79119104598527
+ },
+ "fetcher_timing": {
+  "range_jobs": 124.0,
+  "range_bytes": 183960664.0,
+  "range_resolve_s": 8.556017896982667,
+  "range_header_s": 26.815337250991433,
+  "range_first_byte_s": 7.274960554954305,
+  "range_body_s": 29.956145233954885,
+  "range_retry_attempts": 0.0,
+  "range_retry_sleep_s": 0.0,
+  "range_failed_requests": 0.0,
+  "head_retry_attempts": 0.0,
+  "head_retry_sleep_s": 0.0,
+  "head_failed_requests": 0.0,
+  "range_status_206": 124.0,
+  "range_join_s": 0.12057511205057381,
+  "range_chunks": 21208.0,
+  "range_chunk_gap_s": 29.26196183898719,
+  "range_failed_attempt_s": 0.0,
+  "range_exception_attempts": 0.0
+ }
+}

@@ -1,0 +1,110 @@
+{
+ "ckpt_1k|SEP": {
+  "files": 9,
+  "frames": 8706,
+  "bytes": 18726894,
+  "moov_bytes": 59305,
+  "keyframes": 4356,
+  "has_b_frames": [
+   0
+  ],
+  "bytes_per_frame": 2151.0,
+  "moov_bytes_per_frame": 6.81
+ },
+ "ckpt_1k|STACK": {
+  "files": 3,
+  "frames": 2902,
+  "bytes": 18220750,
+  "moov_bytes": 19955,
+  "keyframes": 1452,
+  "has_b_frames": [
+   0
+  ],
+  "bytes_per_frame": 6278.7,
+  "moov_bytes_per_frame": 6.88
+ },
+ "ckpt_1k|BIG": {
+  "files": 3,
+  "frames": 8706,
+  "bytes": 18722088,
+  "moov_bytes": 54787,
+  "keyframes": 4356,
+  "has_b_frames": [
+   0
+  ],
+  "bytes_per_frame": 2150.5,
+  "moov_bytes_per_frame": 6.29
+ },
+ "ckpt_5k|SEP": {
+  "files": 9,
+  "frames": 46407,
+  "bytes": 105884577,
+  "moov_bytes": 286805,
+  "keyframes": 23208,
+  "has_b_frames": [
+   0
+  ],
+  "bytes_per_frame": 2281.7,
+  "moov_bytes_per_frame": 6.18
+ },
+ "ckpt_5k|STACK": {
+  "files": 3,
+  "frames": 15469,
+  "bytes": 103234979,
+  "moov_bytes": 96583,
+  "keyframes": 7736,
+  "has_b_frames": [
+   0
+  ],
+  "bytes_per_frame": 6673.7,
+  "moov_bytes_per_frame": 6.24
+ },
+ "ckpt_5k|BIG": {
+  "files": 3,
+  "frames": 46407,
+  "bytes": 105879763,
+  "moov_bytes": 282279,
+  "keyframes": 23208,
+  "has_b_frames": [
+   0
+  ],
+  "bytes_per_frame": 2281.5,
+  "moov_bytes_per_frame": 6.08
+ },
+ "thrash|SEP": {
+  "files": 36,
+  "frames": 74502,
+  "bytes": 238624732,
+  "moov_bytes": 477580,
+  "keyframes": 37260,
+  "has_b_frames": [
+   0
+  ],
+  "bytes_per_frame": 3202.9,
+  "moov_bytes_per_frame": 6.41
+ },
+ "thrash|STACK": {
+  "files": 12,
+  "frames": 24834,
+  "bytes": 234402245,
+  "moov_bytes": 161340,
+  "keyframes": 12420,
+  "has_b_frames": [
+   0
+  ],
+  "bytes_per_frame": 9438.8,
+  "moov_bytes_per_frame": 6.5
+ },
+ "thrash|BIG": {
+  "files": 12,
+  "frames": 74502,
+  "bytes": 238605532,
+  "moov_bytes": 459532,
+  "keyframes": 37260,
+  "has_b_frames": [
+   0
+  ],
+  "bytes_per_frame": 3202.7,
+  "moov_bytes_per_frame": 6.17
+ }
+}

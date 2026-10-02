@@ -1,0 +1,24 @@
+[01:59:08] SEP_w0_c100 r0: 328.7 samples/s, CPU 4.2 ms/sample, hit 1.000, open 0.0 ms, 3288 samples in 10s (cap), process 14s
+[01:59:22] SEP_w0_cemu r0: 329.6 samples/s, CPU 4.2 ms/sample, hit 1.000, open 0.0 ms, 3296 samples in 10s (cap), process 14s
+[01:59:35] STACK_w0_c100 r0: 434.4 samples/s, CPU 2.3 ms/sample, hit 1.000, open 0.0 ms, 4344 samples in 10s (cap), process 14s
+[01:59:49] STACK_w0_cemu r0: 434.9 samples/s, CPU 2.3 ms/sample, hit 1.000, open 0.0 ms, 4352 samples in 10s (cap), process 14s
+[02:00:02] SEP1_w0_c100 r0: 644.8 samples/s, CPU 1.6 ms/sample, hit 1.000, open 0.0 ms, 6456 samples in 10s (cap), process 14s
+[02:00:16] SEP1_w0_cemu r0: 637.1 samples/s, CPU 1.6 ms/sample, hit 1.000, open 0.0 ms, 6376 samples in 10s (cap), process 13s
+[02:00:33] SEP_w4_c100 r0: 970.5 samples/s, CPU 5.8 ms/sample, hit 1.000, open 0.0 ms, 9712 samples in 10s (cap), process 17s
+[02:00:49] SEP_w4_cemu r0: 980.2 samples/s, CPU 5.8 ms/sample, hit 1.000, open 0.0 ms, 9808 samples in 10s (cap), process 17s
+[02:01:06] STACK_w4_c100 r0: 1171.1 samples/s, CPU 3.7 ms/sample, hit 1.000, open 0.0 ms, 11088 samples in 9s (epoch end), process 16s
+[02:01:22] STACK_w4_cemu r0: 1145.0 samples/s, CPU 3.8 ms/sample, hit 1.000, open 0.0 ms, 11088 samples in 10s (epoch end), process 16s
+[02:01:36] SEP1_w4_c100 r0: 1459.5 samples/s, CPU 2.7 ms/sample, hit 1.000, open 0.0 ms, 11088 samples in 8s (epoch end), process 14s
+[02:01:51] SEP1_w4_cemu r0: 1484.7 samples/s, CPU 2.7 ms/sample, hit 1.000, open 0.0 ms, 11088 samples in 7s (epoch end), process 14s
+[02:02:05] SEP1_w4_cemu r1: 1483.5 samples/s, CPU 2.7 ms/sample, hit 1.000, open 0.0 ms, 11088 samples in 7s (epoch end), process 14s
+[02:02:19] SEP1_w4_c100 r1: 1495.5 samples/s, CPU 2.7 ms/sample, hit 1.000, open 0.0 ms, 11088 samples in 7s (epoch end), process 14s
+[02:02:36] STACK_w4_cemu r1: 1158.0 samples/s, CPU 3.7 ms/sample, hit 1.000, open 0.0 ms, 11088 samples in 10s (epoch end), process 16s
+[02:02:52] STACK_w4_c100 r1: 1131.9 samples/s, CPU 3.9 ms/sample, hit 1.000, open 0.0 ms, 11088 samples in 10s (epoch end), process 17s
+[02:03:09] SEP_w4_cemu r1: 967.2 samples/s, CPU 5.8 ms/sample, hit 1.000, open 0.0 ms, 9680 samples in 10s (cap), process 17s
+[02:03:26] SEP_w4_c100 r1: 993.5 samples/s, CPU 5.7 ms/sample, hit 1.000, open 0.0 ms, 9944 samples in 10s (cap), process 17s
+[02:03:40] SEP1_w0_cemu r1: 631.1 samples/s, CPU 1.6 ms/sample, hit 1.000, open 0.0 ms, 6312 samples in 10s (cap), process 13s
+[02:03:53] SEP1_w0_c100 r1: 638.0 samples/s, CPU 1.6 ms/sample, hit 1.000, open 0.0 ms, 6384 samples in 10s (cap), process 14s
+[02:04:07] STACK_w0_cemu r1: 442.6 samples/s, CPU 2.3 ms/sample, hit 1.000, open 0.0 ms, 4432 samples in 10s (cap), process 14s
+[02:04:20] STACK_w0_c100 r1: 449.3 samples/s, CPU 2.2 ms/sample, hit 1.000, open 0.0 ms, 4496 samples in 10s (cap), process 14s
+[02:04:34] SEP_w0_cemu r1: 332.3 samples/s, CPU 4.2 ms/sample, hit 1.000, open 0.0 ms, 3328 samples in 10s (cap), process 14s
+[02:04:48] SEP_w0_c100 r1: 333.2 samples/s, CPU 4.2 ms/sample, hit 1.000, open 0.0 ms, 3336 samples in 10s (cap), process 14s

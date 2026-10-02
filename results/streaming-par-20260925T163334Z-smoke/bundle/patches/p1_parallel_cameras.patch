@@ -1,0 +1,46 @@
+diff --git a/src/lerobot/datasets/streaming_dataset.py b/src/lerobot/datasets/streaming_dataset.py
+index 6b3dccbf..e6428579 100644
+--- a/src/lerobot/datasets/streaming_dataset.py
++++ b/src/lerobot/datasets/streaming_dataset.py
+@@ -15,6 +15,7 @@
+ # limitations under the License.
+ from collections import deque
+ from collections.abc import Callable, Generator, Iterable, Iterator
++from concurrent.futures import ThreadPoolExecutor
+ from pathlib import Path
+ from typing import Any, Literal
+ 
+@@ -623,9 +624,9 @@ class StreamingLeRobotDataset(torch.utils.data.IterableDataset):
+         the main process and a subprocess fails to access it.
+         """
+ 
+-        item = {}
+-        for video_key, query_ts in query_timestamps.items():
+-            root = self.meta.url_root if self.streaming and not self.streaming_from_local else self.root
++        root = self.meta.url_root if self.streaming and not self.streaming_from_local else self.root
++
++        def _decode_single(video_key: str, query_ts: list[float]) -> tuple[str, torch.Tensor]:
+             video_path = f"{root}/{self.meta.get_video_file_path(ep_idx, video_key)}"
+             if video_key in self.meta.depth_keys:
+                 # Depth maps are 12-bit quantized and only decodable via pyav; dequantize back
+@@ -656,9 +657,18 @@ class StreamingLeRobotDataset(torch.utils.data.IterableDataset):
+                     return_uint8=self._return_uint8,
+                 )
+ 
+-            item[video_key] = frames.squeeze(0) if len(query_ts) == 1 else frames
++            return video_key, frames.squeeze(0) if len(query_ts) == 1 else frames
+ 
+-        return item
++        items = list(query_timestamps.items())
++
++        # Single camera: no threading overhead
++        if len(items) <= 1:
++            return {video_key: _decode_single(video_key, query_ts)[1] for video_key, query_ts in items}
++
++        # Multi-camera: decode in parallel (video decoding and remote reads release the GIL)
++        with ThreadPoolExecutor(max_workers=len(items)) as pool:
++            futures = [pool.submit(_decode_single, k, ts) for k, ts in items]
++            return dict(f.result() for f in futures)
+ 
+     def _get_delta_frames(
+         self, dataset_iterator: Backtrackable, current_item: dict

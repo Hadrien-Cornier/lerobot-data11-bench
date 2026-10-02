@@ -1,0 +1,51 @@
+
+Creating parquet from Arrow format:   0%|          | 0/1 [00:00<?, ?ba/s][ACreating parquet from Arrow format: 100%|██████████| 1/1 [00:00<00:00, 1039.74ba/s]
+
+Creating parquet from Arrow format:   0%|          | 0/1 [00:00<?, ?ba/s][ACreating parquet from Arrow format: 100%|██████████| 1/1 [00:00<00:00, 1237.99ba/s]
+
+Creating parquet from Arrow format:   0%|          | 0/1 [00:00<?, ?ba/s][ACreating parquet from Arrow format: 100%|██████████| 1/1 [00:00<00:00, 1237.26ba/s]
+
+Creating parquet from Arrow format:   0%|          | 0/1 [00:00<?, ?ba/s][ACreating parquet from Arrow format: 100%|██████████| 1/1 [00:00<00:00, 1274.86ba/s]
+
+Creating parquet from Arrow format:   0%|          | 0/1 [00:00<?, ?ba/s][ACreating parquet from Arrow format: 100%|██████████| 1/1 [00:00<00:00, 1325.21ba/s]
+
+Creating parquet from Arrow format:   0%|          | 0/1 [00:00<?, ?ba/s][ACreating parquet from Arrow format: 100%|██████████| 1/1 [00:00<00:00, 1324.80ba/s]
+
+Creating parquet from Arrow format:   0%|          | 0/1 [00:00<?, ?ba/s][ACreating parquet from Arrow format: 100%|██████████| 1/1 [00:00<00:00, 1292.54ba/s]
+
+Creating parquet from Arrow format:   0%|          | 0/1 [00:00<?, ?ba/s][ACreating parquet from Arrow format: 100%|██████████| 1/1 [00:00<00:00, 1261.82ba/s]
+[01:56:54] dataset sep: {"kind": "sep", "root": "/work/ds/sep", "video_keys": ["observation.images.image", "observation.images.image2"], "files_per_key": 8, "episodes": 40, "frames": 11248, "frames_per_file": 1406, "episodes_per_file": 5, "stack_layout": null, "video_bytes_per_file": {"observation.images.image": 4685003, "observation.images.image2": 2952277}, "repo": "hadriencornier/lerobot-data11-r4-libero-sep", "commit": "3d54cfbd27d9a3689936ef503c6fac2d64aadfc2", "upload_s": 2.1, "files": 27, "readback_mismatch": []
+
+Creating parquet from Arrow format:   0%|          | 0/1 [00:00<?, ?ba/s][ACreating parquet from Arrow format: 100%|██████████| 1/1 [00:00<00:00, 1206.99ba/s]
+
+Creating parquet from Arrow format:   0%|          | 0/1 [00:00<?, ?ba/s][ACreating parquet from Arrow format: 100%|██████████| 1/1 [00:00<00:00, 1333.64ba/s]
+
+Creating parquet from Arrow format:   0%|          | 0/1 [00:00<?, ?ba/s][ACreating parquet from Arrow format: 100%|██████████| 1/1 [00:00<00:00, 1271.00ba/s]
+
+Creating parquet from Arrow format:   0%|          | 0/1 [00:00<?, ?ba/s][ACreating parquet from Arrow format: 100%|██████████| 1/1 [00:00<00:00, 1340.89ba/s]
+
+Creating parquet from Arrow format:   0%|          | 0/1 [00:00<?, ?ba/s][ACreating parquet from Arrow format: 100%|██████████| 1/1 [00:00<00:00, 1316.48ba/s]
+
+Creating parquet from Arrow format:   0%|          | 0/1 [00:00<?, ?ba/s][ACreating parquet from Arrow format: 100%|██████████| 1/1 [00:00<00:00, 1329.84ba/s]
+
+Creating parquet from Arrow format:   0%|          | 0/1 [00:00<?, ?ba/s][ACreating parquet from Arrow format: 100%|██████████| 1/1 [00:00<00:00, 1342.18ba/s]
+
+Creating parquet from Arrow format:   0%|          | 0/1 [00:00<?, ?ba/s][ACreating parquet from Arrow format: 100%|██████████| 1/1 [00:00<00:00, 1331.95ba/s]
+[01:56:57] dataset stack: {"kind": "stack", "root": "/work/ds/stack", "video_keys": ["observation.images.stacked"], "files_per_key": 8, "episodes": 40, "frames": 11248, "frames_per_file": 1406, "episodes_per_file": 5, "stack_layout": {"key": "observation.images.stacked", "order_top_to_bottom": ["image", "image2"], "crops_y0_h_w": {"image": [0, 256, 256], "image2": [256, 256, 256]}, "height": 512, "width": 256, "pad": "right-pad narrower cameras with black; odd heights padded by one black row", "source": "lerobot/libero@a
+
+Creating parquet from Arrow format:   0%|          | 0/1 [00:00<?, ?ba/s][ACreating parquet from Arrow format: 100%|██████████| 1/1 [00:00<00:00, 1209.78ba/s]
+
+Creating parquet from Arrow format:   0%|          | 0/1 [00:00<?, ?ba/s][ACreating parquet from Arrow format: 100%|██████████| 1/1 [00:00<00:00, 1305.01ba/s]
+
+Creating parquet from Arrow format:   0%|          | 0/1 [00:00<?, ?ba/s][ACreating parquet from Arrow format: 100%|██████████| 1/1 [00:00<00:00, 1324.80ba/s]
+
+Creating parquet from Arrow format:   0%|          | 0/1 [00:00<?, ?ba/s][ACreating parquet from Arrow format: 100%|██████████| 1/1 [00:00<00:00, 1179.83ba/s]
+
+Creating parquet from Arrow format:   0%|          | 0/1 [00:00<?, ?ba/s][ACreating parquet from Arrow format: 100%|██████████| 1/1 [00:00<00:00, 1305.82ba/s]
+
+Creating parquet from Arrow format:   0%|          | 0/1 [00:00<?, ?ba/s][ACreating parquet from Arrow format: 100%|██████████| 1/1 [00:00<00:00, 1294.54ba/s]
+
+Creating parquet from Arrow format:   0%|          | 0/1 [00:00<?, ?ba/s][ACreating parquet from Arrow format: 100%|██████████| 1/1 [00:00<00:00, 1043.36ba/s]
+
+Creating parquet from Arrow format:   0%|          | 0/1 [00:00<?, ?ba/s][ACreating parquet from Arrow format: 100%|██████████| 1/1 [00:00<00:00, 1294.54ba/s]
+[01:56:58] dataset sep1: {"kind": "sep1", "root": "/work/ds/sep1", "video_keys": ["observation.images.image"], "files_per_key": 8, "episodes": 40, "frames": 11248, "frames_per_file": 1406, "episodes_per_file": 5, "stack_layout": null, "video_bytes_per_file": {"observation.images.image": 4685003}, "repo": "hadriencornier/lerobot-data11-r4-libero-sep1", "commit": "029505b4ce6dc4e525b552a0e392fbf1a2a97358", "upload_s": 0.9, "files": 19, "readback_mismatch": [], "private": true}

@@ -1,0 +1,127 @@
+
+Downloading bytes:           |  0.00B            [A
+Reconstructing (incomplete total...): |          |  0.00B /  0.00B            [A
+Fetching 73 files:   0%|          | 0/73 [00:00<?, ?it/s][A
+Reconstructing (incomplete total...):   0%|          |  0.00B / 5.51kB            [A
+Reconstructing (incomplete total...):   0%|          | 5.51kB /  112MB            [A
+Reconstructing (incomplete total...):   0%|          | 5.51kB /  161MB            [A
+Reconstructing (incomplete total...):   0%|          | 5.51kB /  200MB            [A
+Reconstructing (incomplete total...):   0%|          | 5.51kB /  200MB            [A
+Reconstructing (incomplete total...):   0%|          | 5.51kB /  236MB            [A
+Reconstructing (incomplete total...):   0%|          | 5.51kB /  292MB            [A
+Reconstructing (incomplete total...):   0%|          | 5.51kB /  380MB            [A
+Reconstructing (incomplete total...):   0%|          | 5.51kB /  417MB            [A
+Downloading bytes: ██▏       | 89.7MB,   ???B/s  [A
+Reconstructing (incomplete total...):   9%|▉         | 38.6MB /  417MB            [A
+Fetching 73 files:   3%|▎         | 2/73 [00:01<00:39,  1.78it/s][A
+Reconstructing (incomplete total...):  17%|█▋        | 78.9MB /  460MB, 35.3MB/s  [A
+Reconstructing (incomplete total...):  21%|██▏       |  115MB /  540MB, 35.3MB/s  [A
+Reconstructing (incomplete total...):  19%|█▉        |  115MB /  604MB, 35.3MB/s  [A
+Reconstructing (incomplete total...):  24%|██▎       |  165MB /  699MB, 35.3MB/s  [A
+Reconstructing (incomplete total...):  26%|██▌       |  202MB /  789MB, 35.3MB/s  [A
+Reconstructing (incomplete total...):  30%|███       |  257MB /  853MB, 35.3MB/s  [A
+Downloading bytes: █████▏    |  438MB, 88.9MB/s  [A
+Reconstructing (incomplete total...):  41%|████      |  346MB /  853MB, 35.3MB/s  [A
+Fetching 73 files:  11%|█         | 8/73 [00:02<00:16,  4.00it/s][A
+Reconstructing (incomplete total...):  46%|████▌     |  417MB /  914MB,  180MB/s  [A
+Reconstructing (incomplete total...):  44%|████▍     |  417MB /  953MB,  180MB/s  [A
+Reconstructing (incomplete total...):  45%|████▍     |  460MB / 1.03GB,  180MB/s  [A
+Reconstructing (incomplete total...):  58%|█████▊    |  613MB / 1.06GB,  180MB/s  [A
+Reconstructing (incomplete total...):  62%|██████▏   |  677MB / 1.09GB,  180MB/s  [A
+Downloading bytes: ████████  |  880MB,  237MB/s  [A
+Reconstructing (incomplete total...):  59%|█████▉    |  677MB / 1.15GB,  180MB/s  [A
+Reconstructing (incomplete total...):  58%|█████▊    |  716MB / 1.23GB,  180MB/s  [A
+Reconstructing (incomplete total...):  73%|███████▎  |  892MB / 1.23GB,  180MB/s  [A
+Fetching 73 files:  22%|██▏       | 16/73 [00:03<00:10,  5.66it/s][A
+Reconstructing (incomplete total...):  69%|██████▉   |  892MB / 1.29GB,  335MB/s  [A
+Reconstructing (incomplete total...):  67%|██████▋   |  892MB / 1.33GB,  335MB/s  [A
+Reconstructing (incomplete total...):  70%|██████▉   |  953MB / 1.37GB,  335MB/s  [A
+Reconstructing (incomplete total...):  70%|██████▉   |  988MB / 1.41GB,  335MB/s  [A
+Reconstructing (incomplete total...):  76%|███████▌  | 1.11GB / 1.46GB,  335MB/s  [A
+Reconstructing (incomplete total...):  73%|███████▎  | 1.11GB / 1.51GB,  335MB/s  [A
+Downloading bytes: ████████  | 1.21GB,  329MB/s  [A
+Reconstructing (incomplete total...):  70%|███████   | 1.11GB / 1.58GB,  335MB/s  [A
+Reconstructing (incomplete total...):  69%|██████▉   | 1.15GB / 1.66GB,  335MB/s  [A
+Reconstructing (incomplete total...):  76%|███████▌  | 1.26GB / 1.66GB,  335MB/s  [A
+Fetching 73 files:  32%|███▏      | 23/73 [00:04<00:08,  5.78it/s][A
+Reconstructing (incomplete total...):  78%|███████▊  | 1.33GB / 1.70GB,  327MB/s  [A
+Reconstructing (incomplete total...):  77%|███████▋  | 1.33GB / 1.74GB,  327MB/s  [A
+Reconstructing (incomplete total...):  80%|███████▉  | 1.41GB / 1.77GB,  327MB/s  [A
+Reconstructing (incomplete total...):  78%|███████▊  | 1.41GB / 1.82GB,  327MB/s  [A
+Reconstructing (incomplete total...):  80%|████████  | 1.51GB / 1.87GB,  327MB/s  [A
+Reconstructing (incomplete total...):  77%|███████▋  | 1.51GB / 1.96GB,  327MB/s  [A
+Downloading bytes: ████████▏ | 1.61GB,  331MB/s  [A
+Reconstructing (incomplete total...):  76%|███████▌  | 1.54GB / 2.04GB,  327MB/s  [A
+Fetching 73 files:  41%|████      | 30/73 [00:05<00:06,  6.19it/s][A
+Reconstructing (incomplete total...):  83%|████████▎ | 1.69GB / 2.04GB,  327MB/s  [A
+Reconstructing (incomplete total...):  85%|████████▌ | 1.82GB / 2.13GB,  357MB/s  [A
+Reconstructing (incomplete total...):  83%|████████▎ | 1.82GB / 2.20GB,  357MB/s  [A
+Reconstructing (incomplete total...):  81%|████████  | 1.82GB / 2.24GB,  357MB/s  [A
+Reconstructing (incomplete total...):  79%|███████▉  | 1.82GB / 2.30GB,  357MB/s  [A
+Reconstructing (incomplete total...):  77%|███████▋  | 1.82GB / 2.37GB,  357MB/s  [A
+Downloading bytes: ████████▎ | 1.97GB,  352MB/s  [A
+Reconstructing (incomplete total...):  78%|███████▊  | 1.87GB / 2.40GB,  357MB/s  [A
+Reconstructing (incomplete total...):  79%|███████▉  | 1.92GB / 2.43GB,  357MB/s  [A
+Fetching 73 files:  51%|█████     | 37/73 [00:06<00:05,  6.35it/s][A
+Reconstructing (incomplete total...):  85%|████████▍ | 2.06GB / 2.43GB,  357MB/s  [A
+Reconstructing (incomplete total...):  83%|████████▎ | 2.06GB / 2.49GB,  353MB/s  [A
+Reconstructing (incomplete total...):  83%|████████▎ | 2.12GB / 2.57GB,  353MB/s  [A
+Reconstructing (incomplete total...):  81%|████████  | 2.12GB / 2.63GB,  353MB/s  [A
+Reconstructing (incomplete total...):  83%|████████▎ | 2.21GB / 2.66GB,  353MB/s  [A
+Reconstructing (incomplete total...):  85%|████████▌ | 2.31GB / 2.70GB,  353MB/s  [A
+Reconstructing (incomplete total...):  83%|████████▎ | 2.31GB / 2.77GB,  353MB/s  [A
+Reconstructing (incomplete total...):  83%|████████▎ | 2.34GB / 2.82GB,  353MB/s  [A
+Downloading bytes: ████████▋ | 2.46GB,  343MB/s  [A
+Reconstructing (incomplete total...):  84%|████████▍ | 2.43GB / 2.89GB,  353MB/s  [A
+Reconstructing (incomplete total...):  83%|████████▎ | 2.46GB / 2.98GB,  353MB/s  [A
+Reconstructing (incomplete total...):  84%|████████▍ | 2.52GB / 2.98GB,  353MB/s  [A
+Fetching 73 files:  63%|██████▎   | 46/73 [00:07<00:04,  6.64it/s][A
+Reconstructing (incomplete total...):  85%|████████▌ | 2.66GB / 3.13GB,  361MB/s  [A
+Reconstructing (incomplete total...):  85%|████████▌ | 2.66GB / 3.13GB,  361MB/s  [A
+Reconstructing (incomplete total...):  84%|████████▍ | 2.66GB / 3.17GB,  361MB/s  [A
+Reconstructing (incomplete total...):  84%|████████▍ | 2.70GB / 3.22GB,  361MB/s  [A
+Reconstructing (incomplete total...):  84%|████████▍ | 2.75GB / 3.28GB,  361MB/s  [A
+Downloading bytes: ████████▊ | 2.91GB,  388MB/s  [A
+Reconstructing (incomplete total...):  84%|████████▍ | 2.82GB / 3.37GB,  361MB/s  [A
+Reconstructing (incomplete total...):  84%|████████▍ | 2.89GB / 3.44GB,  361MB/s  [A
+Reconstructing (incomplete total...):  84%|████████▍ | 2.98GB / 3.55GB,  361MB/s  [A
+Reconstructing (incomplete total...):  85%|████████▌ | 3.03GB / 3.55GB,  361MB/s  [A
+Fetching 73 files:  74%|███████▍  | 54/73 [00:08<00:02,  6.97it/s][A
+Reconstructing (incomplete total...):  83%|████████▎ | 3.03GB / 3.65GB,  404MB/s  [A
+Reconstructing (incomplete total...):  82%|████████▏ | 3.07GB / 3.73GB,  404MB/s  [A
+Reconstructing (incomplete total...):  82%|████████▏ | 3.11GB / 3.80GB,  404MB/s  [A
+Reconstructing (incomplete total...):  83%|████████▎ | 3.18GB / 3.85GB,  404MB/s  [A
+Downloading bytes: ████████▊ | 3.37GB,  406MB/s  [A
+Reconstructing (incomplete total...):  83%|████████▎ | 3.27GB / 3.94GB,  404MB/s  [A
+Reconstructing (incomplete total...):  85%|████████▍ | 3.37GB / 3.97GB,  404MB/s  [A
+Reconstructing (incomplete total...):  87%|████████▋ | 3.44GB / 3.97GB,  404MB/s  [A
+Reconstructing (incomplete total...):  86%|████████▌ | 3.44GB / 4.01GB,  404MB/s  [A
+Fetching 73 files:  84%|████████▎ | 61/73 [00:10<00:01,  6.34it/s][A
+Reconstructing (incomplete total...):  86%|████████▌ | 3.49GB / 4.08GB,  404MB/s  [A
+Downloading bytes: █████████▎| 3.82GB,  415MB/s  [A
+Downloading bytes: █████████▎| 3.82GB,  437MB/s  [A
+Downloading bytes: █████████▎| 3.82GB,  437MB/s  [A
+Downloading bytes: █████████▎| 3.82GB,  437MB/s  [A
+Reconstructing (incomplete total...):  91%|█████████ | 3.78GB / 4.17GB,  404MB/s  [A
+Reconstructing (incomplete total...):  90%|████████▉ | 3.78GB / 4.21GB,  404MB/s  [A
+Reconstructing (incomplete total...):  88%|████████▊ | 3.78GB / 4.29GB,  404MB/s  [A
+Reconstructing (incomplete total...):  87%|████████▋ | 3.78GB / 4.34GB,  404MB/s  [A
+Reconstructing (incomplete total...):  93%|█████████▎| 4.01GB / 4.34GB,  404MB/s  [A
+Fetching 73 files:  95%|█████████▍| 69/73 [00:11<00:00,  6.66it/s][A
+Downloading bytes: █████████▊| 4.27GB,  437MB/s  [AFetching 73 files: 100%|██████████| 73/73 [00:11<00:00,  6.21it/s]
+
+Downloading bytes: ██████████| 4.32GB,  418MB/s  [A
+Download complete: : ██████████| 4.32GB,  418MB/s  [A
+Reconstruction complete: 100%|██████████| 4.34GB / 4.34GB,  432MB/s               [A{
+ "repo_id": "lerobot/abc_130k_v3_train",
+ "revision": "68651e4929d9fb00f798937b2d62617cab5c771d",
+ "files": 72,
+ "bytes": 4337073013,
+ "gb": 4.337,
+ "wall_s": 19.1,
+ "mb_per_s": 226.9,
+ "size_mismatches": {},
+ "fps": 30
+}
+Download complete: : ██████████| 4.32GB,  418MB/s  
+Reconstruction complete: 100%|██████████| 4.34GB / 4.34GB,  432MB/s  

@@ -1,0 +1,938 @@
+{
+ "repo": "yaak-ai/L2D",
+ "revision": "1e7578b183c1cabd3b0f1061828b4cc76a323bd2",
+ "codebase_version": "v3.0",
+ "fps": 10,
+ "total_videos": null,
+ "video_keys": [
+  "observation.images.left_forward",
+  "observation.images.front_left",
+  "observation.images.right_forward",
+  "observation.images.left_backward",
+  "observation.images.rear",
+  "observation.images.right_backward",
+  "observation.images.map"
+ ],
+ "files": [
+  {
+   "path": "videos/observation.images.rear/chunk-000/file-477.mp4",
+   "file_size": 520263204,
+   "boxes": [
+    [
+     "ftyp",
+     0,
+     32
+    ],
+    [
+     "moov",
+     32,
+     61559
+    ]
+   ],
+   "moov_size": 61559,
+   "moov_end": 61591,
+   "moov_first": true,
+   "reads_now": 1,
+   "bytes_now": 4194304,
+   "reads_patched": 1,
+   "bytes_patched": 524288
+  },
+  {
+   "path": "videos/observation.images.right_backward/chunk-000/file-708.mp4",
+   "file_size": 477752348,
+   "boxes": [
+    [
+     "ftyp",
+     0,
+     32
+    ],
+    [
+     "moov",
+     32,
+     40115
+    ]
+   ],
+   "moov_size": 40115,
+   "moov_end": 40147,
+   "moov_first": true,
+   "reads_now": 1,
+   "bytes_now": 4194304,
+   "reads_patched": 1,
+   "bytes_patched": 524288
+  },
+  {
+   "path": "videos/observation.images.left_forward/chunk-000/file-228.mp4",
+   "file_size": 502071475,
+   "boxes": [
+    [
+     "ftyp",
+     0,
+     32
+    ],
+    [
+     "moov",
+     32,
+     52967
+    ]
+   ],
+   "moov_size": 52967,
+   "moov_end": 52999,
+   "moov_first": true,
+   "reads_now": 1,
+   "bytes_now": 4194304,
+   "reads_patched": 1,
+   "bytes_patched": 524288
+  },
+  {
+   "path": "videos/observation.images.right_backward/chunk-000/file-895.mp4",
+   "file_size": 477234042,
+   "boxes": [
+    [
+     "ftyp",
+     0,
+     32
+    ],
+    [
+     "moov",
+     32,
+     55663
+    ]
+   ],
+   "moov_size": 55663,
+   "moov_end": 55695,
+   "moov_first": true,
+   "reads_now": 1,
+   "bytes_now": 4194304,
+   "reads_patched": 1,
+   "bytes_patched": 524288
+  },
+  {
+   "path": "videos/observation.images.front_left/chunk-000/file-443.mp4",
+   "file_size": 523463969,
+   "boxes": [
+    [
+     "ftyp",
+     0,
+     32
+    ],
+    [
+     "moov",
+     32,
+     55707
+    ]
+   ],
+   "moov_size": 55707,
+   "moov_end": 55739,
+   "moov_first": true,
+   "reads_now": 1,
+   "bytes_now": 4194304,
+   "reads_patched": 1,
+   "bytes_patched": 524288
+  },
+  {
+   "path": "videos/observation.images.right_backward/chunk-001/file-440.mp4",
+   "file_size": 446812583,
+   "boxes": [
+    [
+     "ftyp",
+     0,
+     32
+    ],
+    [
+     "moov",
+     32,
+     42875
+    ]
+   ],
+   "moov_size": 42875,
+   "moov_end": 42907,
+   "moov_first": true,
+   "reads_now": 1,
+   "bytes_now": 4194304,
+   "reads_patched": 1,
+   "bytes_patched": 524288
+  },
+  {
+   "path": "videos/observation.images.right_forward/chunk-000/file-985.mp4",
+   "file_size": 459841217,
+   "boxes": [
+    [
+     "ftyp",
+     0,
+     32
+    ],
+    [
+     "moov",
+     32,
+     45143
+    ]
+   ],
+   "moov_size": 45143,
+   "moov_end": 45175,
+   "moov_first": true,
+   "reads_now": 1,
+   "bytes_now": 4194304,
+   "reads_patched": 1,
+   "bytes_patched": 524288
+  },
+  {
+   "path": "videos/observation.images.rear/chunk-001/file-262.mp4",
+   "file_size": 508246423,
+   "boxes": [
+    [
+     "ftyp",
+     0,
+     32
+    ],
+    [
+     "moov",
+     32,
+     59843
+    ]
+   ],
+   "moov_size": 59843,
+   "moov_end": 59875,
+   "moov_first": true,
+   "reads_now": 1,
+   "bytes_now": 4194304,
+   "reads_patched": 1,
+   "bytes_patched": 524288
+  },
+  {
+   "path": "videos/observation.images.front_left/chunk-000/file-248.mp4",
+   "file_size": 511422915,
+   "boxes": [
+    [
+     "ftyp",
+     0,
+     32
+    ],
+    [
+     "moov",
+     32,
+     57503
+    ]
+   ],
+   "moov_size": 57503,
+   "moov_end": 57535,
+   "moov_first": true,
+   "reads_now": 1,
+   "bytes_now": 4194304,
+   "reads_patched": 1,
+   "bytes_patched": 524288
+  },
+  {
+   "path": "videos/observation.images.left_forward/chunk-000/file-893.mp4",
+   "file_size": 477114687,
+   "boxes": [
+    [
+     "ftyp",
+     0,
+     32
+    ],
+    [
+     "moov",
+     32,
+     39971
+    ]
+   ],
+   "moov_size": 39971,
+   "moov_end": 40003,
+   "moov_first": true,
+   "reads_now": 1,
+   "bytes_now": 4194304,
+   "reads_patched": 1,
+   "bytes_patched": 524288
+  },
+  {
+   "path": "videos/observation.images.left_forward/chunk-001/file-389.mp4",
+   "file_size": 469094219,
+   "boxes": [
+    [
+     "ftyp",
+     0,
+     32
+    ],
+    [
+     "moov",
+     32,
+     34291
+    ]
+   ],
+   "moov_size": 34291,
+   "moov_end": 34323,
+   "moov_first": true,
+   "reads_now": 1,
+   "bytes_now": 4194304,
+   "reads_patched": 1,
+   "bytes_patched": 524288
+  },
+  {
+   "path": "videos/observation.images.left_forward/chunk-001/file-731.mp4",
+   "file_size": 472933346,
+   "boxes": [
+    [
+     "ftyp",
+     0,
+     32
+    ],
+    [
+     "moov",
+     32,
+     45015
+    ]
+   ],
+   "moov_size": 45015,
+   "moov_end": 45047,
+   "moov_first": true,
+   "reads_now": 1,
+   "bytes_now": 4194304,
+   "reads_patched": 1,
+   "bytes_patched": 524288
+  },
+  {
+   "path": "videos/observation.images.right_backward/chunk-000/file-999.mp4",
+   "file_size": 476155336,
+   "boxes": [
+    [
+     "ftyp",
+     0,
+     32
+    ],
+    [
+     "moov",
+     32,
+     38107
+    ]
+   ],
+   "moov_size": 38107,
+   "moov_end": 38139,
+   "moov_first": true,
+   "reads_now": 1,
+   "bytes_now": 4194304,
+   "reads_patched": 1,
+   "bytes_patched": 524288
+  },
+  {
+   "path": "videos/observation.images.right_backward/chunk-000/file-526.mp4",
+   "file_size": 468814961,
+   "boxes": [
+    [
+     "ftyp",
+     0,
+     32
+    ],
+    [
+     "moov",
+     32,
+     46123
+    ]
+   ],
+   "moov_size": 46123,
+   "moov_end": 46155,
+   "moov_first": true,
+   "reads_now": 1,
+   "bytes_now": 4194304,
+   "reads_patched": 1,
+   "bytes_patched": 524288
+  },
+  {
+   "path": "videos/observation.images.right_forward/chunk-000/file-847.mp4",
+   "file_size": 488692252,
+   "boxes": [
+    [
+     "ftyp",
+     0,
+     32
+    ],
+    [
+     "moov",
+     32,
+     48287
+    ]
+   ],
+   "moov_size": 48287,
+   "moov_end": 48319,
+   "moov_first": true,
+   "reads_now": 1,
+   "bytes_now": 4194304,
+   "reads_patched": 1,
+   "bytes_patched": 524288
+  },
+  {
+   "path": "videos/observation.images.left_forward/chunk-000/file-560.mp4",
+   "file_size": 514455857,
+   "boxes": [
+    [
+     "ftyp",
+     0,
+     32
+    ],
+    [
+     "moov",
+     32,
+     46439
+    ]
+   ],
+   "moov_size": 46439,
+   "moov_end": 46471,
+   "moov_first": true,
+   "reads_now": 1,
+   "bytes_now": 4194304,
+   "reads_patched": 1,
+   "bytes_patched": 524288
+  },
+  {
+   "path": "videos/observation.images.right_forward/chunk-000/file-157.mp4",
+   "file_size": 508397018,
+   "boxes": [
+    [
+     "ftyp",
+     0,
+     32
+    ],
+    [
+     "moov",
+     32,
+     48415
+    ]
+   ],
+   "moov_size": 48415,
+   "moov_end": 48447,
+   "moov_first": true,
+   "reads_now": 1,
+   "bytes_now": 4194304,
+   "reads_patched": 1,
+   "bytes_patched": 524288
+  },
+  {
+   "path": "videos/observation.images.front_left/chunk-000/file-843.mp4",
+   "file_size": 479506953,
+   "boxes": [
+    [
+     "ftyp",
+     0,
+     32
+    ],
+    [
+     "moov",
+     32,
+     26143
+    ]
+   ],
+   "moov_size": 26143,
+   "moov_end": 26175,
+   "moov_first": true,
+   "reads_now": 1,
+   "bytes_now": 4194304,
+   "reads_patched": 1,
+   "bytes_patched": 524288
+  },
+  {
+   "path": "videos/observation.images.left_forward/chunk-000/file-224.mp4",
+   "file_size": 481629277,
+   "boxes": [
+    [
+     "ftyp",
+     0,
+     32
+    ],
+    [
+     "moov",
+     32,
+     42443
+    ]
+   ],
+   "moov_size": 42443,
+   "moov_end": 42475,
+   "moov_first": true,
+   "reads_now": 1,
+   "bytes_now": 4194304,
+   "reads_patched": 1,
+   "bytes_patched": 524288
+  },
+  {
+   "path": "videos/observation.images.left_forward/chunk-001/file-400.mp4",
+   "file_size": 501738260,
+   "boxes": [
+    [
+     "ftyp",
+     0,
+     32
+    ],
+    [
+     "moov",
+     32,
+     39955
+    ]
+   ],
+   "moov_size": 39955,
+   "moov_end": 39987,
+   "moov_first": true,
+   "reads_now": 1,
+   "bytes_now": 4194304,
+   "reads_patched": 1,
+   "bytes_patched": 524288
+  },
+  {
+   "path": "videos/observation.images.front_left/chunk-001/file-358.mp4",
+   "file_size": 513158826,
+   "boxes": [
+    [
+     "ftyp",
+     0,
+     32
+    ],
+    [
+     "moov",
+     32,
+     55287
+    ]
+   ],
+   "moov_size": 55287,
+   "moov_end": 55319,
+   "moov_first": true,
+   "reads_now": 1,
+   "bytes_now": 4194304,
+   "reads_patched": 1,
+   "bytes_patched": 524288
+  },
+  {
+   "path": "videos/observation.images.right_forward/chunk-000/file-486.mp4",
+   "file_size": 518022540,
+   "boxes": [
+    [
+     "ftyp",
+     0,
+     32
+    ],
+    [
+     "moov",
+     32,
+     40123
+    ]
+   ],
+   "moov_size": 40123,
+   "moov_end": 40155,
+   "moov_first": true,
+   "reads_now": 1,
+   "bytes_now": 4194304,
+   "reads_patched": 1,
+   "bytes_patched": 524288
+  },
+  {
+   "path": "videos/observation.images.right_backward/chunk-001/file-596.mp4",
+   "file_size": 488063416,
+   "boxes": [
+    [
+     "ftyp",
+     0,
+     32
+    ],
+    [
+     "moov",
+     32,
+     51547
+    ]
+   ],
+   "moov_size": 51547,
+   "moov_end": 51579,
+   "moov_first": true,
+   "reads_now": 1,
+   "bytes_now": 4194304,
+   "reads_patched": 1,
+   "bytes_patched": 524288
+  },
+  {
+   "path": "videos/observation.images.right_forward/chunk-000/file-475.mp4",
+   "file_size": 494311821,
+   "boxes": [
+    [
+     "ftyp",
+     0,
+     32
+    ],
+    [
+     "moov",
+     32,
+     46079
+    ]
+   ],
+   "moov_size": 46079,
+   "moov_end": 46111,
+   "moov_first": true,
+   "reads_now": 1,
+   "bytes_now": 4194304,
+   "reads_patched": 1,
+   "bytes_patched": 524288
+  },
+  {
+   "path": "videos/observation.images.right_forward/chunk-000/file-261.mp4",
+   "file_size": 503405189,
+   "boxes": [
+    [
+     "ftyp",
+     0,
+     32
+    ],
+    [
+     "moov",
+     32,
+     46455
+    ]
+   ],
+   "moov_size": 46455,
+   "moov_end": 46487,
+   "moov_first": true,
+   "reads_now": 1,
+   "bytes_now": 4194304,
+   "reads_patched": 1,
+   "bytes_patched": 524288
+  },
+  {
+   "path": "videos/observation.images.rear/chunk-000/file-008.mp4",
+   "file_size": 512923941,
+   "boxes": [
+    [
+     "ftyp",
+     0,
+     32
+    ],
+    [
+     "moov",
+     32,
+     64059
+    ]
+   ],
+   "moov_size": 64059,
+   "moov_end": 64091,
+   "moov_first": true,
+   "reads_now": 1,
+   "bytes_now": 4194304,
+   "reads_patched": 1,
+   "bytes_patched": 524288
+  },
+  {
+   "path": "videos/observation.images.left_backward/chunk-000/file-234.mp4",
+   "file_size": 502467325,
+   "boxes": [
+    [
+     "ftyp",
+     0,
+     32
+    ],
+    [
+     "moov",
+     32,
+     51995
+    ]
+   ],
+   "moov_size": 51995,
+   "moov_end": 52027,
+   "moov_first": true,
+   "reads_now": 1,
+   "bytes_now": 4194304,
+   "reads_patched": 1,
+   "bytes_patched": 524288
+  },
+  {
+   "path": "videos/observation.images.right_forward/chunk-000/file-492.mp4",
+   "file_size": 505320757,
+   "boxes": [
+    [
+     "ftyp",
+     0,
+     32
+    ],
+    [
+     "moov",
+     32,
+     41167
+    ]
+   ],
+   "moov_size": 41167,
+   "moov_end": 41199,
+   "moov_first": true,
+   "reads_now": 1,
+   "bytes_now": 4194304,
+   "reads_patched": 1,
+   "bytes_patched": 524288
+  },
+  {
+   "path": "videos/observation.images.left_backward/chunk-000/file-799.mp4",
+   "file_size": 478792056,
+   "boxes": [
+    [
+     "ftyp",
+     0,
+     32
+    ],
+    [
+     "moov",
+     32,
+     45967
+    ]
+   ],
+   "moov_size": 45967,
+   "moov_end": 45999,
+   "moov_first": true,
+   "reads_now": 1,
+   "bytes_now": 4194304,
+   "reads_patched": 1,
+   "bytes_patched": 524288
+  },
+  {
+   "path": "videos/observation.images.right_forward/chunk-001/file-550.mp4",
+   "file_size": 511918968,
+   "boxes": [
+    [
+     "ftyp",
+     0,
+     32
+    ],
+    [
+     "moov",
+     32,
+     45951
+    ]
+   ],
+   "moov_size": 45951,
+   "moov_end": 45983,
+   "moov_first": true,
+   "reads_now": 1,
+   "bytes_now": 4194304,
+   "reads_patched": 1,
+   "bytes_patched": 524288
+  },
+  {
+   "path": "videos/observation.images.rear/chunk-000/file-987.mp4",
+   "file_size": 479717241,
+   "boxes": [
+    [
+     "ftyp",
+     0,
+     32
+    ],
+    [
+     "moov",
+     32,
+     45947
+    ]
+   ],
+   "moov_size": 45947,
+   "moov_end": 45979,
+   "moov_first": true,
+   "reads_now": 1,
+   "bytes_now": 4194304,
+   "reads_patched": 1,
+   "bytes_patched": 524288
+  },
+  {
+   "path": "videos/observation.images.left_backward/chunk-001/file-140.mp4",
+   "file_size": 475090397,
+   "boxes": [
+    [
+     "ftyp",
+     0,
+     32
+    ],
+    [
+     "moov",
+     32,
+     40891
+    ]
+   ],
+   "moov_size": 40891,
+   "moov_end": 40923,
+   "moov_first": true,
+   "reads_now": 1,
+   "bytes_now": 4194304,
+   "reads_patched": 1,
+   "bytes_patched": 524288
+  },
+  {
+   "path": "videos/observation.images.right_backward/chunk-000/file-024.mp4",
+   "file_size": 447538080,
+   "boxes": [
+    [
+     "ftyp",
+     0,
+     32
+    ],
+    [
+     "moov",
+     32,
+     41803
+    ]
+   ],
+   "moov_size": 41803,
+   "moov_end": 41835,
+   "moov_first": true,
+   "reads_now": 1,
+   "bytes_now": 4194304,
+   "reads_patched": 1,
+   "bytes_patched": 524288
+  },
+  {
+   "path": "videos/observation.images.left_forward/chunk-001/file-321.mp4",
+   "file_size": 491422558,
+   "boxes": [
+    [
+     "ftyp",
+     0,
+     32
+    ],
+    [
+     "moov",
+     32,
+     36651
+    ]
+   ],
+   "moov_size": 36651,
+   "moov_end": 36683,
+   "moov_first": true,
+   "reads_now": 1,
+   "bytes_now": 4194304,
+   "reads_patched": 1,
+   "bytes_patched": 524288
+  },
+  {
+   "path": "videos/observation.images.right_forward/chunk-000/file-923.mp4",
+   "file_size": 521811576,
+   "boxes": [
+    [
+     "ftyp",
+     0,
+     32
+    ],
+    [
+     "moov",
+     32,
+     50311
+    ]
+   ],
+   "moov_size": 50311,
+   "moov_end": 50343,
+   "moov_first": true,
+   "reads_now": 1,
+   "bytes_now": 4194304,
+   "reads_patched": 1,
+   "bytes_patched": 524288
+  },
+  {
+   "path": "videos/observation.images.right_backward/chunk-000/file-608.mp4",
+   "file_size": 523702417,
+   "boxes": [
+    [
+     "ftyp",
+     0,
+     32
+    ],
+    [
+     "moov",
+     32,
+     48371
+    ]
+   ],
+   "moov_size": 48371,
+   "moov_end": 48403,
+   "moov_first": true,
+   "reads_now": 1,
+   "bytes_now": 4194304,
+   "reads_patched": 1,
+   "bytes_patched": 524288
+  },
+  {
+   "path": "videos/observation.images.left_forward/chunk-000/file-141.mp4",
+   "file_size": 517907793,
+   "boxes": [
+    [
+     "ftyp",
+     0,
+     32
+    ],
+    [
+     "moov",
+     32,
+     53475
+    ]
+   ],
+   "moov_size": 53475,
+   "moov_end": 53507,
+   "moov_first": true,
+   "reads_now": 1,
+   "bytes_now": 4194304,
+   "reads_patched": 1,
+   "bytes_patched": 524288
+  },
+  {
+   "path": "videos/observation.images.right_forward/chunk-000/file-379.mp4",
+   "file_size": 497230733,
+   "boxes": [
+    [
+     "ftyp",
+     0,
+     32
+    ],
+    [
+     "moov",
+     32,
+     46159
+    ]
+   ],
+   "moov_size": 46159,
+   "moov_end": 46191,
+   "moov_first": true,
+   "reads_now": 1,
+   "bytes_now": 4194304,
+   "reads_patched": 1,
+   "bytes_patched": 524288
+  },
+  {
+   "path": "videos/observation.images.right_forward/chunk-001/file-347.mp4",
+   "file_size": 485052131,
+   "boxes": [
+    [
+     "ftyp",
+     0,
+     32
+    ],
+    [
+     "moov",
+     32,
+     43371
+    ]
+   ],
+   "moov_size": 43371,
+   "moov_end": 43403,
+   "moov_first": true,
+   "reads_now": 1,
+   "bytes_now": 4194304,
+   "reads_patched": 1,
+   "bytes_patched": 524288
+  },
+  {
+   "path": "videos/observation.images.left_forward/chunk-001/file-353.mp4",
+   "file_size": 510048994,
+   "boxes": [
+    [
+     "ftyp",
+     0,
+     32
+    ],
+    [
+     "moov",
+     32,
+     51027
+    ]
+   ],
+   "moov_size": 51027,
+   "moov_end": 51059,
+   "moov_first": true,
+   "reads_now": 1,
+   "bytes_now": 4194304,
+   "reads_patched": 1,
+   "bytes_patched": 524288
+  }
+ ]
+}

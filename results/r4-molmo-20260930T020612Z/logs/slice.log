@@ -1,0 +1,9 @@
+[02:07:29] molmo: 32246 episodes, cameras ['right', 'left', 'top'], shapes {'right': [360, 640], 'left': [360, 640], 'top': [360, 640]}, fps 30
+
+Resolving data files:   0%|          | 0/3576 [00:00<?, ?it/s][AResolving data files: 100%|██████████| 3576/3576 [00:00<00:00, 29577.66it/s]
+
+Resolving data files:   0%|          | 0/3576 [00:00<?, ?it/s][AResolving data files: 100%|██████████| 3576/3576 [00:00<00:00, 26102.72it/s]
+[02:07:32] real: {"episodes": 32246, "frames": 76046658, "episode_length_median": 2076.0, "per_camera": {"right": {"video_files": 1607, "frames_per_file_median": 51819.0, "mean": 47322.1269446173, "p10": 12530.400000000001, "p90": 72820.0, "max": 129920}, "left": {"video_files": 1765, "frames_per_file_median": 46748.0, "mean": 43085.92521246459, "p10": 11781.4, "p90": 64948.000000000015, "max": 136686}, "top": {"video_files": 2488, "frames_per_file_median": 32496.5, "mean": 30565.3770096463, "p10": 12143.5, "p90": 43340.4, "max": 60205}}, "video_files_total": 5860, "video_files_per_camera": {"right": 1607, "le
+[02:07:32] slice: 16 episodes, 31115 frames (cap 60000, applied False); real median frames/file 38615
+[02:07:37] downloaded 3 source files, 772 MB in 5.3s
+[02:07:39] encoder defaults: {'repr': "VideoEncoderConfig(vcodec='libsvtav1', pix_fmt='yuv420p', g=2, crf=30, preset=12, fast_decode=0, video_backend='pyav', extra_options={})", 'vcodec': 'libsvtav1', 'pix_fmt': 'yuv420p', 'g': 2, 'crf': 30, 'preset': 12, 'fast_decode': 0, 'codec_options': {'g': '2', 'crf': '30', 'preset': '12', 'svtav1-params': 'fast-decode=0'}}

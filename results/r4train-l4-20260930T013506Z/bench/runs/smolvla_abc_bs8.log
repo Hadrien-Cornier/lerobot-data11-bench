@@ -1,0 +1,140 @@
+WARNING:lerobot.utils.import_utils:Could not load libtorchcodec. Likely causes:
+          1. FFmpeg is not properly installed in your environment. We support
+             versions 4, 5, 6, 7, and 8, and we attempt to load libtorchcodec
+             for each of those versions. Errors for versions not installed on
+             your system are expected; only the error for your installed FFmpeg
+             version is relevant. On Windows, ensure you've installed the
+             "full-shared" version which ships DLLs.
+          2. The PyTorch version (2.11.0+cu128) is not compatible with
+             this version of TorchCodec. Refer to the version compatibility
+             table:
+             https://github.com/pytorch/torchcodec?tab=readme-ov-file#installing-torchcodec.
+          3. Another runtime dependency; see exceptions below.
+
+        The following exceptions were raised as we tried to load libtorchcodec:
+        
+[start of libtorchcodec loading traceback]
+FFmpeg version 8:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/dist-packages/torch/_ops.py", line 1503, in load_library
+    ctypes.CDLL(path)
+  File "/usr/lib/python3.12/ctypes/__init__.py", line 379, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: libavutil.so.60: cannot open shared object file: No such file or directory
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/dist-packages/torchcodec/_internally_replaced_utils.py", line 93, in load_torchcodec_shared_libraries
+    torch.ops.load_library(core_library_path)
+  File "/usr/local/lib/python3.12/dist-packages/torch/_ops.py", line 1505, in load_library
+    raise OSError(f"Could not load this library: {path}") from e
+OSError: Could not load this library: /usr/local/lib/python3.12/dist-packages/torchcodec/libtorchcodec_core8.so
+
+FFmpeg version 7:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/dist-packages/torch/_ops.py", line 1503, in load_library
+    ctypes.CDLL(path)
+  File "/usr/lib/python3.12/ctypes/__init__.py", line 379, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: libavutil.so.59: cannot open shared object file: No such file or directory
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/dist-packages/torchcodec/_internally_replaced_utils.py", line 93, in load_torchcodec_shared_libraries
+    torch.ops.load_library(core_library_path)
+  File "/usr/local/lib/python3.12/dist-packages/torch/_ops.py", line 1505, in load_library
+    raise OSError(f"Could not load this library: {path}") from e
+OSError: Could not load this library: /usr/local/lib/python3.12/dist-packages/torchcodec/libtorchcodec_core7.so
+
+FFmpeg version 6:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/dist-packages/torch/_ops.py", line 1503, in load_library
+    ctypes.CDLL(path)
+  File "/usr/lib/python3.12/ctypes/__init__.py", line 379, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: libavutil.so.58: cannot open shared object file: No such file or directory
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/dist-packages/torchcodec/_internally_replaced_utils.py", line 93, in load_torchcodec_shared_libraries
+    torch.ops.load_library(core_library_path)
+  File "/usr/local/lib/python3.12/dist-packages/torch/_ops.py", line 1505, in load_library
+    raise OSError(f"Could not load this library: {path}") from e
+OSError: Could not load this library: /usr/local/lib/python3.12/dist-packages/torchcodec/libtorchcodec_core6.so
+
+FFmpeg version 5:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/dist-packages/torch/_ops.py", line 1503, in load_library
+    ctypes.CDLL(path)
+  File "/usr/lib/python3.12/ctypes/__init__.py", line 379, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: libavutil.so.57: cannot open shared object file: No such file or directory
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/dist-packages/torchcodec/_internally_replaced_utils.py", line 93, in load_torchcodec_shared_libraries
+    torch.ops.load_library(core_library_path)
+  File "/usr/local/lib/python3.12/dist-packages/torch/_ops.py", line 1505, in load_library
+    raise OSError(f"Could not load this library: {path}") from e
+OSError: Could not load this library: /usr/local/lib/python3.12/dist-packages/torchcodec/libtorchcodec_core5.so
+
+FFmpeg version 4:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/dist-packages/torch/_ops.py", line 1503, in load_library
+    ctypes.CDLL(path)
+  File "/usr/lib/python3.12/ctypes/__init__.py", line 379, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: libavutil.so.56: cannot open shared object file: No such file or directory
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/dist-packages/torchcodec/_internally_replaced_utils.py", line 93, in load_torchcodec_shared_libraries
+    torch.ops.load_library(core_library_path)
+  File "/usr/local/lib/python3.12/dist-packages/torch/_ops.py", line 1505, in load_library
+    raise OSError(f"Could not load this library: {path}") from e
+OSError: Could not load this library: /usr/local/lib/python3.12/dist-packages/torchcodec/libtorchcodec_core4.so
+[end of libtorchcodec loading traceback].
+'torchcodec' is installed but cannot be loaded (see the error above). Falling back to 'pyav' as a default decoder.
+Loading  HuggingFaceTB/SmolVLM2-500M-Video-Instruct weights ...
+
+config.json:   0%|          | 0.00/3.77k [00:00<?, ?B/s][Aconfig.json: 100%|██████████| 3.77k/3.77k [00:00<00:00, 28.6MB/s]
+`torch_dtype` is deprecated! Use `dtype` instead!
+
+model.safetensors: reconstructing file:   0%|          |  0.00B / 2.03GB            [Amodel.safetensors: downloading bytes:           |  0.00B            model.safetensors: downloading bytes: █▏        |  229MB, 17.9MB/s  
+model.safetensors: reconstructing file:  15%|█▍        |  304MB / 2.03GB, 25.1MB/s  [Amodel.safetensors: downloading bytes: ███▎      |  685MB, 58.5MB/s  
+model.safetensors: reconstructing file:  69%|██████▉   | 1.40GB / 2.03GB, 80.3MB/s  [Amodel.safetensors: downloading bytes: ██████████|  908MB, 78.7MB/s  model.safetensors: downloading bytes: ██████████|  908MB, 78.7MB/s  
+model.safetensors: reconstructing file: 100%|██████████| 2.03GB / 2.03GB,  180MB/s  
+
+Loading weights:   0%|          | 0/489 [00:00<?, ?it/s][ALoading weights: 100%|██████████| 489/489 [00:00<00:00, 3456.87it/s]
+
+generation_config.json:   0%|          | 0.00/136 [00:00<?, ?B/s][Ageneration_config.json: 100%|██████████| 136/136 [00:00<00:00, 1.00MB/s]
+
+processor_config.json:   0%|          | 0.00/67.0 [00:00<?, ?B/s][Aprocessor_config.json: 100%|██████████| 67.0/67.0 [00:00<00:00, 426kB/s]
+
+chat_template.json:   0%|          | 0.00/430 [00:00<?, ?B/s][Achat_template.json: 100%|██████████| 430/430 [00:00<00:00, 1.52MB/s]
+
+preprocessor_config.json:   0%|          | 0.00/599 [00:00<?, ?B/s][Apreprocessor_config.json: 100%|██████████| 599/599 [00:00<00:00, 2.73MB/s]
+
+tokenizer_config.json:   0%|          | 0.00/28.6k [00:00<?, ?B/s][Atokenizer_config.json: 100%|██████████| 28.6k/28.6k [00:00<00:00, 111MB/s]
+
+vocab.json:   0%|          | 0.00/801k [00:00<?, ?B/s][Avocab.json: 100%|██████████| 801k/801k [00:00<00:00, 33.6MB/s]
+
+merges.txt:   0%|          | 0.00/466k [00:00<?, ?B/s][Amerges.txt: 100%|██████████| 466k/466k [00:00<00:00, 158MB/s]
+
+added_tokens.json:   0%|          | 0.00/4.74k [00:00<?, ?B/s][Aadded_tokens.json: 100%|██████████| 4.74k/4.74k [00:00<00:00, 12.6MB/s]
+
+special_tokens_map.json:   0%|          | 0.00/868 [00:00<?, ?B/s][Aspecial_tokens_map.json: 100%|██████████| 868/868 [00:00<00:00, 2.86MB/s]
+
+tokenizer.json:   0%|          | 0.00/3.55M [00:00<?, ?B/s][Atokenizer.json: 100%|██████████| 3.55M/3.55M [00:00<00:00, 49.6MB/s]
+Reducing the number of VLM layers to 16 ...
+RESULT {"policy": "smolvla", "setup": "abc", "batch_size": 8, "status": "ok", "samples_per_s": 25.308402818667048, "error": null}

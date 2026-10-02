@@ -1,0 +1,65 @@
+[encode 1/18 60s] {'group': 'ckpt_5k_g001', 'family': 'ckpt_5k', 'frames': 5105, 'encode_s': 58.46, 'pid': 3083}
+[encode 2/18 60s] {'group': 'ckpt_5k_g000', 'family': 'ckpt_5k', 'frames': 5273, 'encode_s': 59.26, 'pid': 3084}
+[encode 3/18 87s] {'group': 'thrash_g000', 'family': 'thrash', 'frames': 2280, 'encode_s': 26.75, 'pid': 3084}
+[encode 4/18 113s] {'group': 'thrash_g008', 'family': 'thrash', 'frames': 2266, 'encode_s': 25.66, 'pid': 3084}
+[encode 5/18 115s] {'group': 'ckpt_5k_g002', 'family': 'ckpt_5k', 'frames': 5091, 'encode_s': 55.71, 'pid': 3083}
+[encode 6/18 138s] {'group': 'thrash_g006', 'family': 'thrash', 'frames': 2256, 'encode_s': 24.71, 'pid': 3084}
+[encode 7/18 141s] {'group': 'thrash_g001', 'family': 'thrash', 'frames': 2155, 'encode_s': 24.87, 'pid': 3083}
+[encode 8/18 161s] {'group': 'thrash_g010', 'family': 'thrash', 'frames': 2103, 'encode_s': 22.46, 'pid': 3084}
+[encode 9/18 165s] {'group': 'thrash_g003', 'family': 'thrash', 'frames': 2043, 'encode_s': 23.57, 'pid': 3083}
+[encode 10/18 186s] {'group': 'thrash_g002', 'family': 'thrash', 'frames': 2018, 'encode_s': 24.61, 'pid': 3084}
+[encode 11/18 190s] {'group': 'thrash_g005', 'family': 'thrash', 'frames': 1988, 'encode_s': 25.0, 'pid': 3083}
+[encode 12/18 209s] {'group': 'thrash_g004', 'family': 'thrash', 'frames': 1969, 'encode_s': 22.4, 'pid': 3084}
+[encode 13/18 214s] {'group': 'thrash_g011', 'family': 'thrash', 'frames': 1964, 'encode_s': 23.42, 'pid': 3083}
+[encode 14/18 230s] {'group': 'thrash_g009', 'family': 'thrash', 'frames': 1919, 'encode_s': 21.57, 'pid': 3084}
+[encode 15/18 235s] {'group': 'thrash_g007', 'family': 'thrash', 'frames': 1873, 'encode_s': 20.79, 'pid': 3083}
+[encode 16/18 244s] {'group': 'ckpt_1k_g002', 'family': 'ckpt_1k', 'frames': 1011, 'encode_s': 12.09, 'pid': 11953}
+[encode 17/18 245s] {'group': 'ckpt_1k_g001', 'family': 'ckpt_1k', 'frames': 987, 'encode_s': 10.29, 'pid': 3083}
+[encode 18/18 250s] {'group': 'ckpt_1k_g000', 'family': 'ckpt_1k', 'frames': 904, 'encode_s': 5.79, 'pid': 11953}
+{
+ "encoder": {
+  "vcodec": "libsvtav1",
+  "options": {
+   "g": "2",
+   "crf": "30",
+   "preset": "12",
+   "svtav1-params": "fast-decode=0"
+  },
+  "pix_fmt": "yuv420p",
+  "input": "rgb24 ndarray, pts=i, time_base=1/fps"
+ },
+ "svt_reported": {
+  "mapped": [
+   "Preset M12 is mapped to M10."
+  ],
+  "version": [
+   "SVT-AV1 Encoder Lib v3.0.0"
+  ],
+  "pred_struct": [
+   "preset / tune / pred struct : 10 / PSNR / random access"
+  ],
+  "lp": [
+   "Level of Parallelism: 6"
+  ]
+ },
+ "enc_procs": 2,
+ "wall_s": 250.2,
+ "groups": 18,
+ "frames_per_camera": 43205,
+ "camera_frame_sets_per_s": 172.7,
+ "pyav": "15.1.0",
+ "pyav_ffmpeg": {
+  "libavutil": "59.39.100",
+  "libavcodec": "61.19.101",
+  "libavformat": "61.7.100",
+  "libavdevice": "61.3.100",
+  "libavfilter": "10.4.100",
+  "libswscale": "8.3.100",
+  "libswresample": "5.3.100"
+ },
+ "stack_order_top_to_bottom": [
+  "top",
+  "left_wrist",
+  "right_wrist"
+ ]
+}

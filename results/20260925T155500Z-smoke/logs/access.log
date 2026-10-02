@@ -1,0 +1,39 @@
+[9s] SEP|seq|fs5M|-|cold r0: 0.59 sps, fetch/smp 6.00, res/smp 6.00, 31.855 MB/smp (dec 0.843), p50 1646 ms, open 819 ms/smp, fallback/smp 0.00, check {'checked': 2, 'mismatch': 0}, HTTP MB so far 165
+[14s] SEP|seq|fs5M|-|warm r0: 2.01 sps, fetch/smp 2.00, res/smp 2.00, 10.618 MB/smp (dec 0.197), p50 514 ms, open 0 ms/smp, fallback/smp 0.00, check {'checked': 2, 'mismatch': 0}, HTTP MB so far 292
+[16s] SEP|par|rc256K|-|cold r0: 3.21 sps, fetch/smp 6.00, res/smp 0.00, 1.966 MB/smp (dec 0.843), p50 336 ms, open 313 ms/smp, fallback/smp 0.00, check {'checked': 2, 'mismatch': 0}, HTTP MB so far 302
+[18s] SEP|par|rc256K|-|warm r0: 7.28 sps, fetch/smp 3.00, res/smp 0.00, 0.983 MB/smp (dec 0.197), p50 123 ms, open 0 ms/smp, fallback/smp 0.00, check {'checked': 2, 'mismatch': 0}, HTTP MB so far 312
+[21s] STACK|-|exact|-|cold r0: 2.15 sps, fetch/smp 2.00, res/smp 0.00, 0.497 MB/smp (dec 0.282), p50 490 ms, open 231 ms/smp, fallback/smp 0.00, check {'checked': 2, 'mismatch': 0}, HTTP MB so far 314
+[22s] STACK|-|exact|-|warm r0: 5.42 sps, fetch/smp 1.00, res/smp 0.00, 0.081 MB/smp (dec 0.066), p50 118 ms, open 0 ms/smp, fallback/smp 0.00, check {'checked': 2, 'mismatch': 0}, HTTP MB so far 316
+[29s] MULTI|seq|fs256K|naive|cold r0: 0.76 sps, fetch/smp 12.00, res/smp 12.00, 3.757 MB/smp (dec 2.569), p50 1382 ms, open 858 ms/smp, fallback/smp 0.00, check {'checked': 2, 'mismatch': 0}, HTTP MB so far 335
+[34s] MULTI|seq|fs256K|naive|warm r0: 2.79 sps, fetch/smp 3.00, res/smp 3.00, 0.985 MB/smp (dec 0.197), p50 323 ms, open 0 ms/smp, fallback/smp 0.00, check {'checked': 2, 'mismatch': 0}, HTTP MB so far 350
+[34s] MULTI|par|fs5M|shared|cold r0: ERROR TypeError: unsupported operand type(s) for -: 'NoneType' and 'int'
+[34s] MULTI|par|fs5M|shared|warm r0: ERROR TypeError: unsupported operand type(s) for -: 'NoneType' and 'int'
+[36s] MULTI|par|exact|shared|cold r0: 2.78 sps, fetch/smp 2.00, res/smp 0.00, 1.101 MB/smp (dec 2.569), p50 367 ms, open 163 ms/smp, fallback/smp 0.00, check {'checked': 2, 'mismatch': 0}, HTTP MB so far 356
+[37s] MULTI|par|exact|shared|warm r0: 13.54 sps, fetch/smp 1.00, res/smp 0.00, 0.093 MB/smp (dec 0.197), p50 61 ms, open 0 ms/smp, fallback/smp 0.00, check {'checked': 2, 'mismatch': 0}, HTTP MB so far 359
+[87s] conc8 STACK|-|exact|-|warm: 104.3 sps, 103.9 fetch/s, 0.0 resolves/s, 9 MB/s, p50 65 ms, 429 0
+[118s] conc8 MULTI|par|exact|shared|cold: 31.5 sps, 62.9 fetch/s, 0.0 resolves/s, 35 MB/s, p50 223 ms, 429 0
+# DATA-11 round 2: random access over hf:// (family ckpt_full, 3 cameras per sample)
+
+Repo `hadriencornier/lerobot-data11-bench@a3d31680db`. sps = samples/s, one reader. fetch = one HTTP request that moves video bytes (CDN). fs* readers also pay 1 resolve per fetch; rc / exact resolve once per file (untimed, shown in `presigned`: 15 resolves for 15 files).
+
+| regime | layout | cams | reader | mode | sps | +-CI | p50 ms | p95 ms | fetch/smp | resolve/smp | API/smp | MB/smp | dec MB/smp | open ms/smp | fallback/smp |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| cold | MULTI | par | exact | shared | 2.78 | - | 367 | 476 | 2.00 | 0.00 | 0.00 | 1.101 | 2.569 | 163 | 0.00 |
+| cold | MULTI | seq | fs256K | naive | 0.76 | - | 1382 | 1460 | 12.00 | 12.00 | 0.00 | 3.757 | 2.569 | 858 | 0.00 |
+| cold | SEP | par | rc256K | - | 3.21 | - | 336 | 367 | 6.00 | 0.00 | 0.00 | 1.966 | 0.843 | 313 | 0.00 |
+| cold | SEP | seq | fs5M | - | 0.59 | - | 1646 | 2074 | 6.00 | 6.00 | 0.00 | 31.855 | 0.843 | 819 | 0.00 |
+| cold | STACK | - | exact | - | 2.15 | - | 490 | 590 | 2.00 | 0.00 | 0.00 | 0.497 | 0.282 | 231 | 0.00 |
+| warm | MULTI | par | exact | shared | 13.54 | - | 61 | 115 | 1.00 | 0.00 | 0.00 | 0.093 | 0.197 | 0 | 0.00 |
+| warm | MULTI | seq | fs256K | naive | 2.79 | - | 323 | 525 | 3.00 | 3.00 | 0.00 | 0.985 | 0.197 | 0 | 0.00 |
+| warm | SEP | par | rc256K | - | 7.28 | - | 123 | 227 | 3.00 | 0.00 | 0.00 | 0.983 | 0.197 | 0 | 0.00 |
+| warm | SEP | seq | fs5M | - | 2.01 | - | 514 | 1047 | 2.00 | 2.00 | 0.00 | 10.618 | 0.197 | 0 | 0.00 |
+| warm | STACK | - | exact | - | 5.42 | - | 118 | 384 | 1.00 | 0.00 | 0.00 | 0.081 | 0.066 | 0 | 0.00 |
+
+## 8 concurrent reader processes
+
+| config | sps total | fetch/s | resolves/s | MB/s | p50 ms | p95 ms | 429 | other err |
+|---|---|---|---|---|---|---|---|---|
+| STACK|-|exact|-|warm | 104.3 | 103.9 | 0.0 | 8.6 | 65 | 133 | 0 | 0 |
+| MULTI|par|exact|shared|cold | 31.5 | 62.9 | 0.0 | 34.6 | 223 | 434 | 0 | 0 |
+
+Checks: remote == local decode (bit-exact) 20/20; pts violations > 1e-4 s: 0; skipped arms 0; 429 total 0.

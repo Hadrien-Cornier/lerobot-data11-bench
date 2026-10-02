@@ -1,0 +1,7 @@
+utc	stage	cgroup_current_mb	cgroup_peak_mb
+16:10:25	stream_rep0	6107	6398
+16:14:56	stream_rep1	6259	6715
+16:19:35	stream_rep2	6411	6745
+16:38:29	access_rep0	5102	17297
+16:45:03	access_rep1	5109	17297
+16:51:12	access_rep2	5121	17297

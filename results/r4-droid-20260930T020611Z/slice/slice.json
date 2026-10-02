@@ -1,0 +1,4418 @@
+{
+ "dataset": "droid",
+ "repo": "lerobot/droid_1.0.1",
+ "revision": "0eabc778f959c54b8c5aa3626cc1128d2d2e54d4",
+ "pinned_sha": "0eabc778f959c54b8c5aa3626cc1128d2d2e54d4",
+ "main_sha_now": "0eabc778f959c54b8c5aa3626cc1128d2d2e54d4",
+ "main_moved": false,
+ "private": false,
+ "max_frames_cap": 60000,
+ "smoke": false,
+ "cams": [
+  "wrist_left",
+  "exterior_1_left",
+  "exterior_2_left"
+ ],
+ "video_keys": [
+  "observation.images.wrist_left",
+  "observation.images.exterior_1_left",
+  "observation.images.exterior_2_left"
+ ],
+ "shapes": {
+  "wrist_left": [
+   180,
+   320
+  ],
+  "exterior_1_left": [
+   180,
+   320
+  ],
+  "exterior_2_left": [
+   180,
+   320
+  ]
+ },
+ "fps": 15,
+ "state_dim": 8,
+ "action_dim": 8,
+ "robot_type": "Franka",
+ "source_info": {
+  "codebase_version": "v3.0",
+  "total_episodes": 95658,
+  "total_frames": 27630375,
+  "data_files_size_in_mb": 100,
+  "video_files_size_in_mb": 500,
+  "chunks_size": 1000
+ },
+ "source_video_info": {
+  "wrist_left": {
+   "video.height": 180,
+   "video.width": 320,
+   "video.codec": "av1",
+   "video.pix_fmt": "yuv420p",
+   "video.is_depth_map": false,
+   "video.fps": 15,
+   "video.channels": 3,
+   "has_audio": false
+  },
+  "exterior_1_left": {
+   "video.height": 180,
+   "video.width": 320,
+   "video.codec": "av1",
+   "video.pix_fmt": "yuv420p",
+   "video.is_depth_map": false,
+   "video.fps": 15,
+   "video.channels": 3,
+   "has_audio": false
+  },
+  "exterior_2_left": {
+   "video.height": 180,
+   "video.width": 320,
+   "video.codec": "av1",
+   "video.pix_fmt": "yuv420p",
+   "video.is_depth_map": false,
+   "video.fps": 15,
+   "video.channels": 3,
+   "has_audio": false
+  }
+ },
+ "stack_layout": {
+  "order": [
+   "wrist_left",
+   "exterior_1_left",
+   "exterior_2_left"
+  ],
+  "height": 540,
+  "width": 320,
+  "crops": {
+   "wrist_left": [
+    0,
+    180,
+    320
+   ],
+   "exterior_1_left": [
+    180,
+    180,
+    320
+   ],
+   "exterior_2_left": [
+    360,
+    180,
+    320
+   ]
+  },
+  "odd_height_pad_rows": {
+   "wrist_left": 0,
+   "exterior_1_left": 0,
+   "exterior_2_left": 0
+  },
+  "pad_pixels_per_frame": 0,
+  "pad_pixel_share": 0.0,
+  "pad_raw_rgb_bytes_per_frame": 0
+ },
+ "episodes_meta_read": {
+  "files": 7,
+  "s": 5.3
+ },
+ "real": {
+  "episodes": 95658,
+  "frames": 27630375,
+  "episode_length_median": 221.5,
+  "per_camera": {
+   "wrist_left": {
+    "video_files": 183,
+    "frames_per_file_median": 150750.0,
+    "mean": 150985.65573770492,
+    "p10": 145503.0,
+    "p90": 158111.4,
+    "max": 163436
+   },
+   "exterior_1_left": {
+    "video_files": 302,
+    "frames_per_file_median": 92179.5,
+    "mean": 91491.30794701987,
+    "p10": 84611.4,
+    "p90": 96704.5,
+    "max": 99892
+   },
+   "exterior_2_left": {
+    "video_files": 299,
+    "frames_per_file_median": 92998.0,
+    "mean": 92409.28093645484,
+    "p10": 86683.4,
+    "p90": 97408.0,
+    "max": 103196
+   }
+  },
+  "video_files_total": 784,
+  "video_files_per_camera": {
+   "wrist_left": 183,
+   "exterior_1_left": 302,
+   "exterior_2_left": 299
+  },
+  "frames_per_file_median_all_cameras": 94102.0,
+  "parquet_data_files_from_episodes": 86,
+  "parquet_data_files_in_repo": 156,
+  "hf_streaming_num_shards": 156,
+  "hf_streaming_num_shards_s": 1.8
+ },
+ "slice": {
+  "episodes": [
+   {
+    "episode": 0,
+    "length": 167,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 0.0,
+      "to_timestamp": 11.133333333333333
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 0.0,
+      "to_timestamp": 11.133333333333333
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 0.0,
+      "to_timestamp": 11.133333333333333
+     }
+    }
+   },
+   {
+    "episode": 1,
+    "length": 266,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 11.133333333333333,
+      "to_timestamp": 28.866666666666667
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 11.133333333333333,
+      "to_timestamp": 28.866666666666667
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 11.133333333333333,
+      "to_timestamp": 28.866666666666667
+     }
+    }
+   },
+   {
+    "episode": 2,
+    "length": 411,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 28.866666666666667,
+      "to_timestamp": 56.266666666666666
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 28.866666666666667,
+      "to_timestamp": 56.266666666666666
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 28.866666666666667,
+      "to_timestamp": 56.266666666666666
+     }
+    }
+   },
+   {
+    "episode": 3,
+    "length": 239,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 56.266666666666666,
+      "to_timestamp": 72.2
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 56.266666666666666,
+      "to_timestamp": 72.2
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 56.266666666666666,
+      "to_timestamp": 72.2
+     }
+    }
+   },
+   {
+    "episode": 4,
+    "length": 370,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 72.2,
+      "to_timestamp": 96.86666666666667
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 72.2,
+      "to_timestamp": 96.86666666666667
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 72.2,
+      "to_timestamp": 96.86666666666667
+     }
+    }
+   },
+   {
+    "episode": 5,
+    "length": 184,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 96.86666666666667,
+      "to_timestamp": 109.13333333333334
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 96.86666666666667,
+      "to_timestamp": 109.13333333333334
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 96.86666666666667,
+      "to_timestamp": 109.13333333333334
+     }
+    }
+   },
+   {
+    "episode": 6,
+    "length": 117,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 109.13333333333334,
+      "to_timestamp": 116.93333333333334
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 109.13333333333334,
+      "to_timestamp": 116.93333333333334
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 109.13333333333334,
+      "to_timestamp": 116.93333333333334
+     }
+    }
+   },
+   {
+    "episode": 7,
+    "length": 316,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 116.93333333333334,
+      "to_timestamp": 138.0
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 116.93333333333334,
+      "to_timestamp": 138.0
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 116.93333333333334,
+      "to_timestamp": 138.0
+     }
+    }
+   },
+   {
+    "episode": 8,
+    "length": 163,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 138.0,
+      "to_timestamp": 148.86666666666667
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 138.0,
+      "to_timestamp": 148.86666666666667
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 138.0,
+      "to_timestamp": 148.86666666666667
+     }
+    }
+   },
+   {
+    "episode": 9,
+    "length": 224,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 148.86666666666667,
+      "to_timestamp": 163.8
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 148.86666666666667,
+      "to_timestamp": 163.8
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 148.86666666666667,
+      "to_timestamp": 163.8
+     }
+    }
+   },
+   {
+    "episode": 10,
+    "length": 149,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 163.8,
+      "to_timestamp": 173.73333333333335
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 163.8,
+      "to_timestamp": 173.73333333333335
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 163.8,
+      "to_timestamp": 173.73333333333335
+     }
+    }
+   },
+   {
+    "episode": 11,
+    "length": 552,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 173.73333333333335,
+      "to_timestamp": 210.53333333333336
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 173.73333333333335,
+      "to_timestamp": 210.53333333333336
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 173.73333333333335,
+      "to_timestamp": 210.53333333333336
+     }
+    }
+   },
+   {
+    "episode": 12,
+    "length": 112,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 210.53333333333336,
+      "to_timestamp": 218.00000000000003
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 210.53333333333336,
+      "to_timestamp": 218.00000000000003
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 210.53333333333336,
+      "to_timestamp": 218.00000000000003
+     }
+    }
+   },
+   {
+    "episode": 13,
+    "length": 429,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 218.00000000000003,
+      "to_timestamp": 246.60000000000002
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 218.00000000000003,
+      "to_timestamp": 246.60000000000002
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 218.00000000000003,
+      "to_timestamp": 246.60000000000002
+     }
+    }
+   },
+   {
+    "episode": 14,
+    "length": 217,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 246.60000000000002,
+      "to_timestamp": 261.06666666666666
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 246.60000000000002,
+      "to_timestamp": 261.06666666666666
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 246.60000000000002,
+      "to_timestamp": 261.06666666666666
+     }
+    }
+   },
+   {
+    "episode": 15,
+    "length": 131,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 261.06666666666666,
+      "to_timestamp": 269.8
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 261.06666666666666,
+      "to_timestamp": 269.8
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 261.06666666666666,
+      "to_timestamp": 269.8
+     }
+    }
+   },
+   {
+    "episode": 16,
+    "length": 176,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 269.8,
+      "to_timestamp": 281.53333333333336
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 269.8,
+      "to_timestamp": 281.53333333333336
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 269.8,
+      "to_timestamp": 281.53333333333336
+     }
+    }
+   },
+   {
+    "episode": 17,
+    "length": 157,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 281.53333333333336,
+      "to_timestamp": 292.0
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 281.53333333333336,
+      "to_timestamp": 292.0
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 281.53333333333336,
+      "to_timestamp": 292.0
+     }
+    }
+   },
+   {
+    "episode": 18,
+    "length": 152,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 292.0,
+      "to_timestamp": 302.1333333333333
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 292.0,
+      "to_timestamp": 302.1333333333333
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 292.0,
+      "to_timestamp": 302.1333333333333
+     }
+    }
+   },
+   {
+    "episode": 19,
+    "length": 135,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 302.1333333333333,
+      "to_timestamp": 311.1333333333333
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 302.1333333333333,
+      "to_timestamp": 311.1333333333333
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 302.1333333333333,
+      "to_timestamp": 311.1333333333333
+     }
+    }
+   },
+   {
+    "episode": 20,
+    "length": 275,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 311.1333333333333,
+      "to_timestamp": 329.46666666666664
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 311.1333333333333,
+      "to_timestamp": 329.46666666666664
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 311.1333333333333,
+      "to_timestamp": 329.46666666666664
+     }
+    }
+   },
+   {
+    "episode": 21,
+    "length": 234,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 329.46666666666664,
+      "to_timestamp": 345.06666666666666
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 329.46666666666664,
+      "to_timestamp": 345.06666666666666
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 329.46666666666664,
+      "to_timestamp": 345.06666666666666
+     }
+    }
+   },
+   {
+    "episode": 22,
+    "length": 836,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 345.06666666666666,
+      "to_timestamp": 400.8
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 345.06666666666666,
+      "to_timestamp": 400.8
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 345.06666666666666,
+      "to_timestamp": 400.8
+     }
+    }
+   },
+   {
+    "episode": 23,
+    "length": 168,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 400.8,
+      "to_timestamp": 412.0
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 400.8,
+      "to_timestamp": 412.0
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 400.8,
+      "to_timestamp": 412.0
+     }
+    }
+   },
+   {
+    "episode": 24,
+    "length": 1254,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 412.0,
+      "to_timestamp": 495.6
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 412.0,
+      "to_timestamp": 495.6
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 412.0,
+      "to_timestamp": 495.6
+     }
+    }
+   },
+   {
+    "episode": 25,
+    "length": 222,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 495.6,
+      "to_timestamp": 510.40000000000003
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 495.6,
+      "to_timestamp": 510.40000000000003
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 495.6,
+      "to_timestamp": 510.40000000000003
+     }
+    }
+   },
+   {
+    "episode": 26,
+    "length": 274,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 510.40000000000003,
+      "to_timestamp": 528.6666666666667
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 510.40000000000003,
+      "to_timestamp": 528.6666666666667
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 510.40000000000003,
+      "to_timestamp": 528.6666666666667
+     }
+    }
+   },
+   {
+    "episode": 27,
+    "length": 296,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 528.6666666666667,
+      "to_timestamp": 548.4000000000001
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 528.6666666666667,
+      "to_timestamp": 548.4000000000001
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 528.6666666666667,
+      "to_timestamp": 548.4000000000001
+     }
+    }
+   },
+   {
+    "episode": 28,
+    "length": 208,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 548.4000000000001,
+      "to_timestamp": 562.2666666666668
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 548.4000000000001,
+      "to_timestamp": 562.2666666666668
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 548.4000000000001,
+      "to_timestamp": 562.2666666666668
+     }
+    }
+   },
+   {
+    "episode": 29,
+    "length": 229,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 562.2666666666668,
+      "to_timestamp": 577.5333333333334
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 562.2666666666668,
+      "to_timestamp": 577.5333333333334
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 562.2666666666668,
+      "to_timestamp": 577.5333333333334
+     }
+    }
+   },
+   {
+    "episode": 30,
+    "length": 101,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 577.5333333333334,
+      "to_timestamp": 584.2666666666668
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 577.5333333333334,
+      "to_timestamp": 584.2666666666668
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 577.5333333333334,
+      "to_timestamp": 584.2666666666668
+     }
+    }
+   },
+   {
+    "episode": 31,
+    "length": 711,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 584.2666666666668,
+      "to_timestamp": 631.6666666666667
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 584.2666666666668,
+      "to_timestamp": 631.6666666666667
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 584.2666666666668,
+      "to_timestamp": 631.6666666666667
+     }
+    }
+   },
+   {
+    "episode": 32,
+    "length": 113,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 631.6666666666667,
+      "to_timestamp": 639.2
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 631.6666666666667,
+      "to_timestamp": 639.2
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 631.6666666666667,
+      "to_timestamp": 639.2
+     }
+    }
+   },
+   {
+    "episode": 33,
+    "length": 1137,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 639.2,
+      "to_timestamp": 715.0
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 639.2,
+      "to_timestamp": 715.0
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 639.2,
+      "to_timestamp": 715.0
+     }
+    }
+   },
+   {
+    "episode": 34,
+    "length": 516,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 715.0,
+      "to_timestamp": 749.4
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 715.0,
+      "to_timestamp": 749.4
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 715.0,
+      "to_timestamp": 749.4
+     }
+    }
+   },
+   {
+    "episode": 35,
+    "length": 462,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 749.4,
+      "to_timestamp": 780.1999999999999
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 749.4,
+      "to_timestamp": 780.1999999999999
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 749.4,
+      "to_timestamp": 780.1999999999999
+     }
+    }
+   },
+   {
+    "episode": 36,
+    "length": 102,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 780.1999999999999,
+      "to_timestamp": 786.9999999999999
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 780.1999999999999,
+      "to_timestamp": 786.9999999999999
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 780.1999999999999,
+      "to_timestamp": 786.9999999999999
+     }
+    }
+   },
+   {
+    "episode": 37,
+    "length": 159,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 786.9999999999999,
+      "to_timestamp": 797.5999999999999
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 786.9999999999999,
+      "to_timestamp": 797.5999999999999
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 786.9999999999999,
+      "to_timestamp": 797.5999999999999
+     }
+    }
+   },
+   {
+    "episode": 38,
+    "length": 364,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 797.5999999999999,
+      "to_timestamp": 821.8666666666666
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 797.5999999999999,
+      "to_timestamp": 821.8666666666666
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 797.5999999999999,
+      "to_timestamp": 821.8666666666666
+     }
+    }
+   },
+   {
+    "episode": 39,
+    "length": 440,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 821.8666666666666,
+      "to_timestamp": 851.1999999999999
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 821.8666666666666,
+      "to_timestamp": 851.1999999999999
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 821.8666666666666,
+      "to_timestamp": 851.1999999999999
+     }
+    }
+   },
+   {
+    "episode": 40,
+    "length": 114,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 851.1999999999999,
+      "to_timestamp": 858.8
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 851.1999999999999,
+      "to_timestamp": 858.8
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 851.1999999999999,
+      "to_timestamp": 858.8
+     }
+    }
+   },
+   {
+    "episode": 41,
+    "length": 77,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 858.8,
+      "to_timestamp": 863.9333333333333
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 858.8,
+      "to_timestamp": 863.9333333333333
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 858.8,
+      "to_timestamp": 863.9333333333333
+     }
+    }
+   },
+   {
+    "episode": 42,
+    "length": 104,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 863.9333333333333,
+      "to_timestamp": 870.8666666666666
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 863.9333333333333,
+      "to_timestamp": 870.8666666666666
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 863.9333333333333,
+      "to_timestamp": 870.8666666666666
+     }
+    }
+   },
+   {
+    "episode": 43,
+    "length": 173,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 870.8666666666666,
+      "to_timestamp": 882.3999999999999
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 870.8666666666666,
+      "to_timestamp": 882.3999999999999
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 870.8666666666666,
+      "to_timestamp": 882.3999999999999
+     }
+    }
+   },
+   {
+    "episode": 44,
+    "length": 115,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 882.3999999999999,
+      "to_timestamp": 890.0666666666665
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 882.3999999999999,
+      "to_timestamp": 890.0666666666665
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 882.3999999999999,
+      "to_timestamp": 890.0666666666665
+     }
+    }
+   },
+   {
+    "episode": 45,
+    "length": 157,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 890.0666666666665,
+      "to_timestamp": 900.5333333333332
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 890.0666666666665,
+      "to_timestamp": 900.5333333333332
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 890.0666666666665,
+      "to_timestamp": 900.5333333333332
+     }
+    }
+   },
+   {
+    "episode": 46,
+    "length": 195,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 900.5333333333332,
+      "to_timestamp": 913.5333333333332
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 900.5333333333332,
+      "to_timestamp": 913.5333333333332
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 900.5333333333332,
+      "to_timestamp": 913.5333333333332
+     }
+    }
+   },
+   {
+    "episode": 47,
+    "length": 126,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 913.5333333333333,
+      "to_timestamp": 921.9333333333333
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 913.5333333333333,
+      "to_timestamp": 921.9333333333333
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 913.5333333333333,
+      "to_timestamp": 921.9333333333333
+     }
+    }
+   },
+   {
+    "episode": 48,
+    "length": 131,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 921.9333333333333,
+      "to_timestamp": 930.6666666666666
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 921.9333333333333,
+      "to_timestamp": 930.6666666666666
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 921.9333333333333,
+      "to_timestamp": 930.6666666666666
+     }
+    }
+   },
+   {
+    "episode": 49,
+    "length": 397,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 930.6666666666666,
+      "to_timestamp": 957.1333333333333
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 930.6666666666666,
+      "to_timestamp": 957.1333333333333
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 930.6666666666666,
+      "to_timestamp": 957.1333333333333
+     }
+    }
+   },
+   {
+    "episode": 50,
+    "length": 544,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 957.1333333333333,
+      "to_timestamp": 993.4
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 957.1333333333333,
+      "to_timestamp": 993.4
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 957.1333333333333,
+      "to_timestamp": 993.4
+     }
+    }
+   },
+   {
+    "episode": 51,
+    "length": 202,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 993.4,
+      "to_timestamp": 1006.8666666666667
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 993.4,
+      "to_timestamp": 1006.8666666666667
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 993.4,
+      "to_timestamp": 1006.8666666666667
+     }
+    }
+   },
+   {
+    "episode": 52,
+    "length": 293,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1006.8666666666667,
+      "to_timestamp": 1026.3999999999999
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1006.8666666666667,
+      "to_timestamp": 1026.3999999999999
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1006.8666666666667,
+      "to_timestamp": 1026.3999999999999
+     }
+    }
+   },
+   {
+    "episode": 53,
+    "length": 154,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1026.3999999999999,
+      "to_timestamp": 1036.6666666666665
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1026.3999999999999,
+      "to_timestamp": 1036.6666666666665
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1026.3999999999999,
+      "to_timestamp": 1036.6666666666665
+     }
+    }
+   },
+   {
+    "episode": 54,
+    "length": 90,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1036.6666666666665,
+      "to_timestamp": 1042.6666666666665
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1036.6666666666665,
+      "to_timestamp": 1042.6666666666665
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1036.6666666666665,
+      "to_timestamp": 1042.6666666666665
+     }
+    }
+   },
+   {
+    "episode": 55,
+    "length": 307,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1042.6666666666665,
+      "to_timestamp": 1063.1333333333332
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1042.6666666666665,
+      "to_timestamp": 1063.1333333333332
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1042.6666666666665,
+      "to_timestamp": 1063.1333333333332
+     }
+    }
+   },
+   {
+    "episode": 56,
+    "length": 213,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1063.1333333333332,
+      "to_timestamp": 1077.3333333333333
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1063.1333333333332,
+      "to_timestamp": 1077.3333333333333
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1063.1333333333332,
+      "to_timestamp": 1077.3333333333333
+     }
+    }
+   },
+   {
+    "episode": 57,
+    "length": 223,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1077.3333333333333,
+      "to_timestamp": 1092.2
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1077.3333333333333,
+      "to_timestamp": 1092.2
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1077.3333333333333,
+      "to_timestamp": 1092.2
+     }
+    }
+   },
+   {
+    "episode": 58,
+    "length": 123,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1092.2,
+      "to_timestamp": 1100.3999999999999
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1092.2,
+      "to_timestamp": 1100.3999999999999
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1092.2,
+      "to_timestamp": 1100.3999999999999
+     }
+    }
+   },
+   {
+    "episode": 59,
+    "length": 155,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1100.3999999999999,
+      "to_timestamp": 1110.7333333333333
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1100.3999999999999,
+      "to_timestamp": 1110.7333333333333
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1100.3999999999999,
+      "to_timestamp": 1110.7333333333333
+     }
+    }
+   },
+   {
+    "episode": 60,
+    "length": 179,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1110.7333333333333,
+      "to_timestamp": 1122.6666666666665
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1110.7333333333333,
+      "to_timestamp": 1122.6666666666665
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1110.7333333333333,
+      "to_timestamp": 1122.6666666666665
+     }
+    }
+   },
+   {
+    "episode": 61,
+    "length": 17,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1122.6666666666665,
+      "to_timestamp": 1123.8
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1122.6666666666665,
+      "to_timestamp": 1123.8
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1122.6666666666665,
+      "to_timestamp": 1123.8
+     }
+    }
+   },
+   {
+    "episode": 62,
+    "length": 200,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1123.8,
+      "to_timestamp": 1137.1333333333332
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1123.8,
+      "to_timestamp": 1137.1333333333332
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1123.8,
+      "to_timestamp": 1137.1333333333332
+     }
+    }
+   },
+   {
+    "episode": 63,
+    "length": 182,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1137.1333333333332,
+      "to_timestamp": 1149.2666666666667
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1137.1333333333332,
+      "to_timestamp": 1149.2666666666667
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1137.1333333333332,
+      "to_timestamp": 1149.2666666666667
+     }
+    }
+   },
+   {
+    "episode": 64,
+    "length": 237,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1149.2666666666667,
+      "to_timestamp": 1165.0666666666666
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1149.2666666666667,
+      "to_timestamp": 1165.0666666666666
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1149.2666666666667,
+      "to_timestamp": 1165.0666666666666
+     }
+    }
+   },
+   {
+    "episode": 65,
+    "length": 278,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1165.0666666666666,
+      "to_timestamp": 1183.6
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1165.0666666666666,
+      "to_timestamp": 1183.6
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1165.0666666666666,
+      "to_timestamp": 1183.6
+     }
+    }
+   },
+   {
+    "episode": 66,
+    "length": 269,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1183.6,
+      "to_timestamp": 1201.5333333333333
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1183.6,
+      "to_timestamp": 1201.5333333333333
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1183.6,
+      "to_timestamp": 1201.5333333333333
+     }
+    }
+   },
+   {
+    "episode": 67,
+    "length": 302,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1201.5333333333333,
+      "to_timestamp": 1221.6666666666665
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1201.5333333333333,
+      "to_timestamp": 1221.6666666666665
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1201.5333333333333,
+      "to_timestamp": 1221.6666666666665
+     }
+    }
+   },
+   {
+    "episode": 68,
+    "length": 157,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1221.6666666666665,
+      "to_timestamp": 1232.1333333333332
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1221.6666666666665,
+      "to_timestamp": 1232.1333333333332
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1221.6666666666665,
+      "to_timestamp": 1232.1333333333332
+     }
+    }
+   },
+   {
+    "episode": 69,
+    "length": 1271,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1232.1333333333332,
+      "to_timestamp": 1316.8666666666666
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1232.1333333333332,
+      "to_timestamp": 1316.8666666666666
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1232.1333333333332,
+      "to_timestamp": 1316.8666666666666
+     }
+    }
+   },
+   {
+    "episode": 70,
+    "length": 195,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1316.8666666666666,
+      "to_timestamp": 1329.8666666666666
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1316.8666666666666,
+      "to_timestamp": 1329.8666666666666
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1316.8666666666666,
+      "to_timestamp": 1329.8666666666666
+     }
+    }
+   },
+   {
+    "episode": 71,
+    "length": 172,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1329.8666666666666,
+      "to_timestamp": 1341.3333333333333
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1329.8666666666666,
+      "to_timestamp": 1341.3333333333333
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1329.8666666666666,
+      "to_timestamp": 1341.3333333333333
+     }
+    }
+   },
+   {
+    "episode": 72,
+    "length": 704,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1341.3333333333333,
+      "to_timestamp": 1388.2666666666667
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1341.3333333333333,
+      "to_timestamp": 1388.2666666666667
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1341.3333333333333,
+      "to_timestamp": 1388.2666666666667
+     }
+    }
+   },
+   {
+    "episode": 73,
+    "length": 376,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1388.2666666666667,
+      "to_timestamp": 1413.3333333333333
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1388.2666666666667,
+      "to_timestamp": 1413.3333333333333
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1388.2666666666667,
+      "to_timestamp": 1413.3333333333333
+     }
+    }
+   },
+   {
+    "episode": 74,
+    "length": 290,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1413.3333333333333,
+      "to_timestamp": 1432.6666666666665
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1413.3333333333333,
+      "to_timestamp": 1432.6666666666665
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1413.3333333333333,
+      "to_timestamp": 1432.6666666666665
+     }
+    }
+   },
+   {
+    "episode": 75,
+    "length": 375,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1432.6666666666665,
+      "to_timestamp": 1457.6666666666665
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1432.6666666666665,
+      "to_timestamp": 1457.6666666666665
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1432.6666666666665,
+      "to_timestamp": 1457.6666666666665
+     }
+    }
+   },
+   {
+    "episode": 76,
+    "length": 101,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1457.6666666666665,
+      "to_timestamp": 1464.4
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1457.6666666666665,
+      "to_timestamp": 1464.4
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1457.6666666666665,
+      "to_timestamp": 1464.4
+     }
+    }
+   },
+   {
+    "episode": 77,
+    "length": 167,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1464.4,
+      "to_timestamp": 1475.5333333333333
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1464.4,
+      "to_timestamp": 1475.5333333333333
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1464.4,
+      "to_timestamp": 1475.5333333333333
+     }
+    }
+   },
+   {
+    "episode": 78,
+    "length": 209,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1475.5333333333333,
+      "to_timestamp": 1489.4666666666667
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1475.5333333333333,
+      "to_timestamp": 1489.4666666666667
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1475.5333333333333,
+      "to_timestamp": 1489.4666666666667
+     }
+    }
+   },
+   {
+    "episode": 79,
+    "length": 158,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1489.4666666666667,
+      "to_timestamp": 1500.0
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1489.4666666666667,
+      "to_timestamp": 1500.0
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1489.4666666666667,
+      "to_timestamp": 1500.0
+     }
+    }
+   },
+   {
+    "episode": 80,
+    "length": 250,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1500.0,
+      "to_timestamp": 1516.6666666666665
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1500.0,
+      "to_timestamp": 1516.6666666666665
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1500.0,
+      "to_timestamp": 1516.6666666666665
+     }
+    }
+   },
+   {
+    "episode": 81,
+    "length": 878,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1516.6666666666665,
+      "to_timestamp": 1575.1999999999998
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1516.6666666666665,
+      "to_timestamp": 1575.1999999999998
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1516.6666666666665,
+      "to_timestamp": 1575.1999999999998
+     }
+    }
+   },
+   {
+    "episode": 82,
+    "length": 256,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1575.1999999999998,
+      "to_timestamp": 1592.2666666666664
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1575.1999999999998,
+      "to_timestamp": 1592.2666666666664
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1575.1999999999998,
+      "to_timestamp": 1592.2666666666664
+     }
+    }
+   },
+   {
+    "episode": 83,
+    "length": 160,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1592.2666666666664,
+      "to_timestamp": 1602.9333333333332
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1592.2666666666664,
+      "to_timestamp": 1602.9333333333332
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1592.2666666666664,
+      "to_timestamp": 1602.9333333333332
+     }
+    }
+   },
+   {
+    "episode": 84,
+    "length": 280,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1602.9333333333332,
+      "to_timestamp": 1621.6
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1602.9333333333332,
+      "to_timestamp": 1621.6
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1602.9333333333332,
+      "to_timestamp": 1621.6
+     }
+    }
+   },
+   {
+    "episode": 85,
+    "length": 192,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1621.6,
+      "to_timestamp": 1634.3999999999996
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1621.6,
+      "to_timestamp": 1634.3999999999996
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1621.6,
+      "to_timestamp": 1634.3999999999996
+     }
+    }
+   },
+   {
+    "episode": 86,
+    "length": 157,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1634.3999999999996,
+      "to_timestamp": 1644.8666666666663
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1634.3999999999996,
+      "to_timestamp": 1644.8666666666663
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1634.3999999999996,
+      "to_timestamp": 1644.8666666666663
+     }
+    }
+   },
+   {
+    "episode": 87,
+    "length": 204,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1644.8666666666663,
+      "to_timestamp": 1658.4666666666665
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1644.8666666666663,
+      "to_timestamp": 1658.4666666666665
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1644.8666666666663,
+      "to_timestamp": 1658.4666666666665
+     }
+    }
+   },
+   {
+    "episode": 88,
+    "length": 109,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1658.4666666666665,
+      "to_timestamp": 1665.7333333333331
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1658.4666666666665,
+      "to_timestamp": 1665.7333333333331
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1658.4666666666665,
+      "to_timestamp": 1665.7333333333331
+     }
+    }
+   },
+   {
+    "episode": 89,
+    "length": 153,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1665.7333333333331,
+      "to_timestamp": 1675.9333333333332
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1665.7333333333331,
+      "to_timestamp": 1675.9333333333332
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1665.7333333333331,
+      "to_timestamp": 1675.9333333333332
+     }
+    }
+   },
+   {
+    "episode": 90,
+    "length": 215,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1675.9333333333332,
+      "to_timestamp": 1690.2666666666664
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1675.9333333333332,
+      "to_timestamp": 1690.2666666666664
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1675.9333333333332,
+      "to_timestamp": 1690.2666666666664
+     }
+    }
+   },
+   {
+    "episode": 91,
+    "length": 359,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1690.2666666666664,
+      "to_timestamp": 1714.1999999999998
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1690.2666666666664,
+      "to_timestamp": 1714.1999999999998
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1690.2666666666664,
+      "to_timestamp": 1714.1999999999998
+     }
+    }
+   },
+   {
+    "episode": 92,
+    "length": 395,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1714.1999999999998,
+      "to_timestamp": 1740.5333333333333
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1714.1999999999998,
+      "to_timestamp": 1740.5333333333333
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1714.1999999999998,
+      "to_timestamp": 1740.5333333333333
+     }
+    }
+   },
+   {
+    "episode": 93,
+    "length": 314,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1740.5333333333333,
+      "to_timestamp": 1761.4666666666667
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1740.5333333333333,
+      "to_timestamp": 1761.4666666666667
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1740.5333333333333,
+      "to_timestamp": 1761.4666666666667
+     }
+    }
+   },
+   {
+    "episode": 94,
+    "length": 263,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1761.4666666666667,
+      "to_timestamp": 1779.0
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1761.4666666666667,
+      "to_timestamp": 1779.0
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1761.4666666666667,
+      "to_timestamp": 1779.0
+     }
+    }
+   },
+   {
+    "episode": 95,
+    "length": 291,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1779.0,
+      "to_timestamp": 1798.3999999999999
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1779.0,
+      "to_timestamp": 1798.3999999999999
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1779.0,
+      "to_timestamp": 1798.3999999999999
+     }
+    }
+   },
+   {
+    "episode": 96,
+    "length": 312,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1798.3999999999999,
+      "to_timestamp": 1819.2
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1798.3999999999999,
+      "to_timestamp": 1819.2
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1798.3999999999999,
+      "to_timestamp": 1819.2
+     }
+    }
+   },
+   {
+    "episode": 97,
+    "length": 352,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1819.2,
+      "to_timestamp": 1842.6666666666667
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1819.2,
+      "to_timestamp": 1842.6666666666667
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1819.2,
+      "to_timestamp": 1842.6666666666667
+     }
+    }
+   },
+   {
+    "episode": 98,
+    "length": 235,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1842.6666666666667,
+      "to_timestamp": 1858.3333333333333
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1842.6666666666667,
+      "to_timestamp": 1858.3333333333333
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1842.6666666666667,
+      "to_timestamp": 1858.3333333333333
+     }
+    }
+   },
+   {
+    "episode": 99,
+    "length": 110,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1858.3333333333333,
+      "to_timestamp": 1865.6666666666667
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1858.3333333333333,
+      "to_timestamp": 1865.6666666666667
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1858.3333333333333,
+      "to_timestamp": 1865.6666666666667
+     }
+    }
+   },
+   {
+    "episode": 100,
+    "length": 213,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1865.6666666666667,
+      "to_timestamp": 1879.8666666666666
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1865.6666666666667,
+      "to_timestamp": 1879.8666666666666
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1865.6666666666667,
+      "to_timestamp": 1879.8666666666666
+     }
+    }
+   },
+   {
+    "episode": 101,
+    "length": 380,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1879.8666666666666,
+      "to_timestamp": 1905.2
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1879.8666666666666,
+      "to_timestamp": 1905.2
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1879.8666666666666,
+      "to_timestamp": 1905.2
+     }
+    }
+   },
+   {
+    "episode": 102,
+    "length": 124,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1905.2,
+      "to_timestamp": 1913.4666666666667
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1905.2,
+      "to_timestamp": 1913.4666666666667
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1905.2,
+      "to_timestamp": 1913.4666666666667
+     }
+    }
+   },
+   {
+    "episode": 103,
+    "length": 294,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1913.4666666666667,
+      "to_timestamp": 1933.0666666666666
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1913.4666666666667,
+      "to_timestamp": 1933.0666666666666
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1913.4666666666667,
+      "to_timestamp": 1933.0666666666666
+     }
+    }
+   },
+   {
+    "episode": 104,
+    "length": 186,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1933.0666666666666,
+      "to_timestamp": 1945.4666666666667
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1933.0666666666666,
+      "to_timestamp": 1945.4666666666667
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1933.0666666666666,
+      "to_timestamp": 1945.4666666666667
+     }
+    }
+   },
+   {
+    "episode": 105,
+    "length": 368,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1945.4666666666667,
+      "to_timestamp": 1970.0
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1945.4666666666667,
+      "to_timestamp": 1970.0
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1945.4666666666667,
+      "to_timestamp": 1970.0
+     }
+    }
+   },
+   {
+    "episode": 106,
+    "length": 415,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1970.0,
+      "to_timestamp": 1997.6666666666667
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1970.0,
+      "to_timestamp": 1997.6666666666667
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1970.0,
+      "to_timestamp": 1997.6666666666667
+     }
+    }
+   },
+   {
+    "episode": 107,
+    "length": 641,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1997.6666666666667,
+      "to_timestamp": 2040.4
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1997.6666666666667,
+      "to_timestamp": 2040.4
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 1997.6666666666667,
+      "to_timestamp": 2040.4
+     }
+    }
+   },
+   {
+    "episode": 108,
+    "length": 224,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 2040.4,
+      "to_timestamp": 2055.3333333333335
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 2040.4,
+      "to_timestamp": 2055.3333333333335
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 2040.4,
+      "to_timestamp": 2055.3333333333335
+     }
+    }
+   },
+   {
+    "episode": 109,
+    "length": 434,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 2055.3333333333335,
+      "to_timestamp": 2084.266666666667
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 2055.3333333333335,
+      "to_timestamp": 2084.266666666667
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 2055.3333333333335,
+      "to_timestamp": 2084.266666666667
+     }
+    }
+   },
+   {
+    "episode": 110,
+    "length": 500,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 2084.266666666667,
+      "to_timestamp": 2117.6
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 2084.266666666667,
+      "to_timestamp": 2117.6
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 2084.266666666667,
+      "to_timestamp": 2117.6
+     }
+    }
+   },
+   {
+    "episode": 111,
+    "length": 482,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 2117.6,
+      "to_timestamp": 2149.7333333333336
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 2117.6,
+      "to_timestamp": 2149.7333333333336
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 2117.6,
+      "to_timestamp": 2149.7333333333336
+     }
+    }
+   },
+   {
+    "episode": 112,
+    "length": 102,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 2149.7333333333336,
+      "to_timestamp": 2156.5333333333333
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 2149.7333333333336,
+      "to_timestamp": 2156.5333333333333
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 2149.7333333333336,
+      "to_timestamp": 2156.5333333333333
+     }
+    }
+   },
+   {
+    "episode": 113,
+    "length": 128,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 2156.5333333333333,
+      "to_timestamp": 2165.0666666666666
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 2156.5333333333333,
+      "to_timestamp": 2165.0666666666666
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 2156.5333333333333,
+      "to_timestamp": 2165.0666666666666
+     }
+    }
+   },
+   {
+    "episode": 114,
+    "length": 193,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 2165.0666666666666,
+      "to_timestamp": 2177.9333333333334
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 2165.0666666666666,
+      "to_timestamp": 2177.9333333333334
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 2165.0666666666666,
+      "to_timestamp": 2177.9333333333334
+     }
+    }
+   },
+   {
+    "episode": 115,
+    "length": 110,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 2177.9333333333334,
+      "to_timestamp": 2185.266666666667
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 2177.9333333333334,
+      "to_timestamp": 2185.266666666667
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 2177.9333333333334,
+      "to_timestamp": 2185.266666666667
+     }
+    }
+   },
+   {
+    "episode": 116,
+    "length": 295,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 2185.266666666667,
+      "to_timestamp": 2204.9333333333334
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 2185.266666666667,
+      "to_timestamp": 2204.9333333333334
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 2185.266666666667,
+      "to_timestamp": 2204.9333333333334
+     }
+    }
+   },
+   {
+    "episode": 117,
+    "length": 276,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 2204.9333333333334,
+      "to_timestamp": 2223.3333333333335
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 2204.9333333333334,
+      "to_timestamp": 2223.3333333333335
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 2204.9333333333334,
+      "to_timestamp": 2223.3333333333335
+     }
+    }
+   },
+   {
+    "episode": 118,
+    "length": 99,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 2223.3333333333335,
+      "to_timestamp": 2229.9333333333334
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 2223.3333333333335,
+      "to_timestamp": 2229.9333333333334
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 2223.3333333333335,
+      "to_timestamp": 2229.9333333333334
+     }
+    }
+   },
+   {
+    "episode": 119,
+    "length": 287,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 2229.9333333333334,
+      "to_timestamp": 2249.0666666666666
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 2229.9333333333334,
+      "to_timestamp": 2249.0666666666666
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 2229.9333333333334,
+      "to_timestamp": 2249.0666666666666
+     }
+    }
+   },
+   {
+    "episode": 120,
+    "length": 312,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 2249.0666666666666,
+      "to_timestamp": 2269.866666666667
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 2249.0666666666666,
+      "to_timestamp": 2269.866666666667
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 2249.0666666666666,
+      "to_timestamp": 2269.866666666667
+     }
+    }
+   },
+   {
+    "episode": 121,
+    "length": 149,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 2269.866666666667,
+      "to_timestamp": 2279.8
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 2269.866666666667,
+      "to_timestamp": 2279.8
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 2269.866666666667,
+      "to_timestamp": 2279.8
+     }
+    }
+   },
+   {
+    "episode": 122,
+    "length": 411,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 2279.8,
+      "to_timestamp": 2307.2
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 2279.8,
+      "to_timestamp": 2307.2
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 2279.8,
+      "to_timestamp": 2307.2
+     }
+    }
+   },
+   {
+    "episode": 123,
+    "length": 144,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 2307.2,
+      "to_timestamp": 2316.8
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 2307.2,
+      "to_timestamp": 2316.8
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 2307.2,
+      "to_timestamp": 2316.8
+     }
+    }
+   },
+   {
+    "episode": 124,
+    "length": 508,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 2316.8,
+      "to_timestamp": 2350.6666666666665
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 2316.8,
+      "to_timestamp": 2350.6666666666665
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 2316.8,
+      "to_timestamp": 2350.6666666666665
+     }
+    }
+   },
+   {
+    "episode": 125,
+    "length": 215,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 2350.6666666666665,
+      "to_timestamp": 2365.0
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 2350.6666666666665,
+      "to_timestamp": 2365.0
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 2350.6666666666665,
+      "to_timestamp": 2365.0
+     }
+    }
+   },
+   {
+    "episode": 126,
+    "length": 206,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 2365.0,
+      "to_timestamp": 2378.7333333333336
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 2365.0,
+      "to_timestamp": 2378.7333333333336
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 2365.0,
+      "to_timestamp": 2378.7333333333336
+     }
+    }
+   },
+   {
+    "episode": 127,
+    "length": 561,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 2378.7333333333336,
+      "to_timestamp": 2416.133333333333
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 2378.7333333333336,
+      "to_timestamp": 2416.133333333333
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 2378.7333333333336,
+      "to_timestamp": 2416.133333333333
+     }
+    }
+   },
+   {
+    "episode": 128,
+    "length": 268,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 2416.133333333333,
+      "to_timestamp": 2434.0
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 2416.133333333333,
+      "to_timestamp": 2434.0
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 2416.133333333333,
+      "to_timestamp": 2434.0
+     }
+    }
+   },
+   {
+    "episode": 129,
+    "length": 768,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 2434.0,
+      "to_timestamp": 2485.2
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 2434.0,
+      "to_timestamp": 2485.2
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 2434.0,
+      "to_timestamp": 2485.2
+     }
+    }
+   },
+   {
+    "episode": 130,
+    "length": 156,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 2485.2,
+      "to_timestamp": 2495.6
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 2485.2,
+      "to_timestamp": 2495.6
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 2485.2,
+      "to_timestamp": 2495.6
+     }
+    }
+   },
+   {
+    "episode": 131,
+    "length": 205,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 2495.6,
+      "to_timestamp": 2509.2666666666664
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 2495.6,
+      "to_timestamp": 2509.2666666666664
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 2495.6,
+      "to_timestamp": 2509.2666666666664
+     }
+    }
+   },
+   {
+    "episode": 132,
+    "length": 241,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 2509.2666666666664,
+      "to_timestamp": 2525.3333333333335
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 2509.2666666666664,
+      "to_timestamp": 2525.3333333333335
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 2509.2666666666664,
+      "to_timestamp": 2525.3333333333335
+     }
+    }
+   },
+   {
+    "episode": 133,
+    "length": 468,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 2525.3333333333335,
+      "to_timestamp": 2556.5333333333333
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 2525.3333333333335,
+      "to_timestamp": 2556.5333333333333
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 2525.3333333333335,
+      "to_timestamp": 2556.5333333333333
+     }
+    }
+   },
+   {
+    "episode": 134,
+    "length": 175,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 2556.5333333333333,
+      "to_timestamp": 2568.2
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 2556.5333333333333,
+      "to_timestamp": 2568.2
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 2556.5333333333333,
+      "to_timestamp": 2568.2
+     }
+    }
+   },
+   {
+    "episode": 135,
+    "length": 174,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 2568.2,
+      "to_timestamp": 2579.8
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 2568.2,
+      "to_timestamp": 2579.8
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 2568.2,
+      "to_timestamp": 2579.8
+     }
+    }
+   },
+   {
+    "episode": 136,
+    "length": 559,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 2579.8,
+      "to_timestamp": 2617.0666666666666
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 2579.8,
+      "to_timestamp": 2617.0666666666666
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 2579.8,
+      "to_timestamp": 2617.0666666666666
+     }
+    }
+   },
+   {
+    "episode": 137,
+    "length": 81,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 2617.0666666666666,
+      "to_timestamp": 2622.4666666666667
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 2617.0666666666666,
+      "to_timestamp": 2622.4666666666667
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 2617.0666666666666,
+      "to_timestamp": 2622.4666666666667
+     }
+    }
+   },
+   {
+    "episode": 138,
+    "length": 208,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 2622.4666666666667,
+      "to_timestamp": 2636.3333333333335
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 2622.4666666666667,
+      "to_timestamp": 2636.3333333333335
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 2622.4666666666667,
+      "to_timestamp": 2636.3333333333335
+     }
+    }
+   },
+   {
+    "episode": 139,
+    "length": 370,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 2636.3333333333335,
+      "to_timestamp": 2661.0
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 2636.3333333333335,
+      "to_timestamp": 2661.0
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 2636.3333333333335,
+      "to_timestamp": 2661.0
+     }
+    }
+   },
+   {
+    "episode": 140,
+    "length": 717,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 2661.0,
+      "to_timestamp": 2708.8
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 2661.0,
+      "to_timestamp": 2708.8
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 2661.0,
+      "to_timestamp": 2708.8
+     }
+    }
+   },
+   {
+    "episode": 141,
+    "length": 544,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 2708.8,
+      "to_timestamp": 2745.0666666666666
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 2708.8,
+      "to_timestamp": 2745.0666666666666
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 2708.8,
+      "to_timestamp": 2745.0666666666666
+     }
+    }
+   },
+   {
+    "episode": 142,
+    "length": 195,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 2745.0666666666666,
+      "to_timestamp": 2758.0666666666666
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 2745.0666666666666,
+      "to_timestamp": 2758.0666666666666
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 2745.0666666666666,
+      "to_timestamp": 2758.0666666666666
+     }
+    }
+   },
+   {
+    "episode": 143,
+    "length": 989,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 2758.0666666666666,
+      "to_timestamp": 2824.0
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 2758.0666666666666,
+      "to_timestamp": 2824.0
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 2758.0666666666666,
+      "to_timestamp": 2824.0
+     }
+    }
+   },
+   {
+    "episode": 144,
+    "length": 400,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 2824.0,
+      "to_timestamp": 2850.6666666666665
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 2824.0,
+      "to_timestamp": 2850.6666666666665
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 2824.0,
+      "to_timestamp": 2850.6666666666665
+     }
+    }
+   },
+   {
+    "episode": 145,
+    "length": 100,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 2850.6666666666665,
+      "to_timestamp": 2857.3333333333335
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 2850.6666666666665,
+      "to_timestamp": 2857.3333333333335
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 2850.6666666666665,
+      "to_timestamp": 2857.3333333333335
+     }
+    }
+   },
+   {
+    "episode": 146,
+    "length": 143,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 2857.3333333333335,
+      "to_timestamp": 2866.866666666667
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 2857.3333333333335,
+      "to_timestamp": 2866.866666666667
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 2857.3333333333335,
+      "to_timestamp": 2866.866666666667
+     }
+    }
+   },
+   {
+    "episode": 147,
+    "length": 119,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 2866.866666666667,
+      "to_timestamp": 2874.8
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 2866.866666666667,
+      "to_timestamp": 2874.8
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 2866.866666666667,
+      "to_timestamp": 2874.8
+     }
+    }
+   },
+   {
+    "episode": 148,
+    "length": 555,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 2874.8,
+      "to_timestamp": 2911.8
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 2874.8,
+      "to_timestamp": 2911.8
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 2874.8,
+      "to_timestamp": 2911.8
+     }
+    }
+   },
+   {
+    "episode": 149,
+    "length": 853,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 2911.8,
+      "to_timestamp": 2968.6666666666665
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 2911.8,
+      "to_timestamp": 2968.6666666666665
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 2911.8,
+      "to_timestamp": 2968.6666666666665
+     }
+    }
+   },
+   {
+    "episode": 150,
+    "length": 131,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 2968.6666666666665,
+      "to_timestamp": 2977.4
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 2968.6666666666665,
+      "to_timestamp": 2977.4
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 2968.6666666666665,
+      "to_timestamp": 2977.4
+     }
+    }
+   },
+   {
+    "episode": 151,
+    "length": 497,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 2977.4,
+      "to_timestamp": 3010.5333333333333
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 2977.4,
+      "to_timestamp": 3010.5333333333333
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 2977.4,
+      "to_timestamp": 3010.5333333333333
+     }
+    }
+   },
+   {
+    "episode": 152,
+    "length": 130,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 3010.5333333333333,
+      "to_timestamp": 3019.2
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 3010.5333333333333,
+      "to_timestamp": 3019.2
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 3010.5333333333333,
+      "to_timestamp": 3019.2
+     }
+    }
+   },
+   {
+    "episode": 153,
+    "length": 97,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 3019.2,
+      "to_timestamp": 3025.6666666666665
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 3019.2,
+      "to_timestamp": 3025.6666666666665
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 3019.2,
+      "to_timestamp": 3025.6666666666665
+     }
+    }
+   },
+   {
+    "episode": 154,
+    "length": 415,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 3025.6666666666665,
+      "to_timestamp": 3053.3333333333335
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 3025.6666666666665,
+      "to_timestamp": 3053.3333333333335
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 3025.6666666666665,
+      "to_timestamp": 3053.3333333333335
+     }
+    }
+   },
+   {
+    "episode": 155,
+    "length": 210,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 3053.3333333333335,
+      "to_timestamp": 3067.3333333333335
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 3053.3333333333335,
+      "to_timestamp": 3067.3333333333335
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 3053.3333333333335,
+      "to_timestamp": 3067.3333333333335
+     }
+    }
+   },
+   {
+    "episode": 156,
+    "length": 657,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 3067.3333333333335,
+      "to_timestamp": 3111.133333333333
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 3067.3333333333335,
+      "to_timestamp": 3111.133333333333
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 3067.3333333333335,
+      "to_timestamp": 3111.133333333333
+     }
+    }
+   },
+   {
+    "episode": 157,
+    "length": 527,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 3111.133333333333,
+      "to_timestamp": 3146.2666666666664
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 3111.133333333333,
+      "to_timestamp": 3146.2666666666664
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 3111.133333333333,
+      "to_timestamp": 3146.2666666666664
+     }
+    }
+   },
+   {
+    "episode": 158,
+    "length": 351,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 3146.2666666666664,
+      "to_timestamp": 3169.6666666666665
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 3146.2666666666664,
+      "to_timestamp": 3169.6666666666665
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 3146.2666666666664,
+      "to_timestamp": 3169.6666666666665
+     }
+    }
+   },
+   {
+    "episode": 159,
+    "length": 477,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 3169.6666666666665,
+      "to_timestamp": 3201.4666666666667
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 3169.6666666666665,
+      "to_timestamp": 3201.4666666666667
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 3169.6666666666665,
+      "to_timestamp": 3201.4666666666667
+     }
+    }
+   },
+   {
+    "episode": 160,
+    "length": 295,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 3201.4666666666667,
+      "to_timestamp": 3221.133333333333
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 3201.4666666666667,
+      "to_timestamp": 3221.133333333333
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 3201.4666666666667,
+      "to_timestamp": 3221.133333333333
+     }
+    }
+   },
+   {
+    "episode": 161,
+    "length": 869,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 3221.133333333333,
+      "to_timestamp": 3279.0666666666666
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 3221.133333333333,
+      "to_timestamp": 3279.0666666666666
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 3221.133333333333,
+      "to_timestamp": 3279.0666666666666
+     }
+    }
+   },
+   {
+    "episode": 162,
+    "length": 180,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 3279.0666666666666,
+      "to_timestamp": 3291.0666666666666
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 3279.0666666666666,
+      "to_timestamp": 3291.0666666666666
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 3279.0666666666666,
+      "to_timestamp": 3291.0666666666666
+     }
+    }
+   },
+   {
+    "episode": 163,
+    "length": 268,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 3291.0666666666666,
+      "to_timestamp": 3308.9333333333334
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 3291.0666666666666,
+      "to_timestamp": 3308.9333333333334
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 3291.0666666666666,
+      "to_timestamp": 3308.9333333333334
+     }
+    }
+   },
+   {
+    "episode": 164,
+    "length": 138,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 3308.9333333333334,
+      "to_timestamp": 3318.133333333333
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 3308.9333333333334,
+      "to_timestamp": 3318.133333333333
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 3308.9333333333334,
+      "to_timestamp": 3318.133333333333
+     }
+    }
+   },
+   {
+    "episode": 165,
+    "length": 193,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 3318.133333333333,
+      "to_timestamp": 3331.0
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 3318.133333333333,
+      "to_timestamp": 3331.0
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 3318.133333333333,
+      "to_timestamp": 3331.0
+     }
+    }
+   },
+   {
+    "episode": 166,
+    "length": 491,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 3331.0,
+      "to_timestamp": 3363.733333333333
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 3331.0,
+      "to_timestamp": 3363.733333333333
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 3331.0,
+      "to_timestamp": 3363.733333333333
+     }
+    }
+   },
+   {
+    "episode": 167,
+    "length": 371,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 3363.733333333333,
+      "to_timestamp": 3388.4666666666667
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 3363.733333333333,
+      "to_timestamp": 3388.4666666666667
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 3363.733333333333,
+      "to_timestamp": 3388.4666666666667
+     }
+    }
+   },
+   {
+    "episode": 168,
+    "length": 301,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 3388.4666666666667,
+      "to_timestamp": 3408.5333333333333
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 3388.4666666666667,
+      "to_timestamp": 3408.5333333333333
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 3388.4666666666667,
+      "to_timestamp": 3408.5333333333333
+     }
+    }
+   },
+   {
+    "episode": 169,
+    "length": 269,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 3408.5333333333333,
+      "to_timestamp": 3426.4666666666667
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 3408.5333333333333,
+      "to_timestamp": 3426.4666666666667
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 3408.5333333333333,
+      "to_timestamp": 3426.4666666666667
+     }
+    }
+   },
+   {
+    "episode": 170,
+    "length": 110,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 3426.4666666666667,
+      "to_timestamp": 3433.8
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 3426.4666666666667,
+      "to_timestamp": 3433.8
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 3426.4666666666667,
+      "to_timestamp": 3433.8
+     }
+    }
+   },
+   {
+    "episode": 171,
+    "length": 652,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 3433.8,
+      "to_timestamp": 3477.2666666666664
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 3433.8,
+      "to_timestamp": 3477.2666666666664
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 3433.8,
+      "to_timestamp": 3477.2666666666664
+     }
+    }
+   },
+   {
+    "episode": 172,
+    "length": 158,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 3477.2666666666664,
+      "to_timestamp": 3487.8
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 3477.2666666666664,
+      "to_timestamp": 3487.8
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 3477.2666666666664,
+      "to_timestamp": 3487.8
+     }
+    }
+   },
+   {
+    "episode": 173,
+    "length": 552,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 3487.8,
+      "to_timestamp": 3524.6
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 3487.8,
+      "to_timestamp": 3524.6
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 3487.8,
+      "to_timestamp": 3524.6
+     }
+    }
+   },
+   {
+    "episode": 174,
+    "length": 117,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 3524.6,
+      "to_timestamp": 3532.3999999999996
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 3524.6,
+      "to_timestamp": 3532.3999999999996
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 3524.6,
+      "to_timestamp": 3532.3999999999996
+     }
+    }
+   },
+   {
+    "episode": 175,
+    "length": 58,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 3532.3999999999996,
+      "to_timestamp": 3536.2666666666664
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 3532.3999999999996,
+      "to_timestamp": 3536.2666666666664
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 3532.3999999999996,
+      "to_timestamp": 3536.2666666666664
+     }
+    }
+   },
+   {
+    "episode": 176,
+    "length": 356,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 3536.2666666666664,
+      "to_timestamp": 3560.0
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 3536.2666666666664,
+      "to_timestamp": 3560.0
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 3536.2666666666664,
+      "to_timestamp": 3560.0
+     }
+    }
+   },
+   {
+    "episode": 177,
+    "length": 213,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 3560.0,
+      "to_timestamp": 3574.2
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 3560.0,
+      "to_timestamp": 3574.2
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 3560.0,
+      "to_timestamp": 3574.2
+     }
+    }
+   },
+   {
+    "episode": 178,
+    "length": 490,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 3574.2,
+      "to_timestamp": 3606.866666666667
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 3574.2,
+      "to_timestamp": 3606.866666666667
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 3574.2,
+      "to_timestamp": 3606.866666666667
+     }
+    }
+   },
+   {
+    "episode": 179,
+    "length": 417,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 3606.866666666667,
+      "to_timestamp": 3634.6666666666665
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 3606.866666666667,
+      "to_timestamp": 3634.6666666666665
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 3606.866666666667,
+      "to_timestamp": 3634.6666666666665
+     }
+    }
+   },
+   {
+    "episode": 180,
+    "length": 296,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 3634.6666666666665,
+      "to_timestamp": 3654.3999999999996
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 3634.6666666666665,
+      "to_timestamp": 3654.3999999999996
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 3634.6666666666665,
+      "to_timestamp": 3654.3999999999996
+     }
+    }
+   },
+   {
+    "episode": 181,
+    "length": 230,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 3654.3999999999996,
+      "to_timestamp": 3669.733333333333
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 3654.3999999999996,
+      "to_timestamp": 3669.733333333333
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 3654.3999999999996,
+      "to_timestamp": 3669.733333333333
+     }
+    }
+   },
+   {
+    "episode": 182,
+    "length": 265,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 3669.733333333333,
+      "to_timestamp": 3687.3999999999996
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 3669.733333333333,
+      "to_timestamp": 3687.3999999999996
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 3669.733333333333,
+      "to_timestamp": 3687.3999999999996
+     }
+    }
+   },
+   {
+    "episode": 183,
+    "length": 100,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 3687.3999999999996,
+      "to_timestamp": 3694.0666666666666
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 3687.3999999999996,
+      "to_timestamp": 3694.0666666666666
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 3687.3999999999996,
+      "to_timestamp": 3694.0666666666666
+     }
+    }
+   },
+   {
+    "episode": 184,
+    "length": 192,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 3694.0666666666666,
+      "to_timestamp": 3706.866666666667
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 3694.0666666666666,
+      "to_timestamp": 3706.866666666667
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 3694.0666666666666,
+      "to_timestamp": 3706.866666666667
+     }
+    }
+   },
+   {
+    "episode": 185,
+    "length": 286,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 3706.866666666667,
+      "to_timestamp": 3725.9333333333334
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 3706.866666666667,
+      "to_timestamp": 3725.9333333333334
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 3706.866666666667,
+      "to_timestamp": 3725.9333333333334
+     }
+    }
+   },
+   {
+    "episode": 186,
+    "length": 200,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 3725.9333333333334,
+      "to_timestamp": 3739.2666666666664
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 3725.9333333333334,
+      "to_timestamp": 3739.2666666666664
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 3725.9333333333334,
+      "to_timestamp": 3739.2666666666664
+     }
+    }
+   },
+   {
+    "episode": 187,
+    "length": 658,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 3739.2666666666664,
+      "to_timestamp": 3783.133333333333
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 3739.2666666666664,
+      "to_timestamp": 3783.133333333333
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 3739.2666666666664,
+      "to_timestamp": 3783.133333333333
+     }
+    }
+   },
+   {
+    "episode": 188,
+    "length": 763,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 3783.133333333333,
+      "to_timestamp": 3833.9999999999995
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 3783.133333333333,
+      "to_timestamp": 3833.9999999999995
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 3783.133333333333,
+      "to_timestamp": 3833.9999999999995
+     }
+    }
+   },
+   {
+    "episode": 189,
+    "length": 357,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 3833.9999999999995,
+      "to_timestamp": 3857.7999999999997
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 3833.9999999999995,
+      "to_timestamp": 3857.7999999999997
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 3833.9999999999995,
+      "to_timestamp": 3857.7999999999997
+     }
+    }
+   },
+   {
+    "episode": 190,
+    "length": 395,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 3857.7999999999997,
+      "to_timestamp": 3884.133333333333
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 3857.7999999999997,
+      "to_timestamp": 3884.133333333333
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 3857.7999999999997,
+      "to_timestamp": 3884.133333333333
+     }
+    }
+   },
+   {
+    "episode": 191,
+    "length": 131,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 3884.133333333333,
+      "to_timestamp": 3892.8666666666663
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 3884.133333333333,
+      "to_timestamp": 3892.8666666666663
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 3884.133333333333,
+      "to_timestamp": 3892.8666666666663
+     }
+    }
+   },
+   {
+    "episode": 192,
+    "length": 142,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 3892.8666666666663,
+      "to_timestamp": 3902.333333333333
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 3892.8666666666663,
+      "to_timestamp": 3902.333333333333
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 3892.8666666666663,
+      "to_timestamp": 3902.333333333333
+     }
+    }
+   },
+   {
+    "episode": 193,
+    "length": 291,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 3902.333333333333,
+      "to_timestamp": 3921.733333333333
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 3902.333333333333,
+      "to_timestamp": 3921.733333333333
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 3902.333333333333,
+      "to_timestamp": 3921.733333333333
+     }
+    }
+   },
+   {
+    "episode": 194,
+    "length": 208,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 3921.733333333333,
+      "to_timestamp": 3935.6
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 3921.733333333333,
+      "to_timestamp": 3935.6
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 3921.733333333333,
+      "to_timestamp": 3935.6
+     }
+    }
+   },
+   {
+    "episode": 195,
+    "length": 161,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 3935.6,
+      "to_timestamp": 3946.333333333333
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 3935.6,
+      "to_timestamp": 3946.333333333333
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 3935.6,
+      "to_timestamp": 3946.333333333333
+     }
+    }
+   },
+   {
+    "episode": 196,
+    "length": 631,
+    "src": {
+     "wrist_left": {
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "from_timestamp": 3946.333333333333,
+      "to_timestamp": 3988.3999999999996
+     },
+     "exterior_1_left": {
+      "path": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+      "from_timestamp": 3946.333333333333,
+      "to_timestamp": 3988.3999999999996
+     },
+     "exterior_2_left": {
+      "path": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+      "from_timestamp": 3946.333333333333,
+      "to_timestamp": 3988.3999999999996
+     }
+    }
+   }
+  ],
+  "n_episodes": 197,
+  "frames": 59826,
+  "cap_applied": true,
+  "consecutive_frames_in_first_files_all_cameras": 96183,
+  "first_file_frames": {
+   "wrist_left": 153300,
+   "exterior_1_left": 96183,
+   "exterior_2_left": 96183
+  },
+  "first_file": {
+   "wrist_left": [
+    0,
+    0
+   ],
+   "exterior_1_left": [
+    0,
+    0
+   ],
+   "exterior_2_left": [
+    0,
+    0
+   ]
+  },
+  "slice_over_real_median": 0.6357569445920385
+ },
+ "check_indices": [
+  1298,
+  3856,
+  4359,
+  5904,
+  6761,
+  10156,
+  14544,
+  15469,
+  18964,
+  19876,
+  23609,
+  25956,
+  26318,
+  31383,
+  34100,
+  35171,
+  36005,
+  47265,
+  50145,
+  52458
+ ],
+ "source_files": {
+  "wrist_left": {
+   "rel": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+   "path": "/work/src/videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+   "bytes": 504035755,
+   "moov": {
+    "file_bytes": 504035755,
+    "moov_bytes": 928749,
+    "moov_before_mdat": true,
+    "boxes": [
+     "ftyp",
+     "moov",
+     "free",
+     "mdat"
+    ]
+   }
+  },
+  "exterior_1_left": {
+   "rel": "videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+   "path": "/work/src/videos/observation.images.exterior_1_left/chunk-000/file-000.mp4",
+   "bytes": 516793977,
+   "moov": {
+    "file_bytes": 516793977,
+    "moov_bytes": 585733,
+    "moov_before_mdat": true,
+    "boxes": [
+     "ftyp",
+     "moov",
+     "free",
+     "mdat"
+    ]
+   }
+  },
+  "exterior_2_left": {
+   "rel": "videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+   "path": "/work/src/videos/observation.images.exterior_2_left/chunk-000/file-000.mp4",
+   "bytes": 518303247,
+   "moov": {
+    "file_bytes": 518303247,
+    "moov_bytes": 585825,
+    "moov_before_mdat": true,
+    "boxes": [
+     "ftyp",
+     "moov",
+     "free",
+     "mdat"
+    ]
+   }
+  }
+ },
+ "download": {
+  "files": 3,
+  "bytes": 1539132979,
+  "s": 5.6
+ },
+ "encoder_defaults": {
+  "repr": "VideoEncoderConfig(vcodec='libsvtav1', pix_fmt='yuv420p', g=2, crf=30, preset=12, fast_decode=0, video_backend='pyav', extra_options={})",
+  "vcodec": "libsvtav1",
+  "pix_fmt": "yuv420p",
+  "g": 2,
+  "crf": 30,
+  "preset": 12,
+  "fast_decode": 0,
+  "codec_options": {
+   "g": "2",
+   "crf": "30",
+   "preset": "12",
+   "svtav1-params": "fast-decode=0"
+  }
+ },
+ "lerobot_file": "/work/venv/lib/python3.12/site-packages/lerobot/__init__.py",
+ "lerobot_sha": "32b671d437f8c50014f74a322ad3df09c6fab944"
+}

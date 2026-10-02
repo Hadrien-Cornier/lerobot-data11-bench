@@ -1,0 +1,105 @@
+{
+ "ncopy": 8,
+ "no_upload": false,
+ "datasets": {
+  "sep": {
+   "kind": "sep",
+   "root": "/work/ds/sep",
+   "video_keys": [
+    "observation.images.wrist_left",
+    "observation.images.exterior_1_left",
+    "observation.images.exterior_2_left"
+   ],
+   "files_per_key": 8,
+   "episodes": 1576,
+   "frames": 478608,
+   "frames_per_file": 59826,
+   "episodes_per_file": 197,
+   "stack_layout": null,
+   "video_bytes_per_file": {
+    "observation.images.wrist_left": 190713756,
+    "observation.images.exterior_1_left": 320545900,
+    "observation.images.exterior_2_left": 323369069
+   },
+   "repo": "hadriencornier/lerobot-data11-r4-droid-sep",
+   "commit": "9be8467a34816e7faca89f273ac3155bc81f119c",
+   "upload_s": 7.2,
+   "files": 35,
+   "readback_mismatch": [],
+   "private": true
+  },
+  "stack": {
+   "kind": "stack",
+   "root": "/work/ds/stack",
+   "video_keys": [
+    "observation.images.stacked"
+   ],
+   "files_per_key": 8,
+   "episodes": 1576,
+   "frames": 478608,
+   "frames_per_file": 59826,
+   "episodes_per_file": 197,
+   "stack_layout": {
+    "key": "observation.images.stacked",
+    "order_top_to_bottom": [
+     "wrist_left",
+     "exterior_1_left",
+     "exterior_2_left"
+    ],
+    "crops_y0_h_w": {
+     "wrist_left": [
+      0,
+      180,
+      320
+     ],
+     "exterior_1_left": [
+      180,
+      180,
+      320
+     ],
+     "exterior_2_left": [
+      360,
+      180,
+      320
+     ]
+    },
+    "height": 540,
+    "width": 320,
+    "pad": "right-pad narrower cameras with black; odd heights padded by one black row",
+    "source": "lerobot/droid_1.0.1@0eabc778f959c54b8c5aa3626cc1128d2d2e54d4"
+   },
+   "video_bytes_per_file": {
+    "observation.images.stacked": 833533099
+   },
+   "repo": "hadriencornier/lerobot-data11-r4-droid-stack",
+   "commit": "62b895ae483292c0389a361abfe3edba5094d90a",
+   "upload_s": 4.4,
+   "files": 20,
+   "readback_mismatch": [],
+   "private": true
+  },
+  "sep1": {
+   "kind": "sep1",
+   "root": "/work/ds/sep1",
+   "video_keys": [
+    "observation.images.wrist_left"
+   ],
+   "files_per_key": 8,
+   "episodes": 1576,
+   "frames": 478608,
+   "frames_per_file": 59826,
+   "episodes_per_file": 197,
+   "stack_layout": null,
+   "video_bytes_per_file": {
+    "observation.images.wrist_left": 190713756
+   },
+   "repo": "hadriencornier/lerobot-data11-r4-droid-sep1",
+   "commit": "0b2d75fc1582e498446fe45f6492613179f53e84",
+   "upload_s": 1.2,
+   "files": 19,
+   "readback_mismatch": [],
+   "private": true
+  }
+ },
+ "ok": true
+}

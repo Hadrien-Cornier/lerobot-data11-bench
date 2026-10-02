@@ -1,0 +1,2228 @@
+{
+ "repo_id": "lerobot/abc_130k_v3_train",
+ "revision": "68651e4929d9fb00f798937b2d62617cab5c771d",
+ "cams": [
+  "top",
+  "left_wrist",
+  "right_wrist"
+ ],
+ "fps": 30,
+ "stack_order_top_to_bottom": [
+  "top",
+  "left_wrist",
+  "right_wrist"
+ ],
+ "real_file_stats": {
+  "top": {
+   "files": 13029,
+   "frames_per_file_median": 24851.0,
+   "mean": 29355.15688080436,
+   "p10": 15832.400000000001,
+   "p90": 58159.2
+  },
+  "left_wrist": {
+   "files": 12600,
+   "frames_per_file_median": 24532.0,
+   "mean": 30354.63007936508,
+   "p10": 15768.7,
+   "p90": 67849.20000000001
+  },
+  "right_wrist": {
+   "files": 12535,
+   "frames_per_file_median": 24531.0,
+   "mean": 30512.033426406062,
+   "p10": 15784.6,
+   "p90": 69327.20000000001
+  },
+  "all_cameras": {
+   "files": 38164,
+   "frames_per_file_median": 24648.0,
+   "mean": 30065.114165181847,
+   "p10": 15789.0,
+   "p90": 61983.40000000001,
+   "episode_length_median": 2743.0,
+   "episodes": 129225
+  }
+ },
+ "ckpt_full_target_frames": 24648,
+ "families": {
+  "ckpt_1k": [
+   {
+    "name": "ckpt_1k_g000",
+    "episodes": [
+     {
+      "episode": 109684,
+      "length": 904,
+      "src": {
+       "top": {
+        "path": "videos/observation.images.top/chunk-010/file-584.mp4",
+        "from_timestamp": 417.56666666666666,
+        "to_timestamp": 447.7
+       },
+       "left_wrist": {
+        "path": "videos/observation.images.left_wrist/chunk-010/file-155.mp4",
+        "from_timestamp": 417.56666666666666,
+        "to_timestamp": 447.7
+       },
+       "right_wrist": {
+        "path": "videos/observation.images.right_wrist/chunk-010/file-090.mp4",
+        "from_timestamp": 417.56666666666666,
+        "to_timestamp": 447.7
+       }
+      }
+     }
+    ],
+    "frames": 904
+   },
+   {
+    "name": "ckpt_1k_g001",
+    "episodes": [
+     {
+      "episode": 109686,
+      "length": 987,
+      "src": {
+       "top": {
+        "path": "videos/observation.images.top/chunk-010/file-585.mp4",
+        "from_timestamp": 0.0,
+        "to_timestamp": 32.9
+       },
+       "left_wrist": {
+        "path": "videos/observation.images.left_wrist/chunk-010/file-156.mp4",
+        "from_timestamp": 0.0,
+        "to_timestamp": 32.9
+       },
+       "right_wrist": {
+        "path": "videos/observation.images.right_wrist/chunk-010/file-091.mp4",
+        "from_timestamp": 0.0,
+        "to_timestamp": 32.9
+       }
+      }
+     }
+    ],
+    "frames": 987
+   },
+   {
+    "name": "ckpt_1k_g002",
+    "episodes": [
+     {
+      "episode": 109688,
+      "length": 1011,
+      "src": {
+       "top": {
+        "path": "videos/observation.images.top/chunk-010/file-585.mp4",
+        "from_timestamp": 108.43333333333334,
+        "to_timestamp": 142.13333333333333
+       },
+       "left_wrist": {
+        "path": "videos/observation.images.left_wrist/chunk-010/file-156.mp4",
+        "from_timestamp": 108.43333333333334,
+        "to_timestamp": 142.13333333333333
+       },
+       "right_wrist": {
+        "path": "videos/observation.images.right_wrist/chunk-010/file-091.mp4",
+        "from_timestamp": 108.43333333333334,
+        "to_timestamp": 142.13333333333333
+       }
+      }
+     }
+    ],
+    "frames": 1011
+   }
+  ],
+  "thrash": [
+   {
+    "name": "thrash_g000",
+    "episodes": [
+     {
+      "episode": 109671,
+      "length": 2280,
+      "src": {
+       "top": {
+        "path": "videos/observation.images.top/chunk-010/file-583.mp4",
+        "from_timestamp": 84.73333333333333,
+        "to_timestamp": 160.73333333333335
+       },
+       "left_wrist": {
+        "path": "videos/observation.images.left_wrist/chunk-010/file-154.mp4",
+        "from_timestamp": 84.73333333333333,
+        "to_timestamp": 160.73333333333335
+       },
+       "right_wrist": {
+        "path": "videos/observation.images.right_wrist/chunk-010/file-089.mp4",
+        "from_timestamp": 84.73333333333333,
+        "to_timestamp": 160.73333333333335
+       }
+      }
+     }
+    ],
+    "frames": 2280
+   },
+   {
+    "name": "thrash_g001",
+    "episodes": [
+     {
+      "episode": 109672,
+      "length": 2155,
+      "src": {
+       "top": {
+        "path": "videos/observation.images.top/chunk-010/file-583.mp4",
+        "from_timestamp": 160.73333333333335,
+        "to_timestamp": 232.56666666666666
+       },
+       "left_wrist": {
+        "path": "videos/observation.images.left_wrist/chunk-010/file-154.mp4",
+        "from_timestamp": 160.73333333333335,
+        "to_timestamp": 232.56666666666666
+       },
+       "right_wrist": {
+        "path": "videos/observation.images.right_wrist/chunk-010/file-089.mp4",
+        "from_timestamp": 160.73333333333335,
+        "to_timestamp": 232.56666666666666
+       }
+      }
+     }
+    ],
+    "frames": 2155
+   },
+   {
+    "name": "thrash_g002",
+    "episodes": [
+     {
+      "episode": 109673,
+      "length": 2018,
+      "src": {
+       "top": {
+        "path": "videos/observation.images.top/chunk-010/file-583.mp4",
+        "from_timestamp": 232.56666666666666,
+        "to_timestamp": 299.8333333333333
+       },
+       "left_wrist": {
+        "path": "videos/observation.images.left_wrist/chunk-010/file-154.mp4",
+        "from_timestamp": 232.56666666666666,
+        "to_timestamp": 299.8333333333333
+       },
+       "right_wrist": {
+        "path": "videos/observation.images.right_wrist/chunk-010/file-089.mp4",
+        "from_timestamp": 232.56666666666666,
+        "to_timestamp": 299.8333333333333
+       }
+      }
+     }
+    ],
+    "frames": 2018
+   },
+   {
+    "name": "thrash_g003",
+    "episodes": [
+     {
+      "episode": 109674,
+      "length": 2043,
+      "src": {
+       "top": {
+        "path": "videos/observation.images.top/chunk-010/file-583.mp4",
+        "from_timestamp": 299.8333333333333,
+        "to_timestamp": 367.9333333333333
+       },
+       "left_wrist": {
+        "path": "videos/observation.images.left_wrist/chunk-010/file-154.mp4",
+        "from_timestamp": 299.8333333333333,
+        "to_timestamp": 367.9333333333333
+       },
+       "right_wrist": {
+        "path": "videos/observation.images.right_wrist/chunk-010/file-089.mp4",
+        "from_timestamp": 299.8333333333333,
+        "to_timestamp": 367.9333333333333
+       }
+      }
+     }
+    ],
+    "frames": 2043
+   },
+   {
+    "name": "thrash_g004",
+    "episodes": [
+     {
+      "episode": 109677,
+      "length": 1969,
+      "src": {
+       "top": {
+        "path": "videos/observation.images.top/chunk-010/file-583.mp4",
+        "from_timestamp": 539.8333333333333,
+        "to_timestamp": 605.4666666666666
+       },
+       "left_wrist": {
+        "path": "videos/observation.images.left_wrist/chunk-010/file-154.mp4",
+        "from_timestamp": 539.8333333333333,
+        "to_timestamp": 605.4666666666666
+       },
+       "right_wrist": {
+        "path": "videos/observation.images.right_wrist/chunk-010/file-089.mp4",
+        "from_timestamp": 539.8333333333333,
+        "to_timestamp": 605.4666666666666
+       }
+      }
+     }
+    ],
+    "frames": 1969
+   },
+   {
+    "name": "thrash_g005",
+    "episodes": [
+     {
+      "episode": 109678,
+      "length": 1988,
+      "src": {
+       "top": {
+        "path": "videos/observation.images.top/chunk-010/file-584.mp4",
+        "from_timestamp": 0.0,
+        "to_timestamp": 66.26666666666667
+       },
+       "left_wrist": {
+        "path": "videos/observation.images.left_wrist/chunk-010/file-155.mp4",
+        "from_timestamp": 0.0,
+        "to_timestamp": 66.26666666666667
+       },
+       "right_wrist": {
+        "path": "videos/observation.images.right_wrist/chunk-010/file-090.mp4",
+        "from_timestamp": 0.0,
+        "to_timestamp": 66.26666666666667
+       }
+      }
+     }
+    ],
+    "frames": 1988
+   },
+   {
+    "name": "thrash_g006",
+    "episodes": [
+     {
+      "episode": 109679,
+      "length": 2256,
+      "src": {
+       "top": {
+        "path": "videos/observation.images.top/chunk-010/file-584.mp4",
+        "from_timestamp": 66.26666666666667,
+        "to_timestamp": 141.46666666666667
+       },
+       "left_wrist": {
+        "path": "videos/observation.images.left_wrist/chunk-010/file-155.mp4",
+        "from_timestamp": 66.26666666666667,
+        "to_timestamp": 141.46666666666667
+       },
+       "right_wrist": {
+        "path": "videos/observation.images.right_wrist/chunk-010/file-090.mp4",
+        "from_timestamp": 66.26666666666667,
+        "to_timestamp": 141.46666666666667
+       }
+      }
+     }
+    ],
+    "frames": 2256
+   },
+   {
+    "name": "thrash_g007",
+    "episodes": [
+     {
+      "episode": 109680,
+      "length": 1873,
+      "src": {
+       "top": {
+        "path": "videos/observation.images.top/chunk-010/file-584.mp4",
+        "from_timestamp": 141.46666666666667,
+        "to_timestamp": 203.9
+       },
+       "left_wrist": {
+        "path": "videos/observation.images.left_wrist/chunk-010/file-155.mp4",
+        "from_timestamp": 141.46666666666667,
+        "to_timestamp": 203.9
+       },
+       "right_wrist": {
+        "path": "videos/observation.images.right_wrist/chunk-010/file-090.mp4",
+        "from_timestamp": 141.46666666666667,
+        "to_timestamp": 203.9
+       }
+      }
+     }
+    ],
+    "frames": 1873
+   },
+   {
+    "name": "thrash_g008",
+    "episodes": [
+     {
+      "episode": 109687,
+      "length": 2266,
+      "src": {
+       "top": {
+        "path": "videos/observation.images.top/chunk-010/file-585.mp4",
+        "from_timestamp": 32.9,
+        "to_timestamp": 108.43333333333334
+       },
+       "left_wrist": {
+        "path": "videos/observation.images.left_wrist/chunk-010/file-156.mp4",
+        "from_timestamp": 32.9,
+        "to_timestamp": 108.43333333333334
+       },
+       "right_wrist": {
+        "path": "videos/observation.images.right_wrist/chunk-010/file-091.mp4",
+        "from_timestamp": 32.9,
+        "to_timestamp": 108.43333333333334
+       }
+      }
+     }
+    ],
+    "frames": 2266
+   },
+   {
+    "name": "thrash_g009",
+    "episodes": [
+     {
+      "episode": 109695,
+      "length": 1919,
+      "src": {
+       "top": {
+        "path": "videos/observation.images.top/chunk-010/file-586.mp4",
+        "from_timestamp": 148.03333333333333,
+        "to_timestamp": 212.0
+       },
+       "left_wrist": {
+        "path": "videos/observation.images.left_wrist/chunk-010/file-157.mp4",
+        "from_timestamp": 148.03333333333333,
+        "to_timestamp": 212.0
+       },
+       "right_wrist": {
+        "path": "videos/observation.images.right_wrist/chunk-010/file-092.mp4",
+        "from_timestamp": 148.03333333333333,
+        "to_timestamp": 212.0
+       }
+      }
+     }
+    ],
+    "frames": 1919
+   },
+   {
+    "name": "thrash_g010",
+    "episodes": [
+     {
+      "episode": 109699,
+      "length": 2103,
+      "src": {
+       "top": {
+        "path": "videos/observation.images.top/chunk-010/file-586.mp4",
+        "from_timestamp": 468.8666666666667,
+        "to_timestamp": 538.9666666666667
+       },
+       "left_wrist": {
+        "path": "videos/observation.images.left_wrist/chunk-010/file-157.mp4",
+        "from_timestamp": 468.8666666666667,
+        "to_timestamp": 538.9666666666667
+       },
+       "right_wrist": {
+        "path": "videos/observation.images.right_wrist/chunk-010/file-092.mp4",
+        "from_timestamp": 468.8666666666667,
+        "to_timestamp": 538.9666666666667
+       }
+      }
+     }
+    ],
+    "frames": 2103
+   },
+   {
+    "name": "thrash_g011",
+    "episodes": [
+     {
+      "episode": 109712,
+      "length": 1964,
+      "src": {
+       "top": {
+        "path": "videos/observation.images.top/chunk-010/file-588.mp4",
+        "from_timestamp": 203.96666666666667,
+        "to_timestamp": 269.43333333333334
+       },
+       "left_wrist": {
+        "path": "videos/observation.images.left_wrist/chunk-010/file-159.mp4",
+        "from_timestamp": 203.96666666666667,
+        "to_timestamp": 269.43333333333334
+       },
+       "right_wrist": {
+        "path": "videos/observation.images.right_wrist/chunk-010/file-094.mp4",
+        "from_timestamp": 203.96666666666667,
+        "to_timestamp": 269.43333333333334
+       }
+      }
+     }
+    ],
+    "frames": 1964
+   },
+   {
+    "name": "thrash_g012",
+    "episodes": [
+     {
+      "episode": 109713,
+      "length": 1703,
+      "src": {
+       "top": {
+        "path": "videos/observation.images.top/chunk-010/file-588.mp4",
+        "from_timestamp": 269.43333333333334,
+        "to_timestamp": 326.2
+       },
+       "left_wrist": {
+        "path": "videos/observation.images.left_wrist/chunk-010/file-159.mp4",
+        "from_timestamp": 269.43333333333334,
+        "to_timestamp": 326.2
+       },
+       "right_wrist": {
+        "path": "videos/observation.images.right_wrist/chunk-010/file-094.mp4",
+        "from_timestamp": 269.43333333333334,
+        "to_timestamp": 326.2
+       }
+      }
+     }
+    ],
+    "frames": 1703
+   },
+   {
+    "name": "thrash_g013",
+    "episodes": [
+     {
+      "episode": 109714,
+      "length": 2036,
+      "src": {
+       "top": {
+        "path": "videos/observation.images.top/chunk-010/file-588.mp4",
+        "from_timestamp": 326.2,
+        "to_timestamp": 394.06666666666666
+       },
+       "left_wrist": {
+        "path": "videos/observation.images.left_wrist/chunk-010/file-159.mp4",
+        "from_timestamp": 326.2,
+        "to_timestamp": 394.06666666666666
+       },
+       "right_wrist": {
+        "path": "videos/observation.images.right_wrist/chunk-010/file-094.mp4",
+        "from_timestamp": 326.2,
+        "to_timestamp": 394.06666666666666
+       }
+      }
+     }
+    ],
+    "frames": 2036
+   },
+   {
+    "name": "thrash_g014",
+    "episodes": [
+     {
+      "episode": 109718,
+      "length": 2201,
+      "src": {
+       "top": {
+        "path": "videos/observation.images.top/chunk-010/file-589.mp4",
+        "from_timestamp": 0.0,
+        "to_timestamp": 73.36666666666666
+       },
+       "left_wrist": {
+        "path": "videos/observation.images.left_wrist/chunk-010/file-160.mp4",
+        "from_timestamp": 0.0,
+        "to_timestamp": 73.36666666666666
+       },
+       "right_wrist": {
+        "path": "videos/observation.images.right_wrist/chunk-010/file-095.mp4",
+        "from_timestamp": 0.0,
+        "to_timestamp": 73.36666666666666
+       }
+      }
+     }
+    ],
+    "frames": 2201
+   },
+   {
+    "name": "thrash_g015",
+    "episodes": [
+     {
+      "episode": 109725,
+      "length": 2071,
+      "src": {
+       "top": {
+        "path": "videos/observation.images.top/chunk-010/file-589.mp4",
+        "from_timestamp": 444.26666666666665,
+        "to_timestamp": 513.3
+       },
+       "left_wrist": {
+        "path": "videos/observation.images.left_wrist/chunk-010/file-160.mp4",
+        "from_timestamp": 444.26666666666665,
+        "to_timestamp": 513.3
+       },
+       "right_wrist": {
+        "path": "videos/observation.images.right_wrist/chunk-010/file-095.mp4",
+        "from_timestamp": 444.26666666666665,
+        "to_timestamp": 513.3
+       }
+      }
+     }
+    ],
+    "frames": 2071
+   },
+   {
+    "name": "thrash_g016",
+    "episodes": [
+     {
+      "episode": 109726,
+      "length": 2043,
+      "src": {
+       "top": {
+        "path": "videos/observation.images.top/chunk-010/file-590.mp4",
+        "from_timestamp": 0.0,
+        "to_timestamp": 68.1
+       },
+       "left_wrist": {
+        "path": "videos/observation.images.left_wrist/chunk-010/file-161.mp4",
+        "from_timestamp": 0.0,
+        "to_timestamp": 68.1
+       },
+       "right_wrist": {
+        "path": "videos/observation.images.right_wrist/chunk-010/file-096.mp4",
+        "from_timestamp": 0.0,
+        "to_timestamp": 68.1
+       }
+      }
+     }
+    ],
+    "frames": 2043
+   },
+   {
+    "name": "thrash_g017",
+    "episodes": [
+     {
+      "episode": 109732,
+      "length": 2255,
+      "src": {
+       "top": {
+        "path": "videos/observation.images.top/chunk-010/file-590.mp4",
+        "from_timestamp": 337.26666666666665,
+        "to_timestamp": 412.43333333333334
+       },
+       "left_wrist": {
+        "path": "videos/observation.images.left_wrist/chunk-010/file-161.mp4",
+        "from_timestamp": 337.26666666666665,
+        "to_timestamp": 412.43333333333334
+       },
+       "right_wrist": {
+        "path": "videos/observation.images.right_wrist/chunk-010/file-096.mp4",
+        "from_timestamp": 337.26666666666665,
+        "to_timestamp": 412.43333333333334
+       }
+      }
+     }
+    ],
+    "frames": 2255
+   },
+   {
+    "name": "thrash_g018",
+    "episodes": [
+     {
+      "episode": 109735,
+      "length": 2062,
+      "src": {
+       "top": {
+        "path": "videos/observation.images.top/chunk-010/file-591.mp4",
+        "from_timestamp": 90.13333333333334,
+        "to_timestamp": 158.86666666666667
+       },
+       "left_wrist": {
+        "path": "videos/observation.images.left_wrist/chunk-010/file-162.mp4",
+        "from_timestamp": 90.13333333333334,
+        "to_timestamp": 158.86666666666667
+       },
+       "right_wrist": {
+        "path": "videos/observation.images.right_wrist/chunk-010/file-097.mp4",
+        "from_timestamp": 90.13333333333334,
+        "to_timestamp": 158.86666666666667
+       }
+      }
+     }
+    ],
+    "frames": 2062
+   },
+   {
+    "name": "thrash_g019",
+    "episodes": [
+     {
+      "episode": 109738,
+      "length": 2023,
+      "src": {
+       "top": {
+        "path": "videos/observation.images.top/chunk-010/file-591.mp4",
+        "from_timestamp": 365.1333333333333,
+        "to_timestamp": 432.56666666666666
+       },
+       "left_wrist": {
+        "path": "videos/observation.images.left_wrist/chunk-010/file-162.mp4",
+        "from_timestamp": 365.1333333333333,
+        "to_timestamp": 432.56666666666666
+       },
+       "right_wrist": {
+        "path": "videos/observation.images.right_wrist/chunk-010/file-097.mp4",
+        "from_timestamp": 365.1333333333333,
+        "to_timestamp": 432.56666666666666
+       }
+      }
+     }
+    ],
+    "frames": 2023
+   },
+   {
+    "name": "thrash_g020",
+    "episodes": [
+     {
+      "episode": 109743,
+      "length": 1765,
+      "src": {
+       "top": {
+        "path": "videos/observation.images.top/chunk-010/file-592.mp4",
+        "from_timestamp": 250.73333333333332,
+        "to_timestamp": 309.56666666666666
+       },
+       "left_wrist": {
+        "path": "videos/observation.images.left_wrist/chunk-010/file-163.mp4",
+        "from_timestamp": 250.73333333333332,
+        "to_timestamp": 309.56666666666666
+       },
+       "right_wrist": {
+        "path": "videos/observation.images.right_wrist/chunk-010/file-098.mp4",
+        "from_timestamp": 250.73333333333332,
+        "to_timestamp": 309.56666666666666
+       }
+      }
+     }
+    ],
+    "frames": 1765
+   },
+   {
+    "name": "thrash_g021",
+    "episodes": [
+     {
+      "episode": 109758,
+      "length": 1897,
+      "src": {
+       "top": {
+        "path": "videos/observation.images.top/chunk-010/file-594.mp4",
+        "from_timestamp": 0.0,
+        "to_timestamp": 63.233333333333334
+       },
+       "left_wrist": {
+        "path": "videos/observation.images.left_wrist/chunk-010/file-165.mp4",
+        "from_timestamp": 0.0,
+        "to_timestamp": 63.233333333333334
+       },
+       "right_wrist": {
+        "path": "videos/observation.images.right_wrist/chunk-010/file-100.mp4",
+        "from_timestamp": 0.0,
+        "to_timestamp": 63.233333333333334
+       }
+      }
+     }
+    ],
+    "frames": 1897
+   },
+   {
+    "name": "thrash_g022",
+    "episodes": [
+     {
+      "episode": 109760,
+      "length": 2041,
+      "src": {
+       "top": {
+        "path": "videos/observation.images.top/chunk-010/file-594.mp4",
+        "from_timestamp": 188.83333333333331,
+        "to_timestamp": 256.8666666666667
+       },
+       "left_wrist": {
+        "path": "videos/observation.images.left_wrist/chunk-010/file-165.mp4",
+        "from_timestamp": 188.83333333333331,
+        "to_timestamp": 256.8666666666667
+       },
+       "right_wrist": {
+        "path": "videos/observation.images.right_wrist/chunk-010/file-100.mp4",
+        "from_timestamp": 188.83333333333331,
+        "to_timestamp": 256.8666666666667
+       }
+      }
+     }
+    ],
+    "frames": 2041
+   },
+   {
+    "name": "thrash_g023",
+    "episodes": [
+     {
+      "episode": 109761,
+      "length": 2009,
+      "src": {
+       "top": {
+        "path": "videos/observation.images.top/chunk-010/file-594.mp4",
+        "from_timestamp": 256.8666666666667,
+        "to_timestamp": 323.83333333333337
+       },
+       "left_wrist": {
+        "path": "videos/observation.images.left_wrist/chunk-010/file-165.mp4",
+        "from_timestamp": 256.8666666666667,
+        "to_timestamp": 323.83333333333337
+       },
+       "right_wrist": {
+        "path": "videos/observation.images.right_wrist/chunk-010/file-100.mp4",
+        "from_timestamp": 256.8666666666667,
+        "to_timestamp": 323.83333333333337
+       }
+      }
+     }
+    ],
+    "frames": 2009
+   },
+   {
+    "name": "thrash_g024",
+    "episodes": [
+     {
+      "episode": 109769,
+      "length": 2191,
+      "src": {
+       "top": {
+        "path": "videos/observation.images.top/chunk-010/file-595.mp4",
+        "from_timestamp": 488.59999999999997,
+        "to_timestamp": 561.6333333333333
+       },
+       "left_wrist": {
+        "path": "videos/observation.images.left_wrist/chunk-010/file-166.mp4",
+        "from_timestamp": 488.59999999999997,
+        "to_timestamp": 561.6333333333333
+       },
+       "right_wrist": {
+        "path": "videos/observation.images.right_wrist/chunk-010/file-101.mp4",
+        "from_timestamp": 488.59999999999997,
+        "to_timestamp": 561.6333333333333
+       }
+      }
+     }
+    ],
+    "frames": 2191
+   },
+   {
+    "name": "thrash_g025",
+    "episodes": [
+     {
+      "episode": 109771,
+      "length": 2041,
+      "src": {
+       "top": {
+        "path": "videos/observation.images.top/chunk-010/file-595.mp4",
+        "from_timestamp": 781.0,
+        "to_timestamp": 849.0333333333333
+       },
+       "left_wrist": {
+        "path": "videos/observation.images.left_wrist/chunk-010/file-166.mp4",
+        "from_timestamp": 781.0,
+        "to_timestamp": 849.0333333333333
+       },
+       "right_wrist": {
+        "path": "videos/observation.images.right_wrist/chunk-010/file-101.mp4",
+        "from_timestamp": 781.0,
+        "to_timestamp": 849.0333333333333
+       }
+      }
+     }
+    ],
+    "frames": 2041
+   },
+   {
+    "name": "thrash_g026",
+    "episodes": [
+     {
+      "episode": 109779,
+      "length": 2065,
+      "src": {
+       "top": {
+        "path": "videos/observation.images.top/chunk-010/file-596.mp4",
+        "from_timestamp": 722.4999999999999,
+        "to_timestamp": 791.3333333333333
+       },
+       "left_wrist": {
+        "path": "videos/observation.images.left_wrist/chunk-010/file-167.mp4",
+        "from_timestamp": 722.4999999999999,
+        "to_timestamp": 791.3333333333333
+       },
+       "right_wrist": {
+        "path": "videos/observation.images.right_wrist/chunk-010/file-102.mp4",
+        "from_timestamp": 722.4999999999999,
+        "to_timestamp": 791.3333333333333
+       }
+      }
+     }
+    ],
+    "frames": 2065
+   },
+   {
+    "name": "thrash_g027",
+    "episodes": [
+     {
+      "episode": 109783,
+      "length": 2102,
+      "src": {
+       "top": {
+        "path": "videos/observation.images.top/chunk-010/file-597.mp4",
+        "from_timestamp": 55.733333333333334,
+        "to_timestamp": 125.8
+       },
+       "left_wrist": {
+        "path": "videos/observation.images.left_wrist/chunk-010/file-168.mp4",
+        "from_timestamp": 55.733333333333334,
+        "to_timestamp": 125.8
+       },
+       "right_wrist": {
+        "path": "videos/observation.images.right_wrist/chunk-010/file-103.mp4",
+        "from_timestamp": 55.733333333333334,
+        "to_timestamp": 125.8
+       }
+      }
+     }
+    ],
+    "frames": 2102
+   },
+   {
+    "name": "thrash_g028",
+    "episodes": [
+     {
+      "episode": 109793,
+      "length": 2260,
+      "src": {
+       "top": {
+        "path": "videos/observation.images.top/chunk-010/file-598.mp4",
+        "from_timestamp": 421.1,
+        "to_timestamp": 496.43333333333334
+       },
+       "left_wrist": {
+        "path": "videos/observation.images.left_wrist/chunk-010/file-169.mp4",
+        "from_timestamp": 421.1,
+        "to_timestamp": 496.43333333333334
+       },
+       "right_wrist": {
+        "path": "videos/observation.images.right_wrist/chunk-010/file-104.mp4",
+        "from_timestamp": 421.1,
+        "to_timestamp": 496.43333333333334
+       }
+      }
+     }
+    ],
+    "frames": 2260
+   },
+   {
+    "name": "thrash_g029",
+    "episodes": [
+     {
+      "episode": 109795,
+      "length": 2114,
+      "src": {
+       "top": {
+        "path": "videos/observation.images.top/chunk-010/file-598.mp4",
+        "from_timestamp": 587.9666666666667,
+        "to_timestamp": 658.4333333333334
+       },
+       "left_wrist": {
+        "path": "videos/observation.images.left_wrist/chunk-010/file-169.mp4",
+        "from_timestamp": 587.9666666666667,
+        "to_timestamp": 658.4333333333334
+       },
+       "right_wrist": {
+        "path": "videos/observation.images.right_wrist/chunk-010/file-104.mp4",
+        "from_timestamp": 587.9666666666667,
+        "to_timestamp": 658.4333333333334
+       }
+      }
+     }
+    ],
+    "frames": 2114
+   },
+   {
+    "name": "thrash_g030",
+    "episodes": [
+     {
+      "episode": 109797,
+      "length": 2191,
+      "src": {
+       "top": {
+        "path": "videos/observation.images.top/chunk-010/file-598.mp4",
+        "from_timestamp": 739.4000000000001,
+        "to_timestamp": 812.4333333333334
+       },
+       "left_wrist": {
+        "path": "videos/observation.images.left_wrist/chunk-010/file-169.mp4",
+        "from_timestamp": 739.4000000000001,
+        "to_timestamp": 812.4333333333334
+       },
+       "right_wrist": {
+        "path": "videos/observation.images.right_wrist/chunk-010/file-104.mp4",
+        "from_timestamp": 739.4000000000001,
+        "to_timestamp": 812.4333333333334
+       }
+      }
+     }
+    ],
+    "frames": 2191
+   },
+   {
+    "name": "thrash_g031",
+    "episodes": [
+     {
+      "episode": 109814,
+      "length": 2249,
+      "src": {
+       "top": {
+        "path": "videos/observation.images.top/chunk-010/file-601.mp4",
+        "from_timestamp": 0.0,
+        "to_timestamp": 74.96666666666667
+       },
+       "left_wrist": {
+        "path": "videos/observation.images.left_wrist/chunk-010/file-172.mp4",
+        "from_timestamp": 0.0,
+        "to_timestamp": 74.96666666666667
+       },
+       "right_wrist": {
+        "path": "videos/observation.images.right_wrist/chunk-010/file-107.mp4",
+        "from_timestamp": 0.0,
+        "to_timestamp": 74.96666666666667
+       }
+      }
+     }
+    ],
+    "frames": 2249
+   },
+   {
+    "name": "thrash_g032",
+    "episodes": [
+     {
+      "episode": 109819,
+      "length": 1897,
+      "src": {
+       "top": {
+        "path": "videos/observation.images.top/chunk-010/file-601.mp4",
+        "from_timestamp": 292.8,
+        "to_timestamp": 356.03333333333336
+       },
+       "left_wrist": {
+        "path": "videos/observation.images.left_wrist/chunk-010/file-172.mp4",
+        "from_timestamp": 292.8,
+        "to_timestamp": 356.03333333333336
+       },
+       "right_wrist": {
+        "path": "videos/observation.images.right_wrist/chunk-010/file-107.mp4",
+        "from_timestamp": 292.8,
+        "to_timestamp": 356.03333333333336
+       }
+      }
+     }
+    ],
+    "frames": 1897
+   },
+   {
+    "name": "thrash_g033",
+    "episodes": [
+     {
+      "episode": 109821,
+      "length": 1830,
+      "src": {
+       "top": {
+        "path": "videos/observation.images.top/chunk-010/file-601.mp4",
+        "from_timestamp": 375.90000000000003,
+        "to_timestamp": 436.90000000000003
+       },
+       "left_wrist": {
+        "path": "videos/observation.images.left_wrist/chunk-010/file-172.mp4",
+        "from_timestamp": 375.90000000000003,
+        "to_timestamp": 436.90000000000003
+       },
+       "right_wrist": {
+        "path": "videos/observation.images.right_wrist/chunk-010/file-107.mp4",
+        "from_timestamp": 375.90000000000003,
+        "to_timestamp": 436.90000000000003
+       }
+      }
+     }
+    ],
+    "frames": 1830
+   },
+   {
+    "name": "thrash_g034",
+    "episodes": [
+     {
+      "episode": 109822,
+      "length": 2072,
+      "src": {
+       "top": {
+        "path": "videos/observation.images.top/chunk-010/file-602.mp4",
+        "from_timestamp": 0.0,
+        "to_timestamp": 69.06666666666666
+       },
+       "left_wrist": {
+        "path": "videos/observation.images.left_wrist/chunk-010/file-173.mp4",
+        "from_timestamp": 0.0,
+        "to_timestamp": 69.06666666666666
+       },
+       "right_wrist": {
+        "path": "videos/observation.images.right_wrist/chunk-010/file-108.mp4",
+        "from_timestamp": 0.0,
+        "to_timestamp": 69.06666666666666
+       }
+      }
+     }
+    ],
+    "frames": 2072
+   },
+   {
+    "name": "thrash_g035",
+    "episodes": [
+     {
+      "episode": 109832,
+      "length": 2063,
+      "src": {
+       "top": {
+        "path": "videos/observation.images.top/chunk-010/file-603.mp4",
+        "from_timestamp": 122.5,
+        "to_timestamp": 191.26666666666665
+       },
+       "left_wrist": {
+        "path": "videos/observation.images.left_wrist/chunk-010/file-174.mp4",
+        "from_timestamp": 122.5,
+        "to_timestamp": 191.26666666666665
+       },
+       "right_wrist": {
+        "path": "videos/observation.images.right_wrist/chunk-010/file-109.mp4",
+        "from_timestamp": 122.5,
+        "to_timestamp": 191.26666666666665
+       }
+      }
+     }
+    ],
+    "frames": 2063
+   },
+   {
+    "name": "thrash_g036",
+    "episodes": [
+     {
+      "episode": 109836,
+      "length": 2187,
+      "src": {
+       "top": {
+        "path": "videos/observation.images.top/chunk-010/file-603.mp4",
+        "from_timestamp": 327.93333333333334,
+        "to_timestamp": 400.83333333333337
+       },
+       "left_wrist": {
+        "path": "videos/observation.images.left_wrist/chunk-010/file-174.mp4",
+        "from_timestamp": 327.93333333333334,
+        "to_timestamp": 400.83333333333337
+       },
+       "right_wrist": {
+        "path": "videos/observation.images.right_wrist/chunk-010/file-109.mp4",
+        "from_timestamp": 327.93333333333334,
+        "to_timestamp": 400.83333333333337
+       }
+      }
+     }
+    ],
+    "frames": 2187
+   },
+   {
+    "name": "thrash_g037",
+    "episodes": [
+     {
+      "episode": 109837,
+      "length": 1844,
+      "src": {
+       "top": {
+        "path": "videos/observation.images.top/chunk-010/file-603.mp4",
+        "from_timestamp": 400.83333333333337,
+        "to_timestamp": 462.30000000000007
+       },
+       "left_wrist": {
+        "path": "videos/observation.images.left_wrist/chunk-010/file-174.mp4",
+        "from_timestamp": 400.83333333333337,
+        "to_timestamp": 462.30000000000007
+       },
+       "right_wrist": {
+        "path": "videos/observation.images.right_wrist/chunk-010/file-109.mp4",
+        "from_timestamp": 400.83333333333337,
+        "to_timestamp": 462.30000000000007
+       }
+      }
+     }
+    ],
+    "frames": 1844
+   },
+   {
+    "name": "thrash_g038",
+    "episodes": [
+     {
+      "episode": 109843,
+      "length": 1883,
+      "src": {
+       "top": {
+        "path": "videos/observation.images.top/chunk-010/file-604.mp4",
+        "from_timestamp": 271.03333333333336,
+        "to_timestamp": 333.8
+       },
+       "left_wrist": {
+        "path": "videos/observation.images.left_wrist/chunk-010/file-175.mp4",
+        "from_timestamp": 271.03333333333336,
+        "to_timestamp": 333.8
+       },
+       "right_wrist": {
+        "path": "videos/observation.images.right_wrist/chunk-010/file-110.mp4",
+        "from_timestamp": 271.03333333333336,
+        "to_timestamp": 333.8
+       }
+      }
+     }
+    ],
+    "frames": 1883
+   },
+   {
+    "name": "thrash_g039",
+    "episodes": [
+     {
+      "episode": 109845,
+      "length": 1713,
+      "src": {
+       "top": {
+        "path": "videos/observation.images.top/chunk-010/file-604.mp4",
+        "from_timestamp": 350.40000000000003,
+        "to_timestamp": 407.50000000000006
+       },
+       "left_wrist": {
+        "path": "videos/observation.images.left_wrist/chunk-010/file-175.mp4",
+        "from_timestamp": 350.40000000000003,
+        "to_timestamp": 407.50000000000006
+       },
+       "right_wrist": {
+        "path": "videos/observation.images.right_wrist/chunk-010/file-110.mp4",
+        "from_timestamp": 350.40000000000003,
+        "to_timestamp": 407.50000000000006
+       }
+      }
+     }
+    ],
+    "frames": 1713
+   },
+   {
+    "name": "thrash_g040",
+    "episodes": [
+     {
+      "episode": 109849,
+      "length": 1818,
+      "src": {
+       "top": {
+        "path": "videos/observation.images.top/chunk-010/file-605.mp4",
+        "from_timestamp": 296.3,
+        "to_timestamp": 356.90000000000003
+       },
+       "left_wrist": {
+        "path": "videos/observation.images.left_wrist/chunk-010/file-176.mp4",
+        "from_timestamp": 296.3,
+        "to_timestamp": 356.90000000000003
+       },
+       "right_wrist": {
+        "path": "videos/observation.images.right_wrist/chunk-010/file-111.mp4",
+        "from_timestamp": 296.3,
+        "to_timestamp": 356.90000000000003
+       }
+      }
+     }
+    ],
+    "frames": 1818
+   },
+   {
+    "name": "thrash_g041",
+    "episodes": [
+     {
+      "episode": 109852,
+      "length": 1915,
+      "src": {
+       "top": {
+        "path": "videos/observation.images.top/chunk-010/file-605.mp4",
+        "from_timestamp": 501.0,
+        "to_timestamp": 564.8333333333334
+       },
+       "left_wrist": {
+        "path": "videos/observation.images.left_wrist/chunk-010/file-176.mp4",
+        "from_timestamp": 501.0,
+        "to_timestamp": 564.8333333333334
+       },
+       "right_wrist": {
+        "path": "videos/observation.images.right_wrist/chunk-010/file-111.mp4",
+        "from_timestamp": 501.0,
+        "to_timestamp": 564.8333333333334
+       }
+      }
+     }
+    ],
+    "frames": 1915
+   },
+   {
+    "name": "thrash_g042",
+    "episodes": [
+     {
+      "episode": 109853,
+      "length": 1945,
+      "src": {
+       "top": {
+        "path": "videos/observation.images.top/chunk-010/file-605.mp4",
+        "from_timestamp": 564.8333333333334,
+        "to_timestamp": 629.6666666666667
+       },
+       "left_wrist": {
+        "path": "videos/observation.images.left_wrist/chunk-010/file-176.mp4",
+        "from_timestamp": 564.8333333333334,
+        "to_timestamp": 629.6666666666667
+       },
+       "right_wrist": {
+        "path": "videos/observation.images.right_wrist/chunk-010/file-111.mp4",
+        "from_timestamp": 564.8333333333334,
+        "to_timestamp": 629.6666666666667
+       }
+      }
+     }
+    ],
+    "frames": 1945
+   },
+   {
+    "name": "thrash_g043",
+    "episodes": [
+     {
+      "episode": 109856,
+      "length": 2268,
+      "src": {
+       "top": {
+        "path": "videos/observation.images.top/chunk-010/file-606.mp4",
+        "from_timestamp": 180.66666666666666,
+        "to_timestamp": 256.26666666666665
+       },
+       "left_wrist": {
+        "path": "videos/observation.images.left_wrist/chunk-010/file-177.mp4",
+        "from_timestamp": 180.66666666666666,
+        "to_timestamp": 256.26666666666665
+       },
+       "right_wrist": {
+        "path": "videos/observation.images.right_wrist/chunk-010/file-112.mp4",
+        "from_timestamp": 180.66666666666666,
+        "to_timestamp": 256.26666666666665
+       }
+      }
+     }
+    ],
+    "frames": 2268
+   },
+   {
+    "name": "thrash_g044",
+    "episodes": [
+     {
+      "episode": 109879,
+      "length": 1873,
+      "src": {
+       "top": {
+        "path": "videos/observation.images.top/chunk-010/file-609.mp4",
+        "from_timestamp": 77.63333333333334,
+        "to_timestamp": 140.06666666666666
+       },
+       "left_wrist": {
+        "path": "videos/observation.images.left_wrist/chunk-010/file-180.mp4",
+        "from_timestamp": 77.63333333333334,
+        "to_timestamp": 140.06666666666666
+       },
+       "right_wrist": {
+        "path": "videos/observation.images.right_wrist/chunk-010/file-115.mp4",
+        "from_timestamp": 77.63333333333334,
+        "to_timestamp": 140.06666666666666
+       }
+      }
+     }
+    ],
+    "frames": 1873
+   },
+   {
+    "name": "thrash_g045",
+    "episodes": [
+     {
+      "episode": 109882,
+      "length": 1949,
+      "src": {
+       "top": {
+        "path": "videos/observation.images.top/chunk-010/file-609.mp4",
+        "from_timestamp": 323.9,
+        "to_timestamp": 388.8666666666667
+       },
+       "left_wrist": {
+        "path": "videos/observation.images.left_wrist/chunk-010/file-180.mp4",
+        "from_timestamp": 323.9,
+        "to_timestamp": 388.8666666666667
+       },
+       "right_wrist": {
+        "path": "videos/observation.images.right_wrist/chunk-010/file-115.mp4",
+        "from_timestamp": 323.9,
+        "to_timestamp": 388.8666666666667
+       }
+      }
+     }
+    ],
+    "frames": 1949
+   },
+   {
+    "name": "thrash_g046",
+    "episodes": [
+     {
+      "episode": 109902,
+      "length": 2127,
+      "src": {
+       "top": {
+        "path": "videos/observation.images.top/chunk-010/file-612.mp4",
+        "from_timestamp": 0.0,
+        "to_timestamp": 70.9
+       },
+       "left_wrist": {
+        "path": "videos/observation.images.left_wrist/chunk-010/file-183.mp4",
+        "from_timestamp": 0.0,
+        "to_timestamp": 70.9
+       },
+       "right_wrist": {
+        "path": "videos/observation.images.right_wrist/chunk-010/file-118.mp4",
+        "from_timestamp": 0.0,
+        "to_timestamp": 70.9
+       }
+      }
+     }
+    ],
+    "frames": 2127
+   },
+   {
+    "name": "thrash_g047",
+    "episodes": [
+     {
+      "episode": 109921,
+      "length": 1920,
+      "src": {
+       "top": {
+        "path": "videos/observation.images.top/chunk-010/file-614.mp4",
+        "from_timestamp": 309.23333333333335,
+        "to_timestamp": 373.23333333333335
+       },
+       "left_wrist": {
+        "path": "videos/observation.images.left_wrist/chunk-010/file-185.mp4",
+        "from_timestamp": 309.23333333333335,
+        "to_timestamp": 373.23333333333335
+       },
+       "right_wrist": {
+        "path": "videos/observation.images.right_wrist/chunk-010/file-120.mp4",
+        "from_timestamp": 309.23333333333335,
+        "to_timestamp": 373.23333333333335
+       }
+      }
+     }
+    ],
+    "frames": 1920
+   }
+  ],
+  "ckpt_5k": [
+   {
+    "name": "ckpt_5k_g000",
+    "episodes": [
+     {
+      "episode": 109670,
+      "length": 2542,
+      "src": {
+       "top": {
+        "path": "videos/observation.images.top/chunk-010/file-583.mp4",
+        "from_timestamp": 0.0,
+        "to_timestamp": 84.73333333333333
+       },
+       "left_wrist": {
+        "path": "videos/observation.images.left_wrist/chunk-010/file-154.mp4",
+        "from_timestamp": 0.0,
+        "to_timestamp": 84.73333333333333
+       },
+       "right_wrist": {
+        "path": "videos/observation.images.right_wrist/chunk-010/file-089.mp4",
+        "from_timestamp": 0.0,
+        "to_timestamp": 84.73333333333333
+       }
+      }
+     },
+     {
+      "episode": 109675,
+      "length": 2731,
+      "src": {
+       "top": {
+        "path": "videos/observation.images.top/chunk-010/file-583.mp4",
+        "from_timestamp": 367.9333333333333,
+        "to_timestamp": 458.9666666666666
+       },
+       "left_wrist": {
+        "path": "videos/observation.images.left_wrist/chunk-010/file-154.mp4",
+        "from_timestamp": 367.9333333333333,
+        "to_timestamp": 458.9666666666666
+       },
+       "right_wrist": {
+        "path": "videos/observation.images.right_wrist/chunk-010/file-089.mp4",
+        "from_timestamp": 367.9333333333333,
+        "to_timestamp": 458.9666666666666
+       }
+      }
+     }
+    ],
+    "frames": 5273
+   },
+   {
+    "name": "ckpt_5k_g001",
+    "episodes": [
+     {
+      "episode": 109676,
+      "length": 2426,
+      "src": {
+       "top": {
+        "path": "videos/observation.images.top/chunk-010/file-583.mp4",
+        "from_timestamp": 458.9666666666666,
+        "to_timestamp": 539.8333333333333
+       },
+       "left_wrist": {
+        "path": "videos/observation.images.left_wrist/chunk-010/file-154.mp4",
+        "from_timestamp": 458.9666666666666,
+        "to_timestamp": 539.8333333333333
+       },
+       "right_wrist": {
+        "path": "videos/observation.images.right_wrist/chunk-010/file-089.mp4",
+        "from_timestamp": 458.9666666666666,
+        "to_timestamp": 539.8333333333333
+       }
+      }
+     },
+     {
+      "episode": 109681,
+      "length": 2679,
+      "src": {
+       "top": {
+        "path": "videos/observation.images.top/chunk-010/file-584.mp4",
+        "from_timestamp": 203.9,
+        "to_timestamp": 293.2
+       },
+       "left_wrist": {
+        "path": "videos/observation.images.left_wrist/chunk-010/file-155.mp4",
+        "from_timestamp": 203.9,
+        "to_timestamp": 293.2
+       },
+       "right_wrist": {
+        "path": "videos/observation.images.right_wrist/chunk-010/file-090.mp4",
+        "from_timestamp": 203.9,
+        "to_timestamp": 293.2
+       }
+      }
+     }
+    ],
+    "frames": 5105
+   },
+   {
+    "name": "ckpt_5k_g002",
+    "episodes": [
+     {
+      "episode": 109682,
+      "length": 1320,
+      "src": {
+       "top": {
+        "path": "videos/observation.images.top/chunk-010/file-584.mp4",
+        "from_timestamp": 293.2,
+        "to_timestamp": 337.2
+       },
+       "left_wrist": {
+        "path": "videos/observation.images.left_wrist/chunk-010/file-155.mp4",
+        "from_timestamp": 293.2,
+        "to_timestamp": 337.2
+       },
+       "right_wrist": {
+        "path": "videos/observation.images.right_wrist/chunk-010/file-090.mp4",
+        "from_timestamp": 293.2,
+        "to_timestamp": 337.2
+       }
+      }
+     },
+     {
+      "episode": 109683,
+      "length": 2411,
+      "src": {
+       "top": {
+        "path": "videos/observation.images.top/chunk-010/file-584.mp4",
+        "from_timestamp": 337.2,
+        "to_timestamp": 417.56666666666666
+       },
+       "left_wrist": {
+        "path": "videos/observation.images.left_wrist/chunk-010/file-155.mp4",
+        "from_timestamp": 337.2,
+        "to_timestamp": 417.56666666666666
+       },
+       "right_wrist": {
+        "path": "videos/observation.images.right_wrist/chunk-010/file-090.mp4",
+        "from_timestamp": 337.2,
+        "to_timestamp": 417.56666666666666
+       }
+      }
+     },
+     {
+      "episode": 109692,
+      "length": 596,
+      "src": {
+       "top": {
+        "path": "videos/observation.images.top/chunk-010/file-585.mp4",
+        "from_timestamp": 446.56666666666666,
+        "to_timestamp": 466.43333333333334
+       },
+       "left_wrist": {
+        "path": "videos/observation.images.left_wrist/chunk-010/file-156.mp4",
+        "from_timestamp": 446.56666666666666,
+        "to_timestamp": 466.43333333333334
+       },
+       "right_wrist": {
+        "path": "videos/observation.images.right_wrist/chunk-010/file-091.mp4",
+        "from_timestamp": 446.56666666666666,
+        "to_timestamp": 466.43333333333334
+       }
+      }
+     },
+     {
+      "episode": 109716,
+      "length": 764,
+      "src": {
+       "top": {
+        "path": "videos/observation.images.top/chunk-010/file-588.mp4",
+        "from_timestamp": 435.73333333333335,
+        "to_timestamp": 461.2
+       },
+       "left_wrist": {
+        "path": "videos/observation.images.left_wrist/chunk-010/file-159.mp4",
+        "from_timestamp": 435.73333333333335,
+        "to_timestamp": 461.2
+       },
+       "right_wrist": {
+        "path": "videos/observation.images.right_wrist/chunk-010/file-094.mp4",
+        "from_timestamp": 435.73333333333335,
+        "to_timestamp": 461.2
+       }
+      }
+     }
+    ],
+    "frames": 5091
+   }
+  ],
+  "ckpt_full": [
+   {
+    "name": "ckpt_full_g000",
+    "episodes": [
+     {
+      "episode": 109685,
+      "length": 2429,
+      "src": {
+       "top": {
+        "path": "videos/observation.images.top/chunk-010/file-584.mp4",
+        "from_timestamp": 447.7,
+        "to_timestamp": 528.6666666666666
+       },
+       "left_wrist": {
+        "path": "videos/observation.images.left_wrist/chunk-010/file-155.mp4",
+        "from_timestamp": 447.7,
+        "to_timestamp": 528.6666666666666
+       },
+       "right_wrist": {
+        "path": "videos/observation.images.right_wrist/chunk-010/file-090.mp4",
+        "from_timestamp": 447.7,
+        "to_timestamp": 528.6666666666666
+       }
+      }
+     },
+     {
+      "episode": 109689,
+      "length": 2304,
+      "src": {
+       "top": {
+        "path": "videos/observation.images.top/chunk-010/file-585.mp4",
+        "from_timestamp": 142.13333333333333,
+        "to_timestamp": 218.93333333333334
+       },
+       "left_wrist": {
+        "path": "videos/observation.images.left_wrist/chunk-010/file-156.mp4",
+        "from_timestamp": 142.13333333333333,
+        "to_timestamp": 218.93333333333334
+       },
+       "right_wrist": {
+        "path": "videos/observation.images.right_wrist/chunk-010/file-091.mp4",
+        "from_timestamp": 142.13333333333333,
+        "to_timestamp": 218.93333333333334
+       }
+      }
+     },
+     {
+      "episode": 109690,
+      "length": 4363,
+      "src": {
+       "top": {
+        "path": "videos/observation.images.top/chunk-010/file-585.mp4",
+        "from_timestamp": 218.93333333333334,
+        "to_timestamp": 364.3666666666667
+       },
+       "left_wrist": {
+        "path": "videos/observation.images.left_wrist/chunk-010/file-156.mp4",
+        "from_timestamp": 218.93333333333334,
+        "to_timestamp": 364.3666666666667
+       },
+       "right_wrist": {
+        "path": "videos/observation.images.right_wrist/chunk-010/file-091.mp4",
+        "from_timestamp": 218.93333333333334,
+        "to_timestamp": 364.3666666666667
+       }
+      }
+     },
+     {
+      "episode": 109691,
+      "length": 2466,
+      "src": {
+       "top": {
+        "path": "videos/observation.images.top/chunk-010/file-585.mp4",
+        "from_timestamp": 364.3666666666667,
+        "to_timestamp": 446.56666666666666
+       },
+       "left_wrist": {
+        "path": "videos/observation.images.left_wrist/chunk-010/file-156.mp4",
+        "from_timestamp": 364.3666666666667,
+        "to_timestamp": 446.56666666666666
+       },
+       "right_wrist": {
+        "path": "videos/observation.images.right_wrist/chunk-010/file-091.mp4",
+        "from_timestamp": 364.3666666666667,
+        "to_timestamp": 446.56666666666666
+       }
+      }
+     },
+     {
+      "episode": 109693,
+      "length": 2519,
+      "src": {
+       "top": {
+        "path": "videos/observation.images.top/chunk-010/file-585.mp4",
+        "from_timestamp": 466.43333333333334,
+        "to_timestamp": 550.4
+       },
+       "left_wrist": {
+        "path": "videos/observation.images.left_wrist/chunk-010/file-156.mp4",
+        "from_timestamp": 466.43333333333334,
+        "to_timestamp": 550.4
+       },
+       "right_wrist": {
+        "path": "videos/observation.images.right_wrist/chunk-010/file-091.mp4",
+        "from_timestamp": 466.43333333333334,
+        "to_timestamp": 550.4
+       }
+      }
+     },
+     {
+      "episode": 109694,
+      "length": 4441,
+      "src": {
+       "top": {
+        "path": "videos/observation.images.top/chunk-010/file-586.mp4",
+        "from_timestamp": 0.0,
+        "to_timestamp": 148.03333333333333
+       },
+       "left_wrist": {
+        "path": "videos/observation.images.left_wrist/chunk-010/file-157.mp4",
+        "from_timestamp": 0.0,
+        "to_timestamp": 148.03333333333333
+       },
+       "right_wrist": {
+        "path": "videos/observation.images.right_wrist/chunk-010/file-092.mp4",
+        "from_timestamp": 0.0,
+        "to_timestamp": 148.03333333333333
+       }
+      }
+     },
+     {
+      "episode": 109696,
+      "length": 2537,
+      "src": {
+       "top": {
+        "path": "videos/observation.images.top/chunk-010/file-586.mp4",
+        "from_timestamp": 212.0,
+        "to_timestamp": 296.56666666666666
+       },
+       "left_wrist": {
+        "path": "videos/observation.images.left_wrist/chunk-010/file-157.mp4",
+        "from_timestamp": 212.0,
+        "to_timestamp": 296.56666666666666
+       },
+       "right_wrist": {
+        "path": "videos/observation.images.right_wrist/chunk-010/file-092.mp4",
+        "from_timestamp": 212.0,
+        "to_timestamp": 296.56666666666666
+       }
+      }
+     },
+     {
+      "episode": 109697,
+      "length": 2321,
+      "src": {
+       "top": {
+        "path": "videos/observation.images.top/chunk-010/file-586.mp4",
+        "from_timestamp": 296.56666666666666,
+        "to_timestamp": 373.93333333333334
+       },
+       "left_wrist": {
+        "path": "videos/observation.images.left_wrist/chunk-010/file-157.mp4",
+        "from_timestamp": 296.56666666666666,
+        "to_timestamp": 373.93333333333334
+       },
+       "right_wrist": {
+        "path": "videos/observation.images.right_wrist/chunk-010/file-092.mp4",
+        "from_timestamp": 296.56666666666666,
+        "to_timestamp": 373.93333333333334
+       }
+      }
+     }
+    ],
+    "frames": 23380
+   },
+   {
+    "name": "ckpt_full_g001",
+    "episodes": [
+     {
+      "episode": 109698,
+      "length": 2848,
+      "src": {
+       "top": {
+        "path": "videos/observation.images.top/chunk-010/file-586.mp4",
+        "from_timestamp": 373.93333333333334,
+        "to_timestamp": 468.8666666666667
+       },
+       "left_wrist": {
+        "path": "videos/observation.images.left_wrist/chunk-010/file-157.mp4",
+        "from_timestamp": 373.93333333333334,
+        "to_timestamp": 468.8666666666667
+       },
+       "right_wrist": {
+        "path": "videos/observation.images.right_wrist/chunk-010/file-092.mp4",
+        "from_timestamp": 373.93333333333334,
+        "to_timestamp": 468.8666666666667
+       }
+      }
+     },
+     {
+      "episode": 109700,
+      "length": 4191,
+      "src": {
+       "top": {
+        "path": "videos/observation.images.top/chunk-010/file-586.mp4",
+        "from_timestamp": 538.9666666666667,
+        "to_timestamp": 678.6666666666667
+       },
+       "left_wrist": {
+        "path": "videos/observation.images.left_wrist/chunk-010/file-157.mp4",
+        "from_timestamp": 538.9666666666667,
+        "to_timestamp": 678.6666666666667
+       },
+       "right_wrist": {
+        "path": "videos/observation.images.right_wrist/chunk-010/file-092.mp4",
+        "from_timestamp": 538.9666666666667,
+        "to_timestamp": 678.6666666666667
+       }
+      }
+     },
+     {
+      "episode": 109701,
+      "length": 2389,
+      "src": {
+       "top": {
+        "path": "videos/observation.images.top/chunk-010/file-586.mp4",
+        "from_timestamp": 678.6666666666667,
+        "to_timestamp": 758.3000000000001
+       },
+       "left_wrist": {
+        "path": "videos/observation.images.left_wrist/chunk-010/file-157.mp4",
+        "from_timestamp": 678.6666666666667,
+        "to_timestamp": 758.3000000000001
+       },
+       "right_wrist": {
+        "path": "videos/observation.images.right_wrist/chunk-010/file-092.mp4",
+        "from_timestamp": 678.6666666666667,
+        "to_timestamp": 758.3000000000001
+       }
+      }
+     },
+     {
+      "episode": 109702,
+      "length": 5992,
+      "src": {
+       "top": {
+        "path": "videos/observation.images.top/chunk-010/file-587.mp4",
+        "from_timestamp": 0.0,
+        "to_timestamp": 199.73333333333332
+       },
+       "left_wrist": {
+        "path": "videos/observation.images.left_wrist/chunk-010/file-158.mp4",
+        "from_timestamp": 0.0,
+        "to_timestamp": 199.73333333333332
+       },
+       "right_wrist": {
+        "path": "videos/observation.images.right_wrist/chunk-010/file-093.mp4",
+        "from_timestamp": 0.0,
+        "to_timestamp": 199.73333333333332
+       }
+      }
+     },
+     {
+      "episode": 109703,
+      "length": 2460,
+      "src": {
+       "top": {
+        "path": "videos/observation.images.top/chunk-010/file-587.mp4",
+        "from_timestamp": 199.73333333333332,
+        "to_timestamp": 281.73333333333335
+       },
+       "left_wrist": {
+        "path": "videos/observation.images.left_wrist/chunk-010/file-158.mp4",
+        "from_timestamp": 199.73333333333332,
+        "to_timestamp": 281.73333333333335
+       },
+       "right_wrist": {
+        "path": "videos/observation.images.right_wrist/chunk-010/file-093.mp4",
+        "from_timestamp": 199.73333333333332,
+        "to_timestamp": 281.73333333333335
+       }
+      }
+     },
+     {
+      "episode": 109704,
+      "length": 4200,
+      "src": {
+       "top": {
+        "path": "videos/observation.images.top/chunk-010/file-587.mp4",
+        "from_timestamp": 281.73333333333335,
+        "to_timestamp": 421.73333333333335
+       },
+       "left_wrist": {
+        "path": "videos/observation.images.left_wrist/chunk-010/file-158.mp4",
+        "from_timestamp": 281.73333333333335,
+        "to_timestamp": 421.73333333333335
+       },
+       "right_wrist": {
+        "path": "videos/observation.images.right_wrist/chunk-010/file-093.mp4",
+        "from_timestamp": 281.73333333333335,
+        "to_timestamp": 421.73333333333335
+       }
+      }
+     },
+     {
+      "episode": 109705,
+      "length": 3679,
+      "src": {
+       "top": {
+        "path": "videos/observation.images.top/chunk-010/file-587.mp4",
+        "from_timestamp": 421.73333333333335,
+        "to_timestamp": 544.3666666666667
+       },
+       "left_wrist": {
+        "path": "videos/observation.images.left_wrist/chunk-010/file-158.mp4",
+        "from_timestamp": 421.73333333333335,
+        "to_timestamp": 544.3666666666667
+       },
+       "right_wrist": {
+        "path": "videos/observation.images.right_wrist/chunk-010/file-093.mp4",
+        "from_timestamp": 421.73333333333335,
+        "to_timestamp": 544.3666666666667
+       }
+      }
+     }
+    ],
+    "frames": 25759
+   },
+   {
+    "name": "ckpt_full_g002",
+    "episodes": [
+     {
+      "episode": 109706,
+      "length": 3756,
+      "src": {
+       "top": {
+        "path": "videos/observation.images.top/chunk-010/file-587.mp4",
+        "from_timestamp": 544.3666666666667,
+        "to_timestamp": 669.5666666666667
+       },
+       "left_wrist": {
+        "path": "videos/observation.images.left_wrist/chunk-010/file-158.mp4",
+        "from_timestamp": 544.3666666666667,
+        "to_timestamp": 669.5666666666667
+       },
+       "right_wrist": {
+        "path": "videos/observation.images.right_wrist/chunk-010/file-093.mp4",
+        "from_timestamp": 544.3666666666667,
+        "to_timestamp": 669.5666666666667
+       }
+      }
+     },
+     {
+      "episode": 109707,
+      "length": 3591,
+      "src": {
+       "top": {
+        "path": "videos/observation.images.top/chunk-010/file-587.mp4",
+        "from_timestamp": 669.5666666666667,
+        "to_timestamp": 789.2666666666668
+       },
+       "left_wrist": {
+        "path": "videos/observation.images.left_wrist/chunk-010/file-158.mp4",
+        "from_timestamp": 669.5666666666667,
+        "to_timestamp": 789.2666666666668
+       },
+       "right_wrist": {
+        "path": "videos/observation.images.right_wrist/chunk-010/file-093.mp4",
+        "from_timestamp": 669.5666666666667,
+        "to_timestamp": 789.2666666666668
+       }
+      }
+     },
+     {
+      "episode": 109708,
+      "length": 3393,
+      "src": {
+       "top": {
+        "path": "videos/observation.images.top/chunk-010/file-587.mp4",
+        "from_timestamp": 789.2666666666668,
+        "to_timestamp": 902.3666666666668
+       },
+       "left_wrist": {
+        "path": "videos/observation.images.left_wrist/chunk-010/file-158.mp4",
+        "from_timestamp": 789.2666666666668,
+        "to_timestamp": 902.3666666666668
+       },
+       "right_wrist": {
+        "path": "videos/observation.images.right_wrist/chunk-010/file-093.mp4",
+        "from_timestamp": 789.2666666666668,
+        "to_timestamp": 902.3666666666668
+       }
+      }
+     },
+     {
+      "episode": 109709,
+      "length": 3693,
+      "src": {
+       "top": {
+        "path": "videos/observation.images.top/chunk-010/file-587.mp4",
+        "from_timestamp": 902.3666666666668,
+        "to_timestamp": 1025.4666666666667
+       },
+       "left_wrist": {
+        "path": "videos/observation.images.left_wrist/chunk-010/file-158.mp4",
+        "from_timestamp": 902.3666666666668,
+        "to_timestamp": 1025.4666666666667
+       },
+       "right_wrist": {
+        "path": "videos/observation.images.right_wrist/chunk-010/file-093.mp4",
+        "from_timestamp": 902.3666666666668,
+        "to_timestamp": 1025.4666666666667
+       }
+      }
+     },
+     {
+      "episode": 109710,
+      "length": 2349,
+      "src": {
+       "top": {
+        "path": "videos/observation.images.top/chunk-010/file-588.mp4",
+        "from_timestamp": 0.0,
+        "to_timestamp": 78.3
+       },
+       "left_wrist": {
+        "path": "videos/observation.images.left_wrist/chunk-010/file-159.mp4",
+        "from_timestamp": 0.0,
+        "to_timestamp": 78.3
+       },
+       "right_wrist": {
+        "path": "videos/observation.images.right_wrist/chunk-010/file-094.mp4",
+        "from_timestamp": 0.0,
+        "to_timestamp": 78.3
+       }
+      }
+     },
+     {
+      "episode": 109711,
+      "length": 3770,
+      "src": {
+       "top": {
+        "path": "videos/observation.images.top/chunk-010/file-588.mp4",
+        "from_timestamp": 78.3,
+        "to_timestamp": 203.96666666666667
+       },
+       "left_wrist": {
+        "path": "videos/observation.images.left_wrist/chunk-010/file-159.mp4",
+        "from_timestamp": 78.3,
+        "to_timestamp": 203.96666666666667
+       },
+       "right_wrist": {
+        "path": "videos/observation.images.right_wrist/chunk-010/file-094.mp4",
+        "from_timestamp": 78.3,
+        "to_timestamp": 203.96666666666667
+       }
+      }
+     },
+     {
+      "episode": 109715,
+      "length": 1250,
+      "src": {
+       "top": {
+        "path": "videos/observation.images.top/chunk-010/file-588.mp4",
+        "from_timestamp": 394.06666666666666,
+        "to_timestamp": 435.73333333333335
+       },
+       "left_wrist": {
+        "path": "videos/observation.images.left_wrist/chunk-010/file-159.mp4",
+        "from_timestamp": 394.06666666666666,
+        "to_timestamp": 435.73333333333335
+       },
+       "right_wrist": {
+        "path": "videos/observation.images.right_wrist/chunk-010/file-094.mp4",
+        "from_timestamp": 394.06666666666666,
+        "to_timestamp": 435.73333333333335
+       }
+      }
+     },
+     {
+      "episode": 109717,
+      "length": 3177,
+      "src": {
+       "top": {
+        "path": "videos/observation.images.top/chunk-010/file-588.mp4",
+        "from_timestamp": 461.2,
+        "to_timestamp": 567.1
+       },
+       "left_wrist": {
+        "path": "videos/observation.images.left_wrist/chunk-010/file-159.mp4",
+        "from_timestamp": 461.2,
+        "to_timestamp": 567.1
+       },
+       "right_wrist": {
+        "path": "videos/observation.images.right_wrist/chunk-010/file-094.mp4",
+        "from_timestamp": 461.2,
+        "to_timestamp": 567.1
+       }
+      }
+     }
+    ],
+    "frames": 24979
+   }
+  ]
+ },
+ "smoke": {
+  "ckpt_1k": 3,
+  "ckpt_5k": 3,
+  "thrash": 12
+ },
+ "download": {
+  "full": {
+   "videos/observation.images.left_wrist/chunk-010/file-154.mp4": 49664049,
+   "videos/observation.images.left_wrist/chunk-010/file-155.mp4": 40286203,
+   "videos/observation.images.left_wrist/chunk-010/file-156.mp4": 55854084,
+   "videos/observation.images.left_wrist/chunk-010/file-157.mp4": 71479151,
+   "videos/observation.images.left_wrist/chunk-010/file-158.mp4": 88171169,
+   "videos/observation.images.left_wrist/chunk-010/file-159.mp4": 38595220,
+   "videos/observation.images.left_wrist/chunk-010/file-160.mp4": 36341916,
+   "videos/observation.images.left_wrist/chunk-010/file-161.mp4": 36745372,
+   "videos/observation.images.left_wrist/chunk-010/file-162.mp4": 42531243,
+   "videos/observation.images.left_wrist/chunk-010/file-163.mp4": 80796561,
+   "videos/observation.images.left_wrist/chunk-010/file-165.mp4": 63193626,
+   "videos/observation.images.left_wrist/chunk-010/file-166.mp4": 95114499,
+   "videos/observation.images.left_wrist/chunk-010/file-167.mp4": 90545860,
+   "videos/observation.images.left_wrist/chunk-010/file-168.mp4": 63500105,
+   "videos/observation.images.left_wrist/chunk-010/file-169.mp4": 61281709,
+   "videos/observation.images.left_wrist/chunk-010/file-172.mp4": 39360266,
+   "videos/observation.images.left_wrist/chunk-010/file-173.mp4": 73060331,
+   "videos/observation.images.left_wrist/chunk-010/file-174.mp4": 34710092,
+   "videos/observation.images.left_wrist/chunk-010/file-175.mp4": 30379580,
+   "videos/observation.images.left_wrist/chunk-010/file-176.mp4": 54575351,
+   "videos/observation.images.left_wrist/chunk-010/file-177.mp4": 80325490,
+   "videos/observation.images.left_wrist/chunk-010/file-180.mp4": 68197032,
+   "videos/observation.images.left_wrist/chunk-010/file-183.mp4": 32853689,
+   "videos/observation.images.left_wrist/chunk-010/file-185.mp4": 40689342,
+   "videos/observation.images.right_wrist/chunk-010/file-089.mp4": 45128461,
+   "videos/observation.images.right_wrist/chunk-010/file-090.mp4": 42792693,
+   "videos/observation.images.right_wrist/chunk-010/file-091.mp4": 49909220,
+   "videos/observation.images.right_wrist/chunk-010/file-092.mp4": 70937550,
+   "videos/observation.images.right_wrist/chunk-010/file-093.mp4": 87544340,
+   "videos/observation.images.right_wrist/chunk-010/file-094.mp4": 34959452,
+   "videos/observation.images.right_wrist/chunk-010/file-095.mp4": 35318156,
+   "videos/observation.images.right_wrist/chunk-010/file-096.mp4": 35645282,
+   "videos/observation.images.right_wrist/chunk-010/file-097.mp4": 46614767,
+   "videos/observation.images.right_wrist/chunk-010/file-098.mp4": 81504861,
+   "videos/observation.images.right_wrist/chunk-010/file-100.mp4": 56824953,
+   "videos/observation.images.right_wrist/chunk-010/file-101.mp4": 85272736,
+   "videos/observation.images.right_wrist/chunk-010/file-102.mp4": 93597830,
+   "videos/observation.images.right_wrist/chunk-010/file-103.mp4": 63423980,
+   "videos/observation.images.right_wrist/chunk-010/file-104.mp4": 58761829,
+   "videos/observation.images.right_wrist/chunk-010/file-107.mp4": 42182875,
+   "videos/observation.images.right_wrist/chunk-010/file-108.mp4": 70556692,
+   "videos/observation.images.right_wrist/chunk-010/file-109.mp4": 34039874,
+   "videos/observation.images.right_wrist/chunk-010/file-110.mp4": 29871789,
+   "videos/observation.images.right_wrist/chunk-010/file-111.mp4": 54965554,
+   "videos/observation.images.right_wrist/chunk-010/file-112.mp4": 78806478,
+   "videos/observation.images.right_wrist/chunk-010/file-115.mp4": 65630532,
+   "videos/observation.images.right_wrist/chunk-010/file-118.mp4": 28332842,
+   "videos/observation.images.right_wrist/chunk-010/file-120.mp4": 42209898,
+   "videos/observation.images.top/chunk-010/file-583.mp4": 69275630,
+   "videos/observation.images.top/chunk-010/file-584.mp4": 51809946,
+   "videos/observation.images.top/chunk-010/file-585.mp4": 63414176,
+   "videos/observation.images.top/chunk-010/file-586.mp4": 91843934,
+   "videos/observation.images.top/chunk-010/file-587.mp4": 103173567,
+   "videos/observation.images.top/chunk-010/file-588.mp4": 46026088,
+   "videos/observation.images.top/chunk-010/file-589.mp4": 45666927,
+   "videos/observation.images.top/chunk-010/file-590.mp4": 42794284,
+   "videos/observation.images.top/chunk-010/file-591.mp4": 63844788,
+   "videos/observation.images.top/chunk-010/file-592.mp4": 87559744,
+   "videos/observation.images.top/chunk-010/file-594.mp4": 76490976,
+   "videos/observation.images.top/chunk-010/file-595.mp4": 103780275,
+   "videos/observation.images.top/chunk-010/file-596.mp4": 100235849,
+   "videos/observation.images.top/chunk-010/file-597.mp4": 81590990,
+   "videos/observation.images.top/chunk-010/file-598.mp4": 73191107,
+   "videos/observation.images.top/chunk-010/file-601.mp4": 43693164,
+   "videos/observation.images.top/chunk-010/file-602.mp4": 88447250,
+   "videos/observation.images.top/chunk-010/file-603.mp4": 37860878,
+   "videos/observation.images.top/chunk-010/file-604.mp4": 40844923,
+   "videos/observation.images.top/chunk-010/file-605.mp4": 63345328,
+   "videos/observation.images.top/chunk-010/file-606.mp4": 93593045,
+   "videos/observation.images.top/chunk-010/file-609.mp4": 79349877,
+   "videos/observation.images.top/chunk-010/file-612.mp4": 38537755,
+   "videos/observation.images.top/chunk-010/file-614.mp4": 47617928
+  },
+  "smoke": {
+   "videos/observation.images.left_wrist/chunk-010/file-154.mp4": 49664049,
+   "videos/observation.images.left_wrist/chunk-010/file-155.mp4": 40286203,
+   "videos/observation.images.left_wrist/chunk-010/file-156.mp4": 55854084,
+   "videos/observation.images.left_wrist/chunk-010/file-157.mp4": 71479151,
+   "videos/observation.images.left_wrist/chunk-010/file-159.mp4": 38595220,
+   "videos/observation.images.right_wrist/chunk-010/file-089.mp4": 45128461,
+   "videos/observation.images.right_wrist/chunk-010/file-090.mp4": 42792693,
+   "videos/observation.images.right_wrist/chunk-010/file-091.mp4": 49909220,
+   "videos/observation.images.right_wrist/chunk-010/file-092.mp4": 70937550,
+   "videos/observation.images.right_wrist/chunk-010/file-094.mp4": 34959452,
+   "videos/observation.images.top/chunk-010/file-583.mp4": 69275630,
+   "videos/observation.images.top/chunk-010/file-584.mp4": 51809946,
+   "videos/observation.images.top/chunk-010/file-585.mp4": 63414176,
+   "videos/observation.images.top/chunk-010/file-586.mp4": 91843934,
+   "videos/observation.images.top/chunk-010/file-588.mp4": 46026088
+  }
+ },
+ "download_bytes": {
+  "full": 4337073013,
+  "smoke": 821975857
+ },
+ "search": {
+  "start_episode_row": 109670,
+  "span": 250
+ }
+}

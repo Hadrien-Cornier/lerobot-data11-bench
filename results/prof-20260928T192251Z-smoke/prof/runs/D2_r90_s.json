@@ -1,0 +1,27 @@
+{
+ "arm": "D2",
+ "cfg": {
+  "loader": true,
+  "decode_threads": 2,
+  "transforms": false,
+  "torch_threads": null
+ },
+ "rep": 90,
+ "sample": true,
+ "status": "ok",
+ "utc_start": "2026-09-28T19:28:14Z",
+ "torch_threads": 32,
+ "build_s": 0.21205181599361822,
+ "first_s": 15.704217676000553,
+ "n": 20920,
+ "steady_window_s": 55.00944850999804,
+ "sps": 305.4020800980504,
+ "sps_all": 278.7750748452176,
+ "wait_ms_p50": 25.694985000882298,
+ "wait_ms_p95": 31.16973300348036,
+ "window_unix": [
+  1790623735.3786945,
+  1790623790.3925745
+ ],
+ "samples_in_window": 16800
+}

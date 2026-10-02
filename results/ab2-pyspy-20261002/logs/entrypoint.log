@@ -1,0 +1,30 @@
+== DATA-11 ab2 job ab2-pyspy-20261002 start 2026-10-02T16:39:23Z SMOKE=0 host=j-hadriencornier-6abfde34fbc85ba6823720a0-09z5j0md-5cd47-gpb4f
+HF_TOKEN present (value not shown); results -> dataset hadriencornier/lerobot-data11-bench:results/ab2-pyspy-20261002
+attempt marker attempts/6abfde34fbc85ba6823720a0 recorded
+system ffmpeg: ffmpeg version 7.1.5-0+deb13u1 Copyright (c) 2000-2026 the FFmpeg developers
+== stage system_deps: ok (29s, cgroup peak 841 MB)
+bundle checksums OK
+== stage bundle: ok (0s, cgroup peak 841 MB)
+
+[notice] A new release of pip is available: 25.0.1 -> 26.2.1
+[notice] To update, run: pip install --upgrade pip
+patching file src/lerobot/streaming/manifest.py
+patching file src/lerobot/streaming/mp4.py
+patching file tests/datasets/test_episode_video_streaming.py
+patching file src/lerobot/datasets/streaming_dataset.py
+patching file tests/datasets/test_streaming_production.py
+Using Python 3.12.15 environment at: /work/venv_base
+base venv /work/venv_base/lib/python3.12/site-packages/lerobot/__init__.py 2.11.0+cpu 0.11.1+cpu probe_patch False tfx_patch False
+Using Python 3.12.15 environment at: /work/venv_probe
+probe venv /work/venv_probe/lib/python3.12/site-packages/lerobot/__init__.py 2.11.0+cpu 0.11.1+cpu probe_patch True tfx_patch False
+Using Python 3.12.15 environment at: /work/venv_tfx
+tfx venv /work/venv_tfx/lib/python3.12/site-packages/lerobot/__init__.py 2.11.0+cpu 0.11.1+cpu probe_patch False tfx_patch True
+== stage python_env: ok (81s, cgroup peak 3816 MB)
+uploaded results/ab2-pyspy-20261002 (setup done)
+== stage ab2 start 2026-10-02T16:41:16Z
+[16:44:15] BASE_D6T_pyspy_gil: ok sps 85.86419453591857 cpu/sample 14.947301965095123
+[16:47:06] TFX_D6T_pyspy_gil: ok sps 101.93535385718307 cpu/sample 32.82607720664194
+== stage ab2: ok (350s, cgroup peak 6371 MB)
+uploaded results/ab2-pyspy-20261002 (after ab2)
+== done 2026-10-02T16:47:07Z: /results/ab2-pyspy-20261002
+== exit code 0 at 2026-10-02T16:47:07Z

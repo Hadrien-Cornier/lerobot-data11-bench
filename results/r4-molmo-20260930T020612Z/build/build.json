@@ -1,0 +1,105 @@
+{
+ "ncopy": 8,
+ "no_upload": false,
+ "datasets": {
+  "sep": {
+   "kind": "sep",
+   "root": "/work/ds/sep",
+   "video_keys": [
+    "observation.images.right",
+    "observation.images.left",
+    "observation.images.top"
+   ],
+   "files_per_key": 8,
+   "episodes": 128,
+   "frames": 248920,
+   "frames_per_file": 31115,
+   "episodes_per_file": 16,
+   "stack_layout": null,
+   "video_bytes_per_file": {
+    "observation.images.right": 195865499,
+    "observation.images.left": 215189202,
+    "observation.images.top": 301519052
+   },
+   "repo": "hadriencornier/lerobot-data11-r4-molmo-sep",
+   "commit": "8fc0fb143a7fd83802bf7f7658b6de1f7ffd3c28",
+   "upload_s": 6.5,
+   "files": 35,
+   "readback_mismatch": [],
+   "private": true
+  },
+  "stack": {
+   "kind": "stack",
+   "root": "/work/ds/stack",
+   "video_keys": [
+    "observation.images.stacked"
+   ],
+   "files_per_key": 8,
+   "episodes": 128,
+   "frames": 248920,
+   "frames_per_file": 31115,
+   "episodes_per_file": 16,
+   "stack_layout": {
+    "key": "observation.images.stacked",
+    "order_top_to_bottom": [
+     "right",
+     "left",
+     "top"
+    ],
+    "crops_y0_h_w": {
+     "right": [
+      0,
+      360,
+      640
+     ],
+     "left": [
+      360,
+      360,
+      640
+     ],
+     "top": [
+      720,
+      360,
+      640
+     ]
+    },
+    "height": 1080,
+    "width": 640,
+    "pad": "right-pad narrower cameras with black; odd heights padded by one black row",
+    "source": "allenai/MolmoAct2-BimanualYAM-Dataset@e9f21ae15074330839f2ac25ed4b49d76dfa1f9c"
+   },
+   "video_bytes_per_file": {
+    "observation.images.stacked": 700862965
+   },
+   "repo": "hadriencornier/lerobot-data11-r4-molmo-stack",
+   "commit": "ef8b81635b08fab68a716096f0f50bdd5bffde14",
+   "upload_s": 4.4,
+   "files": 20,
+   "readback_mismatch": [],
+   "private": true
+  },
+  "sep1": {
+   "kind": "sep1",
+   "root": "/work/ds/sep1",
+   "video_keys": [
+    "observation.images.right"
+   ],
+   "files_per_key": 8,
+   "episodes": 128,
+   "frames": 248920,
+   "frames_per_file": 31115,
+   "episodes_per_file": 16,
+   "stack_layout": null,
+   "video_bytes_per_file": {
+    "observation.images.right": 195865499
+   },
+   "repo": "hadriencornier/lerobot-data11-r4-molmo-sep1",
+   "commit": "0b6e8789babd05fc3af4bdcc777a1efcad4798b4",
+   "upload_s": 1.4,
+   "files": 19,
+   "readback_mismatch": [],
+   "private": true
+  }
+ },
+ "ok": true
+}

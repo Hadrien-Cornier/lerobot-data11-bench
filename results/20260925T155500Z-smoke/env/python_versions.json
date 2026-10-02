@@ -1,0 +1,38 @@
+{
+ "python": "3.12.14 (main, Sep 19 2026, 01:04:57) [GCC 14.2.0]",
+ "os_cpu_count": 64,
+ "sched_affinity": 64,
+ "torch": "2.11.0+cpu",
+ "torch_num_threads": 32,
+ "torchcodec": "0.11.1+cpu",
+ "torchcodec_ffmpeg": {
+  "libavfilter": [
+   10,
+   5,
+   100
+  ],
+  "libavutil": [
+   59,
+   39,
+   100
+  ],
+  "libavcodec": [
+   61,
+   19,
+   101
+  ],
+  "libavformat": [
+   61,
+   7,
+   103
+  ],
+  "ffmpeg_version": "7.1.5-0+deb13u1"
+ },
+ "numpy": "2.2.6",
+ "pandas": "2.3.3",
+ "pyarrow": "25.0.1",
+ "psutil": "7.2.2",
+ "huggingface_hub": "1.30.0",
+ "fsspec": "2026.2.0",
+ "httpx": "0.28.1"
+}

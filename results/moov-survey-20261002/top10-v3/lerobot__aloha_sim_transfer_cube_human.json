@@ -1,0 +1,45 @@
+{
+ "repo": "lerobot/aloha_sim_transfer_cube_human",
+ "revision": "6a43d500f101255823a9d2b9dc244eeb01a2cd31",
+ "codebase_version": "v3.0",
+ "fps": 50,
+ "total_videos": null,
+ "video_keys": [
+  "observation.images.top"
+ ],
+ "files": [
+  {
+   "path": "videos/observation.images.top/chunk-000/file-000.mp4",
+   "file_size": 67515747,
+   "boxes": [
+    [
+     "ftyp",
+     0,
+     32
+    ],
+    [
+     "free",
+     32,
+     8
+    ],
+    [
+     "mdat",
+     40,
+     67393960
+    ],
+    [
+     "moov",
+     67394000,
+     121747
+    ]
+   ],
+   "moov_size": 121747,
+   "moov_end": 67515747,
+   "moov_first": false,
+   "reads_now": 6,
+   "bytes_now": 130145171,
+   "reads_patched": 2,
+   "bytes_patched": 646035
+  }
+ ]
+}

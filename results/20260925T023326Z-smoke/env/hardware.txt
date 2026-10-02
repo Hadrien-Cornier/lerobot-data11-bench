@@ -1,0 +1,100 @@
+## date
+2026-09-25T02:34:55Z
+## uname
+Linux j-hadriencornier-6ab5dd6d52d0dbd7f1d8de6e-57gmlgg0-50fb2-mt956 6.12.103-127.188.amzn2023.x86_64 #1 SMP PREEMPT_DYNAMIC Tue Aug 25 15:42:53 UTC 2026 x86_64 GNU/Linux
+## os-release
+PRETTY_NAME="Debian GNU/Linux 13 (trixie)"
+NAME="Debian GNU/Linux"
+VERSION_ID="13"
+VERSION="13 (trixie)"
+VERSION_CODENAME=trixie
+DEBIAN_VERSION_FULL=13.7
+ID=debian
+HOME_URL="https://www.debian.org/"
+SUPPORT_URL="https://www.debian.org/support"
+BUG_REPORT_URL="https://bugs.debian.org/"
+## nproc
+64
+64
+## cgroup cpu.max / memory.max
+800000 100000
+32000000000
+## lscpu
+Architecture:                            x86_64
+CPU op-mode(s):                          32-bit, 64-bit
+Address sizes:                           48 bits physical, 48 bits virtual
+Byte Order:                              Little Endian
+CPU(s):                                  64
+On-line CPU(s) list:                     0-63
+Vendor ID:                               AuthenticAMD
+Model name:                              AMD EPYC 7R13 Processor
+CPU family:                              25
+Model:                                   1
+Thread(s) per core:                      2
+Core(s) per socket:                      32
+Socket(s):                               1
+Stepping:                                1
+BogoMIPS:                                5300.00
+Flags:                                   fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology nonstop_tsc cpuid extd_apicid aperfmperf tsc_known_freq pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm cmp_legacy cr8_legacy abm sse4a misalignsse 3dnowprefetch topoext ssbd ibrs ibpb stibp vmmcall fsgsbase bmi1 avx2 smep bmi2 invpcid rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 clzero xsaveerptr rdpru wbnoinvd arat npt nrip_save vaes vpclmulqdq rdpid
+Hypervisor vendor:                       KVM
+Virtualization type:                     full
+L1d cache:                               1 MiB (32 instances)
+L1i cache:                               1 MiB (32 instances)
+L2 cache:                                16 MiB (32 instances)
+L3 cache:                                128 MiB (4 instances)
+NUMA node(s):                            2
+NUMA node0 CPU(s):                       0-15,32-47
+NUMA node1 CPU(s):                       16-31,48-63
+Vulnerability Gather data sampling:      Not affected
+Vulnerability Indirect target selection: Not affected
+Vulnerability Itlb multihit:             Not affected
+Vulnerability L1tf:                      Not affected
+Vulnerability Mds:                       Not affected
+Vulnerability Meltdown:                  Not affected
+Vulnerability Mmio stale data:           Not affected
+Vulnerability Reg file data sampling:    Not affected
+Vulnerability Retbleed:                  Not affected
+Vulnerability Spec rstack overflow:      Mitigation; Safe RET
+Vulnerability Spec store bypass:         Mitigation; Speculative Store Bypass disabled via prctl
+Vulnerability Spectre v1:                Mitigation; usercopy/swapgs barriers and __user pointer sanitization
+Vulnerability Spectre v2:                Mitigation; Retpolines; IBPB conditional; IBRS_FW; STIBP always-on; RSB filling; PBRSB-eIBRS Not affected; BHI Not affected
+Vulnerability Srbds:                     Not affected
+Vulnerability Tsa:                       Mitigation; Clear CPU buffers
+Vulnerability Tsx async abort:           Not affected
+Vulnerability Vmscape:                   Not affected
+## free -m
+               total        used        free      shared  buff/cache   available
+Mem:          505143       24994      298462           7      184983      480149
+Swap:              0           0           0
+## df -h
+Filesystem      Size  Used Avail Use% Mounted on
+overlay         1.5T  839G  662G  56% /
+overlay         1.5T  839G  662G  56% /
+tmpfs           486G     0  486G   0% /dev/shm
+## mounts
+overlay / overlay rw,seclabel,relatime,lowerdir=/tmp/ovl-idmapped70452199/3797/fs:/tmp/ovl-idmapped70452199/3796/fs:/tmp/ovl-idmapped70452199/3795/fs:/tmp/ovl-idmapped70452199/3794/fs,upperdir=/var/lib/containerd/io.containerd.snapshotter.v1.overlayfs/snapshots/16906/fs,workdir=/var/lib/containerd/io.containerd.snapshotter.v1.overlayfs/snapshots/16906/work,uuid=on 0 0
+tmpfs /dev/shm tmpfs rw,seclabel,relatime,idmapped,size=508602188k,noswap 0 0
+## block devices
+NAME          MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS
+nvme0n1       259:0    0  1.5T  0 disk 
+├─nvme0n1p1   259:1    0  1.5T  0 part /etc/resolv.conf
+│                                      /etc/hostname
+│                                      /tmp/termination-log
+│                                      /etc/hosts
+├─nvme0n1p127 259:2    0    1M  0 part 
+└─nvme0n1p128 259:3    0   10M  0 part 
+## ffmpeg
+ffmpeg version 7.1.5-0+deb13u1 Copyright (c) 2000-2026 the FFmpeg developers
+built with gcc 14 (Debian 14.2.0-19)
+configuration: --prefix=/usr --extra-version=0+deb13u1 --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --arch=amd64 --enable-gpl --disable-stripping --disable-libmfx --disable-omx --enable-gnutls --enable-libaom --enable-libass --enable-libbs2b --enable-libcdio --enable-libcodec2 --enable-libdav1d --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libglslang --enable-libgme --enable-libgsm --enable-libharfbuzz --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzimg --enable-openal --enable-opencl --enable-opengl --disable-sndio --enable-libvpl --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-chromaprint --enable-frei0r --enable-ladspa --enable-libbluray --enable-libcaca --enable-libdvdnav --enable-libdvdread --enable-libjack --enable-libpulse --enable-librabbitmq --enable-librist --enable-libsrt --enable-libssh --enable-libsvtav1 --enable-libx264 --enable-libzmq --enable-libzvbi --enable-lv2 --enable-sdl2 --enable-libplacebo --enable-librav1e --enable-pocketsphinx --enable-librsvg --enable-libjxl --enable-shared
+## fincore
+/usr/bin/fincore
+## libav sonames
+/usr/lib/x86_64-linux-gnu/libavcodec.so.61
+/usr/lib/x86_64-linux-gnu/libavcodec.so.61.19.101
+/usr/lib/x86_64-linux-gnu/libavformat.so.61
+/usr/lib/x86_64-linux-gnu/libavformat.so.61.7.103
+/usr/lib/x86_64-linux-gnu/libavutil.so.59
+/usr/lib/x86_64-linux-gnu/libavutil.so.59.39.100
+## python
+Python 3.12.14

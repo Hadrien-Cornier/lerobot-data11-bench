@@ -1,0 +1,10 @@
+64
+800000 100000
+32000000000
+model name	: AMD EPYC 7R13 Processor
+               total        used        free      shared  buff/cache   available
+Mem:          505143       44181      216571           8      247816      460961
+Swap:              0           0           0
+Filesystem      Size  Used Avail Use% Mounted on
+overlay         1.5T  898G  603G  60% /
+ffmpeg version 7.1.5-0+deb13u1 Copyright (c) 2000-2026 the FFmpeg developers

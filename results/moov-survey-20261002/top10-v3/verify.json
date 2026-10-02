@@ -1,0 +1,770 @@
+[
+ {
+  "repo": "BitRobot/HIW-500-LeRobot",
+  "path": "videos/observation.images.head/chunk-005/file-953.mp4",
+  "model_patched": [
+   2,
+   711045
+  ],
+  "real_patched": [
+   2,
+   711045
+  ]
+ },
+ {
+  "repo": "BitRobot/HIW-500-LeRobot",
+  "path": "videos/observation.images.head/chunk-006/file-558.mp4",
+  "model_patched": [
+   2,
+   553485
+  ],
+  "real_patched": [
+   2,
+   553485
+  ]
+ },
+ {
+  "repo": "BitRobot/HIW-500-LeRobot",
+  "path": "videos/observation.images.left_wrist/chunk-002/file-160.mp4",
+  "model_patched": [
+   2,
+   662361
+  ],
+  "real_patched": [
+   2,
+   662361
+  ]
+ },
+ {
+  "repo": "allenai/MolmoAct2-BimanualYAM-Dataset",
+  "path": "videos/observation.images.left/chunk-000/file-368.mp4",
+  "model_patched": [
+   2,
+   777245
+  ],
+  "real_patched": [
+   2,
+   777245
+  ]
+ },
+ {
+  "repo": "allenai/MolmoAct2-BimanualYAM-Dataset",
+  "path": "videos/observation.images.top/chunk-000/file-715.mp4",
+  "model_patched": [
+   2,
+   531345
+  ],
+  "real_patched": [
+   2,
+   531345
+  ]
+ },
+ {
+  "repo": "allenai/MolmoAct2-BimanualYAM-Dataset",
+  "path": "videos/observation.images.top/chunk-002/file-115.mp4",
+  "model_patched": [
+   2,
+   770045
+  ],
+  "real_patched": [
+   2,
+   770045
+  ]
+ },
+ {
+  "repo": "cadene/agibot_alpha_v30",
+  "path": "videos/observation.images.head_left_fisheye/chunk-000/file-145.mp4",
+  "model_patched": [
+   2,
+   1782155
+  ],
+  "real_patched": [
+   2,
+   1782155
+  ]
+ },
+ {
+  "repo": "cadene/agibot_alpha_v30",
+  "path": "videos/observation.images.head_right_fisheye/chunk-000/file-126.mp4",
+  "model_patched": [
+   2,
+   1955999
+  ],
+  "real_patched": [
+   2,
+   1955999
+  ]
+ },
+ {
+  "repo": "cadene/agibot_alpha_v30",
+  "path": "videos/observation.images.hand_left/chunk-000/file-071.mp4",
+  "model_patched": [
+   2,
+   820114
+  ],
+  "real_patched": [
+   2,
+   820114
+  ]
+ },
+ {
+  "repo": "lerobot/aloha_sim_insertion_human",
+  "path": "videos/observation.images.top/chunk-000/file-000.mp4",
+  "model_patched": [
+   2,
+   676367
+  ],
+  "real_patched": [
+   2,
+   676367
+  ]
+ },
+ {
+  "repo": "lerobot/aloha_sim_insertion_scripted",
+  "path": "videos/observation.images.top/chunk-000/file-000.mp4",
+  "model_patched": [
+   2,
+   646023
+  ],
+  "real_patched": [
+   2,
+   646023
+  ]
+ },
+ {
+  "repo": "lerobot/aloha_sim_transfer_cube_human",
+  "path": "videos/observation.images.top/chunk-000/file-000.mp4",
+  "model_patched": [
+   2,
+   646035
+  ],
+  "real_patched": [
+   2,
+   646035
+  ]
+ },
+ {
+  "repo": "lerobot/droid_1.0.1",
+  "path": "videos/observation.images.exterior_1_left/chunk-000/file-010.mp4",
+  "model_patched": [
+   2,
+   525613
+  ],
+  "real_patched": [
+   2,
+   525613
+  ],
+  "model_now": [
+   1,
+   4194304
+  ],
+  "real_now": [
+   1,
+   4194304
+  ],
+  "same_index": true
+ },
+ {
+  "repo": "lerobot/droid_1.0.1",
+  "path": "videos/observation.images.exterior_1_left/chunk-000/file-117.mp4",
+  "model_patched": [
+   2,
+   564381
+  ],
+  "real_patched": [
+   2,
+   564381
+  ],
+  "model_now": [
+   1,
+   4194304
+  ],
+  "real_now": [
+   1,
+   4194304
+  ],
+  "same_index": true
+ },
+ {
+  "repo": "lerobot/droid_1.0.1",
+  "path": "videos/observation.images.wrist_left/chunk-000/file-153.mp4",
+  "model_patched": [
+   2,
+   929761
+  ],
+  "real_patched": [
+   2,
+   929761
+  ],
+  "model_now": [
+   1,
+   4194304
+  ],
+  "real_now": [
+   1,
+   4194304
+  ],
+  "same_index": true
+ },
+ {
+  "repo": "lerobot/pusht",
+  "path": "videos/observation.image/chunk-000/file-000.mp4",
+  "model_patched": [
+   2,
+   679274
+  ],
+  "real_patched": [
+   2,
+   679274
+  ],
+  "model_now": [
+   3,
+   11240260
+  ],
+  "real_now": [
+   2,
+   11085274
+  ],
+  "same_index": true
+ },
+ {
+  "repo": "yaak-ai/L2D",
+  "path": "videos/observation.images.right_forward/chunk-000/file-157.mp4",
+  "model_patched": [
+   1,
+   524288
+  ],
+  "real_patched": [
+   1,
+   524288
+  ],
+  "model_now": [
+   1,
+   4194304
+  ],
+  "real_now": [
+   1,
+   4194304
+  ],
+  "same_index": true
+ },
+ {
+  "repo": "zekaiwang/trex_dataset",
+  "path": "videos/observation.images.tactile_right_raw_index/chunk-000/file-193.mp4",
+  "model_patched": [
+   1,
+   524288
+  ],
+  "real_patched": [
+   1,
+   524288
+  ],
+  "model_now": [
+   1,
+   4194304
+  ],
+  "real_now": [
+   1,
+   4194304
+  ],
+  "same_index": true
+ },
+ {
+  "repo": "IPEC-COMMUNITY/bridge_orig_lerobot",
+  "path": "videos/chunk-019/observation.images.image_0/episode_019976.mp4",
+  "model_patched": [
+   2,
+   257164
+  ],
+  "real_patched": [
+   1,
+   256165
+  ],
+  "model_now": [
+   2,
+   257164
+  ],
+  "real_now": [
+   1,
+   256165
+  ],
+  "same_index": true
+ },
+ {
+  "repo": "IPEC-COMMUNITY/bridge_orig_lerobot",
+  "path": "videos/chunk-050/observation.images.image_3/episode_050997.mp4",
+  "model_patched": [
+   2,
+   3333
+  ],
+  "real_patched": [
+   1,
+   2310
+  ],
+  "model_now": [
+   2,
+   3333
+  ],
+  "real_now": [
+   1,
+   2310
+  ],
+  "same_index": true
+ },
+ {
+  "repo": "IPEC-COMMUNITY/bridge_orig_lerobot",
+  "path": "videos/chunk-020/observation.images.image_1/episode_020522.mp4",
+  "model_patched": [
+   2,
+   2889
+  ],
+  "real_patched": [
+   1,
+   1930
+  ],
+  "model_now": [
+   2,
+   2889
+  ],
+  "real_now": [
+   1,
+   1930
+  ],
+  "same_index": true
+ },
+ {
+  "repo": "IPEC-COMMUNITY/droid_lerobot",
+  "path": "videos/chunk-061/observation.images.exterior_image_1_left/episode_061257.mp4",
+  "model_patched": [
+   2,
+   527907
+  ],
+  "real_patched": [
+   2,
+   527907
+  ],
+  "model_now": [
+   2,
+   2533893
+  ],
+  "real_now": [
+   1,
+   2530274
+  ],
+  "same_index": true
+ },
+ {
+  "repo": "IPEC-COMMUNITY/droid_lerobot",
+  "path": "videos/chunk-084/observation.images.exterior_image_1_left/episode_084783.mp4",
+  "model_patched": [
+   2,
+   515400
+  ],
+  "real_patched": [
+   1,
+   514153
+  ],
+  "model_now": [
+   2,
+   515400
+  ],
+  "real_now": [
+   1,
+   514153
+  ],
+  "same_index": true
+ },
+ {
+  "repo": "IPEC-COMMUNITY/droid_lerobot",
+  "path": "videos/chunk-062/observation.images.wrist_image_left/episode_062762.mp4",
+  "model_patched": [
+   2,
+   331721
+  ],
+  "real_patched": [
+   1,
+   330378
+  ],
+  "model_now": [
+   2,
+   331721
+  ],
+  "real_now": [
+   1,
+   330378
+  ],
+  "same_index": true
+ },
+ {
+  "repo": "IPEC-COMMUNITY/fractal20220817_data_lerobot",
+  "path": "videos/chunk-060/observation.images.image/episode_060530.mp4",
+  "model_patched": [
+   2,
+   232123
+  ],
+  "real_patched": [
+   1,
+   231104
+  ],
+  "model_now": [
+   2,
+   232123
+  ],
+  "real_now": [
+   1,
+   231104
+  ],
+  "same_index": true
+ },
+ {
+  "repo": "IPEC-COMMUNITY/fractal20220817_data_lerobot",
+  "path": "videos/chunk-033/observation.images.image/episode_033224.mp4",
+  "model_patched": [
+   2,
+   257218
+  ],
+  "real_patched": [
+   1,
+   256207
+  ],
+  "model_now": [
+   2,
+   257218
+  ],
+  "real_now": [
+   1,
+   256207
+  ],
+  "same_index": true
+ },
+ {
+  "repo": "IPEC-COMMUNITY/fractal20220817_data_lerobot",
+  "path": "videos/chunk-011/observation.images.image/episode_011212.mp4",
+  "model_patched": [
+   2,
+   66304
+  ],
+  "real_patched": [
+   1,
+   65405
+  ],
+  "model_now": [
+   2,
+   66304
+  ],
+  "real_now": [
+   1,
+   65405
+  ],
+  "same_index": true
+ },
+ {
+  "repo": "IPEC-COMMUNITY/kuka_lerobot",
+  "path": "videos/chunk-149/observation.images.image/episode_149092.mp4",
+  "model_patched": [
+   2,
+   180491
+  ],
+  "real_patched": [
+   1,
+   179636
+  ],
+  "model_now": [
+   2,
+   180491
+  ],
+  "real_now": [
+   1,
+   179636
+  ],
+  "same_index": true
+ },
+ {
+  "repo": "IPEC-COMMUNITY/kuka_lerobot",
+  "path": "videos/chunk-036/observation.images.image/episode_036779.mp4",
+  "model_patched": [
+   2,
+   104594
+  ],
+  "real_patched": [
+   1,
+   103775
+  ],
+  "model_now": [
+   2,
+   104594
+  ],
+  "real_now": [
+   1,
+   103775
+  ],
+  "same_index": true
+ },
+ {
+  "repo": "IPEC-COMMUNITY/kuka_lerobot",
+  "path": "videos/chunk-098/observation.images.image/episode_098018.mp4",
+  "model_patched": [
+   2,
+   99031
+  ],
+  "real_patched": [
+   1,
+   98216
+  ],
+  "model_now": [
+   2,
+   99031
+  ],
+  "real_now": [
+   1,
+   98216
+  ],
+  "same_index": true
+ },
+ {
+  "repo": "IPEC-COMMUNITY/language_table_lerobot",
+  "path": "videos/chunk-434/observation.images.rgb/episode_434902.mp4",
+  "model_patched": [
+   2,
+   85092
+  ],
+  "real_patched": [
+   1,
+   84277
+  ],
+  "model_now": [
+   2,
+   85092
+  ],
+  "real_now": [
+   1,
+   84277
+  ],
+  "same_index": true
+ },
+ {
+  "repo": "IPEC-COMMUNITY/language_table_lerobot",
+  "path": "videos/chunk-035/observation.images.rgb/episode_035808.mp4",
+  "model_patched": [
+   2,
+   84847
+  ],
+  "real_patched": [
+   1,
+   84032
+  ],
+  "model_now": [
+   2,
+   84847
+  ],
+  "real_now": [
+   1,
+   84032
+  ],
+  "same_index": true
+ },
+ {
+  "repo": "IPEC-COMMUNITY/language_table_lerobot",
+  "path": "videos/chunk-295/observation.images.rgb/episode_295503.mp4",
+  "model_patched": [
+   2,
+   122206
+  ],
+  "real_patched": [
+   1,
+   121367
+  ],
+  "model_now": [
+   2,
+   122206
+  ],
+  "real_now": [
+   1,
+   121367
+  ],
+  "same_index": true
+ },
+ {
+  "repo": "cadene/agibot_alpha_v30",
+  "path": "videos/observation.images.head_left_fisheye/chunk-000/file-145.mp4",
+  "model_patched": [
+   2,
+   1782155
+  ],
+  "real_patched": [
+   2,
+   1782155
+  ]
+ },
+ {
+  "repo": "cadene/agibot_alpha_v30",
+  "path": "videos/observation.images.head_right_fisheye/chunk-000/file-126.mp4",
+  "model_patched": [
+   2,
+   1955999
+  ],
+  "real_patched": [
+   2,
+   1955999
+  ]
+ },
+ {
+  "repo": "cadene/agibot_alpha_v30",
+  "path": "videos/observation.images.hand_left/chunk-000/file-071.mp4",
+  "model_patched": [
+   2,
+   820114
+  ],
+  "real_patched": [
+   2,
+   820114
+  ]
+ },
+ {
+  "repo": "cadene/droid",
+  "path": "videos/chunk-047/observation.images.exterior_image_2_left/episode_047711.mp4",
+  "model_patched": [
+   2,
+   527587
+  ],
+  "real_patched": [
+   2,
+   527587
+  ],
+  "model_now": [
+   2,
+   2371897
+  ],
+  "real_now": [
+   1,
+   2368598
+  ],
+  "same_index": true
+ },
+ {
+  "repo": "cadene/droid",
+  "path": "videos/chunk-089/observation.images.exterior_image_2_left/episode_089587.mp4",
+  "model_patched": [
+   2,
+   525767
+  ],
+  "real_patched": [
+   2,
+   525767
+  ],
+  "model_now": [
+   2,
+   722165
+  ],
+  "real_now": [
+   1,
+   720686
+  ],
+  "same_index": true
+ },
+ {
+  "repo": "cadene/droid",
+  "path": "videos/chunk-089/observation.images.exterior_image_2_left/episode_089214.mp4",
+  "model_patched": [
+   2,
+   528015
+  ],
+  "real_patched": [
+   2,
+   528015
+  ],
+  "model_now": [
+   2,
+   2411767
+  ],
+  "real_now": [
+   1,
+   2408040
+  ],
+  "same_index": true
+ },
+ {
+  "repo": "cadene/droid_1.0.1",
+  "path": "videos/chunk-060/observation.images.wrist_left/episode_060887.mp4",
+  "model_patched": [
+   2,
+   283280
+  ],
+  "real_patched": [
+   1,
+   281649
+  ],
+  "model_now": [
+   2,
+   283280
+  ],
+  "real_now": [
+   1,
+   281649
+  ],
+  "same_index": true
+ },
+ {
+  "repo": "cadene/droid_1.0.1",
+  "path": "videos/chunk-016/observation.images.exterior_1_left/episode_016484.mp4",
+  "model_patched": [
+   2,
+   526535
+  ],
+  "real_patched": [
+   2,
+   526535
+  ],
+  "model_now": [
+   2,
+   1312019
+  ],
+  "real_now": [
+   1,
+   1309772
+  ],
+  "same_index": true
+ },
+ {
+  "repo": "cadene/droid_1.0.1",
+  "path": "videos/chunk-008/observation.images.exterior_1_left/episode_008453.mp4",
+  "model_patched": [
+   2,
+   525983
+  ],
+  "real_patched": [
+   2,
+   525983
+  ],
+  "model_now": [
+   2,
+   1044190
+  ],
+  "real_now": [
+   1,
+   1042495
+  ],
+  "same_index": true
+ },
+ {
+  "repo": "yaak-ai/L2D",
+  "path": "videos/observation.images.right_forward/chunk-000/file-157.mp4",
+  "model_patched": [
+   1,
+   524288
+  ],
+  "real_patched": [
+   1,
+   524288
+  ],
+  "model_now": [
+   1,
+   4194304
+  ],
+  "real_now": [
+   1,
+   4194304
+  ],
+  "same_index": true
+ }
+]

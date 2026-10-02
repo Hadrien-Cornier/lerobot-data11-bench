@@ -1,0 +1,28 @@
+== DATA-11 ab job ab-smoke-20260928 start 2026-09-28T22:23:59Z SMOKE=1 host=j-hadriencornier-6abae8f852d0dbd7f1da6d70-islqy7qt-6ca6b-g99ck
+HF_TOKEN present (value not shown); results -> dataset hadriencornier/lerobot-data11-bench:results/ab-smoke-20260928
+attempt marker attempts/6abae8f852d0dbd7f1da6d70 recorded
+system ffmpeg: ffmpeg version 7.1.5-0+deb13u1 Copyright (c) 2000-2026 the FFmpeg developers
+== stage system_deps: ok (34s, cgroup peak 839 MB)
+bundle checksums OK
+== stage bundle: ok (1s, cgroup peak 839 MB)
+
+[notice] A new release of pip is available: 25.0.1 -> 26.2.1
+[notice] To update, run: pip install --upgrade pip
+patching file src/lerobot/datasets/streaming_dataset.py
+patching file src/lerobot/streaming/episode_cache.py
+Using Python 3.12.14 environment at: /work/venv_base
+base venv /work/venv_base/lib/python3.12/site-packages/lerobot/__init__.py 2.11.0+cpu 0.11.1+cpu patched False
+Using Python 3.12.14 environment at: /work/venv_fix
+fix venv /work/venv_fix/lib/python3.12/site-packages/lerobot/__init__.py 2.11.0+cpu 0.11.1+cpu patched True
+== stage python_env: ok (57s, cgroup peak 3382 MB)
+uploaded results/ab-smoke-20260928 (setup done)
+== stage ab start 2026-09-28T22:25:33Z
+digest {"n_base": 2429, "n_fix": 2429, "dup_base": 0, "dup_fix": 0, "common": 2429, "only_base": 0, "only_fix": 0, "differing": 0, "differing_fields": [], "differing_examples": [], "identical": true}
+[22:28:13] BASE_D2_r0: ok sps 295.7460542419485 cpu/sample 6.112933824622304 
+[22:29:37] FIX_D2_r0: ok sps 377.09962488317217 cpu/sample 5.251428376941025 
+[22:31:01] BASE_D6_pyspy_gil: ok sps 297.534899484834 cpu/sample 8.463006762686222 
+[22:32:25] FIX_D6_pyspy_gil: ok sps 347.16933961341164 cpu/sample 6.929473657369402 
+== stage ab: ok (412s, cgroup peak 5870 MB)
+uploaded results/ab-smoke-20260928 (after ab)
+== done 2026-09-28T22:32:27Z: /results/ab-smoke-20260928
+== exit code 0 at 2026-09-28T22:32:27Z

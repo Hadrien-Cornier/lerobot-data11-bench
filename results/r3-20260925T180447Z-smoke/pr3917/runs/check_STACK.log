@@ -1,0 +1,12 @@
+
+Downloading bytes:           |  0.00B            [A
+Reconstructing (incomplete total...): |          |  0.00B /  0.00B            [A
+Fetching 3 files:   0%|          | 0/3 [00:00<?, ?it/s][A
+Reconstructing (incomplete total...):   0%|          |  0.00B / 1.77kB            [A
+Reconstructing (incomplete total...):  10%|█         | 1.77kB / 17.5kB            [A
+Reconstructing (incomplete total...):   9%|▉         | 1.77kB / 19.6kB            [AFetching 3 files: 100%|██████████| 3/3 [00:00<00:00,  7.66it/s]
+
+Downloading bytes: ██████████| 10.2kB,   ???B/s  [A
+Download complete: : ██████████| 10.2kB,   ???B/s  [A
+Reconstruction complete: 100%|██████████| 19.6kB / 19.6kB,   ???B/s               [ADownload complete: : ██████████| 10.2kB,   ???B/s  
+Reconstruction complete: 100%|██████████| 19.6kB / 19.6kB,   ???B/s  

@@ -1,0 +1,147 @@
+{
+ "enc_root": "/work/enc",
+ "batch": 32,
+ "workers": [
+  4
+ ],
+ "patterns": [
+  "all",
+  "top"
+ ],
+ "ratios": [
+  "0.1",
+  "1.0"
+ ],
+ "states": [
+  "warm",
+  "cold"
+ ],
+ "ckpt_family": "ckpt_5k",
+ "ckpt_caches": [
+  "1",
+  "all"
+ ],
+ "ckpt_patterns": [
+  "all"
+ ],
+ "repeats": 1,
+ "block_batches": 0,
+ "min_blocks": 1,
+ "max_blocks": 1,
+ "ci_target": 0.05,
+ "arm_cap_s": 40.0,
+ "warmup_cap": 60,
+ "evict_interval": 0.5,
+ "budget_s": 1200.0,
+ "cells": [
+  {
+   "family": "thrash",
+   "pattern": "all",
+   "cache_label": "r0.1",
+   "ratio": 0.1,
+   "cache": 4,
+   "workers": 4,
+   "state": "warm"
+  },
+  {
+   "family": "thrash",
+   "pattern": "all",
+   "cache_label": "r1.0",
+   "ratio": 1.0,
+   "cache": 36,
+   "workers": 4,
+   "state": "warm"
+  },
+  {
+   "family": "ckpt_5k",
+   "pattern": "all",
+   "cache_label": "c1",
+   "ratio": 0.1111111111111111,
+   "cache": 1,
+   "workers": 4,
+   "state": "warm"
+  },
+  {
+   "family": "ckpt_5k",
+   "pattern": "all",
+   "cache_label": "call",
+   "ratio": 1.0,
+   "cache": 9,
+   "workers": 4,
+   "state": "warm"
+  },
+  {
+   "family": "thrash",
+   "pattern": "top",
+   "cache_label": "r0.1",
+   "ratio": 0.1,
+   "cache": 4,
+   "workers": 4,
+   "state": "warm"
+  },
+  {
+   "family": "thrash",
+   "pattern": "top",
+   "cache_label": "r1.0",
+   "ratio": 1.0,
+   "cache": 36,
+   "workers": 4,
+   "state": "warm"
+  },
+  {
+   "family": "thrash",
+   "pattern": "all",
+   "cache_label": "r0.1",
+   "ratio": 0.1,
+   "cache": 4,
+   "workers": 4,
+   "state": "cold"
+  },
+  {
+   "family": "thrash",
+   "pattern": "all",
+   "cache_label": "r1.0",
+   "ratio": 1.0,
+   "cache": 36,
+   "workers": 4,
+   "state": "cold"
+  },
+  {
+   "family": "ckpt_5k",
+   "pattern": "all",
+   "cache_label": "c1",
+   "ratio": 0.1111111111111111,
+   "cache": 1,
+   "workers": 4,
+   "state": "cold"
+  },
+  {
+   "family": "ckpt_5k",
+   "pattern": "all",
+   "cache_label": "call",
+   "ratio": 1.0,
+   "cache": 9,
+   "workers": 4,
+   "state": "cold"
+  },
+  {
+   "family": "thrash",
+   "pattern": "top",
+   "cache_label": "r0.1",
+   "ratio": 0.1,
+   "cache": 4,
+   "workers": 4,
+   "state": "cold"
+  },
+  {
+   "family": "thrash",
+   "pattern": "top",
+   "cache_label": "r1.0",
+   "ratio": 1.0,
+   "cache": 36,
+   "workers": 4,
+   "state": "cold"
+  }
+ ],
+ "n_runs_planned": 36
+}

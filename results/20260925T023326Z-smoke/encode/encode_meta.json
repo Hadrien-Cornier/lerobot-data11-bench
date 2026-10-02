@@ -1,0 +1,199 @@
+{
+ "encoder": {
+  "vcodec": "libsvtav1",
+  "options": {
+   "g": "2",
+   "crf": "30",
+   "preset": "12",
+   "svtav1-params": "fast-decode=0"
+  },
+  "pix_fmt": "yuv420p",
+  "input": "rgb24 ndarray, pts=i, time_base=1/fps"
+ },
+ "svt_reported": {
+  "mapped": [
+   "Preset M12 is mapped to M10."
+  ],
+  "version": [
+   "SVT-AV1 Encoder Lib v3.0.0"
+  ],
+  "pred_struct": [
+   "preset / tune / pred struct : 10 / PSNR / random access"
+  ],
+  "lp": [
+   "Level of Parallelism: 4"
+  ]
+ },
+ "enc_procs": 2,
+ "cpu_quota": 8,
+ "svt_lp_requested": 4,
+ "mux_options": {
+  "movflags": "faststart"
+ },
+ "max_os_threads_per_encode_process": 336,
+ "wall_s": 228.3,
+ "groups": 18,
+ "frames_per_camera": 43205,
+ "camera_frame_sets_per_s": 189.3,
+ "pyav": "15.1.0",
+ "pyav_ffmpeg": {
+  "libavutil": "59.39.100",
+  "libavcodec": "61.19.101",
+  "libavformat": "61.7.100",
+  "libavdevice": "61.3.100",
+  "libavfilter": "10.4.100",
+  "libswscale": "8.3.100",
+  "libswresample": "5.3.100"
+ },
+ "per_group": [
+  {
+   "group": "ckpt_1k_g000",
+   "family": "ckpt_1k",
+   "frames": 904,
+   "encode_s": 7.14,
+   "pid": 7800,
+   "peak_os_threads_seen": 336
+  },
+  {
+   "group": "ckpt_1k_g001",
+   "family": "ckpt_1k",
+   "frames": 987,
+   "encode_s": 8.51,
+   "pid": 7463,
+   "peak_os_threads_seen": 336
+  },
+  {
+   "group": "ckpt_1k_g002",
+   "family": "ckpt_1k",
+   "frames": 1011,
+   "encode_s": 12.2,
+   "pid": 2963,
+   "peak_os_threads_seen": 336
+  },
+  {
+   "group": "ckpt_5k_g000",
+   "family": "ckpt_5k",
+   "frames": 5273,
+   "encode_s": 49.35,
+   "pid": 2964,
+   "peak_os_threads_seen": 336
+  },
+  {
+   "group": "ckpt_5k_g001",
+   "family": "ckpt_5k",
+   "frames": 5105,
+   "encode_s": 48.27,
+   "pid": 2963,
+   "peak_os_threads_seen": 336
+  },
+  {
+   "group": "ckpt_5k_g002",
+   "family": "ckpt_5k",
+   "frames": 5091,
+   "encode_s": 40.3,
+   "pid": 2963,
+   "peak_os_threads_seen": 336
+  },
+  {
+   "group": "thrash_g000",
+   "family": "thrash",
+   "frames": 2280,
+   "encode_s": 28.8,
+   "pid": 2964,
+   "peak_os_threads_seen": 336
+  },
+  {
+   "group": "thrash_g001",
+   "family": "thrash",
+   "frames": 2155,
+   "encode_s": 20.47,
+   "pid": 2964,
+   "peak_os_threads_seen": 336
+  },
+  {
+   "group": "thrash_g002",
+   "family": "thrash",
+   "frames": 2018,
+   "encode_s": 24.39,
+   "pid": 2963,
+   "peak_os_threads_seen": 336
+  },
+  {
+   "group": "thrash_g003",
+   "family": "thrash",
+   "frames": 2043,
+   "encode_s": 21.09,
+   "pid": 2964,
+   "peak_os_threads_seen": 336
+  },
+  {
+   "group": "thrash_g004",
+   "family": "thrash",
+   "frames": 1969,
+   "encode_s": 22.32,
+   "pid": 2963,
+   "peak_os_threads_seen": 336
+  },
+  {
+   "group": "thrash_g005",
+   "family": "thrash",
+   "frames": 1988,
+   "encode_s": 26.53,
+   "pid": 2964,
+   "peak_os_threads_seen": 336
+  },
+  {
+   "group": "thrash_g006",
+   "family": "thrash",
+   "frames": 2256,
+   "encode_s": 21.42,
+   "pid": 2963,
+   "peak_os_threads_seen": 336
+  },
+  {
+   "group": "thrash_g007",
+   "family": "thrash",
+   "frames": 1873,
+   "encode_s": 22.34,
+   "pid": 2964,
+   "peak_os_threads_seen": 336
+  },
+  {
+   "group": "thrash_g008",
+   "family": "thrash",
+   "frames": 2266,
+   "encode_s": 26.17,
+   "pid": 2964,
+   "peak_os_threads_seen": 336
+  },
+  {
+   "group": "thrash_g009",
+   "family": "thrash",
+   "frames": 1919,
+   "encode_s": 22.99,
+   "pid": 2963,
+   "peak_os_threads_seen": 336
+  },
+  {
+   "group": "thrash_g010",
+   "family": "thrash",
+   "frames": 2103,
+   "encode_s": 22.65,
+   "pid": 2963,
+   "peak_os_threads_seen": 336
+  },
+  {
+   "group": "thrash_g011",
+   "family": "thrash",
+   "frames": 1964,
+   "encode_s": 23.41,
+   "pid": 2964,
+   "peak_os_threads_seen": 336
+  }
+ ],
+ "stack_order_top_to_bottom": [
+  "top",
+  "left_wrist",
+  "right_wrist"
+ ]
+}

@@ -1,0 +1,61 @@
+{
+ "repo_id": "lerobot/abc_130k_v3_train",
+ "revision": "68651e4929d9fb00f798937b2d62617cab5c771d",
+ "files": 15,
+ "bytes": 821975857,
+ "gb": 0.822,
+ "wall_s": 10.0,
+ "mb_per_s": 82.2,
+ "size_mismatches": {},
+ "source_video_info": {
+  "observation.images.top": {
+   "video.height": 224,
+   "video.width": 224,
+   "video.codec": "av1",
+   "video.pix_fmt": "yuv420p",
+   "video.is_depth_map": false,
+   "video.fps": 30,
+   "video.channels": 3,
+   "has_audio": false,
+   "video.g": 2,
+   "video.crf": 30,
+   "video.preset": 12,
+   "video.fast_decode": 0,
+   "video.video_backend": "pyav",
+   "video.extra_options": {}
+  },
+  "observation.images.left_wrist": {
+   "video.height": 224,
+   "video.width": 224,
+   "video.codec": "av1",
+   "video.pix_fmt": "yuv420p",
+   "video.is_depth_map": false,
+   "video.fps": 30,
+   "video.channels": 3,
+   "has_audio": false,
+   "video.g": 2,
+   "video.crf": 30,
+   "video.preset": 12,
+   "video.fast_decode": 0,
+   "video.video_backend": "pyav",
+   "video.extra_options": {}
+  },
+  "observation.images.right_wrist": {
+   "video.height": 224,
+   "video.width": 224,
+   "video.codec": "av1",
+   "video.pix_fmt": "yuv420p",
+   "video.is_depth_map": false,
+   "video.fps": 30,
+   "video.channels": 3,
+   "has_audio": false,
+   "video.g": 2,
+   "video.crf": 30,
+   "video.preset": 12,
+   "video.fast_decode": 0,
+   "video.video_backend": "pyav",
+   "video.extra_options": {}
+  }
+ },
+ "fps": 30
+}

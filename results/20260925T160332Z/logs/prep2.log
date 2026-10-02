@@ -1,0 +1,60 @@
+
+prep.json:   0%|          | 0.00/20.9k [00:00<?, ?B/s][Aprep.json: 100%|██████████| 20.9k/20.9k [00:00<00:00, 43.6MB/s]
+
+variants/20260925T025221Z/ckpt_full/SEP/(…): reconstructing file:   0%|          |  0.00B / 80.3MB            [Avariants/20260925T025221Z/ckpt_full/SEP/(…): downloading bytes:           |  0.00B            variants/20260925T025221Z/ckpt_full/SEP/(…): downloading bytes: █████▎    | 42.6MB, 3.78MB/s  
+variants/20260925T025221Z/ckpt_full/SEP/(…): reconstructing file: 100%|██████████| 80.3MB / 80.3MB            [Avariants/20260925T025221Z/ckpt_full/SEP/(…): downloading bytes: ██████████| 80.2MB, 7.45MB/s  variants/20260925T025221Z/ckpt_full/SEP/(…): downloading bytes: ██████████| 80.2MB, 7.45MB/s  
+variants/20260925T025221Z/ckpt_full/SEP/(…): reconstructing file: 100%|██████████| 80.3MB / 80.3MB, 7.71MB/s  
+
+variants/20260925T025221Z/ckpt_full/SEP/(…): reconstructing file:   0%|          |  0.00B / 69.0MB            [Avariants/20260925T025221Z/ckpt_full/SEP/(…): downloading bytes:           |  0.00B            variants/20260925T025221Z/ckpt_full/SEP/(…): downloading bytes: ██████████| 68.9MB, 6.61MB/s  variants/20260925T025221Z/ckpt_full/SEP/(…): downloading bytes: ██████████| 68.9MB, 6.61MB/s  
+variants/20260925T025221Z/ckpt_full/SEP/(…): reconstructing file: 100%|██████████| 69.0MB / 69.0MB, 6.74MB/s  
+
+variants/20260925T025221Z/ckpt_full/SEP/(…): reconstructing file:   0%|          |  0.00B / 65.8MB            [Avariants/20260925T025221Z/ckpt_full/SEP/(…): downloading bytes:           |  0.00B            variants/20260925T025221Z/ckpt_full/SEP/(…): downloading bytes: ████▊     | 31.3MB, 2.72MB/s  
+variants/20260925T025221Z/ckpt_full/SEP/(…): reconstructing file: 100%|██████████| 65.8MB / 65.8MB            [Avariants/20260925T025221Z/ckpt_full/SEP/(…): downloading bytes: ██████████| 65.7MB, 5.97MB/s  variants/20260925T025221Z/ckpt_full/SEP/(…): downloading bytes: ██████████| 65.7MB, 5.97MB/s  
+variants/20260925T025221Z/ckpt_full/SEP/(…): reconstructing file: 100%|██████████| 65.8MB / 65.8MB, 6.28MB/s  
+
+variants/20260925T025221Z/ckpt_full/SEP/(…): reconstructing file:   0%|          |  0.00B /  105MB            [Avariants/20260925T025221Z/ckpt_full/SEP/(…): downloading bytes:           |  0.00B            variants/20260925T025221Z/ckpt_full/SEP/(…): downloading bytes: █████████▋|  102MB, 9.17MB/s  
+variants/20260925T025221Z/ckpt_full/SEP/(…): reconstructing file: 100%|██████████|  105MB /  105MB            [Avariants/20260925T025221Z/ckpt_full/SEP/(…): downloading bytes: ██████████|  105MB, 9.97MB/s  variants/20260925T025221Z/ckpt_full/SEP/(…): downloading bytes: ██████████|  105MB, 9.97MB/s  
+variants/20260925T025221Z/ckpt_full/SEP/(…): reconstructing file: 100%|██████████|  105MB /  105MB, 10.2MB/s  
+
+variants/20260925T025221Z/ckpt_full/SEP/(…): reconstructing file:   0%|          |  0.00B / 81.9MB            [Avariants/20260925T025221Z/ckpt_full/SEP/(…): downloading bytes:           |  0.00B            
+variants/20260925T025221Z/ckpt_full/SEP/(…): reconstructing file: 100%|██████████| 81.9MB / 81.9MB            [Avariants/20260925T025221Z/ckpt_full/SEP/(…): downloading bytes: █████████▉| 81.8MB, 7.74MB/s  variants/20260925T025221Z/ckpt_full/SEP/(…): downloading bytes: ██████████| 81.8MB, 7.78MB/s  variants/20260925T025221Z/ckpt_full/SEP/(…): downloading bytes: ██████████| 81.8MB, 7.78MB/s  
+variants/20260925T025221Z/ckpt_full/SEP/(…): reconstructing file: 100%|██████████| 81.9MB / 81.9MB, 7.98MB/s  
+
+variants/20260925T025221Z/ckpt_full/SEP/(…): reconstructing file:   0%|          |  0.00B / 77.7MB            [Avariants/20260925T025221Z/ckpt_full/SEP/(…): downloading bytes:           |  0.00B            variants/20260925T025221Z/ckpt_full/SEP/(…): downloading bytes: ██████████| 77.6MB, 7.44MB/s  variants/20260925T025221Z/ckpt_full/SEP/(…): downloading bytes: ██████████| 77.6MB, 7.44MB/s  
+variants/20260925T025221Z/ckpt_full/SEP/(…): reconstructing file: 100%|██████████| 77.7MB / 77.7MB, 7.59MB/s  
+
+variants/20260925T025221Z/ckpt_full/SEP/(…): reconstructing file:   0%|          |  0.00B / 67.9MB            [Avariants/20260925T025221Z/ckpt_full/SEP/(…): downloading bytes:           |  0.00B            variants/20260925T025221Z/ckpt_full/SEP/(…): downloading bytes: █████▉    | 40.7MB, 3.11MB/s  
+variants/20260925T025221Z/ckpt_full/SEP/(…): reconstructing file: 100%|██████████| 67.9MB / 67.9MB            [Avariants/20260925T025221Z/ckpt_full/SEP/(…): downloading bytes: ██████████| 67.7MB, 6.37MB/s  variants/20260925T025221Z/ckpt_full/SEP/(…): downloading bytes: ██████████| 67.7MB, 6.37MB/s  
+variants/20260925T025221Z/ckpt_full/SEP/(…): reconstructing file: 100%|██████████| 67.9MB / 67.9MB, 6.55MB/s  
+
+variants/20260925T025221Z/ckpt_full/SEP/(…): reconstructing file:   0%|          |  0.00B / 56.5MB            [Avariants/20260925T025221Z/ckpt_full/SEP/(…): downloading bytes:           |  0.00B            variants/20260925T025221Z/ckpt_full/SEP/(…): downloading bytes: ██████████| 56.4MB, 5.50MB/s  variants/20260925T025221Z/ckpt_full/SEP/(…): downloading bytes: ██████████| 56.4MB, 5.50MB/s  
+variants/20260925T025221Z/ckpt_full/SEP/(…): reconstructing file: 100%|██████████| 56.5MB / 56.5MB, 5.58MB/s  
+
+variants/20260925T025221Z/ckpt_full/SEP/(…): reconstructing file:   0%|          |  0.00B / 56.7MB            [Avariants/20260925T025221Z/ckpt_full/SEP/(…): downloading bytes:           |  0.00B            variants/20260925T025221Z/ckpt_full/SEP/(…): downloading bytes: █████████▉| 56.4MB, 4.05MB/s  
+variants/20260925T025221Z/ckpt_full/SEP/(…): reconstructing file: 100%|██████████| 56.7MB / 56.7MB, 34.7kB/s  [Avariants/20260925T025221Z/ckpt_full/SEP/(…): downloading bytes: ██████████| 56.6MB, 5.42MB/s  variants/20260925T025221Z/ckpt_full/SEP/(…): downloading bytes: ██████████| 56.6MB, 5.42MB/s  
+variants/20260925T025221Z/ckpt_full/SEP/(…): reconstructing file: 100%|██████████| 56.7MB / 56.7MB, 5.52MB/s  
+
+variants/20260925T025221Z/ckpt_full/STAC(…): reconstructing file:   0%|          |  0.00B /  211MB            [Avariants/20260925T025221Z/ckpt_full/STAC(…): downloading bytes:           |  0.00B            variants/20260925T025221Z/ckpt_full/STAC(…): downloading bytes: ███████▍  |  158MB, 13.4MB/s  
+variants/20260925T025221Z/ckpt_full/STAC(…): reconstructing file:  32%|███▏      | 67.1MB /  211MB            [Avariants/20260925T025221Z/ckpt_full/STAC(…): downloading bytes: ██████████|  211MB, 18.8MB/s  variants/20260925T025221Z/ckpt_full/STAC(…): downloading bytes: ██████████|  211MB, 18.8MB/s  
+variants/20260925T025221Z/ckpt_full/STAC(…): reconstructing file: 100%|██████████|  211MB /  211MB, 19.8MB/s  
+
+variants/20260925T025221Z/ckpt_full/STAC(…): reconstructing file:   0%|          |  0.00B /  261MB            [Avariants/20260925T025221Z/ckpt_full/STAC(…): downloading bytes:           |  0.00B            variants/20260925T025221Z/ckpt_full/STAC(…): downloading bytes: █████████▍|  247MB, 20.2MB/s  
+variants/20260925T025221Z/ckpt_full/STAC(…): reconstructing file: 100%|██████████|  261MB /  261MB            [Avariants/20260925T025221Z/ckpt_full/STAC(…): downloading bytes: ██████████|  261MB, 24.5MB/s  variants/20260925T025221Z/ckpt_full/STAC(…): downloading bytes: ██████████|  261MB, 24.5MB/s  
+variants/20260925T025221Z/ckpt_full/STAC(…): reconstructing file: 100%|██████████|  261MB /  261MB, 25.2MB/s  
+
+variants/20260925T025221Z/ckpt_full/STAC(…): reconstructing file:   0%|          |  0.00B /  177MB            [Avariants/20260925T025221Z/ckpt_full/STAC(…): downloading bytes:           |  0.00B            variants/20260925T025221Z/ckpt_full/STAC(…): downloading bytes: ██████▊   |  121MB, 10.1MB/s  
+variants/20260925T025221Z/ckpt_full/STAC(…): reconstructing file: 100%|██████████|  177MB /  177MB            [Avariants/20260925T025221Z/ckpt_full/STAC(…): downloading bytes: ██████████|  177MB, 16.6MB/s  variants/20260925T025221Z/ckpt_full/STAC(…): downloading bytes: ██████████|  177MB, 16.6MB/s  
+variants/20260925T025221Z/ckpt_full/STAC(…): reconstructing file: 100%|██████████|  177MB /  177MB, 17.1MB/s  
+
+variants/20260925T025221Z/ckpt_full/MULT(…): reconstructing file:   0%|          |  0.00B /  215MB            [Avariants/20260925T025221Z/ckpt_full/MULT(…): downloading bytes:           |  0.00B            variants/20260925T025221Z/ckpt_full/MULT(…): downloading bytes: ██████▋   |  143MB, 9.33MB/s  
+variants/20260925T025221Z/ckpt_full/MULT(…): reconstructing file:  31%|███       | 67.1MB /  215MB            [Avariants/20260925T025221Z/ckpt_full/MULT(…): downloading bytes: ██████████|  215MB, 19.7MB/s  variants/20260925T025221Z/ckpt_full/MULT(…): downloading bytes: ██████████|  215MB, 19.7MB/s  
+variants/20260925T025221Z/ckpt_full/MULT(…): reconstructing file: 100%|██████████|  215MB /  215MB, 20.4MB/s  
+
+variants/20260925T025221Z/ckpt_full/MULT(…): reconstructing file:   0%|          |  0.00B /  265MB            [Avariants/20260925T025221Z/ckpt_full/MULT(…): downloading bytes:           |  0.00B            variants/20260925T025221Z/ckpt_full/MULT(…): downloading bytes: █████     |  133MB, 10.9MB/s  
+variants/20260925T025221Z/ckpt_full/MULT(…): reconstructing file:  25%|██▌       | 67.1MB /  265MB            [Avariants/20260925T025221Z/ckpt_full/MULT(…): downloading bytes: ██████████|  265MB, 24.0MB/s  variants/20260925T025221Z/ckpt_full/MULT(…): downloading bytes: ██████████|  265MB, 24.0MB/s  
+variants/20260925T025221Z/ckpt_full/MULT(…): reconstructing file: 100%|██████████|  265MB /  265MB, 25.2MB/s  
+
+variants/20260925T025221Z/ckpt_full/MULT(…): reconstructing file:   0%|          |  0.00B /  181MB            [Avariants/20260925T025221Z/ckpt_full/MULT(…): downloading bytes:           |  0.00B            
+variants/20260925T025221Z/ckpt_full/MULT(…): reconstructing file:  37%|███▋      | 67.1MB /  181MB            [Avariants/20260925T025221Z/ckpt_full/MULT(…): downloading bytes: █████████▍|  170MB, 13.3MB/s  variants/20260925T025221Z/ckpt_full/MULT(…): downloading bytes: ██████████|  181MB, 17.1MB/s  variants/20260925T025221Z/ckpt_full/MULT(…): downloading bytes: ██████████|  181MB, 17.1MB/s  
+variants/20260925T025221Z/ckpt_full/MULT(…): reconstructing file: 100%|██████████|  181MB /  181MB, 17.5MB/s  
+prep reused from 20260925T155500Z-smoke: 15 files in 20s, mismatches []

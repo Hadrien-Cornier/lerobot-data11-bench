@@ -1,0 +1,16 @@
+[16:27:40] eq BASE@default: ok 7.5s
+[16:27:46] eq PROBE@64K: ok 5.0s
+[16:27:52] eq PROBE@256K: ok 5.4s
+[16:27:58] eq PROBE@default: ok 5.5s
+[16:28:13] probe PROBE@64K r0: ok 21.1 files/s 56 MB reads 1.99 non-faststart 0
+[16:28:26] probe PROBE@256K r0: ok 23.6 files/s 84 MB reads 1.14 non-faststart 1
+[16:28:40] probe PROBE@default r0: ok 23.0 files/s 157 MB reads 1.02 non-faststart 0
+[16:29:00] probe BASE@default r0: ok 15.0 files/s 1258 MB reads 1.00 non-faststart 0
+[16:29:13] probe PROBE@256K r1: ok 24.4 files/s 85 MB reads 1.15 non-faststart 0
+[16:29:27] probe PROBE@default r1: ok 22.8 files/s 157 MB reads 1.01 non-faststart 0
+[16:29:48] probe BASE@default r1: ok 14.6 files/s 1258 MB reads 1.00 non-faststart 0
+[16:30:03] probe PROBE@64K r1: ok 21.9 files/s 56 MB reads 1.98 non-faststart 0
+[16:30:15] probe PROBE@default r2: ok 24.6 files/s 157 MB reads 1.01 non-faststart 0
+[16:30:37] probe BASE@default r2: ok 14.5 files/s 1258 MB reads 1.00 non-faststart 0
+[16:30:51] probe PROBE@64K r2: ok 22.6 files/s 53 MB reads 1.99 non-faststart 0
+[16:31:04] probe PROBE@256K r2: ok 23.5 files/s 84 MB reads 1.14 non-faststart 0

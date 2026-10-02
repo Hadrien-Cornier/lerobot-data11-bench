@@ -1,0 +1,143 @@
+{
+ "kind": "STACK",
+ "mode": "p8",
+ "rep": 2,
+ "rank": 5,
+ "world": 8,
+ "seed": 102,
+ "status": "ok",
+ "utc_start": "2026-09-25T19:04:28Z",
+ "build_s": 3.2648776220157743,
+ "build": {
+  "requests": 0,
+  "resolve_requests": 0,
+  "cdn_requests": 0,
+  "api_requests": 0,
+  "http_bytes": 0,
+  "status_429": 0,
+  "status_other_err": 0,
+  "fetch_calls": 0,
+  "fetch_bytes": 0,
+  "fetch_s": 0.0,
+  "episodes": 0,
+  "dec_calls": 0,
+  "dec_wall_s": 0.0,
+  "dec_cpu_s": 0.0,
+  "open_calls": 0,
+  "open_wall_s": 0.0,
+  "open_cpu_s": 0.0,
+  "proc_cpu_s": 5.046929
+ },
+ "pool": {
+  "episode_pool_size": 32,
+  "prefetch_episodes": 8,
+  "decode_threads": 2,
+  "max_num_shards": 16
+ },
+ "first_sample_s": 16.328096261015162,
+ "capped": false,
+ "sps_tail": 193.46850332765825,
+ "timeline": [
+  [
+   6.407,
+   250
+  ],
+  [
+   7.701,
+   500
+  ],
+  [
+   8.905,
+   750
+  ],
+  [
+   10.203,
+   1000
+  ],
+  [
+   11.595,
+   1250
+  ],
+  [
+   12.884,
+   1500
+  ],
+  [
+   14.114,
+   1750
+  ],
+  [
+   15.366,
+   2000
+  ]
+ ],
+ "n": 2000,
+ "steady_s": 15.581046399020124,
+ "sps": 128.36108363850184,
+ "total": {
+  "requests": 188,
+  "resolve_requests": 75,
+  "cdn_requests": 87,
+  "api_requests": 26,
+  "http_bytes": 784572318,
+  "status_429": 0,
+  "status_other_err": 0,
+  "fetch_calls": 29,
+  "fetch_bytes": 691240258,
+  "fetch_s": 296.9051101009827,
+  "episodes": 29,
+  "dec_calls": 2004,
+  "dec_wall_s": 43.5544500334654,
+  "dec_cpu_s": 6.256335615000006,
+  "open_calls": 32,
+  "open_wall_s": 0.4585366190294735,
+  "open_cpu_s": 0.057311609000000194,
+  "proc_cpu_s": 32.066368999999995
+ },
+ "steady": {
+  "requests": 1,
+  "resolve_requests": 0,
+  "cdn_requests": 1,
+  "api_requests": 0,
+  "http_bytes": 38392445,
+  "status_429": 0,
+  "status_other_err": 0,
+  "fetch_calls": 17,
+  "fetch_bytes": 513811416,
+  "fetch_s": 198.05565902596572,
+  "episodes": 17,
+  "dec_calls": 2001,
+  "dec_wall_s": 22.833885827451013,
+  "dec_cpu_s": 6.230850341000005,
+  "open_calls": 29,
+  "open_wall_s": 0.33971361606381834,
+  "open_cpu_s": 0.04744675800000019,
+  "proc_cpu_s": 15.650774999999996
+ },
+ "per_episode": {
+  "episodes_fetched": 29,
+  "range_gets": 1.0,
+  "mb": 23.83587096551724,
+  "http_requests": 6.482758620689655,
+  "cdn_requests": 3.0,
+  "http_mb": 27.054217862068967,
+  "fetch_s_mean": 10.238107244861473
+ },
+ "per_sample": {
+  "dec_cpu_ms": 3.1154251705000027,
+  "dec_wall_ms": 11.416942913725507,
+  "dec_calls": 1.0005,
+  "open_cpu_ms": 0.023723379000000096,
+  "proc_cpu_ms": 7.825387499999998,
+  "mb": 0.0191962225
+ },
+ "decode_totals": {
+  "dec_cpu_s": 6.256335615000006,
+  "dec_wall_s": 43.5544500334654,
+  "open_cpu_s": 0.057311609000000194,
+  "open_calls": 32,
+  "dec_calls": 2004
+ },
+ "peak_pss_gb": 2.1363649368286133,
+ "peak_cgroup_gb": 23.318843841552734
+}

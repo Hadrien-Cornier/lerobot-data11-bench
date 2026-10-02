@@ -1,0 +1,21 @@
+start 16:00:13
+[7s] SEP_S1_c100_seq r0: 501.6 fps, mp4 fetch/frame 0.0000 (0.000 MB), parquet fetch/frame 0.0000, hit 1.000, opens/frame 0.000 (0 ms), CPU 2.0 ms/frame, first yield None, shards 1/8, HTTP MB so far 19
+[12s] STACK_S1_c100 r0: 561.7 fps, mp4 fetch/frame 0.0000 (0.000 MB), parquet fetch/frame 0.0000, hit 1.000, opens/frame 0.000 (0 ms), CPU 1.8 ms/frame, first yield None, shards 1/8, HTTP MB so far 27
+used after stream: 27 MB
+[19s] SEP|seq|fs256K|-|warm r0: 1.17 sps, fetch/smp 3.00, res/smp 3.00, 0.987 MB/smp (dec 0.197), p50 840 ms, open 0 ms/smp, fallback/smp 0.00, check {'checked': 0, 'mismatch': 0}, HTTP MB so far 24
+[27s] STACK|-|fs256K|-|warm r0: 2.45 sps, fetch/smp 1.00, res/smp 1.00, 0.329 MB/smp (dec 0.066), p50 426 ms, open 0 ms/smp, fallback/smp 0.00, check {'checked': 0, 'mismatch': 0}, HTTP MB so far 30
+[41s] SEP|seq|rc256K|-|warm r0: 1.49 sps, fetch/smp 3.00, res/smp 0.00, 0.983 MB/smp (dec 0.197), p50 633 ms, open 0 ms/smp, fallback/smp 0.00, check {'checked': 0, 'mismatch': 0}, HTTP MB so far 49
+[47s] STACK|-|rc256K|-|warm r0: 2.98 sps, fetch/smp 1.00, res/smp 0.00, 0.328 MB/smp (dec 0.066), p50 342 ms, open 0 ms/smp, fallback/smp 0.00, check {'checked': 0, 'mismatch': 0}, HTTP MB so far 55
+[61s] SEP|seq|exact|-|warm r0: 1.63 sps, fetch/smp 3.00, res/smp 0.00, 0.216 MB/smp (dec 0.197), p50 622 ms, open 0 ms/smp, fallback/smp 0.00, check {'checked': 0, 'mismatch': 0}, HTTP MB so far 62
+[66s] STACK|-|exact|-|warm r0: 4.35 sps, fetch/smp 1.00, res/smp 0.00, 0.084 MB/smp (dec 0.066), p50 200 ms, open 0 ms/smp, fallback/smp 0.00, check {'checked': 0, 'mismatch': 0}, HTTP MB so far 65
+[70s] STACK|-|exact|-|warm r1: 6.19 sps, fetch/smp 1.00, res/smp 0.00, 0.082 MB/smp (dec 0.066), p50 160 ms, open 0 ms/smp, fallback/smp 0.00, check None, HTTP MB so far 68
+[84s] SEP|seq|exact|-|warm r1: 1.65 sps, fetch/smp 2.87, res/smp 0.00, 0.204 MB/smp (dec 0.197), p50 618 ms, open 0 ms/smp, fallback/smp 0.00, check None, HTTP MB so far 75
+[87s] STACK|-|rc256K|-|warm r1: 4.93 sps, fetch/smp 1.00, res/smp 0.00, 0.328 MB/smp (dec 0.066), p50 198 ms, open 0 ms/smp, fallback/smp 0.00, check None, HTTP MB so far 81
+[101s] SEP|seq|rc256K|-|warm r1: 1.36 sps, fetch/smp 3.00, res/smp 0.00, 0.983 MB/smp (dec 0.197), p50 699 ms, open 0 ms/smp, fallback/smp 0.00, check None, HTTP MB so far 99
+[107s] STACK|-|fs256K|-|warm r1: 3.47 sps, fetch/smp 1.00, res/smp 1.00, 0.329 MB/smp (dec 0.066), p50 281 ms, open 0 ms/smp, fallback/smp 0.00, check None, HTTP MB so far 106
+[125s] SEP|seq|fs256K|-|warm r1: 1.06 sps, fetch/smp 3.00, res/smp 3.00, 0.987 MB/smp (dec 0.197), p50 921 ms, open 0 ms/smp, fallback/smp 0.00, check None, HTTP MB so far 124
+used after access_a: 151 MB
+[21s] SEP|seq|fs5M|-|warm r0: 0.56 sps, fetch/smp 3.00, res/smp 3.00, 15.929 MB/smp (dec 0.197), p50 1730 ms, open 0 ms/smp, fallback/smp 0.00, check {'checked': 0, 'mismatch': 0}, HTTP MB so far 165
+[28s] STACK|-|fs5M|-|warm r0: 1.32 sps, fetch/smp 1.00, res/smp 1.00, 5.310 MB/smp (dec 0.066), p50 631 ms, open 0 ms/smp, fallback/smp 0.00, check {'checked': 0, 'mismatch': 0}, HTTP MB so far 218
+TOTAL used: 369 MB (cap 500)
+end 16:03:26

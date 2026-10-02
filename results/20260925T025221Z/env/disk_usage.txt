@@ -1,0 +1,4 @@
+4.1G	/work/src
+4.5G	/work/enc
+Filesystem      Size  Used Avail Use% Mounted on
+overlay         1.5T  898G  603G  60% /

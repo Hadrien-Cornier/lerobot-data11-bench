@@ -1,0 +1,12 @@
+
+Downloading bytes:           |  0.00B            [A
+Reconstructing (incomplete total...): |          |  0.00B /  0.00B            [A
+Fetching 7 files:   0%|          | 0/7 [00:00<?, ?it/s][AFetching 7 files: 100%|██████████| 7/7 [00:00<00:00, 1289.76it/s]
+
+Download complete: :           |  0.00B            [A
+Reconstruction complete: |          |  0.00B /  0.00B                         [AReconstruction complete: |          |  0.00B /  0.00B            
+Download complete: :           |  0.00B            
+
+Resolving data files:   0%|          | 0/742 [00:00<?, ?it/s][AResolving data files: 100%|██████████| 742/742 [00:00<00:00, 26737.81it/s]
+
+Resolving data files:   0%|          | 0/742 [00:00<?, ?it/s][AResolving data files: 100%|██████████| 742/742 [00:00<00:00, 18840.99it/s]

@@ -1,0 +1,14 @@
+
+Testing with DEVICE='cpu'
+........................................................................ [ 22%]
+........................................................................ [ 45%]
+........................................................................ [ 68%]
+........................................................................ [ 91%]
+...........................                                              [100%]
+=============================== warnings summary ===============================
+tests/datasets/test_streaming_production.py: 15 warnings
+  /usr/local/lib/python3.12/multiprocessing/popen_fork.py:66: DeprecationWarning: This process (pid=2883) is multi-threaded, use of fork() may lead to deadlocks in the child.
+    self.pid = os.fork()
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+315 passed, 15 warnings in 95.21s (0:01:35)

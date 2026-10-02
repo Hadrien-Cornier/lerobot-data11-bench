@@ -1,0 +1,5 @@
+digest {"n_base": 2429, "n_fix": 2429, "dup_base": 0, "dup_fix": 0, "common": 2429, "only_base": 0, "only_fix": 0, "differing": 0, "differing_fields": [], "differing_examples": [], "identical": true}
+[22:28:13] BASE_D2_r0: ok sps 295.7460542419485 cpu/sample 6.112933824622304 
+[22:29:37] FIX_D2_r0: ok sps 377.09962488317217 cpu/sample 5.251428376941025 
+[22:31:01] BASE_D6_pyspy_gil: ok sps 297.534899484834 cpu/sample 8.463006762686222 
+[22:32:25] FIX_D6_pyspy_gil: ok sps 347.16933961341164 cpu/sample 6.929473657369402 

@@ -1,0 +1,12 @@
+ckpt_1k eviction {'resident_after_prewarm': 1.0, 'resident_after_evict': 0.0, 'probe_file_bytes': 2066448, 'read_bytes_after_evict': 2068480, 'read_bytes_warm_reread': 0, 'read_s_after_evict': 0.009022142039611936, 'read_s_warm': 0.00024828792084008455, 'worked': True}
+ckpt_1k|SEP: frames/file 967 moov 6589B warm open 0.63ms first 0.89ms decode 0.72ms | cold open 1.65ms read 65536B | MB/decoder 0.6612258184523809
+ckpt_1k|STACK: frames/file 967 moov 6652B warm open 1.00ms first 2.70ms decode 2.56ms | cold open 2.02ms read 65536B | MB/decoder 0.9827938988095238
+ckpt_1k|BIG: frames/file 2902 moov 18262B warm open 0.83ms first 1.00ms decode 0.91ms | cold open 1.75ms read 65536B | MB/decoder 0.5966796875
+ckpt_5k eviction {'resident_after_prewarm': 1.0, 'resident_after_evict': 0.0, 'probe_file_bytes': 21177442, 'read_bytes_after_evict': 21180416, 'read_bytes_warm_reread': 0, 'read_s_after_evict': 0.06413787300698459, 'read_s_warm': 0.0015389480395242572, 'worked': True}
+ckpt_5k|SEP: frames/file 5156 moov 31867B warm open 1.24ms first 1.24ms decode 0.98ms | cold open 2.11ms read 196608B | MB/decoder 0.7430710565476191
+ckpt_5k|STACK: frames/file 5156 moov 32194B warm open 1.17ms first 2.38ms decode 2.11ms | cold open 2.19ms read 196608B | MB/decoder 1.0817987351190477
+ckpt_5k|BIG: frames/file 15469 moov 94093B warm open 1.11ms first 0.89ms decode 0.77ms | cold open 3.18ms read 327680B | MB/decoder 1.0024181547619047
+thrash eviction {'resident_after_prewarm': 1.0, 'resident_after_evict': 0.0, 'probe_file_bytes': 11243806, 'read_bytes_after_evict': 11247616, 'read_bytes_warm_reread': 0, 'read_s_after_evict': 0.03934237302746624, 'read_s_warm': 0.0008792729349806905, 'worked': True}
+thrash|SEP: frames/file 2070 moov 13266B warm open 0.61ms first 1.03ms decode 0.83ms | cold open 1.86ms read 65536B | MB/decoder 0.6210472470238095
+thrash|STACK: frames/file 2070 moov 13445B warm open 0.93ms first 3.11ms decode 3.03ms | cold open 2.08ms read 131072B | MB/decoder 1.0189267113095237
+thrash|BIG: frames/file 6208 moov 38294B warm open 0.81ms first 1.17ms decode 0.95ms | cold open 1.75ms read 196608B | MB/decoder 0.7550688244047619

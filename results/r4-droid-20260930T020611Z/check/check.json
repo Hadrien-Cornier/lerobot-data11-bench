@@ -1,0 +1,103 @@
+{
+ "psnr": {
+  "wrist_left": {
+   "sep_vs_src": {
+    "mean": 39.74187512538792,
+    "min": 34.946690521434924
+   },
+   "stack_vs_src": {
+    "mean": 39.43451927841582,
+    "min": 34.985804019370846
+   },
+   "stack_vs_sep": {
+    "mean": 41.5099830436544,
+    "min": 34.65182659373895
+   }
+  },
+  "exterior_1_left": {
+   "sep_vs_src": {
+    "mean": 38.9619511547812,
+    "min": 35.06086278117342
+   },
+   "stack_vs_src": {
+    "mean": 38.02843324534565,
+    "min": 35.26971392715189
+   },
+   "stack_vs_sep": {
+    "mean": 37.959869375031346,
+    "min": 34.33022979980804
+   }
+  },
+  "exterior_2_left": {
+   "sep_vs_src": {
+    "mean": 38.97629404642122,
+    "min": 34.85862784425977
+   },
+   "stack_vs_src": {
+    "mean": 38.28330228442134,
+    "min": 34.96800276320335
+   },
+   "stack_vs_sep": {
+    "mean": 38.445171369277226,
+    "min": 35.481637936404624
+   }
+  }
+ },
+ "psnr_frames": 20,
+ "camera_order_psnr_matrix": {
+  "wrist_left": {
+   "wrist_left": 41.5099830436544,
+   "exterior_1_left": 9.02453573085409,
+   "exterior_2_left": 9.060292533700478
+  },
+  "exterior_1_left": {
+   "wrist_left": 9.025420293415982,
+   "exterior_1_left": 37.959869375031346,
+   "exterior_2_left": 10.115991030853403
+  },
+  "exterior_2_left": {
+   "wrist_left": 9.062765881999677,
+   "exterior_1_left": 10.113962040523186,
+   "exterior_2_left": 38.445171369277226
+  }
+ },
+ "camera_order_ok": true,
+ "camera_order_comparable_pairs": 6,
+ "psnr_min_stack_vs_src": 34.96800276320335,
+ "psnr_min_stack_vs_sep": 34.33022979980804,
+ "remote_equal": {
+  "sep": {
+   "frames_checked": 18,
+   "mismatch": 0,
+   "pass": true
+  },
+  "stack": {
+   "frames_checked": 20,
+   "mismatch": 0,
+   "pass": true
+  },
+  "sep1": {
+   "frames_checked": 20,
+   "mismatch": 0,
+   "pass": true
+  }
+ },
+ "through_lerobot": {
+  "samples": 20,
+  "sep_item_equals_file_frame": "60/60",
+  "sep1_equals_sep_first_camera": "20/20",
+  "stack_crop_vs_sep_item_psnr_mean": {
+   "wrist_left": 41.05341629070862,
+   "exterior_1_left": 38.23975636569012,
+   "exterior_2_left": 38.95616685333674
+  },
+  "stack_crop_vs_sep_item_psnr_min": {
+   "wrist_left": 36.27984529872011,
+   "exterior_1_left": 34.417391185945576,
+   "exterior_2_left": 36.33619170200489
+  },
+  "pass": true
+ },
+ "psnr_threshold": 35.0,
+ "ok": false
+}

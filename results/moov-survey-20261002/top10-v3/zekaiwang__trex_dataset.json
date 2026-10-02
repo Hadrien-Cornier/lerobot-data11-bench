@@ -1,0 +1,954 @@
+{
+ "repo": "zekaiwang/trex_dataset",
+ "revision": "bf0eb24c4b8bdd95752b553f0fc50e46a22f1cc8",
+ "codebase_version": "v3.0",
+ "fps": 30,
+ "total_videos": null,
+ "video_keys": [
+  "observation.images.head_left",
+  "observation.images.left_wrist",
+  "observation.images.right_wrist",
+  "observation.images.tactile_left_raw_thumb",
+  "observation.images.tactile_left_raw_index",
+  "observation.images.tactile_left_raw_middle",
+  "observation.images.tactile_left_raw_ring",
+  "observation.images.tactile_left_raw_pinky",
+  "observation.images.tactile_left_deform_thumb",
+  "observation.images.tactile_left_deform_index",
+  "observation.images.tactile_left_deform_middle",
+  "observation.images.tactile_left_deform_ring",
+  "observation.images.tactile_left_deform_pinky",
+  "observation.images.tactile_right_raw_thumb",
+  "observation.images.tactile_right_raw_index",
+  "observation.images.tactile_right_raw_middle",
+  "observation.images.tactile_right_raw_ring",
+  "observation.images.tactile_right_raw_pinky",
+  "observation.images.tactile_right_deform_thumb",
+  "observation.images.tactile_right_deform_index",
+  "observation.images.tactile_right_deform_middle",
+  "observation.images.tactile_right_deform_ring",
+  "observation.images.tactile_right_deform_pinky"
+ ],
+ "files": [
+  {
+   "path": "videos/observation.images.tactile_right_raw_middle/chunk-000/file-025.mp4",
+   "file_size": 196200919,
+   "boxes": [
+    [
+     "ftyp",
+     0,
+     32
+    ],
+    [
+     "moov",
+     32,
+     41196
+    ]
+   ],
+   "moov_size": 41196,
+   "moov_end": 41228,
+   "moov_first": true,
+   "reads_now": 1,
+   "bytes_now": 4194304,
+   "reads_patched": 1,
+   "bytes_patched": 524288
+  },
+  {
+   "path": "videos/observation.images.tactile_right_raw_middle/chunk-000/file-012.mp4",
+   "file_size": 200526067,
+   "boxes": [
+    [
+     "ftyp",
+     0,
+     32
+    ],
+    [
+     "moov",
+     32,
+     40196
+    ]
+   ],
+   "moov_size": 40196,
+   "moov_end": 40228,
+   "moov_first": true,
+   "reads_now": 1,
+   "bytes_now": 4194304,
+   "reads_patched": 1,
+   "bytes_patched": 524288
+  },
+  {
+   "path": "videos/observation.images.tactile_right_raw_index/chunk-000/file-585.mp4",
+   "file_size": 195264127,
+   "boxes": [
+    [
+     "ftyp",
+     0,
+     32
+    ],
+    [
+     "moov",
+     32,
+     39616
+    ]
+   ],
+   "moov_size": 39616,
+   "moov_end": 39648,
+   "moov_first": true,
+   "reads_now": 1,
+   "bytes_now": 4194304,
+   "reads_patched": 1,
+   "bytes_patched": 524288
+  },
+  {
+   "path": "videos/observation.images.tactile_left_raw_ring/chunk-000/file-004.mp4",
+   "file_size": 192232018,
+   "boxes": [
+    [
+     "ftyp",
+     0,
+     32
+    ],
+    [
+     "moov",
+     32,
+     39892
+    ]
+   ],
+   "moov_size": 39892,
+   "moov_end": 39924,
+   "moov_first": true,
+   "reads_now": 1,
+   "bytes_now": 4194304,
+   "reads_patched": 1,
+   "bytes_patched": 524288
+  },
+  {
+   "path": "videos/observation.images.tactile_left_raw_index/chunk-000/file-118.mp4",
+   "file_size": 196542978,
+   "boxes": [
+    [
+     "ftyp",
+     0,
+     32
+    ],
+    [
+     "moov",
+     32,
+     39552
+    ]
+   ],
+   "moov_size": 39552,
+   "moov_end": 39584,
+   "moov_first": true,
+   "reads_now": 1,
+   "bytes_now": 4194304,
+   "reads_patched": 1,
+   "bytes_patched": 524288
+  },
+  {
+   "path": "videos/observation.images.tactile_right_raw_ring/chunk-000/file-088.mp4",
+   "file_size": 208568836,
+   "boxes": [
+    [
+     "ftyp",
+     0,
+     32
+    ],
+    [
+     "moov",
+     32,
+     42176
+    ]
+   ],
+   "moov_size": 42176,
+   "moov_end": 42208,
+   "moov_first": true,
+   "reads_now": 1,
+   "bytes_now": 4194304,
+   "reads_patched": 1,
+   "bytes_patched": 524288
+  },
+  {
+   "path": "videos/observation.images.tactile_right_raw_thumb/chunk-000/file-130.mp4",
+   "file_size": 204393789,
+   "boxes": [
+    [
+     "ftyp",
+     0,
+     32
+    ],
+    [
+     "moov",
+     32,
+     45068
+    ]
+   ],
+   "moov_size": 45068,
+   "moov_end": 45100,
+   "moov_first": true,
+   "reads_now": 1,
+   "bytes_now": 4194304,
+   "reads_patched": 1,
+   "bytes_patched": 524288
+  },
+  {
+   "path": "videos/observation.images.left_wrist/chunk-000/file-697.mp4",
+   "file_size": 184048741,
+   "boxes": [
+    [
+     "ftyp",
+     0,
+     32
+    ],
+    [
+     "moov",
+     32,
+     89149
+    ]
+   ],
+   "moov_size": 89149,
+   "moov_end": 89181,
+   "moov_first": true,
+   "reads_now": 1,
+   "bytes_now": 4194304,
+   "reads_patched": 1,
+   "bytes_patched": 524288
+  },
+  {
+   "path": "videos/observation.images.tactile_right_raw_ring/chunk-000/file-329.mp4",
+   "file_size": 192571495,
+   "boxes": [
+    [
+     "ftyp",
+     0,
+     32
+    ],
+    [
+     "moov",
+     32,
+     39820
+    ]
+   ],
+   "moov_size": 39820,
+   "moov_end": 39852,
+   "moov_first": true,
+   "reads_now": 1,
+   "bytes_now": 4194304,
+   "reads_patched": 1,
+   "bytes_patched": 524288
+  },
+  {
+   "path": "videos/observation.images.tactile_right_raw_ring/chunk-000/file-317.mp4",
+   "file_size": 206479171,
+   "boxes": [
+    [
+     "ftyp",
+     0,
+     32
+    ],
+    [
+     "moov",
+     32,
+     44804
+    ]
+   ],
+   "moov_size": 44804,
+   "moov_end": 44836,
+   "moov_first": true,
+   "reads_now": 1,
+   "bytes_now": 4194304,
+   "reads_patched": 1,
+   "bytes_patched": 524288
+  },
+  {
+   "path": "videos/observation.images.tactile_left_raw_pinky/chunk-000/file-477.mp4",
+   "file_size": 200421987,
+   "boxes": [
+    [
+     "ftyp",
+     0,
+     32
+    ],
+    [
+     "moov",
+     32,
+     44876
+    ]
+   ],
+   "moov_size": 44876,
+   "moov_end": 44908,
+   "moov_first": true,
+   "reads_now": 1,
+   "bytes_now": 4194304,
+   "reads_patched": 1,
+   "bytes_patched": 524288
+  },
+  {
+   "path": "videos/observation.images.right_wrist/chunk-000/file-097.mp4",
+   "file_size": 203806925,
+   "boxes": [
+    [
+     "ftyp",
+     0,
+     32
+    ],
+    [
+     "moov",
+     32,
+     91225
+    ]
+   ],
+   "moov_size": 91225,
+   "moov_end": 91257,
+   "moov_first": true,
+   "reads_now": 1,
+   "bytes_now": 4194304,
+   "reads_patched": 1,
+   "bytes_patched": 524288
+  },
+  {
+   "path": "videos/observation.images.tactile_right_raw_index/chunk-000/file-307.mp4",
+   "file_size": 195913927,
+   "boxes": [
+    [
+     "ftyp",
+     0,
+     32
+    ],
+    [
+     "moov",
+     32,
+     38740
+    ]
+   ],
+   "moov_size": 38740,
+   "moov_end": 38772,
+   "moov_first": true,
+   "reads_now": 1,
+   "bytes_now": 4194304,
+   "reads_patched": 1,
+   "bytes_patched": 524288
+  },
+  {
+   "path": "videos/observation.images.tactile_right_raw_ring/chunk-000/file-360.mp4",
+   "file_size": 208330388,
+   "boxes": [
+    [
+     "ftyp",
+     0,
+     32
+    ],
+    [
+     "moov",
+     32,
+     43424
+    ]
+   ],
+   "moov_size": 43424,
+   "moov_end": 43456,
+   "moov_first": true,
+   "reads_now": 1,
+   "bytes_now": 4194304,
+   "reads_patched": 1,
+   "bytes_patched": 524288
+  },
+  {
+   "path": "videos/observation.images.tactile_right_raw_index/chunk-000/file-520.mp4",
+   "file_size": 199062735,
+   "boxes": [
+    [
+     "ftyp",
+     0,
+     32
+    ],
+    [
+     "moov",
+     32,
+     41756
+    ]
+   ],
+   "moov_size": 41756,
+   "moov_end": 41788,
+   "moov_first": true,
+   "reads_now": 1,
+   "bytes_now": 4194304,
+   "reads_patched": 1,
+   "bytes_patched": 524288
+  },
+  {
+   "path": "videos/observation.images.tactile_right_raw_middle/chunk-000/file-098.mp4",
+   "file_size": 199300657,
+   "boxes": [
+    [
+     "ftyp",
+     0,
+     32
+    ],
+    [
+     "moov",
+     32,
+     41808
+    ]
+   ],
+   "moov_size": 41808,
+   "moov_end": 41840,
+   "moov_first": true,
+   "reads_now": 1,
+   "bytes_now": 4194304,
+   "reads_patched": 1,
+   "bytes_patched": 524288
+  },
+  {
+   "path": "videos/observation.images.tactile_left_raw_thumb/chunk-000/file-153.mp4",
+   "file_size": 209292525,
+   "boxes": [
+    [
+     "ftyp",
+     0,
+     32
+    ],
+    [
+     "moov",
+     32,
+     45772
+    ]
+   ],
+   "moov_size": 45772,
+   "moov_end": 45804,
+   "moov_first": true,
+   "reads_now": 1,
+   "bytes_now": 4194304,
+   "reads_patched": 1,
+   "bytes_patched": 524288
+  },
+  {
+   "path": "videos/observation.images.tactile_left_raw_index/chunk-000/file-421.mp4",
+   "file_size": 200179251,
+   "boxes": [
+    [
+     "ftyp",
+     0,
+     32
+    ],
+    [
+     "moov",
+     32,
+     39240
+    ]
+   ],
+   "moov_size": 39240,
+   "moov_end": 39272,
+   "moov_first": true,
+   "reads_now": 1,
+   "bytes_now": 4194304,
+   "reads_patched": 1,
+   "bytes_patched": 524288
+  },
+  {
+   "path": "videos/observation.images.tactile_right_raw_index/chunk-000/file-586.mp4",
+   "file_size": 192189524,
+   "boxes": [
+    [
+     "ftyp",
+     0,
+     32
+    ],
+    [
+     "moov",
+     32,
+     41344
+    ]
+   ],
+   "moov_size": 41344,
+   "moov_end": 41376,
+   "moov_first": true,
+   "reads_now": 1,
+   "bytes_now": 4194304,
+   "reads_patched": 1,
+   "bytes_patched": 524288
+  },
+  {
+   "path": "videos/observation.images.right_wrist/chunk-000/file-440.mp4",
+   "file_size": 186603395,
+   "boxes": [
+    [
+     "ftyp",
+     0,
+     32
+    ],
+    [
+     "moov",
+     32,
+     76281
+    ]
+   ],
+   "moov_size": 76281,
+   "moov_end": 76313,
+   "moov_first": true,
+   "reads_now": 1,
+   "bytes_now": 4194304,
+   "reads_patched": 1,
+   "bytes_patched": 524288
+  },
+  {
+   "path": "videos/observation.images.tactile_right_raw_ring/chunk-000/file-274.mp4",
+   "file_size": 140604065,
+   "boxes": [
+    [
+     "ftyp",
+     0,
+     32
+    ],
+    [
+     "moov",
+     32,
+     28796
+    ]
+   ],
+   "moov_size": 28796,
+   "moov_end": 28828,
+   "moov_first": true,
+   "reads_now": 1,
+   "bytes_now": 4194304,
+   "reads_patched": 1,
+   "bytes_patched": 524288
+  },
+  {
+   "path": "videos/observation.images.tactile_right_raw_middle/chunk-000/file-409.mp4",
+   "file_size": 194897254,
+   "boxes": [
+    [
+     "ftyp",
+     0,
+     32
+    ],
+    [
+     "moov",
+     32,
+     41352
+    ]
+   ],
+   "moov_size": 41352,
+   "moov_end": 41384,
+   "moov_first": true,
+   "reads_now": 1,
+   "bytes_now": 4194304,
+   "reads_patched": 1,
+   "bytes_patched": 524288
+  },
+  {
+   "path": "videos/observation.images.tactile_right_raw_index/chunk-000/file-003.mp4",
+   "file_size": 200749702,
+   "boxes": [
+    [
+     "ftyp",
+     0,
+     32
+    ],
+    [
+     "moov",
+     32,
+     44152
+    ]
+   ],
+   "moov_size": 44152,
+   "moov_end": 44184,
+   "moov_first": true,
+   "reads_now": 1,
+   "bytes_now": 4194304,
+   "reads_patched": 1,
+   "bytes_patched": 524288
+  },
+  {
+   "path": "videos/observation.images.left_wrist/chunk-000/file-433.mp4",
+   "file_size": 199565848,
+   "boxes": [
+    [
+     "ftyp",
+     0,
+     32
+    ],
+    [
+     "moov",
+     32,
+     81025
+    ]
+   ],
+   "moov_size": 81025,
+   "moov_end": 81057,
+   "moov_first": true,
+   "reads_now": 1,
+   "bytes_now": 4194304,
+   "reads_patched": 1,
+   "bytes_patched": 524288
+  },
+  {
+   "path": "videos/observation.images.left_wrist/chunk-000/file-306.mp4",
+   "file_size": 181055804,
+   "boxes": [
+    [
+     "ftyp",
+     0,
+     32
+    ],
+    [
+     "moov",
+     32,
+     92589
+    ]
+   ],
+   "moov_size": 92589,
+   "moov_end": 92621,
+   "moov_first": true,
+   "reads_now": 1,
+   "bytes_now": 4194304,
+   "reads_patched": 1,
+   "bytes_patched": 524288
+  },
+  {
+   "path": "videos/observation.images.tactile_right_raw_thumb/chunk-000/file-096.mp4",
+   "file_size": 207069919,
+   "boxes": [
+    [
+     "ftyp",
+     0,
+     32
+    ],
+    [
+     "moov",
+     32,
+     45284
+    ]
+   ],
+   "moov_size": 45284,
+   "moov_end": 45316,
+   "moov_first": true,
+   "reads_now": 1,
+   "bytes_now": 4194304,
+   "reads_patched": 1,
+   "bytes_patched": 524288
+  },
+  {
+   "path": "videos/observation.images.tactile_left_raw_thumb/chunk-000/file-520.mp4",
+   "file_size": 204345684,
+   "boxes": [
+    [
+     "ftyp",
+     0,
+     32
+    ],
+    [
+     "moov",
+     32,
+     45576
+    ]
+   ],
+   "moov_size": 45576,
+   "moov_end": 45608,
+   "moov_first": true,
+   "reads_now": 1,
+   "bytes_now": 4194304,
+   "reads_patched": 1,
+   "bytes_patched": 524288
+  },
+  {
+   "path": "videos/observation.images.tactile_right_raw_middle/chunk-000/file-318.mp4",
+   "file_size": 204134661,
+   "boxes": [
+    [
+     "ftyp",
+     0,
+     32
+    ],
+    [
+     "moov",
+     32,
+     42592
+    ]
+   ],
+   "moov_size": 42592,
+   "moov_end": 42624,
+   "moov_first": true,
+   "reads_now": 1,
+   "bytes_now": 4194304,
+   "reads_patched": 1,
+   "bytes_patched": 524288
+  },
+  {
+   "path": "videos/observation.images.right_wrist/chunk-000/file-658.mp4",
+   "file_size": 195334337,
+   "boxes": [
+    [
+     "ftyp",
+     0,
+     32
+    ],
+    [
+     "moov",
+     32,
+     93001
+    ]
+   ],
+   "moov_size": 93001,
+   "moov_end": 93033,
+   "moov_first": true,
+   "reads_now": 1,
+   "bytes_now": 4194304,
+   "reads_patched": 1,
+   "bytes_patched": 524288
+  },
+  {
+   "path": "videos/observation.images.tactile_right_raw_ring/chunk-000/file-215.mp4",
+   "file_size": 202055358,
+   "boxes": [
+    [
+     "ftyp",
+     0,
+     32
+    ],
+    [
+     "moov",
+     32,
+     42164
+    ]
+   ],
+   "moov_size": 42164,
+   "moov_end": 42196,
+   "moov_first": true,
+   "reads_now": 1,
+   "bytes_now": 4194304,
+   "reads_patched": 1,
+   "bytes_patched": 524288
+  },
+  {
+   "path": "videos/observation.images.tactile_left_raw_pinky/chunk-000/file-165.mp4",
+   "file_size": 196093024,
+   "boxes": [
+    [
+     "ftyp",
+     0,
+     32
+    ],
+    [
+     "moov",
+     32,
+     43952
+    ]
+   ],
+   "moov_size": 43952,
+   "moov_end": 43984,
+   "moov_first": true,
+   "reads_now": 1,
+   "bytes_now": 4194304,
+   "reads_patched": 1,
+   "bytes_patched": 524288
+  },
+  {
+   "path": "videos/observation.images.tactile_right_raw_pinky/chunk-000/file-502.mp4",
+   "file_size": 197258662,
+   "boxes": [
+    [
+     "ftyp",
+     0,
+     32
+    ],
+    [
+     "moov",
+     32,
+     43116
+    ]
+   ],
+   "moov_size": 43116,
+   "moov_end": 43148,
+   "moov_first": true,
+   "reads_now": 1,
+   "bytes_now": 4194304,
+   "reads_patched": 1,
+   "bytes_patched": 524288
+  },
+  {
+   "path": "videos/observation.images.tactile_right_raw_thumb/chunk-000/file-411.mp4",
+   "file_size": 196562831,
+   "boxes": [
+    [
+     "ftyp",
+     0,
+     32
+    ],
+    [
+     "moov",
+     32,
+     43940
+    ]
+   ],
+   "moov_size": 43940,
+   "moov_end": 43972,
+   "moov_first": true,
+   "reads_now": 1,
+   "bytes_now": 4194304,
+   "reads_patched": 1,
+   "bytes_patched": 524288
+  },
+  {
+   "path": "videos/observation.images.tactile_right_raw_thumb/chunk-000/file-387.mp4",
+   "file_size": 206063759,
+   "boxes": [
+    [
+     "ftyp",
+     0,
+     32
+    ],
+    [
+     "moov",
+     32,
+     45004
+    ]
+   ],
+   "moov_size": 45004,
+   "moov_end": 45036,
+   "moov_first": true,
+   "reads_now": 1,
+   "bytes_now": 4194304,
+   "reads_patched": 1,
+   "bytes_patched": 524288
+  },
+  {
+   "path": "videos/observation.images.right_wrist/chunk-000/file-246.mp4",
+   "file_size": 185465895,
+   "boxes": [
+    [
+     "ftyp",
+     0,
+     32
+    ],
+    [
+     "moov",
+     32,
+     91533
+    ]
+   ],
+   "moov_size": 91533,
+   "moov_end": 91565,
+   "moov_first": true,
+   "reads_now": 1,
+   "bytes_now": 4194304,
+   "reads_patched": 1,
+   "bytes_patched": 524288
+  },
+  {
+   "path": "videos/observation.images.left_wrist/chunk-000/file-163.mp4",
+   "file_size": 182696784,
+   "boxes": [
+    [
+     "ftyp",
+     0,
+     32
+    ],
+    [
+     "moov",
+     32,
+     86169
+    ]
+   ],
+   "moov_size": 86169,
+   "moov_end": 86201,
+   "moov_first": true,
+   "reads_now": 1,
+   "bytes_now": 4194304,
+   "reads_patched": 1,
+   "bytes_patched": 524288
+  },
+  {
+   "path": "videos/observation.images.head_left/chunk-000/file-231.mp4",
+   "file_size": 150228839,
+   "boxes": [
+    [
+     "ftyp",
+     0,
+     32
+    ],
+    [
+     "moov",
+     32,
+     93897
+    ]
+   ],
+   "moov_size": 93897,
+   "moov_end": 93929,
+   "moov_first": true,
+   "reads_now": 1,
+   "bytes_now": 4194304,
+   "reads_patched": 1,
+   "bytes_patched": 524288
+  },
+  {
+   "path": "videos/observation.images.tactile_right_raw_index/chunk-000/file-193.mp4",
+   "file_size": 123412372,
+   "boxes": [
+    [
+     "ftyp",
+     0,
+     32
+    ],
+    [
+     "moov",
+     32,
+     25544
+    ]
+   ],
+   "moov_size": 25544,
+   "moov_end": 25576,
+   "moov_first": true,
+   "reads_now": 1,
+   "bytes_now": 4194304,
+   "reads_patched": 1,
+   "bytes_patched": 524288
+  },
+  {
+   "path": "videos/observation.images.tactile_right_raw_pinky/chunk-000/file-085.mp4",
+   "file_size": 193218651,
+   "boxes": [
+    [
+     "ftyp",
+     0,
+     32
+    ],
+    [
+     "moov",
+     32,
+     39436
+    ]
+   ],
+   "moov_size": 39436,
+   "moov_end": 39468,
+   "moov_first": true,
+   "reads_now": 1,
+   "bytes_now": 4194304,
+   "reads_patched": 1,
+   "bytes_patched": 524288
+  },
+  {
+   "path": "videos/observation.images.tactile_left_raw_thumb/chunk-000/file-200.mp4",
+   "file_size": 197693576,
+   "boxes": [
+    [
+     "ftyp",
+     0,
+     32
+    ],
+    [
+     "moov",
+     32,
+     43316
+    ]
+   ],
+   "moov_size": 43316,
+   "moov_end": 43348,
+   "moov_first": true,
+   "reads_now": 1,
+   "bytes_now": 4194304,
+   "reads_patched": 1,
+   "bytes_patched": 524288
+  }
+ ]
+}

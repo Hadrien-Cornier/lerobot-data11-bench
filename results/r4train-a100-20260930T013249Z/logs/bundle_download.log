@@ -1,0 +1,15 @@
+
+Downloading bytes:           |  0.00B            [A
+Reconstructing (incomplete total...): |          |  0.00B /  0.00B            [A
+Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s][A
+Reconstructing (incomplete total...):   0%|          |  0.00B / 24.4kB            [AStill waiting to acquire lock on /work/dl_bundle/.cache/huggingface/.gitignore.lock (elapsed: 0.1 seconds)
+
+Reconstructing (incomplete total...):  72%|███████▏  | 24.4kB / 33.8kB            [A
+Reconstructing (incomplete total...):  94%|█████████▍| 33.8kB / 35.8kB            [A
+Reconstructing (incomplete total...):  99%|█████████▉| 35.8kB / 36.1kB            [AFetching 4 files: 100%|██████████| 4/4 [00:00<00:00, 13.76it/s]
+
+Download complete: ██████████| 36.1kB            [A
+Reconstruction complete: 100%|██████████| 36.1kB / 36.1kB                         [A[32m✓ Downloaded[0m
+  path: /work/dl_bundle
+Download complete: ██████████| 36.1kB            
+Reconstruction complete: 100%|██████████| 36.1kB / 36.1kB            

@@ -1,0 +1,125 @@
+
+Downloading bytes:           |  0.00B            [A
+Reconstructing (incomplete total...): |          |  0.00B /  0.00B            [A
+Fetching 3 files:   0%|          | 0/3 [00:00<?, ?it/s][A
+Reconstructing (incomplete total...):   0%|          |  0.00B / 2.06kB            [A
+Reconstructing (incomplete total...):   0%|          |  0.00B / 21.8kB            [A
+Reconstructing (incomplete total...):   0%|          |  0.00B / 24.6kB            [AFetching 3 files: 100%|██████████| 3/3 [00:00<00:00,  9.60it/s]
+
+Downloading bytes: ██████████| 9.93kB,   ???B/s  [A
+Download complete: : ██████████| 9.93kB,   ???B/s  [A
+Reconstruction complete: 100%|██████████| 24.6kB / 24.6kB,   ???B/s               [ADownload complete: : ██████████| 9.93kB,   ???B/s  
+Reconstruction complete: 100%|██████████| 24.6kB / 24.6kB,   ???B/s  
+[13s] SEP_S8_c100_seq r0: 126.6 fps, mp4 fetch/frame 0.0000 (0.000 MB), parquet fetch/frame 0.0000, hit 1.000, opens/frame 0.000 (0 ms), CPU 7.8 ms/frame, first yield None, shards 8/8, HTTP MB so far 153
+
+Downloading bytes:           |  0.00B            [A
+Reconstructing (incomplete total...): |          |  0.00B /  0.00B            [A
+Fetching 3 files:   0%|          | 0/3 [00:00<?, ?it/s][AFetching 3 files: 100%|██████████| 3/3 [00:00<00:00, 834.41it/s]
+
+Download complete: :           |  0.00B            [A
+Reconstruction complete: |          |  0.00B /  0.00B                         [ADownload complete: :           |  0.00B            
+Reconstruction complete: |          |  0.00B /  0.00B            
+[55s] SEP_S8_c12_seq r0: 4.6 fps, mp4 fetch/frame 1.6522 (8.770 MB), parquet fetch/frame 0.0000, hit 0.449, opens/frame 1.652 (128 ms), CPU 74.8 ms/frame, first yield None, shards 8/8, HTTP MB so far 1692
+
+Downloading bytes:           |  0.00B            [A
+Reconstructing (incomplete total...): |          |  0.00B /  0.00B            [A
+Fetching 3 files:   0%|          | 0/3 [00:00<?, ?it/s][A
+Reconstructing (incomplete total...):   0%|          |  0.00B / 13.9kB            [A
+Reconstructing (incomplete total...):   0%|          |  0.00B / 13.9kB            [A
+Reconstructing (incomplete total...):   0%|          |  0.00B / 15.6kB            [AFetching 3 files: 100%|██████████| 3/3 [00:00<00:00,  7.16it/s]
+
+Downloading bytes: ██████████| 7.77kB,   ???B/s  [A
+Download complete: : ██████████| 7.77kB,   ???B/s  [A
+Reconstruction complete: 100%|██████████| 15.6kB / 15.6kB,   ???B/s               [ADownload complete: : ██████████| 7.77kB,   ???B/s  
+Reconstruction complete: 100%|██████████| 15.6kB / 15.6kB,   ???B/s  
+[61s] STACK_S8_c100 r0: 256.4 fps, mp4 fetch/frame 0.0000 (0.000 MB), parquet fetch/frame 0.0000, hit 1.000, opens/frame 0.000 (0 ms), CPU 3.9 ms/frame, first yield None, shards 8/8, HTTP MB so far 1760
+
+Downloading bytes:           |  0.00B            [A
+Reconstructing (incomplete total...): |          |  0.00B /  0.00B            [A
+Fetching 3 files:   0%|          | 0/3 [00:00<?, ?it/s][AFetching 3 files: 100%|██████████| 3/3 [00:00<00:00, 216.38it/s]
+
+Download complete: :           |  0.00B            [A
+Reconstruction complete: |          |  0.00B /  0.00B                         [ADownload complete: :           |  0.00B            
+Reconstruction complete: |          |  0.00B /  0.00B            
+[68s] SEP_S1_c100_par r0: 72.9 fps, mp4 fetch/frame 0.0000 (0.000 MB), parquet fetch/frame 0.0000, hit 1.000, opens/frame 0.000 (0 ms), CPU 10.8 ms/frame, first yield None, shards 1/8, HTTP MB so far 1779
+
+Downloading bytes:           |  0.00B            [A
+Reconstructing (incomplete total...): |          |  0.00B /  0.00B            [A
+Fetching 3 files:   0%|          | 0/3 [00:00<?, ?it/s][AFetching 3 files: 100%|██████████| 3/3 [00:00<00:00, 190.33it/s]
+
+Download complete: :           |  0.00B            [A
+Reconstruction complete: |          |  0.00B /  0.00B                         [ADownload complete: :           |  0.00B            
+Reconstruction complete: |          |  0.00B /  0.00B            
+
+Downloading bytes:           |  0.00B            [A
+Reconstructing (incomplete total...): |          |  0.00B /  0.00B            [A
+Fetching 3 files:   0%|          | 0/3 [00:00<?, ?it/s][AFetching 3 files: 100%|██████████| 3/3 [00:00<00:00, 209.87it/s]
+
+Download complete: :           |  0.00B            [A
+Reconstruction complete: |          |  0.00B /  0.00B                         [ADownload complete: :           |  0.00B            
+Reconstruction complete: |          |  0.00B /  0.00B            
+
+Downloading bytes:           |  0.00B            [A
+Reconstructing (incomplete total...): |          |  0.00B /  0.00B            [A
+Fetching 3 files:   0%|          | 0/3 [00:00<?, ?it/s][AFetching 3 files: 100%|██████████| 3/3 [00:00<00:00, 151.32it/s]
+
+Download complete: :           |  0.00B            [A
+Reconstruction complete: |          |  0.00B /  0.00B                         [A
+Downloading bytes:           |  0.00B            [A
+Reconstructing (incomplete total...): |          |  0.00B /  0.00B            [A
+Fetching 3 files:   0%|          | 0/3 [00:00<?, ?it/s][AFetching 3 files: 100%|██████████| 3/3 [00:00<00:00, 482.20it/s]
+
+Download complete: :           |  0.00B            [A
+Reconstruction complete: |          |  0.00B /  0.00B                         [ADownload complete: :           |  0.00B            
+Reconstruction complete: |          |  0.00B /  0.00B            
+
+Downloading bytes:           |  0.00B            [A
+Reconstructing (incomplete total...): |          |  0.00B /  0.00B            [A
+Fetching 3 files:   0%|          | 0/3 [00:00<?, ?it/s][AFetching 3 files: 100%|██████████| 3/3 [00:00<00:00, 299.25it/s]
+
+Download complete: :           |  0.00B            [A
+Reconstruction complete: |          |  0.00B /  0.00B                         [A
+Downloading bytes:           |  0.00B            [A
+Reconstructing (incomplete total...): |          |  0.00B /  0.00B            [A
+Fetching 3 files:   0%|          | 0/3 [00:00<?, ?it/s][AFetching 3 files: 100%|██████████| 3/3 [00:00<00:00, 1002.78it/s]
+
+Download complete: :           |  0.00B            [A
+Reconstruction complete: |          |  0.00B /  0.00B                         [ADownload complete: :           |  0.00B            
+Reconstruction complete: |          |  0.00B /  0.00B            
+Download complete: :           |  0.00B            
+Reconstruction complete: |          |  0.00B /  0.00B            
+Download complete: :           |  0.00B            
+Reconstruction complete: |          |  0.00B /  0.00B            
+
+Downloading bytes:           |  0.00B            [A
+Reconstructing (incomplete total...): |          |  0.00B /  0.00B            [A
+Fetching 3 files:   0%|          | 0/3 [00:00<?, ?it/s][AFetching 3 files: 100%|██████████| 3/3 [00:00<00:00, 876.98it/s]
+
+Download complete: :           |  0.00B            [A
+Reconstruction complete: |          |  0.00B /  0.00B                         [A
+Downloading bytes:           |  0.00B            [A
+Reconstructing (incomplete total...): |          |  0.00B /  0.00B            [A
+Fetching 3 files:   0%|          | 0/3 [00:00<?, ?it/s][AFetching 3 files: 100%|██████████| 3/3 [00:00<00:00, 729.99it/s]
+
+Download complete: :           |  0.00B            [A
+Reconstruction complete: |          |  0.00B /  0.00B                         [ADownload complete: :           |  0.00B            
+Reconstruction complete: |          |  0.00B /  0.00B            
+Download complete: :           |  0.00B            
+Reconstruction complete: |          |  0.00B /  0.00B            
+[158s] conc SEP_S8_c100_seq x8: 1040.9 fps, 0.0 resolves/s, 0.0 MB/s, hit 1.000, 429 0
+# DATA-11 round 2: real StreamingLeRobotDataset over hf:// (PR #4702 branch)
+
+lerobot a195a91ff815ad730373276ef8a4cc7c04c5c074; datasets SEP `hadriencornier/lerobot-data11-stream-sep`, STACK `hadriencornier/lerobot-data11-stream-stack` (8 video files per key, copies of the round-1 ckpt_full variants). Single process = one DataLoader worker. fps = frames made per second after warm-up (every step makes one frame).
+
+| arm | S | cache | cams | fps | +-CI | mp4 fetch/frame | mp4 MB/frame | parquet fetch/frame | resolve/frame | decoder hit | opens/frame | open ms | CPU ms/frame | first yield s |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| SEP_S8_c100_seq | 8 | 100 | seq | 126.6 | - | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 1.000 | 0.000 | 0 | 7.8 | - |
+| SEP_S8_c12_seq | 8 | 12 | seq | 4.6 | - | 1.6522 | 8.7704 | 0.0000 | 1.6522 | 0.449 | 1.652 | 128 | 74.8 | - |
+| STACK_S8_c100 | 8 | 100 | seq | 256.4 | - | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 1.000 | 0.000 | 0 | 3.9 | - |
+| SEP_S1_c100_par | 1 | 100 | par | 72.9 | - | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 1.000 | 0.000 | 0 | 10.8 | - |
+
+## 8 concurrent processes (own dataset + seed each)
+
+| arm | procs | fps total | resolves/s | CDN req/s | MB/s | decoder hit | 429 |
+|---|---|---|---|---|---|---|---|
+| SEP_S8_c100_seq | 8 | 1040.9 | 0.0 | 0.0 | 0.0 | 1.000 | 0 |

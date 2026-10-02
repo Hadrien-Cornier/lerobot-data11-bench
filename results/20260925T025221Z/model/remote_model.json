@@ -1,0 +1,523 @@
+{
+ "label": "EXTRAPOLATED from a scaled-down benchmark",
+ "family": "ckpt_full",
+ "block_bytes": 5242880,
+ "resolver_limit_per_s": 40.0,
+ "resolver_limit_source": "NOT reported to this job; using 40.0 (12000 per 300 s, read from a laptop probe on 2026-09-24)",
+ "fetch_fit": {
+  "a_ms": -4.791849295741713,
+  "b_ms_per_fetch": 157.97075073643958,
+  "r2": 0.9850616578458954,
+  "points": [
+   {
+    "arm": "first|SEP|seq",
+    "fetches_per_sample": 5.8125,
+    "lat_mean_ms": 925.5017204835895,
+    "pred_ms": 913.4131393598134
+   },
+   {
+    "arm": "first|SEP|one",
+    "fetches_per_sample": 1.95,
+    "lat_mean_ms": 257.4023499204486,
+    "pred_ms": 303.25111464031545
+   },
+   {
+    "arm": "first|STACK|seq",
+    "fetches_per_sample": 1.98125,
+    "lat_mean_ms": 366.4674809690041,
+    "pred_ms": 308.1877006008292
+   },
+   {
+    "arm": "first|STACK|one",
+    "fetches_per_sample": 1.98125,
+    "lat_mean_ms": 326.92602432362037,
+    "pred_ms": 308.1877006008292
+   },
+   {
+    "arm": "first|BIG|seq",
+    "fetches_per_sample": 5.94375,
+    "lat_mean_ms": 927.1356706973165,
+    "pred_ms": 934.146800393971
+   },
+   {
+    "arm": "first|BIG|one",
+    "fetches_per_sample": 1.98125,
+    "lat_mean_ms": 263.5208592764684,
+    "pred_ms": 308.1877006008292
+   },
+   {
+    "arm": "steady|SEP|seq",
+    "fetches_per_sample": 2.81875,
+    "lat_mean_ms": 451.40458927926375,
+    "pred_ms": 440.4882043425974
+   },
+   {
+    "arm": "steady|SEP|one",
+    "fetches_per_sample": 0.95,
+    "lat_mean_ms": 124.81731948100787,
+    "pred_ms": 145.2803639038759
+   },
+   {
+    "arm": "steady|STACK|seq",
+    "fetches_per_sample": 0.971875,
+    "lat_mean_ms": 205.18487660810933,
+    "pred_ms": 148.73597407623552
+   },
+   {
+    "arm": "steady|STACK|one",
+    "fetches_per_sample": 0.971875,
+    "lat_mean_ms": 152.13497938821092,
+    "pred_ms": 148.73597407623552
+   },
+   {
+    "arm": "steady|BIG|seq",
+    "fetches_per_sample": 2.946875,
+    "lat_mean_ms": 444.6919736881682,
+    "pred_ms": 460.72820678070366
+   },
+   {
+    "arm": "steady|BIG|one",
+    "fetches_per_sample": 0.9875,
+    "lat_mean_ms": 125.3593023175199,
+    "pred_ms": 151.20426705649237
+   }
+  ]
+ },
+ "requests_per_fetch": 2.0,
+ "resolves_per_fetch": 1.0,
+ "ms_per_request": 78.98537536821979,
+ "open_fit": {
+  "SEP+BIG": {
+   "a_ms": 156.71542442895125,
+   "b_ms_per_frame": 0.000843401369108396,
+   "F_range": [
+    967.3333333333334,
+    74118.0
+   ],
+   "requests_per_open": 2.1041666666666665,
+   "resolves_per_open": 1.0,
+   "api_per_open": 0.10416666666666667,
+   "fetches_per_open": 1.0
+  },
+  "STACK": {
+   "a_ms": 138.7711374873368,
+   "b_ms_per_frame": 0.0018822361962831757,
+   "F_range": [
+    967.3333333333334,
+    24706.0
+   ],
+   "requests_per_open": 2.125,
+   "resolves_per_open": 1.0,
+   "api_per_open": 0.125,
+   "fetches_per_open": 1.0
+  }
+ },
+ "fetch_count_check": [
+  {
+   "where": "open ckpt_1k|SEP",
+   "file_mb": 2.080766,
+   "measured": 1.0,
+   "model": 1.0
+  },
+  {
+   "where": "open ckpt_1k|STACK",
+   "file_mb": 6.073583333333333,
+   "measured": 1.0,
+   "model": 1.136773184418863
+  },
+  {
+   "where": "open ckpt_1k|BIG",
+   "file_mb": 6.240696,
+   "measured": 1.125,
+   "model": 1.1598885765305664
+  },
+  {
+   "where": "open ckpt_5k|SEP",
+   "file_mb": 11.764953,
+   "measured": 1.25,
+   "model": 1.5543645605724052
+  },
+  {
+   "where": "open ckpt_5k|STACK",
+   "file_mb": 34.411659666666665,
+   "measured": 2.0,
+   "model": 1.8476423383589782
+  },
+  {
+   "where": "open ckpt_5k|BIG",
+   "file_mb": 35.29325433333334,
+   "measured": 1.875,
+   "model": 1.8514480996713225
+  },
+  {
+   "where": "open ckpt_full|SEP",
+   "file_mb": 73.4488941111111,
+   "measured": 1.875,
+   "model": 1.928618666578305
+  },
+  {
+   "where": "open ckpt_full|STACK",
+   "file_mb": 216.40978433333333,
+   "measured": 2.0,
+   "model": 1.9757733689530208
+  },
+  {
+   "where": "open ckpt_full|BIG",
+   "file_mb": 220.34510833333334,
+   "measured": 2.0,
+   "model": 1.9762060522257263
+  },
+  {
+   "where": "steady steady|SEP|seq",
+   "file_mb": 73.4488941111111,
+   "measured": 0.9395833333333333,
+   "model": 0.9286186665783049
+  },
+  {
+   "where": "steady steady|SEP|one",
+   "file_mb": 73.4488941111111,
+   "measured": 0.95,
+   "model": 0.9286186665783049
+  },
+  {
+   "where": "steady steady|STACK|seq",
+   "file_mb": 216.40978433333333,
+   "measured": 0.971875,
+   "model": 0.9757733689530208
+  },
+  {
+   "where": "steady steady|STACK|one",
+   "file_mb": 216.40978433333333,
+   "measured": 0.971875,
+   "model": 0.9757733689530208
+  },
+  {
+   "where": "steady steady|BIG|seq",
+   "file_mb": 220.34510833333334,
+   "measured": 0.9822916666666667,
+   "model": 0.9762060522257263
+  },
+  {
+   "where": "steady steady|BIG|one",
+   "file_mb": 220.34510833333334,
+   "measured": 0.9875,
+   "model": 0.9762060522257263
+  }
+ ],
+ "predictions": [
+  {
+   "label": "EXTRAPOLATED",
+   "dataset": "lerobot/abc_130k_v3_train",
+   "variant": "SEP (as stored)",
+   "pattern": "all",
+   "cache": 100,
+   "units": 12721.333333333334,
+   "frames_per_file": 24648.0,
+   "file_mb": 73.2760392,
+   "hit_rate_model": 0.0025940677077874435,
+   "opens_per_sample": 2.9922177968766377,
+   "fetches_per_sample": 5.777568640457714,
+   "resolves_per_sample": 5.777568640457714,
+   "api_per_sample_upper": 0.31168935384131646,
+   "mb_per_sample": 30.29109907368294,
+   "lat_ms_single_stream_seq": 907.8950062686739,
+   "sps_single_stream": 1.1014489484966608,
+   "sps_cap_resolver_limit": 6.9233275256823426,
+   "streams_to_hit_resolver_limit": 6.285654487329452,
+   "beyond_measured_frames_range": false,
+   "source": "meta/episodes @ 68651e49: 38164 files, median frames/file 24648"
+  },
+  {
+   "label": "EXTRAPOLATED",
+   "dataset": "lerobot/abc_130k_v3_train",
+   "variant": "STACK, same frames/file (files / 3)",
+   "pattern": "all",
+   "cache": 100,
+   "units": 12721.333333333334,
+   "frames_per_file": 24648.0,
+   "file_mb": 215.9016912,
+   "hit_rate_model": 0.007860811235719526,
+   "opens_per_sample": 0.9921391887642804,
+   "fetches_per_sample": 1.9678555438754441,
+   "resolves_per_sample": 1.9678555438754441,
+   "api_per_sample_upper": 0.12401739859553505,
+   "mb_per_sample": 10.317230473873687,
+   "lat_ms_single_stream_seq": 306.07176831112685,
+   "sps_single_stream": 3.2672075752621654,
+   "sps_cap_resolver_limit": 20.326695282330036,
+   "streams_to_hit_resolver_limit": 6.221427568984193,
+   "beyond_measured_frames_range": false,
+   "source": "meta/episodes @ 68651e49: 38164 files, median frames/file 24648"
+  },
+  {
+   "label": "EXTRAPOLATED",
+   "dataset": "lerobot/abc_130k_v3_train",
+   "variant": "BIG (3x frames/file, files / 3)",
+   "pattern": "all",
+   "cache": 100,
+   "units": 4240.444444444444,
+   "frames_per_file": 73944.0,
+   "file_mb": 219.82811759999998,
+   "hit_rate_model": 0.007782203123362331,
+   "opens_per_sample": 2.976653390629913,
+   "fetches_per_sample": 5.905103671823604,
+   "resolves_per_sample": 5.905103671823604,
+   "api_per_sample_upper": 0.3100680615239493,
+   "mb_per_sample": 30.95974993893054,
+   "lat_ms_single_stream_seq": 928.041810918739,
+   "sps_single_stream": 1.0775376585781455,
+   "sps_cap_resolver_limit": 6.77380148139673,
+   "streams_to_hit_resolver_limit": 6.286370993599458,
+   "beyond_measured_frames_range": false,
+   "source": "meta/episodes @ 68651e49: 38164 files, median frames/file 24648"
+  },
+  {
+   "label": "EXTRAPOLATED",
+   "dataset": "lerobot/abc_130k_v3_train",
+   "variant": "SEP (as stored)",
+   "pattern": "one",
+   "cache": 100,
+   "units": 12721.333333333334,
+   "frames_per_file": 24648.0,
+   "file_mb": 73.2760392,
+   "hit_rate_model": 0.007860811235719526,
+   "opens_per_sample": 0.9921391887642804,
+   "fetches_per_sample": 1.9205894699579726,
+   "resolves_per_sample": 1.9205894699579726,
+   "api_per_sample_upper": 0.10334783216294588,
+   "mb_per_sample": 10.069420120253255,
+   "lat_ms_single_stream_seq": 298.6051111300198,
+   "sps_single_stream": 3.34890449870624,
+   "sps_cap_resolver_limit": 20.826939138052914,
+   "streams_to_hit_resolver_limit": 6.219030475816449,
+   "beyond_measured_frames_range": false,
+   "source": "meta/episodes @ 68651e49: 38164 files, median frames/file 24648"
+  },
+  {
+   "label": "EXTRAPOLATED",
+   "dataset": "lerobot/abc_130k_v3_train",
+   "variant": "STACK, same frames/file (files / 3)",
+   "pattern": "one",
+   "cache": 100,
+   "units": 12721.333333333334,
+   "frames_per_file": 24648.0,
+   "file_mb": 215.9016912,
+   "hit_rate_model": 0.007860811235719526,
+   "opens_per_sample": 0.9921391887642804,
+   "fetches_per_sample": 1.9678555438754441,
+   "resolves_per_sample": 1.9678555438754441,
+   "api_per_sample_upper": 0.12401739859553505,
+   "mb_per_sample": 10.317230473873687,
+   "lat_ms_single_stream_seq": 306.07176831112685,
+   "sps_single_stream": 3.2672075752621654,
+   "sps_cap_resolver_limit": 20.326695282330036,
+   "streams_to_hit_resolver_limit": 6.221427568984193,
+   "beyond_measured_frames_range": false,
+   "source": "meta/episodes @ 68651e49: 38164 files, median frames/file 24648"
+  },
+  {
+   "label": "EXTRAPOLATED",
+   "dataset": "lerobot/abc_130k_v3_train",
+   "variant": "BIG (3x frames/file, files / 3)",
+   "pattern": "one",
+   "cache": 100,
+   "units": 4240.444444444444,
+   "frames_per_file": 73944.0,
+   "file_mb": 219.82811759999998,
+   "hit_rate_model": 0.023582433707158578,
+   "opens_per_sample": 0.9764175662928414,
+   "fetches_per_sample": 1.952567660024072,
+   "resolves_per_sample": 1.952567660024072,
+   "api_per_sample_upper": 0.10171016315550431,
+   "mb_per_sample": 10.237077933387008,
+   "lat_ms_single_stream_seq": 303.65672982195406,
+   "sps_single_stream": 3.2931922852042157,
+   "sps_cap_resolver_limit": 20.48584580137257,
+   "streams_to_hit_resolver_limit": 6.220664943681602,
+   "beyond_measured_frames_range": false,
+   "source": "meta/episodes @ 68651e49: 38164 files, median frames/file 24648"
+  },
+  {
+   "label": "ANALYTIC (not measured): sequential in-order reads",
+   "dataset": "lerobot/abc_130k_v3_train",
+   "variant": "SEP (as stored)",
+   "pattern": "all",
+   "fetches_per_sample": 0.0017011070251464846,
+   "resolves_per_sample": 0.0017011070251464846,
+   "sps_cap_resolver_limit": 23514.099588505047,
+   "source": "meta/episodes @ 68651e49: 38164 files, median frames/file 24648"
+  },
+  {
+   "label": "ANALYTIC (not measured): sequential in-order reads",
+   "dataset": "lerobot/abc_130k_v3_train",
+   "variant": "STACK",
+   "pattern": "all",
+   "fetches_per_sample": 0.0016707229614257811,
+   "resolves_per_sample": 0.0016707229614257811,
+   "sps_cap_resolver_limit": 23941.731168801518,
+   "source": "meta/episodes @ 68651e49: 38164 files, median frames/file 24648"
+  },
+  {
+   "label": "EXTRAPOLATED",
+   "dataset": "cadene/droid_1.0.1_v30",
+   "variant": "SEP (as stored)",
+   "pattern": "all",
+   "cache": 100,
+   "units": 2048.0,
+   "frames_per_file": 13480.35009765625,
+   "file_mb": 46.00530551631383,
+   "hit_rate_model": 0.01611328125,
+   "opens_per_sample": 2.95166015625,
+   "fetches_per_sample": 5.609772632116018,
+   "resolves_per_sample": 5.609772632116018,
+   "api_per_sample_upper": 0.307464599609375,
+   "mb_per_sample": 29.41136473746843,
+   "lat_ms_single_stream_seq": 881.3881448603584,
+   "sps_single_stream": 1.1345739171003189,
+   "sps_cap_resolver_limit": 7.130413765969677,
+   "streams_to_hit_resolver_limit": 6.284662161274775,
+   "beyond_measured_frames_range": false,
+   "source": "info.json total_frames 27,607,757; 6144 files (2048 per camera); mean frames/file; bytes/frame scaled by pixels (ASSUMED)"
+  },
+  {
+   "label": "EXTRAPOLATED",
+   "dataset": "cadene/droid_1.0.1_v30",
+   "variant": "STACK, same frames/file (files / 3)",
+   "pattern": "all",
+   "cache": 100,
+   "units": 2048.0,
+   "frames_per_file": 13480.35009765625,
+   "file_mb": 135.550766302129,
+   "hit_rate_model": 0.048828125,
+   "opens_per_sample": 0.951171875,
+   "fetches_per_sample": 1.9124935248657473,
+   "resolves_per_sample": 1.9124935248657473,
+   "api_per_sample_upper": 0.118896484375,
+   "mb_per_sample": 10.026974051648128,
+   "lat_ms_single_stream_seq": 297.32618860587996,
+   "sps_single_stream": 3.3633095177012735,
+   "sps_cap_resolver_limit": 20.91510349181857,
+   "streams_to_hit_resolver_limit": 6.218608005519947,
+   "beyond_measured_frames_range": false,
+   "source": "info.json total_frames 27,607,757; 6144 files (2048 per camera); mean frames/file; bytes/frame scaled by pixels (ASSUMED)"
+  },
+  {
+   "label": "EXTRAPOLATED",
+   "dataset": "cadene/droid_1.0.1_v30",
+   "variant": "BIG (3x frames/file, files / 3)",
+   "pattern": "all",
+   "cache": 100,
+   "units": 682.6666666666666,
+   "frames_per_file": 40441.05029296875,
+   "file_mb": 138.0159165489415,
+   "hit_rate_model": 0.04833984375,
+   "opens_per_sample": 2.85498046875,
+   "fetches_per_sample": 5.741017960705339,
+   "resolves_per_sample": 5.741017960705339,
+   "api_per_sample_upper": 0.297393798828125,
+   "mb_per_sample": 30.099468245822806,
+   "lat_ms_single_stream_seq": 902.121067948264,
+   "sps_single_stream": 1.108498665566415,
+   "sps_cap_resolver_limit": 6.96740547996572,
+   "streams_to_hit_resolver_limit": 6.285443272415263,
+   "beyond_measured_frames_range": false,
+   "source": "info.json total_frames 27,607,757; 6144 files (2048 per camera); mean frames/file; bytes/frame scaled by pixels (ASSUMED)"
+  },
+  {
+   "label": "EXTRAPOLATED",
+   "dataset": "cadene/droid_1.0.1_v30",
+   "variant": "SEP (as stored)",
+   "pattern": "one",
+   "cache": 100,
+   "units": 2048.0,
+   "frames_per_file": 13480.35009765625,
+   "file_mb": 46.00530551631383,
+   "hit_rate_model": 0.048828125,
+   "opens_per_sample": 0.951171875,
+   "fetches_per_sample": 1.837209366955339,
+   "resolves_per_sample": 1.837209366955339,
+   "api_per_sample_upper": 0.09908040364583334,
+   "mb_per_sample": 9.632268245822807,
+   "lat_ms_single_stream_seq": 285.43349366221213,
+   "sps_single_stream": 3.5034430864074437,
+   "sps_cap_resolver_limit": 21.7721511328286,
+   "streams_to_hit_resolver_limit": 6.214501162384957,
+   "beyond_measured_frames_range": false,
+   "source": "info.json total_frames 27,607,757; 6144 files (2048 per camera); mean frames/file; bytes/frame scaled by pixels (ASSUMED)"
+  },
+  {
+   "label": "EXTRAPOLATED",
+   "dataset": "cadene/droid_1.0.1_v30",
+   "variant": "STACK, same frames/file (files / 3)",
+   "pattern": "one",
+   "cache": 100,
+   "units": 2048.0,
+   "frames_per_file": 13480.35009765625,
+   "file_mb": 135.550766302129,
+   "hit_rate_model": 0.048828125,
+   "opens_per_sample": 0.951171875,
+   "fetches_per_sample": 1.9124935248657473,
+   "resolves_per_sample": 1.9124935248657473,
+   "api_per_sample_upper": 0.118896484375,
+   "mb_per_sample": 10.026974051648128,
+   "lat_ms_single_stream_seq": 297.32618860587996,
+   "sps_single_stream": 3.3633095177012735,
+   "sps_cap_resolver_limit": 20.91510349181857,
+   "streams_to_hit_resolver_limit": 6.218608005519947,
+   "beyond_measured_frames_range": false,
+   "source": "info.json total_frames 27,607,757; 6144 files (2048 per camera); mean frames/file; bytes/frame scaled by pixels (ASSUMED)"
+  },
+  {
+   "label": "EXTRAPOLATED",
+   "dataset": "cadene/droid_1.0.1_v30",
+   "variant": "BIG (3x frames/file, files / 3)",
+   "pattern": "one",
+   "cache": 100,
+   "units": 682.6666666666666,
+   "frames_per_file": 40441.05029296875,
+   "file_mb": 138.0159165489415,
+   "hit_rate_model": 0.146484375,
+   "opens_per_sample": 0.853515625,
+   "fetches_per_sample": 1.8155281223184463,
+   "resolves_per_sample": 1.8155281223184463,
+   "api_per_sample_upper": 0.08890787760416667,
+   "mb_per_sample": 9.518596081940936,
+   "lat_ms_single_stream_seq": 282.0084911700218,
+   "sps_single_stream": 3.5459925190589527,
+   "sps_cap_resolver_limit": 22.032156653635102,
+   "streams_to_hit_resolver_limit": 6.213255255113191,
+   "beyond_measured_frames_range": false,
+   "source": "info.json total_frames 27,607,757; 6144 files (2048 per camera); mean frames/file; bytes/frame scaled by pixels (ASSUMED)"
+  },
+  {
+   "label": "ANALYTIC (not measured): sequential in-order reads",
+   "dataset": "cadene/droid_1.0.1_v30",
+   "variant": "SEP (as stored)",
+   "pattern": "all",
+   "fetches_per_sample": 0.0019528014319283623,
+   "resolves_per_sample": 0.0019528014319283623,
+   "sps_cap_resolver_limit": 20483.393419319953,
+   "source": "info.json total_frames 27,607,757; 6144 files (2048 per camera); mean frames/file; bytes/frame scaled by pixels (ASSUMED)"
+  },
+  {
+   "label": "ANALYTIC (not measured): sequential in-order reads",
+   "dataset": "cadene/droid_1.0.1_v30",
+   "variant": "STACK",
+   "pattern": "all",
+   "fetches_per_sample": 0.0019179217669428612,
+   "resolves_per_sample": 0.0019179217669428612,
+   "sps_cap_resolver_limit": 20855.90804037821,
+   "source": "info.json total_frames 27,607,757; 6144 files (2048 per camera); mean frames/file; bytes/frame scaled by pixels (ASSUMED)"
+  }
+ ],
+ "assumptions": [
+  "Access = uniform random frames (map-style shuffle) with a 100-decoder LRU per worker; LRU hit rate h = min(1, floor(C/k)/U).",
+  "fsspec readahead cache holds one block of 5242880 bytes per open handle; a random frame needs a new block fetch with chance 1 - block/file bytes; an open costs one fetch (moov is at the start, faststart).",
+  "Each block fetch = 1 resolve call (counts against the per-token 'resolvers' budget) + 1 CDN call; measured, see resolves_per_fetch.",
+  "Latency per sample is linear in block fetches per sample (single reader, cameras one after another); fitted on this job's network path to the Hub.",
+  "sps_cap_resolver_limit = resolver budget per second / resolves per sample: a per-token ceiling that no amount of hardware removes.",
+  "DROID bytes per frame = ABC bytes per frame x pixel ratio (ASSUMED; not measured). Frames/file beyond the measured range are flagged.",
+  "API calls per open (paths-info when the fsspec dircache misses) are an upper bound: a long-lived worker caches them.",
+  "Sequential rows are analytic only (no measurement of in-order streaming reads here)."
+ ]
+}

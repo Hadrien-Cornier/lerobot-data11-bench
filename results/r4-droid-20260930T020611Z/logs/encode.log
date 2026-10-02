@@ -1,0 +1,12 @@
+[encode] 5000/59826 frames, 29s
+[encode] 10000/59826 frames, 58s
+[encode] 15000/59826 frames, 86s
+[encode] 20000/59826 frames, 114s
+[encode] 25000/59826 frames, 143s
+[encode] 30000/59826 frames, 170s
+[encode] 35000/59826 frames, 199s
+[encode] 40000/59826 frames, 228s
+[encode] 45000/59826 frames, 256s
+[encode] 50000/59826 frames, 285s
+[encode] 55000/59826 frames, 312s
+[02:13:20] encode: 59826 frames in 338s; SEP 834.6 MB, STACK 833.5 MB; svt {'mapped': ['Preset M12 is mapped to M10.'], 'version': ['SVT-AV1 Encoder Lib v3.0.0'], 'pred_struct': ['preset / tune / pred struct : 10 / PSNR / random access'], 'lp': ['Level of Parallelism: 6']}

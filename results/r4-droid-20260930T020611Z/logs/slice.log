@@ -1,0 +1,9 @@
+[02:07:30] droid: 95658 episodes, cameras ['wrist_left', 'exterior_1_left', 'exterior_2_left'], shapes {'wrist_left': [180, 320], 'exterior_1_left': [180, 320], 'exterior_2_left': [180, 320]}, fps 15
+
+Resolving data files:   0%|          | 0/156 [00:00<?, ?it/s][AResolving data files: 100%|██████████| 156/156 [00:00<00:00, 25682.44it/s]
+
+Resolving data files:   0%|          | 0/156 [00:00<?, ?it/s][AResolving data files: 100%|██████████| 156/156 [00:00<00:00, 27762.70it/s]
+[02:07:33] real: {"episodes": 95658, "frames": 27630375, "episode_length_median": 221.5, "per_camera": {"wrist_left": {"video_files": 183, "frames_per_file_median": 150750.0, "mean": 150985.65573770492, "p10": 145503.0, "p90": 158111.4, "max": 163436}, "exterior_1_left": {"video_files": 302, "frames_per_file_median": 92179.5, "mean": 91491.30794701987, "p10": 84611.4, "p90": 96704.5, "max": 99892}, "exterior_2_left": {"video_files": 299, "frames_per_file_median": 92998.0, "mean": 92409.28093645484, "p10": 86683.4, "p90": 97408.0, "max": 103196}}, "video_files_total": 784, "video_files_per_camera": {"wrist_left
+[02:07:33] slice: 197 episodes, 59826 frames (cap 60000, applied True); real median frames/file 94102
+[02:07:38] downloaded 3 source files, 1539 MB in 5.6s
+[02:07:39] encoder defaults: {'repr': "VideoEncoderConfig(vcodec='libsvtav1', pix_fmt='yuv420p', g=2, crf=30, preset=12, fast_decode=0, video_backend='pyav', extra_options={})", 'vcodec': 'libsvtav1', 'pix_fmt': 'yuv420p', 'g': 2, 'crf': 30, 'preset': 12, 'fast_decode': 0, 'codec_options': {'g': '2', 'crf': '30', 'preset': '12', 'svtav1-params': 'fast-decode=0'}}

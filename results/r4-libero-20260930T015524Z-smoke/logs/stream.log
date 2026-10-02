@@ -1,0 +1,23 @@
+Too many dataloader workers: 4 (max is dataset.num_shards=2). Stopping 2 dataloader workers.
+WARNING:datasets.iterable_dataset:Too many dataloader workers: 4 (max is dataset.num_shards=2). Stopping 2 dataloader workers.
+Too many dataloader workers: 4 (max is dataset.num_shards=2). Stopping 2 dataloader workers.
+WARNING:datasets.iterable_dataset:Too many dataloader workers: 4 (max is dataset.num_shards=2). Stopping 2 dataloader workers.
+Too many dataloader workers: 4 (max is dataset.num_shards=2). Stopping 2 dataloader workers.
+WARNING:datasets.iterable_dataset:Too many dataloader workers: 4 (max is dataset.num_shards=2). Stopping 2 dataloader workers.
+Too many dataloader workers: 4 (max is dataset.num_shards=2). Stopping 2 dataloader workers.
+WARNING:datasets.iterable_dataset:Too many dataloader workers: 4 (max is dataset.num_shards=2). Stopping 2 dataloader workers.
+[01:57:15] audit: {"workers": 4, "parquet_files": 8, "max_num_shards": 4, "samples": 400, "buffer_size": 16, "per_worker": {"0": {"frames": 200, "distinct_files": [0, 2, 4, 6], "max_decoder_cache_size": 8}, "1": {"frames": 200, "distinct_files": [1, 3, 5, 7], "max_decoder_cache_size": 8}}, "workers_with_frames": 2, "predicted_active_shards_per_worker": [4, 4, 0, 0], "predicted_decoders_per_worker": [8, 8, 0, 0], "s": 4.6}
+[01:57:23] SEP_S8_c100 r0: 358.5 fps, CPU 2.8 ms/frame, mp4 fetch/frame 0.0000 (0.0000 MB), hit 1.000, open 0 ms, shards 8/8, first yield 6.229123362005339
+WARNING:lerobot.datasets.utils:Unknown fields in DatasetInfo: ['r4_stack_layout']. These will be ignored.
+[01:57:30] STACK_S8_c100 r0: 508.2 fps, CPU 2.0 ms/frame, mp4 fetch/frame 0.0000 (0.0000 MB), hit 1.000, open 0 ms, shards 8/8, first yield 5.845155189999787
+[01:57:35] SEP1_S8_c100 r0: 592.6 fps, CPU 1.7 ms/frame, mp4 fetch/frame 0.0000 (0.0000 MB), hit 1.000, open 0 ms, shards 8/8, first yield 4.39450796500023
+[01:57:59] SEP_S8_c12 r0: 18.4 fps, CPU 13.0 ms/frame, mp4 fetch/frame 0.5163 (1.9716 MB), hit 0.742, open 100 ms, shards 8/8, first yield None
+WARNING:lerobot.datasets.utils:Unknown fields in DatasetInfo: ['r4_stack_layout']. These will be ignored.
+[01:58:05] STACK_S8_c12 r0: 511.1 fps, CPU 2.0 ms/frame, mp4 fetch/frame 0.0000 (0.0000 MB), hit 1.000, open 0 ms, shards 8/8, first yield 5.596383937001519
+WARNING:lerobot.datasets.utils:Unknown fields in DatasetInfo: ['r4_stack_layout']. These will be ignored.
+[01:58:12] STACK_S8_c12 r1: 516.7 fps, CPU 1.9 ms/frame, mp4 fetch/frame 0.0000 (0.0000 MB), hit 1.000, open 0 ms, shards 8/8, first yield 5.430931493996468
+[01:58:35] SEP_S8_c12 r1: 18.3 fps, CPU 13.4 ms/frame, mp4 fetch/frame 0.4850 (1.8521 MB), hit 0.757, open 107 ms, shards 8/8, first yield None
+[01:58:40] SEP1_S8_c100 r1: 690.7 fps, CPU 1.4 ms/frame, mp4 fetch/frame 0.0000 (0.0000 MB), hit 1.000, open 0 ms, shards 8/8, first yield 3.797036025003763
+WARNING:lerobot.datasets.utils:Unknown fields in DatasetInfo: ['r4_stack_layout']. These will be ignored.
+[01:58:46] STACK_S8_c100 r1: 515.8 fps, CPU 1.9 ms/frame, mp4 fetch/frame 0.0000 (0.0000 MB), hit 1.000, open 0 ms, shards 8/8, first yield 5.400207319995388
+[01:58:52] SEP_S8_c100 r1: 398.6 fps, CPU 2.5 ms/frame, mp4 fetch/frame 0.0000 (0.0000 MB), hit 1.000, open 0 ms, shards 8/8, first yield 5.2022277700016275

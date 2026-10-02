@@ -1,0 +1,317 @@
+== DATA-11 r4 job r4-droid-20260930T020611Z start 2026-09-30T02:06:11Z SMOKE=0 dataset=droid host=j-hadriencornier-6abc6e8d031314b6963434f1-pa01rrf2-673c4-wq68r
+HF_TOKEN present (value not shown); results -> dataset hadriencornier/lerobot-data11-bench:results/r4-droid-20260930T020611Z
+
+[notice] A new release of pip is available: 25.0.1 -> 26.2.1
+[notice] To update, run: pip install --upgrade pip
+attempt marker attempts/6abc6e8d031314b6963434f1 recorded
+system ffmpeg: ffmpeg version 7.1.5-0+deb13u1 Copyright (c) 2000-2026 the FFmpeg developers
+== stage system_deps: ok (29s, cgroup peak 839 MB)
+bundle checksums OK
+== stage bundle: ok (1s, cgroup peak 839 MB)
+lerobot PR #4702 head now 32b671d437f8c50014f74a322ad3df09c6fab944 (pin 32b671d437f8c50014f74a322ad3df09c6fab944); installing 32b671d437f8c50014f74a322ad3df09c6fab944
+
+[notice] A new release of pip is available: 25.0.1 -> 26.2.1
+[notice] To update, run: pip install --upgrade pip
+Using Python 3.12.14 environment at: /work/venv
+lerobot /work/venv/lib/python3.12/site-packages/lerobot/__init__.py torch 2.11.0+cpu torchcodec 0.11.1+cpu datasets 4.8.5 hub 1.30.0
+av 15.1.0 {'libavutil': '59.39.100', 'libavcodec': '61.19.101', 'libavformat': '61.7.100', 'libavdevice': '61.3.100', 'libavfilter': '10.4.100', 'libswscale': '8.3.100', 'libswresample': '5.3.100'}
+libsvtav1 encoder available in PyAV
+== stage python_env: ok (41s, cgroup peak 2930 MB)
+cpu quota 8
+uploaded results/r4-droid-20260930T020611Z (setup done)
+== stage slice start 2026-09-30T02:07:24Z
+[02:07:30] droid: 95658 episodes, cameras ['wrist_left', 'exterior_1_left', 'exterior_2_left'], shapes {'wrist_left': [180, 320], 'exterior_1_left': [180, 320], 'exterior_2_left': [180, 320]}, fps 15
+
+Resolving data files:   0%|          | 0/156 [00:00<?, ?it/s][AResolving data files: 100%|██████████| 156/156 [00:00<00:00, 25682.44it/s]
+
+Resolving data files:   0%|          | 0/156 [00:00<?, ?it/s][AResolving data files: 100%|██████████| 156/156 [00:00<00:00, 27762.70it/s]
+[02:07:33] real: {"episodes": 95658, "frames": 27630375, "episode_length_median": 221.5, "per_camera": {"wrist_left": {"video_files": 183, "frames_per_file_median": 150750.0, "mean": 150985.65573770492, "p10": 145503.0, "p90": 158111.4, "max": 163436}, "exterior_1_left": {"video_files": 302, "frames_per_file_median": 92179.5, "mean": 91491.30794701987, "p10": 84611.4, "p90": 96704.5, "max": 99892}, "exterior_2_left": {"video_files": 299, "frames_per_file_median": 92998.0, "mean": 92409.28093645484, "p10": 86683.4, "p90": 97408.0, "max": 103196}}, "video_files_total": 784, "video_files_per_camera": {"wrist_left
+[02:07:33] slice: 197 episodes, 59826 frames (cap 60000, applied True); real median frames/file 94102
+[02:07:38] downloaded 3 source files, 1539 MB in 5.6s
+[02:07:39] encoder defaults: {'repr': "VideoEncoderConfig(vcodec='libsvtav1', pix_fmt='yuv420p', g=2, crf=30, preset=12, fast_decode=0, video_backend='pyav', extra_options={})", 'vcodec': 'libsvtav1', 'pix_fmt': 'yuv420p', 'g': 2, 'crf': 30, 'preset': 12, 'fast_decode': 0, 'codec_options': {'g': '2', 'crf': '30', 'preset': '12', 'svtav1-params': 'fast-decode=0'}}
+== stage slice: ok (16s, cgroup peak 4735 MB)
+uploaded results/r4-droid-20260930T020611Z (after slice)
+== stage encode start 2026-09-30T02:07:41Z
+[encode] 5000/59826 frames, 29s
+[encode] 10000/59826 frames, 58s
+[encode] 15000/59826 frames, 86s
+[encode] 20000/59826 frames, 114s
+[encode] 25000/59826 frames, 143s
+[encode] 30000/59826 frames, 170s
+[encode] 35000/59826 frames, 199s
+[encode] 40000/59826 frames, 228s
+[encode] 45000/59826 frames, 256s
+[encode] 50000/59826 frames, 285s
+[encode] 55000/59826 frames, 312s
+[02:13:20] encode: 59826 frames in 338s; SEP 834.6 MB, STACK 833.5 MB; svt {'mapped': ['Preset M12 is mapped to M10.'], 'version': ['SVT-AV1 Encoder Lib v3.0.0'], 'pred_struct': ['preset / tune / pred struct : 10 / PSNR / random access'], 'lp': ['Level of Parallelism: 6']}
+== stage encode: ok (339s, cgroup peak 6421 MB)
+uploaded results/r4-droid-20260930T020611Z (after encode)
+== stage build start 2026-09-30T02:13:21Z
+
+Creating parquet from Arrow format:   0%|          | 0/1 [00:00<?, ?ba/s][ACreating parquet from Arrow format: 100%|██████████| 1/1 [00:00<00:00, 40.08ba/s]
+
+Creating parquet from Arrow format:   0%|          | 0/1 [00:00<?, ?ba/s][ACreating parquet from Arrow format: 100%|██████████| 1/1 [00:00<00:00, 39.16ba/s]
+
+Creating parquet from Arrow format:   0%|          | 0/1 [00:00<?, ?ba/s][ACreating parquet from Arrow format: 100%|██████████| 1/1 [00:00<00:00, 38.87ba/s]
+
+Creating parquet from Arrow format:   0%|          | 0/1 [00:00<?, ?ba/s][ACreating parquet from Arrow format: 100%|██████████| 1/1 [00:00<00:00, 41.94ba/s]
+
+Creating parquet from Arrow format:   0%|          | 0/1 [00:00<?, ?ba/s][ACreating parquet from Arrow format: 100%|██████████| 1/1 [00:00<00:00, 39.02ba/s]
+
+Creating parquet from Arrow format:   0%|          | 0/1 [00:00<?, ?ba/s][ACreating parquet from Arrow format: 100%|██████████| 1/1 [00:00<00:00, 40.10ba/s]
+
+Creating parquet from Arrow format:   0%|          | 0/1 [00:00<?, ?ba/s][ACreating parquet from Arrow format: 100%|██████████| 1/1 [00:00<00:00, 34.02ba/s]
+
+Creating parquet from Arrow format:   0%|          | 0/1 [00:00<?, ?ba/s][ACreating parquet from Arrow format: 100%|██████████| 1/1 [00:00<00:00, 40.07ba/s]
+[02:13:34] dataset sep: {"kind": "sep", "root": "/work/ds/sep", "video_keys": ["observation.images.wrist_left", "observation.images.exterior_1_left", "observation.images.exterior_2_left"], "files_per_key": 8, "episodes": 1576, "frames": 478608, "frames_per_file": 59826, "episodes_per_file": 197, "stack_layout": null, "video_bytes_per_file": {"observation.images.wrist_left": 190713756, "observation.images.exterior_1_left": 320545900, "observation.images.exterior_2_left": 323369069}, "repo": "hadriencornier/lerobot-data1
+
+Creating parquet from Arrow format:   0%|          | 0/1 [00:00<?, ?ba/s][ACreating parquet from Arrow format: 100%|██████████| 1/1 [00:00<00:00, 35.76ba/s]
+
+Creating parquet from Arrow format:   0%|          | 0/1 [00:00<?, ?ba/s][ACreating parquet from Arrow format: 100%|██████████| 1/1 [00:00<00:00, 38.20ba/s]
+
+Creating parquet from Arrow format:   0%|          | 0/1 [00:00<?, ?ba/s][ACreating parquet from Arrow format: 100%|██████████| 1/1 [00:00<00:00, 39.25ba/s]
+
+Creating parquet from Arrow format:   0%|          | 0/1 [00:00<?, ?ba/s][ACreating parquet from Arrow format: 100%|██████████| 1/1 [00:00<00:00, 42.45ba/s]
+
+Creating parquet from Arrow format:   0%|          | 0/1 [00:00<?, ?ba/s][ACreating parquet from Arrow format: 100%|██████████| 1/1 [00:00<00:00, 38.22ba/s]
+
+Creating parquet from Arrow format:   0%|          | 0/1 [00:00<?, ?ba/s][ACreating parquet from Arrow format: 100%|██████████| 1/1 [00:00<00:00, 41.34ba/s]
+
+Creating parquet from Arrow format:   0%|          | 0/1 [00:00<?, ?ba/s][ACreating parquet from Arrow format: 100%|██████████| 1/1 [00:00<00:00, 35.04ba/s]
+
+Creating parquet from Arrow format:   0%|          | 0/1 [00:00<?, ?ba/s][ACreating parquet from Arrow format: 100%|██████████| 1/1 [00:00<00:00, 38.75ba/s]
+[02:13:44] dataset stack: {"kind": "stack", "root": "/work/ds/stack", "video_keys": ["observation.images.stacked"], "files_per_key": 8, "episodes": 1576, "frames": 478608, "frames_per_file": 59826, "episodes_per_file": 197, "stack_layout": {"key": "observation.images.stacked", "order_top_to_bottom": ["wrist_left", "exterior_1_left", "exterior_2_left"], "crops_y0_h_w": {"wrist_left": [0, 180, 320], "exterior_1_left": [180, 180, 320], "exterior_2_left": [360, 180, 320]}, "height": 540, "width": 320, "pad": "right-pad narro
+
+Creating parquet from Arrow format:   0%|          | 0/1 [00:00<?, ?ba/s][ACreating parquet from Arrow format: 100%|██████████| 1/1 [00:00<00:00, 37.87ba/s]
+
+Creating parquet from Arrow format:   0%|          | 0/1 [00:00<?, ?ba/s][ACreating parquet from Arrow format: 100%|██████████| 1/1 [00:00<00:00, 38.68ba/s]
+
+Creating parquet from Arrow format:   0%|          | 0/1 [00:00<?, ?ba/s][ACreating parquet from Arrow format: 100%|██████████| 1/1 [00:00<00:00, 37.18ba/s]
+
+Creating parquet from Arrow format:   0%|          | 0/1 [00:00<?, ?ba/s][ACreating parquet from Arrow format: 100%|██████████| 1/1 [00:00<00:00, 42.43ba/s]
+
+Creating parquet from Arrow format:   0%|          | 0/1 [00:00<?, ?ba/s][ACreating parquet from Arrow format: 100%|██████████| 1/1 [00:00<00:00, 36.78ba/s]
+
+Creating parquet from Arrow format:   0%|          | 0/1 [00:00<?, ?ba/s][ACreating parquet from Arrow format: 100%|██████████| 1/1 [00:00<00:00, 40.79ba/s]
+
+Creating parquet from Arrow format:   0%|          | 0/1 [00:00<?, ?ba/s][ACreating parquet from Arrow format: 100%|██████████| 1/1 [00:00<00:00, 34.83ba/s]
+
+Creating parquet from Arrow format:   0%|          | 0/1 [00:00<?, ?ba/s][ACreating parquet from Arrow format: 100%|██████████| 1/1 [00:00<00:00, 39.49ba/s]
+[02:13:50] dataset sep1: {"kind": "sep1", "root": "/work/ds/sep1", "video_keys": ["observation.images.wrist_left"], "files_per_key": 8, "episodes": 1576, "frames": 478608, "frames_per_file": 59826, "episodes_per_file": 197, "stack_layout": null, "video_bytes_per_file": {"observation.images.wrist_left": 190713756}, "repo": "hadriencornier/lerobot-data11-r4-droid-sep1", "commit": "0b2d75fc1582e498446fe45f6492613179f53e84", "upload_s": 1.2, "files": 19, "readback_mismatch": [], "private": true}
+== stage build: ok (29s, cgroup peak 8061 MB)
+uploaded results/r4-droid-20260930T020611Z (after build)
+== stage check start 2026-09-30T02:13:51Z
+[02:13:54] PSNR {'wrist_left': {'sep_vs_src': {'mean': 39.74187512538792, 'min': 34.946690521434924}, 'stack_vs_src': {'mean': 39.43451927841582, 'min': 34.985804019370846}, 'stack_vs_sep': {'mean': 41.5099830436544, 'min': 34.65182659373895}}, 'exterior_1_left': {'sep_vs_src': {'mean': 38.9619511547812, 'min': 35.06086278117342}, 'stack_vs_src': {'mean': 38.02843324534565, 'min': 35.26971392715189}, 'stack_vs_sep': {'mean': 37.959869375031346, 'min': 34.33022979980804}}, 'exterior_2_left': {'sep_vs_src': {'mean': 38.97629404642122, 'min': 34.85862784425977}, 'stack_vs_src': {'mean': 38.28330228442134, 'min': 34.96800276320335}, 'stack_vs_sep': {'mean': 38.445171369277226, 'min': 35.481637936404624}}}; camera order ok True ({'wrist_left': {'wrist_left': 41.5099830436544, 'exterior_1_left': 9.02453573085409, 'exterior_2_left': 9.060292533700478}, 'exterior_1_left': {'wrist_left': 9.025420293415982, 'exterior_1_left': 37.959869375031346, 'exterior_2_left': 10.115991030853403}, 'exterior_2_left': {'wrist_left': 9.062765881999677, 'exterior_1_left': 10.113962040523186, 'exterior_2_left': 38.445171369277226}})
+[02:14:13] remote == local: {'sep': {'frames_checked': 18, 'mismatch': 0, 'pass': True}, 'stack': {'frames_checked': 20, 'mismatch': 0, 'pass': True}, 'sep1': {'frames_checked': 20, 'mismatch': 0, 'pass': True}}
+WARNING:lerobot.datasets.utils:Unknown fields in DatasetInfo: ['r4_stack_layout']. These will be ignored.
+[02:14:16] through LeRobot: {'samples': 20, 'sep_item_equals_file_frame': '60/60', 'sep1_equals_sep_first_camera': '20/20', 'stack_crop_vs_sep_item_psnr_mean': {'wrist_left': 41.05341629070862, 'exterior_1_left': 38.23975636569012, 'exterior_2_left': 38.95616685333674}, 'stack_crop_vs_sep_item_psnr_min': {'wrist_left': 36.27984529872011, 'exterior_1_left': 34.417391185945576, 'exterior_2_left': 36.33619170200489}, 'pass': True}
+== stage check: FAILED rc=1 (25s, cgroup peak 8061 MB)
+uploaded results/r4-droid-20260930T020611Z (after check)
+== stage stream start 2026-09-30T02:14:18Z
+Too many dataloader workers: 4 (max is dataset.num_shards=2). Stopping 2 dataloader workers.
+WARNING:datasets.iterable_dataset:Too many dataloader workers: 4 (max is dataset.num_shards=2). Stopping 2 dataloader workers.
+Too many dataloader workers: 4 (max is dataset.num_shards=2). Stopping 2 dataloader workers.
+WARNING:datasets.iterable_dataset:Too many dataloader workers: 4 (max is dataset.num_shards=2). Stopping 2 dataloader workers.
+Too many dataloader workers: 4 (max is dataset.num_shards=2). Stopping 2 dataloader workers.
+WARNING:datasets.iterable_dataset:Too many dataloader workers: 4 (max is dataset.num_shards=2). Stopping 2 dataloader workers.
+Too many dataloader workers: 4 (max is dataset.num_shards=2). Stopping 2 dataloader workers.
+WARNING:datasets.iterable_dataset:Too many dataloader workers: 4 (max is dataset.num_shards=2). Stopping 2 dataloader workers.
+[02:14:26] audit: {"workers": 4, "parquet_files": 8, "max_num_shards": 4, "samples": 400, "buffer_size": 16, "per_worker": {"0": {"frames": 200, "distinct_files": [0, 2, 4, 6], "max_decoder_cache_size": 12}, "1": {"frames": 200, "distinct_files": [1, 3, 5, 7], "max_decoder_cache_size": 12}}, "workers_with_frames": 2, "predicted_active_shards_per_worker": [4, 4, 0, 0], "predicted_decoders_per_worker": [12, 12, 0, 0], "s": 5.2}
+[02:14:43] SEP_S8_c100 r0: 213.7 fps, CPU 4.7 ms/frame, mp4 fetch/frame 0.0000 (0.0000 MB), hit 1.000, open 0 ms, shards 8/8, first yield 14.172691352003312
+WARNING:lerobot.datasets.utils:Unknown fields in DatasetInfo: ['r4_stack_layout']. These will be ignored.
+[02:14:54] STACK_S8_c100 r0: 296.5 fps, CPU 3.4 ms/frame, mp4 fetch/frame 0.0000 (0.0000 MB), hit 1.000, open 0 ms, shards 8/8, first yield 9.453223888005596
+[02:15:02] SEP1_S8_c100 r0: 642.2 fps, CPU 1.6 ms/frame, mp4 fetch/frame 0.0000 (0.0000 MB), hit 1.000, open 0 ms, shards 8/8, first yield 7.0469416420019115
+[02:16:21] SEP_S8_c12 r0: 2.9 fps, CPU 58.6 ms/frame, mp4 fetch/frame 1.6474 (8.7451 MB), hit 0.451, open 208 ms, shards 8/8, first yield None
+WARNING:lerobot.datasets.utils:Unknown fields in DatasetInfo: ['r4_stack_layout']. These will be ignored.
+[02:16:32] STACK_S8_c12 r0: 327.9 fps, CPU 3.1 ms/frame, mp4 fetch/frame 0.0000 (0.0000 MB), hit 1.000, open 0 ms, shards 8/8, first yield 9.007632064000063
+WARNING:lerobot.datasets.utils:Unknown fields in DatasetInfo: ['r4_stack_layout']. These will be ignored.
+[02:16:42] STACK_S8_c12 r1: 339.0 fps, CPU 3.0 ms/frame, mp4 fetch/frame 0.0000 (0.0000 MB), hit 1.000, open 0 ms, shards 8/8, first yield 8.783669181000732
+[02:17:58] SEP_S8_c12 r1: 3.8 fps, CPU 49.5 ms/frame, mp4 fetch/frame 1.4416 (7.6524 MB), hit 0.519, open 177 ms, shards 8/8, first yield None
+[02:18:07] SEP1_S8_c100 r1: 655.1 fps, CPU 1.5 ms/frame, mp4 fetch/frame 0.0000 (0.0000 MB), hit 1.000, open 0 ms, shards 8/8, first yield 8.142744823999237
+WARNING:lerobot.datasets.utils:Unknown fields in DatasetInfo: ['r4_stack_layout']. These will be ignored.
+[02:18:17] STACK_S8_c100 r1: 340.8 fps, CPU 2.9 ms/frame, mp4 fetch/frame 0.0000 (0.0000 MB), hit 1.000, open 0 ms, shards 8/8, first yield 8.656079194995982
+[02:18:31] SEP_S8_c100 r1: 227.8 fps, CPU 4.4 ms/frame, mp4 fetch/frame 0.0000 (0.0000 MB), hit 1.000, open 0 ms, shards 8/8, first yield 12.274854334005795
+[02:18:46] SEP_S8_c100 r2: 225.7 fps, CPU 4.4 ms/frame, mp4 fetch/frame 0.0000 (0.0000 MB), hit 1.000, open 0 ms, shards 8/8, first yield 12.979245823000383
+WARNING:lerobot.datasets.utils:Unknown fields in DatasetInfo: ['r4_stack_layout']. These will be ignored.
+[02:18:58] STACK_S8_c100 r2: 332.8 fps, CPU 3.0 ms/frame, mp4 fetch/frame 0.0000 (0.0000 MB), hit 1.000, open 0 ms, shards 8/8, first yield 9.574603143999411
+[02:19:06] SEP1_S8_c100 r2: 652.0 fps, CPU 1.5 ms/frame, mp4 fetch/frame 0.0000 (0.0000 MB), hit 1.000, open 0 ms, shards 8/8, first yield 7.795359014002315
+[02:20:25] SEP_S8_c12 r2: 4.3 fps, CPU 49.3 ms/frame, mp4 fetch/frame 1.3615 (7.2276 MB), hit 0.546, open 166 ms, shards 8/8, first yield None
+WARNING:lerobot.datasets.utils:Unknown fields in DatasetInfo: ['r4_stack_layout']. These will be ignored.
+[02:20:35] STACK_S8_c12 r2: 333.9 fps, CPU 3.0 ms/frame, mp4 fetch/frame 0.0000 (0.0000 MB), hit 1.000, open 0 ms, shards 8/8, first yield 8.837642562000838
+WARNING:lerobot.datasets.utils:Unknown fields in DatasetInfo: ['r4_stack_layout']. These will be ignored.
+[02:20:45] STACK_S8_c12 r3: 334.8 fps, CPU 3.0 ms/frame, mp4 fetch/frame 0.0000 (0.0000 MB), hit 1.000, open 0 ms, shards 8/8, first yield 8.370673684999929
+[02:22:02] SEP_S8_c12 r3: 4.0 fps, CPU 56.2 ms/frame, mp4 fetch/frame 1.5560 (8.2600 MB), hit 0.481, open 157 ms, shards 8/8, first yield None
+[02:22:11] SEP1_S8_c100 r3: 650.4 fps, CPU 1.5 ms/frame, mp4 fetch/frame 0.0000 (0.0000 MB), hit 1.000, open 0 ms, shards 8/8, first yield 7.437816680001561
+WARNING:lerobot.datasets.utils:Unknown fields in DatasetInfo: ['r4_stack_layout']. These will be ignored.
+[02:22:21] STACK_S8_c100 r3: 332.0 fps, CPU 3.0 ms/frame, mp4 fetch/frame 0.0000 (0.0000 MB), hit 1.000, open 0 ms, shards 8/8, first yield 8.905910353001673
+[02:22:36] SEP_S8_c100 r3: 219.7 fps, CPU 4.5 ms/frame, mp4 fetch/frame 0.0000 (0.0000 MB), hit 1.000, open 0 ms, shards 8/8, first yield 12.78178626600129
+[02:22:53] SEP_S8_c100 r4: 220.8 fps, CPU 4.5 ms/frame, mp4 fetch/frame 0.0000 (0.0000 MB), hit 1.000, open 0 ms, shards 8/8, first yield 14.380973589999485
+WARNING:lerobot.datasets.utils:Unknown fields in DatasetInfo: ['r4_stack_layout']. These will be ignored.
+[02:23:04] STACK_S8_c100 r4: 340.0 fps, CPU 2.9 ms/frame, mp4 fetch/frame 0.0000 (0.0000 MB), hit 1.000, open 0 ms, shards 8/8, first yield 9.4368196180003
+[02:23:11] SEP1_S8_c100 r4: 669.6 fps, CPU 1.5 ms/frame, mp4 fetch/frame 0.0000 (0.0000 MB), hit 1.000, open 0 ms, shards 8/8, first yield 6.746131029001845
+[02:24:27] SEP_S8_c12 r4: 3.9 fps, CPU 55.2 ms/frame, mp4 fetch/frame 1.6203 (8.6010 MB), hit 0.460, open 154 ms, shards 8/8, first yield None
+WARNING:lerobot.datasets.utils:Unknown fields in DatasetInfo: ['r4_stack_layout']. These will be ignored.
+[02:24:38] STACK_S8_c12 r4: 334.1 fps, CPU 3.0 ms/frame, mp4 fetch/frame 0.0000 (0.0000 MB), hit 1.000, open 0 ms, shards 8/8, first yield 9.222472859000845
+== stage stream: ok (620s, cgroup peak 8061 MB)
+uploaded results/r4-droid-20260930T020611Z (after stream)
+== stage map start 2026-09-30T02:24:42Z
+[02:25:17] SEP_w0_c100 r0: 238.3 samples/s, CPU 7.4 ms/sample, hit 1.000, open 0.0 ms, 7152 samples in 30s (cap), process 35s
+[02:25:54] SEP_w0_cemu r0: 68.4 samples/s, CPU 18.3 ms/sample, hit 0.124, open 4.6 ms, 2056 samples in 30s (cap), process 37s
+[02:26:28] STACK_w0_c100 r0: 254.3 samples/s, CPU 3.9 ms/sample, hit 1.000, open 0.0 ms, 7632 samples in 30s (cap), process 34s
+[02:27:02] STACK_w0_cemu r0: 184.3 samples/s, CPU 5.4 ms/sample, hit 0.365, open 2.4 ms, 5536 samples in 30s (cap), process 34s
+[02:27:36] SEP1_w0_c100 r0: 625.9 samples/s, CPU 1.6 ms/sample, hit 1.000, open 0.0 ms, 18784 samples in 30s (cap), process 34s
+[02:28:10] SEP1_w0_cemu r0: 318.9 samples/s, CPU 3.1 ms/sample, hit 0.366, open 2.4 ms, 9568 samples in 30s (cap), process 34s
+[02:28:48] SEP_w4_c100 r0: 764.8 samples/s, CPU 9.2 ms/sample, hit 1.000, open 0.0 ms, 22952 samples in 30s (cap), process 38s
+[02:29:26] SEP_w4_cemu r0: 250.3 samples/s, CPU 20.5 ms/sample, hit 0.119, open 5.1 ms, 7512 samples in 30s (cap), process 38s
+[02:30:03] STACK_w4_c100 r0: 878.4 samples/s, CPU 5.5 ms/sample, hit 1.000, open 0.0 ms, 26376 samples in 30s (cap), process 37s
+[02:30:40] STACK_w4_cemu r0: 637.3 samples/s, CPU 7.2 ms/sample, hit 0.373, open 2.7 ms, 19144 samples in 30s (cap), process 37s
+[02:31:17] SEP1_w4_c100 r0: 1511.0 samples/s, CPU 2.7 ms/sample, hit 1.000, open 0.0 ms, 45344 samples in 30s (cap), process 37s
+[02:31:54] SEP1_w4_cemu r0: 1113.8 samples/s, CPU 4.3 ms/sample, hit 0.376, open 2.5 ms, 33424 samples in 30s (cap), process 37s
+[02:32:31] SEP1_w4_cemu r1: 1113.5 samples/s, CPU 4.3 ms/sample, hit 0.380, open 2.5 ms, 33432 samples in 30s (cap), process 37s
+[02:33:09] SEP1_w4_c100 r1: 1520.6 samples/s, CPU 2.7 ms/sample, hit 1.000, open 0.0 ms, 45624 samples in 30s (cap), process 37s
+[02:33:46] STACK_w4_cemu r1: 644.6 samples/s, CPU 7.1 ms/sample, hit 0.385, open 2.6 ms, 19360 samples in 30s (cap), process 37s
+[02:34:23] STACK_w4_c100 r1: 881.2 samples/s, CPU 5.5 ms/sample, hit 1.000, open 0.0 ms, 26440 samples in 30s (cap), process 37s
+[02:35:01] SEP_w4_cemu r1: 255.9 samples/s, CPU 20.3 ms/sample, hit 0.124, open 5.0 ms, 7696 samples in 30s (cap), process 38s
+[02:35:38] SEP_w4_c100 r1: 768.0 samples/s, CPU 9.1 ms/sample, hit 1.000, open 0.0 ms, 23048 samples in 30s (cap), process 38s
+[02:36:13] SEP1_w0_cemu r1: 327.7 samples/s, CPU 3.1 ms/sample, hit 0.390, open 2.3 ms, 9840 samples in 30s (cap), process 34s
+[02:36:46] SEP1_w0_c100 r1: 635.4 samples/s, CPU 1.6 ms/sample, hit 1.000, open 0.0 ms, 19064 samples in 30s (cap), process 34s
+[02:37:21] STACK_w0_cemu r1: 186.8 samples/s, CPU 5.4 ms/sample, hit 0.387, open 2.4 ms, 5608 samples in 30s (cap), process 34s
+[02:37:55] STACK_w0_c100 r1: 254.8 samples/s, CPU 3.9 ms/sample, hit 1.000, open 0.0 ms, 7648 samples in 30s (cap), process 34s
+[02:38:31] SEP_w0_cemu r1: 61.7 samples/s, CPU 20.0 ms/sample, hit 0.119, open 5.2 ms, 1856 samples in 30s (cap), process 36s
+[02:39:06] SEP_w0_c100 r1: 237.6 samples/s, CPU 7.4 ms/sample, hit 1.000, open 0.0 ms, 7128 samples in 30s (cap), process 35s
+[02:39:41] SEP_w0_c100 r2: 237.8 samples/s, CPU 7.4 ms/sample, hit 1.000, open 0.0 ms, 7136 samples in 30s (cap), process 35s
+[02:40:17] SEP_w0_cemu r2: 64.7 samples/s, CPU 19.2 ms/sample, hit 0.135, open 5.0 ms, 1944 samples in 30s (cap), process 36s
+[02:40:52] STACK_w0_c100 r2: 256.3 samples/s, CPU 3.9 ms/sample, hit 1.000, open 0.0 ms, 7696 samples in 30s (cap), process 34s
+[02:41:26] STACK_w0_cemu r2: 185.6 samples/s, CPU 5.4 ms/sample, hit 0.376, open 2.4 ms, 5576 samples in 30s (cap), process 34s
+[02:42:00] SEP1_w0_c100 r2: 633.8 samples/s, CPU 1.6 ms/sample, hit 1.000, open 0.0 ms, 19016 samples in 30s (cap), process 34s
+[02:42:34] SEP1_w0_cemu r2: 319.2 samples/s, CPU 3.1 ms/sample, hit 0.375, open 2.3 ms, 9584 samples in 30s (cap), process 34s
+[02:43:12] SEP_w4_c100 r2: 761.0 samples/s, CPU 9.2 ms/sample, hit 1.000, open 0.0 ms, 22832 samples in 30s (cap), process 38s
+[02:43:50] SEP_w4_cemu r2: 260.7 samples/s, CPU 20.1 ms/sample, hit 0.123, open 5.0 ms, 7824 samples in 30s (cap), process 38s
+[02:44:27] STACK_w4_c100 r2: 847.0 samples/s, CPU 5.6 ms/sample, hit 1.000, open 0.0 ms, 25432 samples in 30s (cap), process 37s
+[02:45:04] STACK_w4_cemu r2: 642.0 samples/s, CPU 7.2 ms/sample, hit 0.375, open 2.6 ms, 19280 samples in 30s (cap), process 37s
+[02:45:41] SEP1_w4_c100 r2: 1456.9 samples/s, CPU 2.8 ms/sample, hit 1.000, open 0.0 ms, 43712 samples in 30s (cap), process 37s
+[02:46:18] SEP1_w4_cemu r2: 1093.7 samples/s, CPU 4.4 ms/sample, hit 0.373, open 2.5 ms, 32832 samples in 30s (cap), process 37s
+[02:46:55] SEP1_w4_cemu r3: 1092.4 samples/s, CPU 4.4 ms/sample, hit 0.376, open 2.5 ms, 32784 samples in 30s (cap), process 37s
+[02:47:32] SEP1_w4_c100 r3: 1504.6 samples/s, CPU 2.7 ms/sample, hit 1.000, open 0.0 ms, 45144 samples in 30s (cap), process 37s
+[02:48:09] STACK_w4_cemu r3: 646.6 samples/s, CPU 7.1 ms/sample, hit 0.377, open 2.6 ms, 19424 samples in 30s (cap), process 37s
+[02:48:46] STACK_w4_c100 r3: 833.5 samples/s, CPU 5.7 ms/sample, hit 1.000, open 0.0 ms, 25032 samples in 30s (cap), process 37s
+[02:49:24] SEP_w4_cemu r3: 253.1 samples/s, CPU 20.5 ms/sample, hit 0.125, open 5.2 ms, 7608 samples in 30s (cap), process 38s
+[02:50:02] SEP_w4_c100 r3: 762.9 samples/s, CPU 9.2 ms/sample, hit 1.000, open 0.0 ms, 22888 samples in 30s (cap), process 38s
+[02:50:36] SEP1_w0_cemu r3: 319.2 samples/s, CPU 3.1 ms/sample, hit 0.376, open 2.4 ms, 9576 samples in 30s (cap), process 34s
+[02:51:10] SEP1_w0_c100 r3: 632.4 samples/s, CPU 1.6 ms/sample, hit 1.000, open 0.0 ms, 18976 samples in 30s (cap), process 34s
+[02:51:44] STACK_w0_cemu r3: 182.1 samples/s, CPU 5.5 ms/sample, hit 0.374, open 2.5 ms, 5464 samples in 30s (cap), process 35s
+[02:52:18] STACK_w0_c100 r3: 252.4 samples/s, CPU 4.0 ms/sample, hit 1.000, open 0.0 ms, 7576 samples in 30s (cap), process 34s
+[02:52:55] SEP_w0_cemu r3: 66.9 samples/s, CPU 18.6 ms/sample, hit 0.125, open 4.8 ms, 2008 samples in 30s (cap), process 37s
+[02:53:30] SEP_w0_c100 r3: 237.5 samples/s, CPU 7.4 ms/sample, hit 1.000, open 0.0 ms, 7128 samples in 30s (cap), process 35s
+== stage map: ok (1728s, cgroup peak 8061 MB)
+uploaded results/r4-droid-20260930T020611Z (after map)
+== stage summary start 2026-09-30T02:53:31Z
+# DATA-11 round 4: droid (lerobot/droid_1.0.1)
+
+Source `lerobot/droid_1.0.1@0eabc778f959c54b8c5aa3626cc1128d2d2e54d4` (main now `0eabc778f959c54b8c5aa3626cc1128d2d2e54d4`), 95658 episodes, 27630375 frames, fps 15. Cameras (STACK order, top to bottom): `wrist_left` 180x320, `exterior_1_left` 180x320, `exterior_2_left` 180x320.
+lerobot `32b671d437f8c50014f74a322ad3df09c6fab944` (PR #4702 head). SMOKE=0.
+
+## Slice
+
+- 197 whole consecutive episodes, 59826 frames per group (cap 60000, cap applied: True). Consecutive frames in the first file of every camera: 96183.
+- Real median frames per video file: 94102 (slice / median = 0.64).
+- Real video files per camera: wrist_left 183, exterior_1_left 302, exterior_2_left 299; real parquet data files: 156 (episode table: 86); streaming load_dataset num_shards: 156.
+
+## Encode
+
+LeRobot defaults from the installed code: `{'g': '2', 'crf': '30', 'preset': '12', 'svtav1-params': 'fast-decode=0'}` (libsvtav1, yuv420p). SVT-AV1 reported: ['Preset M12 is mapped to M10.']; version ['SVT-AV1 Encoder Lib v3.0.0']; lp 8.
+Stacked frame 540x320; pad pixels 0 per frame (0.0% of the stacked frame, 0 raw RGB bytes). Mux {'movflags': 'faststart'} (source faststart: True).
+
+| file | shape | MB | encoder feed s | flush s |
+|---|---|---|---|---|
+| SEP/wrist_left | 180x320 | 190.71 | 38.1 | 0.0 |
+| SEP/exterior_1_left | 180x320 | 320.55 | 41.8 | 0.1 |
+| SEP/exterior_2_left | 180x320 | 323.37 | 38.9 | 0.1 |
+| STACK | 540x320 | 833.53 | 106.4 | 0.2 |
+
+SEP total 834.63 MB, STACK 833.53 MB (STACK / SEP = 0.999). Encode wall 338.3 s for 59826 frames (decode 106.2 s, process CPU 2700.8 s); SEP and STACK share one loop, so their encode costs are not separated.
+
+## Datasets
+
+- sep: `hadriencornier/lerobot-data11-r4-droid-sep` commit `9be8467a34816e7faca89f273ac3155bc81f119c`, 8 files per key, 1576 episodes, 478608 frames, keys ['observation.images.wrist_left', 'observation.images.exterior_1_left', 'observation.images.exterior_2_left'], private True.
+- stack: `hadriencornier/lerobot-data11-r4-droid-stack` commit `62b895ae483292c0389a361abfe3edba5094d90a`, 8 files per key, 1576 episodes, 478608 frames, keys ['observation.images.stacked'], private True.
+- sep1: `hadriencornier/lerobot-data11-r4-droid-sep1` commit `0b2d75fc1582e498446fe45f6492613179f53e84`, 8 files per key, 1576 episodes, 478608 frames, keys ['observation.images.wrist_left'], private True.
+
+## Checks
+
+| camera | PSNR SEP vs source | STACK crop vs source | STACK crop vs SEP (min) |
+|---|---|---|---|
+| wrist_left | 39.74 | 39.43 | 41.51 (34.65) |
+| exterior_1_left | 38.96 | 38.03 | 37.96 (34.33) |
+| exterior_2_left | 38.98 | 38.28 | 38.45 (35.48) |
+
+- Camera order ok: True (6 same-shape pairs compared).
+- Remote (hf://) == local, bit-exact: {'sep': {'frames_checked': 18, 'mismatch': 0, 'pass': True}, 'stack': {'frames_checked': 20, 'mismatch': 0, 'pass': True}, 'sep1': {'frames_checked': 20, 'mismatch': 0, 'pass': True}}.
+- Through LeRobotDataset: SEP item == file frame 60/60; SEP1 == SEP first camera 20/20; STACK crop vs SEP item PSNR min {'wrist_left': 36.27984529872011, 'exterior_1_left': 34.417391185945576, 'exterior_2_left': 36.33619170200489}.
+- Overall check ok: False (PSNR threshold 35.0 dB, STACK vs source min 34.97).
+
+## StreamingLeRobotDataset over hf:// (one process = one DataLoader worker)
+
+5 repeats, arms interleaved, 95% CI over repeats. Local copies instead of hf://: False.
+
+| arm | frames/s | CPU ms/frame | mp4 fetch/frame | mp4 MB/frame | decoder hit | open ms | first yield s |
+|---|---|---|---|---|---|---|---|
+| SEP_S8_c100 | 221.5 +- 6.8 | 4.5 +- 0.1 | 0.0000 | 0.0000 | 1.000 | 0 | 13.3 |
+| STACK_S8_c100 | 328.4 +- 22.7 | 3.0 +- 0.2 | 0.0000 | 0.0000 | 1.000 | 0 | 9.2 |
+| SEP1_S8_c100 | 653.8 +- 12.4 | 1.5 +- 0.0 | 0.0000 | 0.0000 | 1.000 | 0 | 7.4 |
+| SEP_S8_c12 | 3.8 +- 0.7 | 53.8 +- 5.2 | 1.5254 | 8.0972 | 0.492 | 172 | - |
+| STACK_S8_c12 | 333.9 +- 4.9 | 3.0 +- 0.0 | 0.0000 | 0.0000 | 1.000 | 0 | 8.8 |
+
+Audit, DataLoader num_workers = max_num_shards = 4 on the local SEP copy (8 parquet files): workers with frames 2; per worker w0: 200 frames, files [0, 2, 4, 6], max cache 12; w1: 200 frames, files [1, 3, 5, 7], max cache 12. Predicted active shards per worker [4, 4, 0, 0] (decoders [12, 12, 0, 0]).
+
+## Map-style LeRobotDataset on the local copies (lerobot-train DataLoader settings)
+
+cemu = max(1, round(100 x 8 / 302)) = 3. batch_size 8, EpisodeAwareSampler(shuffle=True), prefetch_factor 4, persistent_workers, spawn, return_uint8=True. 4 repeats, interleaved.
+
+| arm | workers | cache | samples/s | CPU ms/sample | decoder hit | open ms |
+|---|---|---|---|---|---|---|
+| SEP_w0_c100 | 0 | 100 | 237.8 +- 0.6 | 7.4 +- 0.0 | 1.000 | 0.0 |
+| SEP_w0_cemu | 0 | 3 | 65.4 +- 4.6 | 19.0 +- 1.2 | 0.126 | 4.9 |
+| STACK_w0_c100 | 0 | 100 | 254.5 +- 2.6 | 3.9 +- 0.0 | 1.000 | 0.0 |
+| STACK_w0_cemu | 0 | 3 | 184.7 +- 3.2 | 5.4 +- 0.1 | 0.376 | 2.4 |
+| SEP1_w0_c100 | 0 | 100 | 631.9 +- 6.6 | 1.6 +- 0.0 | 1.000 | 0.0 |
+| SEP1_w0_cemu | 0 | 3 | 321.2 +- 6.9 | 3.1 +- 0.1 | 0.377 | 2.4 |
+| SEP_w4_c100 | 4 | 100 | 764.2 +- 4.8 | 9.2 +- 0.0 | 1.000 | 0.0 |
+| SEP_w4_cemu | 4 | 3 | 255.0 +- 7.0 | 20.3 +- 0.3 | 0.123 | 5.1 |
+| STACK_w4_c100 | 4 | 100 | 860.0 +- 37.4 | 5.6 +- 0.1 | 1.000 | 0.0 |
+| STACK_w4_cemu | 4 | 3 | 642.6 +- 6.4 | 7.2 +- 0.1 | 0.378 | 2.6 |
+| SEP1_w4_c100 | 4 | 100 | 1498.2 +- 45.1 | 2.7 +- 0.0 | 1.000 | 0.0 |
+| SEP1_w4_cemu | 4 | 3 | 1103.3 +- 18.9 | 4.4 +- 0.0 | 0.376 | 2.5 |
+
+## Extrapolation inputs
+
+- Real video files per camera 302; real parquet data files 156; real median frames per file 94102 vs slice 59826.
+- Map-style, full size: each worker's cache holds 100 decoders; random access over SEP 906 files vs STACK 302 files -> expected hit rate about 0.110 (SEP) vs 0.331 (STACK). The cemu arms measure this ratio on the slice.
+- Streaming, lerobot-train (max_num_shards = num_workers, every worker iterates num_shards = min(P, W) shards; datasets then splits each shard's files across the W workers again, so worker w reads only the shards with more than w files). Decoders needed per worker = active shards x cameras (SEP) or active shards (STACK):
+
+| num_workers W | workers that read | active shards: worker 0 / mean | SEP decoders (worker 0) | STACK decoders (worker 0) | SEP overflows 100 | STACK overflows 100 |
+|---|---|---|---|---|---|---|
+| 4 | 4 | 4 / 4.0 | 12 | 4 | False | False |
+| 8 | 8 | 8 / 8.0 | 24 | 8 | False | False |
+| 16 | 10 | 16 / 9.8 | 48 | 16 | False | False |
+| 32 | 5 | 32 / 4.9 | 96 | 32 | False | False |
+| 34 | 5 | 34 / 4.6 | 102 | 34 | True | False |
+| 64 | 3 | 64 / 2.4 | 192 | 64 | True | False |
+| 101 | 2 | 101 / 1.5 | 303 | 101 | True | True |
+| 128 | 2 | 128 / 1.2 | 384 | 128 | True | True |
+
+Worker 0 always reads min(P, W) shards, so the rule 'SEP overflows when min(P, W) x cameras > 100, STACK when min(P, W) > 100' holds for the busiest worker. Other workers read fewer shards, and all W workers carry the full load only when P >= W^2 (every shard has at least W files); with P < W some workers read nothing. The audit above tests this split on the SEP copy.
+
+## Limits
+
+- One group per dataset, copied 8 times: files are identical copies, so file-to-file variation (content, sizes) is not sampled.
+- Streaming arms are one process (one DataLoader worker); the overflow case is emulated with cache 12 at S = 8, not run with 64 workers.
+- Map-style arms read local disk (page cache warm after the first pass); they measure decode CPU, not network or cold-disk reads.
+- STACK and SEP encodes share one loop, so encode time per layout is not measured separately.
+- State / action values are random; only their shapes match the source.
+- cpu-upgrade box (8 CPUs, 32 GB) shared with other stages' background uploads; compare layouts only inside this run.
+
+== stage summary: ok (0s, cgroup peak 8061 MB)
+uploaded results/r4-droid-20260930T020611Z (after summary)
+== done 2026-09-30T02:53:32Z: /results/r4-droid-20260930T020611Z
+== exit code 0 at 2026-09-30T02:53:32Z

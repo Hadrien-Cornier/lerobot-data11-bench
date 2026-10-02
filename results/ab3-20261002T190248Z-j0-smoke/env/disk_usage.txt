@@ -1,0 +1,8 @@
+4.0K	/work/constraints.txt
+4.2M	/work/dl_bundle
+6.6M	/work/pr3917.tar.gz
+29M	/work/src_base
+29M	/work/src_probe
+30M	/work/venv
+1.5G	/work/venv_base
+1.5G	/work/venv_probe

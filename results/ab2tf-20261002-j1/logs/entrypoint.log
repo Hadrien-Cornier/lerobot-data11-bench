@@ -1,0 +1,40 @@
+== DATA-11 ab2 job ab2tf-20261002-j1 start 2026-10-02T17:04:06Z SMOKE=0 host=j-hadriencornier-6abfe400404719ba37625d25-9bm46362-d8c91-7ssgm
+HF_TOKEN present (value not shown); results -> dataset hadriencornier/lerobot-data11-bench:results/ab2tf-20261002-j1
+attempt marker attempts/6abfe400404719ba37625d25 recorded
+system ffmpeg: ffmpeg version 7.1.5-0+deb13u1 Copyright (c) 2000-2026 the FFmpeg developers
+== stage system_deps: ok (33s, cgroup peak 836 MB)
+bundle checksums OK
+== stage bundle: ok (0s, cgroup peak 836 MB)
+
+[notice] A new release of pip is available: 25.0.1 -> 26.2.1
+[notice] To update, run: pip install --upgrade pip
+patching file src/lerobot/streaming/manifest.py
+patching file src/lerobot/streaming/mp4.py
+patching file tests/datasets/test_episode_video_streaming.py
+patching file src/lerobot/datasets/streaming_dataset.py
+patching file tests/datasets/test_streaming_production.py
+Using Python 3.12.15 environment at: /work/venv_base
+base venv /work/venv_base/lib/python3.12/site-packages/lerobot/__init__.py 2.11.0+cpu 0.11.1+cpu probe_patch False tfx_patch False
+Using Python 3.12.15 environment at: /work/venv_probe
+probe venv /work/venv_probe/lib/python3.12/site-packages/lerobot/__init__.py 2.11.0+cpu 0.11.1+cpu probe_patch True tfx_patch False
+Using Python 3.12.15 environment at: /work/venv_tfx
+tfx venv /work/venv_tfx/lib/python3.12/site-packages/lerobot/__init__.py 2.11.0+cpu 0.11.1+cpu probe_patch False tfx_patch True
+== stage python_env: ok (81s, cgroup peak 3814 MB)
+uploaded results/ab2tf-20261002-j1 (setup done)
+== stage ab2 start 2026-10-02T17:06:04Z
+[17:09:02] TFX_D2T_r0: ok sps 97.82969742137259 cpu/sample 18.858533825823407
+[17:11:54] BASE_D2T_r0: ok sps 62.65465710426461 cpu/sample 19.53109239636002
+[17:14:47] BASE_D6T_r0: ok sps 57.58140699384676 cpu/sample 18.984625699748968
+[17:17:38] TFX_D6T_r0: ok sps 68.67163064947279 cpu/sample 32.50664137263523
+[17:20:36] TFX_D6_r0: ok sps 193.59731968198275 cpu/sample 6.95365445676864
+[17:23:39] BASE_D6_r0: ok sps 181.06462125499425 cpu/sample 6.857902250445036
+[17:26:37] BASE_D6_r1: ok sps 186.05685449384572 cpu/sample 6.802318409676782
+[17:29:37] TFX_D6_r1: ok sps 185.78512625147792 cpu/sample 6.731372100270264
+[17:32:40] TFX_D6T_r1: ok sps 49.7515627812943 cpu/sample 37.31595363097249
+[17:35:40] BASE_D6T_r1: ok sps 32.94032071886951 cpu/sample 30.961406896487937
+[17:38:43] BASE_D2T_r1: ok sps 31.18513122975183 cpu/sample 31.639692730405635
+[17:41:48] TFX_D2T_r1: ok sps 36.41019914463781 cpu/sample 32.384115374509285
+== stage ab2: ok (2144s, cgroup peak 6247 MB)
+uploaded results/ab2tf-20261002-j1 (after ab2)
+== done 2026-10-02T17:41:50Z: /results/ab2tf-20261002-j1
+== exit code 0 at 2026-10-02T17:41:50Z

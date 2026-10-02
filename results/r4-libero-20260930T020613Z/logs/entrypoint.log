@@ -1,0 +1,306 @@
+== DATA-11 r4 job r4-libero-20260930T020613Z start 2026-09-30T02:06:13Z SMOKE=0 dataset=libero host=j-hadriencornier-6abc6e8f4c46ef198703401d-fztqgfjq-c54a5-6nttm
+HF_TOKEN present (value not shown); results -> dataset hadriencornier/lerobot-data11-bench:results/r4-libero-20260930T020613Z
+
+[notice] A new release of pip is available: 25.0.1 -> 26.2.1
+[notice] To update, run: pip install --upgrade pip
+attempt marker attempts/6abc6e8f4c46ef198703401d recorded
+system ffmpeg: ffmpeg version 7.1.5-0+deb13u1 Copyright (c) 2000-2026 the FFmpeg developers
+== stage system_deps: ok (29s, cgroup peak 839 MB)
+bundle checksums OK
+== stage bundle: ok (1s, cgroup peak 839 MB)
+lerobot PR #4702 head now 32b671d437f8c50014f74a322ad3df09c6fab944 (pin 32b671d437f8c50014f74a322ad3df09c6fab944); installing 32b671d437f8c50014f74a322ad3df09c6fab944
+
+[notice] A new release of pip is available: 25.0.1 -> 26.2.1
+[notice] To update, run: pip install --upgrade pip
+Using Python 3.12.14 environment at: /work/venv
+lerobot /work/venv/lib/python3.12/site-packages/lerobot/__init__.py torch 2.11.0+cpu torchcodec 0.11.1+cpu datasets 4.8.5 hub 1.30.0
+av 15.1.0 {'libavutil': '59.39.100', 'libavcodec': '61.19.101', 'libavformat': '61.7.100', 'libavdevice': '61.3.100', 'libavfilter': '10.4.100', 'libswscale': '8.3.100', 'libswresample': '5.3.100'}
+libsvtav1 encoder available in PyAV
+== stage python_env: ok (41s, cgroup peak 2929 MB)
+cpu quota 8
+uploaded results/r4-libero-20260930T020613Z (setup done)
+== stage slice start 2026-09-30T02:07:27Z
+[02:07:28] libero: 1693 episodes, cameras ['image', 'image2'], shapes {'image': [256, 256], 'image2': [256, 256]}, fps 10
+
+Resolving data files:   0%|          | 0/377 [00:00<?, ?it/s][AResolving data files: 100%|██████████| 377/377 [00:00<00:00, 21107.29it/s]
+
+Resolving data files:   0%|          | 0/377 [00:00<?, ?it/s][AResolving data files: 100%|██████████| 377/377 [00:00<00:00, 27622.55it/s]
+[02:07:30] real: {"episodes": 1693, "frames": 273465, "episode_length_median": 140.0, "per_camera": {"image": {"video_files": 37, "frames_per_file_median": 6740.0, "mean": 7390.945945945946, "p10": 5998.0, "p90": 10140.2, "max": 10230}, "image2": {"video_files": 37, "frames_per_file_median": 6740.0, "mean": 7390.945945945946, "p10": 5998.0, "p90": 10140.2, "max": 10230}}, "video_files_total": 74, "video_files_per_camera": {"image": 37, "image2": 37}, "frames_per_file_median_all_cameras": 6740.0, "parquet_data_files_from_episodes": 377, "parquet_data_files_in_repo": 377, "hf_streaming_num_shards": 377, "hf_stre
+[02:07:30] slice: 36 episodes, 10109 frames (cap 60000, applied False); real median frames/file 6740
+[02:07:31] downloaded 2 source files, 63 MB in 1.5s
+[02:07:33] encoder defaults: {'repr': "VideoEncoderConfig(vcodec='libsvtav1', pix_fmt='yuv420p', g=2, crf=30, preset=12, fast_decode=0, video_backend='pyav', extra_options={})", 'vcodec': 'libsvtav1', 'pix_fmt': 'yuv420p', 'g': 2, 'crf': 30, 'preset': 12, 'fast_decode': 0, 'codec_options': {'g': '2', 'crf': '30', 'preset': '12', 'svtav1-params': 'fast-decode=0'}}
+== stage slice: ok (6s, cgroup peak 3017 MB)
+uploaded results/r4-libero-20260930T020613Z (after slice)
+== stage encode start 2026-09-30T02:07:35Z
+[encode] 5000/10109 frames, 17s
+[encode] 10000/10109 frames, 33s
+[02:08:09] encode: 10109 frames in 34s; SEP 60.8 MB, STACK 60.2 MB; svt {'mapped': ['Preset M12 is mapped to M10.'], 'version': ['SVT-AV1 Encoder Lib v3.0.0'], 'pred_struct': ['preset / tune / pred struct : 10 / PSNR / random access'], 'lp': ['Level of Parallelism: 6']}
+== stage encode: ok (34s, cgroup peak 3363 MB)
+uploaded results/r4-libero-20260930T020613Z (after encode)
+== stage build start 2026-09-30T02:08:10Z
+
+Creating parquet from Arrow format:   0%|          | 0/1 [00:00<?, ?ba/s][ACreating parquet from Arrow format: 100%|██████████| 1/1 [00:00<00:00, 219.87ba/s]
+
+Creating parquet from Arrow format:   0%|          | 0/1 [00:00<?, ?ba/s][ACreating parquet from Arrow format: 100%|██████████| 1/1 [00:00<00:00, 233.33ba/s]
+
+Creating parquet from Arrow format:   0%|          | 0/1 [00:00<?, ?ba/s][ACreating parquet from Arrow format: 100%|██████████| 1/1 [00:00<00:00, 259.95ba/s]
+
+Creating parquet from Arrow format:   0%|          | 0/1 [00:00<?, ?ba/s][ACreating parquet from Arrow format: 100%|██████████| 1/1 [00:00<00:00, 251.59ba/s]
+
+Creating parquet from Arrow format:   0%|          | 0/1 [00:00<?, ?ba/s][ACreating parquet from Arrow format: 100%|██████████| 1/1 [00:00<00:00, 192.15ba/s]
+
+Creating parquet from Arrow format:   0%|          | 0/1 [00:00<?, ?ba/s][ACreating parquet from Arrow format: 100%|██████████| 1/1 [00:00<00:00, 257.57ba/s]
+
+Creating parquet from Arrow format:   0%|          | 0/1 [00:00<?, ?ba/s][ACreating parquet from Arrow format: 100%|██████████| 1/1 [00:00<00:00, 230.41ba/s]
+
+Creating parquet from Arrow format:   0%|          | 0/1 [00:00<?, ?ba/s][ACreating parquet from Arrow format: 100%|██████████| 1/1 [00:00<00:00, 237.36ba/s]
+[02:08:14] dataset sep: {"kind": "sep", "root": "/work/ds/sep", "video_keys": ["observation.images.image", "observation.images.image2"], "files_per_key": 8, "episodes": 288, "frames": 80872, "frames_per_file": 10109, "episodes_per_file": 36, "stack_layout": null, "video_bytes_per_file": {"observation.images.image": 36103157, "observation.images.image2": 24698459}, "repo": "hadriencornier/lerobot-data11-r4-libero-sep", "commit": "8329594de128496d19c23f8b5814aed22f3f9d22", "upload_s": 2.8, "files": 27, "readback_mismatch
+
+Creating parquet from Arrow format:   0%|          | 0/1 [00:00<?, ?ba/s][ACreating parquet from Arrow format: 100%|██████████| 1/1 [00:00<00:00, 195.81ba/s]
+
+Creating parquet from Arrow format:   0%|          | 0/1 [00:00<?, ?ba/s][ACreating parquet from Arrow format: 100%|██████████| 1/1 [00:00<00:00, 244.24ba/s]
+
+Creating parquet from Arrow format:   0%|          | 0/1 [00:00<?, ?ba/s][ACreating parquet from Arrow format: 100%|██████████| 1/1 [00:00<00:00, 229.10ba/s]
+
+Creating parquet from Arrow format:   0%|          | 0/1 [00:00<?, ?ba/s][ACreating parquet from Arrow format: 100%|██████████| 1/1 [00:00<00:00, 254.63ba/s]
+
+Creating parquet from Arrow format:   0%|          | 0/1 [00:00<?, ?ba/s][ACreating parquet from Arrow format: 100%|██████████| 1/1 [00:00<00:00, 229.11ba/s]
+
+Creating parquet from Arrow format:   0%|          | 0/1 [00:00<?, ?ba/s][ACreating parquet from Arrow format: 100%|██████████| 1/1 [00:00<00:00, 245.19ba/s]
+
+Creating parquet from Arrow format:   0%|          | 0/1 [00:00<?, ?ba/s][ACreating parquet from Arrow format: 100%|██████████| 1/1 [00:00<00:00, 241.64ba/s]
+
+Creating parquet from Arrow format:   0%|          | 0/1 [00:00<?, ?ba/s][ACreating parquet from Arrow format: 100%|██████████| 1/1 [00:00<00:00, 241.77ba/s]
+[02:08:17] dataset stack: {"kind": "stack", "root": "/work/ds/stack", "video_keys": ["observation.images.stacked"], "files_per_key": 8, "episodes": 288, "frames": 80872, "frames_per_file": 10109, "episodes_per_file": 36, "stack_layout": {"key": "observation.images.stacked", "order_top_to_bottom": ["image", "image2"], "crops_y0_h_w": {"image": [0, 256, 256], "image2": [256, 256, 256]}, "height": 512, "width": 256, "pad": "right-pad narrower cameras with black; odd heights padded by one black row", "source": "lerobot/liber
+
+Creating parquet from Arrow format:   0%|          | 0/1 [00:00<?, ?ba/s][ACreating parquet from Arrow format: 100%|██████████| 1/1 [00:00<00:00, 190.34ba/s]
+
+Creating parquet from Arrow format:   0%|          | 0/1 [00:00<?, ?ba/s][ACreating parquet from Arrow format: 100%|██████████| 1/1 [00:00<00:00, 250.08ba/s]
+
+Creating parquet from Arrow format:   0%|          | 0/1 [00:00<?, ?ba/s][ACreating parquet from Arrow format: 100%|██████████| 1/1 [00:00<00:00, 246.65ba/s]
+
+Creating parquet from Arrow format:   0%|          | 0/1 [00:00<?, ?ba/s][ACreating parquet from Arrow format: 100%|██████████| 1/1 [00:00<00:00, 241.87ba/s]
+
+Creating parquet from Arrow format:   0%|          | 0/1 [00:00<?, ?ba/s][ACreating parquet from Arrow format: 100%|██████████| 1/1 [00:00<00:00, 234.08ba/s]
+
+Creating parquet from Arrow format:   0%|          | 0/1 [00:00<?, ?ba/s][ACreating parquet from Arrow format: 100%|██████████| 1/1 [00:00<00:00, 201.26ba/s]
+
+Creating parquet from Arrow format:   0%|          | 0/1 [00:00<?, ?ba/s][ACreating parquet from Arrow format: 100%|██████████| 1/1 [00:00<00:00, 229.84ba/s]
+
+Creating parquet from Arrow format:   0%|          | 0/1 [00:00<?, ?ba/s][ACreating parquet from Arrow format: 100%|██████████| 1/1 [00:00<00:00, 228.50ba/s]
+[02:08:19] dataset sep1: {"kind": "sep1", "root": "/work/ds/sep1", "video_keys": ["observation.images.image"], "files_per_key": 8, "episodes": 288, "frames": 80872, "frames_per_file": 10109, "episodes_per_file": 36, "stack_layout": null, "video_bytes_per_file": {"observation.images.image": 36103157}, "repo": "hadriencornier/lerobot-data11-r4-libero-sep1", "commit": "ce0da929b59dfeb2cbe4b7930ce139fc922a67d0", "upload_s": 0.9, "files": 19, "readback_mismatch": [], "private": true}
+== stage build: ok (9s, cgroup peak 3741 MB)
+uploaded results/r4-libero-20260930T020613Z (after build)
+== stage check start 2026-09-30T02:08:20Z
+[02:08:23] PSNR {'image': {'sep_vs_src': {'mean': 41.3213476731611, 'min': 38.524151147048094}, 'stack_vs_src': {'mean': 41.238176456856806, 'min': 38.40369161997104}, 'stack_vs_sep': {'mean': 44.69080066218884, 'min': 40.23671908148086}}, 'image2': {'sep_vs_src': {'mean': 41.67242979924447, 'min': 36.977101734303886}, 'stack_vs_src': {'mean': 41.706060864338035, 'min': 39.255130677698034}, 'stack_vs_sep': {'mean': 44.12827834789642, 'min': 37.69208307851863}}}; camera order ok True ({'image': {'image': 44.69080066218884, 'image2': 10.089586398083618}, 'image2': {'image': 10.091134623229186, 'image2': 44.12827834789642}})
+[02:08:32] remote == local: {'sep': {'frames_checked': 20, 'mismatch': 0, 'pass': True}, 'stack': {'frames_checked': 20, 'mismatch': 0, 'pass': True}, 'sep1': {'frames_checked': 20, 'mismatch': 0, 'pass': True}}
+WARNING:lerobot.datasets.utils:Unknown fields in DatasetInfo: ['r4_stack_layout']. These will be ignored.
+[02:08:34] through LeRobot: {'samples': 20, 'sep_item_equals_file_frame': '40/40', 'sep1_equals_sep_first_camera': '20/20', 'stack_crop_vs_sep_item_psnr_mean': {'image': 43.811831795223185, 'image2': 43.17214916483901}, 'stack_crop_vs_sep_item_psnr_min': {'image': 39.356068769045756, 'image2': 35.326706618495706}, 'pass': True}
+== stage check: ok (14s, cgroup peak 3741 MB)
+uploaded results/r4-libero-20260930T020613Z (after check)
+== stage stream start 2026-09-30T02:08:35Z
+Too many dataloader workers: 4 (max is dataset.num_shards=2). Stopping 2 dataloader workers.
+WARNING:datasets.iterable_dataset:Too many dataloader workers: 4 (max is dataset.num_shards=2). Stopping 2 dataloader workers.
+Too many dataloader workers: 4 (max is dataset.num_shards=2). Stopping 2 dataloader workers.
+WARNING:datasets.iterable_dataset:Too many dataloader workers: 4 (max is dataset.num_shards=2). Stopping 2 dataloader workers.
+Too many dataloader workers: 4 (max is dataset.num_shards=2). Stopping 2 dataloader workers.
+WARNING:datasets.iterable_dataset:Too many dataloader workers: 4 (max is dataset.num_shards=2). Stopping 2 dataloader workers.
+Too many dataloader workers: 4 (max is dataset.num_shards=2). Stopping 2 dataloader workers.
+WARNING:datasets.iterable_dataset:Too many dataloader workers: 4 (max is dataset.num_shards=2). Stopping 2 dataloader workers.
+[02:08:44] audit: {"workers": 4, "parquet_files": 8, "max_num_shards": 4, "samples": 400, "buffer_size": 16, "per_worker": {"0": {"frames": 200, "distinct_files": [0, 2, 4, 6], "max_decoder_cache_size": 8}, "1": {"frames": 200, "distinct_files": [1, 3, 5, 7], "max_decoder_cache_size": 8}}, "workers_with_frames": 2, "predicted_active_shards_per_worker": [4, 4, 0, 0], "predicted_decoders_per_worker": [8, 8, 0, 0], "s": 5.6}
+[02:08:58] SEP_S8_c100 r0: 356.4 fps, CPU 2.8 ms/frame, mp4 fetch/frame 0.0000 (0.0000 MB), hit 1.000, open 0 ms, shards 8/8, first yield 11.546109490009258
+WARNING:lerobot.datasets.utils:Unknown fields in DatasetInfo: ['r4_stack_layout']. These will be ignored.
+[02:09:07] STACK_S8_c100 r0: 467.3 fps, CPU 2.1 ms/frame, mp4 fetch/frame 0.0000 (0.0000 MB), hit 1.000, open 0 ms, shards 8/8, first yield 8.039120989007642
+[02:09:15] SEP1_S8_c100 r0: 645.2 fps, CPU 1.5 ms/frame, mp4 fetch/frame 0.0000 (0.0000 MB), hit 1.000, open 0 ms, shards 8/8, first yield 6.733940657009953
+[02:10:26] SEP_S8_c12 r0: 5.7 fps, CPU 35.2 ms/frame, mp4 fetch/frame 1.4957 (5.3239 MB), hit 0.751, open 344 ms, shards 8/8, first yield None
+WARNING:lerobot.datasets.utils:Unknown fields in DatasetInfo: ['r4_stack_layout']. These will be ignored.
+[02:10:38] STACK_S8_c12 r0: 491.7 fps, CPU 2.0 ms/frame, mp4 fetch/frame 0.0000 (0.0000 MB), hit 1.000, open 0 ms, shards 8/8, first yield 10.361294858012116
+WARNING:lerobot.datasets.utils:Unknown fields in DatasetInfo: ['r4_stack_layout']. These will be ignored.
+[02:10:46] STACK_S8_c12 r1: 495.1 fps, CPU 2.0 ms/frame, mp4 fetch/frame 0.0000 (0.0000 MB), hit 1.000, open 0 ms, shards 8/8, first yield 7.236830187001033
+[02:11:59] SEP_S8_c12 r1: 5.1 fps, CPU 37.1 ms/frame, mp4 fetch/frame 1.5290 (5.4427 MB), hit 0.745, open 376 ms, shards 8/8, first yield None
+[02:12:07] SEP1_S8_c100 r1: 626.3 fps, CPU 1.6 ms/frame, mp4 fetch/frame 0.0000 (0.0000 MB), hit 1.000, open 0 ms, shards 8/8, first yield 6.995494374001282
+WARNING:lerobot.datasets.utils:Unknown fields in DatasetInfo: ['r4_stack_layout']. These will be ignored.
+[02:12:16] STACK_S8_c100 r1: 477.0 fps, CPU 2.1 ms/frame, mp4 fetch/frame 0.0000 (0.0000 MB), hit 1.000, open 0 ms, shards 8/8, first yield 7.879902343003778
+[02:12:28] SEP_S8_c100 r1: 356.8 fps, CPU 2.8 ms/frame, mp4 fetch/frame 0.0000 (0.0000 MB), hit 1.000, open 0 ms, shards 8/8, first yield 10.160063204995822
+[02:12:39] SEP_S8_c100 r2: 363.4 fps, CPU 2.7 ms/frame, mp4 fetch/frame 0.0000 (0.0000 MB), hit 1.000, open 0 ms, shards 8/8, first yield 10.056936609005788
+WARNING:lerobot.datasets.utils:Unknown fields in DatasetInfo: ['r4_stack_layout']. These will be ignored.
+[02:12:49] STACK_S8_c100 r2: 483.0 fps, CPU 2.1 ms/frame, mp4 fetch/frame 0.0000 (0.0000 MB), hit 1.000, open 0 ms, shards 8/8, first yield 8.201119406003272
+[02:12:55] SEP1_S8_c100 r2: 641.1 fps, CPU 1.5 ms/frame, mp4 fetch/frame 0.0000 (0.0000 MB), hit 1.000, open 0 ms, shards 8/8, first yield 5.8650121050013695
+[02:14:08] SEP_S8_c12 r2: 6.1 fps, CPU 32.4 ms/frame, mp4 fetch/frame 1.3496 (4.8040 MB), hit 0.775, open 356 ms, shards 8/8, first yield None
+WARNING:lerobot.datasets.utils:Unknown fields in DatasetInfo: ['r4_stack_layout']. These will be ignored.
+[02:14:18] STACK_S8_c12 r2: 467.6 fps, CPU 2.1 ms/frame, mp4 fetch/frame 0.0000 (0.0000 MB), hit 1.000, open 0 ms, shards 8/8, first yield 8.281944205009495
+WARNING:lerobot.datasets.utils:Unknown fields in DatasetInfo: ['r4_stack_layout']. These will be ignored.
+[02:14:27] STACK_S8_c12 r3: 485.3 fps, CPU 2.1 ms/frame, mp4 fetch/frame 0.0000 (0.0000 MB), hit 1.000, open 0 ms, shards 8/8, first yield 7.638052649010206
+[02:15:39] SEP_S8_c12 r3: 5.5 fps, CPU 37.4 ms/frame, mp4 fetch/frame 1.5357 (5.4665 MB), hit 0.744, open 345 ms, shards 8/8, first yield None
+[02:15:46] SEP1_S8_c100 r3: 676.5 fps, CPU 1.5 ms/frame, mp4 fetch/frame 0.0000 (0.0000 MB), hit 1.000, open 0 ms, shards 8/8, first yield 6.118604998991941
+WARNING:lerobot.datasets.utils:Unknown fields in DatasetInfo: ['r4_stack_layout']. These will be ignored.
+[02:15:55] STACK_S8_c100 r3: 504.2 fps, CPU 2.0 ms/frame, mp4 fetch/frame 0.0000 (0.0000 MB), hit 1.000, open 0 ms, shards 8/8, first yield 8.152072804005002
+[02:16:06] SEP_S8_c100 r3: 382.5 fps, CPU 2.6 ms/frame, mp4 fetch/frame 0.0000 (0.0000 MB), hit 1.000, open 0 ms, shards 8/8, first yield 9.855142239000998
+[02:16:17] SEP_S8_c100 r4: 378.6 fps, CPU 2.7 ms/frame, mp4 fetch/frame 0.0000 (0.0000 MB), hit 1.000, open 0 ms, shards 8/8, first yield 9.903478514999733
+WARNING:lerobot.datasets.utils:Unknown fields in DatasetInfo: ['r4_stack_layout']. These will be ignored.
+[02:16:28] STACK_S8_c100 r4: 507.9 fps, CPU 2.0 ms/frame, mp4 fetch/frame 0.0000 (0.0000 MB), hit 1.000, open 0 ms, shards 8/8, first yield 9.669016091007506
+[02:16:35] SEP1_S8_c100 r4: 676.7 fps, CPU 1.5 ms/frame, mp4 fetch/frame 0.0000 (0.0000 MB), hit 1.000, open 0 ms, shards 8/8, first yield 6.048163086990826
+[02:17:46] SEP_S8_c12 r4: 5.0 fps, CPU 38.8 ms/frame, mp4 fetch/frame 1.7682 (6.2941 MB), hit 0.705, open 333 ms, shards 8/8, first yield None
+WARNING:lerobot.datasets.utils:Unknown fields in DatasetInfo: ['r4_stack_layout']. These will be ignored.
+[02:17:54] STACK_S8_c12 r4: 510.4 fps, CPU 2.0 ms/frame, mp4 fetch/frame 0.0000 (0.0000 MB), hit 1.000, open 0 ms, shards 8/8, first yield 7.391337840992492
+== stage stream: ok (560s, cgroup peak 4423 MB)
+uploaded results/r4-libero-20260930T020613Z (after stream)
+== stage map start 2026-09-30T02:17:56Z
+[02:18:30] SEP_w0_c100 r0: 340.3 samples/s, CPU 4.2 ms/sample, hit 1.000, open 0.0 ms, 10208 samples in 30s (cap), process 34s
+[02:19:03] SEP_w0_cemu r0: 338.0 samples/s, CPU 4.2 ms/sample, hit 1.000, open 0.0 ms, 10144 samples in 30s (cap), process 34s
+[02:19:37] STACK_w0_c100 r0: 428.6 samples/s, CPU 2.3 ms/sample, hit 1.000, open 0.0 ms, 12864 samples in 30s (cap), process 34s
+[02:20:11] STACK_w0_cemu r0: 423.8 samples/s, CPU 2.4 ms/sample, hit 1.000, open 0.0 ms, 12720 samples in 30s (cap), process 34s
+[02:20:44] SEP1_w0_c100 r0: 627.8 samples/s, CPU 1.6 ms/sample, hit 1.000, open 0.0 ms, 18840 samples in 30s (cap), process 34s
+[02:21:18] SEP1_w0_cemu r0: 630.8 samples/s, CPU 1.6 ms/sample, hit 1.000, open 0.0 ms, 18928 samples in 30s (cap), process 34s
+[02:21:55] SEP_w4_c100 r0: 985.0 samples/s, CPU 5.8 ms/sample, hit 1.000, open 0.0 ms, 29552 samples in 30s (cap), process 37s
+[02:22:32] SEP_w4_cemu r0: 978.8 samples/s, CPU 5.8 ms/sample, hit 1.000, open 0.0 ms, 29368 samples in 30s (cap), process 37s
+[02:23:08] STACK_w4_c100 r0: 1136.8 samples/s, CPU 3.9 ms/sample, hit 1.000, open 0.0 ms, 34104 samples in 30s (cap), process 37s
+[02:23:45] STACK_w4_cemu r0: 1127.6 samples/s, CPU 3.9 ms/sample, hit 1.000, open 0.0 ms, 33832 samples in 30s (cap), process 37s
+[02:24:22] SEP1_w4_c100 r0: 1496.8 samples/s, CPU 2.7 ms/sample, hit 1.000, open 0.0 ms, 44912 samples in 30s (cap), process 37s
+[02:24:59] SEP1_w4_cemu r0: 1491.7 samples/s, CPU 2.8 ms/sample, hit 1.000, open 0.0 ms, 44760 samples in 30s (cap), process 37s
+[02:25:35] SEP1_w4_cemu r1: 1474.3 samples/s, CPU 2.8 ms/sample, hit 1.000, open 0.0 ms, 44232 samples in 30s (cap), process 37s
+[02:26:12] SEP1_w4_c100 r1: 1508.9 samples/s, CPU 2.7 ms/sample, hit 1.000, open 0.0 ms, 45272 samples in 30s (cap), process 37s
+[02:26:49] STACK_w4_cemu r1: 1143.3 samples/s, CPU 3.9 ms/sample, hit 1.000, open 0.0 ms, 34304 samples in 30s (cap), process 37s
+[02:27:26] STACK_w4_c100 r1: 1176.4 samples/s, CPU 3.7 ms/sample, hit 1.000, open 0.0 ms, 35296 samples in 30s (cap), process 37s
+[02:28:03] SEP_w4_cemu r1: 989.6 samples/s, CPU 5.7 ms/sample, hit 1.000, open 0.0 ms, 29696 samples in 30s (cap), process 37s
+[02:28:40] SEP_w4_c100 r1: 989.2 samples/s, CPU 5.8 ms/sample, hit 1.000, open 0.0 ms, 29680 samples in 30s (cap), process 37s
+[02:29:14] SEP1_w0_cemu r1: 633.0 samples/s, CPU 1.6 ms/sample, hit 1.000, open 0.0 ms, 18992 samples in 30s (cap), process 34s
+[02:29:47] SEP1_w0_c100 r1: 613.1 samples/s, CPU 1.6 ms/sample, hit 1.000, open 0.0 ms, 18400 samples in 30s (cap), process 34s
+[02:30:21] STACK_w0_cemu r1: 428.0 samples/s, CPU 2.3 ms/sample, hit 1.000, open 0.0 ms, 12848 samples in 30s (cap), process 34s
+[02:30:54] STACK_w0_c100 r1: 430.6 samples/s, CPU 2.3 ms/sample, hit 1.000, open 0.0 ms, 12920 samples in 30s (cap), process 34s
+[02:31:28] SEP_w0_cemu r1: 343.3 samples/s, CPU 4.2 ms/sample, hit 1.000, open 0.0 ms, 10304 samples in 30s (cap), process 34s
+[02:32:02] SEP_w0_c100 r1: 329.9 samples/s, CPU 4.3 ms/sample, hit 1.000, open 0.0 ms, 9904 samples in 30s (cap), process 34s
+[02:32:36] SEP_w0_c100 r2: 337.2 samples/s, CPU 4.2 ms/sample, hit 1.000, open 0.0 ms, 10120 samples in 30s (cap), process 34s
+[02:33:10] SEP_w0_cemu r2: 339.9 samples/s, CPU 4.2 ms/sample, hit 1.000, open 0.0 ms, 10200 samples in 30s (cap), process 34s
+[02:33:44] STACK_w0_c100 r2: 415.5 samples/s, CPU 2.4 ms/sample, hit 1.000, open 0.0 ms, 12472 samples in 30s (cap), process 34s
+[02:34:18] STACK_w0_cemu r2: 401.5 samples/s, CPU 2.5 ms/sample, hit 1.000, open 0.0 ms, 12048 samples in 30s (cap), process 34s
+[02:34:51] SEP1_w0_c100 r2: 611.2 samples/s, CPU 1.6 ms/sample, hit 1.000, open 0.0 ms, 18344 samples in 30s (cap), process 34s
+[02:35:25] SEP1_w0_cemu r2: 628.4 samples/s, CPU 1.6 ms/sample, hit 1.000, open 0.0 ms, 18856 samples in 30s (cap), process 34s
+[02:36:02] SEP_w4_c100 r2: 928.7 samples/s, CPU 6.0 ms/sample, hit 1.000, open 0.0 ms, 27864 samples in 30s (cap), process 37s
+[02:36:39] SEP_w4_cemu r2: 923.0 samples/s, CPU 6.0 ms/sample, hit 1.000, open 0.0 ms, 27696 samples in 30s (cap), process 37s
+[02:37:16] STACK_w4_c100 r2: 1111.5 samples/s, CPU 4.0 ms/sample, hit 1.000, open 0.0 ms, 33352 samples in 30s (cap), process 37s
+[02:37:53] STACK_w4_cemu r2: 1092.8 samples/s, CPU 4.1 ms/sample, hit 1.000, open 0.0 ms, 32784 samples in 30s (cap), process 37s
+[02:38:30] SEP1_w4_c100 r2: 1470.3 samples/s, CPU 2.8 ms/sample, hit 1.000, open 0.0 ms, 44112 samples in 30s (cap), process 37s
+[02:39:07] SEP1_w4_cemu r2: 1467.1 samples/s, CPU 2.8 ms/sample, hit 1.000, open 0.0 ms, 44016 samples in 30s (cap), process 37s
+[02:39:44] SEP1_w4_cemu r3: 1403.1 samples/s, CPU 2.9 ms/sample, hit 1.000, open 0.0 ms, 42096 samples in 30s (cap), process 37s
+[02:40:21] SEP1_w4_c100 r3: 1396.7 samples/s, CPU 2.9 ms/sample, hit 1.000, open 0.0 ms, 41912 samples in 30s (cap), process 37s
+[02:40:58] STACK_w4_cemu r3: 1152.0 samples/s, CPU 3.8 ms/sample, hit 1.000, open 0.0 ms, 34568 samples in 30s (cap), process 37s
+[02:41:35] STACK_w4_c100 r3: 1130.5 samples/s, CPU 3.9 ms/sample, hit 1.000, open 0.0 ms, 33920 samples in 30s (cap), process 37s
+[02:42:12] SEP_w4_cemu r3: 976.2 samples/s, CPU 5.8 ms/sample, hit 1.000, open 0.0 ms, 29288 samples in 30s (cap), process 37s
+[02:42:49] SEP_w4_c100 r3: 958.0 samples/s, CPU 5.9 ms/sample, hit 1.000, open 0.0 ms, 28744 samples in 30s (cap), process 37s
+[02:43:23] SEP1_w0_cemu r3: 613.8 samples/s, CPU 1.6 ms/sample, hit 1.000, open 0.0 ms, 18416 samples in 30s (cap), process 34s
+[02:43:56] SEP1_w0_c100 r3: 627.8 samples/s, CPU 1.6 ms/sample, hit 1.000, open 0.0 ms, 18840 samples in 30s (cap), process 34s
+[02:44:30] STACK_w0_cemu r3: 423.5 samples/s, CPU 2.4 ms/sample, hit 1.000, open 0.0 ms, 12712 samples in 30s (cap), process 34s
+[02:45:03] STACK_w0_c100 r3: 421.2 samples/s, CPU 2.4 ms/sample, hit 1.000, open 0.0 ms, 12640 samples in 30s (cap), process 34s
+[02:45:37] SEP_w0_cemu r3: 338.1 samples/s, CPU 4.2 ms/sample, hit 1.000, open 0.0 ms, 10144 samples in 30s (cap), process 34s
+[02:46:11] SEP_w0_c100 r3: 339.6 samples/s, CPU 4.2 ms/sample, hit 1.000, open 0.0 ms, 10192 samples in 30s (cap), process 34s
+== stage map: ok (1695s, cgroup peak 4568 MB)
+uploaded results/r4-libero-20260930T020613Z (after map)
+== stage summary start 2026-09-30T02:46:12Z
+# DATA-11 round 4: libero (lerobot/libero)
+
+Source `lerobot/libero@a1aaacb7f6cd6ee5fb43120f673cebb0cfea7dd4` (main now `a1aaacb7f6cd6ee5fb43120f673cebb0cfea7dd4`), 1693 episodes, 273465 frames, fps 10. Cameras (STACK order, top to bottom): `image` 256x256, `image2` 256x256.
+lerobot `32b671d437f8c50014f74a322ad3df09c6fab944` (PR #4702 head). SMOKE=0.
+
+## Slice
+
+- 36 whole consecutive episodes, 10109 frames per group (cap 60000, cap applied: False). Consecutive frames in the first file of every camera: 10109.
+- Real median frames per video file: 6740 (slice / median = 1.50).
+- Real video files per camera: image 37, image2 37; real parquet data files: 377 (episode table: 377); streaming load_dataset num_shards: 377.
+
+## Encode
+
+LeRobot defaults from the installed code: `{'g': '2', 'crf': '30', 'preset': '12', 'svtav1-params': 'fast-decode=0'}` (libsvtav1, yuv420p). SVT-AV1 reported: ['Preset M12 is mapped to M10.']; version ['SVT-AV1 Encoder Lib v3.0.0']; lp 8.
+Stacked frame 512x256; pad pixels 0 per frame (0.0% of the stacked frame, 0 raw RGB bytes). Mux default (source faststart: False).
+
+| file | shape | MB | encoder feed s | flush s |
+|---|---|---|---|---|
+| SEP/image | 256x256 | 36.10 | 5.3 | 0.1 |
+| SEP/image2 | 256x256 | 24.70 | 5.4 | 0.0 |
+| STACK | 512x256 | 60.15 | 11.1 | 0.0 |
+
+SEP total 60.80 MB, STACK 60.15 MB (STACK / SEP = 0.989). Encode wall 33.9 s for 10109 frames (decode 11.4 s, process CPU 269.3 s); SEP and STACK share one loop, so their encode costs are not separated.
+
+## Datasets
+
+- sep: `hadriencornier/lerobot-data11-r4-libero-sep` commit `8329594de128496d19c23f8b5814aed22f3f9d22`, 8 files per key, 288 episodes, 80872 frames, keys ['observation.images.image', 'observation.images.image2'], private True.
+- stack: `hadriencornier/lerobot-data11-r4-libero-stack` commit `0cee59f115657e830efaad4a0e052bbd64c9276a`, 8 files per key, 288 episodes, 80872 frames, keys ['observation.images.stacked'], private True.
+- sep1: `hadriencornier/lerobot-data11-r4-libero-sep1` commit `ce0da929b59dfeb2cbe4b7930ce139fc922a67d0`, 8 files per key, 288 episodes, 80872 frames, keys ['observation.images.image'], private True.
+
+## Checks
+
+| camera | PSNR SEP vs source | STACK crop vs source | STACK crop vs SEP (min) |
+|---|---|---|---|
+| image | 41.32 | 41.24 | 44.69 (40.24) |
+| image2 | 41.67 | 41.71 | 44.13 (37.69) |
+
+- Camera order ok: True (2 same-shape pairs compared).
+- Remote (hf://) == local, bit-exact: {'sep': {'frames_checked': 20, 'mismatch': 0, 'pass': True}, 'stack': {'frames_checked': 20, 'mismatch': 0, 'pass': True}, 'sep1': {'frames_checked': 20, 'mismatch': 0, 'pass': True}}.
+- Through LeRobotDataset: SEP item == file frame 40/40; SEP1 == SEP first camera 20/20; STACK crop vs SEP item PSNR min {'image': 39.356068769045756, 'image2': 35.326706618495706}.
+- Overall check ok: True (PSNR threshold 35.0 dB, STACK vs source min 38.40).
+
+## StreamingLeRobotDataset over hf:// (one process = one DataLoader worker)
+
+5 repeats, arms interleaved, 95% CI over repeats. Local copies instead of hf://: False.
+
+| arm | frames/s | CPU ms/frame | mp4 fetch/frame | mp4 MB/frame | decoder hit | open ms | first yield s |
+|---|---|---|---|---|---|---|---|
+| SEP_S8_c100 | 367.5 +- 15.2 | 2.7 +- 0.1 | 0.0000 | 0.0000 | 1.000 | 0 | 10.3 |
+| STACK_S8_c100 | 487.9 +- 21.8 | 2.1 +- 0.1 | 0.0000 | 0.0000 | 1.000 | 0 | 8.4 |
+| SEP1_S8_c100 | 653.2 +- 28.0 | 1.5 +- 0.1 | 0.0000 | 0.0000 | 1.000 | 0 | 6.4 |
+| SEP_S8_c12 | 5.5 +- 0.6 | 36.2 +- 3.1 | 1.5356 | 5.4662 | 0.744 | 351 | - |
+| STACK_S8_c12 | 490.0 +- 19.3 | 2.0 +- 0.1 | 0.0000 | 0.0000 | 1.000 | 0 | 8.2 |
+
+Audit, DataLoader num_workers = max_num_shards = 4 on the local SEP copy (8 parquet files): workers with frames 2; per worker w0: 200 frames, files [0, 2, 4, 6], max cache 8; w1: 200 frames, files [1, 3, 5, 7], max cache 8. Predicted active shards per worker [4, 4, 0, 0] (decoders [8, 8, 0, 0]).
+
+## Map-style LeRobotDataset on the local copies (lerobot-train DataLoader settings)
+
+cemu = max(1, round(100 x 8 / 37)) = 22. batch_size 8, EpisodeAwareSampler(shuffle=True), prefetch_factor 4, persistent_workers, spawn, return_uint8=True. 4 repeats, interleaved.
+
+| arm | workers | cache | samples/s | CPU ms/sample | decoder hit | open ms |
+|---|---|---|---|---|---|---|
+| SEP_w0_c100 | 0 | 100 | 336.7 +- 7.5 | 4.2 +- 0.1 | 1.000 | 0.0 |
+| SEP_w0_cemu | 0 | 22 | 339.8 +- 3.9 | 4.2 +- 0.0 | 1.000 | 0.0 |
+| STACK_w0_c100 | 0 | 100 | 424.0 +- 11.0 | 2.4 +- 0.1 | 1.000 | 0.0 |
+| STACK_w0_cemu | 0 | 22 | 419.2 +- 19.1 | 2.4 +- 0.1 | 1.000 | 0.0 |
+| SEP1_w0_c100 | 0 | 100 | 620.0 +- 14.4 | 1.6 +- 0.0 | 1.000 | 0.0 |
+| SEP1_w0_cemu | 0 | 22 | 626.5 +- 13.8 | 1.6 +- 0.0 | 1.000 | 0.0 |
+| SEP_w4_c100 | 4 | 100 | 965.2 +- 44.6 | 5.8 +- 0.2 | 1.000 | 0.0 |
+| SEP_w4_cemu | 4 | 22 | 966.9 +- 47.5 | 5.8 +- 0.2 | 1.000 | 0.0 |
+| STACK_w4_c100 | 4 | 100 | 1138.8 +- 43.4 | 3.9 +- 0.2 | 1.000 | 0.0 |
+| STACK_w4_cemu | 4 | 22 | 1128.9 +- 41.6 | 3.9 +- 0.2 | 1.000 | 0.0 |
+| SEP1_w4_c100 | 4 | 100 | 1468.2 +- 80.0 | 2.8 +- 0.1 | 1.000 | 0.0 |
+| SEP1_w4_cemu | 4 | 22 | 1459.1 +- 61.6 | 2.8 +- 0.1 | 1.000 | 0.0 |
+
+## Extrapolation inputs
+
+- Real video files per camera 37; real parquet data files 377; real median frames per file 6740 vs slice 10109.
+- Map-style, full size: each worker's cache holds 100 decoders; random access over SEP 74 files vs STACK 37 files -> expected hit rate about 1.000 (SEP) vs 1.000 (STACK). The cemu arms measure this ratio on the slice.
+- Streaming, lerobot-train (max_num_shards = num_workers, every worker iterates num_shards = min(P, W) shards; datasets then splits each shard's files across the W workers again, so worker w reads only the shards with more than w files). Decoders needed per worker = active shards x cameras (SEP) or active shards (STACK):
+
+| num_workers W | workers that read | active shards: worker 0 / mean | SEP decoders (worker 0) | STACK decoders (worker 0) | SEP overflows 100 | STACK overflows 100 |
+|---|---|---|---|---|---|---|
+| 4 | 4 | 4 / 4.0 | 8 | 4 | False | False |
+| 8 | 8 | 8 / 8.0 | 16 | 8 | False | False |
+| 16 | 16 | 16 / 16.0 | 32 | 16 | False | False |
+| 32 | 12 | 32 / 11.8 | 64 | 32 | False | False |
+| 34 | 12 | 34 / 11.1 | 68 | 34 | False | False |
+| 64 | 6 | 64 / 5.9 | 128 | 64 | True | False |
+| 101 | 4 | 101 / 3.7 | 202 | 101 | True | True |
+| 128 | 3 | 128 / 2.9 | 256 | 128 | True | True |
+
+Worker 0 always reads min(P, W) shards, so the rule 'SEP overflows when min(P, W) x cameras > 100, STACK when min(P, W) > 100' holds for the busiest worker. Other workers read fewer shards, and all W workers carry the full load only when P >= W^2 (every shard has at least W files); with P < W some workers read nothing. The audit above tests this split on the SEP copy.
+
+## Limits
+
+- One group per dataset, copied 8 times: files are identical copies, so file-to-file variation (content, sizes) is not sampled.
+- Streaming arms are one process (one DataLoader worker); the overflow case is emulated with cache 12 at S = 8, not run with 64 workers.
+- Map-style arms read local disk (page cache warm after the first pass); they measure decode CPU, not network or cold-disk reads.
+- STACK and SEP encodes share one loop, so encode time per layout is not measured separately.
+- State / action values are random; only their shapes match the source.
+- cpu-upgrade box (8 CPUs, 32 GB) shared with other stages' background uploads; compare layouts only inside this run.
+
+== stage summary: ok (0s, cgroup peak 4568 MB)
+uploaded results/r4-libero-20260930T020613Z (after summary)
+== done 2026-09-30T02:46:13Z: /results/r4-libero-20260930T020613Z
+== exit code 0 at 2026-09-30T02:46:13Z

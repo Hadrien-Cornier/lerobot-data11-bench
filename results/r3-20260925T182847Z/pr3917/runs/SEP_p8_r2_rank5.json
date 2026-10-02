@@ -1,0 +1,41 @@
+{
+ "kind": "SEP",
+ "mode": "p8",
+ "rep": 2,
+ "rank": 5,
+ "world": 8,
+ "seed": 102,
+ "status": "error",
+ "utc_start": "2026-09-25T19:03:48Z",
+ "build_s": 2.5799547630012967,
+ "build": {
+  "requests": 0,
+  "resolve_requests": 0,
+  "cdn_requests": 0,
+  "api_requests": 0,
+  "http_bytes": 0,
+  "status_429": 0,
+  "status_other_err": 0,
+  "fetch_calls": 0,
+  "fetch_bytes": 0,
+  "fetch_s": 0.0,
+  "episodes": 0,
+  "dec_calls": 0,
+  "dec_wall_s": 0.0,
+  "dec_cpu_s": 0.0,
+  "open_calls": 0,
+  "open_wall_s": 0.0,
+  "open_cpu_s": 0.0,
+  "proc_cpu_s": 4.583465
+ },
+ "pool": {
+  "episode_pool_size": 32,
+  "prefetch_episodes": 8,
+  "decode_threads": 2,
+  "max_num_shards": 16
+ },
+ "first_sample_s": 16.727956846996676,
+ "error": "ReadTimeout: The read operation timed out",
+ "traceback": "urn self._read_range_single(relative_path, offset, length)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/work/venv_pr3917/lib/python3.12/site-packages/lerobot/streaming/range_fetch.py\", line 412, in _read_range_single\n    resolved = self._resolve_url(relative_path)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/work/venv_pr3917/lib/python3.12/site-packages/lerobot/streaming/range_fetch.py\", line 359, in _resolve_url\n    source = self._source_url(relative_path)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/work/venv_pr3917/lib/python3.12/site-packages/lerobot/streaming/range_fetch.py\", line 349, in _source_url\n    source = self.fs.url(self._path(relative_path))\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/work/venv_pr3917/lib/python3.12/site-packages/huggingface_hub/hf_file_system.py\", line 1063, in url\n    resolved_path = self.resolve_path(path)\n                    ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/work/venv_pr3917/lib/python3.12/site-packages/huggingface_hub/hf_file_system.py\", line 339, in resolve_path\n    repo_and_revision_exist, err = self._repo_and_revision_exist(parsed.type, parsed.id, revision)\n                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/work/venv_pr3917/lib/python3.12/site-packages/huggingface_hub/hf_file_system.py\", line 252, in _repo_and_revision_exist\n    self._api.repo_info(\n  File \"/work/venv_pr3917/lib/python3.12/site-packages/huggingface_hub/utils/_validators.py\", line 88, in _inner_fn\n    return fn(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^\n  File \"/work/venv_pr3917/lib/python3.12/site-packages/huggingface_hub/hf_api.py\", line 3653, in repo_info\n    return method(\n           ^^^^^^^\n  File \"/work/venv_pr3917/lib/python3.12/site-packages/huggingface_hub/utils/_validators.py\", line 88, in _inner_fn\n    return fn(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^\n  File \"/work/venv_pr3917/lib/python3.12/site-packages/huggingface_hub/hf_api.py\", line 3402, in dataset_info\n    r = get_session().get(path, headers=headers, timeout=timeout, params=params)\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/work/venv_pr3917/lib/python3.12/site-packages/httpx/_client.py\", line 1053, in get\n    return self.request(\n           ^^^^^^^^^^^^^\n  File \"/work/venv_pr3917/lib/python3.12/site-packages/httpx/_client.py\", line 825, in request\n    return self.send(request, auth=auth, follow_redirects=follow_redirects)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/work/venv_pr3917/lib/python3.12/site-packages/httpx/_client.py\", line 914, in send\n    response = self._send_handling_auth(\n               ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/work/venv_pr3917/lib/python3.12/site-packages/httpx/_client.py\", line 942, in _send_handling_auth\n    response = self._send_handling_redirects(\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/work/venv_pr3917/lib/python3.12/site-packages/httpx/_client.py\", line 979, in _send_handling_redirects\n    response = self._send_single_request(request)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/work/dl_bundle/bundle-r3/common.py\", line 370, in spy\n    r = orig(self, request)\n        ^^^^^^^^^^^^^^^^^^^\n  File \"/work/venv_pr3917/lib/python3.12/site-packages/httpx/_client.py\", line 1014, in _send_single_request\n    response = transport.handle_request(request)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/work/venv_pr3917/lib/python3.12/site-packages/httpx/_transports/default.py\", line 249, in handle_request\n    with map_httpcore_exceptions():\n         ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/contextlib.py\", line 158, in __exit__\n    self.gen.throw(value)\n  File \"/work/venv_pr3917/lib/python3.12/site-packages/httpx/_transports/default.py\", line 118, in map_httpcore_exceptions\n    raise mapped_exc(message) from exc\nhttpx.ReadTimeout: The read operation timed out\n",
+ "peak_pss_gb": 1.8822269439697266
+}

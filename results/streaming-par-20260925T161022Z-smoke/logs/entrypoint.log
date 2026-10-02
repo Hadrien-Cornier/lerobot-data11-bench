@@ -1,0 +1,15 @@
+== streaming-par job streaming-par-20260925T161022Z-smoke start 2026-09-25T16:10:22Z SMOKE=1 host=j-hadriencornier-6ab69ce552d0dbd7f1d90776-e8azu62e-f2d12-mhfsm
+HF_TOKEN present (value not shown)
+attempt marker attempts/6ab69ce552d0dbd7f1d90776 recorded
+system ffmpeg: ffmpeg version 7.1.5-0+deb13u1 Copyright (c) 2000-2026 the FFmpeg developers
+bundle checksums OK
+base_sha 1bc0bdfb20ad4f4f76dc8a68a0e0746d54f50de9
+pr3917_head 9bea4a19181f3432caab55bc0b3d00442656ca68 (expected prefix 9bea4a19)
+src_base diff:  2 files changed, 77 insertions(+), 12 deletions(-)
+src_p1 diff:  2 files changed, 92 insertions(+), 17 deletions(-)
+src_p1p2 diff:  4 files changed, 282 insertions(+), 39 deletions(-)
+
+[notice] A new release of pip is available: 25.0.1 -> 26.2.1
+[notice] To update, run: pip install --upgrade pip
+main venv: torch 2.11.0+cpu torchcodec 0.11.1+cpu /work/src_base/src/lerobot/__init__.py
+pr3917 venv: torch 2.11.0+cpu torchcodec 0.11.1+cpu /work/src_pr3917/src/lerobot/__init__.py

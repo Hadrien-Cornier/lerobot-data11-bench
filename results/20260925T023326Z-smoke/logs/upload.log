@@ -1,0 +1,3 @@
+upload: 30 files, 370.7 MB, families ['ckpt_1k', 'ckpt_5k'] -> hadriencornier/lerobot-data11-bench:variants/20260925T023326Z-smoke
+committed 59b48590d176a06aa793eb4c519168f05f412efb in 3.3s (113.9 MB/s)
+read back 30 files at 59b48590d176a06aa793eb4c519168f05f412efb: 0 problems

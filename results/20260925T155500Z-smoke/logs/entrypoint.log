@@ -1,0 +1,390 @@
+== DATA-11 job 20260925T155500Z-smoke start 2026-09-25T15:55:00Z SMOKE=1 host=j-hadriencornier-6ab6994b52d0dbd7f1d9067d-90wzz26n-e57f6-h7n8p
+HF_TOKEN present (value not shown); results -> dataset hadriencornier/lerobot-data11-bench:results/20260925T155500Z-smoke
+attempt marker attempts/6ab6994b52d0dbd7f1d9067d recorded
+system ffmpeg: ffmpeg version 7.1.5-0+deb13u1 Copyright (c) 2000-2026 the FFmpeg developers (major 7)
+== stage system_deps: ok (44s, cgroup peak 832 MB)
+bundle checksums OK
+== stage bundle: ok (0s, cgroup peak 832 MB)
+
+[notice] A new release of pip is available: 25.0.1 -> 26.2.1
+[notice] To update, run: pip install --upgrade pip
+lerobot /work/venv/lib/python3.12/site-packages/lerobot/__init__.py datasets 4.8.5
+Using Python 3.12.14 environment at: /work/venv
+torch 2.11.0+cpu | torchcodec 0.11.1+cpu
+av 15.1.0 {'libavutil': '59.39.100', 'libavcodec': '61.19.101', 'libavformat': '61.7.100', 'libavdevice': '61.3.100', 'libavfilter': '10.4.100', 'libswscale': '8.3.100', 'libswresample': '5.3.100'}
+libsvtav1 encoder available in PyAV
+== stage python_env: ok (57s, cgroup peak 2957 MB)
+{
+ "python": "3.12.14 (main, Sep 19 2026, 01:04:57) [GCC 14.2.0]",
+ "os_cpu_count": 64,
+ "sched_affinity": 64,
+ "torch": "2.11.0+cpu",
+ "torch_num_threads": 32,
+ "torchcodec": "0.11.1+cpu",
+ "torchcodec_ffmpeg": {
+  "libavfilter": [
+   10,
+   5,
+   100
+  ],
+  "libavutil": [
+   59,
+   39,
+   100
+  ],
+  "libavcodec": [
+   61,
+   19,
+   101
+  ],
+  "libavformat": [
+   61,
+   7,
+   103
+  ],
+  "ffmpeg_version": "7.1.5-0+deb13u1"
+ },
+ "numpy": "2.2.6",
+ "pandas": "2.3.3",
+ "pyarrow": "25.0.1",
+ "psutil": "7.2.2",
+ "huggingface_hub": "1.30.0",
+ "fsspec": "2026.2.0",
+ "httpx": "0.28.1"
+}
+{"av": "15.1.0", "av_ffmpeg": {"libavutil": "59.39.100", "libavcodec": "61.19.101", "libavformat": "61.7.100", "libavdevice": "61.3.100", "libavfilter": "10.4.100", "libswscale": "8.3.100", "libswresample": "5.3.100"}}
+uploaded results/20260925T155500Z-smoke (setup done)
+== stage prep2 start 2026-09-25T15:56:48Z
+
+upload.json:   0%|          | 0.00/23.9k [00:00<?, ?B/s][Aupload.json: 100%|██████████| 23.9k/23.9k [00:00<00:00, 33.8MB/s]
+
+variants/20260925T025221Z/ckpt_full/SEP/(…): reconstructing file:   0%|          |  0.00B / 80.3MB            [Avariants/20260925T025221Z/ckpt_full/SEP/(…): downloading bytes:           |  0.00B            variants/20260925T025221Z/ckpt_full/SEP/(…): downloading bytes: ████▉     | 39.2MB, 3.11MB/s  
+variants/20260925T025221Z/ckpt_full/SEP/(…): reconstructing file: 100%|██████████| 80.3MB / 80.3MB            [Avariants/20260925T025221Z/ckpt_full/SEP/(…): downloading bytes: ██████████| 80.2MB, 7.55MB/s  variants/20260925T025221Z/ckpt_full/SEP/(…): downloading bytes: ██████████| 80.2MB, 7.55MB/s  
+variants/20260925T025221Z/ckpt_full/SEP/(…): reconstructing file: 100%|██████████| 80.3MB / 80.3MB, 7.73MB/s  
+
+variants/20260925T025221Z/ckpt_full/SEP/(…): reconstructing file:   0%|          |  0.00B / 69.0MB            [Avariants/20260925T025221Z/ckpt_full/SEP/(…): downloading bytes:           |  0.00B            variants/20260925T025221Z/ckpt_full/SEP/(…): downloading bytes: █████████▏| 63.3MB, 4.28MB/s  
+variants/20260925T025221Z/ckpt_full/SEP/(…): reconstructing file: 100%|██████████| 69.0MB / 69.0MB            [Avariants/20260925T025221Z/ckpt_full/SEP/(…): downloading bytes: ██████████| 68.9MB, 6.31MB/s  variants/20260925T025221Z/ckpt_full/SEP/(…): downloading bytes: ██████████| 68.9MB, 6.31MB/s  
+variants/20260925T025221Z/ckpt_full/SEP/(…): reconstructing file: 100%|██████████| 69.0MB / 69.0MB, 6.62MB/s  
+
+variants/20260925T025221Z/ckpt_full/SEP/(…): reconstructing file:   0%|          |  0.00B / 65.8MB            [Avariants/20260925T025221Z/ckpt_full/SEP/(…): downloading bytes:           |  0.00B            variants/20260925T025221Z/ckpt_full/SEP/(…): downloading bytes: ████▎     | 28.1MB, 2.34MB/s  
+variants/20260925T025221Z/ckpt_full/SEP/(…): reconstructing file: 100%|██████████| 65.8MB / 65.8MB            [Avariants/20260925T025221Z/ckpt_full/SEP/(…): downloading bytes: ██████████| 65.7MB, 6.00MB/s  variants/20260925T025221Z/ckpt_full/SEP/(…): downloading bytes: ██████████| 65.7MB, 6.00MB/s  
+variants/20260925T025221Z/ckpt_full/SEP/(…): reconstructing file: 100%|██████████| 65.8MB / 65.8MB, 6.27MB/s  
+
+variants/20260925T025221Z/ckpt_full/SEP/(…): reconstructing file:   0%|          |  0.00B /  105MB            [Avariants/20260925T025221Z/ckpt_full/SEP/(…): downloading bytes:           |  0.00B            variants/20260925T025221Z/ckpt_full/SEP/(…): downloading bytes: ████▉     | 52.3MB, 4.30MB/s  
+variants/20260925T025221Z/ckpt_full/SEP/(…): reconstructing file: 100%|██████████|  105MB /  105MB            [Avariants/20260925T025221Z/ckpt_full/SEP/(…): downloading bytes: ██████████|  105MB, 9.49MB/s  variants/20260925T025221Z/ckpt_full/SEP/(…): downloading bytes: ██████████|  105MB, 9.49MB/s  
+variants/20260925T025221Z/ckpt_full/SEP/(…): reconstructing file: 100%|██████████|  105MB /  105MB, 10.0MB/s  
+
+variants/20260925T025221Z/ckpt_full/SEP/(…): reconstructing file:   0%|          |  0.00B / 81.9MB            [Avariants/20260925T025221Z/ckpt_full/SEP/(…): downloading bytes:           |  0.00B            variants/20260925T025221Z/ckpt_full/SEP/(…): downloading bytes: █████▋    | 46.3MB, 4.15MB/s  
+variants/20260925T025221Z/ckpt_full/SEP/(…): reconstructing file: 100%|██████████| 81.9MB / 81.9MB            [Avariants/20260925T025221Z/ckpt_full/SEP/(…): downloading bytes: ██████████| 81.8MB, 7.66MB/s  variants/20260925T025221Z/ckpt_full/SEP/(…): downloading bytes: ██████████| 81.8MB, 7.66MB/s  
+variants/20260925T025221Z/ckpt_full/SEP/(…): reconstructing file: 100%|██████████| 81.9MB / 81.9MB, 7.89MB/s  
+
+variants/20260925T025221Z/ckpt_full/SEP/(…): reconstructing file:   0%|          |  0.00B / 77.7MB            [Avariants/20260925T025221Z/ckpt_full/SEP/(…): downloading bytes:           |  0.00B            variants/20260925T025221Z/ckpt_full/SEP/(…): downloading bytes: ████████▌ | 66.8MB, 5.23MB/s  
+variants/20260925T025221Z/ckpt_full/SEP/(…): reconstructing file: 100%|██████████| 77.7MB / 77.7MB            [Avariants/20260925T025221Z/ckpt_full/SEP/(…): downloading bytes: ██████████| 77.6MB, 7.18MB/s  variants/20260925T025221Z/ckpt_full/SEP/(…): downloading bytes: ██████████| 77.6MB, 7.18MB/s  
+variants/20260925T025221Z/ckpt_full/SEP/(…): reconstructing file: 100%|██████████| 77.7MB / 77.7MB, 7.48MB/s  
+
+variants/20260925T025221Z/ckpt_full/SEP/(…): reconstructing file:   0%|          |  0.00B / 67.9MB            [Avariants/20260925T025221Z/ckpt_full/SEP/(…): downloading bytes:           |  0.00B            variants/20260925T025221Z/ckpt_full/SEP/(…): downloading bytes: █████▋    | 39.0MB, 3.09MB/s  
+variants/20260925T025221Z/ckpt_full/SEP/(…): reconstructing file: 100%|██████████| 67.9MB / 67.9MB            [Avariants/20260925T025221Z/ckpt_full/SEP/(…): downloading bytes: ██████████| 67.7MB, 6.31MB/s  variants/20260925T025221Z/ckpt_full/SEP/(…): downloading bytes: ██████████| 67.7MB, 6.31MB/s  
+variants/20260925T025221Z/ckpt_full/SEP/(…): reconstructing file: 100%|██████████| 67.9MB / 67.9MB, 6.53MB/s  
+
+variants/20260925T025221Z/ckpt_full/SEP/(…): reconstructing file:   0%|          |  0.00B / 56.5MB            [Avariants/20260925T025221Z/ckpt_full/SEP/(…): downloading bytes:           |  0.00B            variants/20260925T025221Z/ckpt_full/SEP/(…): downloading bytes: ████████▌ | 48.4MB, 4.02MB/s  
+variants/20260925T025221Z/ckpt_full/SEP/(…): reconstructing file: 100%|██████████| 56.5MB / 56.5MB            [Avariants/20260925T025221Z/ckpt_full/SEP/(…): downloading bytes: ██████████| 56.4MB, 5.30MB/s  variants/20260925T025221Z/ckpt_full/SEP/(…): downloading bytes: ██████████| 56.4MB, 5.30MB/s  
+variants/20260925T025221Z/ckpt_full/SEP/(…): reconstructing file: 100%|██████████| 56.5MB / 56.5MB, 5.49MB/s  
+
+variants/20260925T025221Z/ckpt_full/SEP/(…): reconstructing file:   0%|          |  0.00B / 56.7MB            [Avariants/20260925T025221Z/ckpt_full/SEP/(…): downloading bytes:           |  0.00B            variants/20260925T025221Z/ckpt_full/SEP/(…): downloading bytes: ██████    | 34.4MB, 3.09MB/s  
+variants/20260925T025221Z/ckpt_full/SEP/(…): reconstructing file: 100%|██████████| 56.7MB / 56.7MB, 34.6kB/s  [Avariants/20260925T025221Z/ckpt_full/SEP/(…): downloading bytes: ██████████| 56.6MB, 5.31MB/s  variants/20260925T025221Z/ckpt_full/SEP/(…): downloading bytes: ██████████| 56.6MB, 5.31MB/s  
+variants/20260925T025221Z/ckpt_full/SEP/(…): reconstructing file: 100%|██████████| 56.7MB / 56.7MB, 5.47MB/s  
+
+variants/20260925T025221Z/ckpt_full/STAC(…): reconstructing file:   0%|          |  0.00B /  211MB            [Avariants/20260925T025221Z/ckpt_full/STAC(…): downloading bytes:           |  0.00B            variants/20260925T025221Z/ckpt_full/STAC(…): downloading bytes: ████▌     | 97.3MB, 8.50MB/s  variants/20260925T025221Z/ckpt_full/STAC(…): downloading bytes: █████████ |  190MB, 17.0MB/s  
+variants/20260925T025221Z/ckpt_full/STAC(…): reconstructing file: 100%|██████████|  211MB /  211MB            [Avariants/20260925T025221Z/ckpt_full/STAC(…): downloading bytes: ██████████|  211MB, 17.7MB/s  variants/20260925T025221Z/ckpt_full/STAC(…): downloading bytes: ██████████|  211MB, 17.7MB/s  
+variants/20260925T025221Z/ckpt_full/STAC(…): reconstructing file: 100%|██████████|  211MB /  211MB, 19.7MB/s  
+
+variants/20260925T025221Z/ckpt_full/STAC(…): reconstructing file:   0%|          |  0.00B /  261MB            [Avariants/20260925T025221Z/ckpt_full/STAC(…): downloading bytes:           |  0.00B            variants/20260925T025221Z/ckpt_full/STAC(…): downloading bytes: ██████▋   |  174MB, 14.8MB/s  
+variants/20260925T025221Z/ckpt_full/STAC(…): reconstructing file: 100%|██████████|  261MB /  261MB            [Avariants/20260925T025221Z/ckpt_full/STAC(…): downloading bytes: ██████████|  261MB, 23.0MB/s  variants/20260925T025221Z/ckpt_full/STAC(…): downloading bytes: ██████████|  261MB, 23.0MB/s  
+variants/20260925T025221Z/ckpt_full/STAC(…): reconstructing file: 100%|██████████|  261MB /  261MB, 24.6MB/s  
+
+variants/20260925T025221Z/ckpt_full/STAC(…): reconstructing file:   0%|          |  0.00B /  177MB            [Avariants/20260925T025221Z/ckpt_full/STAC(…): downloading bytes:           |  0.00B            variants/20260925T025221Z/ckpt_full/STAC(…): downloading bytes: ███████   |  124MB, 7.98MB/s  
+variants/20260925T025221Z/ckpt_full/STAC(…): reconstructing file:  38%|███▊      | 67.0MB /  177MB            [Avariants/20260925T025221Z/ckpt_full/STAC(…): downloading bytes: ██████████|  177MB, 16.8MB/s  variants/20260925T025221Z/ckpt_full/STAC(…): downloading bytes: ██████████|  177MB, 16.8MB/s  
+variants/20260925T025221Z/ckpt_full/STAC(…): reconstructing file: 100%|██████████|  177MB /  177MB, 17.1MB/s  
+downloaded 12 files, 1.31 GB in 20s
+MULTI g0: 215.3 MB (SEP sum 215.0), interleave span p50 6414 p95 25158 B, identity {'frames_checked': 120, 'mismatch': 0, 'equal_to_other_camera': 0, 'num_frames_ok': True, 'num_frames': 23380, 'pass': True}
+MULTI g1: 265.2 MB (SEP sum 264.9), interleave span p50 7890 p95 28628 B, identity {'frames_checked': 120, 'mismatch': 0, 'equal_to_other_camera': 0, 'num_frames_ok': True, 'num_frames': 25759, 'pass': True}
+MULTI g2: 181.4 MB (SEP sum 181.1), interleave span p50 6924 p95 19189 B, identity {'frames_checked': 120, 'mismatch': 0, 'equal_to_other_camera': 0, 'num_frames_ok': True, 'num_frames': 24979, 'pass': True}
+muxer variant max_interleave_delta_0: {"args": ["-max_interleave_delta", "0", "-movflags", "+faststart"], "bytes": 215321628, "interleave": {"timestamps": 23380, "span_bytes_p50": 6414.0, "span_bytes_p95": 25158.199999999997, "span_bytes_max": 30145, "gap_bytes_p50": 4504.0, "gap_bytes_p95": 18285.149999999998, "packets": 70140, "same_stream_runs": 70140, "mean_packets_per_run": 1.0}, "identity": {"frames_checked": 30, "mismatch": 0, 
+muxer variant fragmented_2frames: {"args": ["-movflags", "+frag_keyframe+empty_moov+default_base_moof", "-frag_duration", "66667"], "bytes": 218746766, "interleave": {"timestamps": 23380, "span_bytes_p50": 14148.0, "span_bytes_p95": 25404.05, "span_bytes_max": 30554, "gap_bytes_p50": 11735.0, "gap_bytes_p95": 18721.0, "packets": 70140, "same_stream_runs": 35070, "mean_packets_per_run": 2.0}, "identity": {"frames_checked": 30, "mis
+MULTI uploaded at a3d31680dba3ed626ee7c5afca85753b23941b52: True
+
+Creating parquet from Arrow format:   0%|          | 0/1 [00:00<?, ?ba/s][ACreating parquet from Arrow format: 100%|██████████| 1/1 [00:00<00:00, 35.09ba/s]
+
+Creating parquet from Arrow format:   0%|          | 0/1 [00:00<?, ?ba/s][ACreating parquet from Arrow format: 100%|██████████| 1/1 [00:00<00:00, 50.91ba/s]
+
+Creating parquet from Arrow format:   0%|          | 0/1 [00:00<?, ?ba/s][ACreating parquet from Arrow format: 100%|██████████| 1/1 [00:00<00:00, 61.54ba/s]
+
+Creating parquet from Arrow format:   0%|          | 0/1 [00:00<?, ?ba/s][ACreating parquet from Arrow format: 100%|██████████| 1/1 [00:00<00:00, 47.39ba/s]
+
+Creating parquet from Arrow format:   0%|          | 0/1 [00:00<?, ?ba/s][ACreating parquet from Arrow format: 100%|██████████| 1/1 [00:00<00:00, 55.30ba/s]
+
+Creating parquet from Arrow format:   0%|          | 0/1 [00:00<?, ?ba/s][ACreating parquet from Arrow format: 100%|██████████| 1/1 [00:00<00:00, 43.60ba/s]
+
+Creating parquet from Arrow format:   0%|          | 0/1 [00:00<?, ?ba/s][ACreating parquet from Arrow format: 100%|██████████| 1/1 [00:00<00:00, 53.16ba/s]
+
+Creating parquet from Arrow format:   0%|          | 0/1 [00:00<?, ?ba/s][ACreating parquet from Arrow format: 100%|██████████| 1/1 [00:00<00:00, 55.43ba/s]
+stream dataset SEP: {"kind": "SEP", "video_keys": ["observation.images.top", "observation.images.left_wrist", "observation.images.right_wrist"], "files_per_key": 8, "episodes": 61, "frames": 197375, "repo": "hadriencornier/lerobot-data11-stream-sep", "commit": "9c9ec6ed501e9e018db9d5728f2fb3901c02956f", "upload_s": 2.0408799910219386, "files": 35, "readback_mismatch": [], "private": true}
+
+Creating parquet from Arrow format:   0%|          | 0/1 [00:00<?, ?ba/s][ACreating parquet from Arrow format: 100%|██████████| 1/1 [00:00<00:00, 43.80ba/s]
+
+Creating parquet from Arrow format:   0%|          | 0/1 [00:00<?, ?ba/s][ACreating parquet from Arrow format: 100%|██████████| 1/1 [00:00<00:00, 40.92ba/s]
+
+Creating parquet from Arrow format:   0%|          | 0/1 [00:00<?, ?ba/s][ACreating parquet from Arrow format: 100%|██████████| 1/1 [00:00<00:00, 43.94ba/s]
+
+Creating parquet from Arrow format:   0%|          | 0/1 [00:00<?, ?ba/s][ACreating parquet from Arrow format: 100%|██████████| 1/1 [00:00<00:00, 56.65ba/s]
+
+Creating parquet from Arrow format:   0%|          | 0/1 [00:00<?, ?ba/s][ACreating parquet from Arrow format: 100%|██████████| 1/1 [00:00<00:00, 57.46ba/s]
+
+Creating parquet from Arrow format:   0%|          | 0/1 [00:00<?, ?ba/s][ACreating parquet from Arrow format: 100%|██████████| 1/1 [00:00<00:00, 60.22ba/s]
+
+Creating parquet from Arrow format:   0%|          | 0/1 [00:00<?, ?ba/s][ACreating parquet from Arrow format: 100%|██████████| 1/1 [00:00<00:00, 66.86ba/s]
+
+Creating parquet from Arrow format:   0%|          | 0/1 [00:00<?, ?ba/s][ACreating parquet from Arrow format: 100%|██████████| 1/1 [00:00<00:00, 59.08ba/s]
+stream dataset STACK: {"kind": "STACK", "video_keys": ["observation.images.stack"], "files_per_key": 8, "episodes": 61, "frames": 197375, "repo": "hadriencornier/lerobot-data11-stream-stack", "commit": "ac99e15afebf97d8ed9390680a23a73556080bd0", "upload_s": 1.5042041119886562, "files": 19, "readback_mismatch": [], "private": true}
+== stage prep2: ok (54s, cgroup peak 5928 MB)
+uploaded results/20260925T155500Z-smoke (after prep2)
+== stage stream start 2026-09-25T15:57:44Z
+
+Downloading bytes:           |  0.00B            [A
+Reconstructing (incomplete total...): |          |  0.00B /  0.00B            [A
+Fetching 3 files:   0%|          | 0/3 [00:00<?, ?it/s][A
+Reconstructing (incomplete total...):   0%|          |  0.00B / 2.06kB            [A
+Reconstructing (incomplete total...):   0%|          |  0.00B / 21.8kB            [A
+Reconstructing (incomplete total...):   0%|          |  0.00B / 24.6kB            [AFetching 3 files: 100%|██████████| 3/3 [00:00<00:00,  9.60it/s]
+
+Downloading bytes: ██████████| 9.93kB,   ???B/s  [A
+Download complete: : ██████████| 9.93kB,   ???B/s  [A
+Reconstruction complete: 100%|██████████| 24.6kB / 24.6kB,   ???B/s               [ADownload complete: : ██████████| 9.93kB,   ???B/s  
+Reconstruction complete: 100%|██████████| 24.6kB / 24.6kB,   ???B/s  
+[13s] SEP_S8_c100_seq r0: 126.6 fps, mp4 fetch/frame 0.0000 (0.000 MB), parquet fetch/frame 0.0000, hit 1.000, opens/frame 0.000 (0 ms), CPU 7.8 ms/frame, first yield None, shards 8/8, HTTP MB so far 153
+
+Downloading bytes:           |  0.00B            [A
+Reconstructing (incomplete total...): |          |  0.00B /  0.00B            [A
+Fetching 3 files:   0%|          | 0/3 [00:00<?, ?it/s][AFetching 3 files: 100%|██████████| 3/3 [00:00<00:00, 834.41it/s]
+
+Download complete: :           |  0.00B            [A
+Reconstruction complete: |          |  0.00B /  0.00B                         [ADownload complete: :           |  0.00B            
+Reconstruction complete: |          |  0.00B /  0.00B            
+[55s] SEP_S8_c12_seq r0: 4.6 fps, mp4 fetch/frame 1.6522 (8.770 MB), parquet fetch/frame 0.0000, hit 0.449, opens/frame 1.652 (128 ms), CPU 74.8 ms/frame, first yield None, shards 8/8, HTTP MB so far 1692
+
+Downloading bytes:           |  0.00B            [A
+Reconstructing (incomplete total...): |          |  0.00B /  0.00B            [A
+Fetching 3 files:   0%|          | 0/3 [00:00<?, ?it/s][A
+Reconstructing (incomplete total...):   0%|          |  0.00B / 13.9kB            [A
+Reconstructing (incomplete total...):   0%|          |  0.00B / 13.9kB            [A
+Reconstructing (incomplete total...):   0%|          |  0.00B / 15.6kB            [AFetching 3 files: 100%|██████████| 3/3 [00:00<00:00,  7.16it/s]
+
+Downloading bytes: ██████████| 7.77kB,   ???B/s  [A
+Download complete: : ██████████| 7.77kB,   ???B/s  [A
+Reconstruction complete: 100%|██████████| 15.6kB / 15.6kB,   ???B/s               [ADownload complete: : ██████████| 7.77kB,   ???B/s  
+Reconstruction complete: 100%|██████████| 15.6kB / 15.6kB,   ???B/s  
+[61s] STACK_S8_c100 r0: 256.4 fps, mp4 fetch/frame 0.0000 (0.000 MB), parquet fetch/frame 0.0000, hit 1.000, opens/frame 0.000 (0 ms), CPU 3.9 ms/frame, first yield None, shards 8/8, HTTP MB so far 1760
+
+Downloading bytes:           |  0.00B            [A
+Reconstructing (incomplete total...): |          |  0.00B /  0.00B            [A
+Fetching 3 files:   0%|          | 0/3 [00:00<?, ?it/s][AFetching 3 files: 100%|██████████| 3/3 [00:00<00:00, 216.38it/s]
+
+Download complete: :           |  0.00B            [A
+Reconstruction complete: |          |  0.00B /  0.00B                         [ADownload complete: :           |  0.00B            
+Reconstruction complete: |          |  0.00B /  0.00B            
+[68s] SEP_S1_c100_par r0: 72.9 fps, mp4 fetch/frame 0.0000 (0.000 MB), parquet fetch/frame 0.0000, hit 1.000, opens/frame 0.000 (0 ms), CPU 10.8 ms/frame, first yield None, shards 1/8, HTTP MB so far 1779
+
+Downloading bytes:           |  0.00B            [A
+Reconstructing (incomplete total...): |          |  0.00B /  0.00B            [A
+Fetching 3 files:   0%|          | 0/3 [00:00<?, ?it/s][AFetching 3 files: 100%|██████████| 3/3 [00:00<00:00, 190.33it/s]
+
+Download complete: :           |  0.00B            [A
+Reconstruction complete: |          |  0.00B /  0.00B                         [ADownload complete: :           |  0.00B            
+Reconstruction complete: |          |  0.00B /  0.00B            
+
+Downloading bytes:           |  0.00B            [A
+Reconstructing (incomplete total...): |          |  0.00B /  0.00B            [A
+Fetching 3 files:   0%|          | 0/3 [00:00<?, ?it/s][AFetching 3 files: 100%|██████████| 3/3 [00:00<00:00, 209.87it/s]
+
+Download complete: :           |  0.00B            [A
+Reconstruction complete: |          |  0.00B /  0.00B                         [ADownload complete: :           |  0.00B            
+Reconstruction complete: |          |  0.00B /  0.00B            
+
+Downloading bytes:           |  0.00B            [A
+Reconstructing (incomplete total...): |          |  0.00B /  0.00B            [A
+Fetching 3 files:   0%|          | 0/3 [00:00<?, ?it/s][AFetching 3 files: 100%|██████████| 3/3 [00:00<00:00, 151.32it/s]
+
+Download complete: :           |  0.00B            [A
+Reconstruction complete: |          |  0.00B /  0.00B                         [A
+Downloading bytes:           |  0.00B            [A
+Reconstructing (incomplete total...): |          |  0.00B /  0.00B            [A
+Fetching 3 files:   0%|          | 0/3 [00:00<?, ?it/s][AFetching 3 files: 100%|██████████| 3/3 [00:00<00:00, 482.20it/s]
+
+Download complete: :           |  0.00B            [A
+Reconstruction complete: |          |  0.00B /  0.00B                         [ADownload complete: :           |  0.00B            
+Reconstruction complete: |          |  0.00B /  0.00B            
+
+Downloading bytes:           |  0.00B            [A
+Reconstructing (incomplete total...): |          |  0.00B /  0.00B            [A
+Fetching 3 files:   0%|          | 0/3 [00:00<?, ?it/s][AFetching 3 files: 100%|██████████| 3/3 [00:00<00:00, 299.25it/s]
+
+Download complete: :           |  0.00B            [A
+Reconstruction complete: |          |  0.00B /  0.00B                         [A
+Downloading bytes:           |  0.00B            [A
+Reconstructing (incomplete total...): |          |  0.00B /  0.00B            [A
+Fetching 3 files:   0%|          | 0/3 [00:00<?, ?it/s][AFetching 3 files: 100%|██████████| 3/3 [00:00<00:00, 1002.78it/s]
+
+Download complete: :           |  0.00B            [A
+Reconstruction complete: |          |  0.00B /  0.00B                         [ADownload complete: :           |  0.00B            
+Reconstruction complete: |          |  0.00B /  0.00B            
+Download complete: :           |  0.00B            
+Reconstruction complete: |          |  0.00B /  0.00B            
+Download complete: :           |  0.00B            
+Reconstruction complete: |          |  0.00B /  0.00B            
+
+Downloading bytes:           |  0.00B            [A
+Reconstructing (incomplete total...): |          |  0.00B /  0.00B            [A
+Fetching 3 files:   0%|          | 0/3 [00:00<?, ?it/s][AFetching 3 files: 100%|██████████| 3/3 [00:00<00:00, 876.98it/s]
+
+Download complete: :           |  0.00B            [A
+Reconstruction complete: |          |  0.00B /  0.00B                         [A
+Downloading bytes:           |  0.00B            [A
+Reconstructing (incomplete total...): |          |  0.00B /  0.00B            [A
+Fetching 3 files:   0%|          | 0/3 [00:00<?, ?it/s][AFetching 3 files: 100%|██████████| 3/3 [00:00<00:00, 729.99it/s]
+
+Download complete: :           |  0.00B            [A
+Reconstruction complete: |          |  0.00B /  0.00B                         [ADownload complete: :           |  0.00B            
+Reconstruction complete: |          |  0.00B /  0.00B            
+Download complete: :           |  0.00B            
+Reconstruction complete: |          |  0.00B /  0.00B            
+[158s] conc SEP_S8_c100_seq x8: 1040.9 fps, 0.0 resolves/s, 0.0 MB/s, hit 1.000, 429 0
+# DATA-11 round 2: real StreamingLeRobotDataset over hf:// (PR #4702 branch)
+
+lerobot a195a91ff815ad730373276ef8a4cc7c04c5c074; datasets SEP `hadriencornier/lerobot-data11-stream-sep`, STACK `hadriencornier/lerobot-data11-stream-stack` (8 video files per key, copies of the round-1 ckpt_full variants). Single process = one DataLoader worker. fps = frames made per second after warm-up (every step makes one frame).
+
+| arm | S | cache | cams | fps | +-CI | mp4 fetch/frame | mp4 MB/frame | parquet fetch/frame | resolve/frame | decoder hit | opens/frame | open ms | CPU ms/frame | first yield s |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| SEP_S8_c100_seq | 8 | 100 | seq | 126.6 | - | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 1.000 | 0.000 | 0 | 7.8 | - |
+| SEP_S8_c12_seq | 8 | 12 | seq | 4.6 | - | 1.6522 | 8.7704 | 0.0000 | 1.6522 | 0.449 | 1.652 | 128 | 74.8 | - |
+| STACK_S8_c100 | 8 | 100 | seq | 256.4 | - | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 1.000 | 0.000 | 0 | 3.9 | - |
+| SEP_S1_c100_par | 1 | 100 | par | 72.9 | - | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 1.000 | 0.000 | 0 | 10.8 | - |
+
+## 8 concurrent processes (own dataset + seed each)
+
+| arm | procs | fps total | resolves/s | CDN req/s | MB/s | decoder hit | 429 |
+|---|---|---|---|---|---|---|---|
+| SEP_S8_c100_seq | 8 | 1040.9 | 0.0 | 0.0 | 0.0 | 1.000 | 0 |
+== stage stream: ok (165s, cgroup peak 16583 MB)
+uploaded results/20260925T155500Z-smoke (after stream)
+== stage access start 2026-09-25T16:00:30Z
+[9s] SEP|seq|fs5M|-|cold r0: 0.59 sps, fetch/smp 6.00, res/smp 6.00, 31.855 MB/smp (dec 0.843), p50 1646 ms, open 819 ms/smp, fallback/smp 0.00, check {'checked': 2, 'mismatch': 0}, HTTP MB so far 165
+[14s] SEP|seq|fs5M|-|warm r0: 2.01 sps, fetch/smp 2.00, res/smp 2.00, 10.618 MB/smp (dec 0.197), p50 514 ms, open 0 ms/smp, fallback/smp 0.00, check {'checked': 2, 'mismatch': 0}, HTTP MB so far 292
+[16s] SEP|par|rc256K|-|cold r0: 3.21 sps, fetch/smp 6.00, res/smp 0.00, 1.966 MB/smp (dec 0.843), p50 336 ms, open 313 ms/smp, fallback/smp 0.00, check {'checked': 2, 'mismatch': 0}, HTTP MB so far 302
+[18s] SEP|par|rc256K|-|warm r0: 7.28 sps, fetch/smp 3.00, res/smp 0.00, 0.983 MB/smp (dec 0.197), p50 123 ms, open 0 ms/smp, fallback/smp 0.00, check {'checked': 2, 'mismatch': 0}, HTTP MB so far 312
+[21s] STACK|-|exact|-|cold r0: 2.15 sps, fetch/smp 2.00, res/smp 0.00, 0.497 MB/smp (dec 0.282), p50 490 ms, open 231 ms/smp, fallback/smp 0.00, check {'checked': 2, 'mismatch': 0}, HTTP MB so far 314
+[22s] STACK|-|exact|-|warm r0: 5.42 sps, fetch/smp 1.00, res/smp 0.00, 0.081 MB/smp (dec 0.066), p50 118 ms, open 0 ms/smp, fallback/smp 0.00, check {'checked': 2, 'mismatch': 0}, HTTP MB so far 316
+[29s] MULTI|seq|fs256K|naive|cold r0: 0.76 sps, fetch/smp 12.00, res/smp 12.00, 3.757 MB/smp (dec 2.569), p50 1382 ms, open 858 ms/smp, fallback/smp 0.00, check {'checked': 2, 'mismatch': 0}, HTTP MB so far 335
+[34s] MULTI|seq|fs256K|naive|warm r0: 2.79 sps, fetch/smp 3.00, res/smp 3.00, 0.985 MB/smp (dec 0.197), p50 323 ms, open 0 ms/smp, fallback/smp 0.00, check {'checked': 2, 'mismatch': 0}, HTTP MB so far 350
+[34s] MULTI|par|fs5M|shared|cold r0: ERROR TypeError: unsupported operand type(s) for -: 'NoneType' and 'int'
+[34s] MULTI|par|fs5M|shared|warm r0: ERROR TypeError: unsupported operand type(s) for -: 'NoneType' and 'int'
+[36s] MULTI|par|exact|shared|cold r0: 2.78 sps, fetch/smp 2.00, res/smp 0.00, 1.101 MB/smp (dec 2.569), p50 367 ms, open 163 ms/smp, fallback/smp 0.00, check {'checked': 2, 'mismatch': 0}, HTTP MB so far 356
+[37s] MULTI|par|exact|shared|warm r0: 13.54 sps, fetch/smp 1.00, res/smp 0.00, 0.093 MB/smp (dec 0.197), p50 61 ms, open 0 ms/smp, fallback/smp 0.00, check {'checked': 2, 'mismatch': 0}, HTTP MB so far 359
+[87s] conc8 STACK|-|exact|-|warm: 104.3 sps, 103.9 fetch/s, 0.0 resolves/s, 9 MB/s, p50 65 ms, 429 0
+[118s] conc8 MULTI|par|exact|shared|cold: 31.5 sps, 62.9 fetch/s, 0.0 resolves/s, 35 MB/s, p50 223 ms, 429 0
+# DATA-11 round 2: random access over hf:// (family ckpt_full, 3 cameras per sample)
+
+Repo `hadriencornier/lerobot-data11-bench@a3d31680db`. sps = samples/s, one reader. fetch = one HTTP request that moves video bytes (CDN). fs* readers also pay 1 resolve per fetch; rc / exact resolve once per file (untimed, shown in `presigned`: 15 resolves for 15 files).
+
+| regime | layout | cams | reader | mode | sps | +-CI | p50 ms | p95 ms | fetch/smp | resolve/smp | API/smp | MB/smp | dec MB/smp | open ms/smp | fallback/smp |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| cold | MULTI | par | exact | shared | 2.78 | - | 367 | 476 | 2.00 | 0.00 | 0.00 | 1.101 | 2.569 | 163 | 0.00 |
+| cold | MULTI | seq | fs256K | naive | 0.76 | - | 1382 | 1460 | 12.00 | 12.00 | 0.00 | 3.757 | 2.569 | 858 | 0.00 |
+| cold | SEP | par | rc256K | - | 3.21 | - | 336 | 367 | 6.00 | 0.00 | 0.00 | 1.966 | 0.843 | 313 | 0.00 |
+| cold | SEP | seq | fs5M | - | 0.59 | - | 1646 | 2074 | 6.00 | 6.00 | 0.00 | 31.855 | 0.843 | 819 | 0.00 |
+| cold | STACK | - | exact | - | 2.15 | - | 490 | 590 | 2.00 | 0.00 | 0.00 | 0.497 | 0.282 | 231 | 0.00 |
+| warm | MULTI | par | exact | shared | 13.54 | - | 61 | 115 | 1.00 | 0.00 | 0.00 | 0.093 | 0.197 | 0 | 0.00 |
+| warm | MULTI | seq | fs256K | naive | 2.79 | - | 323 | 525 | 3.00 | 3.00 | 0.00 | 0.985 | 0.197 | 0 | 0.00 |
+| warm | SEP | par | rc256K | - | 7.28 | - | 123 | 227 | 3.00 | 0.00 | 0.00 | 0.983 | 0.197 | 0 | 0.00 |
+| warm | SEP | seq | fs5M | - | 2.01 | - | 514 | 1047 | 2.00 | 2.00 | 0.00 | 10.618 | 0.197 | 0 | 0.00 |
+| warm | STACK | - | exact | - | 5.42 | - | 118 | 384 | 1.00 | 0.00 | 0.00 | 0.081 | 0.066 | 0 | 0.00 |
+
+## 8 concurrent reader processes
+
+| config | sps total | fetch/s | resolves/s | MB/s | p50 ms | p95 ms | 429 | other err |
+|---|---|---|---|---|---|---|---|---|
+| STACK|-|exact|-|warm | 104.3 | 103.9 | 0.0 | 8.6 | 65 | 133 | 0 | 0 |
+| MULTI|par|exact|shared|cold | 31.5 | 62.9 | 0.0 | 34.6 | 223 | 434 | 0 | 0 |
+
+Checks: remote == local decode (bit-exact) 20/20; pts violations > 1e-4 s: 0; skipped arms 0; 429 total 0.
+== stage access: ok (122s, cgroup peak 16583 MB)
+uploaded results/20260925T155500Z-smoke (after access)
+== stage summary2 start 2026-09-25T16:02:34Z
+# DATA-11 round 2 (20260925T155500Z-smoke)
+
+Question: does STACK (3 cameras in one video) beat SEP (one MP4 per camera) over hf://, and do cheaper reader fixes close the gap? Option C = one MP4 with 3 video tracks (stream copy of SEP). Raw numbers: prep/prep.json, stream/stream.json, access/access.json.
+
+## Option C build (multi-track MP4, stream copy)
+
+| group | MB | SEP sum MB | same-timestamp span p50 B | p95 B | gap p50 B | p95 B | packets per run | identity (bit-exact) |
+|---|---|---|---|---|---|---|---|---|
+| 0 | 215.3 | 215.0 | 6414 | 25158 | 4504 | 18285 | 1.00 | PASS 120/120 |
+| 1 | 265.2 | 264.9 | 7890 | 28628 | 5726 | 19607 | 1.00 | PASS 120/120 |
+| 2 | 181.4 | 181.1 | 6924 | 19189 | 5507 | 12642 | 1.00 | PASS 120/120 |
+- muxer `-max_interleave_delta 0 -movflags +faststart`: span p50 6414 B, p95 25158 B, packets per run 1.00, decode True
+- muxer `-movflags +frag_keyframe+empty_moov+default_base_moof -frag_duration 66667`: span p50 14148 B, p95 25404 B, packets per run 2.00, decode True
+
+MULTI uploaded at `a3d31680dba3ed626ee7c5afca85753b23941b52` (read-back ok: True).
+
+---
+
+# DATA-11 round 2: real StreamingLeRobotDataset over hf:// (PR #4702 branch)
+
+lerobot a195a91ff815ad730373276ef8a4cc7c04c5c074; datasets SEP `hadriencornier/lerobot-data11-stream-sep`, STACK `hadriencornier/lerobot-data11-stream-stack` (8 video files per key, copies of the round-1 ckpt_full variants). Single process = one DataLoader worker. fps = frames made per second after warm-up (every step makes one frame).
+
+| arm | S | cache | cams | fps | +-CI | mp4 fetch/frame | mp4 MB/frame | parquet fetch/frame | resolve/frame | decoder hit | opens/frame | open ms | CPU ms/frame | first yield s |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| SEP_S8_c100_seq | 8 | 100 | seq | 126.6 | - | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 1.000 | 0.000 | 0 | 7.8 | - |
+| SEP_S8_c12_seq | 8 | 12 | seq | 4.6 | - | 1.6522 | 8.7704 | 0.0000 | 1.6522 | 0.449 | 1.652 | 128 | 74.8 | - |
+| STACK_S8_c100 | 8 | 100 | seq | 256.4 | - | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 1.000 | 0.000 | 0 | 3.9 | - |
+| SEP_S1_c100_par | 1 | 100 | par | 72.9 | - | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 1.000 | 0.000 | 0 | 10.8 | - |
+
+## 8 concurrent processes (own dataset + seed each)
+
+| arm | procs | fps total | resolves/s | CDN req/s | MB/s | decoder hit | 429 |
+|---|---|---|---|---|---|---|---|
+| SEP_S8_c100_seq | 8 | 1040.9 | 0.0 | 0.0 | 0.0 | 1.000 | 0 |
+
+
+---
+
+# DATA-11 round 2: random access over hf:// (family ckpt_full, 3 cameras per sample)
+
+Repo `hadriencornier/lerobot-data11-bench@a3d31680db`. sps = samples/s, one reader. fetch = one HTTP request that moves video bytes (CDN). fs* readers also pay 1 resolve per fetch; rc / exact resolve once per file (untimed, shown in `presigned`: 15 resolves for 15 files).
+
+| regime | layout | cams | reader | mode | sps | +-CI | p50 ms | p95 ms | fetch/smp | resolve/smp | API/smp | MB/smp | dec MB/smp | open ms/smp | fallback/smp |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| cold | MULTI | par | exact | shared | 2.78 | - | 367 | 476 | 2.00 | 0.00 | 0.00 | 1.101 | 2.569 | 163 | 0.00 |
+| cold | MULTI | seq | fs256K | naive | 0.76 | - | 1382 | 1460 | 12.00 | 12.00 | 0.00 | 3.757 | 2.569 | 858 | 0.00 |
+| cold | SEP | par | rc256K | - | 3.21 | - | 336 | 367 | 6.00 | 0.00 | 0.00 | 1.966 | 0.843 | 313 | 0.00 |
+| cold | SEP | seq | fs5M | - | 0.59 | - | 1646 | 2074 | 6.00 | 6.00 | 0.00 | 31.855 | 0.843 | 819 | 0.00 |
+| cold | STACK | - | exact | - | 2.15 | - | 490 | 590 | 2.00 | 0.00 | 0.00 | 0.497 | 0.282 | 231 | 0.00 |
+| warm | MULTI | par | exact | shared | 13.54 | - | 61 | 115 | 1.00 | 0.00 | 0.00 | 0.093 | 0.197 | 0 | 0.00 |
+| warm | MULTI | seq | fs256K | naive | 2.79 | - | 323 | 525 | 3.00 | 3.00 | 0.00 | 0.985 | 0.197 | 0 | 0.00 |
+| warm | SEP | par | rc256K | - | 7.28 | - | 123 | 227 | 3.00 | 0.00 | 0.00 | 0.983 | 0.197 | 0 | 0.00 |
+| warm | SEP | seq | fs5M | - | 2.01 | - | 514 | 1047 | 2.00 | 2.00 | 0.00 | 10.618 | 0.197 | 0 | 0.00 |
+| warm | STACK | - | exact | - | 5.42 | - | 118 | 384 | 1.00 | 0.00 | 0.00 | 0.081 | 0.066 | 0 | 0.00 |
+
+## 8 concurrent reader processes
+
+| config | sps total | fetch/s | resolves/s | MB/s | p50 ms | p95 ms | 429 | other err |
+|---|---|---|---|---|---|---|---|---|
+| STACK|-|exact|-|warm | 104.3 | 103.9 | 0.0 | 8.6 | 65 | 133 | 0 | 0 |
+| MULTI|par|exact|shared|cold | 31.5 | 62.9 | 0.0 | 34.6 | 223 | 434 | 0 | 0 |
+
+Checks: remote == local decode (bit-exact) 20/20; pts violations > 1e-4 s: 0; skipped arms 0; 429 total 0.
+
+
+== stage summary2: ok (0s, cgroup peak 16583 MB)
+uploaded results/20260925T155500Z-smoke (after summary2)
+== done 2026-09-25T16:02:35Z: /results/20260925T155500Z-smoke
+== exit code 0 at 2026-09-25T16:02:35Z

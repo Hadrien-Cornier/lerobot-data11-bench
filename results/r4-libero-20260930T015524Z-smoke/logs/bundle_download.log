@@ -1,0 +1,22 @@
+
+Downloading bytes:           |  0.00B            [A
+Reconstructing (incomplete total...): |          |  0.00B /  0.00B            [A
+Fetching 12 files:   0%|          | 0/12 [00:00<?, ?it/s][A
+Reconstructing (incomplete total...):   0%|          |  0.00B / 6.42kB            [A
+Reconstructing (incomplete total...):  77%|███████▋  | 6.42kB / 8.39kB            [A
+Reconstructing (incomplete total...):  52%|█████▏    | 8.39kB / 16.2kB            [A
+Reconstructing (incomplete total...):  63%|██████▎   | 16.2kB / 25.7kB            [A
+Reconstructing (incomplete total...):  70%|██████▉   | 25.7kB / 36.8kB            [A
+Reconstructing (incomplete total...):  70%|███████   | 36.8kB / 52.2kB            [A
+Reconstructing (incomplete total...):  83%|████████▎ | 52.2kB / 62.6kB            [A
+Reconstructing (incomplete total...):  87%|████████▋ | 62.6kB / 72.3kB            [A
+Reconstructing (incomplete total...):  99%|█████████▉| 72.3kB / 73.2kB            [A
+Reconstructing (incomplete total...):  84%|████████▍ | 73.2kB / 86.9kB            [A
+Reconstructing (incomplete total...):  89%|████████▉ | 86.9kB / 97.6kB            [A
+Reconstructing (incomplete total...):  92%|█████████▏| 97.6kB /  107kB            [AFetching 12 files: 100%|██████████| 12/12 [00:00<00:00, 68.38it/s]
+
+Download complete: ██████████|  107kB            [A
+Reconstruction complete: 100%|██████████|  107kB /  107kB                         [A[32m✓ Downloaded[0m
+  path: /work/dl_bundle
+Download complete: ██████████|  107kB            
+Reconstruction complete: 100%|██████████|  107kB /  107kB            

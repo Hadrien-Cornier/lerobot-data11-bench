@@ -1,0 +1,5 @@
+4.0K	/work/constraints.txt
+452K	/work/dl_bundle
+88M	/work/lerobot_home
+30M	/work/venv
+1.5G	/work/venv_pr3917

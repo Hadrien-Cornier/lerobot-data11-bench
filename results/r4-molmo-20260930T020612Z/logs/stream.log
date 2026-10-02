@@ -1,0 +1,44 @@
+Too many dataloader workers: 4 (max is dataset.num_shards=2). Stopping 2 dataloader workers.
+WARNING:datasets.iterable_dataset:Too many dataloader workers: 4 (max is dataset.num_shards=2). Stopping 2 dataloader workers.
+Too many dataloader workers: 4 (max is dataset.num_shards=2). Stopping 2 dataloader workers.
+WARNING:datasets.iterable_dataset:Too many dataloader workers: 4 (max is dataset.num_shards=2). Stopping 2 dataloader workers.
+Too many dataloader workers: 4 (max is dataset.num_shards=2). Stopping 2 dataloader workers.
+WARNING:datasets.iterable_dataset:Too many dataloader workers: 4 (max is dataset.num_shards=2). Stopping 2 dataloader workers.
+Too many dataloader workers: 4 (max is dataset.num_shards=2). Stopping 2 dataloader workers.
+WARNING:datasets.iterable_dataset:Too many dataloader workers: 4 (max is dataset.num_shards=2). Stopping 2 dataloader workers.
+[02:15:12] audit: {"workers": 4, "parquet_files": 8, "max_num_shards": 4, "samples": 400, "buffer_size": 16, "per_worker": {"0": {"frames": 200, "distinct_files": [0, 2, 4, 6], "max_decoder_cache_size": 12}, "1": {"frames": 200, "distinct_files": [1, 3, 5, 7], "max_decoder_cache_size": 12}}, "workers_with_frames": 2, "predicted_active_shards_per_worker": [4, 4, 0, 0], "predicted_decoders_per_worker": [12, 12, 0, 0], "s": 5.9}
+[02:15:33] SEP_S8_c100 r0: 132.4 fps, CPU 7.6 ms/frame, mp4 fetch/frame 0.0000 (0.0000 MB), hit 1.000, open 0 ms, shards 8/8, first yield 17.139963272005843
+WARNING:lerobot.datasets.utils:Unknown fields in DatasetInfo: ['r4_stack_layout']. These will be ignored.
+[02:15:47] STACK_S8_c100 r0: 160.7 fps, CPU 6.2 ms/frame, mp4 fetch/frame 0.0000 (0.0000 MB), hit 1.000, open 0 ms, shards 8/8, first yield 11.279488045998733
+[02:15:56] SEP1_S8_c100 r0: 436.2 fps, CPU 2.3 ms/frame, mp4 fetch/frame 0.0000 (0.0000 MB), hit 1.000, open 0 ms, shards 8/8, first yield 7.009105893004744
+[02:17:13] SEP_S8_c12 r0: 2.8 fps, CPU 56.7 ms/frame, mp4 fetch/frame 1.6395 (8.7033 MB), hit 0.453, open 209 ms, shards 8/8, first yield None
+WARNING:lerobot.datasets.utils:Unknown fields in DatasetInfo: ['r4_stack_layout']. These will be ignored.
+[02:17:25] STACK_S8_c12 r0: 185.7 fps, CPU 5.4 ms/frame, mp4 fetch/frame 0.0000 (0.0000 MB), hit 1.000, open 0 ms, shards 8/8, first yield 9.767957124997338
+WARNING:lerobot.datasets.utils:Unknown fields in DatasetInfo: ['r4_stack_layout']. These will be ignored.
+[02:17:39] STACK_S8_c12 r1: 183.7 fps, CPU 5.4 ms/frame, mp4 fetch/frame 0.0000 (0.0000 MB), hit 1.000, open 0 ms, shards 8/8, first yield 10.486898656999983
+[02:18:55] SEP_S8_c12 r1: 3.6 fps, CPU 50.8 ms/frame, mp4 fetch/frame 1.4240 (7.5590 MB), hit 0.525, open 190 ms, shards 8/8, first yield None
+[02:19:02] SEP1_S8_c100 r1: 431.5 fps, CPU 2.3 ms/frame, mp4 fetch/frame 0.0000 (0.0000 MB), hit 1.000, open 0 ms, shards 8/8, first yield 5.313953498996852
+WARNING:lerobot.datasets.utils:Unknown fields in DatasetInfo: ['r4_stack_layout']. These will be ignored.
+[02:19:13] STACK_S8_c100 r1: 184.1 fps, CPU 5.4 ms/frame, mp4 fetch/frame 0.0000 (0.0000 MB), hit 1.000, open 0 ms, shards 8/8, first yield 9.202712677993986
+[02:19:32] SEP_S8_c100 r1: 143.9 fps, CPU 7.0 ms/frame, mp4 fetch/frame 0.0000 (0.0000 MB), hit 1.000, open 0 ms, shards 8/8, first yield 15.628423807000217
+[02:19:49] SEP_S8_c100 r2: 155.0 fps, CPU 6.5 ms/frame, mp4 fetch/frame 0.0000 (0.0000 MB), hit 1.000, open 0 ms, shards 8/8, first yield 13.8587971320012
+WARNING:lerobot.datasets.utils:Unknown fields in DatasetInfo: ['r4_stack_layout']. These will be ignored.
+[02:20:01] STACK_S8_c100 r2: 184.7 fps, CPU 5.4 ms/frame, mp4 fetch/frame 0.0000 (0.0000 MB), hit 1.000, open 0 ms, shards 8/8, first yield 9.124197040000581
+[02:20:09] SEP1_S8_c100 r2: 443.7 fps, CPU 2.2 ms/frame, mp4 fetch/frame 0.0000 (0.0000 MB), hit 1.000, open 0 ms, shards 8/8, first yield 6.378273832997365
+[02:21:27] SEP_S8_c12 r2: 3.9 fps, CPU 49.3 ms/frame, mp4 fetch/frame 1.3462 (7.1459 MB), hit 0.551, open 186 ms, shards 8/8, first yield None
+WARNING:lerobot.datasets.utils:Unknown fields in DatasetInfo: ['r4_stack_layout']. These will be ignored.
+[02:21:39] STACK_S8_c12 r2: 181.7 fps, CPU 5.5 ms/frame, mp4 fetch/frame 0.0000 (0.0000 MB), hit 1.000, open 0 ms, shards 8/8, first yield 9.147012513996742
+WARNING:lerobot.datasets.utils:Unknown fields in DatasetInfo: ['r4_stack_layout']. These will be ignored.
+[02:21:51] STACK_S8_c12 r3: 183.9 fps, CPU 5.4 ms/frame, mp4 fetch/frame 0.0000 (0.0000 MB), hit 1.000, open 0 ms, shards 8/8, first yield 9.508757193994825
+[02:23:14] SEP_S8_c12 r3: 2.7 fps, CPU 56.0 ms/frame, mp4 fetch/frame 1.5185 (8.0609 MB), hit 0.494, open 240 ms, shards 8/8, first yield None
+[02:23:21] SEP1_S8_c100 r3: 443.6 fps, CPU 2.3 ms/frame, mp4 fetch/frame 0.0000 (0.0000 MB), hit 1.000, open 0 ms, shards 8/8, first yield 5.717231050999544
+WARNING:lerobot.datasets.utils:Unknown fields in DatasetInfo: ['r4_stack_layout']. These will be ignored.
+[02:23:33] STACK_S8_c100 r3: 183.3 fps, CPU 5.5 ms/frame, mp4 fetch/frame 0.0000 (0.0000 MB), hit 1.000, open 0 ms, shards 8/8, first yield 9.085189632001857
+[02:23:51] SEP_S8_c100 r3: 144.7 fps, CPU 6.9 ms/frame, mp4 fetch/frame 0.0000 (0.0000 MB), hit 1.000, open 0 ms, shards 8/8, first yield 15.029989344999194
+[02:24:08] SEP_S8_c100 r4: 147.3 fps, CPU 6.8 ms/frame, mp4 fetch/frame 0.0000 (0.0000 MB), hit 1.000, open 0 ms, shards 8/8, first yield 14.09480714899837
+WARNING:lerobot.datasets.utils:Unknown fields in DatasetInfo: ['r4_stack_layout']. These will be ignored.
+[02:24:20] STACK_S8_c100 r4: 184.3 fps, CPU 5.4 ms/frame, mp4 fetch/frame 0.0000 (0.0000 MB), hit 1.000, open 0 ms, shards 8/8, first yield 9.342735120997531
+[02:24:27] SEP1_S8_c100 r4: 435.5 fps, CPU 2.3 ms/frame, mp4 fetch/frame 0.0000 (0.0000 MB), hit 1.000, open 0 ms, shards 8/8, first yield 5.819641671005229
+[02:25:47] SEP_S8_c12 r4: 2.7 fps, CPU 63.2 ms/frame, mp4 fetch/frame 1.6748 (8.8908 MB), hit 0.442, open 218 ms, shards 8/8, first yield None
+WARNING:lerobot.datasets.utils:Unknown fields in DatasetInfo: ['r4_stack_layout']. These will be ignored.
+[02:25:59] STACK_S8_c12 r4: 183.6 fps, CPU 5.4 ms/frame, mp4 fetch/frame 0.0000 (0.0000 MB), hit 1.000, open 0 ms, shards 8/8, first yield 9.62616692300071

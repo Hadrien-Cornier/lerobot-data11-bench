@@ -1,0 +1,110 @@
+[encode 1/57 278s] {'group': 'ckpt_full_g002', 'family': 'ckpt_full', 'frames': 24979, 'encode_s': 277.54, 'pid': 3211, 'peak_os_threads_seen': 336}
+[encode 2/57 334s] {'group': 'ckpt_full_g001', 'family': 'ckpt_full', 'frames': 25759, 'encode_s': 333.29, 'pid': 3210, 'peak_os_threads_seen': 336}
+[encode 3/57 417s] {'group': 'ckpt_5k_g000', 'family': 'ckpt_5k', 'frames': 5273, 'encode_s': 83.2, 'pid': 3210, 'peak_os_threads_seen': 336}
+[encode 4/57 472s] {'group': 'ckpt_5k_g001', 'family': 'ckpt_5k', 'frames': 5105, 'encode_s': 54.33, 'pid': 3210, 'peak_os_threads_seen': 336}
+[encode 5/57 531s] {'group': 'ckpt_5k_g002', 'family': 'ckpt_5k', 'frames': 5091, 'encode_s': 59.25, 'pid': 3210, 'peak_os_threads_seen': 336}
+[encode 6/57 555s] {'group': 'thrash_g000', 'family': 'thrash', 'frames': 2280, 'encode_s': 23.92, 'pid': 3210, 'peak_os_threads_seen': 336}
+[encode 7/57 579s] {'group': 'thrash_g043', 'family': 'thrash', 'frames': 2268, 'encode_s': 23.03, 'pid': 3210, 'peak_os_threads_seen': 336}
+[encode 8/57 612s] {'group': 'thrash_g008', 'family': 'thrash', 'frames': 2266, 'encode_s': 33.2, 'pid': 3210, 'peak_os_threads_seen': 336}
+[encode 9/57 626s] {'group': 'ckpt_full_g000', 'family': 'ckpt_full', 'frames': 23380, 'encode_s': 347.62, 'pid': 3211, 'peak_os_threads_seen': 336}
+[encode 10/57 634s] {'group': 'thrash_g028', 'family': 'thrash', 'frames': 2260, 'encode_s': 21.51, 'pid': 3210, 'peak_os_threads_seen': 336}
+[encode 11/57 656s] {'group': 'thrash_g006', 'family': 'thrash', 'frames': 2256, 'encode_s': 30.24, 'pid': 3211, 'peak_os_threads_seen': 336}
+[encode 12/57 663s] {'group': 'thrash_g017', 'family': 'thrash', 'frames': 2255, 'encode_s': 28.17, 'pid': 6350, 'peak_os_threads_seen': 336}
+[encode 13/57 683s] {'group': 'thrash_g031', 'family': 'thrash', 'frames': 2249, 'encode_s': 26.41, 'pid': 3211, 'peak_os_threads_seen': 336}
+[encode 14/57 697s] {'group': 'thrash_g014', 'family': 'thrash', 'frames': 2201, 'encode_s': 33.23, 'pid': 6350, 'peak_os_threads_seen': 336}
+[encode 15/57 715s] {'group': 'thrash_g024', 'family': 'thrash', 'frames': 2191, 'encode_s': 31.82, 'pid': 3211, 'peak_os_threads_seen': 336}
+[encode 16/57 725s] {'group': 'thrash_g030', 'family': 'thrash', 'frames': 2191, 'encode_s': 27.67, 'pid': 6350, 'peak_os_threads_seen': 336}
+[encode 17/57 742s] {'group': 'thrash_g036', 'family': 'thrash', 'frames': 2187, 'encode_s': 26.24, 'pid': 3211, 'peak_os_threads_seen': 336}
+[encode 18/57 760s] {'group': 'thrash_g001', 'family': 'thrash', 'frames': 2155, 'encode_s': 35.0, 'pid': 6350, 'peak_os_threads_seen': 336}
+[encode 19/57 773s] {'group': 'thrash_g046', 'family': 'thrash', 'frames': 2127, 'encode_s': 30.54, 'pid': 3211, 'peak_os_threads_seen': 336}
+[encode 20/57 795s] {'group': 'thrash_g029', 'family': 'thrash', 'frames': 2114, 'encode_s': 34.86, 'pid': 6350, 'peak_os_threads_seen': 336}
+[encode 21/57 809s] {'group': 'thrash_g010', 'family': 'thrash', 'frames': 2103, 'encode_s': 35.99, 'pid': 3211, 'peak_os_threads_seen': 336}
+[encode 22/57 825s] {'group': 'thrash_g034', 'family': 'thrash', 'frames': 2072, 'encode_s': 14.83, 'pid': 9407, 'peak_os_threads_seen': 336}
+[encode 23/57 832s] {'group': 'thrash_g027', 'family': 'thrash', 'frames': 2102, 'encode_s': 36.22, 'pid': 6350, 'peak_os_threads_seen': 336}
+[encode 24/57 841s] {'group': 'thrash_g015', 'family': 'thrash', 'frames': 2071, 'encode_s': 16.05, 'pid': 9407, 'peak_os_threads_seen': 336}
+[encode 25/57 855s] {'group': 'thrash_g035', 'family': 'thrash', 'frames': 2063, 'encode_s': 14.21, 'pid': 9407, 'peak_os_threads_seen': 336}
+[encode 26/57 866s] {'group': 'thrash_g026', 'family': 'thrash', 'frames': 2065, 'encode_s': 33.86, 'pid': 6350, 'peak_os_threads_seen': 336}
+[encode 27/57 872s] {'group': 'thrash_g018', 'family': 'thrash', 'frames': 2062, 'encode_s': 16.07, 'pid': 9407, 'peak_os_threads_seen': 336}
+[encode 28/57 886s] {'group': 'thrash_g016', 'family': 'thrash', 'frames': 2043, 'encode_s': 14.53, 'pid': 9407, 'peak_os_threads_seen': 336}
+[encode 29/57 901s] {'group': 'thrash_g022', 'family': 'thrash', 'frames': 2041, 'encode_s': 14.56, 'pid': 9407, 'peak_os_threads_seen': 336}
+[encode 30/57 908s] {'group': 'thrash_g003', 'family': 'thrash', 'frames': 2043, 'encode_s': 41.64, 'pid': 6350, 'peak_os_threads_seen': 336}
+[encode 31/57 919s] {'group': 'thrash_g025', 'family': 'thrash', 'frames': 2041, 'encode_s': 18.06, 'pid': 9407, 'peak_os_threads_seen': 336}
+[encode 32/57 933s] {'group': 'thrash_g013', 'family': 'thrash', 'frames': 2036, 'encode_s': 23.75, 'pid': 11920, 'peak_os_threads_seen': 336}
+[encode 33/57 948s] {'group': 'thrash_g019', 'family': 'thrash', 'frames': 2023, 'encode_s': 28.77, 'pid': 9407, 'peak_os_threads_seen': 336}
+[encode 34/57 965s] {'group': 'thrash_g002', 'family': 'thrash', 'frames': 2018, 'encode_s': 31.87, 'pid': 11920, 'peak_os_threads_seen': 336}
+[encode 35/57 978s] {'group': 'thrash_g023', 'family': 'thrash', 'frames': 2009, 'encode_s': 28.72, 'pid': 12801, 'peak_os_threads_seen': 336}
+[encode 36/57 997s] {'group': 'thrash_g005', 'family': 'thrash', 'frames': 1988, 'encode_s': 31.72, 'pid': 11920, 'peak_os_threads_seen': 336}
+[encode 37/57 1009s] {'group': 'thrash_g004', 'family': 'thrash', 'frames': 1969, 'encode_s': 30.77, 'pid': 12801, 'peak_os_threads_seen': 336}
+[encode 38/57 1020s] {'group': 'thrash_g011', 'family': 'thrash', 'frames': 1964, 'encode_s': 22.39, 'pid': 11920, 'peak_os_threads_seen': 336}
+[encode 39/57 1035s] {'group': 'thrash_g045', 'family': 'thrash', 'frames': 1949, 'encode_s': 25.22, 'pid': 12801, 'peak_os_threads_seen': 336}
+[encode 40/57 1042s] {'group': 'thrash_g042', 'family': 'thrash', 'frames': 1945, 'encode_s': 21.75, 'pid': 11920, 'peak_os_threads_seen': 336}
+[encode 41/57 1058s] {'group': 'thrash_g047', 'family': 'thrash', 'frames': 1920, 'encode_s': 23.45, 'pid': 12801, 'peak_os_threads_seen': 336}
+[encode 42/57 1072s] {'group': 'thrash_g009', 'family': 'thrash', 'frames': 1919, 'encode_s': 30.05, 'pid': 11920, 'peak_os_threads_seen': 336}
+[encode 43/57 1090s] {'group': 'thrash_g041', 'family': 'thrash', 'frames': 1915, 'encode_s': 31.19, 'pid': 12801, 'peak_os_threads_seen': 336}
+[encode 44/57 1098s] {'group': 'thrash_g021', 'family': 'thrash', 'frames': 1897, 'encode_s': 25.57, 'pid': 11920, 'peak_os_threads_seen': 336}
+[encode 45/57 1112s] {'group': 'thrash_g032', 'family': 'thrash', 'frames': 1897, 'encode_s': 22.39, 'pid': 12801, 'peak_os_threads_seen': 336}
+[encode 46/57 1128s] {'group': 'thrash_g038', 'family': 'thrash', 'frames': 1883, 'encode_s': 30.45, 'pid': 11920, 'peak_os_threads_seen': 336}
+[encode 47/57 1135s] {'group': 'thrash_g007', 'family': 'thrash', 'frames': 1873, 'encode_s': 22.3, 'pid': 12801, 'peak_os_threads_seen': 336}
+[encode 48/57 1154s] {'group': 'thrash_g037', 'family': 'thrash', 'frames': 1844, 'encode_s': 18.92, 'pid': 12801, 'peak_os_threads_seen': 336}
+[encode 49/57 1156s] {'group': 'thrash_g044', 'family': 'thrash', 'frames': 1873, 'encode_s': 26.58, 'pid': 16417, 'peak_os_threads_seen': 336}
+[encode 50/57 1181s] {'group': 'thrash_g033', 'family': 'thrash', 'frames': 1830, 'encode_s': 25.67, 'pid': 17026, 'peak_os_threads_seen': 336}
+[encode 51/57 1184s] {'group': 'thrash_g040', 'family': 'thrash', 'frames': 1818, 'encode_s': 27.6, 'pid': 16417, 'peak_os_threads_seen': 336}
+[encode 52/57 1202s] {'group': 'thrash_g039', 'family': 'thrash', 'frames': 1713, 'encode_s': 17.69, 'pid': 16417, 'peak_os_threads_seen': 336}
+[encode 53/57 1211s] {'group': 'thrash_g020', 'family': 'thrash', 'frames': 1765, 'encode_s': 30.23, 'pid': 17026, 'peak_os_threads_seen': 336}
+[encode 54/57 1223s] {'group': 'ckpt_1k_g002', 'family': 'ckpt_1k', 'frames': 1011, 'encode_s': 11.76, 'pid': 17026, 'peak_os_threads_seen': 336}
+[encode 55/57 1223s] {'group': 'thrash_g012', 'family': 'thrash', 'frames': 1703, 'encode_s': 21.29, 'pid': 16417, 'peak_os_threads_seen': 336}
+[encode 56/57 1232s] {'group': 'ckpt_1k_g000', 'family': 'ckpt_1k', 'frames': 904, 'encode_s': 8.1, 'pid': 16417, 'peak_os_threads_seen': 336}
+[encode 57/57 1235s] {'group': 'ckpt_1k_g001', 'family': 'ckpt_1k', 'frames': 987, 'encode_s': 11.76, 'pid': 17026, 'peak_os_threads_seen': 336}
+{
+ "encoder": {
+  "vcodec": "libsvtav1",
+  "options": {
+   "g": "2",
+   "crf": "30",
+   "preset": "12",
+   "svtav1-params": "fast-decode=0"
+  },
+  "pix_fmt": "yuv420p",
+  "input": "rgb24 ndarray, pts=i, time_base=1/fps"
+ },
+ "svt_reported": {
+  "mapped": [
+   "Preset M12 is mapped to M10."
+  ],
+  "version": [
+   "SVT-AV1 Encoder Lib v3.0.0"
+  ],
+  "pred_struct": [
+   "preset / tune / pred struct : 10 / PSNR / random access"
+  ],
+  "lp": [
+   "Level of Parallelism: 4"
+  ]
+ },
+ "enc_procs": 2,
+ "cpu_quota": 8,
+ "svt_lp_requested": 4,
+ "mux_options": {
+  "movflags": "faststart"
+ },
+ "max_os_threads_per_encode_process": 336,
+ "wall_s": 1235.1,
+ "groups": 57,
+ "frames_per_camera": 189946,
+ "camera_frame_sets_per_s": 153.8,
+ "pyav": "15.1.0",
+ "pyav_ffmpeg": {
+  "libavutil": "59.39.100",
+  "libavcodec": "61.19.101",
+  "libavformat": "61.7.100",
+  "libavdevice": "61.3.100",
+  "libavfilter": "10.4.100",
+  "libswscale": "8.3.100",
+  "libswresample": "5.3.100"
+ },
+ "stack_order_top_to_bottom": [
+  "top",
+  "left_wrist",
+  "right_wrist"
+ ]
+}

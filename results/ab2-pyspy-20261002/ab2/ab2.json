@@ -1,0 +1,685 @@
+{
+ "config": {
+  "job": 9,
+  "probe_reps": 3,
+  "probe_n": 300,
+  "eq_n": 100,
+  "tf_arms": [
+   "D2T",
+   "D6T",
+   "D6"
+  ],
+  "tf_reps": 2,
+  "cap_s": 150.0,
+  "warm_s": 45.0,
+  "pin": "0-7",
+  "pr3917_sha": "6d94598523738d19700e345e9b42fb3d2db352f5"
+ },
+ "probe": [],
+ "probe_eq": {},
+ "tf_digest": {},
+ "runs": [
+  {
+   "arm": "D6T",
+   "cfg": {
+    "loader": true,
+    "decode_threads": 6,
+    "transforms": true,
+    "torch_threads": null
+   },
+   "rep": 91,
+   "sample": false,
+   "status": "ok",
+   "utc_start": "2026-10-02T16:41:16Z",
+   "torch_threads": 8,
+   "build_s": 7.86698114000319,
+   "first_s": 15.081948166000075,
+   "pyspy": {
+    "pid": 3330,
+    "mode": "gil",
+    "start_after_first_s": 45.08343595098995,
+    "seconds": 60.0,
+    "rc": 0
+   },
+   "n": 12752,
+   "steady_window_s": 105.00302307300444,
+   "sps": 85.86419453591857,
+   "sps_all": 84.91105781876439,
+   "wait_ms_p50": 92.83539401076268,
+   "wait_ms_p95": 105.84045499854255,
+   "window_unix": [
+    1790959347.2966373,
+    1790959452.3830965
+   ],
+   "samples_in_window": 9016,
+   "timeline_2s": [
+    88,
+    168,
+    176,
+    168,
+    160,
+    168,
+    168,
+    168,
+    168,
+    168,
+    168,
+    176,
+    168,
+    176,
+    160,
+    168,
+    176,
+    168,
+    176,
+    160,
+    168,
+    168,
+    168,
+    176,
+    176,
+    176,
+    176,
+    176,
+    176,
+    176,
+    168,
+    176,
+    176,
+    168,
+    168,
+    184,
+    168,
+    168,
+    176,
+    168,
+    168,
+    168,
+    176,
+    168,
+    168,
+    176,
+    184,
+    176,
+    176,
+    152,
+    160,
+    168,
+    168,
+    168,
+    168,
+    168,
+    168,
+    176,
+    176,
+    168,
+    176,
+    184,
+    176,
+    176,
+    168,
+    176,
+    176,
+    168,
+    160,
+    160,
+    168,
+    168,
+    176,
+    176,
+    176,
+    8
+   ],
+   "t_first_unix": 1790959302.2966373,
+   "longest_gaps": [
+    [
+     0.124,
+     68.1
+    ],
+    [
+     0.124,
+     58.1
+    ],
+    [
+     0.126,
+     3.1
+    ],
+    [
+     0.128,
+     134.2
+    ],
+    [
+     0.131,
+     133.2
+    ],
+    [
+     0.131,
+     88.1
+    ],
+    [
+     0.142,
+     0.0
+    ],
+    [
+     0.212,
+     1.1
+    ],
+    [
+     0.372,
+     0.7
+    ],
+    [
+     0.559,
+     0.1
+    ]
+   ],
+   "worker_window": {
+    "span_s": 100.12949252128601,
+    "cpu_by_group_s": {
+     "MainThread": 95.32999999999998,
+     "native:python": 0.0,
+     "native:jemalloc_bg_thd": 0.0,
+     "prof": 1.06,
+     "lerobot-parquet": 0.0,
+     "cache-fetch": 0.0,
+     "lerobot-decode": 29.5,
+     "native:pt_data_worker": 0.0,
+     "QueueFeederThread": 1.1800000000000002,
+     "Thread-1 (_serve)": 2.5
+    },
+    "timers": {
+     "planner_admit": [
+      0,
+      0.0,
+      0.0
+     ],
+     "synthesize_mp4(clip)": [
+      0,
+      0.0,
+      0.0
+     ],
+     "fetch_and_synthesize(clip)": [
+      0,
+      0.0,
+      0.0
+     ],
+     "load_episode_parquet(episode)": [
+      0,
+      0.0,
+      0.0
+     ],
+     "wait_clip_bytes(camera)": [
+      25782,
+      0.27423016251123045,
+      0.27395288400003803
+     ],
+     "open_decoder(clip)": [
+      0,
+      0.0,
+      0.0
+     ],
+     "get_frames(camera)": [
+      25782,
+      24.044907038623933,
+      23.861453813999738
+     ],
+     "make_episode_item(sample)": [
+      8594,
+      30.290667687761015,
+      28.707616446999925
+     ],
+     "apply_image_transforms(sample)": [
+      8595,
+      93.72597326051618,
+      89.75914601600013
+     ]
+    },
+    "cache": {
+     "lookup_s": 0.0,
+     "fetch_s": 0.0,
+     "synthesize_s": 0.0,
+     "store_s": 0.0,
+     "jobs": 0.0,
+     "decoder_fallbacks": 0.0,
+     "range_jobs": 0.0,
+     "range_bytes": 0.0,
+     "range_resolve_s": 0.0,
+     "range_header_s": 0.0,
+     "range_first_byte_s": 0.0,
+     "range_body_s": 0.0,
+     "range_retry_attempts": 0.0,
+     "range_retry_sleep_s": 0.0,
+     "range_failed_requests": 0.0,
+     "head_retry_attempts": 0.0,
+     "head_retry_sleep_s": 0.0,
+     "head_failed_requests": 0.0,
+     "range_status_206": 0.0,
+     "range_join_s": 0.0,
+     "range_chunks": 0.0,
+     "range_chunk_gap_s": 0.0,
+     "range_failed_attempt_s": 0.0,
+     "range_exception_attempts": 0.0
+    },
+    "pss_gb": 2.385326385498047,
+    "open_decoders": 93,
+    "reserved_gb": 1.066919189877808
+   },
+   "main_window": {
+    "span_s": 100.0717613697052,
+    "cpu_by_group_s": {
+     "MainThread": 4.32,
+     "native:python": 0.0,
+     "native:jemalloc_bg_thd": 0.0,
+     "prof": 0.43000000000000005,
+     "tqdm_monitor": 0.0,
+     "native:tracing-appende": 0.0,
+     "native:hf-xet": 0.0,
+     "QueueFeederThread": 0.14
+    },
+    "timers": {},
+    "cache": {},
+    "pss_gb": 0.5768642425537109,
+    "open_decoders": null,
+    "reserved_gb": null
+   },
+   "per_sample_ms": {
+    "cpu_by_group": {
+     "MainThread": 11.088057710158884,
+     "lerobot-decode": 3.4312147534846016,
+     "Thread-1 (_serve)": 0.29078091131225436,
+     "QueueFeederThread": 0.1372485901393841,
+     "prof": 0.12329110639639586,
+     "native:python": 0.0,
+     "native:jemalloc_bg_thd": 0.0,
+     "lerobot-parquet": 0.0,
+     "cache-fetch": 0.0,
+     "native:pt_data_worker": 0.0
+    },
+    "cpu_total": 14.947301965095123,
+    "timers": {
+     "planner_admit": {
+      "calls_per_sample": 0.0,
+      "wall_ms": 0.0,
+      "cpu_ms": 0.0
+     },
+     "synthesize_mp4(clip)": {
+      "calls_per_sample": 0.0,
+      "wall_ms": 0.0,
+      "cpu_ms": 0.0
+     },
+     "fetch_and_synthesize(clip)": {
+      "calls_per_sample": 0.0,
+      "wall_ms": 0.0,
+      "cpu_ms": 0.0
+     },
+     "load_episode_parquet(episode)": {
+      "calls_per_sample": 0.0,
+      "wall_ms": 0.0,
+      "cpu_ms": 0.0
+     },
+     "wait_clip_bytes(camera)": {
+      "calls_per_sample": 2.998765382181017,
+      "wall_ms": 0.03189635862572929,
+      "cpu_ms": 0.03186410770646055
+     },
+     "open_decoder(clip)": {
+      "calls_per_sample": 0.0,
+      "wall_ms": 0.0,
+      "cpu_ms": 0.0
+     },
+     "get_frames(camera)": {
+      "calls_per_sample": 2.998765382181017,
+      "wall_ms": 2.796719992443803,
+      "cpu_ms": 2.775382114108045
+     },
+     "make_episode_item(sample)": {
+      "calls_per_sample": 0.9995884607270057,
+      "wall_ms": 3.523179181801522,
+      "cpu_ms": 3.3390507488245205
+     },
+     "apply_image_transforms(sample)": {
+      "calls_per_sample": 0.9997047730915306,
+      "wall_ms": 10.901489567328353,
+      "cpu_ms": 10.44009851085689
+     }
+    },
+    "main_process_cpu": 0.5687674625267697
+   },
+   "tag": "BASE_D6T_pyspy_gil",
+   "variant": "BASE",
+   "wall_s": 179.314537525177
+  },
+  {
+   "arm": "D6T",
+   "cfg": {
+    "loader": true,
+    "decode_threads": 6,
+    "transforms": true,
+    "torch_threads": null
+   },
+   "rep": 91,
+   "sample": false,
+   "status": "ok",
+   "utc_start": "2026-10-02T16:44:15Z",
+   "torch_threads": 8,
+   "build_s": 0.270937747991411,
+   "first_s": 14.343847138996352,
+   "pyspy": {
+    "pid": 3634,
+    "mode": "gil",
+    "start_after_first_s": 45.006908481998835,
+    "seconds": 60.0,
+    "rc": 0
+   },
+   "n": 15296,
+   "steady_window_s": 105.00772886899358,
+   "sps": 101.93535385718307,
+   "sps_all": 101.9100553783318,
+   "wait_ms_p50": 77.02662100200541,
+   "wait_ms_p95": 100.885138992453,
+   "window_unix": [
+    1790959518.1481886,
+    1790959623.162826
+   ],
+   "samples_in_window": 10704,
+   "timeline_2s": [
+    56,
+    192,
+    224,
+    216,
+    216,
+    208,
+    208,
+    208,
+    216,
+    208,
+    216,
+    200,
+    216,
+    208,
+    216,
+    208,
+    200,
+    216,
+    216,
+    208,
+    216,
+    200,
+    208,
+    208,
+    200,
+    216,
+    208,
+    192,
+    208,
+    192,
+    200,
+    192,
+    192,
+    184,
+    184,
+    200,
+    200,
+    200,
+    208,
+    192,
+    208,
+    200,
+    200,
+    208,
+    200,
+    200,
+    208,
+    208,
+    200,
+    200,
+    208,
+    184,
+    208,
+    200,
+    192,
+    208,
+    200,
+    200,
+    208,
+    208,
+    200,
+    216,
+    224,
+    216,
+    216,
+    216,
+    216,
+    208,
+    208,
+    200,
+    192,
+    216,
+    216,
+    216,
+    216,
+    8
+   ],
+   "t_first_unix": 1790959473.1481886,
+   "longest_gaps": [
+    [
+     0.152,
+     103.9
+    ],
+    [
+     0.155,
+     73.8
+    ],
+    [
+     0.213,
+     1.5
+    ],
+    [
+     0.22,
+     0.5
+    ],
+    [
+     0.248,
+     1.8
+    ],
+    [
+     0.256,
+     2.0
+    ],
+    [
+     0.279,
+     141.2
+    ],
+    [
+     0.297,
+     0.8
+    ],
+    [
+     0.411,
+     1.1
+    ],
+    [
+     0.504,
+     0.0
+    ]
+   ],
+   "worker_window": {
+    "span_s": 100.09151458740234,
+    "cpu_by_group_s": {
+     "MainThread": 9.12,
+     "native:python": 0.0,
+     "native:jemalloc_bg_thd": 0.0,
+     "prof": 1.7699999999999998,
+     "lerobot-parquet": 0.0,
+     "cache-fetch": 0.0,
+     "lerobot-decode": 318.01,
+     "native:pt_data_worker": 0.0,
+     "QueueFeederThread": 1.83,
+     "Thread-1 (_serve)": 5.960000000000001
+    },
+    "timers": {
+     "planner_admit": [
+      0,
+      0.0,
+      0.0
+     ],
+     "synthesize_mp4(clip)": [
+      0,
+      0.0,
+      0.0
+     ],
+     "fetch_and_synthesize(clip)": [
+      0,
+      0.0,
+      0.0
+     ],
+     "load_episode_parquet(episode)": [
+      0,
+      0.0,
+      0.0
+     ],
+     "wait_clip_bytes(camera)": [
+      30597,
+      0.3777537160931388,
+      0.37676350099990324
+     ],
+     "open_decoder(clip)": [
+      0,
+      0.0,
+      0.0
+     ],
+     "get_frames(camera)": [
+      30597,
+      39.095763357778196,
+      33.06010440899913
+     ],
+     "apply_image_transforms(sample)": [
+      10199,
+      523.1944169905619,
+      270.90417384500046
+     ],
+     "make_episode_item(sample)": [
+      10199,
+      594.776968991675,
+      317.50665715399873
+     ]
+    },
+    "cache": {
+     "lookup_s": 0.0,
+     "fetch_s": 0.0,
+     "synthesize_s": 0.0,
+     "store_s": 0.0,
+     "jobs": 0.0,
+     "decoder_fallbacks": 0.0,
+     "range_jobs": 0.0,
+     "range_bytes": 0.0,
+     "range_resolve_s": 0.0,
+     "range_header_s": 0.0,
+     "range_first_byte_s": 0.0,
+     "range_body_s": 0.0,
+     "range_retry_attempts": 0.0,
+     "range_retry_sleep_s": 0.0,
+     "range_failed_requests": 0.0,
+     "head_retry_attempts": 0.0,
+     "head_retry_sleep_s": 0.0,
+     "head_failed_requests": 0.0,
+     "range_status_206": 0.0,
+     "range_join_s": 0.0,
+     "range_chunks": 0.0,
+     "range_chunk_gap_s": 0.0,
+     "range_failed_attempt_s": 0.0,
+     "range_exception_attempts": 0.0
+    },
+    "pss_gb": 2.3957948684692383,
+    "open_decoders": 93,
+    "reserved_gb": 1.066919189877808
+   },
+   "main_window": {
+    "span_s": 100.09602046012878,
+    "cpu_by_group_s": {
+     "MainThread": 5.8100000000000005,
+     "native:python": 0.0,
+     "native:jemalloc_bg_thd": 0.0,
+     "prof": 0.52,
+     "tqdm_monitor": 0.0,
+     "QueueFeederThread": 0.16
+    },
+    "timers": {},
+    "cache": {},
+    "pss_gb": 0.44698333740234375,
+    "open_decoders": null,
+    "reserved_gb": null
+   },
+   "per_sample_ms": {
+    "cpu_by_group": {
+     "lerobot-decode": 31.1686994281745,
+     "MainThread": 0.8938666670386195,
+     "Thread-1 (_serve)": 0.5841497078454138,
+     "QueueFeederThread": 0.17936140358340724,
+     "prof": 0.17348070182657419,
+     "native:python": 0.0,
+     "native:jemalloc_bg_thd": 0.0,
+     "lerobot-parquet": 0.0,
+     "cache-fetch": 0.0,
+     "native:pt_data_worker": 0.0
+    },
+    "cpu_total": 32.82607720664194,
+    "timers": {
+     "planner_admit": {
+      "calls_per_sample": 0.0,
+      "wall_ms": 0.0,
+      "cpu_ms": 0.0
+     },
+     "synthesize_mp4(clip)": {
+      "calls_per_sample": 0.0,
+      "wall_ms": 0.0,
+      "cpu_ms": 0.0
+     },
+     "fetch_and_synthesize(clip)": {
+      "calls_per_sample": 0.0,
+      "wall_ms": 0.0,
+      "cpu_ms": 0.0
+     },
+     "load_episode_parquet(episode)": {
+      "calls_per_sample": 0.0,
+      "wall_ms": 0.0,
+      "cpu_ms": 0.0
+     },
+     "wait_clip_bytes(camera)": {
+      "calls_per_sample": 2.9988638608970004,
+      "wall_ms": 0.03702428236465208,
+      "cpu_ms": 0.03692722970401153
+     },
+     "open_decoder(clip)": {
+      "calls_per_sample": 0.0,
+      "wall_ms": 0.0,
+      "cpu_ms": 0.0
+     },
+     "get_frames(camera)": {
+      "calls_per_sample": 2.9988638608970004,
+      "wall_ms": 3.8318420710469066,
+      "cpu_ms": 3.2402769013180728
+     },
+     "apply_image_transforms(sample)": {
+      "calls_per_sample": 0.9996212869656669,
+      "wall_ms": 51.27917211936045,
+      "cpu_ms": 26.55177751772822
+     },
+     "make_episode_item(sample)": {
+      "calls_per_sample": 0.9996212869656669,
+      "wall_ms": 58.2950994412194,
+      "cpu_ms": 31.119365942195017
+     }
+    },
+    "main_process_cpu": 0.6360959066974388
+   },
+   "tag": "TFX_D6T_pyspy_gil",
+   "variant": "TFX",
+   "wall_s": 170.7857346534729
+  }
+ ],
+ "summary": {
+  "probe": {},
+  "tf": {}
+ }
+}

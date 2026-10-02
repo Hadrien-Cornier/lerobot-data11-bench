@@ -1,0 +1,11 @@
+stage	status	seconds	finished_utc	cgroup_peak_mb
+system_deps	ok	32	2026-09-25T18:05:19Z	835
+bundle	ok	1	2026-09-25T18:05:20Z	835
+python_env	ok	66	2026-09-25T18:06:26Z	3215
+prep	ok	115	2026-09-25T18:08:22Z	7187
+size	ok	9	2026-09-25T18:08:33Z	7187
+access	ok	356	2026-09-25T18:14:31Z	9133
+pr3917	ok	330	2026-09-25T18:20:02Z	24048
+size2	ok	6	2026-09-25T18:20:10Z	24048
+summary	ok	0	2026-09-25T18:20:11Z	24048
+exit	0	-	2026-09-25T18:20:13Z	24048

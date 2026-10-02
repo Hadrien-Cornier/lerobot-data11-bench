@@ -1,0 +1,266 @@
+diff --git a/src/lerobot/datasets/video_utils.py b/src/lerobot/datasets/video_utils.py
+index d7f5aef6..9ffa77bb 100644
+--- a/src/lerobot/datasets/video_utils.py
++++ b/src/lerobot/datasets/video_utils.py
+@@ -259,6 +259,18 @@ def _default_max_cache_size() -> int | None:
+     return value
+ 
+ 
++@dataclass
++class _PathOpenLock:
++    """Per-path lock that lets one thread open a given video while others wait for it.
++
++    ``users`` counts the threads holding or waiting on ``lock``; the entry is dropped
++    from ``VideoDecoderCache._open_locks`` when it reaches zero.
++    """
++
++    lock: Lock = field(default_factory=Lock)
++    users: int = 0
++
++
+ class VideoDecoderCache:
+     """Thread-safe LRU cache for torchcodec ``VideoDecoder`` instances.
+ 
+@@ -269,6 +281,13 @@ class VideoDecoderCache:
+     video files (otherwise each ``DataLoader`` worker pins every decoder it has
+     ever opened until the process exits).
+ 
++    Locking: a global lock guards the LRU dict and is held only for lookups,
++    inserts and evictions. Opening a new file (``fsspec.open`` plus
++    ``VideoDecoder`` construction) can take 100+ ms over the network, so it runs
++    outside the global lock under a per-path lock. Cold opens of different paths
++    therefore run in parallel, while concurrent requests for the same path open
++    it only once.
++
+     Args:
+         max_size: Maximum number of decoders to retain. ``None`` disables
+             eviction and restores legacy unbounded behaviour. Defaults to the
+@@ -287,6 +306,8 @@ class VideoDecoderCache:
+         self.max_size: int | None = max_size
+         self._cache: OrderedDict[str, tuple[Any, Any]] = OrderedDict()
+         self._lock = Lock()
++        # Guarded by ``self._lock``. Only holds paths with an open in progress.
++        self._open_locks: dict[str, _PathOpenLock] = {}
+ 
+     def __contains__(self, video_path: object) -> bool:
+         with self._lock:
+@@ -305,29 +326,73 @@ class VideoDecoderCache:
+         video_path = str(video_path)
+ 
+         with self._lock:
+-            entry = self._cache.get(video_path)
+-            if entry is not None:
+-                self._cache.move_to_end(video_path)
+-                return entry[0]
++            decoder = self._get_cached_locked(video_path)
++            if decoder is not None:
++                return decoder
++            path_lock = self._open_locks.get(video_path)
++            if path_lock is None:
++                path_lock = self._open_locks[video_path] = _PathOpenLock()
++            path_lock.users += 1
+ 
+-            file_handle = fsspec.open(video_path).__enter__()
+-            try:
+-                decoder = VideoDecoder(file_handle, seek_mode="approximate")
+-            except Exception:
+-                file_handle.close()
+-                raise
+-            self._cache[video_path] = (decoder, file_handle)
+-
+-            # Evict LRU entries until we are back under the cap. We close
+-            # evicted file handles immediately; the associated ``VideoDecoder``
+-            # is released to the GC when its last reference goes away.
+-            if self.max_size is not None:
+-                while len(self._cache) > self.max_size:
+-                    _evicted_path, (_evicted_decoder, evicted_handle) = self._cache.popitem(last=False)
+-                    with contextlib.suppress(Exception):
+-                        evicted_handle.close()
+-
+-            return decoder
++        try:
++            with path_lock.lock:
++                # Another thread may have opened this path while we waited.
++                with self._lock:
++                    decoder = self._get_cached_locked(video_path)
++                if decoder is not None:
++                    return decoder
++
++                # Slow part (network open + container probe), done without the global lock.
++                file_handle = fsspec.open(video_path).__enter__()
++                try:
++                    decoder = VideoDecoder(file_handle, seek_mode="approximate")
++                except Exception:
++                    file_handle.close()
++                    raise
++
++                return self._insert(video_path, decoder, file_handle)
++        finally:
++            with self._lock:
++                path_lock.users -= 1
++                if path_lock.users == 0 and self._open_locks.get(video_path) is path_lock:
++                    del self._open_locks[video_path]
++
++    def _get_cached_locked(self, video_path: str):
++        """Return the cached decoder for ``video_path`` and mark it MRU. Caller holds ``self._lock``."""
++        entry = self._cache.get(video_path)
++        if entry is None:
++            return None
++        self._cache.move_to_end(video_path)
++        return entry[0]
++
++    def _insert(self, video_path: str, decoder, file_handle):
++        """Insert a freshly opened decoder, evicting LRU entries past ``max_size``.
++
++        If an entry for ``video_path`` already exists, the new handle is closed and
++        the existing decoder is returned so callers always share one decoder per path.
++        """
++        handles_to_close = []
++        with self._lock:
++            existing = self._cache.get(video_path)
++            if existing is not None:
++                self._cache.move_to_end(video_path)
++                decoder = existing[0]
++                handles_to_close.append(file_handle)
++            else:
++                self._cache[video_path] = (decoder, file_handle)
++                # Evict LRU entries until we are back under the cap. We close
++                # evicted file handles immediately; the associated ``VideoDecoder``
++                # is released to the GC when its last reference goes away.
++                if self.max_size is not None:
++                    while len(self._cache) > self.max_size:
++                        _evicted_path, (_evicted_decoder, evicted_handle) = self._cache.popitem(last=False)
++                        handles_to_close.append(evicted_handle)
++
++        # Closing a remote handle can do I/O, so it happens outside the global lock.
++        for handle in handles_to_close:
++            with contextlib.suppress(Exception):
++                handle.close()
++        return decoder
+ 
+     def clear(self):
+         """Clear the cache and close all file handles."""
+diff --git a/tests/datasets/test_video_decoder_cache.py b/tests/datasets/test_video_decoder_cache.py
+index 6e69f840..7196bd2e 100644
+--- a/tests/datasets/test_video_decoder_cache.py
++++ b/tests/datasets/test_video_decoder_cache.py
+@@ -22,12 +22,16 @@ unbounded growth when iterating over datasets with many distinct video files
+ """
+ 
+ import shutil
++import threading
++import time
++from collections import Counter
+ from pathlib import Path
+ 
+ import pytest
+ 
+ pytest.importorskip("torchcodec", reason="torchcodec is required (install lerobot[dataset])")
+ 
++from lerobot.datasets import video_utils  # noqa: E402
+ from lerobot.datasets.video_utils import VideoDecoderCache  # noqa: E402
+ 
+ TEST_ARTIFACTS_DIR = Path(__file__).resolve().parent.parent / "artifacts" / "encoded_videos"
+@@ -138,3 +142,102 @@ class TestVideoDecoderCacheBounded:
+         for p in paths:
+             cache.get_decoder(p)
+         assert cache.size() == 3
++
++
++def _patch_slow_open(monkeypatch, delay_s: float) -> tuple[Counter, list]:
++    """Make ``fsspec.open`` (as used by ``video_utils``) sleep before opening.
++
++    Simulates a slow network open. Returns a per-path open counter and the list of
++    opened file handles so tests can check how often each path was opened.
++    """
++    real_open = video_utils.fsspec.open
++    open_counts: Counter = Counter()
++    opened: list = []
++    counts_lock = threading.Lock()
++
++    class _SlowOpenFile:
++        def __init__(self, path):
++            self._path = path
++
++        def __enter__(self):
++            time.sleep(delay_s)
++            handle = real_open(self._path).__enter__()
++            with counts_lock:
++                open_counts[str(self._path)] += 1
++                opened.append(handle)
++            return handle
++
++    monkeypatch.setattr(video_utils.fsspec, "open", _SlowOpenFile)
++    return open_counts, opened
++
++
++def _run_in_threads(fn, args_per_thread: list) -> list:
++    """Run ``fn(*args)`` in one thread per entry, released together by a barrier."""
++    barrier = threading.Barrier(len(args_per_thread))
++    results: list = [None] * len(args_per_thread)
++    errors: list = []
++
++    def _worker(i, args):
++        barrier.wait()
++        try:
++            results[i] = fn(*args)
++        except Exception as e:  # pragma: no cover - surfaced by the assert below
++            errors.append(e)
++
++    threads = [threading.Thread(target=_worker, args=(i, a)) for i, a in enumerate(args_per_thread)]
++    for t in threads:
++        t.start()
++    for t in threads:
++        t.join(timeout=30)
++    assert not errors, errors
++    return results
++
++
++class TestVideoDecoderCacheConcurrency:
++    def test_cold_opens_of_different_paths_run_in_parallel(self, tmp_path, monkeypatch):
++        """Slow opens of distinct paths must not serialize on the global cache lock."""
++        delay_s = 0.3
++        paths = _make_distinct_clips(tmp_path, n=2)
++        open_counts, _ = _patch_slow_open(monkeypatch, delay_s)
++        cache = VideoDecoderCache(max_size=10)
++
++        start = time.perf_counter()
++        decoders = _run_in_threads(cache.get_decoder, [(p,) for p in paths])
++        elapsed = time.perf_counter() - start
++
++        # Serialized opens would take >= 2 * delay_s. Parallel opens take ~delay_s.
++        assert elapsed < 1.5 * delay_s, f"cold opens look serialized: {elapsed:.3f}s"
++        assert all(d is not None for d in decoders)
++        assert decoders[0] is not decoders[1]
++        assert cache.size() == 2
++        assert open_counts == Counter({str(p): 1 for p in paths})
++        assert cache._open_locks == {}
++
++    def test_same_path_from_many_threads_is_opened_once(self, tmp_path, monkeypatch):
++        """Concurrent misses on one path must open it once and share one decoder."""
++        paths = _make_distinct_clips(tmp_path, n=1)
++        open_counts, opened = _patch_slow_open(monkeypatch, delay_s=0.2)
++        cache = VideoDecoderCache(max_size=10)
++
++        decoders = _run_in_threads(cache.get_decoder, [(paths[0],)] * 8)
++
++        assert open_counts[str(paths[0])] == 1
++        assert len(opened) == 1
++        assert all(d is decoders[0] for d in decoders)
++        assert cache.size() == 1
++        assert cache._open_locks == {}
++
++    def test_failed_decoder_construction_closes_handle_and_cleans_up(self, tmp_path, monkeypatch):
++        """A file torchcodec cannot decode must close its handle and leave no per-path lock behind."""
++        bad_path = tmp_path / "not_a_video.mp4"
++        bad_path.write_bytes(b"this is not an mp4 container")
++        _, opened = _patch_slow_open(monkeypatch, delay_s=0.0)
++        cache = VideoDecoderCache(max_size=10)
++
++        with pytest.raises(Exception):  # noqa: B017 - torchcodec raises a backend-specific error
++            cache.get_decoder(bad_path)
++
++        assert len(opened) == 1
++        assert opened[0].closed is True
++        assert cache.size() == 0
++        assert cache._open_locks == {}

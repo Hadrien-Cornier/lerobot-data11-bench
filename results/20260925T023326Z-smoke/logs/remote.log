@@ -1,0 +1,89 @@
+remote: family ckpt_5k, base hf://datasets/hadriencornier/lerobot-data11-bench@59b48590d176a06aa793eb4c519168f05f412efb/variants/20260925T023326Z-smoke, resolver budget (-1, -1, -1, -1)
+open ckpt_1k|SEP: F 967 size 2.1MB open 86ms (req 2.3, res 1.0, api 0.3, 1.66MB) first 1ms (fetch 0.0) next 1ms (fetch 0.0)
+open ckpt_1k|STACK: F 967 size 6.1MB open 123ms (req 2.3, res 1.0, api 0.3, 5.15MB) first 2ms (fetch 0.0) next 2ms (fetch 0.0)
+open ckpt_1k|BIG: F 2902 size 6.2MB open 130ms (req 2.3, res 1.0, api 0.3, 5.31MB) first 1ms (fetch 0.3) next 1ms (fetch 0.3)
+open ckpt_5k|SEP: F 5156 size 11.8MB open 160ms (req 2.0, res 1.0, api 0.0, 5.31MB) first 1ms (fetch 0.3) next 102ms (fetch 1.0)
+open ckpt_5k|STACK: F 5156 size 34.4MB open 312ms (req 2.3, res 1.0, api 0.3, 5.31MB) first 116ms (fetch 0.7) next 123ms (fetch 1.0)
+open ckpt_5k|BIG: F 15469 size 35.3MB open 155ms (req 2.3, res 1.0, api 0.3, 5.31MB) first 1ms (fetch 0.3) next 127ms (fetch 1.0)
+[8s] r0 first  SEP   seq: 2.54 sps, p50 381 p95 470 ms, res/smp 3.17 cdn/smp 3.17 api/smp 0.00, 16.81 MB/smp (decoder used 0.39), open 367 ms/smp, 429 0, budget min 1073741824
+[10s] r0 first  SEP   par: 4.91 sps, p50 181 p95 279 ms, res/smp 3.17 cdn/smp 3.17 api/smp 0.00, 16.81 MB/smp (decoder used 0.39), open 504 ms/smp, 429 0, budget min 1073741824
+[11s] r0 first  SEP   one: 7.47 sps, p50 117 p95 209 ms, res/smp 1.17 cdn/smp 1.17 api/smp 0.00, 6.19 MB/smp (decoder used 0.13), open 114 ms/smp, 429 0, budget min 1073741824
+[13s] r0 first  STACK seq: 3.54 sps, p50 314 p95 370 ms, res/smp 1.83 cdn/smp 1.83 api/smp 0.00, 9.73 MB/smp (decoder used 0.13), open 161 ms/smp, 429 0, budget min 1073741824
+[15s] r0 first  STACK par: 4.70 sps, p50 228 p95 256 ms, res/smp 1.83 cdn/smp 1.83 api/smp 0.00, 9.73 MB/smp (decoder used 0.13), open 111 ms/smp, 429 0, budget min 1073741824
+[16s] r0 first  STACK one: 4.12 sps, p50 261 p95 290 ms, res/smp 1.83 cdn/smp 1.83 api/smp 0.00, 9.73 MB/smp (decoder used 0.13), open 125 ms/smp, 429 0, budget min 1073741824
+[21s] r0 first  BIG   seq: 1.40 sps, p50 727 p95 923 ms, res/smp 5.50 cdn/smp 5.50 api/smp 0.00, 28.87 MB/smp (decoder used 0.59), open 419 ms/smp, 429 0, budget min 1073741824
+[24s] r0 first  BIG   par: 2.78 sps, p50 382 p95 455 ms, res/smp 5.50 cdn/smp 5.50 api/smp 0.00, 28.87 MB/smp (decoder used 0.59), open 514 ms/smp, 429 0, budget min 1073741824
+[26s] r0 first  BIG   one: 4.57 sps, p50 235 p95 259 ms, res/smp 1.83 cdn/smp 1.83 api/smp 0.00, 9.73 MB/smp (decoder used 0.20), open 117 ms/smp, 429 0, budget min 1073741824
+[29s] r0 steady SEP   seq: 5.33 sps, p50 200 p95 407 ms, res/smp 1.50 cdn/smp 1.50 api/smp 0.00, 7.30 MB/smp (decoder used 0.20), open 0 ms/smp, 429 0, budget min 1073741824
+[30s] r0 steady SEP   par: 13.27 sps, p50 68 p95 167 ms, res/smp 1.25 cdn/smp 1.25 api/smp 0.00, 5.92 MB/smp (decoder used 0.20), open 0 ms/smp, 429 0, budget min 1073741824
+[31s] r0 steady SEP   one: 15.80 sps, p50 53 p95 145 ms, res/smp 0.50 cdn/smp 0.50 api/smp 0.00, 2.52 MB/smp (decoder used 0.07), open 0 ms/smp, 429 0, budget min 1073741824
+[33s] r0 steady STACK seq: 8.13 sps, p50 109 p95 266 ms, res/smp 0.75 cdn/smp 0.75 api/smp 0.00, 3.98 MB/smp (decoder used 0.07), open 0 ms/smp, 429 0, budget min 1073741824
+[34s] r0 steady STACK par: 9.64 sps, p50 108 p95 206 ms, res/smp 0.75 cdn/smp 0.75 api/smp 0.00, 3.98 MB/smp (decoder used 0.07), open 0 ms/smp, 429 0, budget min 1073741824
+[35s] r0 steady STACK one: 12.01 sps, p50 108 p95 116 ms, res/smp 0.75 cdn/smp 0.75 api/smp 0.00, 3.98 MB/smp (decoder used 0.07), open 0 ms/smp, 429 0, budget min 1073741824
+[41s] r0 steady BIG   seq: 2.57 sps, p50 368 p95 618 ms, res/smp 2.67 cdn/smp 2.67 api/smp 0.00, 14.16 MB/smp (decoder used 0.20), open 0 ms/smp, 429 0, budget min 1073741824
+[43s] r0 steady BIG   par: 6.00 sps, p50 170 p95 186 ms, res/smp 2.67 cdn/smp 2.67 api/smp 0.00, 14.16 MB/smp (decoder used 0.20), open 0 ms/smp, 429 0, budget min 1073741824
+[45s] r0 steady BIG   one: 8.35 sps, p50 114 p95 145 ms, res/smp 1.00 cdn/smp 1.00 api/smp 0.00, 5.31 MB/smp (decoder used 0.07), open 0 ms/smp, 429 0, budget min 1073741824
+[72s] conc8 first  SEP  : 13.8 sps, 65.1 resolves/s (limit nan/s), 286 MB/s, p50 597 p95 873 ms, 429 0, budget min None
+[100s] conc8 first  STACK: 35.4 sps, 64.7 resolves/s (limit nan/s), 325 MB/s, p50 230 p95 297 ms, 429 0, budget min None
+[127s] conc8 first  BIG  : 11.0 sps, 63.6 resolves/s (limit nan/s), 315 MB/s, p50 732 p95 867 ms, 429 0, budget min None
+[168s] conc8 steady SEP  : 39.0 sps, 72.8 resolves/s (limit nan/s), 296 MB/s, p50 254 p95 385 ms, 429 0, budget min None
+[208s] conc8 steady STACK: 74.8 sps, 65.4 resolves/s (limit nan/s), 314 MB/s, p50 116 p95 158 ms, 429 0, budget min None
+[249s] conc8 steady BIG  : 24.1 sps, 60.5 resolves/s (limit nan/s), 286 MB/s, p50 377 p95 491 ms, 429 0, budget min None
+# DATA-11 remote (hf://) reads: family ckpt_5k
+
+Repo `hadriencornier/lerobot-data11-bench@59b48590d1` (private). fsspec block 5242880 B, cache ReadAheadCache. Resolver limit -1 per -1 s = nan/s per token.
+
+## Single stream (one reader)
+
+| regime | layout | access | sps | +-CI | p50 ms | p95 ms | resolve/smp | CDN/smp | API/smp | MB/smp | dec MB/smp | open ms/smp | 429 | sps cap at resolver limit |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| first | SEP | one | 7.47 | - | 117 | 209 | 1.17 | 1.17 | 0.00 | 6.19 | 0.13 | 114 | 0 | nan |
+| first | STACK | one | 4.12 | - | 261 | 290 | 1.83 | 1.83 | 0.00 | 9.73 | 0.13 | 125 | 0 | nan |
+| first | BIG | one | 4.57 | - | 235 | 259 | 1.83 | 1.83 | 0.00 | 9.73 | 0.20 | 117 | 0 | nan |
+| first | SEP | par | 4.91 | - | 181 | 279 | 3.17 | 3.17 | 0.00 | 16.81 | 0.39 | 504 | 0 | nan |
+| first | STACK | par | 4.70 | - | 228 | 256 | 1.83 | 1.83 | 0.00 | 9.73 | 0.13 | 111 | 0 | nan |
+| first | BIG | par | 2.78 | - | 382 | 455 | 5.50 | 5.50 | 0.00 | 28.87 | 0.59 | 514 | 0 | nan |
+| first | SEP | seq | 2.54 | - | 381 | 470 | 3.17 | 3.17 | 0.00 | 16.81 | 0.39 | 367 | 0 | nan |
+| first | STACK | seq | 3.54 | - | 314 | 370 | 1.83 | 1.83 | 0.00 | 9.73 | 0.13 | 161 | 0 | nan |
+| first | BIG | seq | 1.40 | - | 727 | 923 | 5.50 | 5.50 | 0.00 | 28.87 | 0.59 | 419 | 0 | nan |
+| steady | SEP | one | 15.80 | - | 53 | 145 | 0.50 | 0.50 | 0.00 | 2.52 | 0.07 | 0 | 0 | nan |
+| steady | STACK | one | 12.01 | - | 108 | 116 | 0.75 | 0.75 | 0.00 | 3.98 | 0.07 | 0 | 0 | nan |
+| steady | BIG | one | 8.35 | - | 114 | 145 | 1.00 | 1.00 | 0.00 | 5.31 | 0.07 | 0 | 0 | nan |
+| steady | SEP | par | 13.27 | - | 68 | 167 | 1.25 | 1.25 | 0.00 | 5.92 | 0.20 | 0 | 0 | nan |
+| steady | STACK | par | 9.64 | - | 108 | 206 | 0.75 | 0.75 | 0.00 | 3.98 | 0.07 | 0 | 0 | nan |
+| steady | BIG | par | 6.00 | - | 170 | 186 | 2.67 | 2.67 | 0.00 | 14.16 | 0.20 | 0 | 0 | nan |
+| steady | SEP | seq | 5.33 | - | 200 | 407 | 1.50 | 1.50 | 0.00 | 7.30 | 0.20 | 0 | 0 | nan |
+| steady | STACK | seq | 8.13 | - | 109 | 266 | 0.75 | 0.75 | 0.00 | 3.98 | 0.07 | 0 | 0 | nan |
+| steady | BIG | seq | 2.57 | - | 368 | 618 | 2.67 | 2.67 | 0.00 | 14.16 | 0.20 | 0 | 0 | nan |
+
+## Concurrent readers (processes, seq / all cameras)
+
+| regime | layout | procs | sps | resolves/s | limit/s | MB/s | p50 ms | p95 ms | 429 | budget min seen |
+|---|---|---|---|---|---|---|---|---|---|---|
+| first | SEP | 8 | 13.8 | 65.1 | nan | 286 | 597 | 873 | 0 | None |
+| first | STACK | 8 | 35.4 | 64.7 | nan | 325 | 230 | 297 | 0 | None |
+| first | BIG | 8 | 11.0 | 63.6 | nan | 315 | 732 | 867 | 0 | None |
+| steady | SEP | 8 | 39.0 | 72.8 | nan | 296 | 254 | 385 | 0 | None |
+| steady | STACK | 8 | 74.8 | 65.4 | nan | 314 | 116 | 158 | 0 | None |
+| steady | BIG | 8 | 24.1 | 60.5 | nan | 286 | 377 | 491 | 0 | None |
+
+## Open cost over hf:// (fresh handle + decoder)
+
+| family | layout | frames/file | MB/file | open ms | req/open | resolve/open | API/open | MB/open | first ms | fetch first | next ms | fetch next |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| ckpt_1k | SEP | 967 | 2.1 | 86 | 2.3 | 1.0 | 0.3 | 1.66 | 1 | 0.0 | 1 | 0.0 |
+| ckpt_1k | STACK | 967 | 6.1 | 123 | 2.3 | 1.0 | 0.3 | 5.15 | 2 | 0.0 | 2 | 0.0 |
+| ckpt_1k | BIG | 2902 | 6.2 | 130 | 2.3 | 1.0 | 0.3 | 5.31 | 1 | 0.3 | 1 | 0.3 |
+| ckpt_5k | SEP | 5156 | 11.8 | 160 | 2.0 | 1.0 | 0.0 | 5.31 | 1 | 0.3 | 102 | 1.0 |
+| ckpt_5k | STACK | 5156 | 34.4 | 312 | 2.3 | 1.0 | 0.3 | 5.31 | 116 | 0.7 | 123 | 1.0 |
+| ckpt_5k | BIG | 15469 | 35.3 | 155 | 2.3 | 1.0 | 0.3 | 5.31 | 1 | 0.3 | 127 | 1.0 |
+
+## Checks
+
+- remote decode == local decode (bit-exact): 36/36
+- SEP == BIG remote samples: 12/12
+- STACK crop vs SEP PSNR (separate lossy encodes): min 42.1 dB over 12 samples
+- pts violations > 1e-4 s: 0 arms
+- 429 responses in stage: 0; resolver budget start -1, end -1, min seen 1073741824
+- skipped arms: 0
+remote done in 249s; checks {"local_vs_remote_checked": 36, "local_vs_remote_mismatch": 0, "sep_vs_big_checked": 12, "sep_vs_big_mismatch": 0}; 429 total 0; budget end (-1, -1, -1, -1)

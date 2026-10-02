@@ -1,0 +1,80 @@
+{
+ "psnr": {
+  "image": {
+   "sep_vs_src": {
+    "mean": 41.3213476731611,
+    "min": 38.524151147048094
+   },
+   "stack_vs_src": {
+    "mean": 41.238176456856806,
+    "min": 38.40369161997104
+   },
+   "stack_vs_sep": {
+    "mean": 44.69080066218884,
+    "min": 40.23671908148086
+   }
+  },
+  "image2": {
+   "sep_vs_src": {
+    "mean": 41.67242979924447,
+    "min": 36.977101734303886
+   },
+   "stack_vs_src": {
+    "mean": 41.706060864338035,
+    "min": 39.255130677698034
+   },
+   "stack_vs_sep": {
+    "mean": 44.12827834789642,
+    "min": 37.69208307851863
+   }
+  }
+ },
+ "psnr_frames": 20,
+ "camera_order_psnr_matrix": {
+  "image": {
+   "image": 44.69080066218884,
+   "image2": 10.089586398083618
+  },
+  "image2": {
+   "image": 10.091134623229186,
+   "image2": 44.12827834789642
+  }
+ },
+ "camera_order_ok": true,
+ "camera_order_comparable_pairs": 2,
+ "psnr_min_stack_vs_src": 38.40369161997104,
+ "psnr_min_stack_vs_sep": 37.69208307851863,
+ "remote_equal": {
+  "sep": {
+   "frames_checked": 20,
+   "mismatch": 0,
+   "pass": true
+  },
+  "stack": {
+   "frames_checked": 20,
+   "mismatch": 0,
+   "pass": true
+  },
+  "sep1": {
+   "frames_checked": 20,
+   "mismatch": 0,
+   "pass": true
+  }
+ },
+ "through_lerobot": {
+  "samples": 20,
+  "sep_item_equals_file_frame": "40/40",
+  "sep1_equals_sep_first_camera": "20/20",
+  "stack_crop_vs_sep_item_psnr_mean": {
+   "image": 43.811831795223185,
+   "image2": 43.17214916483901
+  },
+  "stack_crop_vs_sep_item_psnr_min": {
+   "image": 39.356068769045756,
+   "image2": 35.326706618495706
+  },
+  "pass": true
+ },
+ "psnr_threshold": 35.0,
+ "ok": true
+}

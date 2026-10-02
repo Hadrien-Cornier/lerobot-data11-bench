@@ -1,0 +1,14 @@
+
+Downloading bytes:           |  0.00B            [A
+Reconstructing (incomplete total...): |          |  0.00B /  0.00B            [A
+Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s][A
+Reconstructing (incomplete total...):   0%|          |  0.00B / 24.4kB            [A
+Reconstructing (incomplete total...):  99%|█████████▉| 24.4kB / 24.7kB            [A
+Reconstructing (incomplete total...):  93%|█████████▎| 24.7kB / 26.6kB            [A
+Reconstructing (incomplete total...):  74%|███████▍  | 26.6kB / 36.1kB            [AFetching 4 files: 100%|██████████| 4/4 [00:00<00:00, 16.72it/s]
+
+Download complete: ██████████| 36.1kB            [A
+Reconstruction complete: 100%|██████████| 36.1kB / 36.1kB                         [A[32m✓ Downloaded[0m
+  path: /work/dl_bundle
+Download complete: ██████████| 36.1kB            
+Reconstruction complete: 100%|██████████| 36.1kB / 36.1kB            

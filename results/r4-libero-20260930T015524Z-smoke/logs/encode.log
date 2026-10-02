@@ -1,0 +1,1 @@
+[01:56:50] encode: 1406 frames in 5s; SEP 7.6 MB, STACK 7.5 MB; svt {'mapped': ['Preset M12 is mapped to M10.'], 'version': ['SVT-AV1 Encoder Lib v3.0.0'], 'pred_struct': ['preset / tune / pred struct : 10 / PSNR / random access'], 'lp': ['Level of Parallelism: 6']}

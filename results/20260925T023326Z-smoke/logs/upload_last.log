@@ -1,0 +1,4 @@
+/work/venv/lib/python3.12/site-packages/huggingface_hub/hf_api.py:11697: UserWarning: Warnings while validating metadata in README.md:
+- empty or missing yaml metadata in repo card
+  warnings.warn(f"Warnings while validating metadata in README.md:\n{message}")
+Found 67 files to upload

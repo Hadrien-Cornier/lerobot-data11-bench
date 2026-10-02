@@ -1,0 +1,229 @@
+{
+ "arm": "p1p2",
+ "regime": "w2_cache3",
+ "rep": 2,
+ "num_workers": 2,
+ "seed": 0,
+ "decode_threads": null,
+ "buffer_size": 16,
+ "decoder_cache_env": "3",
+ "n_target": 300,
+ "cap_s": 240,
+ "status": "ok",
+ "utc_start": "2026-09-25T18:02:41Z",
+ "lerobot_file": "/work/src_p1p2/src/lerobot/__init__.py",
+ "cpu_quota": 8,
+ "build_s": 3.4793932591564953,
+ "rss_after_build_gb": 0.4892730712890625,
+ "build_http": {
+  "requests": 11,
+  "resolve_requests": 5,
+  "cdn_requests": 2,
+  "api_requests": 4,
+  "http_bytes": 3373761,
+  "http_s": 0.38442223658785224,
+  "status_429": 0,
+  "status_other_err": 4,
+  "cdn_hit": 0,
+  "cdn_miss": 0,
+  "fetch_calls": 2,
+  "fetch_bytes": 279506,
+  "fetch_s": 0.29336444614455104,
+  "resolver_min_seen": 1073741824,
+  "pid": 100426
+ },
+ "pss_at_first_batch_gb": 18.546055793762207,
+ "first_batch_s": 27.362953992094845,
+ "first_batch_s_incl_build": 30.843528681900352,
+ "first_batch_http": {
+  "requests": 307,
+  "resolve_requests": 129,
+  "cdn_requests": 129,
+  "api_requests": 49,
+  "http_bytes": 1286479001,
+  "http_s": 20.256395856384188,
+  "status_429": 0,
+  "status_other_err": 0,
+  "cdn_hit": 0,
+  "cdn_miss": 0,
+  "fetch_calls": 129,
+  "fetch_bytes": 1269698279,
+  "fetch_s": 45.87615141365677,
+  "resolver_min_seen": 1073741824
+ },
+ "n_samples": 312,
+ "first_batch_n": 8,
+ "steady_n": 304,
+ "steady_s": 58.119254956021905,
+ "sps": 5.230624519017542,
+ "batch_times": [
+  27.363,
+  28.5927,
+  30.634,
+  32.1057,
+  35.8807,
+  36.8395,
+  40.1076,
+  40.9203,
+  42.8738,
+  43.8336,
+  45.9441,
+  46.3898,
+  49.1216,
+  49.4604,
+  51.0682,
+  51.6008,
+  54.0285,
+  54.772,
+  56.6764,
+  57.048,
+  59.2362,
+  59.6085,
+  62.1849,
+  62.2656,
+  64.9098,
+  64.9125,
+  66.3693,
+  66.3716,
+  68.8197,
+  68.9571,
+  71.6086,
+  71.6865,
+  74.3857,
+  74.7293,
+  77.2356,
+  77.4894,
+  80.1898,
+  80.4802,
+  82.741
+ ],
+ "total_http": {
+  "requests": 2457,
+  "resolve_requests": 1111,
+  "cdn_requests": 1111,
+  "api_requests": 235,
+  "http_bytes": 7260209277,
+  "http_s": 132.23167653242126,
+  "status_429": 0,
+  "status_other_err": 0,
+  "cdn_hit": 0,
+  "cdn_miss": 0,
+  "fetch_calls": 1111,
+  "fetch_bytes": 7179450387,
+  "fetch_s": 328.8143117176369,
+  "resolver_min_seen": 1073741824
+ },
+ "steady_http": {
+  "requests": 2150,
+  "resolve_requests": 982,
+  "cdn_requests": 982,
+  "api_requests": 186,
+  "http_bytes": 5973730276,
+  "http_s": 111.97528067603707,
+  "status_429": 0,
+  "status_other_err": 0,
+  "cdn_hit": 0,
+  "cdn_miss": 0,
+  "fetch_calls": 982,
+  "fetch_bytes": 5909752108,
+  "fetch_s": 282.9381603039801
+ },
+ "per_sample": {
+  "requests": 7.072368421052632,
+  "resolve": 3.2302631578947367,
+  "cdn": 3.2302631578947367,
+  "api": 0.6118421052631579,
+  "mb": 19.650428539473683,
+  "status_429": 0,
+  "cdn_hit": 0,
+  "cdn_miss": 0
+ },
+ "status_429_total": 0,
+ "peak_pss_gb": 21.381718635559082,
+ "peak_rss_sum_gb": 21.905311584472656,
+ "peak_cgroup_current_gb": 24.347976684570312,
+ "mem_timeline": [
+  [
+   0.0,
+   0.22,
+   1
+  ],
+  [
+   5.2,
+   1.73,
+   3
+  ],
+  [
+   10.6,
+   6.53,
+   3
+  ],
+  [
+   16.2,
+   9.64,
+   3
+  ],
+  [
+   21.8,
+   12.48,
+   3
+  ],
+  [
+   27.7,
+   17.21,
+   3
+  ],
+  [
+   33.6,
+   19.24,
+   3
+  ],
+  [
+   39.6,
+   20.15,
+   3
+  ],
+  [
+   45.6,
+   21.03,
+   3
+  ],
+  [
+   51.4,
+   21.11,
+   3
+  ],
+  [
+   57.4,
+   21.18,
+   3
+  ],
+  [
+   63.3,
+   21.24,
+   3
+  ],
+  [
+   69.2,
+   21.27,
+   3
+  ],
+  [
+   75.2,
+   21.3,
+   3
+  ],
+  [
+   81.2,
+   21.34,
+   3
+  ],
+  [
+   87.1,
+   10.44,
+   3
+  ]
+ ],
+ "wall_s": 90.71309089660645,
+ "peak_cgroup_anon_mb_seen_by_orchestrator": 21706
+}

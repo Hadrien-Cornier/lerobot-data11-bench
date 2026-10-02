@@ -1,0 +1,4 @@
+ckpt_1k {'SEP': {'max_abs_pts_error_s': 0.0, 'ok': True}, 'STACK': {'max_abs_pts_error_s': 0.0, 'ok': True}, 'BIG': {'max_abs_pts_error_s': 0.0, 'ok': True}} 41.30166530609131 14.225629568099976 {'frames_checked': 8706, 'mismatched_frames': 0, 'mode': 'all', 'ok': True}
+ckpt_5k {'SEP': {'max_abs_pts_error_s': 0.0, 'ok': True}, 'STACK': {'max_abs_pts_error_s': 0.0, 'ok': True}, 'BIG': {'max_abs_pts_error_s': 0.0, 'ok': True}} 40.7745361328125 14.170814752578735 {'frames_checked': 46407, 'mismatched_frames': 0, 'mode': 'all', 'ok': True}
+thrash {'SEP': {'max_abs_pts_error_s': 0.0, 'ok': True}, 'STACK': {'max_abs_pts_error_s': 0.0, 'ok': True}, 'BIG': {'max_abs_pts_error_s': 0.0, 'ok': True}} 36.91957473754883 14.316672086715698 {'frames_checked': 74502, 'mismatched_frames': 0, 'mode': 'all', 'ok': True}
+verify ok

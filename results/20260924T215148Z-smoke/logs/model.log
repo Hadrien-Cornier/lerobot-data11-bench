@@ -1,0 +1,60 @@
+# DATA-11 benchmark model (EXTRAPOLATED from a scaled-down benchmark (SMOKE: numbers are not results))
+
+## Open-cost fits (ms per miss = construct + close + extra first-frame decode)
+
+| layout | state | a ms | b us/frame | F range |
+|---|---|---|---|---|
+| SEP | warm | 0.430 | 0.2608 | [967.3333333333334, 5156.333333333333] |
+| STACK | warm | 0.540 | 0.2128 | [967.3333333333334, 5156.333333333333] |
+| BIG | warm | 0.943 | 0.0359 | [2902, 15469] |
+| SEP+BIG | warm | 0.943 | 0.0452 | [967.3333333333334, 15469] |
+| SEP | cold | 2.386 | 0.1555 | [967.3333333333334, 5156.333333333333] |
+| STACK | cold | 2.576 | 0.1020 | [967.3333333333334, 5156.333333333333] |
+| BIG | cold | 2.862 | 0.0900 | [2902, 15469] |
+| SEP+BIG | cold | 2.593 | 0.1120 | [967.3333333333334, 15469] |
+
+## Thrash sweep fits (worker-s per sample vs opens per sample)
+
+| arm | pts | decode ms | loader open ms | isolated open ms | kappa |
+|---|---|---|---|---|---|
+| SEP|all|W4|warm | 2 | 3.958 | 0.938 | 1.037 | 0.905 |
+| STACK|all|W4|warm | 2 | 3.952 | 1.287 | 0.981 | 1.312 |
+| BIG|all|W4|warm | 2 | 3.965 | 1.512 | 1.224 | 1.235 |
+| SEP|top|W4|warm | 2 | 1.740 | 1.133 | 1.037 | 1.093 |
+| STACK|top|W4|warm | 2 | 3.372 | 0.588 | 0.981 | 0.599 |
+| BIG|top|W4|warm | 2 | 1.535 | 0.000 | 1.224 | 0.0 |
+| SEP|all|W4|cold | 2 | 6.471 | 1.084 | 2.825 | 0.384 |
+| STACK|all|W4|cold | 2 | 5.034 | 0.522 | 2.787 | 0.187 |
+| BIG|all|W4|cold | 2 | 6.830 | 1.565 | 3.289 | 0.476 |
+| SEP|top|W4|cold | 2 | 2.277 | 2.349 | 2.825 | 0.831 |
+| STACK|top|W4|cold | 2 | 4.151 | 2.322 | 2.787 | 0.833 |
+| BIG|top|W4|cold | 2 | 2.462 | 0.000 | 3.289 | 0.0 |
+
+Hit-rate model vs measured (thrash arms): max abs err 0.027, mean 0.005 over 24 arms.
+
+## Validation on ckpt_5k
+
+| arm | measured sps | pred sps | err % | err % (measured opens) | h meas / model |
+|---|---|---|---|---|---|
+| ckpt_5k|SEP|all|c1|4|warm | 619 | 559 | -9.6 | -9.6 | 0.000 / 0.000 |
+| ckpt_5k|STACK|all|c1|4|warm | 1017 | 743 | -27.0 | -26.7 | 0.342 / 0.333 |
+| ckpt_5k|BIG|all|c1|4|warm | 459 | 398 | -13.3 | -13.3 | 0.000 / 0.000 |
+| ckpt_5k|BIG|all|call|4|warm | 1182 | 1009 | -14.6 | -14.6 | 1.000 / 1.000 |
+| ckpt_5k|STACK|all|call|4|warm | 1251 | 1012 | -19.1 | -19.1 | 1.000 / 1.000 |
+| ckpt_5k|SEP|all|call|4|warm | 1175 | 1011 | -14.0 | -14.0 | 1.000 / 1.000 |
+| ckpt_5k|SEP|all|c1|4|cold | 403 | 395 | -1.9 | -1.9 | 0.000 / 0.000 |
+| ckpt_5k|STACK|all|c1|4|cold | 854 | 738 | -13.6 | -13.7 | 0.316 / 0.333 |
+| ckpt_5k|BIG|all|c1|4|cold | 378 | 308 | -18.5 | -18.5 | 0.000 / 0.000 |
+| ckpt_5k|BIG|all|call|4|cold | 718 | 586 | -18.4 | -18.4 | 1.000 / 1.000 |
+| ckpt_5k|STACK|all|call|4|cold | 893 | 795 | -11.0 | -11.0 | 1.000 / 1.000 |
+| ckpt_5k|SEP|all|call|4|cold | 641 | 618 | -3.5 | -3.5 | 1.000 / 1.000 |
+
+## Predictions (EXTRAPOLATED; cache 100 per worker)
+
+| dataset | variant | pattern | W | state | h | opens/sample | pred sps | beyond F range |
+|---|---|---|---|---|---|---|---|---|
+| lerobot/abc_130k_v3_train | SEP (as stored) | all | 4 | warm | 0.003 | 2.99 | 420 | yes |
+| lerobot/abc_130k_v3_train | STACK, same frames/file (files / 3) | all | 4 | warm | 0.008 | 0.99 | 348 | yes |
+| lerobot/abc_130k_v3_train | STACK, same bytes/file (LeRobot size rollover) | all | 4 | warm | 0.003 | 1.00 | 572 |  |
+| lerobot/abc_130k_v3_train | BIG (3x frames/file, files / 3) | all | 4 | warm | 0.008 | 2.98 | 203 | yes |
+| lerobot/abc_130k_v3_train | SEP (as stored) | top | 4 | warm | 0.008 | 0.99 | 1007 | yes |

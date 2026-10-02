@@ -1,0 +1,16 @@
+ckpt_1k eviction {'resident_after_prewarm': 1.0, 'resident_after_evict': 0.0, 'probe_file_bytes': 2066448, 'read_bytes_after_evict': 2068480, 'read_bytes_warm_reread': 0, 'read_s_after_evict': 0.0073582170298323035, 'read_s_warm': 0.00019320298451930285, 'worked': True}
+ckpt_1k|SEP: frames/file 967 moov 6589B warm open 0.97ms first 1.05ms decode 0.83ms | cold open 2.09ms read 65536B | MB/decoder 0.676410421301446
+ckpt_1k|STACK: frames/file 967 moov 6652B warm open 1.13ms first 2.41ms decode 2.23ms | cold open 1.79ms read 65536B | MB/decoder 1.0142945286429366
+ckpt_1k|BIG: frames/file 2902 moov 18262B warm open 0.93ms first 1.02ms decode 0.84ms | cold open 2.08ms read 65536B | MB/decoder 0.6940246106785317
+thrash eviction {'resident_after_prewarm': 1.0, 'resident_after_evict': 0.0, 'probe_file_bytes': 11243806, 'read_bytes_after_evict': 11247616, 'read_bytes_warm_reread': 0, 'read_s_after_evict': 0.033505005994811654, 'read_s_warm': 0.0009584190556779504, 'worked': True}
+thrash|SEP: frames/file 2030 moov 13018B warm open 0.93ms first 1.12ms decode 0.94ms | cold open 2.36ms read 65536B | MB/decoder 0.6861547552836484
+thrash|STACK: frames/file 2030 moov 13173B warm open 1.37ms first 3.24ms decode 2.94ms | cold open 2.40ms read 65536B | MB/decoder 0.9943730881535039
+thrash|BIG: frames/file 6091 moov 37550B warm open 1.62ms first 1.51ms decode 1.11ms | cold open 2.87ms read 196608B | MB/decoder 0.7697154824805339
+ckpt_5k eviction {'resident_after_prewarm': 1.0, 'resident_after_evict': 0.0, 'probe_file_bytes': 21177442, 'read_bytes_after_evict': 21180416, 'read_bytes_warm_reread': 0, 'read_s_after_evict': 0.0652005230076611, 'read_s_warm': 0.002490437007509172, 'worked': True}
+ckpt_5k|SEP: frames/file 5156 moov 31867B warm open 0.95ms first 0.91ms decode 0.76ms | cold open 2.73ms read 196608B | MB/decoder 0.7506743604004449
+ckpt_5k|STACK: frames/file 5156 moov 32194B warm open 1.23ms first 2.72ms decode 2.46ms | cold open 2.51ms read 196608B | MB/decoder 1.0942470800889879
+ckpt_5k|BIG: frames/file 15469 moov 94093B warm open 1.39ms first 1.00ms decode 0.83ms | cold open 3.62ms read 327680B | MB/decoder 1.0102318548387097
+ckpt_full eviction {'resident_after_prewarm': 1.0, 'resident_after_evict': 0.0, 'probe_file_bytes': 80307330, 'read_bytes_after_evict': 80310272, 'read_bytes_warm_reread': 0, 'read_s_after_evict': 0.24090186005923897, 'read_s_warm': 0.00692802295088768, 'worked': True}
+ckpt_full|SEP: frames/file 24706 moov 150041B warm open 2.18ms first 1.40ms decode 1.08ms | cold open 4.41ms read 327680B | MB/decoder 1.221453524749722
+ckpt_full|STACK: frames/file 24706 moov 151980B warm open 2.47ms first 3.34ms decode 2.84ms | cold open 4.22ms read 327680B | MB/decoder 1.5513921718576196
+ckpt_full|BIG: frames/file 74118 moov 448644B warm open 5.56ms first 1.65ms decode 1.16ms | cold open 7.86ms read 835584B | MB/decoder 2.365928288375973

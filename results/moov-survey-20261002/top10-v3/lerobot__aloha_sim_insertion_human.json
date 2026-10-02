@@ -1,0 +1,45 @@
+{
+ "repo": "lerobot/aloha_sim_insertion_human",
+ "revision": "cc571a3c661df81b566dbfde3d5c1e85fcdf7884",
+ "codebase_version": "v3.0",
+ "fps": 50,
+ "total_videos": null,
+ "video_keys": [
+  "observation.images.top"
+ ],
+ "files": [
+  {
+   "path": "videos/observation.images.top/chunk-000/file-000.mp4",
+   "file_size": 88389634,
+   "boxes": [
+    [
+     "ftyp",
+     0,
+     32
+    ],
+    [
+     "free",
+     32,
+     8
+    ],
+    [
+     "mdat",
+     40,
+     88237515
+    ],
+    [
+     "moov",
+     88237555,
+     152079
+    ]
+   ],
+   "moov_size": 152079,
+   "moov_end": 88389634,
+   "moov_first": false,
+   "reads_now": 6,
+   "bytes_now": 130175503,
+   "reads_patched": 2,
+   "bytes_patched": 676367
+  }
+ ]
+}

@@ -1,0 +1,75 @@
+== DATA-11 r4train job r4train-a100-20260930T013249Z start 2026-09-30T01:32:49Z SMOKE=0 host=j-hadriencornier-6abc66bc031314b696343423-f7jsg11a-5bca0-nwpqp
+HF_TOKEN present (value not shown); results -> dataset hadriencornier/lerobot-data11-bench:results/r4train-a100-20260930T013249Z
+attempt marker attempts/6abc66bc031314b696343423 recorded
+== stage system_deps: ok (0s, cgroup peak 115 MB)
+bundle checksums OK
+== stage bundle: ok (1s, cgroup peak 115 MB)
+image torch 2.11.0+cu128 cuda 12.8
+torch 2.11.0+cu128 cuda 12.8 cudnn 91900
+device NVIDIA A100-SXM4-80GB capability (8, 0) mem_gb 79.2
+lerobot /usr/local/lib/python3.12/dist-packages/lerobot/__init__.py transformers 5.5.4 accelerate 1.15.0
+== stage python_env: ok (51s, cgroup peak 2119 MB)
+uploaded results/r4train-a100-20260930T013249Z (setup done)
+== stage prefetch start 2026-09-30T01:33:43Z
+[90mHint: A new version of huggingface_hub (2.0.0) is available! You are using version 1.33.0.
+To update, run: hf update[0m
+[90mHint: The `hf-cli` skill is not installed. Run `hf skills add -g` to teach your AI agents how to use the `hf` CLI.[0m
+
+Downloading bytes:           |  0.00B            [A
+Reconstructing (incomplete total...): |          |  0.00B /  0.00B            [A
+Fetching 8 files:   0%|          | 0/8 [00:00<?, ?it/s][A
+Reconstructing (incomplete total...):   0%|          |  0.00B /   640B            [A
+Reconstructing (incomplete total...):   0%|          |  0.00B /  907MB            [A
+Reconstructing (incomplete total...):   0%|          |  0.00B /  907MB            [A
+Reconstructing (incomplete total...):   0%|          | 4.62kB /  907MB            [A
+Reconstructing (incomplete total...):   0%|          | 5.29kB /  907MB            [A
+Reconstructing (incomplete total...):   0%|          | 7.16kB /  907MB            [A
+Reconstructing (incomplete total...):   0%|          | 8.73kB /  907MB            [A
+Downloading bytes: ██▏       |  196MB,   ???B/s  [A
+Reconstructing (incomplete total...):  30%|██▉       |  268MB /  907MB,   ???B/s  [A
+Downloading bytes: ██████▋   |  602MB,  183MB/s  [A
+Reconstructing (incomplete total...):  89%|████████▉ |  805MB /  907MB,  171MB/s  [A
+Fetching 8 files: 100%|██████████| 8/8 [00:02<00:00,  2.84it/s][AFetching 8 files: 100%|██████████| 8/8 [00:02<00:00,  2.84it/s]
+
+Downloading bytes: ██████████|  784MB,  310MB/s  [A
+Download complete: ██████████|  784MB,  310MB/s  [A
+Reconstruction complete: 100%|██████████|  907MB /  907MB,  344MB/s               [A[32m✓ Downloaded[0m
+  path: /work/hf_home/hub/models--lerobot--smolvla_base/snapshots/d9f33c94a60fb382c90dea2164c96845bd955e28
+Download complete: ██████████|  784MB,  310MB/s  
+Reconstruction complete: 100%|██████████|  907MB /  907MB,  344MB/s  
+== stage prefetch: ok (3s, cgroup peak 2761 MB)
+uploaded results/r4train-a100-20260930T013249Z (after prefetch)
+== stage bench start 2026-09-30T01:33:47Z
+== [1/15] act_abc_bs8 (elapsed 0s)
+    ok samples/s 162.3 update ms 49.3 peak GB 1.57 (21s)
+== [2/15] act_droid_bs8 (elapsed 21s)
+    ok samples/s 165.2 update ms 48.4 peak GB 1.59 (20s)
+== [3/15] act_molmo_bs8 (elapsed 41s)
+    ok samples/s 105.0 update ms 76.2 peak GB 4.36 (23s)
+== [4/15] act_libero_bs8 (elapsed 64s)
+    ok samples/s 193.8 update ms 41.3 peak GB 1.60 (20s)
+== [5/15] act_hqf_bs8 (elapsed 83s)
+    ok samples/s 34.4 update ms 232.5 peak GB 18.99 (49s)
+== [6/15] smolvla_abc_bs8 (elapsed 132s)
+    ok samples/s 46.1 update ms 173.4 peak GB 3.56 (31s)
+== [7/15] smolvla_droid_bs8 (elapsed 163s)
+    ok samples/s 48.0 update ms 166.7 peak GB 3.56 (28s)
+== [8/15] smolvla_molmo_bs8 (elapsed 191s)
+    ok samples/s 43.3 update ms 184.6 peak GB 3.61 (29s)
+== [9/15] smolvla_libero_bs8 (elapsed 220s)
+    ok samples/s 48.3 update ms 165.6 peak GB 2.91 (27s)
+== [10/15] smolvla_hqf_bs8 (elapsed 248s)
+    ok samples/s 48.4 update ms 165.3 peak GB 3.74 (34s)
+== [11/15] smolvla_abc_bs64 (elapsed 282s)
+    ok samples/s 100.1 update ms 639.4 peak GB 19.31 (60s)
+== [12/15] smolvla_droid_bs64 (elapsed 342s)
+    ok samples/s 100.1 update ms 639.2 peak GB 19.32 (61s)
+== [13/15] smolvla_molmo_bs64 (elapsed 404s)
+    ok samples/s 100.6 update ms 635.9 peak GB 19.69 (78s)
+SKIP smolvla_libero_bs64 elapsed 482s > budget 420.0s
+SKIP smolvla_hqf_bs64 elapsed 482s > budget 420.0s
+== orchestrate done in 482s -> /results/r4train-a100-20260930T013249Z/bench/summary.md
+== stage bench: ok (482s, cgroup peak 8487 MB)
+uploaded results/r4train-a100-20260930T013249Z (after bench)
+== done 2026-09-30T01:41:50Z: /results/r4train-a100-20260930T013249Z
+== exit code 0 at 2026-09-30T01:41:50Z

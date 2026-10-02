@@ -1,0 +1,575 @@
+== DATA-11 job 20260925T023326Z-smoke start 2026-09-25T02:33:26Z SMOKE=1 host=j-hadriencornier-6ab5dd6d52d0dbd7f1d8de6e-57gmlgg0-50fb2-mt956
+HF_TOKEN present (value not shown); results -> dataset hadriencornier/lerobot-data11-bench:results/20260925T023326Z-smoke
+attempt marker attempts/6ab5dd6d52d0dbd7f1d8de6e recorded
+system ffmpeg: ffmpeg version 7.1.5-0+deb13u1 Copyright (c) 2000-2026 the FFmpeg developers (major 7)
+== stage system_deps: ok (47s, cgroup peak 835 MB)
+bundle checksums OK
+== stage bundle: ok (0s, cgroup peak 835 MB)
+
+[notice] A new release of pip is available: 25.0.1 -> 26.2.1
+[notice] To update, run: pip install --upgrade pip
+Using Python 3.12.14 environment at: /work/venv
+torch 2.11.0+cpu | torchcodec 0.11.1+cpu
+av 15.1.0 {'libavutil': '59.39.100', 'libavcodec': '61.19.101', 'libavformat': '61.7.100', 'libavdevice': '61.3.100', 'libavfilter': '10.4.100', 'libswscale': '8.3.100', 'libswresample': '5.3.100'}
+libsvtav1 encoder available in PyAV
+== stage python_env: ok (41s, cgroup peak 2243 MB)
+{
+ "python": "3.12.14 (main, Sep 19 2026, 01:04:57) [GCC 14.2.0]",
+ "os_cpu_count": 64,
+ "sched_affinity": 64,
+ "torch": "2.11.0+cpu",
+ "torch_num_threads": 32,
+ "torchcodec": "0.11.1+cpu",
+ "torchcodec_ffmpeg": {
+  "libavfilter": [
+   10,
+   5,
+   100
+  ],
+  "libavutil": [
+   59,
+   39,
+   100
+  ],
+  "libavcodec": [
+   61,
+   19,
+   101
+  ],
+  "libavformat": [
+   61,
+   7,
+   103
+  ],
+  "ffmpeg_version": "7.1.5-0+deb13u1"
+ },
+ "numpy": "2.5.3",
+ "pandas": "3.0.6",
+ "pyarrow": "25.0.1",
+ "psutil": "7.2.2",
+ "huggingface_hub": "1.30.0",
+ "fsspec": "2026.7.0",
+ "httpx": "0.28.1"
+}
+{"av": "15.1.0", "av_ffmpeg": {"libavutil": "59.39.100", "libavcodec": "61.19.101", "libavformat": "61.7.100", "libavdevice": "61.3.100", "libavfilter": "10.4.100", "libswscale": "8.3.100", "libswresample": "5.3.100"}}
+uploaded results/20260925T023326Z-smoke (setup done)
+== stage fetch start 2026-09-25T02:35:08Z
+
+Downloading bytes:           |  0.00B            [A
+Reconstructing (incomplete total...): |          |  0.00B /  0.00B            [A
+Fetching 16 files:   0%|          | 0/16 [00:00<?, ?it/s][A
+Reconstructing (incomplete total...):   0%|          |  0.00B / 5.51kB            [A
+Reconstructing (incomplete total...):   0%|          | 5.51kB / 88.3MB            [A
+Reconstructing (incomplete total...):   0%|          | 5.51kB / 88.3MB            [A
+Reconstructing (incomplete total...):   0%|          | 5.51kB /  144MB            [A
+Reconstructing (incomplete total...):   0%|          | 5.51kB /  187MB            [A
+Reconstructing (incomplete total...):   0%|          | 5.51kB /  232MB            [A
+Reconstructing (incomplete total...):   0%|          | 5.51kB /  272MB            [A
+Reconstructing (incomplete total...):   0%|          | 5.51kB /  344MB            [A
+Reconstructing (incomplete total...):   0%|          | 5.51kB /  394MB            [A
+Downloading bytes: ██▋       |  106MB,   ???B/s  [A
+Reconstructing (incomplete total...):  10%|▉         | 38.6MB /  394MB            [A
+Fetching 16 files:  12%|█▎        | 2/16 [00:01<00:07,  1.79it/s][A
+Reconstructing (incomplete total...):  17%|█▋        | 78.9MB /  465MB, 34.9MB/s  [A
+Reconstructing (incomplete total...):  16%|█▌        | 78.9MB /  500MB, 34.9MB/s  [A
+Reconstructing (incomplete total...):  24%|██▎       |  135MB /  569MB, 34.9MB/s  [A
+Reconstructing (incomplete total...):  30%|██▉       |  184MB /  621MB, 34.9MB/s  [A
+Reconstructing (incomplete total...):  34%|███▎      |  230MB /  684MB, 34.9MB/s  [A
+Reconstructing (incomplete total...):  35%|███▌      |  272MB /  776MB, 34.9MB/s  [A
+Reconstructing (incomplete total...):  39%|███▉      |  322MB /  822MB, 34.9MB/s  [A
+Downloading bytes: █████▍    |  442MB,  103MB/s  [A
+Reconstructing (incomplete total...):  52%|█████▏    |  429MB /  822MB, 34.9MB/s  [A
+Fetching 16 files:  62%|██████▎   | 10/16 [00:02<00:01,  5.18it/s][A
+Downloading bytes: █████████▌|  782MB,  235MB/s  [A
+Reconstructing (incomplete total...):  84%|████████▎ |  688MB /  822MB,  230MB/s  [A
+Fetching 16 files: 100%|██████████| 16/16 [00:03<00:00,  4.63it/s][AFetching 16 files: 100%|██████████| 16/16 [00:03<00:00,  4.44it/s]
+
+Downloading bytes: ██████████|  821MB,  282MB/s  [A
+Download complete: : ██████████|  821MB,  282MB/s  [A
+Reconstruction complete: 100%|██████████|  822MB /  822MB,  240MB/s               [A{
+ "repo_id": "lerobot/abc_130k_v3_train",
+ "revision": "68651e4929d9fb00f798937b2d62617cab5c771d",
+ "files": 15,
+ "bytes": 821975857,
+ "gb": 0.822,
+ "wall_s": 11.2,
+ "mb_per_s": 73.5,
+ "size_mismatches": {},
+ "fps": 30
+}
+Download complete: : ██████████|  821MB,  282MB/s  
+Reconstruction complete: 100%|██████████|  822MB /  822MB,  240MB/s  
+== stage fetch: ok (12s, cgroup peak 3075 MB)
+uploaded results/20260925T023326Z-smoke (after fetch)
+== stage encode start 2026-09-25T02:35:21Z
+[encode 1/18 49s] {'group': 'ckpt_5k_g001', 'family': 'ckpt_5k', 'frames': 5105, 'encode_s': 48.27, 'pid': 2963, 'peak_os_threads_seen': 336}
+[encode 2/18 50s] {'group': 'ckpt_5k_g000', 'family': 'ckpt_5k', 'frames': 5273, 'encode_s': 49.35, 'pid': 2964, 'peak_os_threads_seen': 336}
+[encode 3/18 79s] {'group': 'thrash_g000', 'family': 'thrash', 'frames': 2280, 'encode_s': 28.8, 'pid': 2964, 'peak_os_threads_seen': 336}
+[encode 4/18 90s] {'group': 'ckpt_5k_g002', 'family': 'ckpt_5k', 'frames': 5091, 'encode_s': 40.3, 'pid': 2963, 'peak_os_threads_seen': 336}
+[encode 5/18 105s] {'group': 'thrash_g008', 'family': 'thrash', 'frames': 2266, 'encode_s': 26.17, 'pid': 2964, 'peak_os_threads_seen': 336}
+[encode 6/18 111s] {'group': 'thrash_g006', 'family': 'thrash', 'frames': 2256, 'encode_s': 21.42, 'pid': 2963, 'peak_os_threads_seen': 336}
+[encode 7/18 126s] {'group': 'thrash_g001', 'family': 'thrash', 'frames': 2155, 'encode_s': 20.47, 'pid': 2964, 'peak_os_threads_seen': 336}
+[encode 8/18 134s] {'group': 'thrash_g010', 'family': 'thrash', 'frames': 2103, 'encode_s': 22.65, 'pid': 2963, 'peak_os_threads_seen': 336}
+[encode 9/18 147s] {'group': 'thrash_g003', 'family': 'thrash', 'frames': 2043, 'encode_s': 21.09, 'pid': 2964, 'peak_os_threads_seen': 336}
+[encode 10/18 159s] {'group': 'thrash_g002', 'family': 'thrash', 'frames': 2018, 'encode_s': 24.39, 'pid': 2963, 'peak_os_threads_seen': 336}
+[encode 11/18 174s] {'group': 'thrash_g005', 'family': 'thrash', 'frames': 1988, 'encode_s': 26.53, 'pid': 2964, 'peak_os_threads_seen': 336}
+[encode 12/18 181s] {'group': 'thrash_g004', 'family': 'thrash', 'frames': 1969, 'encode_s': 22.32, 'pid': 2963, 'peak_os_threads_seen': 336}
+[encode 13/18 198s] {'group': 'thrash_g011', 'family': 'thrash', 'frames': 1964, 'encode_s': 23.41, 'pid': 2964, 'peak_os_threads_seen': 336}
+[encode 14/18 205s] {'group': 'thrash_g009', 'family': 'thrash', 'frames': 1919, 'encode_s': 22.99, 'pid': 2963, 'peak_os_threads_seen': 336}
+[encode 15/18 217s] {'group': 'ckpt_1k_g002', 'family': 'ckpt_1k', 'frames': 1011, 'encode_s': 12.2, 'pid': 2963, 'peak_os_threads_seen': 336}
+[encode 16/18 220s] {'group': 'thrash_g007', 'family': 'thrash', 'frames': 1873, 'encode_s': 22.34, 'pid': 2964, 'peak_os_threads_seen': 336}
+[encode 17/18 227s] {'group': 'ckpt_1k_g001', 'family': 'ckpt_1k', 'frames': 987, 'encode_s': 8.51, 'pid': 7463, 'peak_os_threads_seen': 336}
+[encode 18/18 228s] {'group': 'ckpt_1k_g000', 'family': 'ckpt_1k', 'frames': 904, 'encode_s': 7.14, 'pid': 7800, 'peak_os_threads_seen': 336}
+{
+ "encoder": {
+  "vcodec": "libsvtav1",
+  "options": {
+   "g": "2",
+   "crf": "30",
+   "preset": "12",
+   "svtav1-params": "fast-decode=0"
+  },
+  "pix_fmt": "yuv420p",
+  "input": "rgb24 ndarray, pts=i, time_base=1/fps"
+ },
+ "svt_reported": {
+  "mapped": [
+   "Preset M12 is mapped to M10."
+  ],
+  "version": [
+   "SVT-AV1 Encoder Lib v3.0.0"
+  ],
+  "pred_struct": [
+   "preset / tune / pred struct : 10 / PSNR / random access"
+  ],
+  "lp": [
+   "Level of Parallelism: 4"
+  ]
+ },
+ "enc_procs": 2,
+ "cpu_quota": 8,
+ "svt_lp_requested": 4,
+ "mux_options": {
+  "movflags": "faststart"
+ },
+ "max_os_threads_per_encode_process": 336,
+ "wall_s": 228.3,
+ "groups": 18,
+ "frames_per_camera": 43205,
+ "camera_frame_sets_per_s": 189.3,
+ "pyav": "15.1.0",
+ "pyav_ffmpeg": {
+  "libavutil": "59.39.100",
+  "libavcodec": "61.19.101",
+  "libavformat": "61.7.100",
+  "libavdevice": "61.3.100",
+  "libavfilter": "10.4.100",
+  "libswscale": "8.3.100",
+  "libswresample": "5.3.100"
+ },
+ "stack_order_top_to_bottom": [
+  "top",
+  "left_wrist",
+  "right_wrist"
+ ]
+}
+== stage encode: ok (228s, cgroup peak 5229 MB)
+uploaded results/20260925T023326Z-smoke (after encode)
+== stage big start 2026-09-25T02:39:10Z
+{
+ "ckpt_1k|SEP": {
+  "files": 9,
+  "frames": 8706,
+  "bytes": 18726894,
+  "moov_bytes": 59305,
+  "keyframes": 4356,
+  "has_b_frames": [
+   0
+  ],
+  "bytes_per_frame": 2151.0,
+  "moov_bytes_per_frame": 6.81
+ },
+ "ckpt_1k|STACK": {
+  "files": 3,
+  "frames": 2902,
+  "bytes": 18220750,
+  "moov_bytes": 19955,
+  "keyframes": 1452,
+  "has_b_frames": [
+   0
+  ],
+  "bytes_per_frame": 6278.7,
+  "moov_bytes_per_frame": 6.88
+ },
+ "ckpt_1k|BIG": {
+  "files": 3,
+  "frames": 8706,
+  "bytes": 18722088,
+  "moov_bytes": 54787,
+  "keyframes": 4356,
+  "has_b_frames": [
+   0
+  ],
+  "bytes_per_frame": 2150.5,
+  "moov_bytes_per_frame": 6.29
+ },
+ "ckpt_5k|SEP": {
+  "files": 9,
+  "frames": 46407,
+  "bytes": 105884577,
+  "moov_bytes": 286805,
+  "keyframes": 23208,
+  "has_b_frames": [
+   0
+  ],
+  "bytes_per_frame": 2281.7,
+  "moov_bytes_per_frame": 6.18
+ },
+ "ckpt_5k|STACK": {
+  "files": 3,
+  "frames": 15469,
+  "bytes": 103234979,
+  "moov_bytes": 96583,
+  "keyframes": 7736,
+  "has_b_frames": [
+   0
+  ],
+  "bytes_per_frame": 6673.7,
+  "moov_bytes_per_frame": 6.24
+ },
+ "ckpt_5k|BIG": {
+  "files": 3,
+  "frames": 46407,
+  "bytes": 105879763,
+  "moov_bytes": 282279,
+  "keyframes": 23208,
+  "has_b_frames": [
+   0
+  ],
+  "bytes_per_frame": 2281.5,
+  "moov_bytes_per_frame": 6.08
+ },
+ "thrash|SEP": {
+  "files": 36,
+  "frames": 74502,
+  "bytes": 238624732,
+  "moov_bytes": 477580,
+  "keyframes": 37260,
+  "has_b_frames": [
+   0
+  ],
+  "bytes_per_frame": 3202.9,
+  "moov_bytes_per_frame": 6.41
+ },
+ "thrash|STACK": {
+  "files": 12,
+  "frames": 24834,
+  "bytes": 234402245,
+  "moov_bytes": 161340,
+  "keyframes": 12420,
+  "has_b_frames": [
+   0
+  ],
+  "bytes_per_frame": 9438.8,
+  "moov_bytes_per_frame": 6.5
+ },
+ "thrash|BIG": {
+  "files": 12,
+  "frames": 74502,
+  "bytes": 238605532,
+  "moov_bytes": 459532,
+  "keyframes": 37260,
+  "has_b_frames": [
+   0
+  ],
+  "bytes_per_frame": 3202.7,
+  "moov_bytes_per_frame": 6.17
+ }
+}
+== stage big: ok (25s, cgroup peak 5229 MB)
+uploaded results/20260925T023326Z-smoke (after big)
+== stage verify start 2026-09-25T02:39:36Z
+ckpt_1k {'SEP': {'max_abs_pts_error_s': 0.0, 'ok': True}, 'STACK': {'max_abs_pts_error_s': 0.0, 'ok': True}, 'BIG': {'max_abs_pts_error_s': 0.0, 'ok': True}} 41.30166530609131 14.225629568099976 {'frames_checked': 8706, 'mismatched_frames': 0, 'mode': 'all', 'ok': True}
+ckpt_5k {'SEP': {'max_abs_pts_error_s': 0.0, 'ok': True}, 'STACK': {'max_abs_pts_error_s': 0.0, 'ok': True}, 'BIG': {'max_abs_pts_error_s': 0.0, 'ok': True}} 40.7745361328125 14.170814752578735 {'frames_checked': 46407, 'mismatched_frames': 0, 'mode': 'all', 'ok': True}
+thrash {'SEP': {'max_abs_pts_error_s': 0.0, 'ok': True}, 'STACK': {'max_abs_pts_error_s': 0.0, 'ok': True}, 'BIG': {'max_abs_pts_error_s': 0.0, 'ok': True}} 36.91957473754883 14.316672086715698 {'frames_checked': 74502, 'mismatched_frames': 0, 'mode': 'all', 'ok': True}
+verify ok
+== stage verify: ok (231s, cgroup peak 5229 MB)
+uploaded results/20260925T023326Z-smoke (after verify)
+== stage upload start 2026-09-25T02:43:28Z
+upload: 30 files, 370.7 MB, families ['ckpt_1k', 'ckpt_5k'] -> hadriencornier/lerobot-data11-bench:variants/20260925T023326Z-smoke
+committed 59b48590d176a06aa793eb4c519168f05f412efb in 3.3s (113.9 MB/s)
+read back 30 files at 59b48590d176a06aa793eb4c519168f05f412efb: 0 problems
+== stage upload: ok (11s, cgroup peak 5229 MB)
+uploaded results/20260925T023326Z-smoke (after upload)
+== stage remote start 2026-09-25T02:43:40Z
+remote: family ckpt_5k, base hf://datasets/hadriencornier/lerobot-data11-bench@59b48590d176a06aa793eb4c519168f05f412efb/variants/20260925T023326Z-smoke, resolver budget (-1, -1, -1, -1)
+open ckpt_1k|SEP: F 967 size 2.1MB open 86ms (req 2.3, res 1.0, api 0.3, 1.66MB) first 1ms (fetch 0.0) next 1ms (fetch 0.0)
+open ckpt_1k|STACK: F 967 size 6.1MB open 123ms (req 2.3, res 1.0, api 0.3, 5.15MB) first 2ms (fetch 0.0) next 2ms (fetch 0.0)
+open ckpt_1k|BIG: F 2902 size 6.2MB open 130ms (req 2.3, res 1.0, api 0.3, 5.31MB) first 1ms (fetch 0.3) next 1ms (fetch 0.3)
+open ckpt_5k|SEP: F 5156 size 11.8MB open 160ms (req 2.0, res 1.0, api 0.0, 5.31MB) first 1ms (fetch 0.3) next 102ms (fetch 1.0)
+open ckpt_5k|STACK: F 5156 size 34.4MB open 312ms (req 2.3, res 1.0, api 0.3, 5.31MB) first 116ms (fetch 0.7) next 123ms (fetch 1.0)
+open ckpt_5k|BIG: F 15469 size 35.3MB open 155ms (req 2.3, res 1.0, api 0.3, 5.31MB) first 1ms (fetch 0.3) next 127ms (fetch 1.0)
+[8s] r0 first  SEP   seq: 2.54 sps, p50 381 p95 470 ms, res/smp 3.17 cdn/smp 3.17 api/smp 0.00, 16.81 MB/smp (decoder used 0.39), open 367 ms/smp, 429 0, budget min 1073741824
+[10s] r0 first  SEP   par: 4.91 sps, p50 181 p95 279 ms, res/smp 3.17 cdn/smp 3.17 api/smp 0.00, 16.81 MB/smp (decoder used 0.39), open 504 ms/smp, 429 0, budget min 1073741824
+[11s] r0 first  SEP   one: 7.47 sps, p50 117 p95 209 ms, res/smp 1.17 cdn/smp 1.17 api/smp 0.00, 6.19 MB/smp (decoder used 0.13), open 114 ms/smp, 429 0, budget min 1073741824
+[13s] r0 first  STACK seq: 3.54 sps, p50 314 p95 370 ms, res/smp 1.83 cdn/smp 1.83 api/smp 0.00, 9.73 MB/smp (decoder used 0.13), open 161 ms/smp, 429 0, budget min 1073741824
+[15s] r0 first  STACK par: 4.70 sps, p50 228 p95 256 ms, res/smp 1.83 cdn/smp 1.83 api/smp 0.00, 9.73 MB/smp (decoder used 0.13), open 111 ms/smp, 429 0, budget min 1073741824
+[16s] r0 first  STACK one: 4.12 sps, p50 261 p95 290 ms, res/smp 1.83 cdn/smp 1.83 api/smp 0.00, 9.73 MB/smp (decoder used 0.13), open 125 ms/smp, 429 0, budget min 1073741824
+[21s] r0 first  BIG   seq: 1.40 sps, p50 727 p95 923 ms, res/smp 5.50 cdn/smp 5.50 api/smp 0.00, 28.87 MB/smp (decoder used 0.59), open 419 ms/smp, 429 0, budget min 1073741824
+[24s] r0 first  BIG   par: 2.78 sps, p50 382 p95 455 ms, res/smp 5.50 cdn/smp 5.50 api/smp 0.00, 28.87 MB/smp (decoder used 0.59), open 514 ms/smp, 429 0, budget min 1073741824
+[26s] r0 first  BIG   one: 4.57 sps, p50 235 p95 259 ms, res/smp 1.83 cdn/smp 1.83 api/smp 0.00, 9.73 MB/smp (decoder used 0.20), open 117 ms/smp, 429 0, budget min 1073741824
+[29s] r0 steady SEP   seq: 5.33 sps, p50 200 p95 407 ms, res/smp 1.50 cdn/smp 1.50 api/smp 0.00, 7.30 MB/smp (decoder used 0.20), open 0 ms/smp, 429 0, budget min 1073741824
+[30s] r0 steady SEP   par: 13.27 sps, p50 68 p95 167 ms, res/smp 1.25 cdn/smp 1.25 api/smp 0.00, 5.92 MB/smp (decoder used 0.20), open 0 ms/smp, 429 0, budget min 1073741824
+[31s] r0 steady SEP   one: 15.80 sps, p50 53 p95 145 ms, res/smp 0.50 cdn/smp 0.50 api/smp 0.00, 2.52 MB/smp (decoder used 0.07), open 0 ms/smp, 429 0, budget min 1073741824
+[33s] r0 steady STACK seq: 8.13 sps, p50 109 p95 266 ms, res/smp 0.75 cdn/smp 0.75 api/smp 0.00, 3.98 MB/smp (decoder used 0.07), open 0 ms/smp, 429 0, budget min 1073741824
+[34s] r0 steady STACK par: 9.64 sps, p50 108 p95 206 ms, res/smp 0.75 cdn/smp 0.75 api/smp 0.00, 3.98 MB/smp (decoder used 0.07), open 0 ms/smp, 429 0, budget min 1073741824
+[35s] r0 steady STACK one: 12.01 sps, p50 108 p95 116 ms, res/smp 0.75 cdn/smp 0.75 api/smp 0.00, 3.98 MB/smp (decoder used 0.07), open 0 ms/smp, 429 0, budget min 1073741824
+[41s] r0 steady BIG   seq: 2.57 sps, p50 368 p95 618 ms, res/smp 2.67 cdn/smp 2.67 api/smp 0.00, 14.16 MB/smp (decoder used 0.20), open 0 ms/smp, 429 0, budget min 1073741824
+[43s] r0 steady BIG   par: 6.00 sps, p50 170 p95 186 ms, res/smp 2.67 cdn/smp 2.67 api/smp 0.00, 14.16 MB/smp (decoder used 0.20), open 0 ms/smp, 429 0, budget min 1073741824
+[45s] r0 steady BIG   one: 8.35 sps, p50 114 p95 145 ms, res/smp 1.00 cdn/smp 1.00 api/smp 0.00, 5.31 MB/smp (decoder used 0.07), open 0 ms/smp, 429 0, budget min 1073741824
+[72s] conc8 first  SEP  : 13.8 sps, 65.1 resolves/s (limit nan/s), 286 MB/s, p50 597 p95 873 ms, 429 0, budget min None
+[100s] conc8 first  STACK: 35.4 sps, 64.7 resolves/s (limit nan/s), 325 MB/s, p50 230 p95 297 ms, 429 0, budget min None
+[127s] conc8 first  BIG  : 11.0 sps, 63.6 resolves/s (limit nan/s), 315 MB/s, p50 732 p95 867 ms, 429 0, budget min None
+[168s] conc8 steady SEP  : 39.0 sps, 72.8 resolves/s (limit nan/s), 296 MB/s, p50 254 p95 385 ms, 429 0, budget min None
+[208s] conc8 steady STACK: 74.8 sps, 65.4 resolves/s (limit nan/s), 314 MB/s, p50 116 p95 158 ms, 429 0, budget min None
+[249s] conc8 steady BIG  : 24.1 sps, 60.5 resolves/s (limit nan/s), 286 MB/s, p50 377 p95 491 ms, 429 0, budget min None
+# DATA-11 remote (hf://) reads: family ckpt_5k
+
+Repo `hadriencornier/lerobot-data11-bench@59b48590d1` (private). fsspec block 5242880 B, cache ReadAheadCache. Resolver limit -1 per -1 s = nan/s per token.
+
+## Single stream (one reader)
+
+| regime | layout | access | sps | +-CI | p50 ms | p95 ms | resolve/smp | CDN/smp | API/smp | MB/smp | dec MB/smp | open ms/smp | 429 | sps cap at resolver limit |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| first | SEP | one | 7.47 | - | 117 | 209 | 1.17 | 1.17 | 0.00 | 6.19 | 0.13 | 114 | 0 | nan |
+| first | STACK | one | 4.12 | - | 261 | 290 | 1.83 | 1.83 | 0.00 | 9.73 | 0.13 | 125 | 0 | nan |
+| first | BIG | one | 4.57 | - | 235 | 259 | 1.83 | 1.83 | 0.00 | 9.73 | 0.20 | 117 | 0 | nan |
+| first | SEP | par | 4.91 | - | 181 | 279 | 3.17 | 3.17 | 0.00 | 16.81 | 0.39 | 504 | 0 | nan |
+| first | STACK | par | 4.70 | - | 228 | 256 | 1.83 | 1.83 | 0.00 | 9.73 | 0.13 | 111 | 0 | nan |
+| first | BIG | par | 2.78 | - | 382 | 455 | 5.50 | 5.50 | 0.00 | 28.87 | 0.59 | 514 | 0 | nan |
+| first | SEP | seq | 2.54 | - | 381 | 470 | 3.17 | 3.17 | 0.00 | 16.81 | 0.39 | 367 | 0 | nan |
+| first | STACK | seq | 3.54 | - | 314 | 370 | 1.83 | 1.83 | 0.00 | 9.73 | 0.13 | 161 | 0 | nan |
+| first | BIG | seq | 1.40 | - | 727 | 923 | 5.50 | 5.50 | 0.00 | 28.87 | 0.59 | 419 | 0 | nan |
+| steady | SEP | one | 15.80 | - | 53 | 145 | 0.50 | 0.50 | 0.00 | 2.52 | 0.07 | 0 | 0 | nan |
+| steady | STACK | one | 12.01 | - | 108 | 116 | 0.75 | 0.75 | 0.00 | 3.98 | 0.07 | 0 | 0 | nan |
+| steady | BIG | one | 8.35 | - | 114 | 145 | 1.00 | 1.00 | 0.00 | 5.31 | 0.07 | 0 | 0 | nan |
+| steady | SEP | par | 13.27 | - | 68 | 167 | 1.25 | 1.25 | 0.00 | 5.92 | 0.20 | 0 | 0 | nan |
+| steady | STACK | par | 9.64 | - | 108 | 206 | 0.75 | 0.75 | 0.00 | 3.98 | 0.07 | 0 | 0 | nan |
+| steady | BIG | par | 6.00 | - | 170 | 186 | 2.67 | 2.67 | 0.00 | 14.16 | 0.20 | 0 | 0 | nan |
+| steady | SEP | seq | 5.33 | - | 200 | 407 | 1.50 | 1.50 | 0.00 | 7.30 | 0.20 | 0 | 0 | nan |
+| steady | STACK | seq | 8.13 | - | 109 | 266 | 0.75 | 0.75 | 0.00 | 3.98 | 0.07 | 0 | 0 | nan |
+| steady | BIG | seq | 2.57 | - | 368 | 618 | 2.67 | 2.67 | 0.00 | 14.16 | 0.20 | 0 | 0 | nan |
+
+## Concurrent readers (processes, seq / all cameras)
+
+| regime | layout | procs | sps | resolves/s | limit/s | MB/s | p50 ms | p95 ms | 429 | budget min seen |
+|---|---|---|---|---|---|---|---|---|---|---|
+| first | SEP | 8 | 13.8 | 65.1 | nan | 286 | 597 | 873 | 0 | None |
+| first | STACK | 8 | 35.4 | 64.7 | nan | 325 | 230 | 297 | 0 | None |
+| first | BIG | 8 | 11.0 | 63.6 | nan | 315 | 732 | 867 | 0 | None |
+| steady | SEP | 8 | 39.0 | 72.8 | nan | 296 | 254 | 385 | 0 | None |
+| steady | STACK | 8 | 74.8 | 65.4 | nan | 314 | 116 | 158 | 0 | None |
+| steady | BIG | 8 | 24.1 | 60.5 | nan | 286 | 377 | 491 | 0 | None |
+
+## Open cost over hf:// (fresh handle + decoder)
+
+| family | layout | frames/file | MB/file | open ms | req/open | resolve/open | API/open | MB/open | first ms | fetch first | next ms | fetch next |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| ckpt_1k | SEP | 967 | 2.1 | 86 | 2.3 | 1.0 | 0.3 | 1.66 | 1 | 0.0 | 1 | 0.0 |
+| ckpt_1k | STACK | 967 | 6.1 | 123 | 2.3 | 1.0 | 0.3 | 5.15 | 2 | 0.0 | 2 | 0.0 |
+| ckpt_1k | BIG | 2902 | 6.2 | 130 | 2.3 | 1.0 | 0.3 | 5.31 | 1 | 0.3 | 1 | 0.3 |
+| ckpt_5k | SEP | 5156 | 11.8 | 160 | 2.0 | 1.0 | 0.0 | 5.31 | 1 | 0.3 | 102 | 1.0 |
+| ckpt_5k | STACK | 5156 | 34.4 | 312 | 2.3 | 1.0 | 0.3 | 5.31 | 116 | 0.7 | 123 | 1.0 |
+| ckpt_5k | BIG | 15469 | 35.3 | 155 | 2.3 | 1.0 | 0.3 | 5.31 | 1 | 0.3 | 127 | 1.0 |
+
+## Checks
+
+- remote decode == local decode (bit-exact): 36/36
+- SEP == BIG remote samples: 12/12
+- STACK crop vs SEP PSNR (separate lossy encodes): min 42.1 dB over 12 samples
+- pts violations > 1e-4 s: 0 arms
+- 429 responses in stage: 0; resolver budget start -1, end -1, min seen 1073741824
+- skipped arms: 0
+remote done in 249s; checks {"local_vs_remote_checked": 36, "local_vs_remote_mismatch": 0, "sep_vs_big_checked": 12, "sep_vs_big_mismatch": 0}; 429 total 0; budget end (-1, -1, -1, -1)
+== stage remote: ok (253s, cgroup peak 6865 MB)
+uploaded results/20260925T023326Z-smoke (after remote)
+== stage opencost start 2026-09-25T02:47:54Z
+ckpt_1k eviction {'resident_after_prewarm': 1.0, 'resident_after_evict': 0.0, 'probe_file_bytes': 2066448, 'read_bytes_after_evict': 2068480, 'read_bytes_warm_reread': 0, 'read_s_after_evict': 0.009022142039611936, 'read_s_warm': 0.00024828792084008455, 'worked': True}
+ckpt_1k|SEP: frames/file 967 moov 6589B warm open 0.63ms first 0.89ms decode 0.72ms | cold open 1.65ms read 65536B | MB/decoder 0.6612258184523809
+ckpt_1k|STACK: frames/file 967 moov 6652B warm open 1.00ms first 2.70ms decode 2.56ms | cold open 2.02ms read 65536B | MB/decoder 0.9827938988095238
+ckpt_1k|BIG: frames/file 2902 moov 18262B warm open 0.83ms first 1.00ms decode 0.91ms | cold open 1.75ms read 65536B | MB/decoder 0.5966796875
+ckpt_5k eviction {'resident_after_prewarm': 1.0, 'resident_after_evict': 0.0, 'probe_file_bytes': 21177442, 'read_bytes_after_evict': 21180416, 'read_bytes_warm_reread': 0, 'read_s_after_evict': 0.06413787300698459, 'read_s_warm': 0.0015389480395242572, 'worked': True}
+ckpt_5k|SEP: frames/file 5156 moov 31867B warm open 1.24ms first 1.24ms decode 0.98ms | cold open 2.11ms read 196608B | MB/decoder 0.7430710565476191
+ckpt_5k|STACK: frames/file 5156 moov 32194B warm open 1.17ms first 2.38ms decode 2.11ms | cold open 2.19ms read 196608B | MB/decoder 1.0817987351190477
+ckpt_5k|BIG: frames/file 15469 moov 94093B warm open 1.11ms first 0.89ms decode 0.77ms | cold open 3.18ms read 327680B | MB/decoder 1.0024181547619047
+thrash eviction {'resident_after_prewarm': 1.0, 'resident_after_evict': 0.0, 'probe_file_bytes': 11243806, 'read_bytes_after_evict': 11247616, 'read_bytes_warm_reread': 0, 'read_s_after_evict': 0.03934237302746624, 'read_s_warm': 0.0008792729349806905, 'worked': True}
+thrash|SEP: frames/file 2070 moov 13266B warm open 0.61ms first 1.03ms decode 0.83ms | cold open 1.86ms read 65536B | MB/decoder 0.6210472470238095
+thrash|STACK: frames/file 2070 moov 13445B warm open 0.93ms first 3.11ms decode 3.03ms | cold open 2.08ms read 131072B | MB/decoder 1.0189267113095237
+thrash|BIG: frames/file 6208 moov 38294B warm open 0.81ms first 1.17ms decode 0.95ms | cold open 1.75ms read 196608B | MB/decoder 0.7550688244047619
+== stage opencost: ok (47s, cgroup peak 6865 MB)
+uploaded results/20260925T023326Z-smoke (after opencost)
+== stage loader start 2026-09-25T02:48:42Z
+loader: 12 cells x 3 layouts x 1 repeats
+[5s] r0 SEP   thrash all r0.1(C=4) W4 warm: 513 sps +-inf, hit 0.057, opens/smp 2.83, cpu 6.31ms, rd 0.0kB, 1 blk single_block, warm 4.2s, wait p95 210ms, rss 308MB, cg 5497MB
+[7s] r0 STACK thrash all r0.1(C=4) W4 warm: 799 sps +-inf, hit 0.336, opens/smp 0.66, cpu 4.33ms, rd 0.0kB, 1 blk single_block, warm 1.0s, wait p95 155ms, rss 348MB, cg 5565MB
+[9s] r0 BIG   thrash all r0.1(C=4) W4 warm: 472 sps +-inf, hit 0.238, opens/smp 2.29, cpu 6.91ms, rd 0.0kB, 1 blk single_block, warm 0.9s, wait p95 234ms, rss 425MB, cg 5690MB
+[11s] r0 BIG   thrash all r1.0(C=36) W4 warm: 801 sps +-inf, hit 1.000, opens/smp 0.00, cpu 3.99ms, rd 0.0kB, 1 blk single_block, warm 1.1s, wait p95 161ms, rss 252MB, cg 5179MB
+[12s] r0 STACK thrash all r1.0(C=36) W4 warm: 825 sps +-inf, hit 1.000, opens/smp 0.00, cpu 3.98ms, rd 0.0kB, 1 blk single_block, warm 0.9s, wait p95 144ms, rss 256MB, cg 5184MB
+[14s] r0 SEP   thrash all r1.0(C=36) W4 warm: 788 sps +-inf, hit 1.000, opens/smp 0.00, cpu 4.02ms, rd 0.0kB, 1 blk single_block, warm 1.0s, wait p95 148ms, rss 303MB, cg 5317MB
+[16s] r0 SEP   ckpt_5k all c1(C=1) W4 warm: 504 sps +-inf, hit 0.000, opens/smp 3.00, cpu 7.09ms, rd 0.0kB, 1 blk single_block, warm 1.1s, wait p95 244ms, rss 377MB, cg 5357MB
+[18s] r0 STACK ckpt_5k all c1(C=1) W4 warm: 781 sps +-inf, hit 0.342, opens/smp 0.66, cpu 4.15ms, rd 0.0kB, 1 blk single_block, warm 1.1s, wait p95 163ms, rss 344MB, cg 5468MB
+[21s] r0 BIG   ckpt_5k all c1(C=1) W4 warm: 346 sps +-inf, hit 0.000, opens/smp 3.00, cpu 8.71ms, rd 0.0kB, 1 blk single_block, warm 1.2s, wait p95 296ms, rss 619MB, cg 6019MB
+[23s] r0 BIG   ckpt_5k all call(C=9) W4 warm: 882 sps +-inf, hit 1.000, opens/smp 0.00, cpu 3.51ms, rd 0.0kB, 1 blk single_block, warm 1.1s, wait p95 147ms, rss 248MB, cg 5162MB
+[24s] r0 STACK ckpt_5k all call(C=9) W4 warm: 1001 sps +-inf, hit 1.000, opens/smp 0.00, cpu 2.97ms, rd 0.0kB, 1 blk single_block, warm 0.7s, wait p95 118ms, rss 248MB, cg 5185MB
+[25s] r0 SEP   ckpt_5k all call(C=9) W4 warm: 839 sps +-inf, hit 1.000, opens/smp 0.00, cpu 3.51ms, rd 0.0kB, 1 blk single_block, warm 0.7s, wait p95 94ms, rss 274MB, cg 5229MB
+[26s] r0 SEP   thrash top r0.1(C=4) W4 warm: 1327 sps +-inf, hit 0.322, opens/smp 0.68, cpu 2.45ms, rd 0.0kB, 1 blk single_block, warm 0.5s, wait p95 102ms, rss 323MB, cg 5384MB
+[28s] r0 STACK thrash top r0.1(C=4) W4 warm: 773 sps +-inf, hit 0.332, opens/smp 0.67, cpu 4.18ms, rd 0.0kB, 1 blk single_block, warm 0.7s, wait p95 162ms, rss 253MB, cg 5189MB
+[29s] r0 BIG   thrash top r0.1(C=4) W4 warm: 1907 sps +-inf, hit 1.000, opens/smp 0.00, cpu 1.63ms, rd 0.0kB, 1 blk single_block, warm 0.7s, wait p95 64ms, rss 239MB, cg 5124MB
+[29s] r0 BIG   thrash top r1.0(C=36) W4 warm: 2028 sps +-inf, hit 1.000, opens/smp 0.00, cpu 1.63ms, rd 0.0kB, 1 blk single_block, warm 0.5s, wait p95 66ms, rss 240MB, cg 5116MB
+[31s] r0 STACK thrash top r1.0(C=36) W4 warm: 1027 sps +-inf, hit 1.000, opens/smp 0.00, cpu 3.26ms, rd 0.0kB, 1 blk single_block, warm 0.8s, wait p95 69ms, rss 253MB, cg 5165MB
+[32s] r0 SEP   thrash top r1.0(C=36) W4 warm: 1718 sps +-inf, hit 1.000, opens/smp 0.00, cpu 1.73ms, rd 0.0kB, 1 blk single_block, warm 0.5s, wait p95 51ms, rss 248MB, cg 5156MB
+[35s] r0 SEP   thrash all r0.1(C=4) W4 cold: 274 sps +-inf, hit 0.096, opens/smp 2.71, cpu 8.11ms, rd 129.0kB, 1 blk single_block, warm 1.3s, wait p95 479ms, rss 519MB, cg 5654MB
+[37s] r0 STACK thrash all r0.1(C=4) W4 cold: 535 sps +-inf, hit 0.355, opens/smp 0.64, cpu 4.78ms, rd 43.4kB, 1 blk single_block, warm 1.6s, wait p95 167ms, rss 402MB, cg 5226MB
+[41s] r0 BIG   thrash all r0.1(C=4) W4 cold: 335 sps +-inf, hit 0.236, opens/smp 2.29, cpu 7.51ms, rd 122.7kB, 1 blk single_block, warm 1.4s, wait p95 380ms, rss 528MB, cg 5427MB
+[43s] r0 BIG   thrash all r1.0(C=36) W4 cold: 524 sps +-inf, hit 1.000, opens/smp 0.00, cpu 4.26ms, rd 108.0kB, 1 blk single_block, warm 1.7s, wait p95 249ms, rss 306MB, cg 4689MB
+[46s] r0 STACK thrash all r1.0(C=36) W4 cold: 593 sps +-inf, hit 1.000, opens/smp 0.00, cpu 4.12ms, rd 37.9kB, 1 blk single_block, warm 1.3s, wait p95 213ms, rss 271MB, cg 4663MB
+[48s] r0 SEP   thrash all r1.0(C=36) W4 cold: 425 sps +-inf, hit 1.000, opens/smp 0.00, cpu 4.53ms, rd 113.6kB, 1 blk single_block, warm 1.6s, wait p95 314ms, rss 315MB, cg 4775MB
+[52s] r0 SEP   ckpt_5k all c1(C=1) W4 cold: 297 sps +-inf, hit 0.000, opens/smp 3.00, cpu 8.34ms, rd 119.1kB, 1 blk single_block, warm 1.8s, wait p95 430ms, rss 433MB, cg 4880MB
+[55s] r0 STACK ckpt_5k all c1(C=1) W4 cold: 568 sps +-inf, hit 0.316, opens/smp 0.68, cpu 4.47ms, rd 37.1kB, 1 blk single_block, warm 1.5s, wait p95 218ms, rss 330MB, cg 4669MB
+[58s] r0 BIG   ckpt_5k all c1(C=1) W4 cold: 257 sps +-inf, hit 0.000, opens/smp 3.00, cpu 9.64ms, rd 120.2kB, 1 blk single_block, warm 1.6s, wait p95 479ms, rss 531MB, cg 4747MB
+[61s] r0 BIG   ckpt_5k all call(C=9) W4 cold: 535 sps +-inf, hit 1.000, opens/smp 0.00, cpu 3.95ms, rd 105.3kB, 1 blk single_block, warm 1.7s, wait p95 234ms, rss 260MB, cg 4373MB
+[63s] r0 STACK ckpt_5k all call(C=9) W4 cold: 726 sps +-inf, hit 1.000, opens/smp 0.00, cpu 3.29ms, rd 37.2kB, 1 blk single_block, warm 1.1s, wait p95 170ms, rss 261MB, cg 4407MB
+[65s] r0 SEP   ckpt_5k all call(C=9) W4 cold: 517 sps +-inf, hit 1.000, opens/smp 0.00, cpu 3.91ms, rd 106.5kB, 1 blk single_block, warm 1.1s, wait p95 213ms, rss 265MB, cg 4417MB
+[67s] r0 SEP   thrash top r0.1(C=4) W4 cold: 780 sps +-inf, hit 0.340, opens/smp 0.66, cpu 2.84ms, rd 39.2kB, 1 blk single_block, warm 1.0s, wait p95 110ms, rss 319MB, cg 4540MB
+[68s] r0 STACK thrash top r0.1(C=4) W4 cold: 590 sps +-inf, hit 0.320, opens/smp 0.68, cpu 4.48ms, rd 43.9kB, 1 blk single_block, warm 1.0s, wait p95 198ms, rss 282MB, cg 4428MB
+[70s] r0 BIG   thrash top r0.1(C=4) W4 cold: 1310 sps +-inf, hit 1.000, opens/smp 0.00, cpu 1.61ms, rd 37.4kB, 1 blk single_block, warm 0.8s, wait p95 99ms, rss 253MB, cg 4322MB
+[71s] r0 BIG   thrash top r1.0(C=36) W4 cold: 1204 sps +-inf, hit 1.000, opens/smp 0.00, cpu 1.75ms, rd 37.2kB, 1 blk single_block, warm 0.7s, wait p95 101ms, rss 253MB, cg 4323MB
+[73s] r0 STACK thrash top r1.0(C=36) W4 cold: 749 sps +-inf, hit 1.000, opens/smp 0.00, cpu 3.54ms, rd 38.0kB, 1 blk single_block, warm 0.9s, wait p95 174ms, rss 264MB, cg 4365MB
+[74s] r0 SEP   thrash top r1.0(C=36) W4 cold: 1173 sps +-inf, hit 1.000, opens/smp 0.00, cpu 1.83ms, rd 36.5kB, 1 blk single_block, warm 0.9s, wait p95 106ms, rss 260MB, cg 4366MB
+loader done in 75s, 36 runs, 0 errors
+== stage loader: ok (78s, cgroup peak 6865 MB)
+uploaded results/20260925T023326Z-smoke (after loader)
+== stage model start 2026-09-25T02:50:01Z
+# DATA-11 benchmark model (EXTRAPOLATED from a scaled-down benchmark (SMOKE: numbers are not results))
+
+## Open-cost fits (ms per miss = construct + close + extra first-frame decode)
+
+| layout | state | a ms | b us/frame | F range |
+|---|---|---|---|---|
+| SEP | warm | 0.563 | 0.1864 | [967.3333333333334, 5156.333333333333] |
+| STACK | warm | 1.009 | 0.0864 | [967.3333333333334, 5156.333333333333] |
+| BIG | warm | 0.896 | 0.0238 | [2902, 15469] |
+| SEP+BIG | warm | 0.927 | 0.0283 | [967.3333333333334, 15469] |
+| SEP | cold | 1.782 | 0.0830 | [967.3333333333334, 5156.333333333333] |
+| STACK | cold | 2.218 | 0.0068 | [967.3333333333334, 5156.333333333333] |
+| BIG | cold | 1.403 | 0.1256 | [2902, 15469] |
+| SEP+BIG | cold | 1.635 | 0.1072 | [967.3333333333334, 15469] |
+
+## Thrash sweep fits (worker-s per sample vs opens per sample)
+
+| arm | pts | decode ms | loader open ms | isolated open ms | kappa |
+|---|---|---|---|---|---|
+| SEP|all|W4|warm | 2 | 5.073 | 0.965 | 0.985 | 0.979 |
+| STACK|all|W4|warm | 2 | 4.848 | 0.236 | 1.188 | 0.199 |
+| BIG|all|W4|warm | 2 | 4.996 | 1.524 | 1.102 | 1.382 |
+| SEP|top|W4|warm | 2 | 2.328 | 1.012 | 0.985 | 1.027 |
+| STACK|top|W4|warm | 2 | 3.896 | 1.919 | 1.188 | 1.615 |
+| BIG|top|W4|warm | 2 | 2.035 | 0.000 | 1.102 | 0.0 |
+| SEP|all|W4|cold | 2 | 9.406 | 1.919 | 1.857 | 1.034 |
+| STACK|all|W4|cold | 2 | 6.750 | 1.137 | 2.232 | 0.509 |
+| BIG|all|W4|cold | 2 | 7.634 | 1.883 | 2.301 | 0.818 |
+| SEP|top|W4|cold | 2 | 3.410 | 2.600 | 1.857 | 1.4 |
+| STACK|top|W4|cold | 2 | 5.341 | 2.121 | 2.232 | 0.95 |
+| BIG|top|W4|cold | 2 | 3.189 | 0.000 | 2.301 | 0.0 |
+
+Hit-rate model vs measured (thrash arms): max abs err 0.027, mean 0.005 over 24 arms.
+
+## Validation on ckpt_5k
+
+| arm | measured sps | pred sps | err % | err % (measured opens) | h meas / model |
+|---|---|---|---|---|---|
+| ckpt_5k|SEP|all|c1|4|warm | 504 | 486 | -3.5 | -3.5 | 0.000 / 0.000 |
+| ckpt_5k|STACK|all|c1|4|warm | 781 | 794 | +1.6 | +1.6 | 0.342 / 0.333 |
+| ckpt_5k|BIG|all|c1|4|warm | 346 | 375 | +8.4 | +8.4 | 0.000 / 0.000 |
+| ckpt_5k|BIG|all|call|4|warm | 882 | 801 | -9.3 | -9.3 | 1.000 / 1.000 |
+| ckpt_5k|STACK|all|call|4|warm | 1001 | 825 | -17.6 | -17.6 | 1.000 / 1.000 |
+| ckpt_5k|SEP|all|call|4|warm | 839 | 788 | -6.0 | -6.0 | 1.000 / 1.000 |
+| ckpt_5k|SEP|all|c1|4|cold | 297 | 247 | -16.8 | -16.8 | 0.000 / 0.000 |
+| ckpt_5k|STACK|all|c1|4|cold | 568 | 532 | -6.3 | -6.6 | 0.316 / 0.333 |
+| ckpt_5k|BIG|all|c1|4|cold | 257 | 254 | -1.1 | -1.1 | 0.000 / 0.000 |
+| ckpt_5k|BIG|all|call|4|cold | 535 | 524 | -2.0 | -2.0 | 1.000 / 1.000 |
+| ckpt_5k|STACK|all|call|4|cold | 726 | 593 | -18.4 | -18.4 | 1.000 / 1.000 |
+| ckpt_5k|SEP|all|call|4|cold | 517 | 425 | -17.8 | -17.8 | 1.000 / 1.000 |
+
+## Predictions (EXTRAPOLATED; cache 100 per worker)
+
+| dataset | variant | pattern | W | state | h | opens/sample | pred sps | beyond F range |
+|---|---|---|---|---|---|---|---|---|
+| lerobot/abc_130k_v3_train | SEP (as stored) | all | 4 | warm | 0.003 | 2.99 | 407 | yes |
+| lerobot/abc_130k_v3_train | STACK, same frames/file (files / 3) | all | 4 | warm | 0.008 | 0.99 | 732 | yes |
+| lerobot/abc_130k_v3_train | STACK, same bytes/file (LeRobot size rollover) | all | 4 | warm | 0.003 | 1.00 | 771 |  |
+| lerobot/abc_130k_v3_train | BIG (3x frames/file, files / 3) | all | 4 | warm | 0.008 | 2.98 | 230 | yes |
+| lerobot/abc_130k_v3_train | SEP (as stored) | top | 4 | warm | 0.008 | 0.99 | 1004 | yes |
+
+# Remote (hf://) model (EXTRAPOLATED from a scaled-down benchmark (SMOKE: numbers are not results))
+
+Per-fetch fit on 12 single-reader arms: lat_ms = -0.1 + 131.5 x fetches/sample (R^2 0.9846369867337748). Requests per fetch 2.00, resolves per fetch 1.00, ms per request 65.7. Resolver limit nan/s per token.
+
+| open fit | a ms | b us/frame | F range | req/open | resolve/open | API/open | fetch/open |
+|---|---|---|---|---|---|---|---|
+| SEP+BIG | 111.8 | 3.425 | [967.3333333333334, 15469.0] | 2.25 | 1.0 | 0.25 | 1.0 |
+| STACK | 78.8 | 45.283 | [967.3333333333334, 5156.333333333333] | 2.3333333333333335 | 1.0 | 0.3333333333333333 | 1.0 |
+
+| fetch-count check | file MB | measured fetches | model |
+|---|---|---|---|
+| open ckpt_1k|SEP | 2.1 | 1.00 | 1.00 |
+| open ckpt_1k|STACK | 6.1 | 1.00 | 1.14 |
+| open ckpt_1k|BIG | 6.2 | 1.33 | 1.16 |
+| open ckpt_5k|SEP | 11.8 | 1.33 | 1.55 |
+| open ckpt_5k|STACK | 34.4 | 1.67 | 1.85 |
+| open ckpt_5k|BIG | 35.3 | 1.33 | 1.85 |
+| steady steady|SEP|seq | 11.8 | 0.50 | 0.55 |
+| steady steady|SEP|one | 11.8 | 0.50 | 0.55 |
+| steady steady|STACK|seq | 34.4 | 0.75 | 0.85 |
+| steady steady|STACK|one | 34.4 | 0.75 | 0.85 |
+| steady steady|BIG|seq | 35.3 | 0.89 | 0.85 |
+| steady steady|BIG|one | 35.3 | 1.00 | 0.85 |
+
+## Remote predictions (EXTRAPOLATED unless marked ANALYTIC)
+
+| dataset | variant | pattern | h | opens/smp | fetches/smp | resolves/smp | MB/smp | ms/smp 1 reader | sps 1 reader | sps cap (resolver limit) | beyond F range |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| lerobot/abc_130k_v3_train | SEP (as stored) | all | 0.0026 | 2.99 | 5.71 | 5.71 | 30.0 | 751 | 1.33 | nan | yes |
+| lerobot/abc_130k_v3_train | STACK, same frames/file (files / 3) | all | 0.0079 | 0.99 | 1.96 | 1.96 | 10.3 | 258 | 3.88 | nan | yes |
+| lerobot/abc_130k_v3_train | BIG (3x frames/file, files / 3) | all | 0.0078 | 2.98 | 5.88 | 5.88 | 30.8 | 773 | 1.29 | nan | yes |
+| lerobot/abc_130k_v3_train | SEP (as stored) | one | 0.0079 | 0.99 | 1.90 | 1.90 | 10.0 | 250 | 4.01 | nan | yes |
+| lerobot/abc_130k_v3_train | STACK, same frames/file (files / 3) | one | 0.0079 | 0.99 | 1.96 | 1.96 | 10.3 | 258 | 3.88 | nan | yes |
+| lerobot/abc_130k_v3_train | BIG (3x frames/file, files / 3) | one | 0.0236 | 0.98 | 1.95 | 1.95 | 10.2 | 256 | 3.91 | nan | yes |
+| cadene/droid_1.0.1_v30 | SEP (as stored) | all | 0.0161 | 2.95 | 5.51 | 5.51 | 28.9 | 724 | 1.38 | nan |  |
+| cadene/droid_1.0.1_v30 | STACK, same frames/file (files / 3) | all | 0.0488 | 0.95 | 1.90 | 1.90 | 10.0 | 250 | 4.00 | nan |  |
+| cadene/droid_1.0.1_v30 | BIG (3x frames/file, files / 3) | all | 0.0483 | 2.85 | 5.71 | 5.71 | 29.9 | 750 | 1.33 | nan | yes |
+| cadene/droid_1.0.1_v30 | SEP (as stored) | one | 0.0488 | 0.95 | 1.80 | 1.80 | 9.5 | 237 | 4.22 | nan |  |
+| cadene/droid_1.0.1_v30 | STACK, same frames/file (files / 3) | one | 0.0488 | 0.95 | 1.90 | 1.90 | 10.0 | 250 | 4.00 | nan |  |
+| cadene/droid_1.0.1_v30 | BIG (3x frames/file, files / 3) | one | 0.1465 | 0.85 | 1.80 | 1.80 | 9.5 | 237 | 4.22 | nan | yes |
+
+| ANALYTIC sequential | variant | fetches/smp | sps cap (resolver limit) |
+|---|---|---|---|
+| lerobot/abc_130k_v3_train | SEP (as stored) | 0.00131 | nan |
+| lerobot/abc_130k_v3_train | STACK | 0.00127 | nan |
+| cadene/droid_1.0.1_v30 | SEP (as stored) | 0.00150 | nan |
+| cadene/droid_1.0.1_v30 | STACK | 0.00146 | nan |
+
+## Remote assumptions
+
+- Access = uniform random frames (map-style shuffle) with a 100-decoder LRU per worker; LRU hit rate h = min(1, floor(C/k)/U).
+- fsspec readahead cache holds one block of 5242880 bytes per open handle; a random frame needs a new block fetch with chance 1 - block/file bytes; an open costs one fetch (moov is at the start, faststart).
+- Each block fetch = 1 resolve call (counts against the per-token 'resolvers' budget) + 1 CDN call; measured, see resolves_per_fetch.
+- Latency per sample is linear in block fetches per sample (single reader, cameras one after another); fitted on this job's network path to the Hub.
+- sps_cap_resolver_limit = resolver budget per second / resolves per sample: a per-token ceiling that no amount of hardware removes.
+- DROID bytes per frame = ABC bytes per frame x pixel ratio (ASSUMED; not measured). Frames/file beyond the measured range are flagged.
+- API calls per open (paths-info when the fsspec dircache misses) are an upper bound: a long-lived worker caches them.
+- Sequential rows are analytic only (no measurement of in-order streaming reads here).
+== stage model: ok (0s, cgroup peak 6865 MB)
+uploaded results/20260925T023326Z-smoke (after model)
+== done 2026-09-25T02:50:02Z: /results/20260925T023326Z-smoke
+== exit code 0 at 2026-09-25T02:50:02Z

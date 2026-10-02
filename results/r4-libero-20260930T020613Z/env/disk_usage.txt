@@ -1,0 +1,9 @@
+7.6M	/work/check_src.npz
+4.0K	/work/constraints.txt
+504K	/work/dl
+548K	/work/dl_bundle
+132M	/work/ds
+0	/work/enc
+240K	/work/lerobot_home
+61M	/work/src
+1.5G	/work/venv

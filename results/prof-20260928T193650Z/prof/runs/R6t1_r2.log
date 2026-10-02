@@ -1,0 +1,12 @@
+
+Downloading bytes:           |  0.00B            [A
+Reconstructing (incomplete total...): |          |  0.00B /  0.00B            [A
+Fetching 3 files:   0%|          | 0/3 [00:00<?, ?it/s][AFetching 3 files: 100%|██████████| 3/3 [00:00<00:00, 1067.52it/s]
+
+Download complete: :           |  0.00B            [A
+Reconstruction complete: |          |  0.00B /  0.00B                         [AReconstruction complete: |          |  0.00B /  0.00B            
+Download complete: :           |  0.00B            
+'peer closed connection without sending complete message body (received 3139764 bytes, expected 3147903)' thrown while requesting GET https://huggingface.co/datasets/hadriencornier/lerobot-data11-r3-sep/resolve/31fd7b6605cd41c6c6c7c059ccd261924d74f033/data/chunk-000/file-005.parquet
+WARNING:huggingface_hub.utils._http:'peer closed connection without sending complete message body (received 3139764 bytes, expected 3147903)' thrown while requesting GET https://huggingface.co/datasets/hadriencornier/lerobot-data11-r3-sep/resolve/31fd7b6605cd41c6c6c7c059ccd261924d74f033/data/chunk-000/file-005.parquet
+Retrying in 1s [Retry 1/5].
+WARNING:huggingface_hub.utils._http:Retrying in 1s [Retry 1/5].

@@ -1,0 +1,4 @@
+py-spy> Sampling process 100 times a second for 30 seconds. Press Control-C to exit.
+
+py-spy> Wrote raw flamegraph data to '/results/ab-smoke-20260928/ab/runs/BASE_D6_pyspy_gil.pyspy.txt'. Samples: 1578 Errors: 278
+py-spy> You can use the flamegraph.pl script from https://github.com/brendangregg/flamegraph to generate a SVG

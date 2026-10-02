@@ -1,0 +1,4264 @@
+{
+ "repo": "lerobot/abc_130k_v3_train",
+ "revision": "68651e4929d9fb00f798937b2d62617cab5c771d",
+ "plan": {
+  "arms": [
+   "base",
+   "p1p2",
+   "pr3917"
+  ],
+  "repeats": 1,
+  "n_steady": 50,
+  "cap_s": 180,
+  "hash_n": 32,
+  "save_n": 16,
+  "pr3917_episodes": 400,
+  "regimes_filter": [
+   "w0_cachedef",
+   "w8_cache3",
+   "w0_dt2",
+   "w1_dt8"
+  ]
+ },
+ "table": [
+  {
+   "arm": "base",
+   "regime": "w0_cachedef",
+   "n_ok": 1,
+   "n_runs": 1,
+   "statuses": [
+    "ok"
+   ],
+   "sps_mean": 4.455721051196785,
+   "sps_ci95": null,
+   "first_batch_s": 39.86666879209224,
+   "build_s": 4.329480280051939,
+   "req_per_sample": 0.5178571428571429,
+   "resolve_per_sample": 0.25,
+   "cdn_per_sample": 0.25,
+   "mb_per_sample": 2.3445843035714287,
+   "status_429": 0,
+   "peak_pss_gb": 10.40607738494873,
+   "peak_cgroup_gb": 16.821014404296875,
+   "steady_n": [
+    56
+   ],
+   "errors": []
+  },
+  {
+   "arm": "base",
+   "regime": "w8_cache3",
+   "n_ok": 0,
+   "n_runs": 1,
+   "statuses": [
+    "mem_guard_killed"
+   ],
+   "sps_mean": null,
+   "sps_ci95": null,
+   "first_batch_s": null,
+   "build_s": null,
+   "req_per_sample": null,
+   "resolve_per_sample": null,
+   "cdn_per_sample": null,
+   "mb_per_sample": null,
+   "status_429": 0,
+   "peak_pss_gb": 0,
+   "peak_cgroup_gb": 0,
+   "steady_n": [
+    null
+   ],
+   "errors": [
+    "cgroup anon memory above 27000 MB; run killed to protect the job"
+   ]
+  },
+  {
+   "arm": "p1p2",
+   "regime": "w0_cachedef",
+   "n_ok": 1,
+   "n_runs": 1,
+   "statuses": [
+    "ok"
+   ],
+   "sps_mean": 5.439425040246517,
+   "sps_ci95": null,
+   "first_batch_s": 27.20450241700746,
+   "build_s": 4.31051841203589,
+   "req_per_sample": 0.6071428571428571,
+   "resolve_per_sample": 0.25,
+   "cdn_per_sample": 0.25,
+   "mb_per_sample": 2.3751840714285715,
+   "status_429": 0,
+   "peak_pss_gb": 10.435955047607422,
+   "peak_cgroup_gb": 12.673351287841797,
+   "steady_n": [
+    56
+   ],
+   "errors": []
+  },
+  {
+   "arm": "p1p2",
+   "regime": "w8_cache3",
+   "n_ok": 0,
+   "n_runs": 1,
+   "statuses": [
+    "mem_guard_killed"
+   ],
+   "sps_mean": null,
+   "sps_ci95": null,
+   "first_batch_s": null,
+   "build_s": null,
+   "req_per_sample": null,
+   "resolve_per_sample": null,
+   "cdn_per_sample": null,
+   "mb_per_sample": null,
+   "status_429": 0,
+   "peak_pss_gb": 0,
+   "peak_cgroup_gb": 0,
+   "steady_n": [
+    null
+   ],
+   "errors": [
+    "cgroup anon memory above 27000 MB; run killed to protect the job"
+   ]
+  },
+  {
+   "arm": "pr3917",
+   "regime": "w0_dt2",
+   "n_ok": 1,
+   "n_runs": 1,
+   "statuses": [
+    "ok"
+   ],
+   "sps_mean": 9.842287333619876,
+   "sps_ci95": null,
+   "first_batch_s": 49.138680277974345,
+   "build_s": 6.021906745969318,
+   "req_per_sample": 1.3392857142857142,
+   "resolve_per_sample": 0.625,
+   "cdn_per_sample": 0.6964285714285714,
+   "mb_per_sample": 5.1807081607142855,
+   "status_429": 0,
+   "peak_pss_gb": 4.372946739196777,
+   "peak_cgroup_gb": 6.091030120849609,
+   "steady_n": [
+    56
+   ],
+   "errors": []
+  },
+  {
+   "arm": "pr3917",
+   "regime": "w1_dt8",
+   "n_ok": 1,
+   "n_runs": 1,
+   "statuses": [
+    "ok"
+   ],
+   "sps_mean": 8.24527775467727,
+   "sps_ci95": null,
+   "first_batch_s": 43.75773336610291,
+   "build_s": 3.785292356973514,
+   "req_per_sample": 1.3571428571428572,
+   "resolve_per_sample": 0.6428571428571429,
+   "cdn_per_sample": 0.6964285714285714,
+   "mb_per_sample": 5.180720392857142,
+   "status_429": 0,
+   "peak_pss_gb": 4.558355331420898,
+   "peak_cgroup_gb": 6.2806396484375,
+   "steady_n": [
+    56
+   ],
+   "errors": []
+  }
+ ],
+ "correctness": {
+  "n_hashed": {
+   "base": 32,
+   "p1p2": 32,
+   "pr3917": 32
+  },
+  "p1p2_vs_base_identical": true,
+  "p1p2_vs_base_first_mismatch": null,
+  "mapcheck_pr3917": {
+   "n_samples": 16,
+   "n_camera_frames": 48,
+   "n_equal": 48,
+   "max_abs_diff": 0
+  },
+  "mapcheck_base": {
+   "n_samples": 16,
+   "n_camera_frames": 48,
+   "n_equal": 48,
+   "max_abs_diff": 0
+  }
+ },
+ "warmup": {
+  "base": {
+   "status": "ok",
+   "build_s": 16.781810245942324,
+   "first_batch_s": 42.598760323016904,
+   "peak_pss_gb": 10.394042015075684,
+   "error": null,
+   "status_429_total": 0,
+   "build_http": {
+    "requests": 60,
+    "resolve_requests": 8,
+    "cdn_requests": 2,
+    "api_requests": 50,
+    "http_bytes": 16673337,
+    "http_s": 5.141382005880587,
+    "status_429": 0,
+    "status_other_err": 4,
+    "cdn_hit": 0,
+    "cdn_miss": 0,
+    "fetch_calls": 2,
+    "fetch_bytes": 279506,
+    "fetch_s": 0.38398678600788116,
+    "resolver_min_seen": 1073741824,
+    "pid": 3276
+   }
+  },
+  "p1p2": {
+   "status": "ok",
+   "build_s": 4.690831515006721,
+   "first_batch_s": 30.119870071997866,
+   "peak_pss_gb": 10.460278511047363,
+   "error": null,
+   "status_429_total": 0,
+   "build_http": {
+    "requests": 11,
+    "resolve_requests": 5,
+    "cdn_requests": 2,
+    "api_requests": 4,
+    "http_bytes": 3373761,
+    "http_s": 0.6887028267374262,
+    "status_429": 0,
+    "status_other_err": 4,
+    "cdn_hit": 0,
+    "cdn_miss": 0,
+    "fetch_calls": 2,
+    "fetch_bytes": 279506,
+    "fetch_s": 0.26503475510980934,
+    "resolver_min_seen": 1073741824,
+    "pid": 3364
+   }
+  },
+  "pr3917": {
+   "status": "ok",
+   "build_s": 224.06114488106687,
+   "first_batch_s": 45.36036950489506,
+   "peak_pss_gb": 5.343954086303711,
+   "error": null,
+   "status_429_total": 0,
+   "build_http": {
+    "requests": 3625,
+    "resolve_requests": 1170,
+    "cdn_requests": 2340,
+    "api_requests": 115,
+    "http_bytes": 131084936184,
+    "http_s": 385.8892785127973,
+    "status_429": 0,
+    "status_other_err": 1,
+    "cdn_hit": 0,
+    "cdn_miss": 0,
+    "fetch_calls": 0,
+    "fetch_bytes": 0,
+    "fetch_s": 0.0,
+    "resolver_min_seen": 1073741824,
+    "pid": 4744
+   }
+  }
+ },
+ "runs": [
+  {
+   "arm": "base",
+   "regime": "hash",
+   "rep": -1,
+   "num_workers": 0,
+   "seed": 0,
+   "decode_threads": null,
+   "buffer_size": 16,
+   "decoder_cache_env": null,
+   "n_target": 32,
+   "cap_s": 900,
+   "status": "ok",
+   "utc_start": "2026-09-25T16:35:25Z",
+   "lerobot_file": "/work/src_base/src/lerobot/__init__.py",
+   "cpu_quota": 8,
+   "build_s": 16.781810245942324,
+   "rss_after_build_gb": 0.7639808654785156,
+   "build_http": {
+    "requests": 60,
+    "resolve_requests": 8,
+    "cdn_requests": 2,
+    "api_requests": 50,
+    "http_bytes": 16673337,
+    "http_s": 5.141382005880587,
+    "status_429": 0,
+    "status_other_err": 4,
+    "cdn_hit": 0,
+    "cdn_miss": 0,
+    "fetch_calls": 2,
+    "fetch_bytes": 279506,
+    "fetch_s": 0.38398678600788116,
+    "resolver_min_seen": 1073741824,
+    "pid": 3276
+   },
+   "pss_at_first_batch_gb": 9.360793113708496,
+   "first_batch_s": 42.598760323016904,
+   "first_batch_s_incl_build": 59.38173485302832,
+   "first_batch_http": {
+    "requests": 234,
+    "resolve_requests": 102,
+    "cdn_requests": 102,
+    "api_requests": 30,
+    "http_bytes": 1136654777,
+    "http_s": 18.7502033499768,
+    "status_429": 0,
+    "status_other_err": 0,
+    "cdn_hit": 0,
+    "cdn_miss": 0,
+    "fetch_calls": 102,
+    "fetch_bytes": 1126371047,
+    "fetch_s": 44.91872227122076,
+    "resolver_min_seen": 1073741824
+   },
+   "n_samples": 40,
+   "first_batch_n": 8,
+   "steady_n": 32,
+   "steady_s": 8.033529519918375,
+   "sps": 3.983305211073045,
+   "batch_times": [
+    42.5988,
+    43.0398,
+    46.0652,
+    49.8293,
+    50.2643
+   ],
+   "total_http": {
+    "requests": 263,
+    "resolve_requests": 116,
+    "cdn_requests": 116,
+    "api_requests": 31,
+    "http_bytes": 1267951498,
+    "http_s": 21.033256866852753,
+    "status_429": 0,
+    "status_other_err": 0,
+    "cdn_hit": 0,
+    "cdn_miss": 0,
+    "fetch_calls": 116,
+    "fetch_bytes": 1257322471,
+    "fetch_s": 50.91128382005263,
+    "resolver_min_seen": 1073741824
+   },
+   "steady_http": {
+    "requests": 29,
+    "resolve_requests": 14,
+    "cdn_requests": 14,
+    "api_requests": 1,
+    "http_bytes": 131296721,
+    "http_s": 2.2830535168759525,
+    "status_429": 0,
+    "status_other_err": 0,
+    "cdn_hit": 0,
+    "cdn_miss": 0,
+    "fetch_calls": 14,
+    "fetch_bytes": 130951424,
+    "fetch_s": 5.992561548831873
+   },
+   "per_sample": {
+    "requests": 0.90625,
+    "resolve": 0.4375,
+    "cdn": 0.4375,
+    "api": 0.03125,
+    "mb": 4.10302253125,
+    "status_429": 0,
+    "cdn_hit": 0,
+    "cdn_miss": 0
+   },
+   "status_429_total": 0,
+   "hashes": [
+    {
+     "episode_index": 11938,
+     "frame_index": 0,
+     "index": 36124233,
+     "timestamp": 0.0,
+     "observation.images.left_wrist": "a31f57f24ca71e11",
+     "observation.images.left_wrist.dtype": "torch.float32",
+     "observation.images.left_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.right_wrist": "705c3ff1a978abea",
+     "observation.images.right_wrist.dtype": "torch.float32",
+     "observation.images.right_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.top": "1ecd7792a9abbeac",
+     "observation.images.top.dtype": "torch.float32",
+     "observation.images.top.shape": [
+      3,
+      224,
+      224
+     ]
+    },
+    {
+     "episode_index": 69623,
+     "frame_index": 2,
+     "index": 206455958,
+     "timestamp": 0.06666667014360428,
+     "observation.images.left_wrist": "7ac9671d89d59265",
+     "observation.images.left_wrist.dtype": "torch.float32",
+     "observation.images.left_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.right_wrist": "3cfca50c0692c907",
+     "observation.images.right_wrist.dtype": "torch.float32",
+     "observation.images.right_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.top": "abecb4a076e04371",
+     "observation.images.top.dtype": "torch.float32",
+     "observation.images.top.shape": [
+      3,
+      224,
+      224
+     ]
+    },
+    {
+     "episode_index": 119372,
+     "frame_index": 0,
+     "index": 353263020,
+     "timestamp": 0.0,
+     "observation.images.left_wrist": "ae6b0525373d046b",
+     "observation.images.left_wrist.dtype": "torch.float32",
+     "observation.images.left_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.right_wrist": "aa4e17e92696ff05",
+     "observation.images.right_wrist.dtype": "torch.float32",
+     "observation.images.right_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.top": "192b6f1ba08f24a1",
+     "observation.images.top.dtype": "torch.float32",
+     "observation.images.top.shape": [
+      3,
+      224,
+      224
+     ]
+    },
+    {
+     "episode_index": 23791,
+     "frame_index": 1,
+     "index": 71540303,
+     "timestamp": 0.03333333507180214,
+     "observation.images.left_wrist": "6366e878bcf10fb1",
+     "observation.images.left_wrist.dtype": "torch.float32",
+     "observation.images.left_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.right_wrist": "dc61e2c3a385047a",
+     "observation.images.right_wrist.dtype": "torch.float32",
+     "observation.images.right_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.top": "f6540e64ec596a14",
+     "observation.images.top.dtype": "torch.float32",
+     "observation.images.top.shape": [
+      3,
+      224,
+      224
+     ]
+    },
+    {
+     "episode_index": 59591,
+     "frame_index": 0,
+     "index": 177068219,
+     "timestamp": 0.0,
+     "observation.images.left_wrist": "808f4f383851809e",
+     "observation.images.left_wrist.dtype": "torch.float32",
+     "observation.images.left_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.right_wrist": "75f6bdc956fb78c7",
+     "observation.images.right_wrist.dtype": "torch.float32",
+     "observation.images.right_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.top": "06e02a3135fedc2e",
+     "observation.images.top.dtype": "torch.float32",
+     "observation.images.top.shape": [
+      3,
+      224,
+      224
+     ]
+    },
+    {
+     "episode_index": 69623,
+     "frame_index": 1,
+     "index": 206455957,
+     "timestamp": 0.03333333507180214,
+     "observation.images.left_wrist": "b0eeb0fdff60ccef",
+     "observation.images.left_wrist.dtype": "torch.float32",
+     "observation.images.left_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.right_wrist": "a8bd7b6578952ba2",
+     "observation.images.right_wrist.dtype": "torch.float32",
+     "observation.images.right_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.top": "a5ab87145e62b940",
+     "observation.images.top.dtype": "torch.float32",
+     "observation.images.top.shape": [
+      3,
+      224,
+      224
+     ]
+    },
+    {
+     "episode_index": 99505,
+     "frame_index": 0,
+     "index": 294434352,
+     "timestamp": 0.0,
+     "observation.images.left_wrist": "8b4518f0cd95faeb",
+     "observation.images.left_wrist.dtype": "torch.float32",
+     "observation.images.left_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.right_wrist": "be61a3b9c5f37e61",
+     "observation.images.right_wrist.dtype": "torch.float32",
+     "observation.images.right_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.top": "e9a267135ce94aba",
+     "observation.images.top.dtype": "torch.float32",
+     "observation.images.top.shape": [
+      3,
+      224,
+      224
+     ]
+    },
+    {
+     "episode_index": 5969,
+     "frame_index": 0,
+     "index": 17967299,
+     "timestamp": 0.0,
+     "observation.images.left_wrist": "ed83a52d0eb7d5fe",
+     "observation.images.left_wrist.dtype": "torch.float32",
+     "observation.images.left_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.right_wrist": "23164bea223a193d",
+     "observation.images.right_wrist.dtype": "torch.float32",
+     "observation.images.right_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.top": "5034c9ec21cab9ce",
+     "observation.images.top.dtype": "torch.float32",
+     "observation.images.top.shape": [
+      3,
+      224,
+      224
+     ]
+    },
+    {
+     "episode_index": 59591,
+     "frame_index": 1,
+     "index": 177068220,
+     "timestamp": 0.03333333507180214,
+     "observation.images.left_wrist": "2baf0a9b629aefd4",
+     "observation.images.left_wrist.dtype": "torch.float32",
+     "observation.images.left_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.right_wrist": "7729cc237b655026",
+     "observation.images.right_wrist.dtype": "torch.float32",
+     "observation.images.right_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.top": "f73de22dcabcf7e1",
+     "observation.images.top.dtype": "torch.float32",
+     "observation.images.top.shape": [
+      3,
+      224,
+      224
+     ]
+    },
+    {
+     "episode_index": 17869,
+     "frame_index": 0,
+     "index": 54038393,
+     "timestamp": 0.0,
+     "observation.images.left_wrist": "237444a4f8eaf000",
+     "observation.images.left_wrist.dtype": "torch.float32",
+     "observation.images.left_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.right_wrist": "09e76a772b98cb26",
+     "observation.images.right_wrist.dtype": "torch.float32",
+     "observation.images.right_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.top": "c6cda49769dcf672",
+     "observation.images.top.dtype": "torch.float32",
+     "observation.images.top.shape": [
+      3,
+      224,
+      224
+     ]
+    },
+    {
+     "episode_index": 119372,
+     "frame_index": 1,
+     "index": 353263021,
+     "timestamp": 0.03333333507180214,
+     "observation.images.left_wrist": "29f95508faca08bc",
+     "observation.images.left_wrist.dtype": "torch.float32",
+     "observation.images.left_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.right_wrist": "e7256f5935c64f53",
+     "observation.images.right_wrist.dtype": "torch.float32",
+     "observation.images.right_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.top": "a03c87713f149561",
+     "observation.images.top.dtype": "torch.float32",
+     "observation.images.top.shape": [
+      3,
+      224,
+      224
+     ]
+    },
+    {
+     "episode_index": 49663,
+     "frame_index": 1,
+     "index": 147638430,
+     "timestamp": 0.03333333507180214,
+     "observation.images.left_wrist": "18a5784132de5f83",
+     "observation.images.left_wrist.dtype": "torch.float32",
+     "observation.images.left_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.right_wrist": "932b93b1f2ee5a26",
+     "observation.images.right_wrist.dtype": "torch.float32",
+     "observation.images.right_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.top": "ada8eb2cabe35368",
+     "observation.images.top.dtype": "torch.float32",
+     "observation.images.top.shape": [
+      3,
+      224,
+      224
+     ]
+    },
+    {
+     "episode_index": 109414,
+     "frame_index": 0,
+     "index": 323816174,
+     "timestamp": 0.0,
+     "observation.images.left_wrist": "de49de20d1bf61af",
+     "observation.images.left_wrist.dtype": "torch.float32",
+     "observation.images.left_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.right_wrist": "c7a1ff86340922ac",
+     "observation.images.right_wrist.dtype": "torch.float32",
+     "observation.images.right_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.top": "19142f8a5b16d2a9",
+     "observation.images.top.dtype": "torch.float32",
+     "observation.images.top.shape": [
+      3,
+      224,
+      224
+     ]
+    },
+    {
+     "episode_index": 119372,
+     "frame_index": 2,
+     "index": 353263022,
+     "timestamp": 0.06666667014360428,
+     "observation.images.left_wrist": "d61186518b99885d",
+     "observation.images.left_wrist.dtype": "torch.float32",
+     "observation.images.left_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.right_wrist": "3f51c53e2ca2635c",
+     "observation.images.right_wrist.dtype": "torch.float32",
+     "observation.images.right_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.top": "3d5e66c4ca2221c0",
+     "observation.images.top.dtype": "torch.float32",
+     "observation.images.top.shape": [
+      3,
+      224,
+      224
+     ]
+    },
+    {
+     "episode_index": 49663,
+     "frame_index": 0,
+     "index": 147638429,
+     "timestamp": 0.0,
+     "observation.images.left_wrist": "18a5784132de5f83",
+     "observation.images.left_wrist.dtype": "torch.float32",
+     "observation.images.left_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.right_wrist": "6319b2a18b371e0c",
+     "observation.images.right_wrist.dtype": "torch.float32",
+     "observation.images.right_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.top": "ada8eb2cabe35368",
+     "observation.images.top.dtype": "torch.float32",
+     "observation.images.top.shape": [
+      3,
+      224,
+      224
+     ]
+    },
+    {
+     "episode_index": 69623,
+     "frame_index": 0,
+     "index": 206455956,
+     "timestamp": 0.0,
+     "observation.images.left_wrist": "d469a0be436a3be3",
+     "observation.images.left_wrist.dtype": "torch.float32",
+     "observation.images.left_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.right_wrist": "6c6499ddfeb7a7fe",
+     "observation.images.right_wrist.dtype": "torch.float32",
+     "observation.images.right_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.top": "0354ceaa0d03e3f0",
+     "observation.images.top.dtype": "torch.float32",
+     "observation.images.top.shape": [
+      3,
+      224,
+      224
+     ]
+    },
+    {
+     "episode_index": 23791,
+     "frame_index": 2,
+     "index": 71540304,
+     "timestamp": 0.06666667014360428,
+     "observation.images.left_wrist": "215407c6550ec86d",
+     "observation.images.left_wrist.dtype": "torch.float32",
+     "observation.images.left_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.right_wrist": "f3ac7098c29749d2",
+     "observation.images.right_wrist.dtype": "torch.float32",
+     "observation.images.right_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.top": "5396be2d6afdbdc3",
+     "observation.images.top.dtype": "torch.float32",
+     "observation.images.top.shape": [
+      3,
+      224,
+      224
+     ]
+    },
+    {
+     "episode_index": 59591,
+     "frame_index": 2,
+     "index": 177068221,
+     "timestamp": 0.06666667014360428,
+     "observation.images.left_wrist": "be8aa11919215e35",
+     "observation.images.left_wrist.dtype": "torch.float32",
+     "observation.images.left_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.right_wrist": "061227bdec9e08ee",
+     "observation.images.right_wrist.dtype": "torch.float32",
+     "observation.images.right_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.top": "4a23efbb015f8907",
+     "observation.images.top.dtype": "torch.float32",
+     "observation.images.top.shape": [
+      3,
+      224,
+      224
+     ]
+    },
+    {
+     "episode_index": 5969,
+     "frame_index": 1,
+     "index": 17967300,
+     "timestamp": 0.03333333507180214,
+     "observation.images.left_wrist": "ed83a52d0eb7d5fe",
+     "observation.images.left_wrist.dtype": "torch.float32",
+     "observation.images.left_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.right_wrist": "23164bea223a193d",
+     "observation.images.right_wrist.dtype": "torch.float32",
+     "observation.images.right_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.top": "5034c9ec21cab9ce",
+     "observation.images.top.dtype": "torch.float32",
+     "observation.images.top.shape": [
+      3,
+      224,
+      224
+     ]
+    },
+    {
+     "episode_index": 69623,
+     "frame_index": 3,
+     "index": 206455959,
+     "timestamp": 0.10000000149011612,
+     "observation.images.left_wrist": "f2105092d54ff377",
+     "observation.images.left_wrist.dtype": "torch.float32",
+     "observation.images.left_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.right_wrist": "c6240aa2503ce8e5",
+     "observation.images.right_wrist.dtype": "torch.float32",
+     "observation.images.right_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.top": "aaf3f01da2203ece",
+     "observation.images.top.dtype": "torch.float32",
+     "observation.images.top.shape": [
+      3,
+      224,
+      224
+     ]
+    },
+    {
+     "episode_index": 0,
+     "frame_index": 2,
+     "index": 2,
+     "timestamp": 0.06666667014360428,
+     "observation.images.left_wrist": "cd0ba1b1b65689ae",
+     "observation.images.left_wrist.dtype": "torch.float32",
+     "observation.images.left_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.right_wrist": "68b40345bef2542b",
+     "observation.images.right_wrist.dtype": "torch.float32",
+     "observation.images.right_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.top": "c2076d19975700f8",
+     "observation.images.top.dtype": "torch.float32",
+     "observation.images.top.shape": [
+      3,
+      224,
+      224
+     ]
+    },
+    {
+     "episode_index": 0,
+     "frame_index": 1,
+     "index": 1,
+     "timestamp": 0.03333333507180214,
+     "observation.images.left_wrist": "a6e06628c482e0a6",
+     "observation.images.left_wrist.dtype": "torch.float32",
+     "observation.images.left_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.right_wrist": "1f40f7108621866c",
+     "observation.images.right_wrist.dtype": "torch.float32",
+     "observation.images.right_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.top": "b52089005cbaf165",
+     "observation.images.top.dtype": "torch.float32",
+     "observation.images.top.shape": [
+      3,
+      224,
+      224
+     ]
+    },
+    {
+     "episode_index": 17869,
+     "frame_index": 1,
+     "index": 54038394,
+     "timestamp": 0.03333333507180214,
+     "observation.images.left_wrist": "d557b400cf40821a",
+     "observation.images.left_wrist.dtype": "torch.float32",
+     "observation.images.left_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.right_wrist": "f9ec8a336ee56313",
+     "observation.images.right_wrist.dtype": "torch.float32",
+     "observation.images.right_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.top": "f43b59975148ef0e",
+     "observation.images.top.dtype": "torch.float32",
+     "observation.images.top.shape": [
+      3,
+      224,
+      224
+     ]
+    },
+    {
+     "episode_index": 69623,
+     "frame_index": 4,
+     "index": 206455960,
+     "timestamp": 0.13333334028720856,
+     "observation.images.left_wrist": "6880b80756574734",
+     "observation.images.left_wrist.dtype": "torch.float32",
+     "observation.images.left_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.right_wrist": "de1b2e83cdb70ba3",
+     "observation.images.right_wrist.dtype": "torch.float32",
+     "observation.images.right_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.top": "ee8f80480b5892d5",
+     "observation.images.top.dtype": "torch.float32",
+     "observation.images.top.shape": [
+      3,
+      224,
+      224
+     ]
+    },
+    {
+     "episode_index": 17869,
+     "frame_index": 2,
+     "index": 54038395,
+     "timestamp": 0.06666667014360428,
+     "observation.images.left_wrist": "8ff8a8753c6ef686",
+     "observation.images.left_wrist.dtype": "torch.float32",
+     "observation.images.left_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.right_wrist": "7c10eaa41b7e37a7",
+     "observation.images.right_wrist.dtype": "torch.float32",
+     "observation.images.right_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.top": "08cfbf16d204aece",
+     "observation.images.top.dtype": "torch.float32",
+     "observation.images.top.shape": [
+      3,
+      224,
+      224
+     ]
+    },
+    {
+     "episode_index": 49663,
+     "frame_index": 2,
+     "index": 147638431,
+     "timestamp": 0.06666667014360428,
+     "observation.images.left_wrist": "658723d09da260f7",
+     "observation.images.left_wrist.dtype": "torch.float32",
+     "observation.images.left_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.right_wrist": "a9f3c3fd1bc9ab07",
+     "observation.images.right_wrist.dtype": "torch.float32",
+     "observation.images.right_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.top": "8971cd9f1f4930ac",
+     "observation.images.top.dtype": "torch.float32",
+     "observation.images.top.shape": [
+      3,
+      224,
+      224
+     ]
+    },
+    {
+     "episode_index": 119372,
+     "frame_index": 3,
+     "index": 353263023,
+     "timestamp": 0.10000000149011612,
+     "observation.images.left_wrist": "ef4cb6cd55ee6aac",
+     "observation.images.left_wrist.dtype": "torch.float32",
+     "observation.images.left_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.right_wrist": "d66733e4095cd541",
+     "observation.images.right_wrist.dtype": "torch.float32",
+     "observation.images.right_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.top": "814da15188911b3c",
+     "observation.images.top.dtype": "torch.float32",
+     "observation.images.top.shape": [
+      3,
+      224,
+      224
+     ]
+    },
+    {
+     "episode_index": 69623,
+     "frame_index": 5,
+     "index": 206455961,
+     "timestamp": 0.1666666716337204,
+     "observation.images.left_wrist": "6880b80756574734",
+     "observation.images.left_wrist.dtype": "torch.float32",
+     "observation.images.left_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.right_wrist": "932c92bca4a9917a",
+     "observation.images.right_wrist.dtype": "torch.float32",
+     "observation.images.right_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.top": "a307aa5710b102e9",
+     "observation.images.top.dtype": "torch.float32",
+     "observation.images.top.shape": [
+      3,
+      224,
+      224
+     ]
+    },
+    {
+     "episode_index": 35635,
+     "frame_index": 0,
+     "index": 105815704,
+     "timestamp": 0.0,
+     "observation.images.left_wrist": "3ceded3d50f08b23",
+     "observation.images.left_wrist.dtype": "torch.float32",
+     "observation.images.left_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.right_wrist": "69d15b5f756ed0fc",
+     "observation.images.right_wrist.dtype": "torch.float32",
+     "observation.images.right_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.top": "5d071bf080b100fa",
+     "observation.images.top.dtype": "torch.float32",
+     "observation.images.top.shape": [
+      3,
+      224,
+      224
+     ]
+    },
+    {
+     "episode_index": 89510,
+     "frame_index": 1,
+     "index": 265022080,
+     "timestamp": 0.03333333507180214,
+     "observation.images.left_wrist": "857684a0c7d1d9b5",
+     "observation.images.left_wrist.dtype": "torch.float32",
+     "observation.images.left_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.right_wrist": "9758320774ade34c",
+     "observation.images.right_wrist.dtype": "torch.float32",
+     "observation.images.right_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.top": "46bd4445322ab930",
+     "observation.images.top.dtype": "torch.float32",
+     "observation.images.top.shape": [
+      3,
+      224,
+      224
+     ]
+    },
+    {
+     "episode_index": 35635,
+     "frame_index": 1,
+     "index": 105815705,
+     "timestamp": 0.03333333507180214,
+     "observation.images.left_wrist": "3ceded3d50f08b23",
+     "observation.images.left_wrist.dtype": "torch.float32",
+     "observation.images.left_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.right_wrist": "69d15b5f756ed0fc",
+     "observation.images.right_wrist.dtype": "torch.float32",
+     "observation.images.right_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.top": "5d071bf080b100fa",
+     "observation.images.top.dtype": "torch.float32",
+     "observation.images.top.shape": [
+      3,
+      224,
+      224
+     ]
+    },
+    {
+     "episode_index": 0,
+     "frame_index": 3,
+     "index": 3,
+     "timestamp": 0.10000000149011612,
+     "observation.images.left_wrist": "cd0ba1b1b65689ae",
+     "observation.images.left_wrist.dtype": "torch.float32",
+     "observation.images.left_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.right_wrist": "8c3c56838b1d7d3d",
+     "observation.images.right_wrist.dtype": "torch.float32",
+     "observation.images.right_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.top": "c2076d19975700f8",
+     "observation.images.top.dtype": "torch.float32",
+     "observation.images.top.shape": [
+      3,
+      224,
+      224
+     ]
+    }
+   ],
+   "saved_npz": "base__hash.npz",
+   "peak_pss_gb": 10.394042015075684,
+   "peak_rss_sum_gb": 10.40671157836914,
+   "peak_cgroup_current_gb": 14.517047882080078,
+   "mem_timeline": [
+    [
+     0.0,
+     0.24,
+     1
+    ],
+    [
+     5.4,
+     0.38,
+     1
+    ],
+    [
+     10.6,
+     0.44,
+     1
+    ],
+    [
+     15.7,
+     0.75,
+     1
+    ],
+    [
+     20.9,
+     1.69,
+     1
+    ],
+    [
+     26.1,
+     2.61,
+     1
+    ],
+    [
+     31.4,
+     3.6,
+     1
+    ],
+    [
+     36.7,
+     4.29,
+     1
+    ],
+    [
+     42.0,
+     5.59,
+     1
+    ],
+    [
+     47.5,
+     7.0,
+     1
+    ],
+    [
+     53.0,
+     8.3,
+     1
+    ],
+    [
+     58.6,
+     9.36,
+     1
+    ],
+    [
+     64.2,
+     9.92,
+     1
+    ]
+   ],
+   "wall_s": 71.01943802833557,
+   "peak_cgroup_anon_mb_seen_by_orchestrator": 10473
+  },
+  {
+   "arm": "base",
+   "regime": "w0_cachedef",
+   "rep": 0,
+   "num_workers": 0,
+   "seed": 0,
+   "decode_threads": null,
+   "buffer_size": 16,
+   "decoder_cache_env": null,
+   "n_target": 50,
+   "cap_s": 180,
+   "status": "ok",
+   "utc_start": "2026-09-25T16:43:32Z",
+   "lerobot_file": "/work/src_base/src/lerobot/__init__.py",
+   "cpu_quota": 8,
+   "build_s": 4.329480280051939,
+   "rss_after_build_gb": 0.49060821533203125,
+   "build_http": {
+    "requests": 11,
+    "resolve_requests": 5,
+    "cdn_requests": 2,
+    "api_requests": 4,
+    "http_bytes": 3373761,
+    "http_s": 0.48483836418017745,
+    "status_429": 0,
+    "status_other_err": 4,
+    "cdn_hit": 0,
+    "cdn_miss": 0,
+    "fetch_calls": 2,
+    "fetch_bytes": 279506,
+    "fetch_s": 0.41432556812651455,
+    "resolver_min_seen": 1073741824,
+    "pid": 5110
+   },
+   "pss_at_first_batch_gb": 9.271143913269043,
+   "first_batch_s": 39.86666879209224,
+   "first_batch_s_incl_build": 44.1966360170627,
+   "first_batch_http": {
+    "requests": 234,
+    "resolve_requests": 102,
+    "cdn_requests": 102,
+    "api_requests": 30,
+    "http_bytes": 1136654777,
+    "http_s": 16.380269432789646,
+    "status_429": 0,
+    "status_other_err": 0,
+    "cdn_hit": 0,
+    "cdn_miss": 0,
+    "fetch_calls": 102,
+    "fetch_bytes": 1126371047,
+    "fetch_s": 40.718221886549145,
+    "resolver_min_seen": 1073741824
+   },
+   "n_samples": 64,
+   "first_batch_n": 8,
+   "steady_n": 56,
+   "steady_s": 12.568111727945507,
+   "sps": 4.455721051196785,
+   "batch_times": [
+    39.8667,
+    39.9852,
+    43.458,
+    47.7211,
+    49.5595,
+    50.7383,
+    51.1949,
+    52.1833
+   ],
+   "total_http": {
+    "requests": 263,
+    "resolve_requests": 116,
+    "cdn_requests": 116,
+    "api_requests": 31,
+    "http_bytes": 1267951498,
+    "http_s": 18.392427800456062,
+    "status_429": 0,
+    "status_other_err": 0,
+    "cdn_hit": 0,
+    "cdn_miss": 0,
+    "fetch_calls": 116,
+    "fetch_bytes": 1257322471,
+    "fetch_s": 46.36549956188537,
+    "resolver_min_seen": 1073741824
+   },
+   "steady_http": {
+    "requests": 29,
+    "resolve_requests": 14,
+    "cdn_requests": 14,
+    "api_requests": 1,
+    "http_bytes": 131296721,
+    "http_s": 2.012158367666416,
+    "status_429": 0,
+    "status_other_err": 0,
+    "cdn_hit": 0,
+    "cdn_miss": 0,
+    "fetch_calls": 14,
+    "fetch_bytes": 130951424,
+    "fetch_s": 5.647277675336227
+   },
+   "per_sample": {
+    "requests": 0.5178571428571429,
+    "resolve": 0.25,
+    "cdn": 0.25,
+    "api": 0.017857142857142856,
+    "mb": 2.3445843035714287,
+    "status_429": 0,
+    "cdn_hit": 0,
+    "cdn_miss": 0
+   },
+   "status_429_total": 0,
+   "peak_pss_gb": 10.40607738494873,
+   "peak_rss_sum_gb": 10.411849975585938,
+   "peak_cgroup_current_gb": 16.821014404296875,
+   "mem_timeline": [
+    [
+     0.0,
+     0.22,
+     1
+    ],
+    [
+     5.2,
+     0.5,
+     1
+    ],
+    [
+     10.4,
+     2.43,
+     1
+    ],
+    [
+     15.7,
+     3.18,
+     1
+    ],
+    [
+     21.2,
+     4.14,
+     1
+    ],
+    [
+     26.6,
+     5.28,
+     1
+    ],
+    [
+     32.1,
+     6.69,
+     1
+    ],
+    [
+     37.6,
+     8.33,
+     1
+    ],
+    [
+     43.2,
+     9.27,
+     1
+    ],
+    [
+     48.9,
+     9.84,
+     1
+    ],
+    [
+     54.7,
+     10.39,
+     1
+    ]
+   ],
+   "wall_s": 59.336947441101074,
+   "peak_cgroup_anon_mb_seen_by_orchestrator": 10473
+  },
+  {
+   "arm": "base",
+   "regime": "w8_cache3",
+   "rep": 0,
+   "status": "mem_guard_killed",
+   "wall_s": 20.764345169067383,
+   "peak_cgroup_anon_mb_seen_by_orchestrator": 27083,
+   "error": "cgroup anon memory above 27000 MB; run killed to protect the job"
+  },
+  {
+   "arm": "p1p2",
+   "regime": "hash",
+   "rep": -1,
+   "num_workers": 0,
+   "seed": 0,
+   "decode_threads": null,
+   "buffer_size": 16,
+   "decoder_cache_env": null,
+   "n_target": 32,
+   "cap_s": 900,
+   "status": "ok",
+   "utc_start": "2026-09-25T16:36:36Z",
+   "lerobot_file": "/work/src_p1p2/src/lerobot/__init__.py",
+   "cpu_quota": 8,
+   "build_s": 4.690831515006721,
+   "rss_after_build_gb": 0.4898109436035156,
+   "build_http": {
+    "requests": 11,
+    "resolve_requests": 5,
+    "cdn_requests": 2,
+    "api_requests": 4,
+    "http_bytes": 3373761,
+    "http_s": 0.6887028267374262,
+    "status_429": 0,
+    "status_other_err": 4,
+    "cdn_hit": 0,
+    "cdn_miss": 0,
+    "fetch_calls": 2,
+    "fetch_bytes": 279506,
+    "fetch_s": 0.26503475510980934,
+    "resolver_min_seen": 1073741824,
+    "pid": 3364
+   },
+   "pss_at_first_batch_gb": 9.369763374328613,
+   "first_batch_s": 30.119870071997866,
+   "first_batch_s_incl_build": 34.81143935001455,
+   "first_batch_http": {
+    "requests": 246,
+    "resolve_requests": 102,
+    "cdn_requests": 102,
+    "api_requests": 42,
+    "http_bytes": 1140756267,
+    "http_s": 19.44231151312124,
+    "status_429": 0,
+    "status_other_err": 0,
+    "cdn_hit": 0,
+    "cdn_miss": 0,
+    "fetch_calls": 102,
+    "fetch_bytes": 1126371047,
+    "fetch_s": 45.884224923327565,
+    "resolver_min_seen": 1073741824
+   },
+   "n_samples": 40,
+   "first_batch_n": 8,
+   "steady_n": 32,
+   "steady_s": 7.848935435991734,
+   "sps": 4.076986014340519,
+   "batch_times": [
+    30.1199,
+    30.9827,
+    33.5109,
+    36.8342,
+    37.7973
+   ],
+   "total_http": {
+    "requests": 279,
+    "resolve_requests": 116,
+    "cdn_requests": 116,
+    "api_requests": 47,
+    "http_bytes": 1273422834,
+    "http_s": 21.594014010275714,
+    "status_429": 0,
+    "status_other_err": 0,
+    "cdn_hit": 0,
+    "cdn_miss": 0,
+    "fetch_calls": 116,
+    "fetch_bytes": 1257322471,
+    "fetch_s": 52.143467540154234,
+    "resolver_min_seen": 1073741824
+   },
+   "steady_http": {
+    "requests": 33,
+    "resolve_requests": 14,
+    "cdn_requests": 14,
+    "api_requests": 5,
+    "http_bytes": 132666567,
+    "http_s": 2.1517024971544743,
+    "status_429": 0,
+    "status_other_err": 0,
+    "cdn_hit": 0,
+    "cdn_miss": 0,
+    "fetch_calls": 14,
+    "fetch_bytes": 130951424,
+    "fetch_s": 6.259242616826668
+   },
+   "per_sample": {
+    "requests": 1.03125,
+    "resolve": 0.4375,
+    "cdn": 0.4375,
+    "api": 0.15625,
+    "mb": 4.14583021875,
+    "status_429": 0,
+    "cdn_hit": 0,
+    "cdn_miss": 0
+   },
+   "status_429_total": 0,
+   "hashes": [
+    {
+     "episode_index": 11938,
+     "frame_index": 0,
+     "index": 36124233,
+     "timestamp": 0.0,
+     "observation.images.left_wrist": "a31f57f24ca71e11",
+     "observation.images.left_wrist.dtype": "torch.float32",
+     "observation.images.left_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.right_wrist": "705c3ff1a978abea",
+     "observation.images.right_wrist.dtype": "torch.float32",
+     "observation.images.right_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.top": "1ecd7792a9abbeac",
+     "observation.images.top.dtype": "torch.float32",
+     "observation.images.top.shape": [
+      3,
+      224,
+      224
+     ]
+    },
+    {
+     "episode_index": 69623,
+     "frame_index": 2,
+     "index": 206455958,
+     "timestamp": 0.06666667014360428,
+     "observation.images.left_wrist": "7ac9671d89d59265",
+     "observation.images.left_wrist.dtype": "torch.float32",
+     "observation.images.left_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.right_wrist": "3cfca50c0692c907",
+     "observation.images.right_wrist.dtype": "torch.float32",
+     "observation.images.right_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.top": "abecb4a076e04371",
+     "observation.images.top.dtype": "torch.float32",
+     "observation.images.top.shape": [
+      3,
+      224,
+      224
+     ]
+    },
+    {
+     "episode_index": 119372,
+     "frame_index": 0,
+     "index": 353263020,
+     "timestamp": 0.0,
+     "observation.images.left_wrist": "ae6b0525373d046b",
+     "observation.images.left_wrist.dtype": "torch.float32",
+     "observation.images.left_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.right_wrist": "aa4e17e92696ff05",
+     "observation.images.right_wrist.dtype": "torch.float32",
+     "observation.images.right_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.top": "192b6f1ba08f24a1",
+     "observation.images.top.dtype": "torch.float32",
+     "observation.images.top.shape": [
+      3,
+      224,
+      224
+     ]
+    },
+    {
+     "episode_index": 23791,
+     "frame_index": 1,
+     "index": 71540303,
+     "timestamp": 0.03333333507180214,
+     "observation.images.left_wrist": "6366e878bcf10fb1",
+     "observation.images.left_wrist.dtype": "torch.float32",
+     "observation.images.left_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.right_wrist": "dc61e2c3a385047a",
+     "observation.images.right_wrist.dtype": "torch.float32",
+     "observation.images.right_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.top": "f6540e64ec596a14",
+     "observation.images.top.dtype": "torch.float32",
+     "observation.images.top.shape": [
+      3,
+      224,
+      224
+     ]
+    },
+    {
+     "episode_index": 59591,
+     "frame_index": 0,
+     "index": 177068219,
+     "timestamp": 0.0,
+     "observation.images.left_wrist": "808f4f383851809e",
+     "observation.images.left_wrist.dtype": "torch.float32",
+     "observation.images.left_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.right_wrist": "75f6bdc956fb78c7",
+     "observation.images.right_wrist.dtype": "torch.float32",
+     "observation.images.right_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.top": "06e02a3135fedc2e",
+     "observation.images.top.dtype": "torch.float32",
+     "observation.images.top.shape": [
+      3,
+      224,
+      224
+     ]
+    },
+    {
+     "episode_index": 69623,
+     "frame_index": 1,
+     "index": 206455957,
+     "timestamp": 0.03333333507180214,
+     "observation.images.left_wrist": "b0eeb0fdff60ccef",
+     "observation.images.left_wrist.dtype": "torch.float32",
+     "observation.images.left_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.right_wrist": "a8bd7b6578952ba2",
+     "observation.images.right_wrist.dtype": "torch.float32",
+     "observation.images.right_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.top": "a5ab87145e62b940",
+     "observation.images.top.dtype": "torch.float32",
+     "observation.images.top.shape": [
+      3,
+      224,
+      224
+     ]
+    },
+    {
+     "episode_index": 99505,
+     "frame_index": 0,
+     "index": 294434352,
+     "timestamp": 0.0,
+     "observation.images.left_wrist": "8b4518f0cd95faeb",
+     "observation.images.left_wrist.dtype": "torch.float32",
+     "observation.images.left_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.right_wrist": "be61a3b9c5f37e61",
+     "observation.images.right_wrist.dtype": "torch.float32",
+     "observation.images.right_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.top": "e9a267135ce94aba",
+     "observation.images.top.dtype": "torch.float32",
+     "observation.images.top.shape": [
+      3,
+      224,
+      224
+     ]
+    },
+    {
+     "episode_index": 5969,
+     "frame_index": 0,
+     "index": 17967299,
+     "timestamp": 0.0,
+     "observation.images.left_wrist": "ed83a52d0eb7d5fe",
+     "observation.images.left_wrist.dtype": "torch.float32",
+     "observation.images.left_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.right_wrist": "23164bea223a193d",
+     "observation.images.right_wrist.dtype": "torch.float32",
+     "observation.images.right_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.top": "5034c9ec21cab9ce",
+     "observation.images.top.dtype": "torch.float32",
+     "observation.images.top.shape": [
+      3,
+      224,
+      224
+     ]
+    },
+    {
+     "episode_index": 59591,
+     "frame_index": 1,
+     "index": 177068220,
+     "timestamp": 0.03333333507180214,
+     "observation.images.left_wrist": "2baf0a9b629aefd4",
+     "observation.images.left_wrist.dtype": "torch.float32",
+     "observation.images.left_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.right_wrist": "7729cc237b655026",
+     "observation.images.right_wrist.dtype": "torch.float32",
+     "observation.images.right_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.top": "f73de22dcabcf7e1",
+     "observation.images.top.dtype": "torch.float32",
+     "observation.images.top.shape": [
+      3,
+      224,
+      224
+     ]
+    },
+    {
+     "episode_index": 17869,
+     "frame_index": 0,
+     "index": 54038393,
+     "timestamp": 0.0,
+     "observation.images.left_wrist": "237444a4f8eaf000",
+     "observation.images.left_wrist.dtype": "torch.float32",
+     "observation.images.left_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.right_wrist": "09e76a772b98cb26",
+     "observation.images.right_wrist.dtype": "torch.float32",
+     "observation.images.right_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.top": "c6cda49769dcf672",
+     "observation.images.top.dtype": "torch.float32",
+     "observation.images.top.shape": [
+      3,
+      224,
+      224
+     ]
+    },
+    {
+     "episode_index": 119372,
+     "frame_index": 1,
+     "index": 353263021,
+     "timestamp": 0.03333333507180214,
+     "observation.images.left_wrist": "29f95508faca08bc",
+     "observation.images.left_wrist.dtype": "torch.float32",
+     "observation.images.left_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.right_wrist": "e7256f5935c64f53",
+     "observation.images.right_wrist.dtype": "torch.float32",
+     "observation.images.right_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.top": "a03c87713f149561",
+     "observation.images.top.dtype": "torch.float32",
+     "observation.images.top.shape": [
+      3,
+      224,
+      224
+     ]
+    },
+    {
+     "episode_index": 49663,
+     "frame_index": 1,
+     "index": 147638430,
+     "timestamp": 0.03333333507180214,
+     "observation.images.left_wrist": "18a5784132de5f83",
+     "observation.images.left_wrist.dtype": "torch.float32",
+     "observation.images.left_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.right_wrist": "932b93b1f2ee5a26",
+     "observation.images.right_wrist.dtype": "torch.float32",
+     "observation.images.right_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.top": "ada8eb2cabe35368",
+     "observation.images.top.dtype": "torch.float32",
+     "observation.images.top.shape": [
+      3,
+      224,
+      224
+     ]
+    },
+    {
+     "episode_index": 109414,
+     "frame_index": 0,
+     "index": 323816174,
+     "timestamp": 0.0,
+     "observation.images.left_wrist": "de49de20d1bf61af",
+     "observation.images.left_wrist.dtype": "torch.float32",
+     "observation.images.left_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.right_wrist": "c7a1ff86340922ac",
+     "observation.images.right_wrist.dtype": "torch.float32",
+     "observation.images.right_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.top": "19142f8a5b16d2a9",
+     "observation.images.top.dtype": "torch.float32",
+     "observation.images.top.shape": [
+      3,
+      224,
+      224
+     ]
+    },
+    {
+     "episode_index": 119372,
+     "frame_index": 2,
+     "index": 353263022,
+     "timestamp": 0.06666667014360428,
+     "observation.images.left_wrist": "d61186518b99885d",
+     "observation.images.left_wrist.dtype": "torch.float32",
+     "observation.images.left_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.right_wrist": "3f51c53e2ca2635c",
+     "observation.images.right_wrist.dtype": "torch.float32",
+     "observation.images.right_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.top": "3d5e66c4ca2221c0",
+     "observation.images.top.dtype": "torch.float32",
+     "observation.images.top.shape": [
+      3,
+      224,
+      224
+     ]
+    },
+    {
+     "episode_index": 49663,
+     "frame_index": 0,
+     "index": 147638429,
+     "timestamp": 0.0,
+     "observation.images.left_wrist": "18a5784132de5f83",
+     "observation.images.left_wrist.dtype": "torch.float32",
+     "observation.images.left_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.right_wrist": "6319b2a18b371e0c",
+     "observation.images.right_wrist.dtype": "torch.float32",
+     "observation.images.right_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.top": "ada8eb2cabe35368",
+     "observation.images.top.dtype": "torch.float32",
+     "observation.images.top.shape": [
+      3,
+      224,
+      224
+     ]
+    },
+    {
+     "episode_index": 69623,
+     "frame_index": 0,
+     "index": 206455956,
+     "timestamp": 0.0,
+     "observation.images.left_wrist": "d469a0be436a3be3",
+     "observation.images.left_wrist.dtype": "torch.float32",
+     "observation.images.left_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.right_wrist": "6c6499ddfeb7a7fe",
+     "observation.images.right_wrist.dtype": "torch.float32",
+     "observation.images.right_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.top": "0354ceaa0d03e3f0",
+     "observation.images.top.dtype": "torch.float32",
+     "observation.images.top.shape": [
+      3,
+      224,
+      224
+     ]
+    },
+    {
+     "episode_index": 23791,
+     "frame_index": 2,
+     "index": 71540304,
+     "timestamp": 0.06666667014360428,
+     "observation.images.left_wrist": "215407c6550ec86d",
+     "observation.images.left_wrist.dtype": "torch.float32",
+     "observation.images.left_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.right_wrist": "f3ac7098c29749d2",
+     "observation.images.right_wrist.dtype": "torch.float32",
+     "observation.images.right_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.top": "5396be2d6afdbdc3",
+     "observation.images.top.dtype": "torch.float32",
+     "observation.images.top.shape": [
+      3,
+      224,
+      224
+     ]
+    },
+    {
+     "episode_index": 59591,
+     "frame_index": 2,
+     "index": 177068221,
+     "timestamp": 0.06666667014360428,
+     "observation.images.left_wrist": "be8aa11919215e35",
+     "observation.images.left_wrist.dtype": "torch.float32",
+     "observation.images.left_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.right_wrist": "061227bdec9e08ee",
+     "observation.images.right_wrist.dtype": "torch.float32",
+     "observation.images.right_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.top": "4a23efbb015f8907",
+     "observation.images.top.dtype": "torch.float32",
+     "observation.images.top.shape": [
+      3,
+      224,
+      224
+     ]
+    },
+    {
+     "episode_index": 5969,
+     "frame_index": 1,
+     "index": 17967300,
+     "timestamp": 0.03333333507180214,
+     "observation.images.left_wrist": "ed83a52d0eb7d5fe",
+     "observation.images.left_wrist.dtype": "torch.float32",
+     "observation.images.left_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.right_wrist": "23164bea223a193d",
+     "observation.images.right_wrist.dtype": "torch.float32",
+     "observation.images.right_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.top": "5034c9ec21cab9ce",
+     "observation.images.top.dtype": "torch.float32",
+     "observation.images.top.shape": [
+      3,
+      224,
+      224
+     ]
+    },
+    {
+     "episode_index": 69623,
+     "frame_index": 3,
+     "index": 206455959,
+     "timestamp": 0.10000000149011612,
+     "observation.images.left_wrist": "f2105092d54ff377",
+     "observation.images.left_wrist.dtype": "torch.float32",
+     "observation.images.left_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.right_wrist": "c6240aa2503ce8e5",
+     "observation.images.right_wrist.dtype": "torch.float32",
+     "observation.images.right_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.top": "aaf3f01da2203ece",
+     "observation.images.top.dtype": "torch.float32",
+     "observation.images.top.shape": [
+      3,
+      224,
+      224
+     ]
+    },
+    {
+     "episode_index": 0,
+     "frame_index": 2,
+     "index": 2,
+     "timestamp": 0.06666667014360428,
+     "observation.images.left_wrist": "cd0ba1b1b65689ae",
+     "observation.images.left_wrist.dtype": "torch.float32",
+     "observation.images.left_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.right_wrist": "68b40345bef2542b",
+     "observation.images.right_wrist.dtype": "torch.float32",
+     "observation.images.right_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.top": "c2076d19975700f8",
+     "observation.images.top.dtype": "torch.float32",
+     "observation.images.top.shape": [
+      3,
+      224,
+      224
+     ]
+    },
+    {
+     "episode_index": 0,
+     "frame_index": 1,
+     "index": 1,
+     "timestamp": 0.03333333507180214,
+     "observation.images.left_wrist": "a6e06628c482e0a6",
+     "observation.images.left_wrist.dtype": "torch.float32",
+     "observation.images.left_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.right_wrist": "1f40f7108621866c",
+     "observation.images.right_wrist.dtype": "torch.float32",
+     "observation.images.right_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.top": "b52089005cbaf165",
+     "observation.images.top.dtype": "torch.float32",
+     "observation.images.top.shape": [
+      3,
+      224,
+      224
+     ]
+    },
+    {
+     "episode_index": 17869,
+     "frame_index": 1,
+     "index": 54038394,
+     "timestamp": 0.03333333507180214,
+     "observation.images.left_wrist": "d557b400cf40821a",
+     "observation.images.left_wrist.dtype": "torch.float32",
+     "observation.images.left_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.right_wrist": "f9ec8a336ee56313",
+     "observation.images.right_wrist.dtype": "torch.float32",
+     "observation.images.right_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.top": "f43b59975148ef0e",
+     "observation.images.top.dtype": "torch.float32",
+     "observation.images.top.shape": [
+      3,
+      224,
+      224
+     ]
+    },
+    {
+     "episode_index": 69623,
+     "frame_index": 4,
+     "index": 206455960,
+     "timestamp": 0.13333334028720856,
+     "observation.images.left_wrist": "6880b80756574734",
+     "observation.images.left_wrist.dtype": "torch.float32",
+     "observation.images.left_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.right_wrist": "de1b2e83cdb70ba3",
+     "observation.images.right_wrist.dtype": "torch.float32",
+     "observation.images.right_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.top": "ee8f80480b5892d5",
+     "observation.images.top.dtype": "torch.float32",
+     "observation.images.top.shape": [
+      3,
+      224,
+      224
+     ]
+    },
+    {
+     "episode_index": 17869,
+     "frame_index": 2,
+     "index": 54038395,
+     "timestamp": 0.06666667014360428,
+     "observation.images.left_wrist": "8ff8a8753c6ef686",
+     "observation.images.left_wrist.dtype": "torch.float32",
+     "observation.images.left_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.right_wrist": "7c10eaa41b7e37a7",
+     "observation.images.right_wrist.dtype": "torch.float32",
+     "observation.images.right_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.top": "08cfbf16d204aece",
+     "observation.images.top.dtype": "torch.float32",
+     "observation.images.top.shape": [
+      3,
+      224,
+      224
+     ]
+    },
+    {
+     "episode_index": 49663,
+     "frame_index": 2,
+     "index": 147638431,
+     "timestamp": 0.06666667014360428,
+     "observation.images.left_wrist": "658723d09da260f7",
+     "observation.images.left_wrist.dtype": "torch.float32",
+     "observation.images.left_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.right_wrist": "a9f3c3fd1bc9ab07",
+     "observation.images.right_wrist.dtype": "torch.float32",
+     "observation.images.right_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.top": "8971cd9f1f4930ac",
+     "observation.images.top.dtype": "torch.float32",
+     "observation.images.top.shape": [
+      3,
+      224,
+      224
+     ]
+    },
+    {
+     "episode_index": 119372,
+     "frame_index": 3,
+     "index": 353263023,
+     "timestamp": 0.10000000149011612,
+     "observation.images.left_wrist": "ef4cb6cd55ee6aac",
+     "observation.images.left_wrist.dtype": "torch.float32",
+     "observation.images.left_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.right_wrist": "d66733e4095cd541",
+     "observation.images.right_wrist.dtype": "torch.float32",
+     "observation.images.right_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.top": "814da15188911b3c",
+     "observation.images.top.dtype": "torch.float32",
+     "observation.images.top.shape": [
+      3,
+      224,
+      224
+     ]
+    },
+    {
+     "episode_index": 69623,
+     "frame_index": 5,
+     "index": 206455961,
+     "timestamp": 0.1666666716337204,
+     "observation.images.left_wrist": "6880b80756574734",
+     "observation.images.left_wrist.dtype": "torch.float32",
+     "observation.images.left_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.right_wrist": "932c92bca4a9917a",
+     "observation.images.right_wrist.dtype": "torch.float32",
+     "observation.images.right_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.top": "a307aa5710b102e9",
+     "observation.images.top.dtype": "torch.float32",
+     "observation.images.top.shape": [
+      3,
+      224,
+      224
+     ]
+    },
+    {
+     "episode_index": 35635,
+     "frame_index": 0,
+     "index": 105815704,
+     "timestamp": 0.0,
+     "observation.images.left_wrist": "3ceded3d50f08b23",
+     "observation.images.left_wrist.dtype": "torch.float32",
+     "observation.images.left_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.right_wrist": "69d15b5f756ed0fc",
+     "observation.images.right_wrist.dtype": "torch.float32",
+     "observation.images.right_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.top": "5d071bf080b100fa",
+     "observation.images.top.dtype": "torch.float32",
+     "observation.images.top.shape": [
+      3,
+      224,
+      224
+     ]
+    },
+    {
+     "episode_index": 89510,
+     "frame_index": 1,
+     "index": 265022080,
+     "timestamp": 0.03333333507180214,
+     "observation.images.left_wrist": "857684a0c7d1d9b5",
+     "observation.images.left_wrist.dtype": "torch.float32",
+     "observation.images.left_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.right_wrist": "9758320774ade34c",
+     "observation.images.right_wrist.dtype": "torch.float32",
+     "observation.images.right_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.top": "46bd4445322ab930",
+     "observation.images.top.dtype": "torch.float32",
+     "observation.images.top.shape": [
+      3,
+      224,
+      224
+     ]
+    },
+    {
+     "episode_index": 35635,
+     "frame_index": 1,
+     "index": 105815705,
+     "timestamp": 0.03333333507180214,
+     "observation.images.left_wrist": "3ceded3d50f08b23",
+     "observation.images.left_wrist.dtype": "torch.float32",
+     "observation.images.left_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.right_wrist": "69d15b5f756ed0fc",
+     "observation.images.right_wrist.dtype": "torch.float32",
+     "observation.images.right_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.top": "5d071bf080b100fa",
+     "observation.images.top.dtype": "torch.float32",
+     "observation.images.top.shape": [
+      3,
+      224,
+      224
+     ]
+    },
+    {
+     "episode_index": 0,
+     "frame_index": 3,
+     "index": 3,
+     "timestamp": 0.10000000149011612,
+     "observation.images.left_wrist": "cd0ba1b1b65689ae",
+     "observation.images.left_wrist.dtype": "torch.float32",
+     "observation.images.left_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.right_wrist": "8c3c56838b1d7d3d",
+     "observation.images.right_wrist.dtype": "torch.float32",
+     "observation.images.right_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.top": "c2076d19975700f8",
+     "observation.images.top.dtype": "torch.float32",
+     "observation.images.top.shape": [
+      3,
+      224,
+      224
+     ]
+    }
+   ],
+   "saved_npz": "p1p2__hash.npz",
+   "peak_pss_gb": 10.460278511047363,
+   "peak_rss_sum_gb": 10.470008850097656,
+   "peak_cgroup_current_gb": 14.556480407714844,
+   "mem_timeline": [
+    [
+     0.0,
+     0.22,
+     1
+    ],
+    [
+     5.2,
+     0.49,
+     1
+    ],
+    [
+     10.4,
+     2.17,
+     1
+    ],
+    [
+     15.7,
+     3.72,
+     1
+    ],
+    [
+     21.2,
+     5.03,
+     1
+    ],
+    [
+     26.7,
+     6.89,
+     1
+    ],
+    [
+     32.3,
+     8.85,
+     1
+    ],
+    [
+     37.9,
+     9.78,
+     1
+    ]
+   ],
+   "wall_s": 45.22075176239014,
+   "peak_cgroup_anon_mb_seen_by_orchestrator": 10525
+  },
+  {
+   "arm": "p1p2",
+   "regime": "w0_cachedef",
+   "rep": 0,
+   "num_workers": 0,
+   "seed": 0,
+   "decode_threads": null,
+   "buffer_size": 16,
+   "decoder_cache_env": null,
+   "n_target": 50,
+   "cap_s": 180,
+   "status": "ok",
+   "utc_start": "2026-09-25T16:44:52Z",
+   "lerobot_file": "/work/src_p1p2/src/lerobot/__init__.py",
+   "cpu_quota": 8,
+   "build_s": 4.31051841203589,
+   "rss_after_build_gb": 0.49072265625,
+   "build_http": {
+    "requests": 11,
+    "resolve_requests": 5,
+    "cdn_requests": 2,
+    "api_requests": 4,
+    "http_bytes": 3373761,
+    "http_s": 0.282842391054146,
+    "status_429": 0,
+    "status_other_err": 4,
+    "cdn_hit": 0,
+    "cdn_miss": 0,
+    "fetch_calls": 2,
+    "fetch_bytes": 279506,
+    "fetch_s": 0.17892512399703264,
+    "resolver_min_seen": 1073741824,
+    "pid": 5367
+   },
+   "pss_at_first_batch_gb": 9.124454498291016,
+   "first_batch_s": 27.20450241700746,
+   "first_batch_s_incl_build": 31.515484953066334,
+   "first_batch_http": {
+    "requests": 246,
+    "resolve_requests": 102,
+    "cdn_requests": 102,
+    "api_requests": 42,
+    "http_bytes": 1140756267,
+    "http_s": 17.079854828305542,
+    "status_429": 0,
+    "status_other_err": 0,
+    "cdn_hit": 0,
+    "cdn_miss": 0,
+    "fetch_calls": 102,
+    "fetch_bytes": 1126371047,
+    "fetch_s": 40.852713423082605,
+    "resolver_min_seen": 1073741824
+   },
+   "n_samples": 64,
+   "first_batch_n": 8,
+   "steady_n": 56,
+   "steady_s": 10.295205759000964,
+   "sps": 5.439425040246517,
+   "batch_times": [
+    27.2045,
+    28.2568,
+    31.178,
+    33.5143,
+    34.6178,
+    35.6145,
+    36.3974,
+    37.2694
+   ],
+   "total_http": {
+    "requests": 280,
+    "resolve_requests": 116,
+    "cdn_requests": 116,
+    "api_requests": 48,
+    "http_bytes": 1273766575,
+    "http_s": 19.223934572772123,
+    "status_429": 0,
+    "status_other_err": 0,
+    "cdn_hit": 0,
+    "cdn_miss": 0,
+    "fetch_calls": 116,
+    "fetch_bytes": 1257322471,
+    "fetch_s": 46.21325428492855,
+    "resolver_min_seen": 1073741824
+   },
+   "steady_http": {
+    "requests": 34,
+    "resolve_requests": 14,
+    "cdn_requests": 14,
+    "api_requests": 6,
+    "http_bytes": 133010308,
+    "http_s": 2.1440797444665805,
+    "status_429": 0,
+    "status_other_err": 0,
+    "cdn_hit": 0,
+    "cdn_miss": 0,
+    "fetch_calls": 14,
+    "fetch_bytes": 130951424,
+    "fetch_s": 5.360540861845948
+   },
+   "per_sample": {
+    "requests": 0.6071428571428571,
+    "resolve": 0.25,
+    "cdn": 0.25,
+    "api": 0.10714285714285714,
+    "mb": 2.3751840714285715,
+    "status_429": 0,
+    "cdn_hit": 0,
+    "cdn_miss": 0
+   },
+   "status_429_total": 0,
+   "peak_pss_gb": 10.435955047607422,
+   "peak_rss_sum_gb": 10.441699981689453,
+   "peak_cgroup_current_gb": 12.673351287841797,
+   "mem_timeline": [
+    [
+     0.0,
+     0.22,
+     1
+    ],
+    [
+     5.3,
+     0.53,
+     1
+    ],
+    [
+     10.5,
+     2.54,
+     1
+    ],
+    [
+     16.1,
+     4.17,
+     1
+    ],
+    [
+     21.6,
+     5.74,
+     1
+    ],
+    [
+     27.2,
+     8.09,
+     1
+    ],
+    [
+     32.9,
+     9.36,
+     1
+    ],
+    [
+     38.6,
+     10.42,
+     1
+    ]
+   ],
+   "wall_s": 44.54066038131714,
+   "peak_cgroup_anon_mb_seen_by_orchestrator": 10500
+  },
+  {
+   "arm": "p1p2",
+   "regime": "w8_cache3",
+   "rep": 0,
+   "status": "mem_guard_killed",
+   "wall_s": 17.500173091888428,
+   "peak_cgroup_anon_mb_seen_by_orchestrator": 27218,
+   "error": "cgroup anon memory above 27000 MB; run killed to protect the job"
+  },
+  {
+   "arm": "pr3917",
+   "regime": "hash",
+   "rep": -1,
+   "num_workers": 0,
+   "seed": 0,
+   "decode_threads": 2,
+   "buffer_size": null,
+   "decoder_cache_env": null,
+   "n_target": 32,
+   "cap_s": 900,
+   "status": "ok",
+   "utc_start": "2026-09-25T16:37:21Z",
+   "lerobot_file": "/work/src_pr3917/src/lerobot/__init__.py",
+   "cpu_quota": 8,
+   "build_s": 224.06114488106687,
+   "rss_after_build_gb": 2.544139862060547,
+   "build_http": {
+    "requests": 3625,
+    "resolve_requests": 1170,
+    "cdn_requests": 2340,
+    "api_requests": 115,
+    "http_bytes": 131084936184,
+    "http_s": 385.8892785127973,
+    "status_429": 0,
+    "status_other_err": 1,
+    "cdn_hit": 0,
+    "cdn_miss": 0,
+    "fetch_calls": 0,
+    "fetch_bytes": 0,
+    "fetch_s": 0.0,
+    "resolver_min_seen": 1073741824,
+    "pid": 4744
+   },
+   "pss_at_first_batch_gb": 4.987672805786133,
+   "first_batch_s": 45.36036950489506,
+   "first_batch_s_incl_build": 269.4227653259877,
+   "first_batch_http": {
+    "requests": 404,
+    "resolve_requests": 203,
+    "cdn_requests": 200,
+    "api_requests": 1,
+    "http_bytes": 991644199,
+    "http_s": 68.60457387834322,
+    "status_429": 0,
+    "status_other_err": 0,
+    "cdn_hit": 0,
+    "cdn_miss": 0,
+    "fetch_calls": 120,
+    "fetch_bytes": 237244261,
+    "fetch_s": 269.3315147428075,
+    "resolver_min_seen": 1073741824
+   },
+   "n_samples": 40,
+   "first_batch_n": 8,
+   "steady_n": 32,
+   "steady_s": 6.167807784047909,
+   "sps": 5.18822912782125,
+   "batch_times": [
+    45.3604,
+    48.293,
+    49.9698,
+    50.6563,
+    51.3981
+   ],
+   "total_http": {
+    "requests": 481,
+    "resolve_requests": 240,
+    "cdn_requests": 240,
+    "api_requests": 1,
+    "http_bytes": 1284295673,
+    "http_s": 80.90898218075745,
+    "status_429": 0,
+    "status_other_err": 0,
+    "cdn_hit": 0,
+    "cdn_miss": 0,
+    "fetch_calls": 120,
+    "fetch_bytes": 237244261,
+    "fetch_s": 269.3315147428075,
+    "resolver_min_seen": 1073741824
+   },
+   "steady_http": {
+    "requests": 77,
+    "resolve_requests": 37,
+    "cdn_requests": 40,
+    "api_requests": 0,
+    "http_bytes": 292651474,
+    "http_s": 12.304408302414231,
+    "status_429": 0,
+    "status_other_err": 0,
+    "cdn_hit": 0,
+    "cdn_miss": 0,
+    "fetch_calls": 0,
+    "fetch_bytes": 0,
+    "fetch_s": 0.0
+   },
+   "per_sample": {
+    "requests": 2.40625,
+    "resolve": 1.15625,
+    "cdn": 1.25,
+    "api": 0.0,
+    "mb": 9.1453585625,
+    "status_429": 0,
+    "cdn_hit": 0,
+    "cdn_miss": 0
+   },
+   "status_429_total": 0,
+   "hashes": [
+    {
+     "episode_index": 16377,
+     "frame_index": 155,
+     "index": 49638364,
+     "timestamp": 5.166666507720947,
+     "observation.images.left_wrist": "73642fad19e1829c",
+     "observation.images.left_wrist.dtype": "torch.float32",
+     "observation.images.left_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.right_wrist": "08228823df1295cc",
+     "observation.images.right_wrist.dtype": "torch.float32",
+     "observation.images.right_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.top": "8443f048c8852bea",
+     "observation.images.top.dtype": "torch.float32",
+     "observation.images.top.shape": [
+      3,
+      224,
+      224
+     ]
+    },
+    {
+     "episode_index": 91736,
+     "frame_index": 2335,
+     "index": 271624633,
+     "timestamp": 77.83333587646484,
+     "observation.images.left_wrist": "ff3c45e6217f9a1d",
+     "observation.images.left_wrist.dtype": "torch.float32",
+     "observation.images.left_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.right_wrist": "8358c6486cbc9577",
+     "observation.images.right_wrist.dtype": "torch.float32",
+     "observation.images.right_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.top": "74214887f89ca449",
+     "observation.images.top.dtype": "torch.float32",
+     "observation.images.top.shape": [
+      3,
+      224,
+      224
+     ]
+    },
+    {
+     "episode_index": 31194,
+     "frame_index": 854,
+     "index": 92933555,
+     "timestamp": 28.46666717529297,
+     "observation.images.left_wrist": "f1d2d88697aa496e",
+     "observation.images.left_wrist.dtype": "torch.float32",
+     "observation.images.left_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.right_wrist": "bc51037a2605badd",
+     "observation.images.right_wrist.dtype": "torch.float32",
+     "observation.images.right_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.top": "49da9346cd01e21a",
+     "observation.images.top.dtype": "torch.float32",
+     "observation.images.top.shape": [
+      3,
+      224,
+      224
+     ]
+    },
+    {
+     "episode_index": 5382,
+     "frame_index": 4541,
+     "index": 16250423,
+     "timestamp": 151.36666870117188,
+     "observation.images.left_wrist": "bd5ed3e4663b8f92",
+     "observation.images.left_wrist.dtype": "torch.float32",
+     "observation.images.left_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.right_wrist": "29f249c754738176",
+     "observation.images.right_wrist.dtype": "torch.float32",
+     "observation.images.right_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.top": "ef0407d47067bff0",
+     "observation.images.top.dtype": "torch.float32",
+     "observation.images.top.shape": [
+      3,
+      224,
+      224
+     ]
+    },
+    {
+     "episode_index": 83668,
+     "frame_index": 255,
+     "index": 247659886,
+     "timestamp": 8.5,
+     "observation.images.left_wrist": "3d156a7587f767c4",
+     "observation.images.left_wrist.dtype": "torch.float32",
+     "observation.images.left_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.right_wrist": "8300d60dbbc38cc0",
+     "observation.images.right_wrist.dtype": "torch.float32",
+     "observation.images.right_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.top": "e73b49209a2aa989",
+     "observation.images.top.dtype": "torch.float32",
+     "observation.images.top.shape": [
+      3,
+      224,
+      224
+     ]
+    },
+    {
+     "episode_index": 71346,
+     "frame_index": 3307,
+     "index": 211557945,
+     "timestamp": 110.23332977294922,
+     "observation.images.left_wrist": "f86e0ec95a4eb11d",
+     "observation.images.left_wrist.dtype": "torch.float32",
+     "observation.images.left_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.right_wrist": "e732aede9995d64a",
+     "observation.images.right_wrist.dtype": "torch.float32",
+     "observation.images.right_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.top": "936416be0445c9c6",
+     "observation.images.top.dtype": "torch.float32",
+     "observation.images.top.shape": [
+      3,
+      224,
+      224
+     ]
+    },
+    {
+     "episode_index": 48622,
+     "frame_index": 2607,
+     "index": 144514771,
+     "timestamp": 86.9000015258789,
+     "observation.images.left_wrist": "f003f8ad8cb6e0ed",
+     "observation.images.left_wrist.dtype": "torch.float32",
+     "observation.images.left_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.right_wrist": "cd6758d02ad629c4",
+     "observation.images.right_wrist.dtype": "torch.float32",
+     "observation.images.right_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.top": "7a100abcd4281bfa",
+     "observation.images.top.dtype": "torch.float32",
+     "observation.images.top.shape": [
+      3,
+      224,
+      224
+     ]
+    },
+    {
+     "episode_index": 84790,
+     "frame_index": 2021,
+     "index": 251031480,
+     "timestamp": 67.36666870117188,
+     "observation.images.left_wrist": "6c7cb7df183dff1f",
+     "observation.images.left_wrist.dtype": "torch.float32",
+     "observation.images.left_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.right_wrist": "4f1051efd55a4104",
+     "observation.images.right_wrist.dtype": "torch.float32",
+     "observation.images.right_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.top": "b08e0abe1324e82e",
+     "observation.images.top.dtype": "torch.float32",
+     "observation.images.top.shape": [
+      3,
+      224,
+      224
+     ]
+    },
+    {
+     "episode_index": 91736,
+     "frame_index": 3306,
+     "index": 271625604,
+     "timestamp": 110.19999694824219,
+     "observation.images.left_wrist": "86aeb37903c67e86",
+     "observation.images.left_wrist.dtype": "torch.float32",
+     "observation.images.left_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.right_wrist": "9fa4c8d027b63fc2",
+     "observation.images.right_wrist.dtype": "torch.float32",
+     "observation.images.right_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.top": "98cd35d25091d1ba",
+     "observation.images.top.dtype": "torch.float32",
+     "observation.images.top.shape": [
+      3,
+      224,
+      224
+     ]
+    },
+    {
+     "episode_index": 5382,
+     "frame_index": 1524,
+     "index": 16247406,
+     "timestamp": 50.79999923706055,
+     "observation.images.left_wrist": "58063889eb60d0a9",
+     "observation.images.left_wrist.dtype": "torch.float32",
+     "observation.images.left_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.right_wrist": "4bbd8c0fa079817c",
+     "observation.images.right_wrist.dtype": "torch.float32",
+     "observation.images.right_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.top": "8323fc42b918079d",
+     "observation.images.top.dtype": "torch.float32",
+     "observation.images.top.shape": [
+      3,
+      224,
+      224
+     ]
+    },
+    {
+     "episode_index": 112715,
+     "frame_index": 2599,
+     "index": 333561274,
+     "timestamp": 86.63333129882812,
+     "observation.images.left_wrist": "0f5e1d71ecc815ec",
+     "observation.images.left_wrist.dtype": "torch.float32",
+     "observation.images.left_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.right_wrist": "835ceecb4732830d",
+     "observation.images.right_wrist.dtype": "torch.float32",
+     "observation.images.right_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.top": "6ab67cc580c5ef3f",
+     "observation.images.top.dtype": "torch.float32",
+     "observation.images.top.shape": [
+      3,
+      224,
+      224
+     ]
+    },
+    {
+     "episode_index": 1285,
+     "frame_index": 1859,
+     "index": 3935845,
+     "timestamp": 61.96666717529297,
+     "observation.images.left_wrist": "cdb0b77b86ea3e55",
+     "observation.images.left_wrist.dtype": "torch.float32",
+     "observation.images.left_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.right_wrist": "afc7307226a005d5",
+     "observation.images.right_wrist.dtype": "torch.float32",
+     "observation.images.right_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.top": "b375463c8dc65ef9",
+     "observation.images.top.dtype": "torch.float32",
+     "observation.images.top.shape": [
+      3,
+      224,
+      224
+     ]
+    },
+    {
+     "episode_index": 23650,
+     "frame_index": 1666,
+     "index": 71151727,
+     "timestamp": 55.53333282470703,
+     "observation.images.left_wrist": "1495f34ae79bf151",
+     "observation.images.left_wrist.dtype": "torch.float32",
+     "observation.images.left_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.right_wrist": "b2bd750039db1442",
+     "observation.images.right_wrist.dtype": "torch.float32",
+     "observation.images.right_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.top": "71077846cc7a9237",
+     "observation.images.top.dtype": "torch.float32",
+     "observation.images.top.shape": [
+      3,
+      224,
+      224
+     ]
+    },
+    {
+     "episode_index": 23650,
+     "frame_index": 2695,
+     "index": 71152756,
+     "timestamp": 89.83333587646484,
+     "observation.images.left_wrist": "b6028838c54f0bee",
+     "observation.images.left_wrist.dtype": "torch.float32",
+     "observation.images.left_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.right_wrist": "79e5b5c0768584b5",
+     "observation.images.right_wrist.dtype": "torch.float32",
+     "observation.images.right_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.top": "10c2de9db8c76e3a",
+     "observation.images.top.dtype": "torch.float32",
+     "observation.images.top.shape": [
+      3,
+      224,
+      224
+     ]
+    },
+    {
+     "episode_index": 91736,
+     "frame_index": 4265,
+     "index": 271626563,
+     "timestamp": 142.1666717529297,
+     "observation.images.left_wrist": "7b6fcc9cde145e22",
+     "observation.images.left_wrist.dtype": "torch.float32",
+     "observation.images.left_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.right_wrist": "bd53823fc384fb00",
+     "observation.images.right_wrist.dtype": "torch.float32",
+     "observation.images.right_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.top": "eec883bf0a36a32d",
+     "observation.images.top.dtype": "torch.float32",
+     "observation.images.top.shape": [
+      3,
+      224,
+      224
+     ]
+    },
+    {
+     "episode_index": 112715,
+     "frame_index": 2333,
+     "index": 333561008,
+     "timestamp": 77.76667022705078,
+     "observation.images.left_wrist": "10c2e558fcfb51e3",
+     "observation.images.left_wrist.dtype": "torch.float32",
+     "observation.images.left_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.right_wrist": "fc00e900ca40ad6e",
+     "observation.images.right_wrist.dtype": "torch.float32",
+     "observation.images.right_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.top": "edf62695d4abedd6",
+     "observation.images.top.dtype": "torch.float32",
+     "observation.images.top.shape": [
+      3,
+      224,
+      224
+     ]
+    },
+    {
+     "episode_index": 107148,
+     "frame_index": 710,
+     "index": 317182761,
+     "timestamp": 23.66666603088379,
+     "observation.images.left_wrist": "91c414b79c7c1933",
+     "observation.images.left_wrist.dtype": "torch.float32",
+     "observation.images.left_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.right_wrist": "4395385354aa8c0e",
+     "observation.images.right_wrist.dtype": "torch.float32",
+     "observation.images.right_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.top": "34bf16e63672dd65",
+     "observation.images.top.dtype": "torch.float32",
+     "observation.images.top.shape": [
+      3,
+      224,
+      224
+     ]
+    },
+    {
+     "episode_index": 1285,
+     "frame_index": 1729,
+     "index": 3935715,
+     "timestamp": 57.63333511352539,
+     "observation.images.left_wrist": "09874f752abae6dd",
+     "observation.images.left_wrist.dtype": "torch.float32",
+     "observation.images.left_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.right_wrist": "436f4c2b482c2cd0",
+     "observation.images.right_wrist.dtype": "torch.float32",
+     "observation.images.right_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.top": "5cc77cb2fa780b1a",
+     "observation.images.top.dtype": "torch.float32",
+     "observation.images.top.shape": [
+      3,
+      224,
+      224
+     ]
+    },
+    {
+     "episode_index": 5278,
+     "frame_index": 956,
+     "index": 15940397,
+     "timestamp": 31.866666793823242,
+     "observation.images.left_wrist": "2c8a8ee1cef1cc85",
+     "observation.images.left_wrist.dtype": "torch.float32",
+     "observation.images.left_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.right_wrist": "db7860d7e4b9020d",
+     "observation.images.right_wrist.dtype": "torch.float32",
+     "observation.images.right_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.top": "49092e9ad2bc1645",
+     "observation.images.top.dtype": "torch.float32",
+     "observation.images.top.shape": [
+      3,
+      224,
+      224
+     ]
+    },
+    {
+     "episode_index": 107348,
+     "frame_index": 2633,
+     "index": 317760819,
+     "timestamp": 87.76667022705078,
+     "observation.images.left_wrist": "3929f7851aa30fea",
+     "observation.images.left_wrist.dtype": "torch.float32",
+     "observation.images.left_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.right_wrist": "9a184627f01fac2e",
+     "observation.images.right_wrist.dtype": "torch.float32",
+     "observation.images.right_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.top": "a813a60abb81bf05",
+     "observation.images.top.dtype": "torch.float32",
+     "observation.images.top.shape": [
+      3,
+      224,
+      224
+     ]
+    },
+    {
+     "episode_index": 71346,
+     "frame_index": 2124,
+     "index": 211556762,
+     "timestamp": 70.80000305175781,
+     "observation.images.left_wrist": "8811552d1fda81d4",
+     "observation.images.left_wrist.dtype": "torch.float32",
+     "observation.images.left_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.right_wrist": "d581b78e33e24268",
+     "observation.images.right_wrist.dtype": "torch.float32",
+     "observation.images.right_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.top": "da7cd5c7baf13f14",
+     "observation.images.top.dtype": "torch.float32",
+     "observation.images.top.shape": [
+      3,
+      224,
+      224
+     ]
+    },
+    {
+     "episode_index": 84790,
+     "frame_index": 289,
+     "index": 251029748,
+     "timestamp": 9.633333206176758,
+     "observation.images.left_wrist": "12e6a72692183ba6",
+     "observation.images.left_wrist.dtype": "torch.float32",
+     "observation.images.left_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.right_wrist": "125db0c615acddff",
+     "observation.images.right_wrist.dtype": "torch.float32",
+     "observation.images.right_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.top": "3fc6f000dae1cdca",
+     "observation.images.top.dtype": "torch.float32",
+     "observation.images.top.shape": [
+      3,
+      224,
+      224
+     ]
+    },
+    {
+     "episode_index": 71526,
+     "frame_index": 1936,
+     "index": 212106131,
+     "timestamp": 64.53333282470703,
+     "observation.images.left_wrist": "e56db5b2ade33e3f",
+     "observation.images.left_wrist.dtype": "torch.float32",
+     "observation.images.left_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.right_wrist": "cdfb6af500771152",
+     "observation.images.right_wrist.dtype": "torch.float32",
+     "observation.images.right_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.top": "a67afc7f07937106",
+     "observation.images.top.dtype": "torch.float32",
+     "observation.images.top.shape": [
+      3,
+      224,
+      224
+     ]
+    },
+    {
+     "episode_index": 73834,
+     "frame_index": 4102,
+     "index": 218771953,
+     "timestamp": 136.73333740234375,
+     "observation.images.left_wrist": "87800e8921bc876a",
+     "observation.images.left_wrist.dtype": "torch.float32",
+     "observation.images.left_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.right_wrist": "5f96f22153f37861",
+     "observation.images.right_wrist.dtype": "torch.float32",
+     "observation.images.right_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.top": "9e66f6cd11b9f487",
+     "observation.images.top.dtype": "torch.float32",
+     "observation.images.top.shape": [
+      3,
+      224,
+      224
+     ]
+    },
+    {
+     "episode_index": 73834,
+     "frame_index": 4462,
+     "index": 218772313,
+     "timestamp": 148.73333740234375,
+     "observation.images.left_wrist": "30600f31580491f4",
+     "observation.images.left_wrist.dtype": "torch.float32",
+     "observation.images.left_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.right_wrist": "05880bb6db289eb4",
+     "observation.images.right_wrist.dtype": "torch.float32",
+     "observation.images.right_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.top": "ccc0a45a9a49887b",
+     "observation.images.top.dtype": "torch.float32",
+     "observation.images.top.shape": [
+      3,
+      224,
+      224
+     ]
+    },
+    {
+     "episode_index": 54844,
+     "frame_index": 1680,
+     "index": 163008147,
+     "timestamp": 56.0,
+     "observation.images.left_wrist": "cd0b731a2a12f62b",
+     "observation.images.left_wrist.dtype": "torch.float32",
+     "observation.images.left_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.right_wrist": "b21fb98a31a6eb9d",
+     "observation.images.right_wrist.dtype": "torch.float32",
+     "observation.images.right_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.top": "00eb9fe3da6de2f5",
+     "observation.images.top.dtype": "torch.float32",
+     "observation.images.top.shape": [
+      3,
+      224,
+      224
+     ]
+    },
+    {
+     "episode_index": 47085,
+     "frame_index": 1307,
+     "index": 139989913,
+     "timestamp": 43.56666564941406,
+     "observation.images.left_wrist": "d3e68fefc0df8492",
+     "observation.images.left_wrist.dtype": "torch.float32",
+     "observation.images.left_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.right_wrist": "57f1cb2d7628cd1c",
+     "observation.images.right_wrist.dtype": "torch.float32",
+     "observation.images.right_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.top": "bd6942b5f786c68d",
+     "observation.images.top.dtype": "torch.float32",
+     "observation.images.top.shape": [
+      3,
+      224,
+      224
+     ]
+    },
+    {
+     "episode_index": 98646,
+     "frame_index": 2499,
+     "index": 291931524,
+     "timestamp": 83.30000305175781,
+     "observation.images.left_wrist": "4e24cd2e3f0e6104",
+     "observation.images.left_wrist.dtype": "torch.float32",
+     "observation.images.left_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.right_wrist": "aeea60f3ee2ec2d3",
+     "observation.images.right_wrist.dtype": "torch.float32",
+     "observation.images.right_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.top": "36ee653e11dab148",
+     "observation.images.top.dtype": "torch.float32",
+     "observation.images.top.shape": [
+      3,
+      224,
+      224
+     ]
+    },
+    {
+     "episode_index": 125288,
+     "frame_index": 806,
+     "index": 370825823,
+     "timestamp": 26.866666793823242,
+     "observation.images.left_wrist": "b77df147129cf2d2",
+     "observation.images.left_wrist.dtype": "torch.float32",
+     "observation.images.left_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.right_wrist": "70b03fb8b2778d22",
+     "observation.images.right_wrist.dtype": "torch.float32",
+     "observation.images.right_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.top": "fe35fe522eb637d6",
+     "observation.images.top.dtype": "torch.float32",
+     "observation.images.top.shape": [
+      3,
+      224,
+      224
+     ]
+    },
+    {
+     "episode_index": 5382,
+     "frame_index": 2788,
+     "index": 16248670,
+     "timestamp": 92.93333435058594,
+     "observation.images.left_wrist": "66266a80b54046b5",
+     "observation.images.left_wrist.dtype": "torch.float32",
+     "observation.images.left_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.right_wrist": "b57c8af697a287c6",
+     "observation.images.right_wrist.dtype": "torch.float32",
+     "observation.images.right_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.top": "35022401cdd08b70",
+     "observation.images.top.dtype": "torch.float32",
+     "observation.images.top.shape": [
+      3,
+      224,
+      224
+     ]
+    },
+    {
+     "episode_index": 23650,
+     "frame_index": 665,
+     "index": 71150726,
+     "timestamp": 22.16666603088379,
+     "observation.images.left_wrist": "1b023aa16cb2daf9",
+     "observation.images.left_wrist.dtype": "torch.float32",
+     "observation.images.left_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.right_wrist": "5c52f183a785c979",
+     "observation.images.right_wrist.dtype": "torch.float32",
+     "observation.images.right_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.top": "8350d362afde79f1",
+     "observation.images.top.dtype": "torch.float32",
+     "observation.images.top.shape": [
+      3,
+      224,
+      224
+     ]
+    },
+    {
+     "episode_index": 47085,
+     "frame_index": 2486,
+     "index": 139991092,
+     "timestamp": 82.86666870117188,
+     "observation.images.left_wrist": "1dfe3339edad550b",
+     "observation.images.left_wrist.dtype": "torch.float32",
+     "observation.images.left_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.right_wrist": "060545afeabed438",
+     "observation.images.right_wrist.dtype": "torch.float32",
+     "observation.images.right_wrist.shape": [
+      3,
+      224,
+      224
+     ],
+     "observation.images.top": "dad773558b4db0e7",
+     "observation.images.top.dtype": "torch.float32",
+     "observation.images.top.shape": [
+      3,
+      224,
+      224
+     ]
+    }
+   ],
+   "saved_npz": "pr3917__hash.npz",
+   "peak_pss_gb": 5.343954086303711,
+   "peak_rss_sum_gb": 5.349910736083984,
+   "peak_cgroup_current_gb": 10.143558502197266,
+   "mem_timeline": [
+    [
+     0.0,
+     0.24,
+     1
+    ],
+    [
+     5.3,
+     0.38,
+     1
+    ],
+    [
+     11.3,
+     0.73,
+     1
+    ],
+    [
+     17.4,
+     0.9,
+     1
+    ],
+    [
+     23.6,
+     1.04,
+     1
+    ],
+    [
+     29.6,
+     1.13,
+     1
+    ],
+    [
+     35.4,
+     1.2,
+     1
+    ],
+    [
+     41.2,
+     1.28,
+     1
+    ],
+    [
+     47.1,
+     1.36,
+     1
+    ],
+    [
+     52.2,
+     1.48,
+     1
+    ],
+    [
+     57.3,
+     1.59,
+     1
+    ],
+    [
+     62.4,
+     1.69,
+     1
+    ],
+    [
+     68.4,
+     1.78,
+     1
+    ],
+    [
+     74.5,
+     1.83,
+     1
+    ],
+    [
+     80.7,
+     1.92,
+     1
+    ],
+    [
+     86.9,
+     1.99,
+     1
+    ],
+    [
+     92.2,
+     2.05,
+     1
+    ],
+    [
+     97.7,
+     2.16,
+     1
+    ],
+    [
+     102.8,
+     2.25,
+     1
+    ],
+    [
+     108.6,
+     2.33,
+     1
+    ],
+    [
+     113.7,
+     2.39,
+     1
+    ],
+    [
+     119.4,
+     2.43,
+     1
+    ],
+    [
+     124.4,
+     2.49,
+     1
+    ],
+    [
+     130.6,
+     2.57,
+     1
+    ],
+    [
+     136.3,
+     2.62,
+     1
+    ],
+    [
+     142.0,
+     2.62,
+     1
+    ],
+    [
+     147.7,
+     2.62,
+     1
+    ],
+    [
+     153.2,
+     2.62,
+     1
+    ],
+    [
+     158.7,
+     2.62,
+     1
+    ],
+    [
+     164.3,
+     2.62,
+     1
+    ],
+    [
+     169.7,
+     2.62,
+     1
+    ],
+    [
+     175.2,
+     2.62,
+     1
+    ],
+    [
+     180.7,
+     2.62,
+     1
+    ],
+    [
+     186.1,
+     2.62,
+     1
+    ],
+    [
+     191.6,
+     2.62,
+     1
+    ],
+    [
+     197.1,
+     2.62,
+     1
+    ],
+    [
+     202.6,
+     2.62,
+     1
+    ],
+    [
+     208.1,
+     2.62,
+     1
+    ],
+    [
+     213.6,
+     2.62,
+     1
+    ],
+    [
+     219.1,
+     2.54,
+     1
+    ],
+    [
+     224.6,
+     2.56,
+     1
+    ],
+    [
+     230.3,
+     3.7,
+     1
+    ],
+    [
+     236.2,
+     3.76,
+     1
+    ],
+    [
+     242.2,
+     4.1,
+     1
+    ],
+    [
+     247.8,
+     4.24,
+     1
+    ],
+    [
+     253.4,
+     4.45,
+     1
+    ],
+    [
+     258.6,
+     4.73,
+     1
+    ],
+    [
+     263.6,
+     4.84,
+     1
+    ],
+    [
+     269.8,
+     4.99,
+     1
+    ],
+    [
+     274.8,
+     5.34,
+     1
+    ]
+   ],
+   "wall_s": 279.2375011444092,
+   "peak_cgroup_anon_mb_seen_by_orchestrator": 4049
+  },
+  {
+   "arm": "pr3917",
+   "regime": "w0_dt2",
+   "rep": 0,
+   "num_workers": 0,
+   "seed": 0,
+   "decode_threads": 2,
+   "buffer_size": null,
+   "decoder_cache_env": null,
+   "n_target": 50,
+   "cap_s": 180,
+   "status": "ok",
+   "utc_start": "2026-09-25T16:45:54Z",
+   "lerobot_file": "/work/src_pr3917/src/lerobot/__init__.py",
+   "cpu_quota": 8,
+   "build_s": 6.021906745969318,
+   "rss_after_build_gb": 0.5416831970214844,
+   "build_http": {
+    "requests": 0,
+    "resolve_requests": 0,
+    "cdn_requests": 0,
+    "api_requests": 0,
+    "http_bytes": 0,
+    "http_s": 0.0,
+    "status_429": 0,
+    "status_other_err": 0,
+    "cdn_hit": 0,
+    "cdn_miss": 0,
+    "fetch_calls": 0,
+    "fetch_bytes": 0,
+    "fetch_s": 0.0,
+    "resolver_min_seen": 1073741824,
+    "pid": 7641
+   },
+   "pss_at_first_batch_gb": 3.902255058288574,
+   "first_batch_s": 49.138680277974345,
+   "first_batch_s_incl_build": 55.16496495902538,
+   "first_batch_http": {
+    "requests": 463,
+    "resolve_requests": 205,
+    "cdn_requests": 201,
+    "api_requests": 57,
+    "http_bytes": 1056102806,
+    "http_s": 81.62639546580613,
+    "status_429": 0,
+    "status_other_err": 0,
+    "cdn_hit": 0,
+    "cdn_miss": 0,
+    "fetch_calls": 120,
+    "fetch_bytes": 237244261,
+    "fetch_s": 233.63144327769987,
+    "resolver_min_seen": 1073741824
+   },
+   "n_samples": 64,
+   "first_batch_n": 8,
+   "steady_n": 56,
+   "steady_s": 5.6897343170130625,
+   "sps": 9.842287333619876,
+   "batch_times": [
+    49.1387,
+    50.7376,
+    53.3081,
+    53.6424,
+    53.9455,
+    54.1968,
+    54.3827,
+    54.4752
+   ],
+   "total_http": {
+    "requests": 538,
+    "resolve_requests": 240,
+    "cdn_requests": 240,
+    "api_requests": 58,
+    "http_bytes": 1346222463,
+    "http_s": 91.98011346813291,
+    "status_429": 0,
+    "status_other_err": 0,
+    "cdn_hit": 0,
+    "cdn_miss": 0,
+    "fetch_calls": 120,
+    "fetch_bytes": 237244261,
+    "fetch_s": 233.63144327769987,
+    "resolver_min_seen": 1073741824
+   },
+   "steady_http": {
+    "requests": 75,
+    "resolve_requests": 35,
+    "cdn_requests": 39,
+    "api_requests": 1,
+    "http_bytes": 290119657,
+    "http_s": 10.353718002326787,
+    "status_429": 0,
+    "status_other_err": 0,
+    "cdn_hit": 0,
+    "cdn_miss": 0,
+    "fetch_calls": 0,
+    "fetch_bytes": 0,
+    "fetch_s": 0.0
+   },
+   "per_sample": {
+    "requests": 1.3392857142857142,
+    "resolve": 0.625,
+    "cdn": 0.6964285714285714,
+    "api": 0.017857142857142856,
+    "mb": 5.1807081607142855,
+    "status_429": 0,
+    "cdn_hit": 0,
+    "cdn_miss": 0
+   },
+   "status_429_total": 0,
+   "peak_pss_gb": 4.372946739196777,
+   "peak_rss_sum_gb": 4.397373199462891,
+   "peak_cgroup_current_gb": 6.091030120849609,
+   "mem_timeline": [
+    [
+     0.0,
+     0.22,
+     1
+    ],
+    [
+     5.4,
+     0.47,
+     1
+    ],
+    [
+     10.6,
+     1.15,
+     1
+    ],
+    [
+     15.9,
+     1.67,
+     1
+    ],
+    [
+     21.3,
+     1.71,
+     1
+    ],
+    [
+     27.2,
+     2.0,
+     1
+    ],
+    [
+     32.7,
+     2.51,
+     1
+    ],
+    [
+     38.9,
+     2.98,
+     1
+    ],
+    [
+     44.6,
+     3.36,
+     1
+    ],
+    [
+     51.5,
+     3.63,
+     1
+    ],
+    [
+     57.6,
+     4.15,
+     1
+    ]
+   ],
+   "wall_s": 63.445164918899536,
+   "peak_cgroup_anon_mb_seen_by_orchestrator": 4351
+  },
+  {
+   "arm": "pr3917",
+   "regime": "w1_dt8",
+   "rep": 0,
+   "num_workers": 1,
+   "seed": 0,
+   "decode_threads": 8,
+   "buffer_size": null,
+   "decoder_cache_env": null,
+   "n_target": 50,
+   "cap_s": 180,
+   "status": "ok",
+   "utc_start": "2026-09-25T16:46:57Z",
+   "lerobot_file": "/work/src_pr3917/src/lerobot/__init__.py",
+   "cpu_quota": 8,
+   "build_s": 3.785292356973514,
+   "rss_after_build_gb": 0.540557861328125,
+   "build_http": {
+    "requests": 0,
+    "resolve_requests": 0,
+    "cdn_requests": 0,
+    "api_requests": 0,
+    "http_bytes": 0,
+    "http_s": 0.0,
+    "status_429": 0,
+    "status_other_err": 0,
+    "cdn_hit": 0,
+    "cdn_miss": 0,
+    "fetch_calls": 0,
+    "fetch_bytes": 0,
+    "fetch_s": 0.0,
+    "resolver_min_seen": 1073741824,
+    "pid": 7754
+   },
+   "pss_at_first_batch_gb": 4.054819107055664,
+   "first_batch_s": 43.75773336610291,
+   "first_batch_s_incl_build": 47.54396168002859,
+   "first_batch_http": {
+    "requests": 462,
+    "resolve_requests": 204,
+    "cdn_requests": 201,
+    "api_requests": 57,
+    "http_bytes": 1056102121,
+    "http_s": 70.77946803567465,
+    "status_429": 0,
+    "status_other_err": 0,
+    "cdn_hit": 0,
+    "cdn_miss": 0,
+    "fetch_calls": 120,
+    "fetch_bytes": 237244261,
+    "fetch_s": 246.76736638136208,
+    "resolver_min_seen": 1073741824
+   },
+   "n_samples": 64,
+   "first_batch_n": 8,
+   "steady_n": 56,
+   "steady_s": 6.791766349924728,
+   "sps": 8.24527775467727,
+   "batch_times": [
+    43.7577,
+    45.9966,
+    48.593,
+    48.8333,
+    49.0085,
+    49.3479,
+    49.5875,
+    49.8474
+   ],
+   "total_http": {
+    "requests": 538,
+    "resolve_requests": 240,
+    "cdn_requests": 240,
+    "api_requests": 58,
+    "http_bytes": 1346222463,
+    "http_s": 81.82181113574188,
+    "status_429": 0,
+    "status_other_err": 0,
+    "cdn_hit": 0,
+    "cdn_miss": 0,
+    "fetch_calls": 120,
+    "fetch_bytes": 237244261,
+    "fetch_s": 246.76736638136208,
+    "resolver_min_seen": 1073741824
+   },
+   "steady_http": {
+    "requests": 76,
+    "resolve_requests": 36,
+    "cdn_requests": 39,
+    "api_requests": 1,
+    "http_bytes": 290120342,
+    "http_s": 11.042343100067228,
+    "status_429": 0,
+    "status_other_err": 0,
+    "cdn_hit": 0,
+    "cdn_miss": 0,
+    "fetch_calls": 0,
+    "fetch_bytes": 0,
+    "fetch_s": 0.0
+   },
+   "per_sample": {
+    "requests": 1.3571428571428572,
+    "resolve": 0.6428571428571429,
+    "cdn": 0.6964285714285714,
+    "api": 0.017857142857142856,
+    "mb": 5.180720392857142,
+    "status_429": 0,
+    "cdn_hit": 0,
+    "cdn_miss": 0
+   },
+   "status_429_total": 0,
+   "peak_pss_gb": 4.558355331420898,
+   "peak_rss_sum_gb": 4.8488616943359375,
+   "peak_cgroup_current_gb": 6.2806396484375,
+   "mem_timeline": [
+    [
+     0.0,
+     0.22,
+     1
+    ],
+    [
+     5.4,
+     1.7,
+     2
+    ],
+    [
+     10.7,
+     1.74,
+     2
+    ],
+    [
+     16.1,
+     2.08,
+     2
+    ],
+    [
+     21.5,
+     2.54,
+     2
+    ],
+    [
+     26.9,
+     3.02,
+     2
+    ],
+    [
+     32.4,
+     3.37,
+     2
+    ],
+    [
+     37.9,
+     3.73,
+     2
+    ],
+    [
+     43.7,
+     3.78,
+     2
+    ],
+    [
+     49.5,
+     4.29,
+     2
+    ]
+   ],
+   "wall_s": 56.490700006484985,
+   "peak_cgroup_anon_mb_seen_by_orchestrator": 3292
+  }
+ ]
+}

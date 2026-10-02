@@ -1,0 +1,14 @@
+py-spy> Sampling process 50 times a second. Press Control-C to exit.
+
+
+Downloading bytes:           |  0.00B            [A
+Reconstructing (incomplete total...): |          |  0.00B /  0.00B            [A
+Fetching 3 files:   0%|          | 0/3 [00:00<?, ?it/s][AFetching 3 files: 100%|██████████| 3/3 [00:00<00:00, 992.11it/s]
+
+Download complete: :           |  0.00B            [A
+Reconstruction complete: |          |  0.00B /  0.00B                         [AReconstruction complete: |          |  0.00B /  0.00B            
+Download complete: :           |  0.00B            
+
+py-spy> Stopped sampling because process exited
+py-spy> Wrote raw flamegraph data to '/results/prof-20260928T192251Z-smoke/prof/runs/D6_pyspy_gil.pyspy.txt'. Samples: 3069 Errors: 610
+py-spy> You can use the flamegraph.pl script from https://github.com/brendangregg/flamegraph to generate a SVG

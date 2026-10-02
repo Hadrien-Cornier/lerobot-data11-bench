@@ -1,0 +1,1232 @@
+{
+ "arm": "pr3917",
+ "regime": "hash",
+ "rep": -1,
+ "num_workers": 0,
+ "seed": 0,
+ "decode_threads": 2,
+ "buffer_size": null,
+ "decoder_cache_env": null,
+ "n_target": 32,
+ "cap_s": 900,
+ "status": "ok",
+ "utc_start": "2026-09-25T16:37:21Z",
+ "lerobot_file": "/work/src_pr3917/src/lerobot/__init__.py",
+ "cpu_quota": 8,
+ "build_s": 224.06114488106687,
+ "rss_after_build_gb": 2.544139862060547,
+ "build_http": {
+  "requests": 3625,
+  "resolve_requests": 1170,
+  "cdn_requests": 2340,
+  "api_requests": 115,
+  "http_bytes": 131084936184,
+  "http_s": 385.8892785127973,
+  "status_429": 0,
+  "status_other_err": 1,
+  "cdn_hit": 0,
+  "cdn_miss": 0,
+  "fetch_calls": 0,
+  "fetch_bytes": 0,
+  "fetch_s": 0.0,
+  "resolver_min_seen": 1073741824,
+  "pid": 4744
+ },
+ "pss_at_first_batch_gb": 4.987672805786133,
+ "first_batch_s": 45.36036950489506,
+ "first_batch_s_incl_build": 269.4227653259877,
+ "first_batch_http": {
+  "requests": 404,
+  "resolve_requests": 203,
+  "cdn_requests": 200,
+  "api_requests": 1,
+  "http_bytes": 991644199,
+  "http_s": 68.60457387834322,
+  "status_429": 0,
+  "status_other_err": 0,
+  "cdn_hit": 0,
+  "cdn_miss": 0,
+  "fetch_calls": 120,
+  "fetch_bytes": 237244261,
+  "fetch_s": 269.3315147428075,
+  "resolver_min_seen": 1073741824
+ },
+ "n_samples": 40,
+ "first_batch_n": 8,
+ "steady_n": 32,
+ "steady_s": 6.167807784047909,
+ "sps": 5.18822912782125,
+ "batch_times": [
+  45.3604,
+  48.293,
+  49.9698,
+  50.6563,
+  51.3981
+ ],
+ "total_http": {
+  "requests": 481,
+  "resolve_requests": 240,
+  "cdn_requests": 240,
+  "api_requests": 1,
+  "http_bytes": 1284295673,
+  "http_s": 80.90898218075745,
+  "status_429": 0,
+  "status_other_err": 0,
+  "cdn_hit": 0,
+  "cdn_miss": 0,
+  "fetch_calls": 120,
+  "fetch_bytes": 237244261,
+  "fetch_s": 269.3315147428075,
+  "resolver_min_seen": 1073741824
+ },
+ "steady_http": {
+  "requests": 77,
+  "resolve_requests": 37,
+  "cdn_requests": 40,
+  "api_requests": 0,
+  "http_bytes": 292651474,
+  "http_s": 12.304408302414231,
+  "status_429": 0,
+  "status_other_err": 0,
+  "cdn_hit": 0,
+  "cdn_miss": 0,
+  "fetch_calls": 0,
+  "fetch_bytes": 0,
+  "fetch_s": 0.0
+ },
+ "per_sample": {
+  "requests": 2.40625,
+  "resolve": 1.15625,
+  "cdn": 1.25,
+  "api": 0.0,
+  "mb": 9.1453585625,
+  "status_429": 0,
+  "cdn_hit": 0,
+  "cdn_miss": 0
+ },
+ "status_429_total": 0,
+ "hashes": [
+  {
+   "episode_index": 16377,
+   "frame_index": 155,
+   "index": 49638364,
+   "timestamp": 5.166666507720947,
+   "observation.images.left_wrist": "73642fad19e1829c",
+   "observation.images.left_wrist.dtype": "torch.float32",
+   "observation.images.left_wrist.shape": [
+    3,
+    224,
+    224
+   ],
+   "observation.images.right_wrist": "08228823df1295cc",
+   "observation.images.right_wrist.dtype": "torch.float32",
+   "observation.images.right_wrist.shape": [
+    3,
+    224,
+    224
+   ],
+   "observation.images.top": "8443f048c8852bea",
+   "observation.images.top.dtype": "torch.float32",
+   "observation.images.top.shape": [
+    3,
+    224,
+    224
+   ]
+  },
+  {
+   "episode_index": 91736,
+   "frame_index": 2335,
+   "index": 271624633,
+   "timestamp": 77.83333587646484,
+   "observation.images.left_wrist": "ff3c45e6217f9a1d",
+   "observation.images.left_wrist.dtype": "torch.float32",
+   "observation.images.left_wrist.shape": [
+    3,
+    224,
+    224
+   ],
+   "observation.images.right_wrist": "8358c6486cbc9577",
+   "observation.images.right_wrist.dtype": "torch.float32",
+   "observation.images.right_wrist.shape": [
+    3,
+    224,
+    224
+   ],
+   "observation.images.top": "74214887f89ca449",
+   "observation.images.top.dtype": "torch.float32",
+   "observation.images.top.shape": [
+    3,
+    224,
+    224
+   ]
+  },
+  {
+   "episode_index": 31194,
+   "frame_index": 854,
+   "index": 92933555,
+   "timestamp": 28.46666717529297,
+   "observation.images.left_wrist": "f1d2d88697aa496e",
+   "observation.images.left_wrist.dtype": "torch.float32",
+   "observation.images.left_wrist.shape": [
+    3,
+    224,
+    224
+   ],
+   "observation.images.right_wrist": "bc51037a2605badd",
+   "observation.images.right_wrist.dtype": "torch.float32",
+   "observation.images.right_wrist.shape": [
+    3,
+    224,
+    224
+   ],
+   "observation.images.top": "49da9346cd01e21a",
+   "observation.images.top.dtype": "torch.float32",
+   "observation.images.top.shape": [
+    3,
+    224,
+    224
+   ]
+  },
+  {
+   "episode_index": 5382,
+   "frame_index": 4541,
+   "index": 16250423,
+   "timestamp": 151.36666870117188,
+   "observation.images.left_wrist": "bd5ed3e4663b8f92",
+   "observation.images.left_wrist.dtype": "torch.float32",
+   "observation.images.left_wrist.shape": [
+    3,
+    224,
+    224
+   ],
+   "observation.images.right_wrist": "29f249c754738176",
+   "observation.images.right_wrist.dtype": "torch.float32",
+   "observation.images.right_wrist.shape": [
+    3,
+    224,
+    224
+   ],
+   "observation.images.top": "ef0407d47067bff0",
+   "observation.images.top.dtype": "torch.float32",
+   "observation.images.top.shape": [
+    3,
+    224,
+    224
+   ]
+  },
+  {
+   "episode_index": 83668,
+   "frame_index": 255,
+   "index": 247659886,
+   "timestamp": 8.5,
+   "observation.images.left_wrist": "3d156a7587f767c4",
+   "observation.images.left_wrist.dtype": "torch.float32",
+   "observation.images.left_wrist.shape": [
+    3,
+    224,
+    224
+   ],
+   "observation.images.right_wrist": "8300d60dbbc38cc0",
+   "observation.images.right_wrist.dtype": "torch.float32",
+   "observation.images.right_wrist.shape": [
+    3,
+    224,
+    224
+   ],
+   "observation.images.top": "e73b49209a2aa989",
+   "observation.images.top.dtype": "torch.float32",
+   "observation.images.top.shape": [
+    3,
+    224,
+    224
+   ]
+  },
+  {
+   "episode_index": 71346,
+   "frame_index": 3307,
+   "index": 211557945,
+   "timestamp": 110.23332977294922,
+   "observation.images.left_wrist": "f86e0ec95a4eb11d",
+   "observation.images.left_wrist.dtype": "torch.float32",
+   "observation.images.left_wrist.shape": [
+    3,
+    224,
+    224
+   ],
+   "observation.images.right_wrist": "e732aede9995d64a",
+   "observation.images.right_wrist.dtype": "torch.float32",
+   "observation.images.right_wrist.shape": [
+    3,
+    224,
+    224
+   ],
+   "observation.images.top": "936416be0445c9c6",
+   "observation.images.top.dtype": "torch.float32",
+   "observation.images.top.shape": [
+    3,
+    224,
+    224
+   ]
+  },
+  {
+   "episode_index": 48622,
+   "frame_index": 2607,
+   "index": 144514771,
+   "timestamp": 86.9000015258789,
+   "observation.images.left_wrist": "f003f8ad8cb6e0ed",
+   "observation.images.left_wrist.dtype": "torch.float32",
+   "observation.images.left_wrist.shape": [
+    3,
+    224,
+    224
+   ],
+   "observation.images.right_wrist": "cd6758d02ad629c4",
+   "observation.images.right_wrist.dtype": "torch.float32",
+   "observation.images.right_wrist.shape": [
+    3,
+    224,
+    224
+   ],
+   "observation.images.top": "7a100abcd4281bfa",
+   "observation.images.top.dtype": "torch.float32",
+   "observation.images.top.shape": [
+    3,
+    224,
+    224
+   ]
+  },
+  {
+   "episode_index": 84790,
+   "frame_index": 2021,
+   "index": 251031480,
+   "timestamp": 67.36666870117188,
+   "observation.images.left_wrist": "6c7cb7df183dff1f",
+   "observation.images.left_wrist.dtype": "torch.float32",
+   "observation.images.left_wrist.shape": [
+    3,
+    224,
+    224
+   ],
+   "observation.images.right_wrist": "4f1051efd55a4104",
+   "observation.images.right_wrist.dtype": "torch.float32",
+   "observation.images.right_wrist.shape": [
+    3,
+    224,
+    224
+   ],
+   "observation.images.top": "b08e0abe1324e82e",
+   "observation.images.top.dtype": "torch.float32",
+   "observation.images.top.shape": [
+    3,
+    224,
+    224
+   ]
+  },
+  {
+   "episode_index": 91736,
+   "frame_index": 3306,
+   "index": 271625604,
+   "timestamp": 110.19999694824219,
+   "observation.images.left_wrist": "86aeb37903c67e86",
+   "observation.images.left_wrist.dtype": "torch.float32",
+   "observation.images.left_wrist.shape": [
+    3,
+    224,
+    224
+   ],
+   "observation.images.right_wrist": "9fa4c8d027b63fc2",
+   "observation.images.right_wrist.dtype": "torch.float32",
+   "observation.images.right_wrist.shape": [
+    3,
+    224,
+    224
+   ],
+   "observation.images.top": "98cd35d25091d1ba",
+   "observation.images.top.dtype": "torch.float32",
+   "observation.images.top.shape": [
+    3,
+    224,
+    224
+   ]
+  },
+  {
+   "episode_index": 5382,
+   "frame_index": 1524,
+   "index": 16247406,
+   "timestamp": 50.79999923706055,
+   "observation.images.left_wrist": "58063889eb60d0a9",
+   "observation.images.left_wrist.dtype": "torch.float32",
+   "observation.images.left_wrist.shape": [
+    3,
+    224,
+    224
+   ],
+   "observation.images.right_wrist": "4bbd8c0fa079817c",
+   "observation.images.right_wrist.dtype": "torch.float32",
+   "observation.images.right_wrist.shape": [
+    3,
+    224,
+    224
+   ],
+   "observation.images.top": "8323fc42b918079d",
+   "observation.images.top.dtype": "torch.float32",
+   "observation.images.top.shape": [
+    3,
+    224,
+    224
+   ]
+  },
+  {
+   "episode_index": 112715,
+   "frame_index": 2599,
+   "index": 333561274,
+   "timestamp": 86.63333129882812,
+   "observation.images.left_wrist": "0f5e1d71ecc815ec",
+   "observation.images.left_wrist.dtype": "torch.float32",
+   "observation.images.left_wrist.shape": [
+    3,
+    224,
+    224
+   ],
+   "observation.images.right_wrist": "835ceecb4732830d",
+   "observation.images.right_wrist.dtype": "torch.float32",
+   "observation.images.right_wrist.shape": [
+    3,
+    224,
+    224
+   ],
+   "observation.images.top": "6ab67cc580c5ef3f",
+   "observation.images.top.dtype": "torch.float32",
+   "observation.images.top.shape": [
+    3,
+    224,
+    224
+   ]
+  },
+  {
+   "episode_index": 1285,
+   "frame_index": 1859,
+   "index": 3935845,
+   "timestamp": 61.96666717529297,
+   "observation.images.left_wrist": "cdb0b77b86ea3e55",
+   "observation.images.left_wrist.dtype": "torch.float32",
+   "observation.images.left_wrist.shape": [
+    3,
+    224,
+    224
+   ],
+   "observation.images.right_wrist": "afc7307226a005d5",
+   "observation.images.right_wrist.dtype": "torch.float32",
+   "observation.images.right_wrist.shape": [
+    3,
+    224,
+    224
+   ],
+   "observation.images.top": "b375463c8dc65ef9",
+   "observation.images.top.dtype": "torch.float32",
+   "observation.images.top.shape": [
+    3,
+    224,
+    224
+   ]
+  },
+  {
+   "episode_index": 23650,
+   "frame_index": 1666,
+   "index": 71151727,
+   "timestamp": 55.53333282470703,
+   "observation.images.left_wrist": "1495f34ae79bf151",
+   "observation.images.left_wrist.dtype": "torch.float32",
+   "observation.images.left_wrist.shape": [
+    3,
+    224,
+    224
+   ],
+   "observation.images.right_wrist": "b2bd750039db1442",
+   "observation.images.right_wrist.dtype": "torch.float32",
+   "observation.images.right_wrist.shape": [
+    3,
+    224,
+    224
+   ],
+   "observation.images.top": "71077846cc7a9237",
+   "observation.images.top.dtype": "torch.float32",
+   "observation.images.top.shape": [
+    3,
+    224,
+    224
+   ]
+  },
+  {
+   "episode_index": 23650,
+   "frame_index": 2695,
+   "index": 71152756,
+   "timestamp": 89.83333587646484,
+   "observation.images.left_wrist": "b6028838c54f0bee",
+   "observation.images.left_wrist.dtype": "torch.float32",
+   "observation.images.left_wrist.shape": [
+    3,
+    224,
+    224
+   ],
+   "observation.images.right_wrist": "79e5b5c0768584b5",
+   "observation.images.right_wrist.dtype": "torch.float32",
+   "observation.images.right_wrist.shape": [
+    3,
+    224,
+    224
+   ],
+   "observation.images.top": "10c2de9db8c76e3a",
+   "observation.images.top.dtype": "torch.float32",
+   "observation.images.top.shape": [
+    3,
+    224,
+    224
+   ]
+  },
+  {
+   "episode_index": 91736,
+   "frame_index": 4265,
+   "index": 271626563,
+   "timestamp": 142.1666717529297,
+   "observation.images.left_wrist": "7b6fcc9cde145e22",
+   "observation.images.left_wrist.dtype": "torch.float32",
+   "observation.images.left_wrist.shape": [
+    3,
+    224,
+    224
+   ],
+   "observation.images.right_wrist": "bd53823fc384fb00",
+   "observation.images.right_wrist.dtype": "torch.float32",
+   "observation.images.right_wrist.shape": [
+    3,
+    224,
+    224
+   ],
+   "observation.images.top": "eec883bf0a36a32d",
+   "observation.images.top.dtype": "torch.float32",
+   "observation.images.top.shape": [
+    3,
+    224,
+    224
+   ]
+  },
+  {
+   "episode_index": 112715,
+   "frame_index": 2333,
+   "index": 333561008,
+   "timestamp": 77.76667022705078,
+   "observation.images.left_wrist": "10c2e558fcfb51e3",
+   "observation.images.left_wrist.dtype": "torch.float32",
+   "observation.images.left_wrist.shape": [
+    3,
+    224,
+    224
+   ],
+   "observation.images.right_wrist": "fc00e900ca40ad6e",
+   "observation.images.right_wrist.dtype": "torch.float32",
+   "observation.images.right_wrist.shape": [
+    3,
+    224,
+    224
+   ],
+   "observation.images.top": "edf62695d4abedd6",
+   "observation.images.top.dtype": "torch.float32",
+   "observation.images.top.shape": [
+    3,
+    224,
+    224
+   ]
+  },
+  {
+   "episode_index": 107148,
+   "frame_index": 710,
+   "index": 317182761,
+   "timestamp": 23.66666603088379,
+   "observation.images.left_wrist": "91c414b79c7c1933",
+   "observation.images.left_wrist.dtype": "torch.float32",
+   "observation.images.left_wrist.shape": [
+    3,
+    224,
+    224
+   ],
+   "observation.images.right_wrist": "4395385354aa8c0e",
+   "observation.images.right_wrist.dtype": "torch.float32",
+   "observation.images.right_wrist.shape": [
+    3,
+    224,
+    224
+   ],
+   "observation.images.top": "34bf16e63672dd65",
+   "observation.images.top.dtype": "torch.float32",
+   "observation.images.top.shape": [
+    3,
+    224,
+    224
+   ]
+  },
+  {
+   "episode_index": 1285,
+   "frame_index": 1729,
+   "index": 3935715,
+   "timestamp": 57.63333511352539,
+   "observation.images.left_wrist": "09874f752abae6dd",
+   "observation.images.left_wrist.dtype": "torch.float32",
+   "observation.images.left_wrist.shape": [
+    3,
+    224,
+    224
+   ],
+   "observation.images.right_wrist": "436f4c2b482c2cd0",
+   "observation.images.right_wrist.dtype": "torch.float32",
+   "observation.images.right_wrist.shape": [
+    3,
+    224,
+    224
+   ],
+   "observation.images.top": "5cc77cb2fa780b1a",
+   "observation.images.top.dtype": "torch.float32",
+   "observation.images.top.shape": [
+    3,
+    224,
+    224
+   ]
+  },
+  {
+   "episode_index": 5278,
+   "frame_index": 956,
+   "index": 15940397,
+   "timestamp": 31.866666793823242,
+   "observation.images.left_wrist": "2c8a8ee1cef1cc85",
+   "observation.images.left_wrist.dtype": "torch.float32",
+   "observation.images.left_wrist.shape": [
+    3,
+    224,
+    224
+   ],
+   "observation.images.right_wrist": "db7860d7e4b9020d",
+   "observation.images.right_wrist.dtype": "torch.float32",
+   "observation.images.right_wrist.shape": [
+    3,
+    224,
+    224
+   ],
+   "observation.images.top": "49092e9ad2bc1645",
+   "observation.images.top.dtype": "torch.float32",
+   "observation.images.top.shape": [
+    3,
+    224,
+    224
+   ]
+  },
+  {
+   "episode_index": 107348,
+   "frame_index": 2633,
+   "index": 317760819,
+   "timestamp": 87.76667022705078,
+   "observation.images.left_wrist": "3929f7851aa30fea",
+   "observation.images.left_wrist.dtype": "torch.float32",
+   "observation.images.left_wrist.shape": [
+    3,
+    224,
+    224
+   ],
+   "observation.images.right_wrist": "9a184627f01fac2e",
+   "observation.images.right_wrist.dtype": "torch.float32",
+   "observation.images.right_wrist.shape": [
+    3,
+    224,
+    224
+   ],
+   "observation.images.top": "a813a60abb81bf05",
+   "observation.images.top.dtype": "torch.float32",
+   "observation.images.top.shape": [
+    3,
+    224,
+    224
+   ]
+  },
+  {
+   "episode_index": 71346,
+   "frame_index": 2124,
+   "index": 211556762,
+   "timestamp": 70.80000305175781,
+   "observation.images.left_wrist": "8811552d1fda81d4",
+   "observation.images.left_wrist.dtype": "torch.float32",
+   "observation.images.left_wrist.shape": [
+    3,
+    224,
+    224
+   ],
+   "observation.images.right_wrist": "d581b78e33e24268",
+   "observation.images.right_wrist.dtype": "torch.float32",
+   "observation.images.right_wrist.shape": [
+    3,
+    224,
+    224
+   ],
+   "observation.images.top": "da7cd5c7baf13f14",
+   "observation.images.top.dtype": "torch.float32",
+   "observation.images.top.shape": [
+    3,
+    224,
+    224
+   ]
+  },
+  {
+   "episode_index": 84790,
+   "frame_index": 289,
+   "index": 251029748,
+   "timestamp": 9.633333206176758,
+   "observation.images.left_wrist": "12e6a72692183ba6",
+   "observation.images.left_wrist.dtype": "torch.float32",
+   "observation.images.left_wrist.shape": [
+    3,
+    224,
+    224
+   ],
+   "observation.images.right_wrist": "125db0c615acddff",
+   "observation.images.right_wrist.dtype": "torch.float32",
+   "observation.images.right_wrist.shape": [
+    3,
+    224,
+    224
+   ],
+   "observation.images.top": "3fc6f000dae1cdca",
+   "observation.images.top.dtype": "torch.float32",
+   "observation.images.top.shape": [
+    3,
+    224,
+    224
+   ]
+  },
+  {
+   "episode_index": 71526,
+   "frame_index": 1936,
+   "index": 212106131,
+   "timestamp": 64.53333282470703,
+   "observation.images.left_wrist": "e56db5b2ade33e3f",
+   "observation.images.left_wrist.dtype": "torch.float32",
+   "observation.images.left_wrist.shape": [
+    3,
+    224,
+    224
+   ],
+   "observation.images.right_wrist": "cdfb6af500771152",
+   "observation.images.right_wrist.dtype": "torch.float32",
+   "observation.images.right_wrist.shape": [
+    3,
+    224,
+    224
+   ],
+   "observation.images.top": "a67afc7f07937106",
+   "observation.images.top.dtype": "torch.float32",
+   "observation.images.top.shape": [
+    3,
+    224,
+    224
+   ]
+  },
+  {
+   "episode_index": 73834,
+   "frame_index": 4102,
+   "index": 218771953,
+   "timestamp": 136.73333740234375,
+   "observation.images.left_wrist": "87800e8921bc876a",
+   "observation.images.left_wrist.dtype": "torch.float32",
+   "observation.images.left_wrist.shape": [
+    3,
+    224,
+    224
+   ],
+   "observation.images.right_wrist": "5f96f22153f37861",
+   "observation.images.right_wrist.dtype": "torch.float32",
+   "observation.images.right_wrist.shape": [
+    3,
+    224,
+    224
+   ],
+   "observation.images.top": "9e66f6cd11b9f487",
+   "observation.images.top.dtype": "torch.float32",
+   "observation.images.top.shape": [
+    3,
+    224,
+    224
+   ]
+  },
+  {
+   "episode_index": 73834,
+   "frame_index": 4462,
+   "index": 218772313,
+   "timestamp": 148.73333740234375,
+   "observation.images.left_wrist": "30600f31580491f4",
+   "observation.images.left_wrist.dtype": "torch.float32",
+   "observation.images.left_wrist.shape": [
+    3,
+    224,
+    224
+   ],
+   "observation.images.right_wrist": "05880bb6db289eb4",
+   "observation.images.right_wrist.dtype": "torch.float32",
+   "observation.images.right_wrist.shape": [
+    3,
+    224,
+    224
+   ],
+   "observation.images.top": "ccc0a45a9a49887b",
+   "observation.images.top.dtype": "torch.float32",
+   "observation.images.top.shape": [
+    3,
+    224,
+    224
+   ]
+  },
+  {
+   "episode_index": 54844,
+   "frame_index": 1680,
+   "index": 163008147,
+   "timestamp": 56.0,
+   "observation.images.left_wrist": "cd0b731a2a12f62b",
+   "observation.images.left_wrist.dtype": "torch.float32",
+   "observation.images.left_wrist.shape": [
+    3,
+    224,
+    224
+   ],
+   "observation.images.right_wrist": "b21fb98a31a6eb9d",
+   "observation.images.right_wrist.dtype": "torch.float32",
+   "observation.images.right_wrist.shape": [
+    3,
+    224,
+    224
+   ],
+   "observation.images.top": "00eb9fe3da6de2f5",
+   "observation.images.top.dtype": "torch.float32",
+   "observation.images.top.shape": [
+    3,
+    224,
+    224
+   ]
+  },
+  {
+   "episode_index": 47085,
+   "frame_index": 1307,
+   "index": 139989913,
+   "timestamp": 43.56666564941406,
+   "observation.images.left_wrist": "d3e68fefc0df8492",
+   "observation.images.left_wrist.dtype": "torch.float32",
+   "observation.images.left_wrist.shape": [
+    3,
+    224,
+    224
+   ],
+   "observation.images.right_wrist": "57f1cb2d7628cd1c",
+   "observation.images.right_wrist.dtype": "torch.float32",
+   "observation.images.right_wrist.shape": [
+    3,
+    224,
+    224
+   ],
+   "observation.images.top": "bd6942b5f786c68d",
+   "observation.images.top.dtype": "torch.float32",
+   "observation.images.top.shape": [
+    3,
+    224,
+    224
+   ]
+  },
+  {
+   "episode_index": 98646,
+   "frame_index": 2499,
+   "index": 291931524,
+   "timestamp": 83.30000305175781,
+   "observation.images.left_wrist": "4e24cd2e3f0e6104",
+   "observation.images.left_wrist.dtype": "torch.float32",
+   "observation.images.left_wrist.shape": [
+    3,
+    224,
+    224
+   ],
+   "observation.images.right_wrist": "aeea60f3ee2ec2d3",
+   "observation.images.right_wrist.dtype": "torch.float32",
+   "observation.images.right_wrist.shape": [
+    3,
+    224,
+    224
+   ],
+   "observation.images.top": "36ee653e11dab148",
+   "observation.images.top.dtype": "torch.float32",
+   "observation.images.top.shape": [
+    3,
+    224,
+    224
+   ]
+  },
+  {
+   "episode_index": 125288,
+   "frame_index": 806,
+   "index": 370825823,
+   "timestamp": 26.866666793823242,
+   "observation.images.left_wrist": "b77df147129cf2d2",
+   "observation.images.left_wrist.dtype": "torch.float32",
+   "observation.images.left_wrist.shape": [
+    3,
+    224,
+    224
+   ],
+   "observation.images.right_wrist": "70b03fb8b2778d22",
+   "observation.images.right_wrist.dtype": "torch.float32",
+   "observation.images.right_wrist.shape": [
+    3,
+    224,
+    224
+   ],
+   "observation.images.top": "fe35fe522eb637d6",
+   "observation.images.top.dtype": "torch.float32",
+   "observation.images.top.shape": [
+    3,
+    224,
+    224
+   ]
+  },
+  {
+   "episode_index": 5382,
+   "frame_index": 2788,
+   "index": 16248670,
+   "timestamp": 92.93333435058594,
+   "observation.images.left_wrist": "66266a80b54046b5",
+   "observation.images.left_wrist.dtype": "torch.float32",
+   "observation.images.left_wrist.shape": [
+    3,
+    224,
+    224
+   ],
+   "observation.images.right_wrist": "b57c8af697a287c6",
+   "observation.images.right_wrist.dtype": "torch.float32",
+   "observation.images.right_wrist.shape": [
+    3,
+    224,
+    224
+   ],
+   "observation.images.top": "35022401cdd08b70",
+   "observation.images.top.dtype": "torch.float32",
+   "observation.images.top.shape": [
+    3,
+    224,
+    224
+   ]
+  },
+  {
+   "episode_index": 23650,
+   "frame_index": 665,
+   "index": 71150726,
+   "timestamp": 22.16666603088379,
+   "observation.images.left_wrist": "1b023aa16cb2daf9",
+   "observation.images.left_wrist.dtype": "torch.float32",
+   "observation.images.left_wrist.shape": [
+    3,
+    224,
+    224
+   ],
+   "observation.images.right_wrist": "5c52f183a785c979",
+   "observation.images.right_wrist.dtype": "torch.float32",
+   "observation.images.right_wrist.shape": [
+    3,
+    224,
+    224
+   ],
+   "observation.images.top": "8350d362afde79f1",
+   "observation.images.top.dtype": "torch.float32",
+   "observation.images.top.shape": [
+    3,
+    224,
+    224
+   ]
+  },
+  {
+   "episode_index": 47085,
+   "frame_index": 2486,
+   "index": 139991092,
+   "timestamp": 82.86666870117188,
+   "observation.images.left_wrist": "1dfe3339edad550b",
+   "observation.images.left_wrist.dtype": "torch.float32",
+   "observation.images.left_wrist.shape": [
+    3,
+    224,
+    224
+   ],
+   "observation.images.right_wrist": "060545afeabed438",
+   "observation.images.right_wrist.dtype": "torch.float32",
+   "observation.images.right_wrist.shape": [
+    3,
+    224,
+    224
+   ],
+   "observation.images.top": "dad773558b4db0e7",
+   "observation.images.top.dtype": "torch.float32",
+   "observation.images.top.shape": [
+    3,
+    224,
+    224
+   ]
+  }
+ ],
+ "saved_npz": "pr3917__hash.npz",
+ "peak_pss_gb": 5.343954086303711,
+ "peak_rss_sum_gb": 5.349910736083984,
+ "peak_cgroup_current_gb": 10.143558502197266,
+ "mem_timeline": [
+  [
+   0.0,
+   0.24,
+   1
+  ],
+  [
+   5.3,
+   0.38,
+   1
+  ],
+  [
+   11.3,
+   0.73,
+   1
+  ],
+  [
+   17.4,
+   0.9,
+   1
+  ],
+  [
+   23.6,
+   1.04,
+   1
+  ],
+  [
+   29.6,
+   1.13,
+   1
+  ],
+  [
+   35.4,
+   1.2,
+   1
+  ],
+  [
+   41.2,
+   1.28,
+   1
+  ],
+  [
+   47.1,
+   1.36,
+   1
+  ],
+  [
+   52.2,
+   1.48,
+   1
+  ],
+  [
+   57.3,
+   1.59,
+   1
+  ],
+  [
+   62.4,
+   1.69,
+   1
+  ],
+  [
+   68.4,
+   1.78,
+   1
+  ],
+  [
+   74.5,
+   1.83,
+   1
+  ],
+  [
+   80.7,
+   1.92,
+   1
+  ],
+  [
+   86.9,
+   1.99,
+   1
+  ],
+  [
+   92.2,
+   2.05,
+   1
+  ],
+  [
+   97.7,
+   2.16,
+   1
+  ],
+  [
+   102.8,
+   2.25,
+   1
+  ],
+  [
+   108.6,
+   2.33,
+   1
+  ],
+  [
+   113.7,
+   2.39,
+   1
+  ],
+  [
+   119.4,
+   2.43,
+   1
+  ],
+  [
+   124.4,
+   2.49,
+   1
+  ],
+  [
+   130.6,
+   2.57,
+   1
+  ],
+  [
+   136.3,
+   2.62,
+   1
+  ],
+  [
+   142.0,
+   2.62,
+   1
+  ],
+  [
+   147.7,
+   2.62,
+   1
+  ],
+  [
+   153.2,
+   2.62,
+   1
+  ],
+  [
+   158.7,
+   2.62,
+   1
+  ],
+  [
+   164.3,
+   2.62,
+   1
+  ],
+  [
+   169.7,
+   2.62,
+   1
+  ],
+  [
+   175.2,
+   2.62,
+   1
+  ],
+  [
+   180.7,
+   2.62,
+   1
+  ],
+  [
+   186.1,
+   2.62,
+   1
+  ],
+  [
+   191.6,
+   2.62,
+   1
+  ],
+  [
+   197.1,
+   2.62,
+   1
+  ],
+  [
+   202.6,
+   2.62,
+   1
+  ],
+  [
+   208.1,
+   2.62,
+   1
+  ],
+  [
+   213.6,
+   2.62,
+   1
+  ],
+  [
+   219.1,
+   2.54,
+   1
+  ],
+  [
+   224.6,
+   2.56,
+   1
+  ],
+  [
+   230.3,
+   3.7,
+   1
+  ],
+  [
+   236.2,
+   3.76,
+   1
+  ],
+  [
+   242.2,
+   4.1,
+   1
+  ],
+  [
+   247.8,
+   4.24,
+   1
+  ],
+  [
+   253.4,
+   4.45,
+   1
+  ],
+  [
+   258.6,
+   4.73,
+   1
+  ],
+  [
+   263.6,
+   4.84,
+   1
+  ],
+  [
+   269.8,
+   4.99,
+   1
+  ],
+  [
+   274.8,
+   5.34,
+   1
+  ]
+ ],
+ "wall_s": 279.2375011444092,
+ "peak_cgroup_anon_mb_seen_by_orchestrator": 4049
+}

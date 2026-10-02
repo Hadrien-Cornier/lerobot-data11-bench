@@ -1,0 +1,9 @@
+{
+ "arm": "p1",
+ "regime": "w8_cache3",
+ "rep": 1,
+ "status": "mem_guard_killed",
+ "wall_s": 18.856916666030884,
+ "peak_cgroup_anon_mb_seen_by_orchestrator": 27169,
+ "error": "cgroup anon memory above 27000 MB; run killed to protect the job"
+}

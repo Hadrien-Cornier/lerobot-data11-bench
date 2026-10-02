@@ -1,0 +1,3 @@
+RUN_NAME=20260925T160332Z
+SMOKE=0
+STAGES=prep2 stream access summary2

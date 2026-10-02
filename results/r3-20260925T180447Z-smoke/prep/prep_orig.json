@@ -1,0 +1,95 @@
+{
+ "repo": "hadriencornier/lerobot-data11-bench",
+ "family": "ckpt_full",
+ "r1_prefix": "variants",
+ "groups": [
+  {
+   "frames": 23380,
+   "name": "ckpt_full_g000",
+   "sep": {
+    "top": "20260925T025221Z/ckpt_full/SEP/ckpt_full_g000__top.mp4",
+    "left_wrist": "20260925T025221Z/ckpt_full/SEP/ckpt_full_g000__left_wrist.mp4",
+    "right_wrist": "20260925T025221Z/ckpt_full/SEP/ckpt_full_g000__right_wrist.mp4"
+   },
+   "cuts": [
+    [
+     0,
+     23380
+    ]
+   ],
+   "STACK": [
+    "20260925T025221Z/ckpt_full/STACK/ckpt_full_g000.mp4"
+   ],
+   "MULTI": [
+    "20260925T025221Z/ckpt_full/MULTI/ckpt_full_g000.mp4"
+   ]
+  },
+  {
+   "frames": 25759,
+   "name": "ckpt_full_g001",
+   "sep": {
+    "top": "20260925T025221Z/ckpt_full/SEP/ckpt_full_g001__top.mp4",
+    "left_wrist": "20260925T025221Z/ckpt_full/SEP/ckpt_full_g001__left_wrist.mp4",
+    "right_wrist": "20260925T025221Z/ckpt_full/SEP/ckpt_full_g001__right_wrist.mp4"
+   },
+   "cuts": [
+    [
+     0,
+     25759
+    ]
+   ],
+   "STACK": [
+    "20260925T025221Z/ckpt_full/STACK/ckpt_full_g001.mp4"
+   ],
+   "MULTI": [
+    "20260925T025221Z/ckpt_full/MULTI/ckpt_full_g001.mp4"
+   ]
+  },
+  {
+   "frames": 24979,
+   "name": "ckpt_full_g002",
+   "sep": {
+    "top": "20260925T025221Z/ckpt_full/SEP/ckpt_full_g002__top.mp4",
+    "left_wrist": "20260925T025221Z/ckpt_full/SEP/ckpt_full_g002__left_wrist.mp4",
+    "right_wrist": "20260925T025221Z/ckpt_full/SEP/ckpt_full_g002__right_wrist.mp4"
+   },
+   "cuts": [
+    [
+     0,
+     24979
+    ]
+   ],
+   "STACK": [
+    "20260925T025221Z/ckpt_full/STACK/ckpt_full_g002.mp4"
+   ],
+   "MULTI": [
+    "20260925T025221Z/ckpt_full/MULTI/ckpt_full_g002.mp4"
+   ]
+  }
+ ],
+ "sizes": {
+  "20260925T025221Z/ckpt_full/SEP/ckpt_full_g002__right_wrist.mp4": 56704009,
+  "20260925T025221Z/ckpt_full/SEP/ckpt_full_g000__top.mp4": 80307330,
+  "20260925T025221Z/ckpt_full/SEP/ckpt_full_g001__left_wrist.mp4": 81931584,
+  "20260925T025221Z/ckpt_full/SEP/ckpt_full_g001__right_wrist.mp4": 77661865,
+  "20260925T025221Z/ckpt_full/MULTI/ckpt_full_g001.mp4": 265193860,
+  "20260925T025221Z/ckpt_full/SEP/ckpt_full_g000__right_wrist.mp4": 65784032,
+  "20260925T025221Z/ckpt_full/STACK/ckpt_full_g000.mp4": 211476145,
+  "20260925T025221Z/ckpt_full/SEP/ckpt_full_g002__left_wrist.mp4": 56543978,
+  "20260925T025221Z/ckpt_full/SEP/ckpt_full_g001__top.mp4": 105295605,
+  "20260925T025221Z/ckpt_full/MULTI/ckpt_full_g002.mp4": 181402993,
+  "20260925T025221Z/ckpt_full/SEP/ckpt_full_g002__top.mp4": 67858384,
+  "20260925T025221Z/ckpt_full/STACK/ckpt_full_g002.mp4": 177186338,
+  "20260925T025221Z/ckpt_full/SEP/ckpt_full_g000__left_wrist.mp4": 68953260,
+  "20260925T025221Z/ckpt_full/STACK/ckpt_full_g001.mp4": 260566870,
+  "20260925T025221Z/ckpt_full/MULTI/ckpt_full_g000.mp4": 215321628
+ },
+ "local_root": "/work/dl/variants",
+ "layout_mode": "orig",
+ "multi": {
+  "upload": {
+   "revision": "b1a7e644fc49e9e64288eab0aae76b3f785645f3",
+   "hf_url_base": "hf://datasets/hadriencornier/lerobot-data11-bench@b1a7e644fc49e9e64288eab0aae76b3f785645f3/variants"
+  }
+ }
+}

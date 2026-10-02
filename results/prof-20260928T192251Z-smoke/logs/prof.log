@@ -1,0 +1,246 @@
+pkill: unrecognized option '--out /results/prof-20260928T192251Z-smoke/prof/runs/D2_r0.json'
+
+Usage:
+ pkill [options] <pattern>
+
+Options:
+ -<sig>                    signal to send (either number or name)
+ -H, --require-handler     match only if signal handler is present
+ -q, --queue <value>       integer value to be sent with the signal
+ -e, --echo                display what is killed
+ -c, --count               count of matching processes
+ -f, --full                use full process name to match
+ -g, --pgroup <PGID,...>   match listed process group IDs
+ -G, --group <GID,...>     match real group IDs
+ -i, --ignore-case         match case insensitively
+ -n, --newest              select most recently started
+ -o, --oldest              select least recently started
+ -O, --older <seconds>     select where older than seconds
+ -P, --parent <PPID,...>   match only child processes of the given parent
+ -s, --session <SID,...>   match session IDs
+     --signal <sig>        signal to send (either number or name)
+ -t, --terminal <tty,...>  match by controlling terminal
+ -u, --euid <ID,...>       match by effective IDs
+ -U, --uid <ID,...>        match by real IDs
+ -x, --exact               match exactly with the command name
+ -F, --pidfile <file>      read PIDs from file
+ -L, --logpidfile          fail if PID file is not locked
+ -r, --runstates <state>   match runstates [D,S,Z,...]
+ -A, --ignore-ancestors    exclude our ancestors from results
+ --cgroup <grp,...>        match by cgroup v2 names
+ --ns <PID>                match the processes that belong to the same
+                           namespace as <pid>
+ --nslist <ns,...>         list which namespaces will be considered for
+                           the --ns option.
+                           Available namespaces: ipc, mnt, net, pid, user, uts
+
+ -h, --help     display this help and exit
+ -V, --version  output version information and exit
+
+For more details see pgrep(1).
+[19:26:37] D2_r0: ok sps 295.9522640169707 first 20.898238904002937 cpu/sample 6.706500642970205 groups {"lerobot-decode": 4.98, "MainThread": 1.12, "Thread-1 (_serve)": 0.42, "QueueFeederThread": 0.18, "prof": 0.07, "native:python": 0.0, "native:jemalloc_bg_thd": 0.0, "lerobot-parquet": 0.0, "cache-fetch": 0.0, "native:pt_data_worker": 0.0} 
+pkill: unrecognized option '--out /results/prof-20260928T192251Z-smoke/prof/runs/R6_r0.json'
+
+Usage:
+ pkill [options] <pattern>
+
+Options:
+ -<sig>                    signal to send (either number or name)
+ -H, --require-handler     match only if signal handler is present
+ -q, --queue <value>       integer value to be sent with the signal
+ -e, --echo                display what is killed
+ -c, --count               count of matching processes
+ -f, --full                use full process name to match
+ -g, --pgroup <PGID,...>   match listed process group IDs
+ -G, --group <GID,...>     match real group IDs
+ -i, --ignore-case         match case insensitively
+ -n, --newest              select most recently started
+ -o, --oldest              select least recently started
+ -O, --older <seconds>     select where older than seconds
+ -P, --parent <PPID,...>   match only child processes of the given parent
+ -s, --session <SID,...>   match session IDs
+     --signal <sig>        signal to send (either number or name)
+ -t, --terminal <tty,...>  match by controlling terminal
+ -u, --euid <ID,...>       match by effective IDs
+ -U, --uid <ID,...>        match by real IDs
+ -x, --exact               match exactly with the command name
+ -F, --pidfile <file>      read PIDs from file
+ -L, --logpidfile          fail if PID file is not locked
+ -r, --runstates <state>   match runstates [D,S,Z,...]
+ -A, --ignore-ancestors    exclude our ancestors from results
+ --cgroup <grp,...>        match by cgroup v2 names
+ --ns <PID>                match the processes that belong to the same
+                           namespace as <pid>
+ --nslist <ns,...>         list which namespaces will be considered for
+                           the --ns option.
+                           Available namespaces: ipc, mnt, net, pid, user, uts
+
+ -h, --help     display this help and exit
+ -V, --version  output version information and exit
+
+For more details see pgrep(1).
+[19:28:14] R6_r0: ok sps 383.46618316434325 first 14.272621075004281 cpu/sample 7.485138096928496 groups {"lerobot-decode": 7.16, "MainThread": 0.32, "prof": 0.07, "native:python": 0.0, "native:jemalloc_bg_thd": 0.0, "tqdm_monitor": 0.0, "lerobot-parquet": 0.0, "cache-fetch": 0.0} 
+pkill: unrecognized option '--out /results/prof-20260928T192251Z-smoke/prof/runs/D2_r90_s.json'
+
+Usage:
+ pkill [options] <pattern>
+
+Options:
+ -<sig>                    signal to send (either number or name)
+ -H, --require-handler     match only if signal handler is present
+ -q, --queue <value>       integer value to be sent with the signal
+ -e, --echo                display what is killed
+ -c, --count               count of matching processes
+ -f, --full                use full process name to match
+ -g, --pgroup <PGID,...>   match listed process group IDs
+ -G, --group <GID,...>     match real group IDs
+ -i, --ignore-case         match case insensitively
+ -n, --newest              select most recently started
+ -o, --oldest              select least recently started
+ -O, --older <seconds>     select where older than seconds
+ -P, --parent <PPID,...>   match only child processes of the given parent
+ -s, --session <SID,...>   match session IDs
+     --signal <sig>        signal to send (either number or name)
+ -t, --terminal <tty,...>  match by controlling terminal
+ -u, --euid <ID,...>       match by effective IDs
+ -U, --uid <ID,...>        match by real IDs
+ -x, --exact               match exactly with the command name
+ -F, --pidfile <file>      read PIDs from file
+ -L, --logpidfile          fail if PID file is not locked
+ -r, --runstates <state>   match runstates [D,S,Z,...]
+ -A, --ignore-ancestors    exclude our ancestors from results
+ --cgroup <grp,...>        match by cgroup v2 names
+ --ns <PID>                match the processes that belong to the same
+                           namespace as <pid>
+ --nslist <ns,...>         list which namespaces will be considered for
+                           the --ns option.
+                           Available namespaces: ipc, mnt, net, pid, user, uts
+
+ -h, --help     display this help and exit
+ -V, --version  output version information and exit
+
+For more details see pgrep(1).
+[19:29:53] D2_r90_s: ok sps 305.4020800980504 first 15.704217676000553 cpu/sample 6.343890062731843 groups {"lerobot-decode": 4.67, "MainThread": 1.1, "Thread-1 (_serve)": 0.4, "prof": 0.18, "QueueFeederThread": 0.18, "native:python": 0.0, "native:jemalloc_bg_thd": 0.0, "lerobot-parquet": 0.0, "cache-fetch": 0.0, "native:pt_data_worker": 0.0} 
+pkill: unrecognized option '--out /results/prof-20260928T192251Z-smoke/prof/runs/R6_r90_s.json'
+
+Usage:
+ pkill [options] <pattern>
+
+Options:
+ -<sig>                    signal to send (either number or name)
+ -H, --require-handler     match only if signal handler is present
+ -q, --queue <value>       integer value to be sent with the signal
+ -e, --echo                display what is killed
+ -c, --count               count of matching processes
+ -f, --full                use full process name to match
+ -g, --pgroup <PGID,...>   match listed process group IDs
+ -G, --group <GID,...>     match real group IDs
+ -i, --ignore-case         match case insensitively
+ -n, --newest              select most recently started
+ -o, --oldest              select least recently started
+ -O, --older <seconds>     select where older than seconds
+ -P, --parent <PPID,...>   match only child processes of the given parent
+ -s, --session <SID,...>   match session IDs
+     --signal <sig>        signal to send (either number or name)
+ -t, --terminal <tty,...>  match by controlling terminal
+ -u, --euid <ID,...>       match by effective IDs
+ -U, --uid <ID,...>        match by real IDs
+ -x, --exact               match exactly with the command name
+ -F, --pidfile <file>      read PIDs from file
+ -L, --logpidfile          fail if PID file is not locked
+ -r, --runstates <state>   match runstates [D,S,Z,...]
+ -A, --ignore-ancestors    exclude our ancestors from results
+ --cgroup <grp,...>        match by cgroup v2 names
+ --ns <PID>                match the processes that belong to the same
+                           namespace as <pid>
+ --nslist <ns,...>         list which namespaces will be considered for
+                           the --ns option.
+                           Available namespaces: ipc, mnt, net, pid, user, uts
+
+ -h, --help     display this help and exit
+ -V, --version  output version information and exit
+
+For more details see pgrep(1).
+[19:31:26] R6_r90_s: ok sps 400.4281553251294 first 10.288528792996658 cpu/sample 6.985403549282121 groups {"lerobot-decode": 6.69, "MainThread": 0.29, "prof": 0.15, "native:python": 0.0, "native:jemalloc_bg_thd": 0.0, "tqdm_monitor": 0.0, "lerobot-parquet": 0.0, "cache-fetch": 0.0} 
+pkill: unrecognized option '--out /results/prof-20260928T192251Z-smoke/prof/runs/D6_pyspy_all.json'
+
+Usage:
+ pkill [options] <pattern>
+
+Options:
+ -<sig>                    signal to send (either number or name)
+ -H, --require-handler     match only if signal handler is present
+ -q, --queue <value>       integer value to be sent with the signal
+ -e, --echo                display what is killed
+ -c, --count               count of matching processes
+ -f, --full                use full process name to match
+ -g, --pgroup <PGID,...>   match listed process group IDs
+ -G, --group <GID,...>     match real group IDs
+ -i, --ignore-case         match case insensitively
+ -n, --newest              select most recently started
+ -o, --oldest              select least recently started
+ -O, --older <seconds>     select where older than seconds
+ -P, --parent <PPID,...>   match only child processes of the given parent
+ -s, --session <SID,...>   match session IDs
+     --signal <sig>        signal to send (either number or name)
+ -t, --terminal <tty,...>  match by controlling terminal
+ -u, --euid <ID,...>       match by effective IDs
+ -U, --uid <ID,...>        match by real IDs
+ -x, --exact               match exactly with the command name
+ -F, --pidfile <file>      read PIDs from file
+ -L, --logpidfile          fail if PID file is not locked
+ -r, --runstates <state>   match runstates [D,S,Z,...]
+ -A, --ignore-ancestors    exclude our ancestors from results
+ --cgroup <grp,...>        match by cgroup v2 names
+ --ns <PID>                match the processes that belong to the same
+                           namespace as <pid>
+ --nslist <ns,...>         list which namespaces will be considered for
+                           the --ns option.
+                           Available namespaces: ipc, mnt, net, pid, user, uts
+
+ -h, --help     display this help and exit
+ -V, --version  output version information and exit
+
+For more details see pgrep(1).
+[19:33:10] D6_pyspy_all: ok sps 278.79555142469957 first 21.352622282000084 cpu/sample 9.099046518673465 groups {"lerobot-decode": 7.13, "MainThread": 1.09, "Thread-1 (_serve)": 0.7, "QueueFeederThread": 0.17, "prof": 0.08, "native:python": 0.0, "native:jemalloc_bg_thd": 0.0, "lerobot-parquet": 0.0, "cache-fetch": 0.0, "native:pt_data_worker": 0.0} 
+pkill: unrecognized option '--out /results/prof-20260928T192251Z-smoke/prof/runs/D6_pyspy_gil.json'
+
+Usage:
+ pkill [options] <pattern>
+
+Options:
+ -<sig>                    signal to send (either number or name)
+ -H, --require-handler     match only if signal handler is present
+ -q, --queue <value>       integer value to be sent with the signal
+ -e, --echo                display what is killed
+ -c, --count               count of matching processes
+ -f, --full                use full process name to match
+ -g, --pgroup <PGID,...>   match listed process group IDs
+ -G, --group <GID,...>     match real group IDs
+ -i, --ignore-case         match case insensitively
+ -n, --newest              select most recently started
+ -o, --oldest              select least recently started
+ -O, --older <seconds>     select where older than seconds
+ -P, --parent <PPID,...>   match only child processes of the given parent
+ -s, --session <SID,...>   match session IDs
+     --signal <sig>        signal to send (either number or name)
+ -t, --terminal <tty,...>  match by controlling terminal
+ -u, --euid <ID,...>       match by effective IDs
+ -U, --uid <ID,...>        match by real IDs
+ -x, --exact               match exactly with the command name
+ -F, --pidfile <file>      read PIDs from file
+ -L, --logpidfile          fail if PID file is not locked
+ -r, --runstates <state>   match runstates [D,S,Z,...]
+ -A, --ignore-ancestors    exclude our ancestors from results
+ --cgroup <grp,...>        match by cgroup v2 names
+ --ns <PID>                match the processes that belong to the same
+                           namespace as <pid>
+ --nslist <ns,...>         list which namespaces will be considered for
+                           the --ns option.
+                           Available namespaces: ipc, mnt, net, pid, user, uts
+
+ -h, --help     display this help and exit
+ -V, --version  output version information and exit
+
+For more details see pgrep(1).
+[19:34:47] D6_pyspy_gil: ok sps 260.28596190732804 first 14.85597023000446 cpu/sample 9.522401707071984 groups {"lerobot-decode": 7.44, "MainThread": 1.14, "Thread-1 (_serve)": 0.76, "QueueFeederThread": 0.19, "prof": 0.09, "native:python": 0.0, "native:jemalloc_bg_thd": 0.0, "lerobot-parquet": 0.0, "cache-fetch": 0.0, "native:pt_data_worker": 0.0} 

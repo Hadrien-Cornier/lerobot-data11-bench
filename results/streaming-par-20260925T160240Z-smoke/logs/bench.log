@@ -1,0 +1,68 @@
+plan {'arms': ['base', 'p1p2', 'pr3917'], 'repeats': 1, 'n_steady': 50, 'cap_s': 180, 'hash_n': 32, 'save_n': 16, 'pr3917_episodes': 400, 'regimes_filter': ['w0_cachedef', 'w8_cache3', 'w0_dt2', 'w1_dt8']}
+[16:04:12] base    hash         rep-1 error: sps=None first=None n=None 429=None pss=0.32752037048339844 wall=7s RuntimeError: operator torchvision::nms does not exist
+[16:04:15] p1p2    hash         rep-1 error: sps=None first=None n=None 429=None pss=0.22011280059814453 wall=3s RuntimeError: operator torchvision::nms does not exist
+[16:04:22] pr3917  hash         rep-1 error: sps=None first=None n=None 429=None pss=0.31017494201660156 wall=7s RuntimeError: operator torchvision::nms does not exist
+[16:04:26] base    w0_cachedef  rep0 error: sps=None first=None n=None 429=None pss=0.31186580657958984 wall=3s RuntimeError: operator torchvision::nms does not exist
+[16:04:29] base    w8_cache3    rep0 error: sps=None first=None n=None 429=None pss=0.220550537109375 wall=3s RuntimeError: operator torchvision::nms does not exist
+[16:04:32] p1p2    w0_cachedef  rep0 error: sps=None first=None n=None 429=None pss=0.22038936614990234 wall=3s RuntimeError: operator torchvision::nms does not exist
+[16:04:36] p1p2    w8_cache3    rep0 error: sps=None first=None n=None 429=None pss=0.30951976776123047 wall=4s RuntimeError: operator torchvision::nms does not exist
+[16:04:39] pr3917  w0_dt2       rep0 error: sps=None first=None n=None 429=None pss=0.22021198272705078 wall=3s RuntimeError: operator torchvision::nms does not exist
+[16:04:42] pr3917  w1_dt8       rep0 error: sps=None first=None n=None 429=None pss=0.2188119888305664 wall=3s RuntimeError: operator torchvision::nms does not exist
+# Streaming camera-parallelism bench (streaming-par-20260925T160240Z-smoke)
+
+`lerobot/abc_130k_v3_train@68651e49`, StreamingLeRobotDataset over hf://, batch 8, 3 cameras, no delta_timestamps.
+
+| arm | regime | ok/runs | samples/s (mean +- 95% CI) | first batch s | build s | req/sample (resolve, cdn) | MB/sample | 429s | peak PSS GB | peak cgroup GB |
+|---|---|---|---|---|---|---|---|---|---|---|
+| base | w0_cachedef | 0/1 | - | - | - | - (-, -) | - | 0 | 0.31 | 3.16 |
+| base | w8_cache3 | 0/1 | - | - | - | - (-, -) | - | 0 | 0.22 | 3.11 |
+| p1p2 | w0_cachedef | 0/1 | - | - | - | - (-, -) | - | 0 | 0.22 | 3.11 |
+| p1p2 | w8_cache3 | 0/1 | - | - | - | - (-, -) | - | 0 | 0.31 | 3.16 |
+| pr3917 | w0_dt2 | 0/1 | - | - | - | - (-, -) | - | 0 | 0.22 | 3.11 |
+| pr3917 | w1_dt8 | 0/1 | - | - | - | - (-, -) | - | 0 | 0.22 | 3.11 |
+
+## Correctness
+
+```
+{
+ "n_hashed": {
+  "base": 0,
+  "p1p2": 0,
+  "pr3917": 0
+ }
+}
+```
+
+## Prep / hash runs (num_workers=0, discarded for timing)
+
+```
+{
+ "base": {
+  "status": "error",
+  "build_s": null,
+  "first_batch_s": null,
+  "peak_pss_gb": 0.32752037048339844,
+  "error": "RuntimeError: operator torchvision::nms does not exist",
+  "status_429_total": null,
+  "build_http": null
+ },
+ "p1p2": {
+  "status": "error",
+  "build_s": null,
+  "first_batch_s": null,
+  "peak_pss_gb": 0.22011280059814453,
+  "error": "RuntimeError: operator torchvision::nms does not exist",
+  "status_429_total": null,
+  "build_http": null
+ },
+ "pr3917": {
+  "status": "error",
+  "build_s": null,
+  "first_batch_s": null,
+  "peak_pss_gb": 0.31017494201660156,
+  "error": "RuntimeError: operator torchvision::nms does not exist",
+  "status_429_total": null,
+  "build_http": null
+ }
+}
+```

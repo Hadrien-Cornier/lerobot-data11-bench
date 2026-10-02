@@ -1,0 +1,25 @@
+[18:15:31] check SEP: ok build 20.745614245999604 check {"samples": 20, "keys": {"observation.images.left_wrist": {"equal_own": 20, "equal_cam": [0, 20, 0], "n": 20}, "observation.images.right_wrist": {"equal_own": 20, "equal_cam": [0, 0, 20], "n": 20}, "observation.images.top": {"equal_own": 20, "equal_cam": [20, 0, 0], "n": 20}}, "shape": [3, 224, 224] 
+[18:16:22] check STACK: ok build 12.681737596984021 check {"samples": 20, "keys": {"observation.images.stack": {"equal_own": 20, "equal_cam": [0, 0, 0], "n": 20}}, "shape": [3, 672, 224], "pass": true} 
+[18:16:35] check MULTI: ok build 4.652982825995423 check {"samples": 20, "keys": {"observation.images.left_wrist": {"equal_own": 0, "equal_cam": [20, 0, 0], "n": 20}, "observation.images.right_wrist": {"equal_own": 0, "equal_cam": [20, 0, 0], "n": 20}, "observation.images.top": {"equal_own": 20, "equal_cam": [20, 0, 0], "n": 20}}, "shape": [3, 224, 224],  
+[18:17:39] SEP p1 r0: sps 23.119914505557265 first 41.65612438501557 gets/ep 3.0 MB/ep 27.70667875 dec_cpu_ms/smp 6.479679830357128 pss 2.892624855041504 cg 9304 status ['capped']
+[18:18:44] STACK p1 r0: sps 60.78141070057211 first 32.153813477023505 gets/ep 1.0 MB/ep 26.691021675000002 dec_cpu_ms/smp 3.81493067529742 pss 2.9393653869628906 cg 9395 status ['capped']
+[18:19:26] SEP p8 r0: sps 178.82455111872082 first 20.282366162980907 gets/ep 3.0 MB/ep 24.722557344827585 dec_cpu_ms/smp 4.977268890625003 pss 17.255952835083008 cg 22718 status ['ok']
+[18:20:02] STACK p8 r0: sps 227.4620018526091 first 19.11550856201211 gets/ep 1.0 MB/ep 23.83587096551724 dec_cpu_ms/smp 3.7362429315624985 pss 17.42813491821289 cg 23918 status ['ok']
+# DATA-11 round 3: PR #3917 on SEP vs STACK (equal-size files)
+
+p1 = 1 process; p8 = 8 processes as ranks 0..7 of WORLD_SIZE 8 (#3917 allows at most 1 DataLoader worker per rank). sps = samples/s after the first sample, summed over processes (1 sample = 1 time step, 3 camera images). mean +- sd over repeats. dec CPU = thread CPU inside #3917's decode calls, per sample; proc CPU = process CPU per sample.
+
+| layout | mode | reps | sps | first sample s | range GETs/episode | MB/episode | HTTP req/episode | mean GET s | dec CPU ms/smp | proc CPU ms/smp | peak PSS GB (sum) | cgroup peak MB |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| SEP | p1 | 1 | 23.1 | 41.66 | 3.00 | 27.7 | 9.1 | 5.25 | 6.48 | 252.25 | 2.89 | 9304 |
+| SEP | p8 | 1 | 178.8 | 20.28 | 3.00 | 24.7 | 8.4 | 4.89 | 4.98 | 41.79 | 17.26 | 22718 |
+| STACK | p1 | 1 | 60.8 | 32.15 | 1.00 | 26.7 | 6.4 | 13.38 | 3.81 | 98.32 | 2.94 | 9395 |
+| STACK | p8 | 1 | 227.5 | 19.12 | 1.00 | 23.8 | 6.2 | 12.22 | 3.74 | 35.52 | 17.43 | 23918 |
+
+## Correctness checks (return_uint8=True, decoded frame == local TorchCodec decode of the source frame)
+
+- SEP: status ok, build 20.7 s, pass True, shape [3, 224, 224], per key {"observation.images.left_wrist": {"equal_own": 20, "equal_cam": [0, 20, 0], "n": 20}, "observation.images.right_wrist": {"equal_own": 20, "equal_cam": [0, 0, 20], "n": 20}, "observation.images.top": {"equal_own": 20, "equal_cam": [20, 0, 0], "n": 20}} 
+- STACK: status ok, build 12.7 s, pass True, shape [3, 672, 224], per key {"observation.images.stack": {"equal_own": 20, "equal_cam": [0, 0, 0], "n": 20}} 
+- MULTI: status ok, build 4.7 s, pass False, shape [3, 224, 224], per key {"observation.images.left_wrist": {"equal_own": 0, "equal_cam": [20, 0, 0], "n": 20}, "observation.images.right_wrist": {"equal_own": 0, "equal_cam": [20, 0, 0], "n": 20}, "observation.images.top": {"equal_own": 20, "equal_cam": [20, 0, 0], "n": 20}} 
+
+MULTI = local dataset (not on the Hub) whose 3 video keys point at the multi-track cuts. equal_cam[i] counts samples equal to SEP camera i; a correct reader gives equal_own == n for every key.

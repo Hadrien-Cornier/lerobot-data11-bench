@@ -1,0 +1,257 @@
+[18s] SEP|seq|fs64K|-|cold r0: 0.97 sps, fetch/smp 9.00, res/smp 9.00, 1.048 MB/smp (dec 0.845), p50 981 ms, open 579 ms/smp, fallback/smp 0.00, check {'checked': 2, 'mismatch': 0}, HTTP MB so far 23
+[25s] SEP|par|fs64K|-|cold r0: 2.60 sps, fetch/smp 9.00, res/smp 9.00, 1.048 MB/smp (dec 0.845), p50 363 ms, open 581 ms/smp, fallback/smp 0.00, check {'checked': 2, 'mismatch': 0}, HTTP MB so far 41
+[33s] STACK|-|fs64K|-|cold r0: 2.39 sps, fetch/smp 3.00, res/smp 3.00, 0.351 MB/smp (dec 0.283), p50 397 ms, open 189 ms/smp, fallback/smp 0.00, check {'checked': 2, 'mismatch': 0}, HTTP MB so far 47
+[46s] SEP|seq|fs64K|-|warm r0: 2.63 sps, fetch/smp 3.00, res/smp 3.00, 0.395 MB/smp (dec 0.197), p50 346 ms, open 0 ms/smp, fallback/smp 0.00, check {'checked': 2, 'mismatch': 0}, HTTP MB so far 61
+[52s] SEP|par|fs64K|-|warm r0: 6.95 sps, fetch/smp 3.00, res/smp 3.00, 0.395 MB/smp (dec 0.197), p50 142 ms, open 0 ms/smp, fallback/smp 0.00, check {'checked': 2, 'mismatch': 0}, HTTP MB so far 75
+[59s] STACK|-|fs64K|-|warm r0: 5.80 sps, fetch/smp 1.00, res/smp 1.00, 0.132 MB/smp (dec 0.066), p50 168 ms, open 0 ms/smp, fallback/smp 0.00, check {'checked': 2, 'mismatch': 0}, HTTP MB so far 80
+[69s] SEP|seq|fs256K|-|cold r0: 1.57 sps, fetch/smp 6.00, res/smp 6.00, 1.970 MB/smp (dec 0.845), p50 699 ms, open 293 ms/smp, fallback/smp 0.00, check {'checked': 2, 'mismatch': 0}, HTTP MB so far 114
+[75s] SEP|par|fs256K|-|cold r0: 3.25 sps, fetch/smp 6.00, res/smp 6.00, 1.970 MB/smp (dec 0.845), p50 315 ms, open 358 ms/smp, fallback/smp 0.00, check {'checked': 2, 'mismatch': 0}, HTTP MB so far 147
+[80s] STACK|-|fs256K|-|cold r0: 3.08 sps, fetch/smp 2.00, res/smp 2.00, 0.657 MB/smp (dec 0.283), p50 278 ms, open 110 ms/smp, fallback/smp 0.00, check {'checked': 2, 'mismatch': 0}, HTTP MB so far 158
+[92s] SEP|seq|fs256K|-|warm r0: 2.85 sps, fetch/smp 3.00, res/smp 3.00, 0.985 MB/smp (dec 0.197), p50 311 ms, open 0 ms/smp, fallback/smp 0.00, check {'checked': 2, 'mismatch': 0}, HTTP MB so far 192
+[98s] SEP|par|fs256K|-|warm r0: 6.76 sps, fetch/smp 3.00, res/smp 3.00, 0.985 MB/smp (dec 0.197), p50 133 ms, open 0 ms/smp, fallback/smp 0.00, check {'checked': 2, 'mismatch': 0}, HTTP MB so far 225
+[104s] STACK|-|fs256K|-|warm r0: 5.93 sps, fetch/smp 1.00, res/smp 1.00, 0.328 MB/smp (dec 0.066), p50 151 ms, open 0 ms/smp, fallback/smp 0.00, check {'checked': 2, 'mismatch': 0}, HTTP MB so far 236
+[116s] SEP|seq|fs1M|-|cold r0: 1.45 sps, fetch/smp 5.94, res/smp 5.94, 6.619 MB/smp (dec 0.845), p50 730 ms, open 355 ms/smp, fallback/smp 0.00, check {'checked': 2, 'mismatch': 0}, HTTP MB so far 349
+[122s] SEP|par|fs1M|-|cold r0: 2.87 sps, fetch/smp 5.94, res/smp 5.94, 6.619 MB/smp (dec 0.845), p50 355 ms, open 395 ms/smp, fallback/smp 0.00, check {'checked': 2, 'mismatch': 0}, HTTP MB so far 462
+[127s] STACK|-|fs1M|-|cold r0: 3.06 sps, fetch/smp 2.00, res/smp 2.00, 2.230 MB/smp (dec 0.283), p50 286 ms, open 112 ms/smp, fallback/smp 0.00, check {'checked': 2, 'mismatch': 0}, HTTP MB so far 499
+[139s] SEP|seq|fs1M|-|warm r0: 2.89 sps, fetch/smp 3.00, res/smp 3.00, 3.344 MB/smp (dec 0.197), p50 335 ms, open 0 ms/smp, fallback/smp 0.00, check {'checked': 2, 'mismatch': 0}, HTTP MB so far 613
+[145s] SEP|par|fs1M|-|warm r0: 6.39 sps, fetch/smp 3.00, res/smp 3.00, 3.344 MB/smp (dec 0.197), p50 141 ms, open 0 ms/smp, fallback/smp 0.00, check {'checked': 2, 'mismatch': 0}, HTTP MB so far 727
+[152s] STACK|-|fs1M|-|warm r0: 5.12 sps, fetch/smp 1.00, res/smp 1.00, 1.115 MB/smp (dec 0.066), p50 175 ms, open 0 ms/smp, fallback/smp 0.00, check {'checked': 2, 'mismatch': 0}, HTTP MB so far 765
+[169s] SEP|seq|fs5M|-|cold r0: 0.99 sps, fetch/smp 5.69, res/smp 5.69, 30.196 MB/smp (dec 0.845), p50 931 ms, open 445 ms/smp, fallback/smp 0.00, check {'checked': 2, 'mismatch': 0}, HTTP MB so far 1280
+[176s] SEP|par|fs5M|-|cold r0: 2.58 sps, fetch/smp 5.69, res/smp 5.69, 30.196 MB/smp (dec 0.845), p50 388 ms, open 511 ms/smp, fallback/smp 0.00, check {'checked': 2, 'mismatch': 0}, HTTP MB so far 1795
+[185s] STACK|-|fs5M|-|cold r0: 1.88 sps, fetch/smp 1.94, res/smp 1.94, 10.286 MB/smp (dec 0.283), p50 487 ms, open 155 ms/smp, fallback/smp 0.00, check {'checked': 2, 'mismatch': 0}, HTTP MB so far 1970
+[203s] SEP|seq|fs5M|-|warm r0: 1.98 sps, fetch/smp 2.83, res/smp 2.83, 15.043 MB/smp (dec 0.197), p50 440 ms, open 0 ms/smp, fallback/smp 0.00, check {'checked': 2, 'mismatch': 0}, HTTP MB so far 2485
+[214s] SEP|par|fs5M|-|warm r0: 3.32 sps, fetch/smp 2.83, res/smp 2.83, 15.043 MB/smp (dec 0.197), p50 264 ms, open 0 ms/smp, fallback/smp 0.00, check {'checked': 2, 'mismatch': 0}, HTTP MB so far 3000
+[223s] STACK|-|fs5M|-|warm r0: 3.52 sps, fetch/smp 1.00, res/smp 1.00, 5.309 MB/smp (dec 0.066), p50 214 ms, open 0 ms/smp, fallback/smp 0.00, check {'checked': 2, 'mismatch': 0}, HTTP MB so far 3180
+[234s] SEP|seq|rc256K|-|cold r0: 1.60 sps, fetch/smp 6.00, res/smp 0.00, 1.966 MB/smp (dec 0.845), p50 615 ms, open 297 ms/smp, fallback/smp 0.00, check {'checked': 2, 'mismatch': 0}, HTTP MB so far 3214
+[238s] SEP|par|rc256K|-|cold r0: 4.13 sps, fetch/smp 6.00, res/smp 0.00, 1.966 MB/smp (dec 0.845), p50 255 ms, open 278 ms/smp, fallback/smp 0.00, check {'checked': 2, 'mismatch': 0}, HTTP MB so far 3247
+[243s] STACK|-|rc256K|-|cold r0: 3.68 sps, fetch/smp 2.00, res/smp 0.00, 0.655 MB/smp (dec 0.283), p50 217 ms, open 86 ms/smp, fallback/smp 0.00, check {'checked': 2, 'mismatch': 0}, HTTP MB so far 3258
+[253s] SEP|seq|rc256K|-|warm r0: 3.29 sps, fetch/smp 3.00, res/smp 0.00, 0.983 MB/smp (dec 0.197), p50 271 ms, open 0 ms/smp, fallback/smp 0.00, check {'checked': 2, 'mismatch': 0}, HTTP MB so far 3292
+[258s] SEP|par|rc256K|-|warm r0: 7.34 sps, fetch/smp 3.00, res/smp 0.00, 0.983 MB/smp (dec 0.197), p50 131 ms, open 0 ms/smp, fallback/smp 0.00, check {'checked': 2, 'mismatch': 0}, HTTP MB so far 3325
+[263s] STACK|-|rc256K|-|warm r0: 6.65 sps, fetch/smp 1.00, res/smp 0.00, 0.328 MB/smp (dec 0.066), p50 131 ms, open 0 ms/smp, fallback/smp 0.00, check {'checked': 2, 'mismatch': 0}, HTTP MB so far 3336
+[273s] SEP|seq|exact|-|cold r0: 1.74 sps, fetch/smp 6.00, res/smp 0.00, 1.454 MB/smp (dec 0.845), p50 544 ms, open 312 ms/smp, fallback/smp 0.00, check {'checked': 2, 'mismatch': 0}, HTTP MB so far 3361
+[277s] SEP|par|exact|-|cold r0: 3.95 sps, fetch/smp 6.00, res/smp 0.00, 1.454 MB/smp (dec 0.845), p50 244 ms, open 310 ms/smp, fallback/smp 0.00, check {'checked': 2, 'mismatch': 0}, HTTP MB so far 3386
+[282s] STACK|-|exact|-|cold r0: 4.13 sps, fetch/smp 2.00, res/smp 0.00, 0.498 MB/smp (dec 0.283), p50 212 ms, open 91 ms/smp, fallback/smp 0.00, check {'checked': 2, 'mismatch': 0}, HTTP MB so far 3394
+[290s] SEP|seq|exact|-|warm r0: 4.12 sps, fetch/smp 2.90, res/smp 0.00, 0.208 MB/smp (dec 0.197), p50 237 ms, open 0 ms/smp, fallback/smp 0.00, check {'checked': 2, 'mismatch': 0}, HTTP MB so far 3404
+[294s] SEP|par|exact|-|warm r0: 9.61 sps, fetch/smp 2.90, res/smp 0.00, 0.208 MB/smp (dec 0.197), p50 91 ms, open 0 ms/smp, fallback/smp 0.00, check {'checked': 2, 'mismatch': 0}, HTTP MB so far 3415
+[299s] STACK|-|exact|-|warm r0: 6.49 sps, fetch/smp 1.00, res/smp 0.00, 0.084 MB/smp (dec 0.066), p50 124 ms, open 0 ms/smp, fallback/smp 0.00, check {'checked': 2, 'mismatch': 0}, HTTP MB so far 3418
+[319s] MULTI|seq|fs256K|naive|cold r0: 0.88 sps, fetch/smp 12.00, res/smp 12.00, 3.759 MB/smp (dec 2.571), p50 1085 ms, open 750 ms/smp, fallback/smp 0.00, check {'checked': 2, 'mismatch': 0}, HTTP MB so far 3482
+[331s] MULTI|seq|fs256K|naive|warm r0: 3.27 sps, fetch/smp 3.00, res/smp 3.00, 0.985 MB/smp (dec 0.197), p50 260 ms, open 0 ms/smp, fallback/smp 0.00, check {'checked': 2, 'mismatch': 0}, HTTP MB so far 3521
+[346s] MULTI|par|fs256K|naive|cold r0: 1.15 sps, fetch/smp 12.00, res/smp 12.00, 3.759 MB/smp (dec 2.571), p50 858 ms, open 687 ms/smp, fallback/smp 0.00, check {'checked': 2, 'mismatch': 0}, HTTP MB so far 3585
+[351s] MULTI|par|fs256K|naive|warm r0: 8.60 sps, fetch/smp 3.00, res/smp 3.00, 0.985 MB/smp (dec 0.197), p50 87 ms, open 0 ms/smp, fallback/smp 0.00, check {'checked': 2, 'mismatch': 0}, HTTP MB so far 3624
+[359s] MULTI|seq|fs256K|shared|cold r0: 2.30 sps, fetch/smp 4.81, res/smp 4.81, 1.298 MB/smp (dec 2.571), p50 390 ms, open 298 ms/smp, fallback/smp 0.00, check {'checked': 2, 'mismatch': 0}, HTTP MB so far 3646
+[362s] MULTI|seq|fs256K|shared|warm r0: 10.17 sps, fetch/smp 1.00, res/smp 1.00, 0.315 MB/smp (dec 0.197), p50 87 ms, open 0 ms/smp, fallback/smp 0.00, check {'checked': 2, 'mismatch': 0}, HTTP MB so far 3658
+[370s] MULTI|par|fs256K|shared|cold r0: 2.44 sps, fetch/smp 4.75, res/smp 4.75, 1.298 MB/smp (dec 2.571), p50 406 ms, open 307 ms/smp, fallback/smp 0.00, check {'checked': 2, 'mismatch': 0}, HTTP MB so far 3681
+[374s] MULTI|par|fs256K|shared|warm r0: 10.15 sps, fetch/smp 1.00, res/smp 1.00, 0.315 MB/smp (dec 0.197), p50 82 ms, open 0 ms/smp, fallback/smp 0.00, check {'checked': 2, 'mismatch': 0}, HTTP MB so far 3693
+[387s] MULTI|seq|fs5M|naive|cold r0: 1.25 sps, fetch/smp 5.81, res/smp 5.81, 30.859 MB/smp (dec 2.571), p50 800 ms, open 355 ms/smp, fallback/smp 0.00, check {'checked': 2, 'mismatch': 0}, HTTP MB so far 4219
+[401s] MULTI|seq|fs5M|naive|warm r0: 2.47 sps, fetch/smp 3.00, res/smp 3.00, 15.927 MB/smp (dec 0.197), p50 384 ms, open 0 ms/smp, fallback/smp 0.00, check {'checked': 2, 'mismatch': 0}, HTTP MB so far 4761
+[411s] MULTI|par|fs5M|naive|cold r0: 1.69 sps, fetch/smp 5.81, res/smp 5.81, 30.859 MB/smp (dec 2.571), p50 593 ms, open 346 ms/smp, fallback/smp 0.00, check {'checked': 2, 'mismatch': 0}, HTTP MB so far 5286
+[419s] MULTI|par|fs5M|naive|warm r0: 4.76 sps, fetch/smp 3.00, res/smp 3.00, 15.927 MB/smp (dec 0.197), p50 184 ms, open 0 ms/smp, fallback/smp 0.00, check {'checked': 2, 'mismatch': 0}, HTTP MB so far 5828
+[424s] MULTI|seq|fs5M|shared|cold r0: 3.15 sps, fetch/smp 1.94, res/smp 1.94, 10.487 MB/smp (dec 2.571), p50 293 ms, open 147 ms/smp, fallback/smp 0.00, check {'checked': 2, 'mismatch': 0}, HTTP MB so far 6006
+[430s] MULTI|seq|fs5M|shared|warm r0: 5.81 sps, fetch/smp 0.87, res/smp 0.87, 4.544 MB/smp (dec 0.197), p50 137 ms, open 0 ms/smp, fallback/smp 0.00, check {'checked': 2, 'mismatch': 0}, HTTP MB so far 6163
+[435s] MULTI|par|fs5M|shared|cold r0: 3.09 sps, fetch/smp 1.94, res/smp 1.94, 10.487 MB/smp (dec 2.571), p50 286 ms, open 141 ms/smp, fallback/smp 0.00, check {'checked': 2, 'mismatch': 0}, HTTP MB so far 6342
+[440s] MULTI|par|fs5M|shared|warm r0: 7.81 sps, fetch/smp 0.87, res/smp 0.87, 4.544 MB/smp (dec 0.197), p50 110 ms, open 0 ms/smp, fallback/smp 0.00, check {'checked': 2, 'mismatch': 0}, HTTP MB so far 6499
+[443s] MULTI|seq|exact|shared|cold r0: 4.42 sps, fetch/smp 2.00, res/smp 0.00, 1.105 MB/smp (dec 2.571), p50 178 ms, open 120 ms/smp, fallback/smp 0.00, check {'checked': 2, 'mismatch': 0}, HTTP MB so far 6518
+[446s] MULTI|seq|exact|shared|warm r0: 11.55 sps, fetch/smp 1.00, res/smp 0.00, 0.097 MB/smp (dec 0.197), p50 69 ms, open 0 ms/smp, fallback/smp 0.00, check {'checked': 2, 'mismatch': 0}, HTTP MB so far 6524
+[449s] MULTI|par|exact|shared|cold r0: 5.70 sps, fetch/smp 2.00, res/smp 0.00, 1.105 MB/smp (dec 2.571), p50 162 ms, open 101 ms/smp, fallback/smp 0.00, check {'checked': 2, 'mismatch': 0}, HTTP MB so far 6542
+[452s] MULTI|par|exact|shared|warm r0: 14.35 sps, fetch/smp 1.00, res/smp 0.00, 0.097 MB/smp (dec 0.197), p50 60 ms, open 0 ms/smp, fallback/smp 0.00, check {'checked': 2, 'mismatch': 0}, HTTP MB so far 6548
+[455s] MULTI|par|exact|shared|warm r1: 11.70 sps, fetch/smp 1.00, res/smp 0.00, 0.093 MB/smp (dec 0.197), p50 64 ms, open 0 ms/smp, fallback/smp 0.00, check None, HTTP MB so far 6554
+[458s] MULTI|par|exact|shared|cold r1: 4.90 sps, fetch/smp 2.00, res/smp 0.00, 1.083 MB/smp (dec 2.495), p50 200 ms, open 105 ms/smp, fallback/smp 0.00, check None, HTTP MB so far 6573
+[461s] MULTI|seq|exact|shared|warm r1: 14.22 sps, fetch/smp 1.00, res/smp 0.00, 0.093 MB/smp (dec 0.197), p50 66 ms, open 0 ms/smp, fallback/smp 0.00, check None, HTTP MB so far 6579
+[464s] MULTI|seq|exact|shared|cold r1: 5.33 sps, fetch/smp 2.00, res/smp 0.00, 1.083 MB/smp (dec 2.495), p50 174 ms, open 103 ms/smp, fallback/smp 0.00, check None, HTTP MB so far 6597
+[469s] MULTI|par|fs5M|shared|warm r1: 7.67 sps, fetch/smp 0.77, res/smp 0.77, 4.195 MB/smp (dec 0.197), p50 112 ms, open 0 ms/smp, fallback/smp 0.00, check None, HTTP MB so far 6744
+[474s] MULTI|par|fs5M|shared|cold r1: 3.71 sps, fetch/smp 2.00, res/smp 2.00, 10.487 MB/smp (dec 2.495), p50 228 ms, open 112 ms/smp, fallback/smp 0.00, check None, HTTP MB so far 6922
+[477s] MULTI|seq|fs5M|shared|warm r1: 9.68 sps, fetch/smp 0.77, res/smp 0.77, 4.195 MB/smp (dec 0.197), p50 110 ms, open 0 ms/smp, fallback/smp 0.00, check None, HTTP MB so far 7069
+[482s] MULTI|seq|fs5M|shared|cold r1: 3.66 sps, fetch/smp 2.00, res/smp 2.00, 10.487 MB/smp (dec 2.495), p50 234 ms, open 114 ms/smp, fallback/smp 0.00, check None, HTTP MB so far 7247
+[489s] MULTI|par|fs5M|naive|warm r1: 5.48 sps, fetch/smp 3.00, res/smp 3.00, 15.927 MB/smp (dec 0.197), p50 169 ms, open 0 ms/smp, fallback/smp 0.00, check None, HTTP MB so far 7789
+[497s] MULTI|par|fs5M|naive|cold r1: 1.92 sps, fetch/smp 6.00, res/smp 6.00, 31.855 MB/smp (dec 2.495), p50 509 ms, open 318 ms/smp, fallback/smp 0.00, check None, HTTP MB so far 8330
+[510s] MULTI|seq|fs5M|naive|warm r1: 2.58 sps, fetch/smp 3.00, res/smp 3.00, 15.927 MB/smp (dec 0.197), p50 351 ms, open 0 ms/smp, fallback/smp 0.00, check None, HTTP MB so far 8872
+[524s] MULTI|seq|fs5M|naive|cold r1: 1.22 sps, fetch/smp 6.00, res/smp 6.00, 31.855 MB/smp (dec 2.495), p50 744 ms, open 382 ms/smp, fallback/smp 0.00, check None, HTTP MB so far 9413
+[528s] MULTI|par|fs256K|shared|warm r1: 9.87 sps, fetch/smp 1.03, res/smp 1.03, 0.342 MB/smp (dec 0.197), p50 75 ms, open 0 ms/smp, fallback/smp 0.00, check None, HTTP MB so far 9427
+[534s] MULTI|par|fs256K|shared|cold r1: 2.85 sps, fetch/smp 4.38, res/smp 4.38, 1.265 MB/smp (dec 2.495), p50 353 ms, open 257 ms/smp, fallback/smp 0.00, check None, HTTP MB so far 9448
+[538s] MULTI|seq|fs256K|shared|warm r1: 11.05 sps, fetch/smp 1.03, res/smp 1.03, 0.342 MB/smp (dec 0.197), p50 73 ms, open 0 ms/smp, fallback/smp 0.00, check None, HTTP MB so far 9461
+[544s] MULTI|seq|fs256K|shared|cold r1: 2.76 sps, fetch/smp 4.44, res/smp 4.44, 1.265 MB/smp (dec 2.495), p50 348 ms, open 264 ms/smp, fallback/smp 0.00, check None, HTTP MB so far 9483
+[550s] MULTI|par|fs256K|naive|warm r1: 7.82 sps, fetch/smp 3.00, res/smp 3.00, 0.985 MB/smp (dec 0.197), p50 110 ms, open 0 ms/smp, fallback/smp 0.00, check None, HTTP MB so far 9521
+[567s] MULTI|par|fs256K|naive|cold r1: 1.00 sps, fetch/smp 12.00, res/smp 12.00, 3.683 MB/smp (dec 2.495), p50 982 ms, open 855 ms/smp, fallback/smp 0.00, check None, HTTP MB so far 9584
+[577s] MULTI|seq|fs256K|naive|warm r1: 3.92 sps, fetch/smp 3.00, res/smp 3.00, 0.985 MB/smp (dec 0.197), p50 234 ms, open 0 ms/smp, fallback/smp 0.00, check None, HTTP MB so far 9623
+[596s] MULTI|seq|fs256K|naive|cold r1: 0.90 sps, fetch/smp 12.00, res/smp 12.00, 3.683 MB/smp (dec 2.495), p50 1034 ms, open 817 ms/smp, fallback/smp 0.00, check None, HTTP MB so far 9685
+[602s] STACK|-|exact|-|warm r1: 5.95 sps, fetch/smp 1.00, res/smp 0.00, 0.082 MB/smp (dec 0.066), p50 157 ms, open 0 ms/smp, fallback/smp 0.00, check None, HTTP MB so far 9689
+[610s] SEP|par|exact|-|warm r1: 6.13 sps, fetch/smp 2.93, res/smp 0.00, 0.209 MB/smp (dec 0.197), p50 144 ms, open 0 ms/smp, fallback/smp 0.00, check None, HTTP MB so far 9699
+[618s] SEP|seq|exact|-|warm r1: 4.30 sps, fetch/smp 2.93, res/smp 0.00, 0.209 MB/smp (dec 0.197), p50 222 ms, open 0 ms/smp, fallback/smp 0.00, check None, HTTP MB so far 9709
+[623s] STACK|-|exact|-|cold r1: 3.70 sps, fetch/smp 2.00, res/smp 0.00, 0.494 MB/smp (dec 0.279), p50 212 ms, open 107 ms/smp, fallback/smp 0.00, check None, HTTP MB so far 9718
+[627s] SEP|par|exact|-|cold r1: 3.68 sps, fetch/smp 6.00, res/smp 0.00, 1.441 MB/smp (dec 0.832), p50 277 ms, open 263 ms/smp, fallback/smp 0.00, check None, HTTP MB so far 9742
+[636s] SEP|seq|exact|-|cold r1: 1.93 sps, fetch/smp 6.00, res/smp 0.00, 1.441 MB/smp (dec 0.832), p50 508 ms, open 247 ms/smp, fallback/smp 0.00, check None, HTTP MB so far 9767
+[642s] STACK|-|rc256K|-|warm r1: 6.52 sps, fetch/smp 1.00, res/smp 0.00, 0.328 MB/smp (dec 0.066), p50 135 ms, open 0 ms/smp, fallback/smp 0.00, check None, HTTP MB so far 9778
+[646s] SEP|par|rc256K|-|warm r1: 8.75 sps, fetch/smp 3.00, res/smp 0.00, 0.983 MB/smp (dec 0.197), p50 103 ms, open 0 ms/smp, fallback/smp 0.00, check None, HTTP MB so far 9811
+[653s] SEP|seq|rc256K|-|warm r1: 4.60 sps, fetch/smp 3.00, res/smp 0.00, 0.983 MB/smp (dec 0.197), p50 209 ms, open 0 ms/smp, fallback/smp 0.00, check None, HTTP MB so far 9845
+[657s] STACK|-|rc256K|-|cold r1: 4.23 sps, fetch/smp 2.00, res/smp 0.00, 0.655 MB/smp (dec 0.279), p50 225 ms, open 86 ms/smp, fallback/smp 0.00, check None, HTTP MB so far 9856
+[661s] SEP|par|rc256K|-|cold r1: 4.67 sps, fetch/smp 6.00, res/smp 0.00, 1.966 MB/smp (dec 0.832), p50 197 ms, open 226 ms/smp, fallback/smp 0.00, check None, HTTP MB so far 9889
+[668s] SEP|seq|rc256K|-|cold r1: 2.22 sps, fetch/smp 6.00, res/smp 0.00, 1.966 MB/smp (dec 0.832), p50 438 ms, open 205 ms/smp, fallback/smp 0.00, check None, HTTP MB so far 9923
+[676s] STACK|-|fs5M|-|warm r1: 4.77 sps, fetch/smp 1.00, res/smp 1.00, 5.309 MB/smp (dec 0.066), p50 194 ms, open 0 ms/smp, fallback/smp 0.00, check None, HTTP MB so far 10103
+[685s] SEP|par|fs5M|-|warm r1: 4.55 sps, fetch/smp 2.97, res/smp 2.97, 15.465 MB/smp (dec 0.197), p50 183 ms, open 0 ms/smp, fallback/smp 0.00, check None, HTTP MB so far 10627
+[697s] SEP|seq|fs5M|-|warm r1: 2.75 sps, fetch/smp 2.97, res/smp 2.97, 15.465 MB/smp (dec 0.197), p50 351 ms, open 0 ms/smp, fallback/smp 0.00, check None, HTTP MB so far 11150
+[704s] STACK|-|fs5M|-|cold r1: 2.59 sps, fetch/smp 2.00, res/smp 2.00, 10.618 MB/smp (dec 0.279), p50 337 ms, open 168 ms/smp, fallback/smp 0.00, check None, HTTP MB so far 11331
+[710s] SEP|par|fs5M|-|cold r1: 2.47 sps, fetch/smp 6.00, res/smp 6.00, 30.665 MB/smp (dec 0.832), p50 408 ms, open 477 ms/smp, fallback/smp 0.00, check None, HTTP MB so far 11849
+[724s] SEP|seq|fs5M|-|cold r1: 1.31 sps, fetch/smp 6.00, res/smp 6.00, 30.665 MB/smp (dec 0.832), p50 740 ms, open 370 ms/smp, fallback/smp 0.00, check None, HTTP MB so far 12367
+[729s] STACK|-|fs1M|-|warm r1: 6.18 sps, fetch/smp 1.00, res/smp 1.00, 1.115 MB/smp (dec 0.066), p50 153 ms, open 0 ms/smp, fallback/smp 0.00, check None, HTTP MB so far 12405
+[734s] SEP|par|fs1M|-|warm r1: 7.86 sps, fetch/smp 3.00, res/smp 3.00, 3.344 MB/smp (dec 0.197), p50 110 ms, open 0 ms/smp, fallback/smp 0.00, check None, HTTP MB so far 12519
+[743s] SEP|seq|fs1M|-|warm r1: 3.73 sps, fetch/smp 3.00, res/smp 3.00, 3.344 MB/smp (dec 0.197), p50 254 ms, open 0 ms/smp, fallback/smp 0.00, check None, HTTP MB so far 12632
+[748s] STACK|-|fs1M|-|cold r1: 3.55 sps, fetch/smp 2.00, res/smp 2.00, 2.230 MB/smp (dec 0.279), p50 235 ms, open 120 ms/smp, fallback/smp 0.00, check None, HTTP MB so far 12670
+[753s] SEP|par|fs1M|-|cold r1: 3.32 sps, fetch/smp 6.00, res/smp 6.00, 6.689 MB/smp (dec 0.832), p50 261 ms, open 340 ms/smp, fallback/smp 0.00, check None, HTTP MB so far 12784
+[763s] SEP|seq|fs1M|-|cold r1: 1.71 sps, fetch/smp 6.00, res/smp 6.00, 6.689 MB/smp (dec 0.832), p50 568 ms, open 277 ms/smp, fallback/smp 0.00, check None, HTTP MB so far 12898
+[769s] STACK|-|fs256K|-|warm r1: 6.52 sps, fetch/smp 1.00, res/smp 1.00, 0.328 MB/smp (dec 0.066), p50 155 ms, open 0 ms/smp, fallback/smp 0.00, check None, HTTP MB so far 12909
+[773s] SEP|par|fs256K|-|warm r1: 8.27 sps, fetch/smp 3.00, res/smp 3.00, 0.985 MB/smp (dec 0.197), p50 110 ms, open 0 ms/smp, fallback/smp 0.00, check None, HTTP MB so far 12942
+[782s] SEP|seq|fs256K|-|warm r1: 3.89 sps, fetch/smp 3.00, res/smp 3.00, 0.985 MB/smp (dec 0.197), p50 249 ms, open 0 ms/smp, fallback/smp 0.00, check None, HTTP MB so far 12976
+[787s] STACK|-|fs256K|-|cold r1: 3.64 sps, fetch/smp 2.00, res/smp 2.00, 0.657 MB/smp (dec 0.279), p50 220 ms, open 121 ms/smp, fallback/smp 0.00, check None, HTTP MB so far 12987
+[791s] SEP|par|fs256K|-|cold r1: 3.50 sps, fetch/smp 6.00, res/smp 6.00, 1.970 MB/smp (dec 0.832), p50 292 ms, open 287 ms/smp, fallback/smp 0.00, check None, HTTP MB so far 13021
+[801s] SEP|seq|fs256K|-|cold r1: 1.78 sps, fetch/smp 6.00, res/smp 6.00, 1.970 MB/smp (dec 0.832), p50 534 ms, open 265 ms/smp, fallback/smp 0.00, check None, HTTP MB so far 13054
+[806s] STACK|-|fs64K|-|warm r1: 6.94 sps, fetch/smp 1.00, res/smp 1.00, 0.132 MB/smp (dec 0.066), p50 123 ms, open 0 ms/smp, fallback/smp 0.00, check None, HTTP MB so far 13059
+[812s] SEP|par|fs64K|-|warm r1: 8.05 sps, fetch/smp 3.00, res/smp 3.00, 0.395 MB/smp (dec 0.197), p50 110 ms, open 0 ms/smp, fallback/smp 0.00, check None, HTTP MB so far 13073
+[821s] SEP|seq|fs64K|-|warm r1: 3.92 sps, fetch/smp 3.00, res/smp 3.00, 0.395 MB/smp (dec 0.197), p50 246 ms, open 0 ms/smp, fallback/smp 0.00, check None, HTTP MB so far 13087
+[827s] STACK|-|fs64K|-|cold r1: 2.91 sps, fetch/smp 3.00, res/smp 3.00, 0.346 MB/smp (dec 0.279), p50 301 ms, open 191 ms/smp, fallback/smp 0.00, check None, HTTP MB so far 13093
+[832s] SEP|par|fs64K|-|cold r1: 3.15 sps, fetch/smp 9.00, res/smp 9.00, 1.035 MB/smp (dec 0.832), p50 315 ms, open 517 ms/smp, fallback/smp 0.00, check None, HTTP MB so far 13111
+[846s] SEP|seq|fs64K|-|cold r1: 1.25 sps, fetch/smp 9.00, res/smp 9.00, 1.035 MB/smp (dec 0.832), p50 746 ms, open 487 ms/smp, fallback/smp 0.00, check None, HTTP MB so far 13128
+[859s] SEP|seq|fs64K|-|cold r2: 1.24 sps, fetch/smp 9.00, res/smp 9.00, 1.046 MB/smp (dec 0.843), p50 828 ms, open 482 ms/smp, fallback/smp 0.00, check None, HTTP MB so far 13146
+[865s] SEP|par|fs64K|-|cold r2: 3.26 sps, fetch/smp 9.00, res/smp 9.00, 1.046 MB/smp (dec 0.843), p50 302 ms, open 477 ms/smp, fallback/smp 0.00, check None, HTTP MB so far 13164
+[871s] STACK|-|fs64K|-|cold r2: 2.81 sps, fetch/smp 3.00, res/smp 3.00, 0.350 MB/smp (dec 0.282), p50 354 ms, open 177 ms/smp, fallback/smp 0.00, check None, HTTP MB so far 13170
+[880s] SEP|seq|fs64K|-|warm r2: 3.95 sps, fetch/smp 3.00, res/smp 3.00, 0.395 MB/smp (dec 0.197), p50 234 ms, open 0 ms/smp, fallback/smp 0.00, check None, HTTP MB so far 13184
+[885s] SEP|par|fs64K|-|warm r2: 8.04 sps, fetch/smp 3.00, res/smp 3.00, 0.395 MB/smp (dec 0.197), p50 106 ms, open 0 ms/smp, fallback/smp 0.00, check None, HTTP MB so far 13198
+[891s] STACK|-|fs64K|-|warm r2: 6.19 sps, fetch/smp 1.00, res/smp 1.00, 0.132 MB/smp (dec 0.066), p50 180 ms, open 0 ms/smp, fallback/smp 0.00, check None, HTTP MB so far 13203
+[900s] SEP|seq|fs256K|-|cold r2: 1.85 sps, fetch/smp 6.00, res/smp 6.00, 1.957 MB/smp (dec 0.843), p50 526 ms, open 239 ms/smp, fallback/smp 0.00, check None, HTTP MB so far 13236
+[904s] SEP|par|fs256K|-|cold r2: 4.80 sps, fetch/smp 6.00, res/smp 6.00, 1.957 MB/smp (dec 0.843), p50 199 ms, open 248 ms/smp, fallback/smp 0.00, check None, HTTP MB so far 13269
+[909s] STACK|-|fs256K|-|cold r2: 3.53 sps, fetch/smp 2.00, res/smp 2.00, 0.657 MB/smp (dec 0.282), p50 258 ms, open 94 ms/smp, fallback/smp 0.00, check None, HTTP MB so far 13281
+[918s] SEP|seq|fs256K|-|warm r2: 3.91 sps, fetch/smp 3.00, res/smp 3.00, 0.985 MB/smp (dec 0.197), p50 245 ms, open 0 ms/smp, fallback/smp 0.00, check None, HTTP MB so far 13314
+[922s] SEP|par|fs256K|-|warm r2: 8.49 sps, fetch/smp 3.00, res/smp 3.00, 0.985 MB/smp (dec 0.197), p50 103 ms, open 0 ms/smp, fallback/smp 0.00, check None, HTTP MB so far 13348
+[927s] STACK|-|fs256K|-|warm r2: 7.00 sps, fetch/smp 1.00, res/smp 1.00, 0.328 MB/smp (dec 0.066), p50 118 ms, open 0 ms/smp, fallback/smp 0.00, check None, HTTP MB so far 13359
+[937s] SEP|seq|fs1M|-|cold r2: 1.76 sps, fetch/smp 5.62, res/smp 5.62, 6.124 MB/smp (dec 0.843), p50 558 ms, open 270 ms/smp, fallback/smp 0.00, check None, HTTP MB so far 13463
+[941s] SEP|par|fs1M|-|cold r2: 4.56 sps, fetch/smp 5.62, res/smp 5.62, 6.124 MB/smp (dec 0.843), p50 204 ms, open 280 ms/smp, fallback/smp 0.00, check None, HTTP MB so far 13568
+[946s] STACK|-|fs1M|-|cold r2: 3.39 sps, fetch/smp 1.94, res/smp 1.94, 2.150 MB/smp (dec 0.282), p50 278 ms, open 102 ms/smp, fallback/smp 0.00, check None, HTTP MB so far 13605
+[954s] SEP|seq|fs1M|-|warm r2: 3.82 sps, fetch/smp 2.90, res/smp 2.90, 3.212 MB/smp (dec 0.197), p50 250 ms, open 0 ms/smp, fallback/smp 0.00, check None, HTTP MB so far 13714
+[959s] SEP|par|fs1M|-|warm r2: 8.19 sps, fetch/smp 2.90, res/smp 2.90, 3.212 MB/smp (dec 0.197), p50 112 ms, open 0 ms/smp, fallback/smp 0.00, check None, HTTP MB so far 13824
+[964s] STACK|-|fs1M|-|warm r2: 6.66 sps, fetch/smp 1.00, res/smp 1.00, 1.115 MB/smp (dec 0.066), p50 122 ms, open 0 ms/smp, fallback/smp 0.00, check None, HTTP MB so far 13862
+[977s] SEP|seq|fs5M|-|cold r2: 1.33 sps, fetch/smp 5.62, res/smp 5.62, 28.857 MB/smp (dec 0.843), p50 782 ms, open 363 ms/smp, fallback/smp 0.00, check None, HTTP MB so far 14356
+[984s] SEP|par|fs5M|-|cold r2: 2.88 sps, fetch/smp 5.62, res/smp 5.62, 28.857 MB/smp (dec 0.843), p50 353 ms, open 472 ms/smp, fallback/smp 0.00, check None, HTTP MB so far 14849
+[991s] STACK|-|fs5M|-|cold r2: 2.48 sps, fetch/smp 1.88, res/smp 1.88, 9.683 MB/smp (dec 0.282), p50 409 ms, open 172 ms/smp, fallback/smp 0.00, check None, HTTP MB so far 15015
+[1001s] SEP|seq|fs5M|-|warm r2: 3.24 sps, fetch/smp 2.60, res/smp 2.60, 13.378 MB/smp (dec 0.197), p50 315 ms, open 0 ms/smp, fallback/smp 0.00, check None, HTTP MB so far 15480
+[1008s] SEP|par|fs5M|-|warm r2: 5.41 sps, fetch/smp 2.60, res/smp 2.60, 13.378 MB/smp (dec 0.197), p50 165 ms, open 0 ms/smp, fallback/smp 0.00, check None, HTTP MB so far 15945
+[1016s] STACK|-|fs5M|-|warm r2: 5.20 sps, fetch/smp 0.97, res/smp 0.97, 5.059 MB/smp (dec 0.066), p50 179 ms, open 0 ms/smp, fallback/smp 0.00, check None, HTTP MB so far 16118
+[1023s] SEP|seq|rc256K|-|cold r2: 2.18 sps, fetch/smp 6.00, res/smp 0.00, 1.960 MB/smp (dec 0.843), p50 414 ms, open 202 ms/smp, fallback/smp 0.00, check None, HTTP MB so far 16151
+[1027s] SEP|par|rc256K|-|cold r2: 4.81 sps, fetch/smp 6.00, res/smp 0.00, 1.960 MB/smp (dec 0.843), p50 189 ms, open 235 ms/smp, fallback/smp 0.00, check None, HTTP MB so far 16185
+[1031s] STACK|-|rc256K|-|cold r2: 3.99 sps, fetch/smp 2.00, res/smp 0.00, 0.655 MB/smp (dec 0.282), p50 239 ms, open 99 ms/smp, fallback/smp 0.00, check None, HTTP MB so far 16196
+[1039s] SEP|seq|rc256K|-|warm r2: 4.65 sps, fetch/smp 3.00, res/smp 0.00, 0.983 MB/smp (dec 0.197), p50 201 ms, open 0 ms/smp, fallback/smp 0.00, check None, HTTP MB so far 16229
+[1042s] SEP|par|rc256K|-|warm r2: 10.41 sps, fetch/smp 3.00, res/smp 0.00, 0.983 MB/smp (dec 0.197), p50 78 ms, open 0 ms/smp, fallback/smp 0.00, check None, HTTP MB so far 16263
+[1046s] STACK|-|rc256K|-|warm r2: 8.70 sps, fetch/smp 1.00, res/smp 0.00, 0.328 MB/smp (dec 0.066), p50 102 ms, open 0 ms/smp, fallback/smp 0.00, check None, HTTP MB so far 16274
+[1054s] SEP|seq|exact|-|cold r2: 2.06 sps, fetch/smp 5.81, res/smp 0.00, 1.438 MB/smp (dec 0.843), p50 454 ms, open 249 ms/smp, fallback/smp 0.00, check None, HTTP MB so far 16298
+[1058s] SEP|par|exact|-|cold r2: 4.81 sps, fetch/smp 5.81, res/smp 0.00, 1.438 MB/smp (dec 0.843), p50 187 ms, open 267 ms/smp, fallback/smp 0.00, check None, HTTP MB so far 16323
+[1063s] STACK|-|exact|-|cold r2: 3.79 sps, fetch/smp 2.00, res/smp 0.00, 0.497 MB/smp (dec 0.282), p50 244 ms, open 106 ms/smp, fallback/smp 0.00, check None, HTTP MB so far 16331
+[1070s] SEP|seq|exact|-|warm r2: 4.72 sps, fetch/smp 3.00, res/smp 0.00, 0.212 MB/smp (dec 0.197), p50 204 ms, open 0 ms/smp, fallback/smp 0.00, check None, HTTP MB so far 16341
+[1073s] SEP|par|exact|-|warm r2: 11.15 sps, fetch/smp 3.00, res/smp 0.00, 0.212 MB/smp (dec 0.197), p50 84 ms, open 0 ms/smp, fallback/smp 0.00, check None, HTTP MB so far 16352
+[1078s] STACK|-|exact|-|warm r2: 8.24 sps, fetch/smp 1.00, res/smp 0.00, 0.081 MB/smp (dec 0.066), p50 88 ms, open 0 ms/smp, fallback/smp 0.00, check None, HTTP MB so far 16355
+[1097s] MULTI|seq|fs256K|naive|cold r2: 0.89 sps, fetch/smp 12.00, res/smp 12.00, 3.735 MB/smp (dec 2.547), p50 1129 ms, open 722 ms/smp, fallback/smp 0.00, check None, HTTP MB so far 16419
+[1108s] MULTI|seq|fs256K|naive|warm r2: 3.25 sps, fetch/smp 3.00, res/smp 3.00, 0.985 MB/smp (dec 0.197), p50 275 ms, open 0 ms/smp, fallback/smp 0.00, check None, HTTP MB so far 16458
+[1123s] MULTI|par|fs256K|naive|cold r2: 1.17 sps, fetch/smp 12.00, res/smp 12.00, 3.735 MB/smp (dec 2.547), p50 813 ms, open 699 ms/smp, fallback/smp 0.00, check None, HTTP MB so far 16521
+[1128s] MULTI|par|fs256K|naive|warm r2: 8.46 sps, fetch/smp 3.00, res/smp 3.00, 0.985 MB/smp (dec 0.197), p50 95 ms, open 0 ms/smp, fallback/smp 0.00, check None, HTTP MB so far 16560
+[1135s] MULTI|seq|fs256K|shared|cold r2: 2.53 sps, fetch/smp 4.75, res/smp 4.75, 1.265 MB/smp (dec 2.547), p50 384 ms, open 271 ms/smp, fallback/smp 0.00, check None, HTTP MB so far 16582
+[1139s] MULTI|seq|fs256K|shared|warm r2: 10.38 sps, fetch/smp 1.03, res/smp 1.03, 0.315 MB/smp (dec 0.197), p50 84 ms, open 0 ms/smp, fallback/smp 0.00, check None, HTTP MB so far 16594
+[1145s] MULTI|par|fs256K|shared|cold r2: 2.54 sps, fetch/smp 4.75, res/smp 4.75, 1.265 MB/smp (dec 2.547), p50 380 ms, open 275 ms/smp, fallback/smp 0.00, check None, HTTP MB so far 16616
+[1149s] MULTI|par|fs256K|shared|warm r2: 11.55 sps, fetch/smp 1.03, res/smp 1.03, 0.315 MB/smp (dec 0.197), p50 76 ms, open 0 ms/smp, fallback/smp 0.00, check None, HTTP MB so far 16628
+[1160s] MULTI|seq|fs5M|naive|cold r2: 1.57 sps, fetch/smp 5.62, res/smp 5.62, 29.052 MB/smp (dec 2.547), p50 646 ms, open 311 ms/smp, fallback/smp 0.00, check None, HTTP MB so far 17125
+[1172s] MULTI|seq|fs5M|naive|warm r2: 2.69 sps, fetch/smp 2.90, res/smp 2.90, 15.181 MB/smp (dec 0.197), p50 333 ms, open 0 ms/smp, fallback/smp 0.00, check None, HTTP MB so far 17644
+[1181s] MULTI|par|fs5M|naive|cold r2: 1.92 sps, fetch/smp 5.62, res/smp 5.62, 29.052 MB/smp (dec 2.547), p50 513 ms, open 346 ms/smp, fallback/smp 0.00, check None, HTTP MB so far 18141
+[1187s] MULTI|par|fs5M|naive|warm r2: 6.25 sps, fetch/smp 2.90, res/smp 2.90, 15.181 MB/smp (dec 0.197), p50 157 ms, open 0 ms/smp, fallback/smp 0.00, check None, HTTP MB so far 18660
+[1191s] MULTI|seq|fs5M|shared|cold r2: 4.21 sps, fetch/smp 1.88, res/smp 1.88, 9.701 MB/smp (dec 2.547), p50 228 ms, open 115 ms/smp, fallback/smp 0.00, check None, HTTP MB so far 18826
+[1195s] MULTI|seq|fs5M|shared|warm r2: 9.72 sps, fetch/smp 0.87, res/smp 0.87, 4.719 MB/smp (dec 0.197), p50 106 ms, open 0 ms/smp, fallback/smp 0.00, check None, HTTP MB so far 18988
+[1199s] MULTI|par|fs5M|shared|cold r2: 4.46 sps, fetch/smp 1.88, res/smp 1.88, 9.701 MB/smp (dec 2.547), p50 226 ms, open 111 ms/smp, fallback/smp 0.00, check None, HTTP MB so far 19154
+[1202s] MULTI|par|fs5M|shared|warm r2: 9.61 sps, fetch/smp 0.87, res/smp 0.87, 4.719 MB/smp (dec 0.197), p50 105 ms, open 0 ms/smp, fallback/smp 0.00, check None, HTTP MB so far 19317
+[1206s] MULTI|seq|exact|shared|cold r2: 4.58 sps, fetch/smp 2.00, res/smp 0.00, 1.101 MB/smp (dec 2.547), p50 174 ms, open 109 ms/smp, fallback/smp 0.00, check None, HTTP MB so far 19335
+[1209s] MULTI|seq|exact|shared|warm r2: 13.03 sps, fetch/smp 1.00, res/smp 0.00, 0.091 MB/smp (dec 0.197), p50 65 ms, open 0 ms/smp, fallback/smp 0.00, check None, HTTP MB so far 19341
+[1212s] MULTI|par|exact|shared|cold r2: 5.58 sps, fetch/smp 2.00, res/smp 0.00, 1.101 MB/smp (dec 2.547), p50 159 ms, open 97 ms/smp, fallback/smp 0.00, check None, HTTP MB so far 19360
+[1214s] MULTI|par|exact|shared|warm r2: 13.06 sps, fetch/smp 1.00, res/smp 0.00, 0.091 MB/smp (dec 0.197), p50 68 ms, open 0 ms/smp, fallback/smp 0.00, check None, HTTP MB so far 19366
+[1300s] conc8 SEP|seq|fs5M|-|warm: 25.0 sps, 68.9 fetch/s, 68.9 resolves/s, 347 MB/s, p50 329 ms, 429 0
+[1385s] conc8 STACK|-|fs5M|-|warm: 68.7 sps, 66.7 fetch/s, 66.7 resolves/s, 349 MB/s, p50 108 ms, 429 0
+[1470s] conc8 SEP|par|rc256K|-|warm: 89.8 sps, 267.8 fetch/s, 0.0 resolves/s, 87 MB/s, p50 77 ms, 429 0
+[1556s] conc8 SEP|par|exact|-|warm: 92.1 sps, 272.4 fetch/s, 0.0 resolves/s, 19 MB/s, p50 76 ms, 429 0
+[1641s] conc8 STACK|-|exact|-|warm: 117.3 sps, 116.1 fetch/s, 0.0 resolves/s, 9 MB/s, p50 61 ms, 429 0
+[1726s] conc8 MULTI|par|exact|shared|warm: 123.3 sps, 121.9 fetch/s, 0.0 resolves/s, 11 MB/s, p50 60 ms, 429 0
+[1811s] conc8 MULTI|par|fs5M|shared|warm: 104.5 sps, 65.7 fetch/s, 65.7 resolves/s, 344 MB/s, p50 103 ms, 429 0
+[1877s] conc8 SEP|par|exact|-|cold: 36.8 sps, 220.5 fetch/s, 0.0 resolves/s, 53 MB/s, p50 199 ms, 429 0
+[1942s] conc8 STACK|-|exact|-|cold: 50.6 sps, 101.1 fetch/s, 0.0 resolves/s, 25 MB/s, p50 141 ms, 429 0
+[2007s] conc8 MULTI|par|exact|shared|cold: 42.7 sps, 85.2 fetch/s, 0.0 resolves/s, 47 MB/s, p50 180 ms, 429 0
+# DATA-11 round 2: random access over hf:// (family ckpt_full, 3 cameras per sample)
+
+Repo `hadriencornier/lerobot-data11-bench@a3d31680db`. sps = samples/s, one reader. fetch = one HTTP request that moves video bytes (CDN). fs* readers also pay 1 resolve per fetch; rc / exact resolve once per file (untimed, shown in `presigned`: 15 resolves for 15 files).
+
+| regime | layout | cams | reader | mode | sps | +-CI | p50 ms | p95 ms | fetch/smp | resolve/smp | API/smp | MB/smp | dec MB/smp | open ms/smp | fallback/smp |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| cold | MULTI | par | fs256K | naive | 1.10 | 0.24 | 858 | 1222 | 12.00 | 12.00 | 0.00 | 3.726 | 2.538 | 747 | 0.00 |
+| cold | MULTI | par | fs256K | shared | 2.60 | 0.53 | 380 | 512 | 4.62 | 4.62 | 0.00 | 1.276 | 2.538 | 280 | 0.00 |
+| cold | MULTI | par | fs5M | naive | 1.84 | 0.33 | 513 | 724 | 5.81 | 5.81 | 0.00 | 30.589 | 2.538 | 337 | 0.00 |
+| cold | MULTI | par | fs5M | shared | 3.67 | 1.71 | 228 | 557 | 1.94 | 1.94 | 0.00 | 10.225 | 2.538 | 121 | 0.00 |
+| cold | MULTI | par | exact | shared | 5.37 | 1.06 | 162 | 275 | 2.00 | 0.00 | 0.00 | 1.096 | 2.538 | 101 | 0.00 |
+| cold | MULTI | seq | fs256K | naive | 0.89 | 0.02 | 1085 | 1481 | 12.00 | 12.00 | 0.00 | 3.726 | 2.538 | 763 | 0.00 |
+| cold | MULTI | seq | fs256K | shared | 2.52 | 0.58 | 384 | 642 | 4.67 | 4.67 | 0.00 | 1.276 | 2.538 | 278 | 0.00 |
+| cold | MULTI | seq | fs5M | naive | 1.33 | 0.48 | 744 | 1221 | 5.81 | 5.81 | 0.00 | 30.589 | 2.538 | 349 | 0.00 |
+| cold | MULTI | seq | fs5M | shared | 3.62 | 1.32 | 234 | 475 | 1.94 | 1.94 | 0.00 | 10.225 | 2.538 | 125 | 0.00 |
+| cold | MULTI | seq | exact | shared | 4.75 | 1.21 | 174 | 469 | 2.00 | 0.00 | 0.00 | 1.096 | 2.538 | 111 | 0.00 |
+| cold | SEP | par | fs64K | - | 2.97 | 0.88 | 315 | 550 | 9.00 | 9.00 | 0.00 | 1.043 | 0.840 | 525 | 0.00 |
+| cold | SEP | par | fs256K | - | 3.74 | 2.07 | 292 | 433 | 6.00 | 6.00 | 0.00 | 1.966 | 0.840 | 298 | 0.00 |
+| cold | SEP | par | fs1M | - | 3.45 | 2.17 | 261 | 548 | 5.85 | 5.85 | 0.00 | 6.477 | 0.840 | 338 | 0.00 |
+| cold | SEP | par | fs5M | - | 2.63 | 0.53 | 388 | 523 | 5.77 | 5.77 | 0.00 | 29.906 | 0.840 | 487 | 0.00 |
+| cold | SEP | par | rc256K | - | 4.52 | 0.90 | 197 | 310 | 6.00 | 0.00 | 0.00 | 1.964 | 0.840 | 246 | 0.00 |
+| cold | SEP | par | exact | - | 4.10 | 1.46 | 244 | 413 | 5.94 | 0.00 | 0.00 | 1.444 | 0.840 | 280 | 0.00 |
+| cold | SEP | seq | fs64K | - | 1.14 | 0.39 | 828 | 1534 | 9.00 | 9.00 | 0.00 | 1.043 | 0.840 | 516 | 0.00 |
+| cold | SEP | seq | fs256K | - | 1.72 | 0.36 | 534 | 850 | 6.00 | 6.00 | 0.00 | 1.966 | 0.840 | 266 | 0.00 |
+| cold | SEP | seq | fs1M | - | 1.63 | 0.41 | 568 | 900 | 5.85 | 5.85 | 0.00 | 6.477 | 0.840 | 300 | 0.00 |
+| cold | SEP | seq | fs5M | - | 1.19 | 0.48 | 782 | 1771 | 5.77 | 5.77 | 0.00 | 29.906 | 0.840 | 393 | 0.00 |
+| cold | SEP | seq | rc256K | - | 1.95 | 0.87 | 438 | 872 | 6.00 | 0.00 | 0.00 | 1.964 | 0.840 | 235 | 0.00 |
+| cold | SEP | seq | exact | - | 1.90 | 0.40 | 508 | 725 | 5.94 | 0.00 | 0.00 | 1.444 | 0.840 | 269 | 0.00 |
+| cold | STACK | - | fs64K | - | 2.68 | 0.69 | 354 | 648 | 3.00 | 3.00 | 0.00 | 0.349 | 0.281 | 185 | 0.00 |
+| cold | STACK | - | fs256K | - | 3.40 | 0.73 | 258 | 579 | 2.00 | 2.00 | 0.00 | 0.657 | 0.281 | 108 | 0.00 |
+| cold | STACK | - | fs1M | - | 3.32 | 0.62 | 278 | 621 | 1.98 | 1.98 | 0.00 | 2.203 | 0.281 | 111 | 0.00 |
+| cold | STACK | - | fs5M | - | 2.27 | 0.96 | 409 | 883 | 1.94 | 1.94 | 0.00 | 10.196 | 0.281 | 165 | 0.00 |
+| cold | STACK | - | rc256K | - | 3.95 | 0.69 | 225 | 573 | 2.00 | 0.00 | 0.00 | 0.655 | 0.281 | 90 | 0.00 |
+| cold | STACK | - | exact | - | 3.86 | 0.57 | 212 | 551 | 2.00 | 0.00 | 0.00 | 0.496 | 0.281 | 101 | 0.00 |
+| warm | MULTI | par | fs256K | naive | 8.28 | 1.04 | 95 | 247 | 3.00 | 3.00 | 0.00 | 0.985 | 0.197 | 0 | 0.00 |
+| warm | MULTI | par | fs256K | shared | 10.47 | 2.24 | 76 | 237 | 1.02 | 1.02 | 0.00 | 0.324 | 0.197 | 0 | 0.00 |
+| warm | MULTI | par | fs5M | naive | 5.43 | 1.85 | 169 | 361 | 2.97 | 2.97 | 0.00 | 15.679 | 0.197 | 0 | 0.00 |
+| warm | MULTI | par | fs5M | shared | 8.28 | 2.68 | 110 | 338 | 0.83 | 0.83 | 0.00 | 4.486 | 0.197 | 0 | 0.00 |
+| warm | MULTI | par | exact | shared | 12.95 | 3.29 | 64 | 154 | 1.00 | 0.00 | 0.00 | 0.094 | 0.197 | 0 | 0.00 |
+| warm | MULTI | seq | fs256K | naive | 3.45 | 0.95 | 260 | 563 | 3.00 | 3.00 | 0.00 | 0.985 | 0.197 | 0 | 0.00 |
+| warm | MULTI | seq | fs256K | shared | 10.52 | 1.15 | 84 | 173 | 1.02 | 1.02 | 0.00 | 0.324 | 0.197 | 0 | 0.00 |
+| warm | MULTI | seq | fs5M | naive | 2.58 | 0.28 | 351 | 610 | 2.97 | 2.97 | 0.00 | 15.679 | 0.197 | 0 | 0.00 |
+| warm | MULTI | seq | fs5M | shared | 7.93 | 5.58 | 110 | 354 | 0.83 | 0.83 | 0.00 | 4.486 | 0.197 | 0 | 0.00 |
+| warm | MULTI | seq | exact | shared | 12.84 | 3.32 | 66 | 206 | 1.00 | 0.00 | 0.00 | 0.094 | 0.197 | 0 | 0.00 |
+| warm | SEP | par | fs64K | - | 7.64 | 1.57 | 110 | 235 | 3.00 | 3.00 | 0.00 | 0.395 | 0.197 | 0 | 0.00 |
+| warm | SEP | par | fs256K | - | 7.76 | 2.34 | 110 | 241 | 3.00 | 3.00 | 0.00 | 0.985 | 0.197 | 0 | 0.00 |
+| warm | SEP | par | fs1M | - | 7.39 | 2.37 | 112 | 240 | 2.97 | 2.97 | 0.00 | 3.300 | 0.197 | 0 | 0.00 |
+| warm | SEP | par | fs5M | - | 4.25 | 2.60 | 183 | 594 | 2.80 | 2.80 | 0.00 | 14.629 | 0.197 | 0 | 0.00 |
+| warm | SEP | par | rc256K | - | 8.66 | 3.83 | 103 | 210 | 3.00 | 0.00 | 0.00 | 0.983 | 0.197 | 0 | 0.00 |
+| warm | SEP | par | exact | - | 8.41 | 6.38 | 91 | 325 | 2.94 | 0.00 | 0.00 | 0.210 | 0.197 | 0 | 0.00 |
+| warm | SEP | seq | fs64K | - | 3.38 | 1.86 | 246 | 627 | 3.00 | 3.00 | 0.00 | 0.395 | 0.197 | 0 | 0.00 |
+| warm | SEP | seq | fs256K | - | 3.47 | 1.51 | 249 | 527 | 3.00 | 3.00 | 0.00 | 0.985 | 0.197 | 0 | 0.00 |
+| warm | SEP | seq | fs1M | - | 3.43 | 1.28 | 254 | 512 | 2.97 | 2.97 | 0.00 | 3.300 | 0.197 | 0 | 0.00 |
+| warm | SEP | seq | fs5M | - | 2.55 | 1.58 | 351 | 972 | 2.80 | 2.80 | 0.00 | 14.629 | 0.197 | 0 | 0.00 |
+| warm | SEP | seq | rc256K | - | 4.08 | 1.91 | 209 | 463 | 3.00 | 0.00 | 0.00 | 0.983 | 0.197 | 0 | 0.00 |
+| warm | SEP | seq | exact | - | 4.37 | 0.76 | 222 | 356 | 2.94 | 0.00 | 0.00 | 0.210 | 0.197 | 0 | 0.00 |
+| warm | STACK | - | fs64K | - | 6.28 | 1.45 | 168 | 343 | 1.00 | 1.00 | 0.00 | 0.132 | 0.066 | 0 | 0.00 |
+| warm | STACK | - | fs256K | - | 6.45 | 1.33 | 151 | 326 | 1.00 | 1.00 | 0.00 | 0.328 | 0.066 | 0 | 0.00 |
+| warm | STACK | - | fs1M | - | 5.91 | 1.96 | 153 | 436 | 1.00 | 1.00 | 0.00 | 1.115 | 0.066 | 0 | 0.00 |
+| warm | STACK | - | fs5M | - | 4.37 | 2.16 | 194 | 625 | 0.99 | 0.99 | 0.00 | 5.226 | 0.066 | 0 | 0.00 |
+| warm | STACK | - | rc256K | - | 7.16 | 3.04 | 131 | 320 | 1.00 | 0.00 | 0.00 | 0.328 | 0.066 | 0 | 0.00 |
+| warm | STACK | - | exact | - | 6.77 | 2.97 | 124 | 343 | 1.00 | 0.00 | 0.00 | 0.082 | 0.066 | 0 | 0.00 |
+
+## 8 concurrent reader processes
+
+| config | sps total | fetch/s | resolves/s | MB/s | p50 ms | p95 ms | 429 | other err |
+|---|---|---|---|---|---|---|---|---|
+| SEP|seq|fs5M|-|warm | 25.0 | 68.9 | 68.9 | 347.4 | 329 | 432 | 0 | 0 |
+| STACK|-|fs5M|-|warm | 68.7 | 66.7 | 66.7 | 348.8 | 108 | 163 | 0 | 0 |
+| SEP|par|rc256K|-|warm | 89.8 | 267.8 | 0.0 | 87.5 | 77 | 119 | 0 | 0 |
+| SEP|par|exact|-|warm | 92.1 | 272.4 | 0.0 | 18.8 | 76 | 128 | 0 | 0 |
+| STACK|-|exact|-|warm | 117.3 | 116.1 | 0.0 | 9.5 | 61 | 107 | 0 | 0 |
+| MULTI|par|exact|shared|warm | 123.3 | 121.9 | 0.0 | 11.4 | 60 | 102 | 0 | 0 |
+| MULTI|par|fs5M|shared|warm | 104.5 | 65.7 | 65.7 | 344.3 | 103 | 157 | 0 | 0 |
+| SEP|par|exact|-|cold | 36.8 | 220.5 | 0.0 | 53.4 | 199 | 325 | 0 | 0 |
+| STACK|-|exact|-|cold | 50.6 | 101.1 | 0.0 | 25.2 | 141 | 232 | 0 | 0 |
+| MULTI|par|exact|shared|cold | 42.7 | 85.2 | 0.0 | 47.0 | 180 | 235 | 0 | 0 |
+
+Checks: remote == local decode (bit-exact) 112/112; pts violations > 1e-4 s: 0; skipped arms 0; 429 total 0.

@@ -1,0 +1,200 @@
+{
+ "frames": 31115,
+ "wall_s": 388.1,
+ "process_cpu_s": 3097.3,
+ "decode_s": 43.9,
+ "stack_copy_s": 7.2,
+ "frames_per_s": 80.2,
+ "decoder": {
+  "right": {
+   "skipped": 0,
+   "decoder": "libdav1d"
+  },
+  "left": {
+   "skipped": 0,
+   "decoder": "libdav1d"
+  },
+  "top": {
+   "skipped": 0,
+   "decoder": "libdav1d"
+  }
+ },
+ "dec_threads": 2,
+ "encoder": {
+  "vcodec": "libsvtav1",
+  "pix_fmt": "yuv420p",
+  "options_from_lerobot": {
+   "g": "2",
+   "crf": "30",
+   "preset": "12",
+   "svtav1-params": "fast-decode=0"
+  },
+  "options_used": {
+   "g": "2",
+   "crf": "30",
+   "preset": "12",
+   "svtav1-params": "fast-decode=0:lp=8"
+  },
+  "input": "rgb24 ndarray, pts=i, time_base=1/fps"
+ },
+ "svt_lp": 8,
+ "cpu_quota": 8,
+ "mux_options": {
+  "movflags": "faststart"
+ },
+ "source_faststart": true,
+ "svt_reported": {
+  "mapped": [
+   "Preset M12 is mapped to M10."
+  ],
+  "version": [
+   "SVT-AV1 Encoder Lib v3.0.0"
+  ],
+  "pred_struct": [
+   "preset / tune / pred struct : 10 / PSNR / random access"
+  ],
+  "lp": [
+   "Level of Parallelism: 6"
+  ]
+ },
+ "files": {
+  "SEP/right": {
+   "path": "/work/enc/SEP/right.mp4",
+   "bytes": 195865499,
+   "shape": [
+    360,
+    640
+   ],
+   "feed_s": 52.2,
+   "flush_s": 0.1,
+   "moov": {
+    "file_bytes": 195865499,
+    "moov_bytes": 190349,
+    "moov_before_mdat": true,
+    "boxes": [
+     "ftyp",
+     "moov",
+     "free",
+     "mdat"
+    ]
+   }
+  },
+  "SEP/left": {
+   "path": "/work/enc/SEP/left.mp4",
+   "bytes": 215189202,
+   "shape": [
+    360,
+    640
+   ],
+   "feed_s": 47.2,
+   "flush_s": 0.1,
+   "moov": {
+    "file_bytes": 215189202,
+    "moov_bytes": 190461,
+    "moov_before_mdat": true,
+    "boxes": [
+     "ftyp",
+     "moov",
+     "free",
+     "mdat"
+    ]
+   }
+  },
+  "SEP/top": {
+   "path": "/work/enc/SEP/top.mp4",
+   "bytes": 301519052,
+   "shape": [
+    360,
+    640
+   ],
+   "feed_s": 46.8,
+   "flush_s": 0.1,
+   "moov": {
+    "file_bytes": 301519052,
+    "moov_bytes": 191309,
+    "moov_before_mdat": true,
+    "boxes": [
+     "ftyp",
+     "moov",
+     "free",
+     "mdat"
+    ]
+   }
+  },
+  "STACK": {
+   "path": "/work/enc/STACK/stacked.mp4",
+   "bytes": 700862965,
+   "shape": [
+    1080,
+    640
+   ],
+   "feed_s": 179.6,
+   "flush_s": 0.2,
+   "moov": {
+    "file_bytes": 700862965,
+    "moov_bytes": 197465,
+    "moov_before_mdat": true,
+    "boxes": [
+     "ftyp",
+     "moov",
+     "free",
+     "mdat"
+    ]
+   }
+  }
+ },
+ "sep_bytes_total": 712573753,
+ "stack_bytes": 700862965,
+ "stack_over_sep_bytes": 0.9835655074991234,
+ "source_bytes_first_files": 771774771,
+ "stack_layout": {
+  "order": [
+   "right",
+   "left",
+   "top"
+  ],
+  "height": 1080,
+  "width": 640,
+  "crops": {
+   "right": [
+    0,
+    360,
+    640
+   ],
+   "left": [
+    360,
+    360,
+    640
+   ],
+   "top": [
+    720,
+    360,
+    640
+   ]
+  },
+  "odd_height_pad_rows": {
+   "right": 0,
+   "left": 0,
+   "top": 0
+  },
+  "pad_pixels_per_frame": 0,
+  "pad_pixel_share": 0.0,
+  "pad_raw_rgb_bytes_per_frame": 0
+ },
+ "stack_order_top_to_bottom": [
+  "right",
+  "left",
+  "top"
+ ],
+ "pyav": "15.1.0",
+ "pyav_ffmpeg": {
+  "libavutil": "59.39.100",
+  "libavcodec": "61.19.101",
+  "libavformat": "61.7.100",
+  "libavdevice": "61.3.100",
+  "libavfilter": "10.4.100",
+  "libswscale": "8.3.100",
+  "libswresample": "5.3.100"
+ },
+ "note": "SEP and STACK encoders run in the same loop; feed_s is time spent in each encoder's encode() calls (SVT-AV1 encodes on its own threads), so per-layout encode cost is not separable from this wall time."
+}

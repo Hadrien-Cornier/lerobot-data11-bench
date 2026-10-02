@@ -1,0 +1,103 @@
+{
+ "psnr": {
+  "right": {
+   "sep_vs_src": {
+    "mean": 40.7914002848868,
+    "min": 38.484627156609406
+   },
+   "stack_vs_src": {
+    "mean": 40.53022027438813,
+    "min": 38.08549017371155
+   },
+   "stack_vs_sep": {
+    "mean": 42.767053103526735,
+    "min": 40.21289841837351
+   }
+  },
+  "left": {
+   "sep_vs_src": {
+    "mean": 41.358947798851666,
+    "min": 38.81891117315164
+   },
+   "stack_vs_src": {
+    "mean": 40.30797556114252,
+    "min": 37.301421955757064
+   },
+   "stack_vs_sep": {
+    "mean": 41.52624158185985,
+    "min": 37.77068210792431
+   }
+  },
+  "top": {
+   "sep_vs_src": {
+    "mean": 39.876598826399395,
+    "min": 36.86792771204507
+   },
+   "stack_vs_src": {
+    "mean": 39.272747500878616,
+    "min": 36.63046979071223
+   },
+   "stack_vs_sep": {
+    "mean": 40.45563252786553,
+    "min": 38.920038964431136
+   }
+  }
+ },
+ "psnr_frames": 20,
+ "camera_order_psnr_matrix": {
+  "right": {
+   "right": 42.767053103526735,
+   "left": 12.440959579281685,
+   "top": 12.308311071905695
+  },
+  "left": {
+   "right": 12.441242506227628,
+   "left": 41.52624158185985,
+   "top": 11.846265315799423
+  },
+  "top": {
+   "right": 12.311557955461545,
+   "left": 11.849215207954641,
+   "top": 40.45563252786553
+  }
+ },
+ "camera_order_ok": true,
+ "camera_order_comparable_pairs": 6,
+ "psnr_min_stack_vs_src": 36.63046979071223,
+ "psnr_min_stack_vs_sep": 37.77068210792431,
+ "remote_equal": {
+  "sep": {
+   "frames_checked": 18,
+   "mismatch": 0,
+   "pass": true
+  },
+  "stack": {
+   "frames_checked": 20,
+   "mismatch": 0,
+   "pass": true
+  },
+  "sep1": {
+   "frames_checked": 20,
+   "mismatch": 0,
+   "pass": true
+  }
+ },
+ "through_lerobot": {
+  "samples": 20,
+  "sep_item_equals_file_frame": "60/60",
+  "sep1_equals_sep_first_camera": "20/20",
+  "stack_crop_vs_sep_item_psnr_mean": {
+   "right": 42.32802385989528,
+   "left": 41.1350327735683,
+   "top": 40.51741601475261
+  },
+  "stack_crop_vs_sep_item_psnr_min": {
+   "right": 38.33586588853815,
+   "left": 38.9168112615602,
+   "top": 38.194088135053725
+  },
+  "pass": true
+ },
+ "psnr_threshold": 35.0,
+ "ok": true
+}

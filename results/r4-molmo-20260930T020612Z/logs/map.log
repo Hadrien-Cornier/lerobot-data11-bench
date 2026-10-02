@@ -1,0 +1,68 @@
+[02:26:36] SEP_w0_c100 r0: 165.5 samples/s, CPU 11.6 ms/sample, hit 1.000, open 0.0 ms, 4968 samples in 30s (cap), process 35s
+[02:27:08] SEP_w0_cemu r0: ERROR chcodec/_core/ops.py", line 252, in get_frames_at_indices
+    return _get_frames_at_indices_tensor_input(decoder, frame_indices=frame_indices)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/venv/lib/python3.12/site-packages/torch/_ops.py", line 865, in __call__
+    return self._op(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/venv/lib/python3.12/site-packages/fsspec/implementations/local.py", line 479, in seek
+    return self.f.seek(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: seek of closed file
+
+[02:27:42] STACK_w0_c100 r0: 128.8 samples/s, CPU 7.8 ms/sample, hit 1.000, open 0.0 ms, 3872 samples in 30s (cap), process 35s
+[02:28:17] STACK_w0_cemu r0: 108.8 samples/s, CPU 9.2 ms/sample, hit 0.130, open 1.6 ms, 3264 samples in 30s (cap), process 35s
+[02:28:51] SEP1_w0_c100 r0: 352.7 samples/s, CPU 2.8 ms/sample, hit 1.000, open 0.0 ms, 10584 samples in 30s (cap), process 34s
+[02:29:25] SEP1_w0_cemu r0: 230.5 samples/s, CPU 4.3 ms/sample, hit 0.127, open 1.5 ms, 6920 samples in 30s (cap), process 34s
+[02:30:02] SEP_w4_c100 r0: 507.0 samples/s, CPU 15.0 ms/sample, hit 1.000, open 3.3 ms, 15224 samples in 30s (cap), process 37s
+[02:30:39] SEP_w4_cemu r0: 262.0 samples/s, CPU 22.4 ms/sample, hit 0.003, open 3.2 ms, 7872 samples in 30s (cap), process 37s
+[02:31:16] STACK_w4_c100 r0: 394.8 samples/s, CPU 11.3 ms/sample, hit 1.000, open 1.9 ms, 11864 samples in 30s (cap), process 37s
+[02:31:53] STACK_w4_cemu r0: 362.5 samples/s, CPU 12.2 ms/sample, hit 0.126, open 1.9 ms, 10896 samples in 30s (cap), process 37s
+[02:32:30] SEP1_w4_c100 r0: 1038.8 samples/s, CPU 4.7 ms/sample, hit 1.000, open 2.6 ms, 31184 samples in 30s (cap), process 37s
+[02:33:07] SEP1_w4_cemu r0: 771.4 samples/s, CPU 6.0 ms/sample, hit 0.128, open 1.8 ms, 23168 samples in 30s (cap), process 37s
+[02:33:44] SEP1_w4_cemu r1: 777.6 samples/s, CPU 6.0 ms/sample, hit 0.128, open 1.7 ms, 23328 samples in 30s (cap), process 37s
+[02:34:20] SEP1_w4_c100 r1: 1009.6 samples/s, CPU 4.7 ms/sample, hit 1.000, open 1.8 ms, 30312 samples in 30s (cap), process 37s
+[02:34:57] STACK_w4_cemu r1: 362.0 samples/s, CPU 12.2 ms/sample, hit 0.130, open 1.9 ms, 10864 samples in 30s (cap), process 37s
+[02:35:34] STACK_w4_c100 r1: 353.6 samples/s, CPU 11.9 ms/sample, hit 1.000, open 1.8 ms, 10616 samples in 30s (cap), process 37s
+[02:36:12] SEP_w4_cemu r1: 265.5 samples/s, CPU 22.2 ms/sample, hit 0.003, open 3.2 ms, 7992 samples in 30s (cap), process 37s
+[02:36:49] SEP_w4_c100 r1: 513.8 samples/s, CPU 14.9 ms/sample, hit 1.000, open 5.3 ms, 15416 samples in 30s (cap), process 37s
+[02:37:23] SEP1_w0_cemu r1: 231.4 samples/s, CPU 4.3 ms/sample, hit 0.126, open 1.5 ms, 6944 samples in 30s (cap), process 34s
+[02:37:56] SEP1_w0_c100 r1: 350.8 samples/s, CPU 2.8 ms/sample, hit 1.000, open 0.0 ms, 10528 samples in 30s (cap), process 34s
+[02:38:31] STACK_w0_cemu r1: 109.4 samples/s, CPU 9.1 ms/sample, hit 0.123, open 1.6 ms, 3288 samples in 30s (cap), process 35s
+[02:39:06] STACK_w0_c100 r1: 122.5 samples/s, CPU 8.2 ms/sample, hit 1.000, open 0.0 ms, 3680 samples in 30s (cap), process 35s
+[02:39:20] SEP_w0_cemu r1: ERROR chcodec/_core/ops.py", line 252, in get_frames_at_indices
+    return _get_frames_at_indices_tensor_input(decoder, frame_indices=frame_indices)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/venv/lib/python3.12/site-packages/torch/_ops.py", line 865, in __call__
+    return self._op(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/venv/lib/python3.12/site-packages/fsspec/implementations/local.py", line 479, in seek
+    return self.f.seek(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: seek of closed file
+
+[02:39:55] SEP_w0_c100 r1: 161.2 samples/s, CPU 11.7 ms/sample, hit 1.000, open 0.0 ms, 4840 samples in 30s (cap), process 34s
+[02:40:29] SEP_w0_c100 r2: 165.9 samples/s, CPU 11.5 ms/sample, hit 1.000, open 0.0 ms, 4984 samples in 30s (cap), process 34s
+[02:41:05] SEP_w0_cemu r2: 81.3 samples/s, CPU 18.0 ms/sample, hit 0.003, open 2.5 ms, 2440 samples in 30s (cap), process 35s
+[02:41:39] STACK_w0_c100 r2: 123.6 samples/s, CPU 8.1 ms/sample, hit 1.000, open 0.0 ms, 3712 samples in 30s (cap), process 35s
+[02:42:14] STACK_w0_cemu r2: 109.1 samples/s, CPU 9.2 ms/sample, hit 0.130, open 1.6 ms, 3280 samples in 30s (cap), process 35s
+[02:42:48] SEP1_w0_c100 r2: 351.5 samples/s, CPU 2.8 ms/sample, hit 1.000, open 0.0 ms, 10552 samples in 30s (cap), process 34s
+[02:43:22] SEP1_w0_cemu r2: 235.0 samples/s, CPU 4.3 ms/sample, hit 0.131, open 1.5 ms, 7056 samples in 30s (cap), process 34s
+[02:43:59] SEP_w4_c100 r2: 504.3 samples/s, CPU 15.1 ms/sample, hit 1.000, open 0.0 ms, 15144 samples in 30s (cap), process 37s
+[02:44:36] SEP_w4_cemu r2: 267.6 samples/s, CPU 22.1 ms/sample, hit 0.003, open 3.2 ms, 8032 samples in 30s (cap), process 37s
+[02:45:13] STACK_w4_c100 r2: 388.0 samples/s, CPU 11.3 ms/sample, hit 1.000, open 0.0 ms, 11656 samples in 30s (cap), process 37s
+[02:45:50] STACK_w4_cemu r2: 361.6 samples/s, CPU 12.2 ms/sample, hit 0.128, open 1.9 ms, 10872 samples in 30s (cap), process 37s
+[02:46:27] SEP1_w4_c100 r2: 1027.7 samples/s, CPU 4.7 ms/sample, hit 1.000, open 0.0 ms, 30856 samples in 30s (cap), process 37s
+[02:47:04] SEP1_w4_cemu r2: 775.7 samples/s, CPU 5.9 ms/sample, hit 0.129, open 1.7 ms, 23272 samples in 30s (cap), process 37s
+[02:47:41] SEP1_w4_cemu r3: 785.4 samples/s, CPU 5.9 ms/sample, hit 0.123, open 1.7 ms, 23568 samples in 30s (cap), process 37s
+[02:48:17] SEP1_w4_c100 r3: 977.2 samples/s, CPU 4.7 ms/sample, hit 1.000, open 2.0 ms, 29344 samples in 30s (cap), process 37s
+[02:48:54] STACK_w4_cemu r3: 364.9 samples/s, CPU 12.1 ms/sample, hit 0.122, open 1.9 ms, 10952 samples in 30s (cap), process 37s
+[02:49:31] STACK_w4_c100 r3: 390.5 samples/s, CPU 11.4 ms/sample, hit 1.000, open 1.9 ms, 11736 samples in 30s (cap), process 37s
+[02:50:09] SEP_w4_cemu r3: 263.9 samples/s, CPU 22.3 ms/sample, hit 0.003, open 3.3 ms, 7936 samples in 30s (cap), process 37s
+[02:50:46] SEP_w4_c100 r3: 517.0 samples/s, CPU 14.8 ms/sample, hit 1.000, open 3.2 ms, 15512 samples in 30s (cap), process 37s
+[02:51:20] SEP1_w0_cemu r3: 234.5 samples/s, CPU 4.3 ms/sample, hit 0.124, open 1.5 ms, 7040 samples in 30s (cap), process 34s
+[02:51:53] SEP1_w0_c100 r3: 354.8 samples/s, CPU 2.8 ms/sample, hit 1.000, open 0.0 ms, 10648 samples in 30s (cap), process 34s
+[02:52:28] STACK_w0_cemu r3: 108.4 samples/s, CPU 9.2 ms/sample, hit 0.126, open 1.6 ms, 3256 samples in 30s (cap), process 35s
+[02:53:03] STACK_w0_c100 r3: 119.2 samples/s, CPU 8.4 ms/sample, hit 1.000, open 0.0 ms, 3584 samples in 30s (cap), process 35s
+[02:53:38] SEP_w0_cemu r3: 78.9 samples/s, CPU 18.3 ms/sample, hit 0.003, open 2.6 ms, 2368 samples in 30s (cap), process 35s
+[02:54:13] SEP_w0_c100 r3: 159.8 samples/s, CPU 11.8 ms/sample, hit 1.000, open 0.0 ms, 4800 samples in 30s (cap), process 34s

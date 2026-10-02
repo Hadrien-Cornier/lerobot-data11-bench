@@ -1,0 +1,45 @@
+
+Downloading bytes:           |  0.00B            [A
+Reconstructing (incomplete total...): |          |  0.00B /  0.00B            [A
+Fetching 16 files:   0%|          | 0/16 [00:00<?, ?it/s][A
+Reconstructing (incomplete total...):   0%|          |  0.00B / 5.51kB            [A
+Reconstructing (incomplete total...):   0%|          | 5.51kB / 88.3MB            [A
+Reconstructing (incomplete total...):   0%|          | 5.51kB / 88.3MB            [A
+Reconstructing (incomplete total...):   0%|          | 5.51kB /  144MB            [A
+Reconstructing (incomplete total...):   0%|          | 5.51kB /  187MB            [A
+Reconstructing (incomplete total...):   0%|          | 5.51kB /  232MB            [A
+Reconstructing (incomplete total...):   0%|          | 5.51kB /  272MB            [A
+Reconstructing (incomplete total...):   0%|          | 5.51kB /  344MB            [A
+Reconstructing (incomplete total...):   0%|          | 5.51kB /  394MB            [A
+Downloading bytes: ██▋       |  106MB,   ???B/s  [A
+Reconstructing (incomplete total...):  10%|▉         | 38.6MB /  394MB            [A
+Fetching 16 files:  12%|█▎        | 2/16 [00:01<00:07,  1.79it/s][A
+Reconstructing (incomplete total...):  17%|█▋        | 78.9MB /  465MB, 34.9MB/s  [A
+Reconstructing (incomplete total...):  16%|█▌        | 78.9MB /  500MB, 34.9MB/s  [A
+Reconstructing (incomplete total...):  24%|██▎       |  135MB /  569MB, 34.9MB/s  [A
+Reconstructing (incomplete total...):  30%|██▉       |  184MB /  621MB, 34.9MB/s  [A
+Reconstructing (incomplete total...):  34%|███▎      |  230MB /  684MB, 34.9MB/s  [A
+Reconstructing (incomplete total...):  35%|███▌      |  272MB /  776MB, 34.9MB/s  [A
+Reconstructing (incomplete total...):  39%|███▉      |  322MB /  822MB, 34.9MB/s  [A
+Downloading bytes: █████▍    |  442MB,  103MB/s  [A
+Reconstructing (incomplete total...):  52%|█████▏    |  429MB /  822MB, 34.9MB/s  [A
+Fetching 16 files:  62%|██████▎   | 10/16 [00:02<00:01,  5.18it/s][A
+Downloading bytes: █████████▌|  782MB,  235MB/s  [A
+Reconstructing (incomplete total...):  84%|████████▎ |  688MB /  822MB,  230MB/s  [A
+Fetching 16 files: 100%|██████████| 16/16 [00:03<00:00,  4.63it/s][AFetching 16 files: 100%|██████████| 16/16 [00:03<00:00,  4.44it/s]
+
+Downloading bytes: ██████████|  821MB,  282MB/s  [A
+Download complete: : ██████████|  821MB,  282MB/s  [A
+Reconstruction complete: 100%|██████████|  822MB /  822MB,  240MB/s               [A{
+ "repo_id": "lerobot/abc_130k_v3_train",
+ "revision": "68651e4929d9fb00f798937b2d62617cab5c771d",
+ "files": 15,
+ "bytes": 821975857,
+ "gb": 0.822,
+ "wall_s": 11.2,
+ "mb_per_s": 73.5,
+ "size_mismatches": {},
+ "fps": 30
+}
+Download complete: : ██████████|  821MB,  282MB/s  
+Reconstruction complete: 100%|██████████|  822MB /  822MB,  240MB/s  

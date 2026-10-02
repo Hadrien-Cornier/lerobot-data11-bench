@@ -1,0 +1,7987 @@
+{
+ "ffmpeg": "ffmpeg version 7.1.5-0+deb13u1 Copyright (c) 2000-2026 the FFmpeg developers",
+ "files": {
+  "/work/enc/ckpt_1k/SEP/ckpt_1k_g000__top.mp4": {
+   "family": "ckpt_1k",
+   "layout": "SEP",
+   "frames_expected": 904,
+   "packets": 904,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 452,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "904"
+   },
+   "file_bytes": 2066448,
+   "moov_bytes": 6201,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/ckpt_1k/SEP/ckpt_1k_g000__left_wrist.mp4": {
+   "family": "ckpt_1k",
+   "layout": "SEP",
+   "frames_expected": 904,
+   "packets": 904,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 452,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "904"
+   },
+   "file_bytes": 1535076,
+   "moov_bytes": 6201,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/ckpt_1k/SEP/ckpt_1k_g000__right_wrist.mp4": {
+   "family": "ckpt_1k",
+   "layout": "SEP",
+   "frames_expected": 904,
+   "packets": 904,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 452,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "904"
+   },
+   "file_bytes": 1366462,
+   "moov_bytes": 6201,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/ckpt_1k/SEP/ckpt_1k_g001__top.mp4": {
+   "family": "ckpt_1k",
+   "layout": "SEP",
+   "frames_expected": 987,
+   "packets": 987,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 494,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "987"
+   },
+   "file_bytes": 2749195,
+   "moov_bytes": 6717,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/ckpt_1k/SEP/ckpt_1k_g001__left_wrist.mp4": {
+   "family": "ckpt_1k",
+   "layout": "SEP",
+   "frames_expected": 987,
+   "packets": 987,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 494,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "987"
+   },
+   "file_bytes": 1949101,
+   "moov_bytes": 6701,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/ckpt_1k/SEP/ckpt_1k_g001__right_wrist.mp4": {
+   "family": "ckpt_1k",
+   "layout": "SEP",
+   "frames_expected": 987,
+   "packets": 987,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 494,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "987"
+   },
+   "file_bytes": 2155855,
+   "moov_bytes": 6717,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/ckpt_1k/SEP/ckpt_1k_g002__top.mp4": {
+   "family": "ckpt_1k",
+   "layout": "SEP",
+   "frames_expected": 1011,
+   "packets": 1011,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 506,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "1011"
+   },
+   "file_bytes": 2494614,
+   "moov_bytes": 6861,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/ckpt_1k/SEP/ckpt_1k_g002__left_wrist.mp4": {
+   "family": "ckpt_1k",
+   "layout": "SEP",
+   "frames_expected": 1011,
+   "packets": 1011,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 506,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "1011"
+   },
+   "file_bytes": 2491254,
+   "moov_bytes": 6861,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/ckpt_1k/SEP/ckpt_1k_g002__right_wrist.mp4": {
+   "family": "ckpt_1k",
+   "layout": "SEP",
+   "frames_expected": 1011,
+   "packets": 1011,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 506,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "1011"
+   },
+   "file_bytes": 1918889,
+   "moov_bytes": 6845,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/ckpt_1k/STACK/ckpt_1k_g000.mp4": {
+   "family": "ckpt_1k",
+   "layout": "STACK",
+   "frames_expected": 904,
+   "packets": 904,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 452,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 672,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "904"
+   },
+   "file_bytes": 4816113,
+   "moov_bytes": 6249,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/ckpt_1k/STACK/ckpt_1k_g001.mp4": {
+   "family": "ckpt_1k",
+   "layout": "STACK",
+   "frames_expected": 987,
+   "packets": 987,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 494,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 672,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "987"
+   },
+   "file_bytes": 6685888,
+   "moov_bytes": 6781,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/ckpt_1k/STACK/ckpt_1k_g002.mp4": {
+   "family": "ckpt_1k",
+   "layout": "STACK",
+   "frames_expected": 1011,
+   "packets": 1011,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 506,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 672,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "1011"
+   },
+   "file_bytes": 6718749,
+   "moov_bytes": 6925,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/ckpt_1k/BIG/ckpt_1k_b000__top.mp4": {
+   "family": "ckpt_1k",
+   "layout": "BIG",
+   "frames_expected": 2902,
+   "packets": 2902,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 1452,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "2902"
+   },
+   "file_bytes": 7308655,
+   "moov_bytes": 18273,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/ckpt_1k/BIG/ckpt_1k_b000__left_wrist.mp4": {
+   "family": "ckpt_1k",
+   "layout": "BIG",
+   "frames_expected": 2902,
+   "packets": 2902,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 1452,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "2902"
+   },
+   "file_bytes": 5973829,
+   "moov_bytes": 18257,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/ckpt_1k/BIG/ckpt_1k_b000__right_wrist.mp4": {
+   "family": "ckpt_1k",
+   "layout": "BIG",
+   "frames_expected": 2902,
+   "packets": 2902,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 1452,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "2902"
+   },
+   "file_bytes": 5439604,
+   "moov_bytes": 18257,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g000__top.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 2280,
+   "packets": 2280,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 1140,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "2280"
+   },
+   "file_bytes": 11243806,
+   "moov_bytes": 14565,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g000__left_wrist.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 2280,
+   "packets": 2280,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 1140,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "2280"
+   },
+   "file_bytes": 8178843,
+   "moov_bytes": 14553,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g000__right_wrist.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 2280,
+   "packets": 2280,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 1140,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "2280"
+   },
+   "file_bytes": 8761723,
+   "moov_bytes": 14569,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g001__top.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 2155,
+   "packets": 2155,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 1078,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "2155"
+   },
+   "file_bytes": 5927299,
+   "moov_bytes": 13773,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g001__left_wrist.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 2155,
+   "packets": 2155,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 1078,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "2155"
+   },
+   "file_bytes": 7740865,
+   "moov_bytes": 13805,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g001__right_wrist.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 2155,
+   "packets": 2155,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 1078,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "2155"
+   },
+   "file_bytes": 4093315,
+   "moov_bytes": 13741,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g002__top.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 2018,
+   "packets": 2018,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 1009,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "2018"
+   },
+   "file_bytes": 7578875,
+   "moov_bytes": 12981,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g002__left_wrist.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 2018,
+   "packets": 2018,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 1009,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "2018"
+   },
+   "file_bytes": 5322903,
+   "moov_bytes": 12949,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g002__right_wrist.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 2018,
+   "packets": 2018,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 1009,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "2018"
+   },
+   "file_bytes": 5226346,
+   "moov_bytes": 12933,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g003__top.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 2043,
+   "packets": 2043,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 1022,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "2043"
+   },
+   "file_bytes": 4988353,
+   "moov_bytes": 13085,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g003__left_wrist.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 2043,
+   "packets": 2043,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 1022,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "2043"
+   },
+   "file_bytes": 4541896,
+   "moov_bytes": 13085,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g003__right_wrist.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 2043,
+   "packets": 2043,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 1022,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "2043"
+   },
+   "file_bytes": 4031129,
+   "moov_bytes": 13069,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g004__top.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 1969,
+   "packets": 1969,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 985,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "1969"
+   },
+   "file_bytes": 10960364,
+   "moov_bytes": 12689,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g004__left_wrist.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 1969,
+   "packets": 1969,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 985,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "1969"
+   },
+   "file_bytes": 4210870,
+   "moov_bytes": 12641,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g004__right_wrist.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 1969,
+   "packets": 1969,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 985,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "1969"
+   },
+   "file_bytes": 3553982,
+   "moov_bytes": 12625,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g005__top.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 1988,
+   "packets": 1988,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 994,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "1988"
+   },
+   "file_bytes": 8832154,
+   "moov_bytes": 12817,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g005__left_wrist.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 1988,
+   "packets": 1988,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 994,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "1988"
+   },
+   "file_bytes": 8725144,
+   "moov_bytes": 12817,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g005__right_wrist.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 1988,
+   "packets": 1988,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 994,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "1988"
+   },
+   "file_bytes": 10419673,
+   "moov_bytes": 12833,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g006__top.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 2256,
+   "packets": 2256,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 1128,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "2256"
+   },
+   "file_bytes": 11312451,
+   "moov_bytes": 14445,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g006__left_wrist.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 2256,
+   "packets": 2256,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 1128,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "2256"
+   },
+   "file_bytes": 4079836,
+   "moov_bytes": 14345,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g006__right_wrist.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 2256,
+   "packets": 2256,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 1128,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "2256"
+   },
+   "file_bytes": 4876926,
+   "moov_bytes": 14349,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g007__top.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 1873,
+   "packets": 1873,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 937,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "1873"
+   },
+   "file_bytes": 5155542,
+   "moov_bytes": 12065,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g007__left_wrist.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 1873,
+   "packets": 1873,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 937,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "1873"
+   },
+   "file_bytes": 5303414,
+   "moov_bytes": 12081,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g007__right_wrist.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 1873,
+   "packets": 1873,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 937,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "1873"
+   },
+   "file_bytes": 6136790,
+   "moov_bytes": 12081,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g008__top.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 2266,
+   "packets": 2266,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 1133,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "2266"
+   },
+   "file_bytes": 8891701,
+   "moov_bytes": 14473,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g008__left_wrist.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 2266,
+   "packets": 2266,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 1133,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "2266"
+   },
+   "file_bytes": 7159381,
+   "moov_bytes": 14453,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g008__right_wrist.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 2266,
+   "packets": 2266,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 1133,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "2266"
+   },
+   "file_bytes": 6841947,
+   "moov_bytes": 14453,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g009__top.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 1919,
+   "packets": 1919,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 960,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "1919"
+   },
+   "file_bytes": 7032730,
+   "moov_bytes": 12349,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g009__left_wrist.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 1919,
+   "packets": 1919,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 960,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "1919"
+   },
+   "file_bytes": 4162166,
+   "moov_bytes": 12325,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g009__right_wrist.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 1919,
+   "packets": 1919,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 960,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "1919"
+   },
+   "file_bytes": 3937702,
+   "moov_bytes": 12325,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g010__top.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 2103,
+   "packets": 2103,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 1052,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "2103"
+   },
+   "file_bytes": 8586387,
+   "moov_bytes": 13473,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g010__left_wrist.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 2103,
+   "packets": 2103,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 1052,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "2103"
+   },
+   "file_bytes": 5894118,
+   "moov_bytes": 13461,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g010__right_wrist.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 2103,
+   "packets": 2103,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 1052,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "2103"
+   },
+   "file_bytes": 5407121,
+   "moov_bytes": 13461,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g011__top.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 1964,
+   "packets": 1964,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 982,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "1964"
+   },
+   "file_bytes": 6717872,
+   "moov_bytes": 12629,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g011__left_wrist.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 1964,
+   "packets": 1964,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 982,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "1964"
+   },
+   "file_bytes": 6321880,
+   "moov_bytes": 12641,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g011__right_wrist.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 1964,
+   "packets": 1964,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 982,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "1964"
+   },
+   "file_bytes": 6469228,
+   "moov_bytes": 12641,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g012__top.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 1703,
+   "packets": 1703,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 852,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "1703"
+   },
+   "file_bytes": 4444196,
+   "moov_bytes": 11045,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g012__left_wrist.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 1703,
+   "packets": 1703,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 852,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "1703"
+   },
+   "file_bytes": 4309122,
+   "moov_bytes": 11045,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g012__right_wrist.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 1703,
+   "packets": 1703,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 852,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "1703"
+   },
+   "file_bytes": 4318378,
+   "moov_bytes": 11045,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g013__top.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 2036,
+   "packets": 2036,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 1018,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "2036"
+   },
+   "file_bytes": 5046363,
+   "moov_bytes": 13041,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g013__left_wrist.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 2036,
+   "packets": 2036,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 1018,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "2036"
+   },
+   "file_bytes": 5483163,
+   "moov_bytes": 13057,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g013__right_wrist.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 2036,
+   "packets": 2036,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 1018,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "2036"
+   },
+   "file_bytes": 4143570,
+   "moov_bytes": 13025,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g014__top.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 2201,
+   "packets": 2201,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 1101,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "2201"
+   },
+   "file_bytes": 7682805,
+   "moov_bytes": 14069,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g014__left_wrist.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 2201,
+   "packets": 2201,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 1101,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "2201"
+   },
+   "file_bytes": 3469345,
+   "moov_bytes": 14017,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g014__right_wrist.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 2201,
+   "packets": 2201,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 1101,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "2201"
+   },
+   "file_bytes": 3853692,
+   "moov_bytes": 14017,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g015__top.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 2071,
+   "packets": 2071,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 1036,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "2071"
+   },
+   "file_bytes": 4804762,
+   "moov_bytes": 13253,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g015__left_wrist.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 2071,
+   "packets": 2071,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 1036,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "2071"
+   },
+   "file_bytes": 4009261,
+   "moov_bytes": 13237,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g015__right_wrist.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 2071,
+   "packets": 2071,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 1036,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "2071"
+   },
+   "file_bytes": 2421905,
+   "moov_bytes": 13221,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g016__top.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 2043,
+   "packets": 2043,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 1022,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "2043"
+   },
+   "file_bytes": 5088941,
+   "moov_bytes": 13073,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g016__left_wrist.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 2043,
+   "packets": 2043,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 1022,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "2043"
+   },
+   "file_bytes": 3924894,
+   "moov_bytes": 13069,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g016__right_wrist.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 2043,
+   "packets": 2043,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 1022,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "2043"
+   },
+   "file_bytes": 4597158,
+   "moov_bytes": 13085,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g017__top.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 2255,
+   "packets": 2255,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 1128,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "2255"
+   },
+   "file_bytes": 6347968,
+   "moov_bytes": 14377,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g017__left_wrist.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 2255,
+   "packets": 2255,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 1128,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "2255"
+   },
+   "file_bytes": 5143032,
+   "moov_bytes": 14357,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g017__right_wrist.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 2255,
+   "packets": 2255,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 1128,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "2255"
+   },
+   "file_bytes": 4698122,
+   "moov_bytes": 14357,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g018__top.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 2062,
+   "packets": 2062,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 1031,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "2062"
+   },
+   "file_bytes": 5195871,
+   "moov_bytes": 13197,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g018__left_wrist.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 2062,
+   "packets": 2062,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 1031,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "2062"
+   },
+   "file_bytes": 2641006,
+   "moov_bytes": 13165,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g018__right_wrist.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 2062,
+   "packets": 2062,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 1031,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "2062"
+   },
+   "file_bytes": 3593822,
+   "moov_bytes": 13181,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g019__top.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 2023,
+   "packets": 2023,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 1012,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "2023"
+   },
+   "file_bytes": 5117197,
+   "moov_bytes": 12965,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g019__left_wrist.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 2023,
+   "packets": 2023,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 1012,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "2023"
+   },
+   "file_bytes": 3068512,
+   "moov_bytes": 12933,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g019__right_wrist.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 2023,
+   "packets": 2023,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 1012,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "2023"
+   },
+   "file_bytes": 3714435,
+   "moov_bytes": 12949,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g020__top.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 1765,
+   "packets": 1765,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 883,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "1765"
+   },
+   "file_bytes": 5680201,
+   "moov_bytes": 11421,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g020__left_wrist.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 1765,
+   "packets": 1765,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 883,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "1765"
+   },
+   "file_bytes": 5096511,
+   "moov_bytes": 11417,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g020__right_wrist.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 1765,
+   "packets": 1765,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 883,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "1765"
+   },
+   "file_bytes": 5053446,
+   "moov_bytes": 11417,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g021__top.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 1897,
+   "packets": 1897,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 949,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "1897"
+   },
+   "file_bytes": 4944843,
+   "moov_bytes": 12209,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g021__left_wrist.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 1897,
+   "packets": 1897,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 949,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "1897"
+   },
+   "file_bytes": 2961011,
+   "moov_bytes": 12177,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g021__right_wrist.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 1897,
+   "packets": 1897,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 949,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "1897"
+   },
+   "file_bytes": 2800849,
+   "moov_bytes": 12177,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g022__top.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 2041,
+   "packets": 2041,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 1021,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "2041"
+   },
+   "file_bytes": 5880592,
+   "moov_bytes": 13089,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g022__left_wrist.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 2041,
+   "packets": 2041,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 1021,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "2041"
+   },
+   "file_bytes": 3981835,
+   "moov_bytes": 13057,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g022__right_wrist.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 2041,
+   "packets": 2041,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 1021,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "2041"
+   },
+   "file_bytes": 4220749,
+   "moov_bytes": 13073,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g023__top.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 2009,
+   "packets": 2009,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 1005,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "2009"
+   },
+   "file_bytes": 5675973,
+   "moov_bytes": 12885,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g023__left_wrist.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 2009,
+   "packets": 2009,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 1005,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "2009"
+   },
+   "file_bytes": 6142452,
+   "moov_bytes": 12897,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g023__right_wrist.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 2009,
+   "packets": 2009,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 1005,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "2009"
+   },
+   "file_bytes": 6233395,
+   "moov_bytes": 12897,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g024__top.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 2191,
+   "packets": 2191,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 1096,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "2191"
+   },
+   "file_bytes": 4616093,
+   "moov_bytes": 13973,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g024__left_wrist.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 2191,
+   "packets": 2191,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 1096,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "2191"
+   },
+   "file_bytes": 4179950,
+   "moov_bytes": 13957,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g024__right_wrist.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 2191,
+   "packets": 2191,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 1096,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "2191"
+   },
+   "file_bytes": 4416537,
+   "moov_bytes": 13973,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g025__top.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 2041,
+   "packets": 2041,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 1021,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "2041"
+   },
+   "file_bytes": 3788988,
+   "moov_bytes": 13057,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g025__left_wrist.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 2041,
+   "packets": 2041,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 1021,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "2041"
+   },
+   "file_bytes": 3090401,
+   "moov_bytes": 13041,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g025__right_wrist.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 2041,
+   "packets": 2041,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 1021,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "2041"
+   },
+   "file_bytes": 2686513,
+   "moov_bytes": 13041,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g026__top.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 2065,
+   "packets": 2065,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 1033,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "2065"
+   },
+   "file_bytes": 4571818,
+   "moov_bytes": 13217,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g026__left_wrist.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 2065,
+   "packets": 2065,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 1033,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "2065"
+   },
+   "file_bytes": 4942050,
+   "moov_bytes": 13217,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g026__right_wrist.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 2065,
+   "packets": 2065,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 1033,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "2065"
+   },
+   "file_bytes": 4728661,
+   "moov_bytes": 13217,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g027__top.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 2102,
+   "packets": 2102,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 1051,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "2102"
+   },
+   "file_bytes": 4851045,
+   "moov_bytes": 13437,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g027__left_wrist.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 2102,
+   "packets": 2102,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 1051,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "2102"
+   },
+   "file_bytes": 4854193,
+   "moov_bytes": 13437,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g027__right_wrist.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 2102,
+   "packets": 2102,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 1051,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "2102"
+   },
+   "file_bytes": 5298087,
+   "moov_bytes": 13453,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g028__top.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 2260,
+   "packets": 2260,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 1130,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "2260"
+   },
+   "file_bytes": 5378217,
+   "moov_bytes": 14401,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g028__left_wrist.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 2260,
+   "packets": 2260,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 1130,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "2260"
+   },
+   "file_bytes": 3354375,
+   "moov_bytes": 14369,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g028__right_wrist.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 2260,
+   "packets": 2260,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 1130,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "2260"
+   },
+   "file_bytes": 4318286,
+   "moov_bytes": 14385,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g029__top.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 2114,
+   "packets": 2114,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 1057,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "2114"
+   },
+   "file_bytes": 11646785,
+   "moov_bytes": 13573,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g029__left_wrist.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 2114,
+   "packets": 2114,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 1057,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "2114"
+   },
+   "file_bytes": 6224719,
+   "moov_bytes": 13525,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g029__right_wrist.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 2114,
+   "packets": 2114,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 1057,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "2114"
+   },
+   "file_bytes": 6908835,
+   "moov_bytes": 13529,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g030__top.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 2191,
+   "packets": 2191,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 1096,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "2191"
+   },
+   "file_bytes": 5673330,
+   "moov_bytes": 13989,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g030__left_wrist.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 2191,
+   "packets": 2191,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 1096,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "2191"
+   },
+   "file_bytes": 5807165,
+   "moov_bytes": 13989,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g030__right_wrist.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 2191,
+   "packets": 2191,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 1096,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "2191"
+   },
+   "file_bytes": 5432114,
+   "moov_bytes": 13989,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g031__top.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 2249,
+   "packets": 2249,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 1125,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "2249"
+   },
+   "file_bytes": 6546066,
+   "moov_bytes": 14353,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g031__left_wrist.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 2249,
+   "packets": 2249,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 1125,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "2249"
+   },
+   "file_bytes": 5111069,
+   "moov_bytes": 14321,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g031__right_wrist.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 2249,
+   "packets": 2249,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 1125,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "2249"
+   },
+   "file_bytes": 5186228,
+   "moov_bytes": 14321,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g032__top.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 1897,
+   "packets": 1897,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 949,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "1897"
+   },
+   "file_bytes": 4927479,
+   "moov_bytes": 12209,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g032__left_wrist.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 1897,
+   "packets": 1897,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 949,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "1897"
+   },
+   "file_bytes": 4274621,
+   "moov_bytes": 12209,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g032__right_wrist.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 1897,
+   "packets": 1897,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 949,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "1897"
+   },
+   "file_bytes": 6466589,
+   "moov_bytes": 12241,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g033__top.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 1830,
+   "packets": 1830,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 915,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "1830"
+   },
+   "file_bytes": 5691278,
+   "moov_bytes": 11809,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g033__left_wrist.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 1830,
+   "packets": 1830,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 915,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "1830"
+   },
+   "file_bytes": 5163928,
+   "moov_bytes": 11805,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g033__right_wrist.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 1830,
+   "packets": 1830,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 915,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "1830"
+   },
+   "file_bytes": 5606597,
+   "moov_bytes": 11821,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g034__top.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 2072,
+   "packets": 2072,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 1036,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "2072"
+   },
+   "file_bytes": 8025593,
+   "moov_bytes": 13305,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g034__left_wrist.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 2072,
+   "packets": 2072,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 1036,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "2072"
+   },
+   "file_bytes": 5410015,
+   "moov_bytes": 13273,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g034__right_wrist.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 2072,
+   "packets": 2072,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 1036,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "2072"
+   },
+   "file_bytes": 6791386,
+   "moov_bytes": 13277,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g035__top.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 2063,
+   "packets": 2063,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 1032,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "2063"
+   },
+   "file_bytes": 6379281,
+   "moov_bytes": 13237,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g035__left_wrist.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 2063,
+   "packets": 2063,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 1032,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "2063"
+   },
+   "file_bytes": 4485032,
+   "moov_bytes": 13205,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g035__right_wrist.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 2063,
+   "packets": 2063,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 1032,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "2063"
+   },
+   "file_bytes": 4875474,
+   "moov_bytes": 13205,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g036__top.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 2187,
+   "packets": 2187,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 1094,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "2187"
+   },
+   "file_bytes": 4881751,
+   "moov_bytes": 13949,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g036__left_wrist.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 2187,
+   "packets": 2187,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 1094,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "2187"
+   },
+   "file_bytes": 4256954,
+   "moov_bytes": 13949,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g036__right_wrist.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 2187,
+   "packets": 2187,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 1094,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "2187"
+   },
+   "file_bytes": 3508445,
+   "moov_bytes": 13933,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g037__top.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 1844,
+   "packets": 1844,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 922,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "1844"
+   },
+   "file_bytes": 4273001,
+   "moov_bytes": 11889,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g037__left_wrist.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 1844,
+   "packets": 1844,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 922,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "1844"
+   },
+   "file_bytes": 4808980,
+   "moov_bytes": 11889,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g037__right_wrist.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 1844,
+   "packets": 1844,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 922,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "1844"
+   },
+   "file_bytes": 4747672,
+   "moov_bytes": 11889,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g038__top.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 1883,
+   "packets": 1883,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 942,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "1883"
+   },
+   "file_bytes": 8146262,
+   "moov_bytes": 12137,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g038__left_wrist.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 1883,
+   "packets": 1883,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 942,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "1883"
+   },
+   "file_bytes": 5176533,
+   "moov_bytes": 12125,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g038__right_wrist.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 1883,
+   "packets": 1883,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 942,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "1883"
+   },
+   "file_bytes": 4681626,
+   "moov_bytes": 12125,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g039__top.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 1713,
+   "packets": 1713,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 857,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "1713"
+   },
+   "file_bytes": 6858029,
+   "moov_bytes": 11125,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g039__left_wrist.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 1713,
+   "packets": 1713,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 857,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "1713"
+   },
+   "file_bytes": 3328540,
+   "moov_bytes": 11089,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g039__right_wrist.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 1713,
+   "packets": 1713,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 857,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "1713"
+   },
+   "file_bytes": 4211916,
+   "moov_bytes": 11105,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g040__top.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 1818,
+   "packets": 1818,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 909,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "1818"
+   },
+   "file_bytes": 7199497,
+   "moov_bytes": 11753,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g040__left_wrist.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 1818,
+   "packets": 1818,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 909,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "1818"
+   },
+   "file_bytes": 5236496,
+   "moov_bytes": 11733,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g040__right_wrist.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 1818,
+   "packets": 1818,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 909,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "1818"
+   },
+   "file_bytes": 5484029,
+   "moov_bytes": 11749,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g041__top.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 1915,
+   "packets": 1915,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 958,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "1915"
+   },
+   "file_bytes": 6427984,
+   "moov_bytes": 12337,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g041__left_wrist.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 1915,
+   "packets": 1915,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 958,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "1915"
+   },
+   "file_bytes": 7562635,
+   "moov_bytes": 12365,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g041__right_wrist.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 1915,
+   "packets": 1915,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 958,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "1915"
+   },
+   "file_bytes": 7769068,
+   "moov_bytes": 12365,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g042__top.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 1945,
+   "packets": 1945,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 973,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "1945"
+   },
+   "file_bytes": 7510471,
+   "moov_bytes": 12533,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g042__left_wrist.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 1945,
+   "packets": 1945,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 973,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "1945"
+   },
+   "file_bytes": 5189135,
+   "moov_bytes": 12497,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g042__right_wrist.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 1945,
+   "packets": 1945,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 973,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "1945"
+   },
+   "file_bytes": 5748072,
+   "moov_bytes": 12513,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g043__top.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 2268,
+   "packets": 2268,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 1134,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "2268"
+   },
+   "file_bytes": 8309270,
+   "moov_bytes": 14481,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g043__left_wrist.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 2268,
+   "packets": 2268,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 1134,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "2268"
+   },
+   "file_bytes": 9053169,
+   "moov_bytes": 14497,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g043__right_wrist.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 2268,
+   "packets": 2268,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 1134,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "2268"
+   },
+   "file_bytes": 8561527,
+   "moov_bytes": 14485,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g044__top.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 1873,
+   "packets": 1873,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 937,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "1873"
+   },
+   "file_bytes": 9153967,
+   "moov_bytes": 12117,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g044__left_wrist.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 1873,
+   "packets": 1873,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 937,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "1873"
+   },
+   "file_bytes": 6860749,
+   "moov_bytes": 12097,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g044__right_wrist.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 1873,
+   "packets": 1873,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 937,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "1873"
+   },
+   "file_bytes": 6683595,
+   "moov_bytes": 12097,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g045__top.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 1949,
+   "packets": 1949,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 975,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "1949"
+   },
+   "file_bytes": 5005568,
+   "moov_bytes": 12521,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g045__left_wrist.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 1949,
+   "packets": 1949,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 975,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "1949"
+   },
+   "file_bytes": 5061148,
+   "moov_bytes": 12521,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g045__right_wrist.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 1949,
+   "packets": 1949,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 975,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "1949"
+   },
+   "file_bytes": 4162520,
+   "moov_bytes": 12505,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g046__top.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 2127,
+   "packets": 2127,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 1064,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "2127"
+   },
+   "file_bytes": 6702363,
+   "moov_bytes": 13621,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g046__left_wrist.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 2127,
+   "packets": 2127,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 1064,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "2127"
+   },
+   "file_bytes": 5002286,
+   "moov_bytes": 13589,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g046__right_wrist.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 2127,
+   "packets": 2127,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 1064,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "2127"
+   },
+   "file_bytes": 3002991,
+   "moov_bytes": 13557,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g047__top.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 1920,
+   "packets": 1920,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 960,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "1920"
+   },
+   "file_bytes": 5352721,
+   "moov_bytes": 12361,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g047__left_wrist.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 1920,
+   "packets": 1920,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 960,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "1920"
+   },
+   "file_bytes": 4488248,
+   "moov_bytes": 12345,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/SEP/thrash_g047__right_wrist.mp4": {
+   "family": "thrash",
+   "layout": "SEP",
+   "frames_expected": 1920,
+   "packets": 1920,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 960,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "1920"
+   },
+   "file_bytes": 4403804,
+   "moov_bytes": 12345,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/STACK/thrash_g000.mp4": {
+   "family": "thrash",
+   "layout": "STACK",
+   "frames_expected": 2280,
+   "packets": 2280,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 1140,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 672,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "2280"
+   },
+   "file_bytes": 27754167,
+   "moov_bytes": 14821,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/STACK/thrash_g001.mp4": {
+   "family": "thrash",
+   "layout": "STACK",
+   "frames_expected": 2155,
+   "packets": 2155,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 1078,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 672,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "2155"
+   },
+   "file_bytes": 17364424,
+   "moov_bytes": 13949,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/STACK/thrash_g002.mp4": {
+   "family": "thrash",
+   "layout": "STACK",
+   "frames_expected": 2018,
+   "packets": 2018,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 1009,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 672,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "2018"
+   },
+   "file_bytes": 17801069,
+   "moov_bytes": 13141,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/STACK/thrash_g003.mp4": {
+   "family": "thrash",
+   "layout": "STACK",
+   "frames_expected": 2043,
+   "packets": 2043,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 1022,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 672,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "2043"
+   },
+   "file_bytes": 13213795,
+   "moov_bytes": 13201,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/STACK/thrash_g004.mp4": {
+   "family": "thrash",
+   "layout": "STACK",
+   "frames_expected": 1969,
+   "packets": 1969,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 985,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 672,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "1969"
+   },
+   "file_bytes": 18413168,
+   "moov_bytes": 12777,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/STACK/thrash_g005.mp4": {
+   "family": "thrash",
+   "layout": "STACK",
+   "frames_expected": 1988,
+   "packets": 1988,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 994,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 672,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "1988"
+   },
+   "file_bytes": 27642442,
+   "moov_bytes": 13057,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/STACK/thrash_g006.mp4": {
+   "family": "thrash",
+   "layout": "STACK",
+   "frames_expected": 2256,
+   "packets": 2256,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 1128,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 672,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "2256"
+   },
+   "file_bytes": 19922320,
+   "moov_bytes": 14589,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/STACK/thrash_g007.mp4": {
+   "family": "thrash",
+   "layout": "STACK",
+   "frames_expected": 1873,
+   "packets": 1873,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 937,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 672,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "1873"
+   },
+   "file_bytes": 16264562,
+   "moov_bytes": 12229,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/STACK/thrash_g008.mp4": {
+   "family": "thrash",
+   "layout": "STACK",
+   "frames_expected": 2266,
+   "packets": 2266,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 1133,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 672,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "2266"
+   },
+   "file_bytes": 22488519,
+   "moov_bytes": 14669,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/STACK/thrash_g009.mp4": {
+   "family": "thrash",
+   "layout": "STACK",
+   "frames_expected": 1919,
+   "packets": 1919,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 960,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 672,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "1919"
+   },
+   "file_bytes": 14844473,
+   "moov_bytes": 12501,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/STACK/thrash_g010.mp4": {
+   "family": "thrash",
+   "layout": "STACK",
+   "frames_expected": 2103,
+   "packets": 2103,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 1052,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 672,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "2103"
+   },
+   "file_bytes": 19569549,
+   "moov_bytes": 13621,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/STACK/thrash_g011.mp4": {
+   "family": "thrash",
+   "layout": "STACK",
+   "frames_expected": 1964,
+   "packets": 1964,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 982,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 672,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "1964"
+   },
+   "file_bytes": 19123757,
+   "moov_bytes": 12785,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/STACK/thrash_g012.mp4": {
+   "family": "thrash",
+   "layout": "STACK",
+   "frames_expected": 1703,
+   "packets": 1703,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 852,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 672,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "1703"
+   },
+   "file_bytes": 12763958,
+   "moov_bytes": 11161,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/STACK/thrash_g013.mp4": {
+   "family": "thrash",
+   "layout": "STACK",
+   "frames_expected": 2036,
+   "packets": 2036,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 1018,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 672,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "2036"
+   },
+   "file_bytes": 14313174,
+   "moov_bytes": 13185,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/STACK/thrash_g014.mp4": {
+   "family": "thrash",
+   "layout": "STACK",
+   "frames_expected": 2201,
+   "packets": 2201,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 1101,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 672,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "2201"
+   },
+   "file_bytes": 14688184,
+   "moov_bytes": 14169,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/STACK/thrash_g015.mp4": {
+   "family": "thrash",
+   "layout": "STACK",
+   "frames_expected": 2071,
+   "packets": 2071,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 1036,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 672,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "2071"
+   },
+   "file_bytes": 10892302,
+   "moov_bytes": 13337,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/STACK/thrash_g016.mp4": {
+   "family": "thrash",
+   "layout": "STACK",
+   "frames_expected": 2043,
+   "packets": 2043,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 1022,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 672,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "2043"
+   },
+   "file_bytes": 13237889,
+   "moov_bytes": 13201,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/STACK/thrash_g017.mp4": {
+   "family": "thrash",
+   "layout": "STACK",
+   "frames_expected": 2255,
+   "packets": 2255,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 1128,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 672,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "2255"
+   },
+   "file_bytes": 15823508,
+   "moov_bytes": 14521,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/STACK/thrash_g018.mp4": {
+   "family": "thrash",
+   "layout": "STACK",
+   "frames_expected": 2062,
+   "packets": 2062,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 1031,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 672,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "2062"
+   },
+   "file_bytes": 11064811,
+   "moov_bytes": 13293,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/STACK/thrash_g019.mp4": {
+   "family": "thrash",
+   "layout": "STACK",
+   "frames_expected": 2023,
+   "packets": 2023,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 1012,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 672,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "2023"
+   },
+   "file_bytes": 11549332,
+   "moov_bytes": 13065,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/STACK/thrash_g020.mp4": {
+   "family": "thrash",
+   "layout": "STACK",
+   "frames_expected": 1765,
+   "packets": 1765,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 883,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 672,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "1765"
+   },
+   "file_bytes": 15568965,
+   "moov_bytes": 11565,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/STACK/thrash_g021.mp4": {
+   "family": "thrash",
+   "layout": "STACK",
+   "frames_expected": 1897,
+   "packets": 1897,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 949,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 672,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "1897"
+   },
+   "file_bytes": 10381974,
+   "moov_bytes": 12289,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/STACK/thrash_g022.mp4": {
+   "family": "thrash",
+   "layout": "STACK",
+   "frames_expected": 2041,
+   "packets": 2041,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 1021,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 672,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "2041"
+   },
+   "file_bytes": 13765817,
+   "moov_bytes": 13205,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/STACK/thrash_g023.mp4": {
+   "family": "thrash",
+   "layout": "STACK",
+   "frames_expected": 2009,
+   "packets": 2009,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 1005,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 672,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "2009"
+   },
+   "file_bytes": 17770328,
+   "moov_bytes": 13065,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/STACK/thrash_g024.mp4": {
+   "family": "thrash",
+   "layout": "STACK",
+   "frames_expected": 2191,
+   "packets": 2191,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 1096,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 672,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "2191"
+   },
+   "file_bytes": 12919116,
+   "moov_bytes": 14077,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/STACK/thrash_g025.mp4": {
+   "family": "thrash",
+   "layout": "STACK",
+   "frames_expected": 2041,
+   "packets": 2041,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 1021,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 672,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "2041"
+   },
+   "file_bytes": 9280752,
+   "moov_bytes": 13137,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/STACK/thrash_g026.mp4": {
+   "family": "thrash",
+   "layout": "STACK",
+   "frames_expected": 2065,
+   "packets": 2065,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 1033,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 672,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "2065"
+   },
+   "file_bytes": 13903348,
+   "moov_bytes": 13361,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/STACK/thrash_g027.mp4": {
+   "family": "thrash",
+   "layout": "STACK",
+   "frames_expected": 2102,
+   "packets": 2102,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 1051,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 672,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "2102"
+   },
+   "file_bytes": 14689430,
+   "moov_bytes": 13597,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/STACK/thrash_g028.mp4": {
+   "family": "thrash",
+   "layout": "STACK",
+   "frames_expected": 2260,
+   "packets": 2260,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 1130,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 672,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "2260"
+   },
+   "file_bytes": 12645216,
+   "moov_bytes": 14513,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/STACK/thrash_g029.mp4": {
+   "family": "thrash",
+   "layout": "STACK",
+   "frames_expected": 2114,
+   "packets": 2114,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 1057,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 672,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "2114"
+   },
+   "file_bytes": 24443344,
+   "moov_bytes": 13777,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/STACK/thrash_g030.mp4": {
+   "family": "thrash",
+   "layout": "STACK",
+   "frames_expected": 2191,
+   "packets": 2191,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 1096,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 672,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "2191"
+   },
+   "file_bytes": 16567481,
+   "moov_bytes": 14125,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/STACK/thrash_g031.mp4": {
+   "family": "thrash",
+   "layout": "STACK",
+   "frames_expected": 2249,
+   "packets": 2249,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 1125,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 672,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "2249"
+   },
+   "file_bytes": 16474195,
+   "moov_bytes": 14497,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/STACK/thrash_g032.mp4": {
+   "family": "thrash",
+   "layout": "STACK",
+   "frames_expected": 1897,
+   "packets": 1897,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 949,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 672,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "1897"
+   },
+   "file_bytes": 15404228,
+   "moov_bytes": 12369,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/STACK/thrash_g033.mp4": {
+   "family": "thrash",
+   "layout": "STACK",
+   "frames_expected": 1830,
+   "packets": 1830,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 915,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 672,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "1830"
+   },
+   "file_bytes": 16123179,
+   "moov_bytes": 11969,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/STACK/thrash_g034.mp4": {
+   "family": "thrash",
+   "layout": "STACK",
+   "frames_expected": 2072,
+   "packets": 2072,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 1036,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 672,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "2072"
+   },
+   "file_bytes": 19890669,
+   "moov_bytes": 13497,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/STACK/thrash_g035.mp4": {
+   "family": "thrash",
+   "layout": "STACK",
+   "frames_expected": 2063,
+   "packets": 2063,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 1032,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 672,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "2063"
+   },
+   "file_bytes": 15377207,
+   "moov_bytes": 13353,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/STACK/thrash_g036.mp4": {
+   "family": "thrash",
+   "layout": "STACK",
+   "frames_expected": 2187,
+   "packets": 2187,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 1094,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 672,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "2187"
+   },
+   "file_bytes": 12265079,
+   "moov_bytes": 14061,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/STACK/thrash_g037.mp4": {
+   "family": "thrash",
+   "layout": "STACK",
+   "frames_expected": 1844,
+   "packets": 1844,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 922,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 672,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "1844"
+   },
+   "file_bytes": 13531826,
+   "moov_bytes": 12005,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/STACK/thrash_g038.mp4": {
+   "family": "thrash",
+   "layout": "STACK",
+   "frames_expected": 1883,
+   "packets": 1883,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 942,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 672,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "1883"
+   },
+   "file_bytes": 17657964,
+   "moov_bytes": 12317,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/STACK/thrash_g039.mp4": {
+   "family": "thrash",
+   "layout": "STACK",
+   "frames_expected": 1713,
+   "packets": 1713,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 857,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 672,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "1713"
+   },
+   "file_bytes": 14125194,
+   "moov_bytes": 11249,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/STACK/thrash_g040.mp4": {
+   "family": "thrash",
+   "layout": "STACK",
+   "frames_expected": 1818,
+   "packets": 1818,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 909,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 672,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "1818"
+   },
+   "file_bytes": 17597619,
+   "moov_bytes": 11925,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/STACK/thrash_g041.mp4": {
+   "family": "thrash",
+   "layout": "STACK",
+   "frames_expected": 1915,
+   "packets": 1915,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 958,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 672,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "1915"
+   },
+   "file_bytes": 21385167,
+   "moov_bytes": 12549,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/STACK/thrash_g042.mp4": {
+   "family": "thrash",
+   "layout": "STACK",
+   "frames_expected": 1945,
+   "packets": 1945,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 973,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 672,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "1945"
+   },
+   "file_bytes": 18100714,
+   "moov_bytes": 12693,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/STACK/thrash_g043.mp4": {
+   "family": "thrash",
+   "layout": "STACK",
+   "frames_expected": 2268,
+   "packets": 2268,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 1134,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 672,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "2268"
+   },
+   "file_bytes": 25474486,
+   "moov_bytes": 14705,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/STACK/thrash_g044.mp4": {
+   "family": "thrash",
+   "layout": "STACK",
+   "frames_expected": 1873,
+   "packets": 1873,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 937,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 672,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "1873"
+   },
+   "file_bytes": 22402884,
+   "moov_bytes": 12265,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/STACK/thrash_g045.mp4": {
+   "family": "thrash",
+   "layout": "STACK",
+   "frames_expected": 1949,
+   "packets": 1949,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 975,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 672,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "1949"
+   },
+   "file_bytes": 13887657,
+   "moov_bytes": 12653,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/STACK/thrash_g046.mp4": {
+   "family": "thrash",
+   "layout": "STACK",
+   "frames_expected": 2127,
+   "packets": 2127,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 1064,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 672,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "2127"
+   },
+   "file_bytes": 14424870,
+   "moov_bytes": 13733,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/STACK/thrash_g047.mp4": {
+   "family": "thrash",
+   "layout": "STACK",
+   "frames_expected": 1920,
+   "packets": 1920,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 960,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 672,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "1920"
+   },
+   "file_bytes": 13911469,
+   "moov_bytes": 12477,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/BIG/thrash_b000__top.mp4": {
+   "family": "thrash",
+   "layout": "BIG",
+   "frames_expected": 6453,
+   "packets": 6453,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 3227,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "6453"
+   },
+   "file_bytes": 24748366,
+   "moov_bytes": 39801,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/BIG/thrash_b000__left_wrist.mp4": {
+   "family": "thrash",
+   "layout": "BIG",
+   "frames_expected": 6453,
+   "packets": 6453,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 3227,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "6453"
+   },
+   "file_bytes": 21241009,
+   "moov_bytes": 39801,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/BIG/thrash_b000__right_wrist.mp4": {
+   "family": "thrash",
+   "layout": "BIG",
+   "frames_expected": 6453,
+   "packets": 6453,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 3227,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "6453"
+   },
+   "file_bytes": 18079798,
+   "moov_bytes": 39753,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/BIG/thrash_b001__top.mp4": {
+   "family": "thrash",
+   "layout": "BIG",
+   "frames_expected": 6000,
+   "packets": 6000,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 3001,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "6000"
+   },
+   "file_bytes": 24779269,
+   "moov_bytes": 37085,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/BIG/thrash_b001__left_wrist.mp4": {
+   "family": "thrash",
+   "layout": "BIG",
+   "frames_expected": 6000,
+   "packets": 6000,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 3001,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "6000"
+   },
+   "file_bytes": 17476292,
+   "moov_bytes": 37021,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/BIG/thrash_b001__right_wrist.mp4": {
+   "family": "thrash",
+   "layout": "BIG",
+   "frames_expected": 6000,
+   "packets": 6000,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 3001,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "6000"
+   },
+   "file_bytes": 18003198,
+   "moov_bytes": 37037,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/BIG/thrash_b002__top.mp4": {
+   "family": "thrash",
+   "layout": "BIG",
+   "frames_expected": 6395,
+   "packets": 6395,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 3198,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "6395"
+   },
+   "file_bytes": 25358096,
+   "moov_bytes": 39481,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/BIG/thrash_b002__left_wrist.mp4": {
+   "family": "thrash",
+   "layout": "BIG",
+   "frames_expected": 6395,
+   "packets": 6395,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 3198,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "6395"
+   },
+   "file_bytes": 16541029,
+   "moov_bytes": 39373,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/BIG/thrash_b002__right_wrist.mp4": {
+   "family": "thrash",
+   "layout": "BIG",
+   "frames_expected": 6395,
+   "packets": 6395,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 3198,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "6395"
+   },
+   "file_bytes": 17854077,
+   "moov_bytes": 39393,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/BIG/thrash_b003__top.mp4": {
+   "family": "thrash",
+   "layout": "BIG",
+   "frames_expected": 5986,
+   "packets": 5986,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 2994,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "5986"
+   },
+   "file_bytes": 22335411,
+   "moov_bytes": 36969,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/BIG/thrash_b003__left_wrist.mp4": {
+   "family": "thrash",
+   "layout": "BIG",
+   "frames_expected": 5986,
+   "packets": 5986,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 2994,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "5986"
+   },
+   "file_bytes": 16376538,
+   "moov_bytes": 36897,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/BIG/thrash_b003__right_wrist.mp4": {
+   "family": "thrash",
+   "layout": "BIG",
+   "frames_expected": 5986,
+   "packets": 5986,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 2994,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "5986"
+   },
+   "file_bytes": 15812449,
+   "moov_bytes": 36921,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/BIG/thrash_b004__top.mp4": {
+   "family": "thrash",
+   "layout": "BIG",
+   "frames_expected": 5940,
+   "packets": 5940,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 2971,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "5940"
+   },
+   "file_bytes": 17171762,
+   "moov_bytes": 36649,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/BIG/thrash_b004__left_wrist.mp4": {
+   "family": "thrash",
+   "layout": "BIG",
+   "frames_expected": 5940,
+   "packets": 5940,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 2971,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "5940"
+   },
+   "file_bytes": 13260012,
+   "moov_bytes": 36597,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/BIG/thrash_b004__right_wrist.mp4": {
+   "family": "thrash",
+   "layout": "BIG",
+   "frames_expected": 5940,
+   "packets": 5940,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 2971,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "5940"
+   },
+   "file_bytes": 12314038,
+   "moov_bytes": 36581,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/BIG/thrash_b005__top.mp4": {
+   "family": "thrash",
+   "layout": "BIG",
+   "frames_expected": 6369,
+   "packets": 6369,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 3186,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "6369"
+   },
+   "file_bytes": 16240081,
+   "moov_bytes": 39209,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/BIG/thrash_b005__left_wrist.mp4": {
+   "family": "thrash",
+   "layout": "BIG",
+   "frames_expected": 6369,
+   "packets": 6369,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 3186,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "6369"
+   },
+   "file_bytes": 13075601,
+   "moov_bytes": 39173,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/BIG/thrash_b005__right_wrist.mp4": {
+   "family": "thrash",
+   "layout": "BIG",
+   "frames_expected": 6369,
+   "packets": 6369,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 3186,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "6369"
+   },
+   "file_bytes": 11715571,
+   "moov_bytes": 39145,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/BIG/thrash_b006__top.mp4": {
+   "family": "thrash",
+   "layout": "BIG",
+   "frames_expected": 5850,
+   "packets": 5850,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 2926,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "5850"
+   },
+   "file_bytes": 15991683,
+   "moov_bytes": 36093,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/BIG/thrash_b006__left_wrist.mp4": {
+   "family": "thrash",
+   "layout": "BIG",
+   "frames_expected": 5850,
+   "packets": 5850,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 2926,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "5850"
+   },
+   "file_bytes": 10804443,
+   "moov_bytes": 36025,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/BIG/thrash_b006__right_wrist.mp4": {
+   "family": "thrash",
+   "layout": "BIG",
+   "frames_expected": 5850,
+   "packets": 5850,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 2926,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "5850"
+   },
+   "file_bytes": 12360101,
+   "moov_bytes": 36041,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/BIG/thrash_b007__top.mp4": {
+   "family": "thrash",
+   "layout": "BIG",
+   "frames_expected": 5947,
+   "packets": 5947,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 2975,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "5947"
+   },
+   "file_bytes": 16499770,
+   "moov_bytes": 36641,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/BIG/thrash_b007__left_wrist.mp4": {
+   "family": "thrash",
+   "layout": "BIG",
+   "frames_expected": 5947,
+   "packets": 5947,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 2975,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "5947"
+   },
+   "file_bytes": 13083712,
+   "moov_bytes": 36641,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/BIG/thrash_b007__right_wrist.mp4": {
+   "family": "thrash",
+   "layout": "BIG",
+   "frames_expected": 5947,
+   "packets": 5947,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 2975,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "5947"
+   },
+   "file_bytes": 13253391,
+   "moov_bytes": 36641,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/BIG/thrash_b008__top.mp4": {
+   "family": "thrash",
+   "layout": "BIG",
+   "frames_expected": 6297,
+   "packets": 6297,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 3150,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "6297"
+   },
+   "file_bytes": 12975297,
+   "moov_bytes": 38741,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/BIG/thrash_b008__left_wrist.mp4": {
+   "family": "thrash",
+   "layout": "BIG",
+   "frames_expected": 6297,
+   "packets": 6297,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 3150,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "6297"
+   },
+   "file_bytes": 12210815,
+   "moov_bytes": 38725,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/BIG/thrash_b008__right_wrist.mp4": {
+   "family": "thrash",
+   "layout": "BIG",
+   "frames_expected": 6297,
+   "packets": 6297,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 3150,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "6297"
+   },
+   "file_bytes": 11830109,
+   "moov_bytes": 38725,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/BIG/thrash_b009__top.mp4": {
+   "family": "thrash",
+   "layout": "BIG",
+   "frames_expected": 6476,
+   "packets": 6476,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 3238,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "6476"
+   },
+   "file_bytes": 21874417,
+   "moov_bytes": 39877,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/BIG/thrash_b009__left_wrist.mp4": {
+   "family": "thrash",
+   "layout": "BIG",
+   "frames_expected": 6476,
+   "packets": 6476,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 3238,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "6476"
+   },
+   "file_bytes": 14431685,
+   "moov_bytes": 39825,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/BIG/thrash_b009__right_wrist.mp4": {
+   "family": "thrash",
+   "layout": "BIG",
+   "frames_expected": 6476,
+   "packets": 6476,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 3238,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "6476"
+   },
+   "file_bytes": 16523602,
+   "moov_bytes": 39857,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/BIG/thrash_b010__top.mp4": {
+   "family": "thrash",
+   "layout": "BIG",
+   "frames_expected": 6337,
+   "packets": 6337,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 3170,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "6337"
+   },
+   "file_bytes": 17145261,
+   "moov_bytes": 39033,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/BIG/thrash_b010__left_wrist.mp4": {
+   "family": "thrash",
+   "layout": "BIG",
+   "frames_expected": 6337,
+   "packets": 6337,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 3170,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "6337"
+   },
+   "file_bytes": 15191253,
+   "moov_bytes": 39013,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/BIG/thrash_b010__right_wrist.mp4": {
+   "family": "thrash",
+   "layout": "BIG",
+   "frames_expected": 6337,
+   "packets": 6337,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 3170,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "6337"
+   },
+   "file_bytes": 17083329,
+   "moov_bytes": 39045,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/BIG/thrash_b011__top.mp4": {
+   "family": "thrash",
+   "layout": "BIG",
+   "frames_expected": 5965,
+   "packets": 5965,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 2983,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "5965"
+   },
+   "file_bytes": 20094538,
+   "moov_bytes": 36833,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/BIG/thrash_b011__left_wrist.mp4": {
+   "family": "thrash",
+   "layout": "BIG",
+   "frames_expected": 5965,
+   "packets": 5965,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 2983,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "5965"
+   },
+   "file_bytes": 15057373,
+   "moov_bytes": 36777,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/BIG/thrash_b011__right_wrist.mp4": {
+   "family": "thrash",
+   "layout": "BIG",
+   "frames_expected": 5965,
+   "packets": 5965,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 2983,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "5965"
+   },
+   "file_bytes": 17271867,
+   "moov_bytes": 36809,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/BIG/thrash_b012__top.mp4": {
+   "family": "thrash",
+   "layout": "BIG",
+   "frames_expected": 5914,
+   "packets": 5914,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 2958,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "5914"
+   },
+   "file_bytes": 17299436,
+   "moov_bytes": 36493,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/BIG/thrash_b012__left_wrist.mp4": {
+   "family": "thrash",
+   "layout": "BIG",
+   "frames_expected": 5914,
+   "packets": 5914,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 2958,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "5914"
+   },
+   "file_bytes": 14240865,
+   "moov_bytes": 36457,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/BIG/thrash_b012__right_wrist.mp4": {
+   "family": "thrash",
+   "layout": "BIG",
+   "frames_expected": 5914,
+   "packets": 5914,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 2958,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "5914"
+   },
+   "file_bytes": 12936141,
+   "moov_bytes": 36441,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/BIG/thrash_b013__top.mp4": {
+   "family": "thrash",
+   "layout": "BIG",
+   "frames_expected": 5446,
+   "packets": 5446,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 2724,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "5446"
+   },
+   "file_bytes": 20483908,
+   "moov_bytes": 33709,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/BIG/thrash_b013__left_wrist.mp4": {
+   "family": "thrash",
+   "layout": "BIG",
+   "frames_expected": 5446,
+   "packets": 5446,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 2724,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "5446"
+   },
+   "file_bytes": 16126069,
+   "moov_bytes": 33681,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/BIG/thrash_b013__right_wrist.mp4": {
+   "family": "thrash",
+   "layout": "BIG",
+   "frames_expected": 5446,
+   "packets": 5446,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 2724,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "5446"
+   },
+   "file_bytes": 17463395,
+   "moov_bytes": 33697,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/BIG/thrash_b014__top.mp4": {
+   "family": "thrash",
+   "layout": "BIG",
+   "frames_expected": 6086,
+   "packets": 6086,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 3044,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "6086"
+   },
+   "file_bytes": 24972094,
+   "moov_bytes": 37613,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/BIG/thrash_b014__left_wrist.mp4": {
+   "family": "thrash",
+   "layout": "BIG",
+   "frames_expected": 6086,
+   "packets": 6086,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 3044,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "6086"
+   },
+   "file_bytes": 21101467,
+   "moov_bytes": 37601,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/BIG/thrash_b014__right_wrist.mp4": {
+   "family": "thrash",
+   "layout": "BIG",
+   "frames_expected": 6086,
+   "packets": 6086,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 3044,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "6086"
+   },
+   "file_bytes": 20991604,
+   "moov_bytes": 37601,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/BIG/thrash_b015__top.mp4": {
+   "family": "thrash",
+   "layout": "BIG",
+   "frames_expected": 5996,
+   "packets": 5996,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 2999,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "5996"
+   },
+   "file_bytes": 17059050,
+   "moov_bytes": 36997,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/BIG/thrash_b015__left_wrist.mp4": {
+   "family": "thrash",
+   "layout": "BIG",
+   "frames_expected": 5996,
+   "packets": 5996,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 2999,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "5996"
+   },
+   "file_bytes": 14550080,
+   "moov_bytes": 36949,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/thrash/BIG/thrash_b015__right_wrist.mp4": {
+   "family": "thrash",
+   "layout": "BIG",
+   "frames_expected": 5996,
+   "packets": 5996,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 2999,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "5996"
+   },
+   "file_bytes": 11567729,
+   "moov_bytes": 36917,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/ckpt_5k/SEP/ckpt_5k_g000__top.mp4": {
+   "family": "ckpt_5k",
+   "layout": "SEP",
+   "frames_expected": 5273,
+   "packets": 5273,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 2637,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "5273"
+   },
+   "file_bytes": 21177442,
+   "moov_bytes": 32673,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/ckpt_5k/SEP/ckpt_5k_g000__left_wrist.mp4": {
+   "family": "ckpt_5k",
+   "layout": "SEP",
+   "frames_expected": 5273,
+   "packets": 5273,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 2637,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "5273"
+   },
+   "file_bytes": 12612503,
+   "moov_bytes": 32593,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/ckpt_5k/SEP/ckpt_5k_g000__right_wrist.mp4": {
+   "family": "ckpt_5k",
+   "layout": "SEP",
+   "frames_expected": 5273,
+   "packets": 5273,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 2637,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "5273"
+   },
+   "file_bytes": 12635032,
+   "moov_bytes": 32593,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/ckpt_5k/SEP/ckpt_5k_g001__top.mp4": {
+   "family": "ckpt_5k",
+   "layout": "SEP",
+   "frames_expected": 5105,
+   "packets": 5105,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 2553,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "5105"
+   },
+   "file_bytes": 11929080,
+   "moov_bytes": 31557,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/ckpt_5k/SEP/ckpt_5k_g001__left_wrist.mp4": {
+   "family": "ckpt_5k",
+   "layout": "SEP",
+   "frames_expected": 5105,
+   "packets": 5105,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 2553,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "5105"
+   },
+   "file_bytes": 9191145,
+   "moov_bytes": 31521,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/ckpt_5k/SEP/ckpt_5k_g001__right_wrist.mp4": {
+   "family": "ckpt_5k",
+   "layout": "SEP",
+   "frames_expected": 5105,
+   "packets": 5105,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 2553,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "5105"
+   },
+   "file_bytes": 8684628,
+   "moov_bytes": 31521,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/ckpt_5k/SEP/ckpt_5k_g002__top.mp4": {
+   "family": "ckpt_5k",
+   "layout": "SEP",
+   "frames_expected": 5091,
+   "packets": 5091,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 2546,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "5091"
+   },
+   "file_bytes": 11933545,
+   "moov_bytes": 31473,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/ckpt_5k/SEP/ckpt_5k_g002__left_wrist.mp4": {
+   "family": "ckpt_5k",
+   "layout": "SEP",
+   "frames_expected": 5091,
+   "packets": 5091,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 2546,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "5091"
+   },
+   "file_bytes": 9264873,
+   "moov_bytes": 31437,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/ckpt_5k/SEP/ckpt_5k_g002__right_wrist.mp4": {
+   "family": "ckpt_5k",
+   "layout": "SEP",
+   "frames_expected": 5091,
+   "packets": 5091,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 2546,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "5091"
+   },
+   "file_bytes": 8456329,
+   "moov_bytes": 31437,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/ckpt_5k/STACK/ckpt_5k_g000.mp4": {
+   "family": "ckpt_5k",
+   "layout": "STACK",
+   "frames_expected": 5273,
+   "packets": 5273,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 2637,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 672,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "5273"
+   },
+   "file_bytes": 45536875,
+   "moov_bytes": 33017,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/ckpt_5k/STACK/ckpt_5k_g001.mp4": {
+   "family": "ckpt_5k",
+   "layout": "STACK",
+   "frames_expected": 5105,
+   "packets": 5105,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 2553,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 672,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "5105"
+   },
+   "file_bytes": 28921718,
+   "moov_bytes": 31825,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/ckpt_5k/STACK/ckpt_5k_g002.mp4": {
+   "family": "ckpt_5k",
+   "layout": "STACK",
+   "frames_expected": 5091,
+   "packets": 5091,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 2546,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 672,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "5091"
+   },
+   "file_bytes": 28776386,
+   "moov_bytes": 31741,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/ckpt_5k/BIG/ckpt_5k_b000__top.mp4": {
+   "family": "ckpt_5k",
+   "layout": "BIG",
+   "frames_expected": 15469,
+   "packets": 15469,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 7736,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "15469"
+   },
+   "file_bytes": 45038473,
+   "moov_bytes": 94205,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/ckpt_5k/BIG/ckpt_5k_b000__left_wrist.mp4": {
+   "family": "ckpt_5k",
+   "layout": "BIG",
+   "frames_expected": 15469,
+   "packets": 15469,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 7736,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "15469"
+   },
+   "file_bytes": 31066919,
+   "moov_bytes": 94045,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/ckpt_5k/BIG/ckpt_5k_b000__right_wrist.mp4": {
+   "family": "ckpt_5k",
+   "layout": "BIG",
+   "frames_expected": 15469,
+   "packets": 15469,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 7736,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "15469"
+   },
+   "file_bytes": 29774371,
+   "moov_bytes": 94029,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/ckpt_full/SEP/ckpt_full_g000__top.mp4": {
+   "family": "ckpt_full",
+   "layout": "SEP",
+   "frames_expected": 23380,
+   "packets": 23380,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 11690,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "23380"
+   },
+   "file_bytes": 80307330,
+   "moov_bytes": 142077,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/ckpt_full/SEP/ckpt_full_g000__left_wrist.mp4": {
+   "family": "ckpt_full",
+   "layout": "SEP",
+   "frames_expected": 23380,
+   "packets": 23380,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 11690,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "23380"
+   },
+   "file_bytes": 68953260,
+   "moov_bytes": 142057,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/ckpt_full/SEP/ckpt_full_g000__right_wrist.mp4": {
+   "family": "ckpt_full",
+   "layout": "SEP",
+   "frames_expected": 23380,
+   "packets": 23380,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 11690,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "23380"
+   },
+   "file_bytes": 65784032,
+   "moov_bytes": 142009,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/ckpt_full/SEP/ckpt_full_g001__top.mp4": {
+   "family": "ckpt_full",
+   "layout": "SEP",
+   "frames_expected": 25759,
+   "packets": 25759,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 12880,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "25759"
+   },
+   "file_bytes": 105295605,
+   "moov_bytes": 156689,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/ckpt_full/SEP/ckpt_full_g001__left_wrist.mp4": {
+   "family": "ckpt_full",
+   "layout": "SEP",
+   "frames_expected": 25759,
+   "packets": 25759,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 12880,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "25759"
+   },
+   "file_bytes": 81931584,
+   "moov_bytes": 156541,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/ckpt_full/SEP/ckpt_full_g001__right_wrist.mp4": {
+   "family": "ckpt_full",
+   "layout": "SEP",
+   "frames_expected": 25759,
+   "packets": 25759,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 12880,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "25759"
+   },
+   "file_bytes": 77661865,
+   "moov_bytes": 156489,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/ckpt_full/SEP/ckpt_full_g002__top.mp4": {
+   "family": "ckpt_full",
+   "layout": "SEP",
+   "frames_expected": 24979,
+   "packets": 24979,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 12490,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "24979"
+   },
+   "file_bytes": 67858384,
+   "moov_bytes": 151577,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/ckpt_full/SEP/ckpt_full_g002__left_wrist.mp4": {
+   "family": "ckpt_full",
+   "layout": "SEP",
+   "frames_expected": 24979,
+   "packets": 24979,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 12490,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "24979"
+   },
+   "file_bytes": 56543978,
+   "moov_bytes": 151461,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/ckpt_full/SEP/ckpt_full_g002__right_wrist.mp4": {
+   "family": "ckpt_full",
+   "layout": "SEP",
+   "frames_expected": 24979,
+   "packets": 24979,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 12490,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "24979"
+   },
+   "file_bytes": 56704009,
+   "moov_bytes": 151465,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/ckpt_full/STACK/ckpt_full_g000.mp4": {
+   "family": "ckpt_full",
+   "layout": "STACK",
+   "frames_expected": 23380,
+   "packets": 23380,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 11690,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 672,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "23380"
+   },
+   "file_bytes": 211476145,
+   "moov_bytes": 143977,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/ckpt_full/STACK/ckpt_full_g001.mp4": {
+   "family": "ckpt_full",
+   "layout": "STACK",
+   "frames_expected": 25759,
+   "packets": 25759,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 12880,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 672,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "25759"
+   },
+   "file_bytes": 260566870,
+   "moov_bytes": 158801,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/ckpt_full/STACK/ckpt_full_g002.mp4": {
+   "family": "ckpt_full",
+   "layout": "STACK",
+   "frames_expected": 24979,
+   "packets": 24979,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 12490,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 672,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "24979"
+   },
+   "file_bytes": 177186338,
+   "moov_bytes": 153161,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/ckpt_full/BIG/ckpt_full_b000__top.mp4": {
+   "family": "ckpt_full",
+   "layout": "BIG",
+   "frames_expected": 74118,
+   "packets": 74118,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 37060,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "74118"
+   },
+   "file_bytes": 253459829,
+   "moov_bytes": 448949,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/ckpt_full/BIG/ckpt_full_b000__left_wrist.mp4": {
+   "family": "ckpt_full",
+   "layout": "BIG",
+   "frames_expected": 74118,
+   "packets": 74118,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 37060,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "74118"
+   },
+   "file_bytes": 207427244,
+   "moov_bytes": 448577,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  },
+  "/work/enc/ckpt_full/BIG/ckpt_full_b000__right_wrist.mp4": {
+   "family": "ckpt_full",
+   "layout": "BIG",
+   "frames_expected": 74118,
+   "packets": 74118,
+   "pts_strictly_increasing": true,
+   "pts_eq_dts": true,
+   "keyframes": 37060,
+   "stream": {
+    "codec_name": "av1",
+    "width": 224,
+    "height": 224,
+    "has_b_frames": 0,
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "nb_frames": "74118"
+   },
+   "file_bytes": 200148252,
+   "moov_bytes": 448405,
+   "moov_before_mdat": true,
+   "boxes": [
+    "ftyp",
+    "moov",
+    "free",
+    "mdat"
+   ]
+  }
+ },
+ "problems": {},
+ "wall_s": 98.7
+}
