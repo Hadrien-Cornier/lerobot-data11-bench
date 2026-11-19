@@ -1,0 +1,133 @@
+{
+  "cells": [
+    "bucket-current-frame-tolerance-1ms-baseline",
+    "bucket-current-frame-tolerance-1ms-candidate"
+  ],
+  "dataset": "bucket",
+  "workload": "single_frame",
+  "cache": "cold",
+  "host_job_id": "6afe8270545f95df1c06facc",
+  "host_name": "j-hadriencornier-6afe8270545f95df1c06facc-iubq28rr-6bb07-cc9m9",
+  "tolerance_s": 0.001,
+  "batch_size": 8,
+  "source_root": "hf://buckets/pepijn223/MolmoAct2-BimanualYAM-Dataset-bucket",
+  "source_bucket_manifest_sha256": "aebacc429d54f284e103ff10613b925f5827c347e0678846b0b6f0015dded782",
+  "trace_checks": {
+    "baseline": {
+      "trace": "bucket-current-frame-tolerance-1ms-baseline.events.jsonl.gz",
+      "snapshot_errors": [],
+      "status": "ok",
+      "error": null,
+      "first_sample_s": 561.0222914370243,
+      "observed_batches": 29288,
+      "full_valid_unique_prefix_batches": 29288,
+      "first_excluded_batch": null,
+      "duplicate_anchors_in_trace": 0
+    },
+    "candidate": {
+      "trace": "bucket-current-frame-tolerance-1ms-candidate.events.jsonl.gz",
+      "snapshot_errors": [],
+      "status": "ok",
+      "error": null,
+      "first_sample_s": 15.39179395698011,
+      "observed_batches": 13300,
+      "full_valid_unique_prefix_batches": 13300,
+      "first_excluded_batch": null,
+      "duplicate_anchors_in_trace": 0
+    }
+  },
+  "anchor_validation": "source_episode_index",
+  "same_sample_ids_required_across_readers": false,
+  "horizon": {
+    "last_shared_batch": 13300,
+    "unique_anchors_per_reader": 106400,
+    "source_coverage_fraction_per_reader": 0.0013991410378612562
+  },
+  "status": "no_observed_crossover",
+  "observed_elapsed_ranges_s": {
+    "baseline": [
+      571.6213080900488,
+      1096.4667034170125
+    ],
+    "candidate": [
+      16.3442301210016,
+      996.5253541119164
+    ]
+  },
+  "first_strict_lead": {
+    "batch": 1,
+    "unique_anchors": 8,
+    "baseline_s": 571.6213080900488,
+    "candidate_s": 16.3442301210016,
+    "baseline_minus_candidate_s": 555.2770779690472,
+    "lead": "candidate"
+  },
+  "first_lead_change": null,
+  "lead_change_count": 0,
+  "lead_changes": [],
+  "final_sustained_lead_within_horizon": {
+    "reader": "candidate",
+    "first_batch": 1,
+    "through_batch": 13300,
+    "strictly_ahead_batches": 13300,
+    "minimum_requested_batches": 125,
+    "meets_minimum": true
+  },
+  "observed_batches": {
+    "1": {
+      "batch": 1,
+      "unique_anchors": 8,
+      "baseline_s": 571.6213080900488,
+      "candidate_s": 16.3442301210016,
+      "baseline_minus_candidate_s": 555.2770779690472,
+      "lead": "candidate"
+    },
+    "125": {
+      "batch": 125,
+      "unique_anchors": 1000,
+      "baseline_s": 577.4044374860823,
+      "candidate_s": 37.36255541292485,
+      "baseline_minus_candidate_s": 540.0418820731575,
+      "lead": "candidate"
+    },
+    "1000": {
+      "batch": 1000,
+      "unique_anchors": 8000,
+      "baseline_s": 616.1452506290516,
+      "candidate_s": 97.67008858092595,
+      "baseline_minus_candidate_s": 518.4751620481256,
+      "lead": "candidate"
+    },
+    "13300": {
+      "batch": 13300,
+      "unique_anchors": 106400,
+      "baseline_s": 1096.4667034170125,
+      "candidate_s": 996.5253541119164,
+      "baseline_minus_candidate_s": 99.94134930509608,
+      "lead": "candidate"
+    }
+  },
+  "matched_diversity_consumer_wait": {
+    "cells": [
+      "bucket-current-frame-tolerance-1ms-baseline",
+      "bucket-current-frame-tolerance-1ms-candidate"
+    ],
+    "cutoff_batches": 1000,
+    "valid_unique_batches": [
+      1000,
+      1000
+    ],
+    "invalid_or_repeated_batches": [
+      0,
+      0
+    ],
+    "status": "complete",
+    "distribution_overlap": 0.9440000000000001,
+    "overlap_weighted_mean_consumer_wait_s": [
+      0.09218611073806307,
+      0.08615481056842077
+    ]
+  },
+  "crossover_conditions": "Observed cumulative delivery time without conditioning on sampling diversity.",
+  "tie_handling": "An exact tie cannot establish or reverse a lead. It does not count as strictly ahead."
+}

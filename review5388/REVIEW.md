@@ -45,6 +45,12 @@ With the draft at its native 0.1 ms tolerance, the first current-frame sample ar
 
 At the same native tolerance, a new baseline process with a local index reached its first sample at 33.80 seconds, first batch at 43.01 seconds, and batch 1,000 at 79.64 seconds. It delivered 234,304 distinct anchors and averaged 207.7 windows/s across two refills. That warm baseline and the fresh draft answer different cache questions.
 
+On the same fresh host at **1 ms**, the draft delivered 1,000 batches in **97.67 s**, versus **616.15 s** for the baseline. The first thousand batches averaged 7.05 and 6.95 episodes per batch respectively. The two distributions overlapped by 94.4% when matched on episode count, largest episode share and near-frame pairs. Within that overlap, the average consumer wait was 86.2 ms for the draft and 92.2 ms for the baseline, including the first batch wait. Initial construction was 7.2 and 524.0 seconds.
+
+Over the longer run, the draft delivered 109.9 unique windows/s across two refills, versus 213.6 for the baseline. Average episode diversity in those longer timing windows was 7.06 and 5.94 respectively. The baseline was still **99.94 s behind** at batch 13,300, the last point observed by both readers. Neither curve crossed in this pair. These elapsed times include construction and the actual sampling order each reader chose. [Matched-prefix data](measurements/cold-current-frame.json)
+
+![Elapsed time to equal batch counts with each reader on fresh Molmo disks at 1 ms](measurements/cold-current-frame.svg)
+
 ### What a publisher-built index changes
 
 The index can be built once for a dataset revision and reused across consumers. It maps a video timestamp to the corresponding bytes in an MP4. Pepijn's reader validates the matching archive, then memory-maps it read-only. The operating system brings pages into memory as the reader uses them. An archive of several gigabytes does not require a private copy of that size in each worker's RAM. Peak process memory here includes the reader, decoded buffers, episode metadata and the portions of the archive it touched. [Pinned index resolver](https://github.com/huggingface/lerobot/blob/fe1c54594f6ba275fccf210b9f7b11f0e2324b89/src/lerobot/datasets/streaming_sidecar.py#L217-L234) · [Mapped archive implementation](https://github.com/huggingface/lerobot/blob/fe1c54594f6ba275fccf210b9f7b11f0e2324b89/src/lerobot/streaming/manifest.py#L447-L466)
