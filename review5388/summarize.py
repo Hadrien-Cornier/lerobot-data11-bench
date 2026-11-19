@@ -1,0 +1,113 @@
+"""Summarize measured HF cells, including unfinished runs, from downloaded job folders."""
+
+import argparse
+import csv
+import json
+from pathlib import Path
+import sys
+
+
+def read(path):
+    return json.loads(path.read_text())
+
+
+def fixture_passes(directory, reader, workload):
+    if directory is None:
+        return False
+    # The baseline's full temporal fixture includes all the checks for a current frame.
+    # The draft's temporal and current-frame cases must qualify independently.
+    candidates = ["baseline-w1.json"] if reader == "baseline" else [
+        "proposal-w1-anchors.json" if workload == "single_frame" else "proposal-w1-full.json"
+    ]
+    for name in candidates:
+        path = directory / name
+        if not path.is_file():
+            continue
+        record = read(path)
+        count = record.get("expected_full")
+        ids = record.get("ids", [])
+        if (count and len(ids) == len(set(ids)) == count and not record.get("error")
+                and not record.get("unexpected") and not record.get("checks_failed")):
+            return True
+    return False
+
+
+def row(path, record, fixture):
+    name = path.stem
+    reader, dataset, workload = (record[k] for k in ("reader", "dataset", "workload"))
+    prep = 0
+    if "prepared" in name and reader == "baseline":
+        transfer = path.parent / f"{dataset}-private-transfer.json"
+        prep = read(transfer)["private_transfer"]["consumer_prep_seconds"] if transfer.exists() else None
+
+    timing = record["timings"]
+    milestones = timing["milestones"]
+    def elapsed(n, require_valid=False):
+        event = milestones.get(str(n))
+        if prep is None or event is None:
+            return None
+        if require_valid and event.get("usable_unique_samples") != n * record["config"]["batch_size"]:
+            return None
+        return prep + event["elapsed_s"]
+
+    windows = record["windows"]
+    initial = windows.get("to_1000", {})
+    diversity = initial.get("episode_diversity", {})
+    tail = windows.get("after_refill_2", {})
+    refills = record["turnover"].get("refills_verified", 0)
+    tail_valid = (refills >= 2 and tail.get("batches", 0) >= record["config"]["min_steady_batches"]
+                  and tail.get("raw_samples") == tail.get("usable_unique_samples")
+                  and not record["contract"].get("invalid_batches"))
+    rate = tail.get("usable_unique_samples_per_s") if tail_valid else None
+    counts = record["progress"]
+    milestone = milestones.get("1000", {}).get("io", {})
+    io = milestone.get("by_purpose", {})
+    size = record.get("source", {}).get("observed", {}).get("frames")
+    first = elapsed(1, True)
+    projection = None
+    if (rate and size and first is not None and counts.get("duplicates") == 0
+            and fixture_passes(fixture, reader, workload)):
+        projection = (first + (size - record["config"]["batch_size"]) / rate) / 86400
+    return {
+        "run": path.parent.name, "cell": name, "dataset": dataset, "reader": reader,
+        "workload": workload, "cache": record["cache"], "status": record["status"],
+        "raw_examples": counts["raw_samples"], "usable_unique": counts["usable_unique_samples"],
+        "duplicates": counts["duplicates"], "added_consumer_prep_s": prep,
+        "first_sample_s": (prep + timing["first_sample_s"]
+                           if prep is not None and "first_sample_s" in timing else None),
+        "batch_1_raw_s": elapsed(1), "batch_125_valid_s": elapsed(125, True),
+        "batch_1000_raw_s": elapsed(1000), "batch_1000_valid_s": elapsed(1000, True),
+        "episodes_per_batch": diversity.get("distinct_episodes_per_batch_mean"),
+        "near_pairs_0p2s": diversity.get("near_0p2s_pairs"),
+        "total_pairs": diversity.get("unordered_pairs"), "verified_refills": refills,
+        "post_refill_batches": tail.get("batches"), "steady_windows_per_s": rate,
+        "prefix_median_wait_s": initial.get("batch_wait_s", {}).get("p50"),
+        "prefix_p95_wait_s": initial.get("batch_wait_s", {}).get("p95"),
+        "prefix_p99_wait_s": initial.get("batch_wait_s", {}).get("p99"),
+        "video_files_by_batch_1000": io.get("video", {}).get("files_touched"),
+        "http_video_bytes_by_batch_1000": io.get("video", {}).get("http_body_bytes"),
+        "rss_peak_bytes": record["resources"].get("rss_sampled_peak_bytes"),
+        "full_pass_days_estimate": projection,
+        "stop": record.get("stop_reason") or record.get("error", "").splitlines()[0:1],
+    }
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("directory", type=Path)
+    parser.add_argument("--fixture-evidence", type=Path)
+    args = parser.parse_args()
+    writer = None
+    for path in sorted(args.directory.rglob("*.json")):
+        record = read(path)
+        if not isinstance(record, dict) or not {"timings", "reader", "turnover"} <= set(record):
+            continue
+        result = row(path, record, args.fixture_evidence)
+        if writer is None:
+            writer = csv.DictWriter(sys.stdout, fieldnames=list(result))
+            writer.writeheader()
+        writer.writerow(result)
+
+
+if __name__ == "__main__":
+    main()
