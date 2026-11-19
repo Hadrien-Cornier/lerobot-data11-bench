@@ -27,9 +27,13 @@ def fixture_passes(directory, reader, workload, tolerance_s):
         )
     # The baseline's full temporal fixture includes all the checks for a current frame.
     # The draft's temporal and current-frame cases must qualify independently.
-    candidates = ["baseline-w1.json"] if reader == "baseline" else [
-        "proposal-w1-anchors.json" if workload == "single_frame" else "proposal-w1-full.json"
-    ]
+    if workload == "action100_history_0p8s":
+        prefix = "baseline" if reader == "baseline" else "proposal"
+        candidates = [f"{prefix}-w1-abc-history.json"]
+    else:
+        candidates = ["baseline-w1.json"] if reader == "baseline" else [
+            "proposal-w1-anchors.json" if workload == "single_frame" else "proposal-w1-full.json"
+        ]
     for name in candidates:
         path = directory / name
         if not path.is_file():

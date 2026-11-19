@@ -18,6 +18,7 @@ from fixture import ACTION, CAMERAS, FPS, STATE, TASK, vectors
 from lerobot.datasets.streaming_dataset import StreamingLeRobotDataset
 
 DELTAS = {ACTION: list(range(100)), STATE: [-2, 0, 2], **{cam: [-2, 0, 3] for cam in CAMERAS}}
+ABC_HISTORY_CAMERA_OFFSETS = [-20, -15, -10, -5, 0]
 BATCH_SIZE = 4
 SELECTION = [1, 4, 7, 9, 12, 15]
 
@@ -31,6 +32,8 @@ def mode_deltas(mode):
         return {ACTION: [1, 2]}
     if mode == "video":
         return {key: DELTAS[key] for key in CAMERAS}
+    if mode == "abc-history":
+        return {ACTION: DELTAS[ACTION], **{camera: ABC_HISTORY_CAMERA_OFFSETS for camera in CAMERAS}}
     return DELTAS
 
 
@@ -251,7 +254,9 @@ def main():
     parser.add_argument("variant", choices=("baseline", "proposal"))
     parser.add_argument("root", type=Path)
     parser.add_argument("out", type=Path)
-    parser.add_argument("--mode", choices=("full", "anchors", "numeric", "positive", "video"), default="full")
+    parser.add_argument(
+        "--mode", choices=("full", "anchors", "numeric", "positive", "video", "abc-history"), default="full"
+    )
     parser.add_argument("--local-id", action="store_true",
                         help="Pass the fixture directory as repo_id to bypass the proposal's local parquet lookup.")
     parser.add_argument("--selection", action="store_true")

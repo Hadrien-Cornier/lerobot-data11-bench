@@ -34,6 +34,12 @@ With camera deltas only, the proposal returns 112 samples before an out-of-bound
 
 The direct-rank overlap measures the reader's native partition behavior. The proposal trainer raises an exception before it reaches Accelerate's DataLoader dispatch.
 
+## ABC-style camera history
+
+The `abc-history` fixture requests the current state, action steps 0 through 99, and five frames per camera at −0.8, −0.6, −0.4, −0.2 and 0 seconds. The camera offsets correspond to −20, −15, −10, −5 and 0 frames on the 25 fps fixture and −24, −18, −12, −6 and 0 frames on the 30 fps ABC source. The oracle checks the temporal values and padding masks at every anchor. It compares every camera frame with an independent full-file FFmpeg decode.
+
+The baseline passed all 786 anchors with one and four workers. Each anchor appeared once, and the maximum RGB difference was zero. The proposal raised a `TypeError` in action-window assembly before the first anchor at both worker counts. These runs used Python 3.12.12, PyTorch 2.15.0 and TorchCodec 0.17.0. The baseline used Datasets 5.2.0 and the draft used the pinned Datasets pull request. [One-worker baseline](evidence/baseline-w1-abc-history.json) · [Four-worker baseline](evidence/baseline-w4-abc-history.json) · [One-worker draft](evidence/proposal-w1-abc-history.json) · [Four-worker draft](evidence/proposal-w4-abc-history.json)
+
 ## Shuffle controls
 
 On the 86-frame fixture without delta timestamps, the baseline produces different first orders for seeds 42 and 43. With `shuffle=True`, iterating again on the same dataset changes the order. With `shuffle=False`, it repeats the first order. The proposal produces the same order for both seeds, both shuffle settings and both iterations. See the [baseline orders](evidence/baseline-shuffle.json) and [proposal orders](evidence/proposal-shuffle.json).
@@ -66,6 +72,7 @@ uv pip install --python "$scratch/venv/bin/python" -e "$scratch/base[training]" 
 for group in finite ranks restart repeat shuffle train train-repeat train-ranks; do
   ./run_cases.sh "$scratch" "$group"
 done
+./run_cases.sh "$scratch" abc-history
 ./run_cases.sh "$scratch" train-ranks-resume 1
 ./run_cases.sh "$scratch" train-ranks-resume 4
 ```

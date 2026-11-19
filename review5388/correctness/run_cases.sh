@@ -104,6 +104,12 @@ case "${2:-finite}" in
         check proposal proposal-w4-anchors --local-id --workers 4 --mode anchors
         check proposal proposal-w4-selection --local-id --workers 4 --mode anchors --selection
         ;;
+    abc-history)
+        for workers in 1 4; do
+            check baseline "baseline-w$workers-abc-history" --workers "$workers" --mode abc-history
+            check proposal "proposal-w$workers-abc-history" --local-id --workers "$workers" --mode abc-history
+        done
+        ;;
     ranks)
         for workers in 1 4; do
             for rank in 0 1; do
