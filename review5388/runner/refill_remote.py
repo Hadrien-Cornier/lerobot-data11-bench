@@ -25,12 +25,13 @@ def run_refills():
         if hashlib.sha256((source / "src/lerobot/datasets" / name).read_bytes()).hexdigest() != want:
             raise RuntimeError(f"Patched reader mismatch in {name}")
     reference = json.loads(os.environ["PREPARED_INDEX"])
+    order = ("candidate","baseline") if os.environ.get("REFILL_PATCHED_FIRST") == "1" else ("baseline","candidate")
     r.append({"event":"refills_setup", "patched":pins, "prepared":reference,
-              "order":["baseline","candidate"], "max_batches":30000, "seed":42})
+              "order":list(order), "max_batches":30000, "seed":42})
     if not r.verify_bucket("before-transfer"):
         raise RuntimeError("The index and source have different manifests")
     outcomes = {}
-    for reader in ("baseline","candidate"):
+    for reader in order:
         cache = r.CACHE / f"native-refills-{reader}"
         if cache.exists():
             raise FileExistsError(cache)

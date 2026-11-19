@@ -20,7 +20,7 @@ ROOT = Path(__file__).resolve().parents[1]
 LEDGER = ROOT / "results" / "jobs.jsonl"
 REPO = os.environ.get("REVIEW5388_RESULTS_REPO", "hadriencornier/lerobot-data11-bench")
 RATES = {"cpu-xl": 1.0, "cpu-upgrade": 0.03}
-GROSS_RESERVATION_LIMIT = 10.00
+GROSS_RESERVATION_LIMIT = 15.00
 TERMINAL = {"COMPLETED", "ERROR", "CANCELED", "FAILED", "TIMEOUT"}
 IMAGE = "python:3.12-slim-trixie"
 BOOT = r"""
@@ -141,6 +141,8 @@ def main():
     parser.add_argument("--profile", choices=("probe", "matrix", "reverse", "correctness", "tolerance", "tolerance-repeat",
                                  "tolerance-prepared-repeat", "worker-memory", "abc-history", "internvideo", "native-refills"),
                         required=True)
+    parser.add_argument("--refill-flavor", choices=("cpu-xl","cpu-upgrade"), help="CPU flavor for the native-refills profile.")
+    parser.add_argument("--patched-first", action="store_true", help="Run the patched reader before the indexed reader.")
     parser.add_argument("--minutes", type=int, required=True)
     parser.add_argument("--wait-for-job", help="Delay workload until this earlier job stops.")
     parser.add_argument("--prepared-from-run", help="Use verified indexes from this matrix run.")
@@ -166,7 +168,10 @@ def main():
         parser.error("Expected a Hugging Face Job ID.")
     if args.minutes < 5:
         parser.error("A job must have at least 5 minutes for environment setup.")
+    if (args.refill_flavor or args.patched_first) and args.profile != "native-refills":
+        parser.error("--refill-flavor and --patched-first apply to native-refills only.")
     flavor = "cpu-upgrade" if args.profile in ("correctness", "native-refills") else "cpu-xl"
+    flavor = args.refill_flavor or flavor
     reservation = RATES[flavor] * (args.minutes + 1) / 60
     api = HfApi()
     token = get_token()
@@ -216,6 +221,7 @@ def main():
             "bundle_path": path,
             "wait_for_job": args.wait_for_job,
             "prepared_index": prepared,
+            "patched_first": args.patched_first,
             "concurrent_jobs_at_launch": concurrent,
         })
         try:
@@ -234,6 +240,7 @@ def main():
                     "BUNDLE_SHA256": digest,
                     "RUN_NAME": args.run,
                     "PROFILE": args.profile,
+                    "REFILL_PATCHED_FIRST": "1" if args.patched_first else "0",
                     "RUN_DATASETS": ",".join(dict.fromkeys(args.datasets)),
                     "JOB_HARD_CAP_SECONDS": str(args.minutes * 60),
                     "WAIT_FOR_JOB": args.wait_for_job or "",

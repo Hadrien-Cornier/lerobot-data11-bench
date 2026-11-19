@@ -94,3 +94,12 @@ run5388 runner/collect.py molmo-native-refills --sync
 ```
 
 The job uses one 8-vCPU CPU Upgrade host. It runs #3917 (`fe1c5459`) first and patched #5388 (`adbdf5f0`) second, each in a fresh process with an empty application cache. Both request 30,000 batches of eight examples, three current camera views, current state and current action. The episode pool size is 32, the seed is 42, and the timestamp tolerance is 1 ms. The runner checks the source inventory before and after each reader. It records batch delivery times, sample IDs, episode admissions and verified pool refills. Add the index download and validation receipt to #3917's elapsed time at each batch.
+
+To repeat on the 16-vCPU CPU XL host, reverse the order so patched #5388 runs first. Compare the two readers within each host. Both host size and order change between the two jobs.
+
+```bash
+run5388 runner/launch.py molmo-native-refills-xl --profile native-refills \
+    --prepared-from-run molmo-publisher --refill-flavor cpu-xl --patched-first --minutes 240
+# After the job finishes
+run5388 runner/collect.py molmo-native-refills-xl --sync
+```
