@@ -372,7 +372,7 @@ def probe():
 def tolerance():
     raw_reference = os.environ.get("PREPARED_INDEX")
     reference = json.loads(raw_reference) if raw_reference else None
-    order = ("candidate", "baseline")
+    order = ("baseline", "candidate") if reference else ("candidate", "baseline")
     caches = {reader: CACHE / f"bucket-tolerance-{reader}" for reader in order}
     append({
         "event": "tolerance-control-setup", "tolerance_s": 0.001,
@@ -380,16 +380,19 @@ def tolerance():
         "candidate_start_state": "fresh", "prepared_index": reference,
         "concurrent_jobs_at_launch": json.loads(os.environ.get("CONCURRENT_JOBS_AT_LAUNCH", "[]")),
     })
-    cache_state = "cold"
     if reference:
         if not verify_bucket("tolerance-1ms-before-transfer"):
             raise RuntimeError("Molmo inventory has changed.")
-        if not download_prepared("bucket", caches["baseline"], reference):
+        if not download_prepared("bucket", caches["baseline"], reference, timeout=180):
             raise RuntimeError("Prepared Molmo index could not be transferred.")
-        cache_state = {"baseline": "unclassified", "candidate": "cold"}
+        pair("bucket", "current-frame-tolerance-1ms-prepared", order, {"baseline": 330, "candidate": 330}, caches,
+             cache_state={"baseline": "unclassified", "candidate": "cold"}, single_frame=True,
+             tolerance_s=0.001, max_batches=1000)
+        return
+
     state = "current-frame-tolerance-1ms"
     valid_source = pair("bucket", state, order, {"baseline": 2200, "candidate": 1800}, caches,
-                        cache_state=cache_state, single_frame=True, tolerance_s=0.001)
+                        single_frame=True, tolerance_s=0.001)
     if not valid_source:
         return
 

@@ -8,6 +8,7 @@ import math
 from pathlib import Path
 
 from matched_diversity import compare as compare_diversity
+from matched_diversity import prepared_receipt
 from resource_summary import source_metadata
 from summarize import read, run_events, source_verified
 
@@ -132,15 +133,15 @@ def read_cell(path, record, lengths):
     }
 
 
-def same_pair(paths, rows, events, hosts):
+def same_pair(paths, rows, events, hosts, *, prepared=False):
     """Check source identity and matched comparison settings before emitting a paired curve."""
     a, b = rows
     if (a["reader"], b["reader"]) != ("baseline", "candidate"):
         return "Pass the baseline result first and the candidate result second."
-    for key in ("dataset", "workload", "cache"):
+    for key in ("dataset", "workload") if prepared else ("dataset", "workload", "cache"):
         if a[key] != b[key]:
             return f"Reader results differ in {key}."
-    if a["cache"] not in ("cold", "warm"):
+    if not prepared and a["cache"] not in ("cold", "warm"):
         return "Both cache states must be classified and match."
     for key, default in CONTRACT_SETTINGS.items():
         if a["config"].get(key, default) != b["config"].get(key, default):
@@ -187,7 +188,7 @@ def load_lengths(path, source, manifest, observed):
     return lengths
 
 
-def compare(paths, minimum, query_batches, episode_index=None, diversity_prefix=1000):
+def compare(paths, minimum, query_batches, episode_index=None, diversity_prefix=1000, *, prepared=False):
     result = {"cells": [path.stem for path in paths]}
     try:
         rows = [read(path) for path in paths]
@@ -204,9 +205,18 @@ def compare(paths, minimum, query_batches, episode_index=None, diversity_prefix=
         tolerance_s=rows[0]["config"].get("tolerance_s", 0.0001),
         batch_size=rows[0]["config"].get("batch_size"),
     )
-    reason = same_pair(paths, rows, events, hosts)
+    reason = same_pair(paths, rows, events, hosts, prepared=prepared)
     if reason:
         return result | {"status": "ineligible_pair", "reason": reason}, []
+    prep = 0.0
+    if prepared:
+        try:
+            publication = prepared_receipt(paths, rows, events[0])
+        except (OSError, ValueError, TypeError, KeyError) as exc:
+            return result | {"status": "ineligible_pair", "reason": str(exc)}, []
+        prep = publication["baseline_consumer_prep_seconds"]
+        result.pop("cache")
+        result.update(publication=publication, cache_states={row["reader"]: row["cache"] for row in rows})
     source, _, manifest, _ = source_metadata(paths[0], rows[0], events[0])
     observed = rows[0]["source"].get("observed")
     if episode_index and not observed:
@@ -225,6 +235,27 @@ def compare(paths, minimum, query_batches, episode_index=None, diversity_prefix=
     )
     if any(audit[1]["snapshot_errors"] for audit in audits):
         return result | {"status": "incomplete_snapshot"}, []
+    if prepared:
+        breakdown = {}
+        for row, (reader_times, audit), offset in zip(rows, audits, (prep, 0.0)):
+            first_sample = audit["first_sample_s"]
+            audit["reader_first_sample_s"] = first_sample
+            audit["first_sample_s"] = first_sample + offset if first_sample is not None else None
+            breakdown[row["reader"]] = {
+                "consumer_prep_seconds": offset,
+                "reader_constructor_s": row.get("timings", {}).get("constructor_s"),
+                "reader_first_sample_s": first_sample,
+                "consumer_first_sample_s": audit["first_sample_s"],
+                "milestones": {
+                    str(batch): {
+                        "reader_elapsed_s": reader_times[batch - 1],
+                        "consumer_elapsed_s": reader_times[batch - 1] + offset,
+                    }
+                    for batch in sorted(set(MILESTONES) | set(query_batches))
+                    if batch <= len(reader_times)
+                },
+            }
+        result["timing_breakdown"] = breakdown
     horizon = min(map(len, times))
     result["horizon"] = {
         "last_shared_batch": horizon,
@@ -240,11 +271,15 @@ def compare(paths, minimum, query_batches, episode_index=None, diversity_prefix=
     previous = None
     initial = None
     strict_run_start = None
-    for batch, (baseline, candidate) in enumerate(zip(*times), start=1):
+    for batch, (baseline_reader, candidate) in enumerate(zip(*times), start=1):
+        baseline = baseline_reader + prep
         delta = baseline - candidate
         leader = "baseline" if delta < 0 else "candidate" if delta > 0 else "tie"
         item = {"batch": batch, "unique_anchors": batch * result["batch_size"],
                 "baseline_s": baseline, "candidate_s": candidate, "baseline_minus_candidate_s": delta, "lead": leader}
+        if prepared:
+            item["baseline_reader_s"] = baseline_reader
+            item["baseline_consumer_prep_s"] = prep
         series.append(item)
         if leader == "tie":
             continue
@@ -269,7 +304,7 @@ def compare(paths, minimum, query_batches, episode_index=None, diversity_prefix=
     diversity = {"status": "insufficient_common_valid_batches", "requested_prefix_batches": diversity_prefix}
     if horizon >= diversity_prefix:
         try:
-            comparison = compare_diversity(*paths, diversity_prefix)
+            comparison = compare_diversity(*paths, diversity_prefix, prepared=prepared)
             diversity = {key: value for key, value in comparison.items() if key != "strata"}
         except (OSError, ValueError, KeyError) as exc:
             diversity = {"status": "unavailable", "reason": str(exc)}
@@ -302,7 +337,10 @@ def plot(path, result, series):
     fig, ax = plt.subplots(figsize=(8.6, 4.8), layout="constrained")
     fig.patch.set_facecolor("white")
     batch = [row["batch"] for row in series]
-    ax.plot(batch, [row["baseline_s"] for row in series], label="Current reader", color="#245786", lw=2.2)
+    baseline_label = "Current reader"
+    if "publication" in result:
+        baseline_label += f" (+{result['publication']['baseline_consumer_prep_seconds']:.2f} s receipt)"
+    ax.plot(batch, [row["baseline_s"] for row in series], label=baseline_label, color="#245786", lw=2.2)
     ax.plot(batch, [row["candidate_s"] for row in series], label="Draft reader", color="#b7501a", lw=2.2)
     for milestone in MILESTONES:
         if milestone <= batch[-1]:
@@ -327,8 +365,9 @@ def plot(path, result, series):
         result["workload"], result["workload"])
     dataset = "MolmoAct2 Bimanual YAM" if result["dataset"] == "bucket" else result["dataset"].upper()
     fig.suptitle(f"{dataset} · {title}", fontsize=15, fontweight="semibold")
+    cache_label = "simulated index publication" if result.get("publication") else f"{result['cache']} cache"
     ax.set_title(
-        f"{result['tolerance_s']*1000:g} ms tolerance · {result['cache']} cache · "
+        f"{result['tolerance_s']*1000:g} ms tolerance · {cache_label} · "
         f"{result['batch_size']} examples per batch · {batch[-1]:,} paired batches",
         fontsize=10,
     )
@@ -351,13 +390,14 @@ def main():
     parser.add_argument("--batch", type=positive_int, action="append", default=[], help="Report this batch in JSON.")
     parser.add_argument("--min-sustained-batches", type=positive_int, default=125)
     parser.add_argument("--diversity-prefix", type=positive_int, default=1000)
+    parser.add_argument("--prepared", action="store_true", help="Verify and charge the simulated-publication receipt.")
     parser.add_argument("--out", type=Path, help="Write JSON to this file instead of standard output.")
     parser.add_argument("--series", type=Path, help="Write all paired batch measurements as CSV.")
     parser.add_argument("--plot", type=Path, help="Write an SVG or PNG curve if a paired prefix exists.")
     args = parser.parse_args()
     result, series = compare(
         [args.baseline, args.candidate], args.min_sustained_batches, args.batch,
-        args.episode_index, args.diversity_prefix,
+        args.episode_index, args.diversity_prefix, prepared=args.prepared,
     )
     output = json.dumps(result, indent=2) + "\n"
     if args.out:
