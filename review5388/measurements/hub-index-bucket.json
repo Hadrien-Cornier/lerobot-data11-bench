@@ -1,0 +1,34 @@
+{
+  "observed_utc": "2026-11-19T17:48:46+00:00",
+  "bucket_tree_endpoint": "https://huggingface.co/api/buckets/pepijn223/MolmoAct2-BimanualYAM-Dataset-bucket/tree/meta/mp4-sidecars",
+  "archive_header_method": "Reused the review ZIP header audit. Confirmed the public listing still gives exactly the same Xet object IDs as that review.",
+  "files": [
+    {
+      "path": "meta/mp4-sidecars/molmoact2-1024.npz",
+      "size": 63228707,
+      "xet_hash": "f623a2ed9815937f47a44f3d64765eabe9b7b67e7a682b4155280d750060dfe6",
+      "schema": 1,
+      "source_mp4s": 228,
+      "source_fingerprints": 0,
+      "same_object_as_inspected_file": "molmoact2-1024.npz"
+    },
+    {
+      "path": "meta/mp4-sidecars/molmoact2-32246.npz",
+      "size": 1830276001,
+      "xet_hash": "7e2434e7413becff91c42db46cdd45095e99c8e8bbe369831dff300bf054943c",
+      "schema": 1,
+      "source_mp4s": 5860,
+      "source_fingerprints": 0,
+      "same_object_as_inspected_file": "molmoact2-full.npz"
+    },
+    {
+      "path": "meta/mp4-sidecars/molmoact2-full.npz",
+      "size": 1830276001,
+      "xet_hash": "7e2434e7413becff91c42db46cdd45095e99c8e8bbe369831dff300bf054943c",
+      "schema": 1,
+      "source_mp4s": 5860,
+      "source_fingerprints": 0,
+      "same_object_as_inspected_file": "molmoact2-full.npz"
+    }
+  ]
+}

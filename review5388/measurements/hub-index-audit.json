@@ -1,0 +1,4392 @@
+{
+  "complete": true,
+  "directory": "meta/mp4-sidecars",
+  "observed_utc": "2026-11-19T17:46:21+00:00",
+  "repos": {
+    "ActTrace/acttrace-ego-home": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "most_liked_tagged"
+      ],
+      "source_sha": "8462fc0a9b32d16512ac84948170ea215ef0fa74"
+    },
+    "At1uri/robotic-manipulation-trajectory-benchmarks": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "most_liked_tagged"
+      ],
+      "source_sha": "7de246834a03e52d2926d1cbd082e0425e870b44"
+    },
+    "BeingBeyond/PND_Adam-U_pick-simple": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "most_liked_tagged"
+      ],
+      "source_sha": "8ea3074c40e9d410b9a937774f4e9aeacbb88368"
+    },
+    "BeingBeyond/UniHand_Preview": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "most_liked_tagged"
+      ],
+      "source_sha": "da9010b5b28036d0fc07868e68f34d52fb469aee"
+    },
+    "BlackWhite123/fold_cloth": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "most_liked_tagged"
+      ],
+      "source_sha": "72d646df4d0f71aba255b10ad67b1044d2d5edad"
+    },
+    "BodenAI/RW-RL-HIL-Dataset": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "most_liked_tagged"
+      ],
+      "source_sha": "9290f5a96dc91ea58256e81d9ce2dd9621890b51"
+    },
+    "Cyan666/HandsOn-Datasets": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "most_liked_tagged"
+      ],
+      "source_sha": "7e19e2675464ebff9742923b20267e5af5ad645e"
+    },
+    "DAGroup-PKU/Open-HumanWAM-50K": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": "auto",
+      "groups": [
+        "most_liked_tagged"
+      ],
+      "source_sha": "9da483ca2e22fcd936e9f92da91806cf4de7a899"
+    },
+    "Danielberry0311/lingbot-va-franka-real-datasets": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "most_liked_tagged"
+      ],
+      "source_sha": "8edc228775c575982724d50daabb5ddef8d83b61"
+    },
+    "DecisionFacts/Physical_AI_SO101_Cup_Nesting_Task": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "most_liked_tagged"
+      ],
+      "source_sha": "bd28700173c66f785352fcaf76c413d50fbe1eab"
+    },
+    "DecisionFacts/Physical_AI_SO101_Test_Tube_Nesting_Task": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "most_liked_tagged"
+      ],
+      "source_sha": "8c161ed271870ede4780631a018dbad9d697b870"
+    },
+    "DecisionFacts/physical-ai": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "most_liked_tagged"
+      ],
+      "source_sha": "5293dabc165b0c3398cb2f6613387e0a7f356ef4"
+    },
+    "EXOKERN/contactbench-forge-peginsert-v0.1.1": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": "auto",
+      "groups": [
+        "most_liked_tagged"
+      ],
+      "source_sha": "64df23c9586ecbc42105352fb10989ebf1527eb2"
+    },
+    "ExylosAi/pick_and_place_sample": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "most_liked_tagged"
+      ],
+      "source_sha": "c28315b295edc0cc2a61bf1b39b72eed4a88a849"
+    },
+    "ExylosAi/table_spill_cleanup_bimanual": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "most_liked_tagged"
+      ],
+      "source_sha": "4893143d7eae20e6a4aad7ae5580323bc92fde4c"
+    },
+    "ExylosAi/table_spill_cleanup_bimanual_rgbd_segmentation_poses": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "most_liked_tagged"
+      ],
+      "source_sha": "a4cc6da3c041b12c07b1c404356b247b23d56939"
+    },
+    "FirstlyLabs/Firstly-household-v01": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": "auto",
+      "groups": [
+        "most_liked_tagged"
+      ],
+      "source_sha": "c82c4d5c193674087682f92bf3377fa80fa00b86"
+    },
+    "FreDERicia/SWAM-Pretrain": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "most_liked_tagged"
+      ],
+      "source_sha": "2f79a64bc48f059e030ed98c0580c2b1ade337fb"
+    },
+    "HashtagRobotics/tic-tac-toe-so101-block-a-clean-v1": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "most_liked_tagged"
+      ],
+      "source_sha": "16d4648527fd202409f4dfbbf25185c7863c8646"
+    },
+    "HubLabs/HubEgo-100K": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": "auto",
+      "groups": [
+        "most_liked_tagged"
+      ],
+      "source_sha": "7a632f536f19e0b48e7b7adbd97f5c3f0b666f35"
+    },
+    "HuggingFaceVLA/community_dataset_v1": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "most_liked_tagged"
+      ],
+      "source_sha": "9aec91fdb060ef116fb200abb17e3c0994147c80"
+    },
+    "HuggingFaceVLA/community_dataset_v2": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "most_liked_tagged"
+      ],
+      "source_sha": "815dd11af21a488d2c8c6a87e550d6e890fbf558"
+    },
+    "IliaLarchenko/behavior_224_rgb": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "most_liked_tagged"
+      ],
+      "source_sha": "3eae73d6cf2e9d513a8b835b72c934ab459e66fe"
+    },
+    "IliaLarchenko/vla_demo": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "most_liked_tagged"
+      ],
+      "source_sha": "50cbb988dc08f328ecbf342fbec48f8d4d4d2669"
+    },
+    "InternRobotics/Sim1_Dataset": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": "auto",
+      "groups": [
+        "most_liked_tagged"
+      ],
+      "source_sha": "05d8fee61922cbdcde703c51ce6bc777d7146ea3"
+    },
+    "JeffrinSam/G1_Brainco_Pick_2x24fps": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "most_liked_tagged"
+      ],
+      "source_sha": "d9249d9c42b12dd669a587edb7833550718e5627"
+    },
+    "KUPAC/iloha-folding-dataset": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "most_liked_tagged"
+      ],
+      "source_sha": "705d5cfcf3a347c327b12c2c245b14cd92fe4dac"
+    },
+    "LeRobot-worldwide-hackathon/134-npaka-studio-air-hockey": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "most_liked_tagged"
+      ],
+      "source_sha": "ebb990d29b294702b4eb38ddf7f31fdfc9399999"
+    },
+    "LightwheelAI/EgoDemo": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": "auto",
+      "groups": [
+        "most_liked_tagged"
+      ],
+      "source_sha": "407b960db2fe1c91b75854848d49c5cf920f68b9"
+    },
+    "LightwheelAI/EgoPro": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": "auto",
+      "groups": [
+        "most_liked_tagged"
+      ],
+      "source_sha": "3f71c7e2df7dd40a7bccd59e8ab37d22d442d141"
+    },
+    "LightwheelAI/EgoStandard": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": "auto",
+      "groups": [
+        "most_liked_tagged"
+      ],
+      "source_sha": "c7ab4df6a4e8d9fa595cf0657a1d11f3751cff12"
+    },
+    "MINT-SJTU/LA-33K": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "most_liked_tagged"
+      ],
+      "source_sha": "3eeeb2c2fdabda173f174c6af16cfdfcd3a36f79"
+    },
+    "ManipArena/maniparena-dataset": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": "auto",
+      "groups": [
+        "most_liked_tagged"
+      ],
+      "source_sha": "2bbd124d4554bccbf12a2ec115176cca09612c55"
+    },
+    "Myungkyu/RMBench-preset-luna": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "most_liked_tagged"
+      ],
+      "source_sha": "50cfaf4af4fd286f8c71236f9e52a4b69fbc1988"
+    },
+    "NeoteAIEmbodied/OpenNeoData": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": "manual",
+      "groups": [
+        "most_liked_tagged"
+      ],
+      "source_sha": "d20bfaaa600c6b3dea314662641bd57d5ac67eac"
+    },
+    "OOJU/wild-mani-kitchen": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "most_liked_tagged"
+      ],
+      "source_sha": "b5c916d89c771f4a09d5f6d6c59e1dc4f912bb61"
+    },
+    "OpenGalaxea/Galaxea-Open-World-Dataset": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": "auto",
+      "groups": [
+        "most_liked_tagged"
+      ],
+      "source_sha": "df670d8dc3f2b369f55d28a3428b8639f0dab37d"
+    },
+    "OpenMOSS-Team/libero-lerobot-v3.0": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "most_liked_tagged"
+      ],
+      "source_sha": "4ba70f05d3aa0b795bdb036e07be7083cd179f8d"
+    },
+    "OpenMOSS-Team/robodojo-lerobot-v3.0": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "most_liked_tagged"
+      ],
+      "source_sha": "9724a6f5f2dca85b3c0116f376475e8073bdf329"
+    },
+    "OpenMOSS-Team/robotwin2.0-lerobot-v3.0": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "most_liked_tagged"
+      ],
+      "source_sha": "4beb760ef21ebfd6f202a8f34109a647a629d8cd"
+    },
+    "OpenZerith/Zerith-H1-1K": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "most_liked_tagged"
+      ],
+      "source_sha": "fd0868400e567d9555c751269362a7852fa361da"
+    },
+    "Pantheon-inc/DiverseUMI-sample100": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": "auto",
+      "groups": [
+        "most_liked_tagged"
+      ],
+      "source_sha": "a9baa2fae66c61f36c44f7b1dd1f5f7ff48936ff"
+    },
+    "Rimbot/PalmDex": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "most_liked_tagged"
+      ],
+      "source_sha": "de55cbafc2eb6d33f833c7cdd40c92515253d9bf"
+    },
+    "RoboValue/robovalue-dataset": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "most_liked_tagged"
+      ],
+      "source_sha": "c74655607eeb8dfab4e37bde409b42f42eb12e08"
+    },
+    "Sharpa-Robotics/SharpaDex-v1.0": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "most_liked_tagged"
+      ],
+      "source_sha": "549f933019c4bbe0c7fe3788c8a1a1005b88d9ef"
+    },
+    "TRICOS/CosData-Set-0001": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": "manual",
+      "groups": [
+        "most_liked_tagged"
+      ],
+      "source_sha": "da93fa1dc8ee9543598dbe7626940f2e82bc823b"
+    },
+    "Tachin-TachinTech/TachinGlove_Standard": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "most_liked_tagged"
+      ],
+      "source_sha": "2eb0e45e6d2103f33a7329c657a161c067d516c9"
+    },
+    "TeleEmbodied/SMART-Data": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "most_liked_tagged"
+      ],
+      "source_sha": "f5dffcece350168c49b3fdd43911e0a39902f5e6"
+    },
+    "Traly/AgiBotWorld-Alpha-lerobot": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "most_liked_tagged"
+      ],
+      "source_sha": "b38fd11acfe54f06b8b73b217f1b7c5c89b2c552"
+    },
+    "Vincent2025hello/usim": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "most_liked_tagged"
+      ],
+      "source_sha": "88c3612bf99d10652f19ec531052a38c04f0202e"
+    },
+    "Voxel51/grabette-tactile-full-synced-48ep": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "most_liked_tagged"
+      ],
+      "source_sha": "2486cbfea525dff54e0b5f2c76fec661dab05816"
+    },
+    "WB-WAM/Pico": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "most_liked_tagged"
+      ],
+      "source_sha": "038afe98c51279e1a27e865596a1adb48ed06932"
+    },
+    "XzqhTechLtd/Ego-UMI-DailyManipulation-LivUMI": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "most_liked_tagged"
+      ],
+      "source_sha": "fb1001917eb833faf32b8c61d3c38ab8a7157e1b"
+    },
+    "Yunncheng/gamewam-minecraft": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "most_liked_tagged"
+      ],
+      "source_sha": "80c60ccbc8761131f5b89fb0c1a4dda9614d690f"
+    },
+    "ZibinDong/droid_3d": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "most_liked_tagged"
+      ],
+      "source_sha": "825e783a477bce939ee3eb4599d129091e779843"
+    },
+    "adoodevv/pick_and_place_red_cube": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "most_liked_tagged"
+      ],
+      "source_sha": "dd98e0ec6e66b6441c35080883134f2b15683bbd"
+    },
+    "agibot-world/AgiBotWorld2026": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "most_liked_tagged"
+      ],
+      "source_sha": "95b159a10305a0385f369aba5d4b16242526d17b"
+    },
+    "airoa-org/airoa-moma-5k": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": "auto",
+      "groups": [
+        "most_liked_tagged"
+      ],
+      "source_sha": "2681f223af815be0465189103f198ae97cd694c3"
+    },
+    "airoa-org/umi-evaluation-franka_yubi_real": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": "manual",
+      "groups": [
+        "most_liked_tagged"
+      ],
+      "source_sha": "04f0e1fd139de72b026ce8d9c8b2428fabdd9131"
+    },
+    "airoa-org/yubi-corl2026-umi-arena": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": "manual",
+      "groups": [
+        "most_liked_tagged"
+      ],
+      "source_sha": "8d427f9a70adbc40f5c0933962516a1b44dd5cc5"
+    },
+    "andlyu/Public-YAM-runs": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "most_liked_tagged"
+      ],
+      "source_sha": "494d8acf6006ae9c4a74ebd5a9dd1762a1398437"
+    },
+    "apairo-robotics/tartandrive_offroad": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "most_liked_tagged"
+      ],
+      "source_sha": "3367154875f237f0d375d45baf9b5b215e35f03c"
+    },
+    "armnet/armnetbench_v01_lerobot_bimanual_so101": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "most_liked_tagged"
+      ],
+      "source_sha": "c4841758bd3fd8a7144105930c16c9aa2b4e6920"
+    },
+    "armnet/armnetbench_v01_lerobot_so101": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "most_liked_tagged"
+      ],
+      "source_sha": "1db69c82b589c7172ee31a6b8f7ef58d1fc2c663"
+    },
+    "axisrobotics/Franka-Datasets-v2": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "most_liked_tagged"
+      ],
+      "source_sha": "04e9492fc1864aabc665540f60f30f5fdb225a2e"
+    },
+    "bartek-niedzielski/fast_pick_and_place_40": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "most_liked_tagged"
+      ],
+      "source_sha": "63b2866bb39a23937518dc7d766b1565ab8924fa"
+    },
+    "behavior-1k/2026-challenge-demos": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "most_liked_tagged"
+      ],
+      "source_sha": "4f50b44796641a4d526a19d9aeadc8aa51e2f2c2"
+    },
+    "challenge-2026/challenge_data": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "most_liked_tagged"
+      ],
+      "source_sha": "3ea5d89d6ad6025841c736ecab6d7ab931fd87cf"
+    },
+    "chaoqi-liu/bridge_single_view": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "most_liked_tagged"
+      ],
+      "source_sha": "176678328d467a2e1dd05863dffd2c1aa1e94c0d"
+    },
+    "geonmin-kim/SO101-lv4-3color-cube-mat-to-mat-no-human-reset-v1": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "most_liked_tagged"
+      ],
+      "source_sha": "fc8e4090155ad23efd7f6c5269c1b9e54d9999b4"
+    },
+    "hu43/square2box": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "most_liked_tagged"
+      ],
+      "source_sha": "36c3b15ecee7ee60292637034ea8e9a4e1e881cd"
+    },
+    "hungho77/so101_left_arm_pick_red_cube_into_pot": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "most_liked_tagged"
+      ],
+      "source_sha": "62d3cb12cc705fd39c851833853ec49b2ca20fe4"
+    },
+    "hzxie/DOM": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "most_liked_tagged"
+      ],
+      "source_sha": "bbf6baa15f7253746d271a6e958e037afa537b1e"
+    },
+    "kantine/BotFails": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "most_liked_tagged"
+      ],
+      "source_sha": "3478e49d91e1737eb76dfee2d81bb22617039c13"
+    },
+    "latticecx/Lattice_4D_Dataset": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": "auto",
+      "groups": [
+        "most_liked_tagged"
+      ],
+      "source_sha": "a243e49cff32019f051c1ae38960b666d0d8f91f"
+    },
+    "lerobot/FineART": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "15746b76ddc21ffd38d73888fefe2e7a1496385b"
+    },
+    "lerobot/LIBERO-Cosmos3": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "c28343a22d01ac8cd798042b2d82932cd43a21ae"
+    },
+    "lerobot/LIBERO_10-Cosmos3": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "0abcc8158612d5cd8c4caa9206c833ea6a43bc4e"
+    },
+    "lerobot/SMPL_samples": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "5d5674524b6b9824f6a21955e5f93ab92717c73d"
+    },
+    "lerobot/abc_130k_v3_smoke": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "b342a0ff262195d49bae3eece6e3f40c6e1dbe15"
+    },
+    "lerobot/abc_130k_v3_train": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "68651e4929d9fb00f798937b2d62617cab5c771d"
+    },
+    "lerobot/abc_130k_v3_val": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "46ca817c39d3df08115a75c31b3cd3867e3d875a"
+    },
+    "lerobot/aloha_mobile_cabinet": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "7a752b39f7e69de7e38aee485a6bab07528a061a"
+    },
+    "lerobot/aloha_mobile_chair": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "95a969f868bd2179b36dc7a2721697cd49455530"
+    },
+    "lerobot/aloha_mobile_elevator": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "015f899eb28089c3b9d0328345875e89157471f5"
+    },
+    "lerobot/aloha_mobile_shrimp": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "6e828202059d2cc204b61ff968c232d202127a34"
+    },
+    "lerobot/aloha_mobile_shrimp_image": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "8dd48051dc89093e4f6bfee1c748224d42171027"
+    },
+    "lerobot/aloha_mobile_wash_pan": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "2d7d8593d81eeec29f5785f21e0a8c92bc78bcc0"
+    },
+    "lerobot/aloha_mobile_wipe_wine": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "b57bde2a10c343cbc2be9a0052f126854c4bb091"
+    },
+    "lerobot/aloha_sim_insertion_human": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "cc571a3c661df81b566dbfde3d5c1e85fcdf7884"
+    },
+    "lerobot/aloha_sim_insertion_human_image": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "d93d36acb3494629fcf890e7a359512446d0a7c1"
+    },
+    "lerobot/aloha_sim_insertion_scripted": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "8ab660912970111cbb26738b11458e6fc4a4aed1"
+    },
+    "lerobot/aloha_sim_insertion_scripted_image": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "04b78b6d1c7b1d27d3b1013bd639b6086e272cfd"
+    },
+    "lerobot/aloha_sim_transfer_cube_human": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "6a43d500f101255823a9d2b9dc244eeb01a2cd31"
+    },
+    "lerobot/aloha_sim_transfer_cube_human_image": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "7f12409e382ffd5ffa0e8018d2ef76d0a43d8c67"
+    },
+    "lerobot/aloha_sim_transfer_cube_scripted": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "c5467ba9059e4c65f27775ced212076980a173fb"
+    },
+    "lerobot/aloha_sim_transfer_cube_scripted_image": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "ac028b2d1a3f26275f4fc6b2d366646bac3c0491"
+    },
+    "lerobot/aloha_static_battery": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "06dc3da83c4fd3d1889b00f1dfd3780da8421f64"
+    },
+    "lerobot/aloha_static_candy": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "6728831ef9674b74f3ce20bf517890e9ee20b0d9"
+    },
+    "lerobot/aloha_static_coffee": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "b144896feb1f37398a862927b22cd3abdf005a6b"
+    },
+    "lerobot/aloha_static_coffee_new": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "a6e434c083dbd1e69e195c2f77ecd0a99948378b"
+    },
+    "lerobot/aloha_static_cups_open": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "d793c969cf716001dcca18a0842c3d7e9de9e41b"
+    },
+    "lerobot/aloha_static_fork_pick_up": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "6fa573d72f1a2d7c42fcbba4c9dd039b716c0161"
+    },
+    "lerobot/aloha_static_pingpong_test": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "fb29aadd5f0c3f78c439913984ef3bec7a297803"
+    },
+    "lerobot/aloha_static_pro_pencil": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "94650b0ed274ec193005f97a80da738fc02aa928"
+    },
+    "lerobot/aloha_static_screw_driver": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "21eead16760a8d94d449cadf4bc438b322ab528d"
+    },
+    "lerobot/aloha_static_tape": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "92955878beb0da15eee5d4d869841577f87e903e"
+    },
+    "lerobot/aloha_static_thread_velcro": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "0c821c87334087dc8d385f55f236e9f9e5565ebf"
+    },
+    "lerobot/aloha_static_towel": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "13ad96f5ed0e219e48c72471626a2e3d0eb5aeff"
+    },
+    "lerobot/aloha_static_vinh_cup": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "1dcb5a15701f6a9f4f90f39ad054b4d525f7883b"
+    },
+    "lerobot/aloha_static_vinh_cup_left": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "dab1a67546dab14b7d91a3f8c38cd87aa9be5e49"
+    },
+    "lerobot/aloha_static_ziploc_slide": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "ef8fef75fe96d4f35bdd8bf7bb5035709176f1f9"
+    },
+    "lerobot/asu_table_top": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "8067c85183c2c118b660e5dc3c6f92aaca32fb6a"
+    },
+    "lerobot/austin_buds_dataset": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "d9f9289c349f4985e525bf38f3dea0f1c63ec146"
+    },
+    "lerobot/austin_sailor_dataset": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "50985d8a1cdbe136ddc59e7ad91d1a2c30e412d1"
+    },
+    "lerobot/austin_sirius_dataset": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "dfc49b81782231edad89ce3156f1ef138eaba55e"
+    },
+    "lerobot/behavior1k-task0000": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "47930eac3d81a4b3084a9a10756c24d9ba08a4d5"
+    },
+    "lerobot/behavior1k-task0001": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "0b11ea071e8ead443060104604e8745bbfdd4363"
+    },
+    "lerobot/behavior1k-task0002": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "d92748866883d3a74b5ecbfe82289a53e731f8e1"
+    },
+    "lerobot/behavior1k-task0003": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "301f43fbb386535513bc28532fa72c7b936b9448"
+    },
+    "lerobot/behavior1k-task0004": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "0ba534be0f08e3bea8d9b257bbc78a6d58145b6f"
+    },
+    "lerobot/behavior1k-task0005": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "b5d83b097fa3f9d2a915dc35d943df2aebcc43b6"
+    },
+    "lerobot/behavior1k-task0006": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "d1e636783d5d67b0375f3dc0462e281b7cb2dfda"
+    },
+    "lerobot/behavior1k-task0007": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "09236ed3e3f27dcc95427002d5ebdabb294f2d8a"
+    },
+    "lerobot/behavior1k-task0008": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "095675c613ad45f9cfd454d46ae722624a5fabce"
+    },
+    "lerobot/behavior1k-task0009": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "1f7f1da16fbb0619f1169cdaab82d6b980dfde74"
+    },
+    "lerobot/behavior1k-task0010": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "6748d59cd5ff8673d5c6c5ecf34357a20d4b1a0c"
+    },
+    "lerobot/behavior1k-task0011": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "742c0abd5289d8b7f51092959501638129ac280c"
+    },
+    "lerobot/behavior1k-task0012": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "b9044db84e60e8d27499b2ff597ea9b8d9342686"
+    },
+    "lerobot/behavior1k-task0013": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "49c9786197560230fc6b17f71626244f59248fa9"
+    },
+    "lerobot/behavior1k-task0014": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "6831810985a65ac101e20bec550567caf0e4a724"
+    },
+    "lerobot/behavior1k-task0015": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "bbee77f781b89f0dba218827ebbe472acb6ff46b"
+    },
+    "lerobot/behavior1k-task0016": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "06268c6c1136610de91194b46767f3c5800c79f0"
+    },
+    "lerobot/behavior1k-task0017": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "e9a5d7178a07e8facd5dd163bdb4f05b27af6dcb"
+    },
+    "lerobot/behavior1k-task0018": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "c42338f98348654bde8c0fcd08702bb40ea8ab39"
+    },
+    "lerobot/behavior1k-task0019": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "dd20d1cbfedc8b21d5df1d89eaf36f570001a269"
+    },
+    "lerobot/behavior1k-task0020": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "0d0dd4ce36a78fe877da9e7d8a667037efd76117"
+    },
+    "lerobot/behavior1k-task0021": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "638cade1f0dc5791953ec4eef04e2e792c09c4f4"
+    },
+    "lerobot/behavior1k-task0022": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "fe70e0d34ac141587bf0d1ac29f7f5abb694dce9"
+    },
+    "lerobot/behavior1k-task0023": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "4238d4b772373f6791373128f3a54d778dcc7618"
+    },
+    "lerobot/behavior1k-task0024": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "f975dd3c93f9bfe2707b6ed582692e3a4a0765e5"
+    },
+    "lerobot/behavior1k-task0025": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "0ea54ec53962bbf60abd19be6d2c9232cb85b736"
+    },
+    "lerobot/behavior1k-task0026": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "428915effa8d6de6688ddc66f9f7f165bf08c880"
+    },
+    "lerobot/behavior1k-task0027": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "4b0d3a02bbcfcc4944501d41bc9c807a9adaae22"
+    },
+    "lerobot/behavior1k-task0028": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "5b649df977adb1f8865e93e848f1961da9b9fbcd"
+    },
+    "lerobot/behavior1k-task0029": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "4e7eda8b043fcb4d19db1e131fa219ecaa94d800"
+    },
+    "lerobot/behavior1k-task0030": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "296f0e58aa9d521023d59a8df915bd33ede2ff7a"
+    },
+    "lerobot/behavior1k-task0031": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "76f4ef65f4799362640b299ef1e0d1ce6e30d7c8"
+    },
+    "lerobot/behavior1k-task0032": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "b5bfcfa1e9104085f5e0519e6a639ba393e32f59"
+    },
+    "lerobot/behavior1k-task0033": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "b3c91f576da9e2f5c847943f96f8caa93394605c"
+    },
+    "lerobot/behavior1k-task0034": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "9e05d59d6b0254604034c04e4d32d99d92693c50"
+    },
+    "lerobot/behavior1k-task0035": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "a045e48d38e4c1d6677f81d79dc98f49887893ea"
+    },
+    "lerobot/behavior1k-task0036": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "82b44a7c27d5078e82d5285b3076db11892e616f"
+    },
+    "lerobot/behavior1k-task0037": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "805d4c991bda051decb8b5728b2f62bbf17efd89"
+    },
+    "lerobot/behavior1k-task0038": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "fa76ab2ceeed25ac6beab7c74b3bbad7b8b9d7b7"
+    },
+    "lerobot/behavior1k-task0039": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "fa8f17b2c1f533896fd5e3418d0bc56e551b7cc2"
+    },
+    "lerobot/behavior1k-task0040": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "608b067eb1b122ab5db90779ff58271d10c56535"
+    },
+    "lerobot/behavior1k-task0041": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "62e322c257fff15105a82c1d8b023dc63769c4e5"
+    },
+    "lerobot/behavior1k-task0042": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "8639dabd2c86312d3750eeef6077ada06e49f7e3"
+    },
+    "lerobot/behavior1k-task0043": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "7848b6dea565b148ef6337edff431dd1cc46f06e"
+    },
+    "lerobot/behavior1k-task0044": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "c965a092309bf0964f558302fc98ec5cad8fe182"
+    },
+    "lerobot/behavior1k-task0045": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "27458fab90baf767109b214c9b3fa4f82e9bc97f"
+    },
+    "lerobot/behavior1k-task0046": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "26e9e39940d76f087dc311e4dc45543904e914ff"
+    },
+    "lerobot/behavior1k-task0047": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "7ae9a60a1badec4e2a29f2c629114c255a8f3884"
+    },
+    "lerobot/behavior1k-task0048": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "9cb227876561e9e656ec1c09f5ab7767485b3864"
+    },
+    "lerobot/behavior1k-task0049": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "fcd70c2d71e35cc8e2678c7721845a8769985a8a"
+    },
+    "lerobot/berkeley_autolab_ur5": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "c4e26a697fc4c04776b0558f83e563d14be0109f"
+    },
+    "lerobot/berkeley_cable_routing": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "20a7774a714a5daf56b220e01635425f2cb9745b"
+    },
+    "lerobot/berkeley_fanuc_manipulation": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "51bdefb6c7f24659fb3cfef61ba70246062193c2"
+    },
+    "lerobot/berkeley_gnm_cory_hall": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "9aa4a06750ab4d7fa7a2ae6d774d82a11f20c6fc"
+    },
+    "lerobot/berkeley_gnm_recon": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "bce624b353d7420ea1daa6acc75c95ceaa741fc1"
+    },
+    "lerobot/berkeley_gnm_sac_son": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "325f7e57b15de6bcdcca7c0269a31e94fe14888d"
+    },
+    "lerobot/berkeley_mvp": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "076135b96e92917da3404c2aa3d97e36f312cf73"
+    },
+    "lerobot/berkeley_rpt": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "692eff9f1d091c33bfad88d77bf0094a14e6fc76"
+    },
+    "lerobot/cmu_franka_exploration_dataset": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "d8105d004a7bde73e3d0c579e9bada9ef04c5c71"
+    },
+    "lerobot/cmu_play_fusion": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "7e71e26a7c28ae04300034af3e9f6594b9df9e42"
+    },
+    "lerobot/cmu_stretch": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "d84574233973ea9a292babd008256d2290a3f96e"
+    },
+    "lerobot/columbia_cairlab_pusht_real": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "66482aa15878b5362c98620f7f60ee23ef1d5a2c"
+    },
+    "lerobot/community_dataset_v3": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "ab92ac3fa4d0c08336e21b8e51cb9dc279535539"
+    },
+    "lerobot/config_examples": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "4803f5f379568ddc77763f5a4dd7cd56973d6a10"
+    },
+    "lerobot/conq_hose_manipulation": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "a7e212c5ce3b0924e80c64d27ca8aa5225d4e0ce"
+    },
+    "lerobot/depth-benchmark-results": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "42bf302e3d901f7b4be8364bc32f6e77be9e1e0e"
+    },
+    "lerobot/dlr_edan_shared_control": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "2e7a7879c3f467e468132ab719835bd432a0aeb2"
+    },
+    "lerobot/dlr_sara_grid_clamp": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "1470122a60d60b608db9f2c2a7d4f1f25ae9041c"
+    },
+    "lerobot/dlr_sara_pour": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "4246fa6111ab2682b1c39f44b045faec9ad41de7"
+    },
+    "lerobot/droid_1.0.1": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "71da9dcba338f53889907ac5762a2ebc6c2e55ff"
+    },
+    "lerobot/droid_100": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "87301a2d2e99340e2010c9ef0f1d8e780b08aaf9"
+    },
+    "lerobot/example_hil_serl_dataset": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "828ec53664f7298a284bcde569b4ae4d1da19675"
+    },
+    "lerobot/fmb": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "76c86f111d328229773288bf60d5b5b50e047e8d"
+    },
+    "lerobot/full_folding": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "6ae73269ee62c41534347d31ae2b91fc9aa57a4b"
+    },
+    "lerobot/high_quality_folding": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "c9eb858d4b84e520edecbda84a3534c3c1e78436"
+    },
+    "lerobot/iamlab_cmu_pickup_insert": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "5806e1046ce14774c0161d7887aec9cf284497e3"
+    },
+    "lerobot/imperialcollege_sawyer_wrist_cam": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "fa2512d0965ce44ec2c4abb9f67f5780197b0586"
+    },
+    "lerobot/jaco_play": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "265773f4d24610e89040a9e11e1e39cbf4c8a5db"
+    },
+    "lerobot/kaist_nonprehensile": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "f12d4385f2f72897b2a673f810d8da083b342e88"
+    },
+    "lerobot/kitchen": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "75bfbd04ad2fe132593c39a73f235df5c923065e"
+    },
+    "lerobot/koch_pick_place_1_lego": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "afc0b3e54679cb8a94283fbab5a4ccf0d405f10b"
+    },
+    "lerobot/koch_pick_place_1_lego_raph": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "1e7afb6601bb4d2405962d27d58109dcfaddc096"
+    },
+    "lerobot/koch_pick_place_5_lego": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "af1f4ff76be9fa752424b176125119744a6ef3f6"
+    },
+    "lerobot/koch_pick_place_5_lego_random_pose": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "e4c9188d25a62ae7736cffc188f785b592b63956"
+    },
+    "lerobot/libero": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "a1aaacb7f6cd6ee5fb43120f673cebb0cfea7dd4"
+    },
+    "lerobot/libero-assets": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "0b3ea86be5fe169d0fd036ae63d1070ec09e90f6"
+    },
+    "lerobot/libero_10": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "551d7d86f25edd0ffeda8b60053c15438cfd1d6a"
+    },
+    "lerobot/libero_10_image": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "7e324b526699f444044952c82ce3f438e8d300d0"
+    },
+    "lerobot/libero_10_image_subtask": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "06fdb000a8d6d3f43c79abb2545a24379265bef8"
+    },
+    "lerobot/libero_10_subtask": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "66a4f67dd88bde16c2d55395edf23617d04972dd"
+    },
+    "lerobot/libero_goal_image": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "91a97115558b5b611200a432d9c82e4f30991b60"
+    },
+    "lerobot/libero_object_image": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "e1e080d7df1d0a359dff5c86c222e047549f447f"
+    },
+    "lerobot/libero_plus": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "f3f49f426d75030177b18778374005bc12ccd588"
+    },
+    "lerobot/libero_spatial_image": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "d86c0b94922572b3b657e1d1a3d01f0952ddeb46"
+    },
+    "lerobot/metaworld_mt50": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "b46a1c185a2368660650a82ac5a5083a56722f48"
+    },
+    "lerobot/metaworld_mt50_push_v2_image": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "d105b817b01adf8986b05637f94f6a645e4de9f1"
+    },
+    "lerobot/nyu_door_opening_surprising_effectiveness": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "4ae8986f61485f5026fcff7269fff047149e3cba"
+    },
+    "lerobot/nyu_franka_play_dataset": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "3b2367d09641846e50f865ea54b52b0cdfab4e18"
+    },
+    "lerobot/nyu_rot_dataset": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "72e8343e26cf1e18730e5c7111afc044abc34ef2"
+    },
+    "lerobot/openarm-usd": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "c906674fed2533b0b91e91faa2c617f52506b8d4"
+    },
+    "lerobot/openarms-hardware-modifications": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official",
+        "most_liked_tagged"
+      ],
+      "source_sha": "ffe34b93c070343042eb9412fbfeffce16139947"
+    },
+    "lerobot/outdoor-depth": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "7c63dc16226035cdd79fffc95404e82723bda5ad"
+    },
+    "lerobot/paris_street": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "1de484da74031e047a96ab02b5822480e96c885d"
+    },
+    "lerobot/piper-collect": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "4d0152e57001cf676c75baaa35cc7ea119406e69"
+    },
+    "lerobot/pusht": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "7628202a2180972f291ba1bc6723834921e72c19"
+    },
+    "lerobot/pusht-subtask": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "184ff45bdafc06900b1dbdca25750e18aefbb0ab"
+    },
+    "lerobot/pusht_image": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "1b84c4882e2ab57ccfa3135e4becec6448a32f22"
+    },
+    "lerobot/pusht_keypoints": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "ace8c161a68bc025c21a5f29f85b86a9a2c5e64b"
+    },
+    "lerobot/robocasa_target_human_unified": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official",
+        "most_liked_tagged"
+      ],
+      "source_sha": "a1c7cba1a128f5dd8d3084012ba366d10ce174d9"
+    },
+    "lerobot/robocerebra_unified": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "279f0bcafc4564cc9ae0c5f3c4ccf0abffeb0637"
+    },
+    "lerobot/robomme": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "92796abbc67db4ea6447e5031d04bf47aa3770bb"
+    },
+    "lerobot/robot-urdfs": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "1b184a0e9ea822b8f8bfd1382f3ae0b28e1bfad3"
+    },
+    "lerobot/robot-usds": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "d1cf5f85fbc98f0d855c1b65d10de199b2390c06"
+    },
+    "lerobot/roboturk": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "d38c91900282c484d91710a1c4581597476cbc64"
+    },
+    "lerobot/robotwin_unified": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "1287871839fae2296bc27b88a5457c3e1eba8e1f"
+    },
+    "lerobot/stanford_hydra_dataset": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "ff06383708a1df7f38c21ec960a286ca6d0b7e7e"
+    },
+    "lerobot/stanford_kuka_multimodal_dataset": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "93927d10c07233ddbe3d6e3cec433af9430121c7"
+    },
+    "lerobot/stanford_robocook": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "49337d0171892cd88207d77c2c9409a474993e2b"
+    },
+    "lerobot/svla_so100_pickplace": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "728583b5eaf9e739a7f119e2def466fa1d552402"
+    },
+    "lerobot/svla_so100_sorting": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "13870ca969084d8ce4d8a0391b06cead78e804ba"
+    },
+    "lerobot/svla_so100_stacking": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "933bcc61148b1b560d1a13753b47eac54a085561"
+    },
+    "lerobot/svla_so101_pickplace": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "f641879e22172be7e8161d5e6c1503c2d2feb657"
+    },
+    "lerobot/taco_play": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "15f69c9346a10fa5e9a93f0460febd86d3450206"
+    },
+    "lerobot/tokyo_u_lsmo": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "729d997f2ecc7675d490f8de587fe20ed57fe549"
+    },
+    "lerobot/toto": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "51f5a8dc59fe2888f53b938ecc7142980543129e"
+    },
+    "lerobot/ucsd_kitchen_dataset": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "fd7751e366e56297317beae5db71aa1a193d1e7f"
+    },
+    "lerobot/ucsd_pick_and_place_dataset": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "5af7ee806291f5b95eafafe29eaf1d31012fcc03"
+    },
+    "lerobot/uiuc_d3field": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "6400996f91f7d436874c9007c42cc68ae59a2cc7"
+    },
+    "lerobot/umi_cup_in_the_wild": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "c16ab60ce0862c60a6c83c200d050b4013af3333"
+    },
+    "lerobot/unitree-g1-hardware-modifications": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official",
+        "most_liked_tagged"
+      ],
+      "source_sha": "a253ba15672f55161b688fc824393ec0b946dbf0"
+    },
+    "lerobot/unitreeh1_fold_clothes": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "a0926b4dd672560fdc4e6c9d1e68cda17631d608"
+    },
+    "lerobot/unitreeh1_rearrange_objects": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "e874d89b9024bad414deb45d7da82fa93601c260"
+    },
+    "lerobot/unitreeh1_two_robot_greeting": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "51d65cfa10380beff74570b599b49347abf5fbfa"
+    },
+    "lerobot/unitreeh1_warehouse": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "c5bbea3c3b3f787d14a135801dbee2be56e60ba8"
+    },
+    "lerobot/usc_cloth_sim": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "6c4fb6acf8a6db8c4d0692b318023272c4967b5f"
+    },
+    "lerobot/utaustin_mutex": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "a880eaeec88c6fcb6cd75e24ecf78f56fa96e559"
+    },
+    "lerobot/utokyo_pr2_opening_fridge": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "47504c67033d34b1b7f3ae522f35d0e0e5e1eead"
+    },
+    "lerobot/utokyo_pr2_tabletop_manipulation": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "a0b6918864b3fd0f58ca29acc7e06e572f7c985c"
+    },
+    "lerobot/utokyo_saytap": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "2792c13d3f049e8642d03f7597001a44ac392107"
+    },
+    "lerobot/utokyo_xarm_bimanual": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "13533b961150faf398ae9b82cf6d6323b56f9070"
+    },
+    "lerobot/utokyo_xarm_pick_and_place": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "da56c23e1b6d32c101c300b85dc54288b53ea63c"
+    },
+    "lerobot/video-benchmark-results": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "7c088e3006628ea1507e4a91c2e0f295c2266849"
+    },
+    "lerobot/video-benchmark-submissions": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "330c3a7b05a77e6452086cbe249cc9fec5b754af"
+    },
+    "lerobot/vlabench-assets": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "08d7a4479a55c8fbb89ac0fd6fcf06e53d65b4a4"
+    },
+    "lerobot/vlabench_unified": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "f61ad898199e746c20af3112f278cc86eb3ca3c4"
+    },
+    "lerobot/xarm_lift_medium": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "79efb0e3cef0e530ddec4b8569b190966ab45808"
+    },
+    "lerobot/xarm_lift_medium_image": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "e09bcd486afc459a55b2e3e8a2248a3c4fad56ba"
+    },
+    "lerobot/xarm_lift_medium_replay": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "1da06eafab3a2e6ad52e36edfba6583bd6378d19"
+    },
+    "lerobot/xarm_lift_medium_replay_image": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "d139df0acc86a5a82375bbc9b07737327f78776d"
+    },
+    "lerobot/xarm_push_medium": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "50352b1fd09fd7cb440a3f09c0c0f0b362e45876"
+    },
+    "lerobot/xarm_push_medium_image": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "2e78f5aee53cb0445651b2104a565b4cbf8d445c"
+    },
+    "lerobot/xarm_push_medium_replay": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "c58f218a4946c34c59ed27737d084f2592ce98e3"
+    },
+    "lerobot/xarm_push_medium_replay_image": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "66545a69ebf4e648ab7ce5ffbe39956e680f6dc8"
+    },
+    "lerobot/xvla-soft-fold": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "official"
+      ],
+      "source_sha": "d4d219929b2d417c5dcbc723148fd6b7aaca7261"
+    },
+    "matsujirushi/wani_20260812_145435": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "most_liked_tagged"
+      ],
+      "source_sha": "ffa73388161bb966cc0c940c181a72e1be5e847b"
+    },
+    "mlshehab/forcesight-demos": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "most_liked_tagged"
+      ],
+      "source_sha": "2c4107e700a850592810f617d58da835090d9ac0"
+    },
+    "msunbot1/ego2robot-factory-episodes": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "most_liked_tagged"
+      ],
+      "source_sha": "fc7992fd6aead89d97bc01514416de44a118aa48"
+    },
+    "nkalyanv/argus-robot-annotations": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "most_liked_tagged"
+      ],
+      "source_sha": "5e4e0d9c0b2c3129356d8c21fa27b8b76f2f5dbf"
+    },
+    "nvidia/BridgeData2_LeRobot_v3": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "most_liked_tagged"
+      ],
+      "source_sha": "b96f7216e3cff58007884656a81584c857c185ae"
+    },
+    "nvidia/LIBERO_LeRobot_v3": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "most_liked_tagged"
+      ],
+      "source_sha": "e5907374380b8f96511957e6ba5582be52a1e179"
+    },
+    "nvidia/PhysicalAI-Human-1M-100K": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "most_liked_tagged"
+      ],
+      "source_sha": "7e312e654818d1e0d3ebec3b78e50ee833b429f8"
+    },
+    "nvidia/g1_locomanip_dataset": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "most_liked_tagged"
+      ],
+      "source_sha": "558da5ba581dfd4bf02a459c70b208f2ac5d1774"
+    },
+    "nvidia/video-to-data-robot-dexterity-task-library-and-dataset": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "most_liked_tagged"
+      ],
+      "source_sha": "2376c2eb477685ac5da47d3b634fbed31c0ccef5"
+    },
+    "pepijn223/robocasa_pretrain_human300_v4_annotated5": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "most_liked_tagged"
+      ],
+      "source_sha": "4213ed05c293265a9fc6842473e6ed258368dcc2"
+    },
+    "robotcom/R-KNav_dataset": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": "manual",
+      "groups": [
+        "most_liked_tagged"
+      ],
+      "source_sha": "263f427257a46f345044c00f5bf8b0787e8589a6"
+    },
+    "robotcom/R-KNav_sample": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "most_liked_tagged"
+      ],
+      "source_sha": "da0de1ce28a338ba10d4beda405e32ac1c41040e"
+    },
+    "sabaridsnfuji/libero-segmented": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": "manual",
+      "groups": [
+        "most_liked_tagged"
+      ],
+      "source_sha": "011430dcbb98ff48cd11977e9bf808b239c6b9f5"
+    },
+    "shubham4413/so100_smolvla_rc": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "most_liked_tagged"
+      ],
+      "source_sha": "b829fbf12935c4575ce8d276e3884a3d6dbf0103"
+    },
+    "simple-world-lab/HiFi-UMI-2K": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "most_liked_tagged"
+      ],
+      "source_sha": "a53b7b5784afdd50b2fda9195c9f724ef75ffdaf"
+    },
+    "snupilab/humanoidtoolbench-teleop": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "most_liked_tagged"
+      ],
+      "source_sha": "1ef5be08fb11ce5f9f571f297c46a696a3116cf3"
+    },
+    "yuanty/LIBERO-fastwam": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "most_liked_tagged"
+      ],
+      "source_sha": "ee018b997c430bb12b5bf3c892d744798c5a2f91"
+    },
+    "yuanty/robotwin2.0-fastwam": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "most_liked_tagged"
+      ],
+      "source_sha": "aac262c35d02cc71b2f6ef670bd65fd9f2bb2547"
+    },
+    "yuuu94/W2-VLA-Training-Data": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "most_liked_tagged"
+      ],
+      "source_sha": "b23337e5fc410d59b45e6dbfc899bab1af6c6d7c"
+    },
+    "zfff/strawberry_picking_dataset_scara_clustered": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "most_liked_tagged"
+      ],
+      "source_sha": "5c72c4bc40637582b93c8338383a7121fa7a58a5"
+    },
+    "zhourui9813/DexRoam_Realworld_Data": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "most_liked_tagged"
+      ],
+      "source_sha": "c3801797ea035b7997af9972ae7ee2266434075a"
+    },
+    "zjunlp/LabUtopia-Level3-TransportBeaker": {
+      "branches": {
+        "lerobot-sidecars": {
+          "status": "branch_absent"
+        },
+        "source": {
+          "status": "directory_absent"
+        }
+      },
+      "gated": false,
+      "groups": [
+        "most_liked_tagged"
+      ],
+      "source_sha": "61643066c58019347e12a77d4a76bd19a20f13d4"
+    }
+  },
+  "started_utc": "2026-11-19T17:45:33+00:00",
+  "top_tagged_count_requested": 100
+}
