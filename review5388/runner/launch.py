@@ -34,11 +34,11 @@ base64 -d "$BUNDLE_PATH" > "$WORK/input-bundle.tar.gz"
 printf '%s  %s\n' "$BUNDLE_SHA256" "$WORK/input-bundle.tar.gz" | sha256sum -c
 tar -xzf "$WORK/input-bundle.tar.gz"
 bash runner/environment.sh
-exec "$WORK/venv/bin/python" runner/remote.py
+exec "$WORK/venv/bin/python" -m runner.remote
 """
 
 
-def bundle():
+def bundle(profile):
     paths = [
         ROOT / "benchmark.py",
         ROOT / "telemetry.py",
@@ -49,6 +49,8 @@ def bundle():
         ROOT / "runner" / "remote.py",
     ]
     paths.extend(sorted((ROOT / "correctness").glob("*.py")))
+    if profile == "worker-memory":
+        paths.append(ROOT / "worker_memory.py")
     stream = io.BytesIO()
     with tarfile.open(fileobj=stream, mode="w:gz") as archive:
         for path in paths:
@@ -65,6 +67,7 @@ def append(ledger, row):
 
 def prior_reservation(api, rows):
     jobs = {row.get("run"): row["job_id"] for row in rows if row.get("event") == "submitted"}
+    observations = {row["job_id"]: row for row in rows if row.get("event") == "terminal_observation"}
     total = 0.0
     for row in rows:
         if "usd_reserved" not in row:
@@ -76,6 +79,12 @@ def prior_reservation(api, rows):
                 job = api.inspect_job(job_id=job_id)
                 seconds = job.durations.total_secs if job.durations else None
                 if job.status.stage in TERMINAL:
+                    evidence = observations.get(job_id)
+                    if seconds is None and job.created_at and evidence is not None:
+                        original = (LEDGER.parent / evidence["source"]).read_bytes()
+                        if hashlib.sha256(original).hexdigest() == evidence["response_sha256"]:
+                            ended = dt.datetime.fromisoformat(evidence["conservative_observed_utc"])
+                            seconds = (ended - job.created_at).total_seconds()
                     observed = LEDGER.parent / f"{row.get('run')}.job.json"
                     if seconds is None and job.created_at and observed.is_file():
                         recorded = json.loads(observed.read_text())
@@ -91,12 +100,12 @@ def prior_reservation(api, rows):
     return total
 
 
-def prepared_index(api, source_run):
+def prepared_index(api, source_run, dataset="bucket"):
     repo_revision = api.dataset_info(REPO).sha
-    proof_path = f"review5388/results/{source_run}/bucket-private-transfer.json"
+    proof_path = f"review5388/results/{source_run}/{dataset}-private-transfer.json"
     proof = api.hf_hub_download(REPO, proof_path, repo_type="dataset", revision=repo_revision)
     transfer = json.loads(Path(proof).read_text())["private_transfer"]
-    expected_prefix = f"review5388/prepared/{source_run}/bucket/"
+    expected_prefix = f"review5388/prepared/{source_run}/{dataset}/"
     path = transfer["path"]
     relative = Path(transfer["relative_cache_path"])
     if transfer["repo"] != REPO or not path.startswith(expected_prefix) or relative.name != Path(path).name:
@@ -118,22 +127,28 @@ def prepared_index(api, source_run):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("run", help="Unique private result folder and job label suffix.")
-    parser.add_argument("--profile", choices=("probe", "matrix", "reverse", "correctness", "tolerance"), required=True)
+    parser.add_argument("--profile", choices=("probe", "matrix", "reverse", "correctness", "tolerance", "tolerance-repeat",
+                                 "worker-memory"), required=True)
     parser.add_argument("--minutes", type=int, required=True)
     parser.add_argument("--wait-for-job", help="Delay workload until this earlier job stops.")
-    parser.add_argument("--prepared-from-run", help="Use the verified Molmo index from this matrix run.")
+    parser.add_argument("--prepared-from-run", help="Use verified indexes from this matrix run.")
 
-    parser.add_argument("--datasets", nargs="+", choices=("droid", "bucket", "abc"),
-                        default=("droid", "bucket", "abc"))
+    parser.add_argument("--datasets", nargs="+", choices=("droid", "bucket", "abc"))
     args = parser.parse_args()
     if not re.fullmatch(r"[a-z0-9][a-z0-9-]{2,39}", args.run):
         parser.error("Run name must use 3 to 40 lower-case letters, numbers, or hyphens.")
-    if args.profile == "tolerance":
-        if args.prepared_from_run and not re.fullmatch(r"[a-z0-9][a-z0-9-]{2,39}", args.prepared_from_run):
-            parser.error("Invalid prepared-index run name.")
+    if args.prepared_from_run and (args.profile not in ("tolerance", "worker-memory") or not re.fullmatch(
+        r"[a-z0-9][a-z0-9-]{2,39}", args.prepared_from_run
+    )):
+        parser.error("Invalid prepared-index run name or unsupported profile.")
+    if args.profile in ("tolerance", "tolerance-repeat"):
         args.datasets = ["bucket"]
-    elif args.prepared_from_run:
-        parser.error("--prepared-from-run is available with the tolerance profile.")
+    elif args.profile == "worker-memory":
+        if not args.prepared_from_run:
+            parser.error("The worker-memory profile requires --prepared-from-run.")
+        args.datasets = args.datasets or ["abc", "droid"]
+    else:
+        args.datasets = args.datasets or ["droid", "bucket", "abc"]
     if args.wait_for_job and not re.fullmatch(r"[0-9a-f]{24}", args.wait_for_job):
         parser.error("Expected a Hugging Face Job ID.")
     if args.minutes < 5:
@@ -146,8 +161,13 @@ def main():
         raise SystemExit("Hugging Face credentials are unavailable.")
     if api.dataset_info(REPO).private is not True:
         raise SystemExit("The configured artifact dataset must be private.")
-    prepared = prepared_index(api, args.prepared_from_run) if args.prepared_from_run else None
-    content, digest = bundle()
+    prepared = None
+    if args.profile == "worker-memory":
+        prepared = {dataset: prepared_index(api, args.prepared_from_run, dataset)
+                    for dataset in dict.fromkeys(args.datasets)}
+    elif args.prepared_from_run:
+        prepared = prepared_index(api, args.prepared_from_run)
+    content, digest = bundle(args.profile)
     LEDGER.parent.mkdir(parents=True, exist_ok=True)
     with LEDGER.open("a+", encoding="utf-8") as ledger:
         fcntl.flock(ledger, fcntl.LOCK_EX)

@@ -34,3 +34,15 @@ uv run --no-project --with huggingface-hub==2.0.0 runner/collect.py molmo-tol01 
 ```
 
 To test prepared-index receipt instead, add `--prepared-from-run matrix03` after that matrix saves its verified Molmo transfer. The control downloads and verifies that index before baseline construction.
+
+Use `--profile tolerance-repeat --minutes 75` to reverse the cold reader order and attempt 25,000 batches per reader with the same 1 ms setting. This run keeps its first 125 batches after refill two and continues to the fixed target. It saves additional checkpoints at batches 15,000, 17,500, 20,000, and 25,000.
+
+## Measure worker memory
+
+After the main matrix verifies the prepared archives, use them for a separate baseline worker-memory job. The default source order is ABC then DROID. Each source transfers its index once. The runner uses fresh Python processes for one and four native DataLoader workers and attempts 125 batches per cell.
+
+```bash
+uv run --no-project --with huggingface-hub==2.0.0 runner/launch.py worker-mem01 \
+  --profile worker-memory --prepared-from-run matrix03 --minutes 39
+uv run --no-project --with huggingface-hub==2.0.0 runner/collect.py worker-mem01 --logs --sync
+```

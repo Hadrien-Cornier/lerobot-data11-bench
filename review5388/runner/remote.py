@@ -165,7 +165,7 @@ def verify_bucket(label):
 
 
 def benchmark(dataset, reader, label, cache, timeout, *, single_frame=False,
-              batches=125000, warm_batches=0, cache_state="cold", history=False, release=False, tolerance_s=None):
+              batches=125000, warm_batches=0, cache_state="cold", history=False, release=False, tolerance_s=None, fixed_target=False):
     out = RESULTS / f"{label}.json"
     args = [
         "benchmark.py", "--dataset", dataset, "--reader", reader, "--output", out,
@@ -180,6 +180,8 @@ def benchmark(dataset, reader, label, cache, timeout, *, single_frame=False,
         args += ["--tolerance-s", str(tolerance_s)]
     if warm_batches:
         args += ["--warm-batches", str(warm_batches)]
+    if fixed_target:
+        args.append("--continue-to-max-batches")
     return run(label, args, timeout, reader, cache, release=release)
 
 
@@ -199,14 +201,20 @@ def native_archive(cache):
     return None
 
 
-def download_prepared(dataset, cache, reference):
+def download_prepared(dataset, cache, reference, timeout=900, *, measure_wire=False):
     label = f"{dataset}-private-transfer"
     out = RESULTS / f"{label}.json"
-    code = run(label, [
+    command = [
         "runner/publisher.py", "--dataset", dataset, "--out", out, "--private-repo", REPO,
         "--private-path", reference["path"], "--private-revision", reference["revision"],
         "--private-destination", reference["relative_cache_path"], "--private-sha256", reference["sha256"],
-    ], 900, cache=cache)
+    ]
+    if measure_wire:
+        command = [
+            "worker_memory.py", "receipt", "--output", RESULTS / f"{label}-wire.json",
+            "--receipt-manifest", out, "--", PY, *command,
+        ]
+    code = run(label, command, timeout, cache=cache)
     if code != 0 or not out.exists():
         return False
     observed = json.loads(out.read_text())["private_transfer"]["sha256"]
@@ -244,9 +252,9 @@ def capture_transfer(dataset, archive, source_cache, cache):
 
 
 def pair(dataset, state, readers, caps, caches, *, cache_state="cold", max_batches=125000,
-         single_frame=False, history=False, warm_batches=0, tolerance_s=None):
+         single_frame=False, history=False, warm_batches=0, tolerance_s=None, fixed_target=False):
     checks = {"dataset": dataset, "pair": state, "single_frame": single_frame, "history": history,
-              "tolerance_s": tolerance_s or 1e-4}
+              "tolerance_s": tolerance_s or 1e-4, "fixed_target": max_batches if fixed_target else None}
     if dataset == "bucket" and not verify_bucket(f"{state}-before"):
         append({"event": "pair-skipped", "reason": "source manifest", **checks})
         return False
@@ -255,7 +263,7 @@ def pair(dataset, state, readers, caps, caches, *, cache_state="cold", max_batch
         benchmark(
             dataset, reader, f"{dataset}-{state}-{reader}", caches[reader], caps[reader],
             single_frame=single_frame, history=history, batches=max_batches,
-            warm_batches=warm_batches, cache_state=reader_state, tolerance_s=tolerance_s,
+            warm_batches=warm_batches, cache_state=reader_state, tolerance_s=tolerance_s, fixed_target=fixed_target,
         )
     source_valid = dataset != "bucket" or verify_bucket(f"{state}-after")
     append({"event": "pair-done", "source_valid": source_valid, **checks})
@@ -405,6 +413,61 @@ def tolerance():
          caches, cache_state="warm", single_frame=True, tolerance_s=0.001, max_batches=1000)
 
 
+def tolerance_repeat():
+    order = ("baseline", "candidate")
+    caches = {reader: CACHE / f"bucket-tolerance-repeat-{reader}" for reader in order}
+    pair("bucket", "current-frame-tolerance-1ms-repeat", order, {"baseline": 2000, "candidate": 2550}, caches,
+         single_frame=True, tolerance_s=0.001, max_batches=25000, fixed_target=True)
+
+
+def worker_memory():
+    from benchmark import BATCH_SIZE, INPUTS
+
+    references = json.loads(os.environ["PREPARED_INDEX"])
+    map_index = (
+        "from pathlib import Path; import sys; "
+        "from lerobot.streaming.sidecar_utils import mapped_sidecar; "
+        "print(mapped_sidecar(Path(sys.argv[1]))[0])"
+    )
+    for dataset in DATASETS:
+        if dataset == "bucket" and not verify_bucket("worker-memory-before"):
+            continue
+        cache = CACHE / f"{dataset}-worker-memory"
+        reference = references[dataset]
+        transfer_cap = 540 if dataset == "abc" else 300
+        if not download_prepared(dataset, cache, reference, timeout=transfer_cap, measure_wire=True):
+            append({"event": "worker-memory-skipped", "dataset": dataset, "reason": "transfer failed"})
+            continue
+        archive = cache / "lerobot" / reference["relative_cache_path"]
+        if run(f"{dataset}-worker-memory-map-index", ["-c", map_index, archive], 300, cache=cache) != 0:
+            append({"event": "worker-memory-skipped", "dataset": dataset, "reason": "mapping failed"})
+            continue
+
+        shm = shutil.disk_usage("/dev/shm") if Path("/dev/shm").is_dir() else None
+        _, _, (channels, height, width), cameras = INPUTS[dataset]
+        image_bytes_per_batch = BATCH_SIZE * len(cameras) * channels * height * width
+        # Allow 128 KiB per batch for actions, state and other tensors. Reserve
+        # two additional batches and 20% of available shared memory.
+        batch_bytes = image_bytes_per_batch + 128 * 1024
+        prefetch = 4 if shm is None else next(
+            (factor for factor in (4, 2, 1) if (4 * factor + 2) * batch_bytes <= 0.8 * shm.free), 1
+        )
+        append({"event": "worker-memory-config", "dataset": dataset, "worker_counts": [1, 4],
+                "prefetch_factor": prefetch, "dev_shm_total_bytes": shm.total if shm else None,
+                "dev_shm_free_bytes": shm.free if shm else None, "image_bytes_per_batch": image_bytes_per_batch})
+
+        for workers in (1, 4):
+            label = f"{dataset}-worker-memory-w{workers}"
+            run(label, ["worker_memory.py", "measure", "--dataset", dataset, "--workers", str(workers),
+                        "--output", RESULTS / f"{label}.json", "--max-batches", "125",
+                        "--prefetch-factor", str(prefetch),
+                        "--sidecar-manifest", RESULTS / f"{dataset}-private-transfer.json"], 360, cache=cache)
+        valid_source = dataset != "bucket" or verify_bucket("worker-memory-after")
+        append({"event": "worker-memory-pair-done", "dataset": dataset, "source_valid": valid_source,
+                "worker_counts": [1, 4]})
+        upload(f"{dataset}-worker-memory")
+
+
 def wait_for_previous():
     job_id = os.environ.get("WAIT_FOR_JOB")
     if not job_id:
@@ -425,6 +488,7 @@ def main():
         raise RuntimeError("Evidence destination must be private.")
     RESULTS.mkdir(parents=True, exist_ok=True)
     usage = shutil.disk_usage(WORK)
+    shm = shutil.disk_usage("/dev/shm") if Path("/dev/shm").is_dir() else None
     metadata = {
         "profile": PROFILE, "run": RUN, "job_id": os.environ.get("JOB_ID"),
         "bundle_revision": os.environ["BUNDLE_REVISION"], "bundle_sha256": os.environ["BUNDLE_SHA256"],
@@ -436,6 +500,8 @@ def main():
         "cpu_affinity": sorted(os.sched_getaffinity(0)),
         "memory_limit_bytes": read_file("/sys/fs/cgroup/memory.max"),
         "disk_total_bytes": usage.total, "disk_free_bytes": usage.free, "started_utc": now(),
+        "dev_shm_total_bytes": shm.total if shm else None,
+        "dev_shm_free_bytes": shm.free if shm else None,
         "job_cap_seconds": JOB_SECONDS, "source_bucket_sha256": BUCKET_MANIFEST,
         "concurrent_jobs_at_launch": json.loads(os.environ.get("CONCURRENT_JOBS_AT_LAUNCH", "[]")),
     }
@@ -450,6 +516,10 @@ def main():
             probe()
         elif PROFILE == "tolerance":
             tolerance()
+        elif PROFILE == "tolerance-repeat":
+            tolerance_repeat()
+        elif PROFILE == "worker-memory":
+            worker_memory()
         else:
             matrix()
     finally:

@@ -268,6 +268,8 @@ def parse_args():
     parser.add_argument("--cache-state", choices=("cold", "warm", "unclassified"), default="unclassified")
     parser.add_argument("--warm-batches", type=positive_int, default=0)
     parser.add_argument("--max-batches", type=positive_int, default=125000)
+    parser.add_argument("--continue-to-max-batches", action="store_true",
+                        help="Measure the fixed target even after the two-refill window qualifies.")
     parser.add_argument("--max-seconds", type=positive_int)
     parser.add_argument("--min-steady-batches", type=positive_int, default=125)
     parser.add_argument("--pool-size", type=positive_int, default=32)
@@ -310,6 +312,7 @@ def main():
         "cache": args.cache_state,
         "config": {
             "max_batches": args.max_batches,
+            "continue_to_max_batches": args.continue_to_max_batches,
             "max_seconds": args.max_seconds,
             "min_steady_batches": args.min_steady_batches,
             "warm_batches": args.warm_batches,
@@ -327,6 +330,7 @@ def main():
         "contract": contract,
         "timings": timings,
     }
+    checkpoints = (*MILESTONES, 15000, 17500, 20000, 25000) if args.continue_to_max_batches else MILESTONES
     windows = {}
     failures = Counter()
     seen = set()
@@ -476,10 +480,13 @@ def main():
                 near_1p0s_pairs=stats[3], largest_episode_share=stats[4], contract_errors=errors,
             )
             for name, window in windows.items():
-                if name != "to_1000" or batch_number <= 1000:
-                    window.add(elapsed, wait_s, raw, len(new), len(usable_new), stats)
+                if name == "to_1000" and batch_number > 1000:
+                    continue
+                if args.continue_to_max_batches and name == "after_refill_2" and len(window.waits) >= args.min_steady_batches:
+                    continue
+                window.add(elapsed, wait_s, raw, len(new), len(usable_new), stats)
             pool.batch(batch_number, new)
-            if batch_number in MILESTONES:
+            if batch_number in checkpoints:
                 timings["milestones"][str(batch_number)] = {"elapsed_s": elapsed, **progress, "io": io.snapshot()}
                 dump("running")
                 print(
@@ -496,7 +503,8 @@ def main():
                 dump("running")
             del batch
             if (
-                batch_number >= 1000
+                not args.continue_to_max_batches
+                and batch_number >= 1000
                 and "after_refill_2" in windows
                 and len(windows["after_refill_2"].waits) >= args.min_steady_batches
             ):
