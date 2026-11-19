@@ -1,0 +1,157 @@
+{
+  "schema_version": 1,
+  "source": "pepijn223/MolmoAct2-BimanualYAM-Dataset-bucket",
+  "bucket_manifest_sha256": "aebacc429d54f284e103ff10613b925f5827c347e0678846b0b6f0015dded782",
+  "manifest_checks_before_and_after_each_run": true,
+  "environment": {
+    "platform": "Linux",
+    "container": "python:3.12-slim-trixie",
+    "flavor": "cpu-xl",
+    "cpu_model": "AMD EPYC 7R13 Processor",
+    "cpu_quota": "1600000 100000",
+    "memory_limit_bytes": 133999996928,
+    "software": {
+      "torch": "2.11.0+cpu",
+      "torchcodec": "0.11.1+cpu",
+      "av": "15.1.0",
+      "datasets": "5.2.1.dev0",
+      "huggingface_hub": "2.0.0",
+      "fsspec": "2026.9.0",
+      "hf_xet": "1.8.0",
+      "numpy": "2.2.6",
+      "pyarrow": "26.0.1"
+    },
+    "datasets_revision": "464fe790b82a320350c9c686c1b7e409323a1cf3",
+    "same_host": true,
+    "cache_state": "fresh disk and process per arm"
+  },
+  "settings": {
+    "seed": 42,
+    "buffer_size": 32,
+    "batch_size": 8,
+    "workers": 0,
+    "tolerance_s": 0.001,
+    "return_uint8": true,
+    "delta_timestamps": null
+  },
+  "workload": {
+    "batches": 1000,
+    "samples": 8000,
+    "reference_sha256": "12ca691cc76df2f3e1e68733a03d4f27b62f393b77ebe6f40b218fb34e6f35ca",
+    "all_arms_match_saved_linux_stock_audit": true,
+    "shared_audit": {
+      "batches_checked": 1000,
+      "reference_batches": 1000,
+      "reference_trace_sha256": "1efe1cf5d05bf9895f48ae0ea0d0ed40e4a273920a0db63b53c3e53a4dd8dc09",
+      "reference_ordered_anchor_sha256": "fc96b52afef08706deee06effe9bea3d0ca9d54d672be4f60c27f2ea6a786ea4",
+      "ordered_anchor_sha256": "fc96b52afef08706deee06effe9bea3d0ca9d54d672be4f60c27f2ea6a786ea4",
+      "payload_xxh3_128_by_field": {
+        "observation.images.left": "e4134f736cbe922ccb3cb2480ede3834",
+        "observation.images.right": "a08f3bdb9ed3b54004f42ec1c77db563",
+        "observation.images.top": "ed5ae309de1a60f3db366b9ea285e543",
+        "action": "30ab4c7017e2a8af3b436d96703ccf28",
+        "observation.state": "da475f8b9b1302fe899fdded1bd27400"
+      },
+      "ordered_output_sha256": "76313c64bf9870e8a60f52d47b8faec13752adffd3af6236900ad5c059bf7c66"
+    }
+  },
+  "timing_method": {
+    "start": "Immediately before constructing StreamingLeRobotDataset",
+    "stop": "As PyTorch DataLoader returns the named batch to the consumer",
+    "exclusions": [
+      "Bucket manifest checks",
+      "Setup before each timed run"
+    ],
+    "prior_consumer_work_s": "Audit, batch release and checkpoint writes for preceding batches",
+    "delivery_less_prior_consumer_work_s": "Arithmetic subtraction that can overlap background decode"
+  },
+  "arms": [
+    {
+      "implementation": "grouped",
+      "source_pin": {
+        "revision": "adbdf5f0218898b187b4d20376a4bdee4a97d388",
+        "module_sha256": {
+          "streaming_dataset.py": "f9333662e84823437c18f4d8f49dd2cd60a75cc4420a3a9a6bdacaa00ce74b09",
+          "video_utils.py": "2390350f68b6bec18404c1d2729c42648de9034c63a5dd02ba24fd2d19e62f8a"
+        }
+      },
+      "constructor_s": 8.72315146998153,
+      "milestones": {
+        "1": {
+          "wall_delivery_s": 22.015718533977633,
+          "prior_consumer_work_s": 0.0,
+          "delivery_less_prior_consumer_work_s": 22.015718533977633
+        },
+        "125": {
+          "wall_delivery_s": 49.54232505799155,
+          "prior_consumer_work_s": 1.8901900629862212,
+          "delivery_less_prior_consumer_work_s": 47.652134995005326
+        },
+        "1000": {
+          "wall_delivery_s": 100.31435905900435,
+          "prior_consumer_work_s": 7.167978673474863,
+          "delivery_less_prior_consumer_work_s": 93.14638038552948
+        }
+      },
+      "matched_stock_output": true
+    },
+    {
+      "implementation": "stock",
+      "source_pin": {
+        "revision": "1a60cb4b800c2947834342752c32f064c8bf143c",
+        "module_sha256": {
+          "streaming_dataset.py": "17ec1e996af3e83de1e64b08b4550ff4c25914f41abf06329abbeb5c0f50a656",
+          "video_utils.py": "617c6cd6a06eeaeba7dfce54e57566a0d7815dc6baca11a7befc65dd465f2232"
+        }
+      },
+      "constructor_s": 8.66097455099225,
+      "milestones": {
+        "1": {
+          "wall_delivery_s": 28.691780852008378,
+          "prior_consumer_work_s": 0.0,
+          "delivery_less_prior_consumer_work_s": 28.691780852008378
+        },
+        "125": {
+          "wall_delivery_s": 77.89677863300312,
+          "prior_consumer_work_s": 0.9561089239141438,
+          "delivery_less_prior_consumer_work_s": 76.94066970908898
+        },
+        "1000": {
+          "wall_delivery_s": 193.41354992199922,
+          "prior_consumer_work_s": 14.24913188375649,
+          "delivery_less_prior_consumer_work_s": 179.16441803824273
+        }
+      },
+      "matched_stock_output": true
+    },
+    {
+      "implementation": "reuse",
+      "source_pin": {
+        "revision": "992364e125736f5fefb4c2bf4690c0b3d187b951",
+        "module_sha256": {
+          "streaming_dataset.py": "343b44f9c7bd7674bd1f8c0ad2c13dcc33a884c007eb9d724353499af5e05759",
+          "video_utils.py": "2390350f68b6bec18404c1d2729c42648de9034c63a5dd02ba24fd2d19e62f8a"
+        }
+      },
+      "constructor_s": 8.8282780770096,
+      "milestones": {
+        "1": {
+          "wall_delivery_s": 26.75865548301954,
+          "prior_consumer_work_s": 0.0,
+          "delivery_less_prior_consumer_work_s": 26.75865548301954
+        },
+        "125": {
+          "wall_delivery_s": 60.57496470102342,
+          "prior_consumer_work_s": 1.9410172341449652,
+          "delivery_less_prior_consumer_work_s": 58.63394746687845
+        },
+        "1000": {
+          "wall_delivery_s": 132.6854123150115,
+          "prior_consumer_work_s": 11.912827373162145,
+          "delivery_less_prior_consumer_work_s": 120.77258494184935
+        }
+      },
+      "matched_stock_output": true
+    }
+  ]
+}

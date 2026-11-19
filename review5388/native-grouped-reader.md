@@ -4,6 +4,26 @@ The three revisions are stock #5388 at `1a60cb4b800c2947834342752c32f064c8bf143c
 
 The three native revisions produced identical RGB, state, action and ordered episode/frame hashes on all 1,000 MolmoAct2 batches on the same Mac. The compact fixture also preserved every field, batch boundary and partial batch in all four loader configurations. [MolmoAct2 results](measurements/native-molmo-parity.json) · [Finite fixture results](measurements/native-grouping-fixture.json)
 
+## Timing the exact PR commits
+
+Each version ran once on the same 16-vCPU HF CPU XL host, with a new process and empty local caches. The run order was grouped, stock, reuse. Wall time includes construction and consumer checks on preceding batches. The bucket manifest matched before and after each run.
+
+| Reader | Batch 1 | Batch 125 | Batch 1,000 |
+|---|---:|---:|---:|
+| Original #5388 | 28.69 s | 77.90 s | 193.41 s |
+| Decoder reuse | 26.76 s | 60.57 s | 132.69 s |
+| Reuse and grouped reads | 22.02 s | 49.54 s | 100.31 s |
+
+The combined patch delivered batch 1 about 6.68 seconds sooner and batch 1,000 about 93.10 seconds sooner (48.1%). All three returned the saved Linux stock fingerprint for the same 8,000 examples, including all 24,000 camera images. These measurements cover the current-action workload before the first pool refill. [Raw milestones, source revisions and output hashes](measurements/native-molmo-timings.json)
+
+To reproduce this timing run, use a Linux host with the prerequisites in the [environment setup](method.md#reproduce-a-cloud-reader-measurement). From `review5388/` run:
+
+```bash
+export WORK=/work/review5388
+bash runner/environment.sh
+bash runner/replay_native_molmo.sh
+```
+
 ## Reproduce frame and order checks
 
 Run from the benchmark's `review5388/` directory in the [pinned dataset environment](method.md#reproduce-a-cloud-reader-measurement). Set `PY` to its Python interpreter. The environment setup script puts the pinned Datasets code at commit `464fe790` in that environment. Keep the interpreter, TorchCodec and FFmpeg versions fixed across the comparisons. The public fixture requires FFmpeg on PATH.
