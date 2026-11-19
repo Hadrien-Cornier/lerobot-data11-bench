@@ -1,0 +1,66 @@
+{
+  "reader": "candidate",
+  "candidate_reuse_control": true,
+  "environment": {
+    "python": "3.12.12 (main, Oct 28 2025, 11:52:25) [Clang 20.1.4 ]",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "packages": {
+      "datasets": "5.2.0",
+      "huggingface_hub": "2.4.0",
+      "fsspec": "2026.9.0",
+      "torch": "2.15.0",
+      "torchvision": "0.29.2",
+      "torchcodec": "0.17.0",
+      "pyarrow": "26.0.1",
+      "numpy": "2.2.6",
+      "httpx": null,
+      "httpx2": "2.16.2",
+      "hf_xet": "1.8.0",
+      "psutil": "7.2.2",
+      "lerobot": "0.7.1"
+    },
+    "lerobot_revision": "1a60cb4b800c2947834342752c32f064c8bf143c",
+    "lerobot_streaming_module_sha256": "17ec1e996af3e83de1e64b08b4550ff4c25914f41abf06329abbeb5c0f50a656",
+    "datasets_source": {
+      "revision": "464fe790b82a320350c9c686c1b7e409323a1cf3",
+      "cache_module_sha256": "16ab95f92d6d147e0ab15de55d0a4afab2553331fa520df0e6e8ae4b58ab2447"
+    },
+    "hf_hub_disable_xet": "unset"
+  },
+  "episodes": 16,
+  "source_mp4s": 24,
+  "source_mp4_bytes": 836814,
+  "source_mp4_inventory_sha256": "906b2fb7f47f9f0c72005ac965c85dae848e5b0c9e11a442260ffe6bc90ae26b",
+  "anchors": 786,
+  "request_shuffle_seed": 42,
+  "camera_requests": 2358,
+  "frame_offsets": [
+    0
+  ],
+  "requested_frames": 2358,
+  "tolerance_s": 0.0001,
+  "max_absolute_rgb8_difference_from_ffmpeg": 0,
+  "baseline_video_payload_prestage_s": null,
+  "reader_request_loop_s": 4.025374707998708,
+  "baseline_decoder_reuse": null,
+  "stage_durations": {
+    "candidate_rgb_torchcodec_create": {
+      "calls": 24,
+      "errors": 0,
+      "wall_s_sum": 0.03265779301000293,
+      "calling_thread_cpu_s_sum": 0.018598666999997793
+    },
+    "candidate_rgb_torchcodec_get_frames_at": {
+      "calls": 2358,
+      "errors": 0,
+      "wall_s_sum": 0.9561167654464953,
+      "calling_thread_cpu_s_sum": 0.9477028939999772
+    },
+    "candidate_rgb_decode_inclusive_of_io": {
+      "calls": 2358,
+      "errors": 0,
+      "wall_s_sum": 1.220997478303616,
+      "calling_thread_cpu_s_sum": 1.174376269000009
+    }
+  }
+}

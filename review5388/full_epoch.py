@@ -45,7 +45,7 @@ def primary_epochs(cells, sizes):
         for profile in PROFILES:
             candidate = cells[f"{dataset}-{profile}-candidate"]
             if candidate["status"] != "error" or int(candidate["usable_unique"]) != 0:
-                raise ValueError(f"Recheck Quentin's 100-action results for {candidate['cell']}")
+                raise ValueError(f"Recheck #5388's 100-action results for {candidate['cell']}")
         projections.append([*row, "0 usable batches"])
     counts.append(["All three, iterated separately", f"{sum(sizes.values()):,}", "", "", f"{total_batches:,}"])
     print("## One epoch at batch size eight, final partial batch kept\n")
@@ -53,8 +53,8 @@ def primary_epochs(cells, sizes):
     for_total = [f"{sum(vals):.2f}" if len(vals) == len(DATASETS) else "Incomplete" for vals in totals.values()]
     projections.append(["All three, in sequence", *for_total, "0 usable batches"])
     print("## Three cameras, current state and 100 target actions, projected CPU input days\n")
-    table(["Dataset", "Pepijn fresh build", "Pepijn fresh index", "Pepijn warm 1", "Pepijn warm 2",
-           "Quentin, all four setups"], projections)
+    table(["Dataset", "#3917 fresh build", "#3917 fresh index", "#3917 warm 1", "#3917 warm 2",
+           "#5388, all four setups"], projections)
 
 
 def current_frame_epochs(audit, anchors):
@@ -74,7 +74,7 @@ def current_frame_epochs(audit, anchors):
             row.append(f"{days:.2f} ({rate:.2f}/s)")
         cold.append(row)
     print("## MolmoAct2 with current images and current action, 1 ms, two-refill projections\n")
-    table(["Run", "Pepijn epoch days (examples/s)", "Quentin epoch days (examples/s)"], cold)
+    table(["Run", "#3917 epoch days (examples/s)", "#5388 epoch days (examples/s)"], cold)
     repeats = []
     for name in ("r01", "r02", "r03"):
         trial = trials[name]
@@ -90,8 +90,8 @@ def current_frame_epochs(audit, anchors):
             row.append(f"{days:.2f} ({rate:.2f}/s)")
         repeats.append(row)
     print("## What if each fresh-index pair's observed prefix rate held for an entire Molmo epoch?\n")
-    print("These prefixes end before a verified pool refill. Pepijn's elapsed time includes index receipt.\n")
-    table(["Pair", "Last shared batch", "Pepijn epoch days (examples/s)", "Quentin epoch days (examples/s)"],
+    print("These prefixes end before a verified pool refill. #3917's elapsed time includes index receipt.\n")
+    table(["Pair", "Last shared batch", "#3917 epoch days (examples/s)", "#5388 epoch days (examples/s)"],
           repeats)
 
 

@@ -29,6 +29,13 @@ STAGES = {
         "candidate_rgb_decode_inclusive_of_io": "decode",
     },
 }
+RGB_COMPONENT_STAGES = {
+    "baseline": (
+        "baseline_rgb_torchcodec_create", "baseline_rgb_torchcodec_get_frames_at",
+        "baseline_rgb_pyav_create", "baseline_rgb_pyav_get_frames_played_at",
+    ),
+    "candidate": ("candidate_rgb_torchcodec_create", "candidate_rgb_torchcodec_get_frames_at"),
+}
 COMMON_STAGES = {
     "metadata_fsspec_range_fetch": "metadata",
     "parquet_fsspec_range_fetch": "parquet",
@@ -46,6 +53,7 @@ STAGE_NOTE = (
     "Per-call sums can overlap and include prefetch that supplies later batches. "
     "CPU covers the calling thread. Decode can include I/O or cache wait."
 )
+RGB_COMPONENT_NOTE = STAGE_NOTE + " This operation is nested inside the inclusive RGB decode timing."
 MEMORY_NOTE = "Sampled process-tree RSS sums can count shared pages for multiple processes."
 
 
@@ -228,12 +236,15 @@ def rows(path, record, run_events):
             yield metric(scope, target_batch, checkpoint, purpose, "http_body_bytes",
                          counters.get("http_body_bytes"), "bytes", io_artifact, HTTP_NOTE,
                          measurement=io_status(counters.get("http_body_bytes")))
-        for stage, category in (COMMON_STAGES | STAGES.get(reader, {})).items():
-            timers = io.get("stage_durations", {}).get(stage, {})
+        durations = io.get("stage_durations", {})
+        components = {stage: "decode" for stage in RGB_COMPONENT_STAGES.get(reader, ()) if stage in durations}
+        for stage, category in (COMMON_STAGES | STAGES.get(reader, {}) | components).items():
+            timers = durations.get(stage, {})
+            note = RGB_COMPONENT_NOTE if stage in components else STAGE_NOTE
             for key, unit in (("wall_s_sum", "s"), ("calling_thread_cpu_s_sum", "s"),
                               ("calls", "calls"), ("errors", "calls")):
                 yield metric(scope, target_batch, checkpoint, category, f"{stage}:{key}",
-                             timers.get(key), unit, io_artifact, STAGE_NOTE,
+                             timers.get(key), unit, io_artifact, note,
                              measurement=io_status(timers.get(key)))
         for key, note in (
             ("rss_sampled_peak_bytes", MEMORY_NOTE),

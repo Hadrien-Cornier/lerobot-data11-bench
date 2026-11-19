@@ -79,6 +79,7 @@ class IORecorder:
         self.probing = False
         self.cache_stats = None
         self.stages = defaultdict(Counter)
+        self._in_rgb_request = ContextVar("in_rgb_request", default=False)
 
     def touch(self, purpose, path, kind):
         if path:
@@ -139,15 +140,58 @@ class IORecorder:
                 metric["wall_s_sum"] += wall_s
                 metric["calling_thread_cpu_s_sum"] += cpu_s
 
-    def wrap_stage(self, module, name, stage):
+    def wrap_stage(self, module, name, stage, *, rgb_request=False):
         original = getattr(module, name)
 
         @wraps(original)
         def measured(*args, **kwargs):
             with self.measure(stage):
-                return original(*args, **kwargs)
+                if not rgb_request:
+                    return original(*args, **kwargs)
+                token = self._in_rgb_request.set(True)
+                try:
+                    return original(*args, **kwargs)
+                finally:
+                    self._in_rgb_request.reset(token)
 
         setattr(module, name, measured)
+
+    def wrap_rgb_operation(self, decoder, name, stage):
+        original = getattr(decoder, name)
+
+        @wraps(original)
+        def measured(*args, **kwargs):
+            if not self._in_rgb_request.get():
+                return original(*args, **kwargs)
+            with self.measure(stage):
+                return original(*args, **kwargs)
+
+        setattr(decoder, name, measured)
+
+    def install_rgb_decode(self, reader):
+        from torchcodec.decoders import VideoDecoder
+
+        # Measure the native call boundaries inside the wider reader timings.
+        self.wrap_rgb_operation(VideoDecoder, "__init__", f"{reader}_rgb_torchcodec_create")
+        self.wrap_rgb_operation(VideoDecoder, "get_frames_at", f"{reader}_rgb_torchcodec_get_frames_at")
+
+        if reader == "candidate":
+            from lerobot.datasets import streaming_dataset
+
+            self.wrap_stage(
+                streaming_dataset, "decode_video_frames_torchcodec", "candidate_rgb_decode_inclusive_of_io",
+                rgb_request=True,
+            )
+            return
+
+        from lerobot.streaming.episode_cache import EpisodeByteCache, _PyAVVideoDecoder
+
+        self.wrap_stage(EpisodeByteCache, "_open_decoder", "baseline_rgb_decoder_open", rgb_request=True)
+        self.wrap_stage(
+            EpisodeByteCache, "_get_frames", "baseline_rgb_decode_inclusive_of_cache_wait", rgb_request=True,
+        )
+        self.wrap_rgb_operation(_PyAVVideoDecoder, "__init__", "baseline_rgb_pyav_create")
+        self.wrap_rgb_operation(_PyAVVideoDecoder, "get_frames_played_at", "baseline_rgb_pyav_get_frames_played_at")
 
     def reset(self):
         with self.lock:
@@ -210,6 +254,8 @@ class IORecorder:
         import fsspec
         from huggingface_hub.hf_file_system import HfFileSystem, HfFileSystemFile
 
+        self.install_rgb_decode(reader)
+
         # Keep the source name when HTTP requests are redirected to an opaque storage URL.
         original_range = HfFileSystemFile._fetch_range
 
@@ -256,9 +302,6 @@ class IORecorder:
             from lerobot.datasets import streaming_dataset
 
             self.wrap_stage(
-                streaming_dataset, "decode_video_frames_torchcodec", "candidate_rgb_decode_inclusive_of_io"
-            )
-            self.wrap_stage(
                 streaming_dataset.StreamingLeRobotDataset, "_sample_pool_with_delta", "candidate_pool_assembly"
             )
             original_cache_open = SharedBlockCacheFileSystem._open
@@ -279,8 +322,6 @@ class IORecorder:
         from lerobot.streaming.episode_parquet import EpisodeParquetReader
         from lerobot.streaming.range_fetch import NativeHTTPRangeFetcher
 
-        self.wrap_stage(EpisodeByteCache, "_open_decoder", "baseline_rgb_decoder_open")
-        self.wrap_stage(EpisodeByteCache, "_get_frames", "baseline_rgb_decode_inclusive_of_cache_wait")
         self.wrap_stage(EpisodeByteCache, "_fetch_and_synthesize", "baseline_video_fetch_and_synthesize")
         self.wrap_stage(EpisodeParquetReader, "read_episode", "baseline_parquet_read_and_assemble")
 

@@ -1,10 +1,12 @@
 # Does LeRobot #5388 start training faster?
 
-**The fast constructor reproduces. The 100-step training workload fails before batch one.** On Quentin's exact MolmoAct2 bucket, the draft constructed its reader in **6.93 seconds** and yielded the first current-frame sample at **15.13 seconds**. A timestamp error then prevented the consumer from receiving a complete batch at the default tolerance. With three current cameras and 100 target actions, the draft delivered zero batches on MolmoAct2, ABC-130K and DROID. The normal `lerobot-train` path failed in the dataset factory on the small fixture.
+**The fast constructor reproduces. The 100-step training workload fails before batch one.** On the MolmoAct2 bucket cited in #5388, the draft constructed its reader in **6.93 seconds** and yielded the first current-frame sample at **15.13 seconds**. A timestamp error then prevented the consumer from receiving a complete batch at the default tolerance. With three current cameras and 100 target actions, the draft delivered zero batches on MolmoAct2, ABC-130K and DROID. The normal `lerobot-train` path failed in the dataset factory on the small fixture.
 
-At 1 ms on MolmoAct2, Quentin delivered 1,000 three-camera, current-action batches sooner in both runs where Pepijn built an index from scratch. In three new pairs with a matching publisher-built index, Quentin delivered **batch one** sooner every time. Pepijn caught up at **batch 762, 374 and 940** and delivered **batch 1,000** sooner every time. The original index-supplied pair crossed at 702. Molmo has about 9.51 million batches of eight in a finite pass. The new crossovers all happened before 0.01% of it. [Repeat measurements, episode diversity and full-pass estimates](prepared-repeats.md)
+At 1 ms on MolmoAct2, #5388 delivered 1,000 three-camera, current-action batches sooner in both runs where #3917 built an index from scratch. In three new pairs with a matching publisher-built index, #5388 delivered **batch one** sooner every time. #3917 caught up at **batch 762, 374 and 940** and delivered **batch 1,000** sooner every time. The original index-supplied pair crossed at 702. Molmo has about 9.51 million batches of eight in a finite pass. The new crossovers all happened before 0.01% of it. [Repeat measurements, episode diversity and full-pass estimates](prepared-repeats.md)
 
 The reviewed draft opened **November 16, 2026 at 19:06 UTC** and GitHub shows its last update at **19:09 UTC** that day. As checked November 19, the draft was still blocked, with review required. Baseline `fe1c5459`, proposal `1a60cb4b` and Datasets `464fe790` are pinned throughout. [LeRobot #5388](https://github.com/huggingface/lerobot/pull/5388) · [Datasets #8983](https://github.com/huggingface/datasets/pull/8983)
+
+Here #3917 means the merged loader plus its later fixes. [Where the readers spend time](reader-time.md)
 
 ## How long would a full epoch take?
 
@@ -12,24 +14,24 @@ An epoch here means delivering every eligible control step in a pinned dataset o
 
 ### All three datasets with 100 target actions per example
 
-| Dataset | Examples in one epoch | Batches including the last | Pepijn, fresh disk as published | Pepijn, fresh disk with matching index | Pepijn, warm disk | Quentin |
+| Dataset | Examples in one epoch | Batches including the last | #3917, fresh disk as published | #3917, fresh disk with matching index | #3917, warm disk | #5388 |
 |---|---:|---:|---:|---:|---:|---|
 | MolmoAct2 | 76,046,658 | 9,505,833 | 4.52 days | One refill, estimate open | 4.00–4.10 days | Failed before batch one |
 | ABC-130K | 382,468,339 | 47,808,543 | 7.97 days | 8.51 days | 7.76–11.66 days | Failed before batch one |
 | DROID | 27,630,375 | 3,453,797 | 1.19 days | 1.49 days | 0.97–1.07 days | Failed before batch one |
 | **One epoch of each, in sequence** | **486,145,372** | **60,768,173** | **13.69 days** | Missing Molmo rate | **12.84 and 16.73 days in the two warm runs** | **No usable batches** |
 
-For example, Pepijn took 617.26 seconds to deliver the first 1,000 MolmoAct2 examples (125 batches). After that it delivered 194.97 examples/s across two episode-pool refills. Delivering all 76,046,658 examples at that rate would take `617.26 + (76,046,658 - 1,000) / 194.97` seconds, or **108.5 hours**. We apply the same calculation to the other rows. The cold runs directly covered 0.308% of MolmoAct2, 0.076% of ABC-130K and 0.114% of DROID. Each projected epoch assumes its own measured rate continues. The totals sum unrounded times and retain the final batch of each dataset.
+For example, #3917 took 617.26 seconds to deliver the first 1,000 MolmoAct2 examples (125 batches). After that it delivered 194.97 examples/s across two episode-pool refills. Delivering all 76,046,658 examples at that rate would take `617.26 + (76,046,658 - 1,000) / 194.97` seconds, or **108.5 hours**. We apply the same calculation to the other rows. The cold runs directly covered 0.308% of MolmoAct2, 0.076% of ABC-130K and 0.114% of DROID. Each projected epoch assumes its own measured rate continues. The totals sum unrounded times and retain the final batch of each dataset.
 
-In the fresh-index ABC and DROID runs, Pepijn reached batch 1,000 sooner than when it built the index. Those runs also recorded lower rates after batch 125. That difference drives the full-epoch estimates. Its cause remains open. Adding 0.8 seconds of camera history on ABC (five frames per view) changes the fresh-index estimate from **8.51 to 30.68 days**. [Workload and rate measurements](measurements/comparison.csv)
+In the fresh-index ABC and DROID runs, #3917 reached batch 1,000 sooner than when it built the index. Those runs also recorded lower rates after batch 125. That difference drives the full-epoch estimates. Its cause remains open. Adding 0.8 seconds of camera history on ABC (five frames per view) changes the fresh-index estimate from **8.51 to 30.68 days**. [Workload and rate measurements](measurements/comparison.csv)
 
 ### Both readers on all of MolmoAct2 with the current action only
 
-Only MolmoAct2 has a timed current-action comparison for both readers. At a common 1 ms video timestamp tolerance, the first long cold pair projects **4.13 days for Pepijn** and **8.01 days for Quentin** for the same 9,505,833 batches. Quentin's second qualifying cold run projects **10.33 days**. Pepijn's second cold run reached one refill. These runs tested each reader's own sample order and included cold startup once. [Rates and refill timings](prepared-repeats.md#what-one-full-pass-would-take)
+Only MolmoAct2 has a timed current-action comparison for both readers. At a common 1 ms video timestamp tolerance, the first long cold pair projects **4.13 days for #3917** and **8.01 days for #5388** for the same 9,505,833 batches. The #5388 reader's second qualifying cold run projects **10.33 days**. The #3917 reader's second cold run reached one refill. These runs tested each reader's own sample order and included cold startup once. [Rates and refill timings](prepared-repeats.md#what-one-full-pass-would-take)
 
 What happens if the three new fresh-index runs keep the speeds seen at the start for the entire dataset? For each pair, we extend the measured delivery rate from batch 126 to the last batch both readers completed and charge the observed startup once.
 
-| Matching index supplied to Pepijn | Last paired batch | Pepijn rate (examples/s) | Quentin rate (examples/s) | Pepijn at this rate for one epoch | Quentin at this rate for one epoch |
+| Matching index supplied to #3917 | Last paired batch | #3917 rate (examples/s) | #5388 rate (examples/s) | #3917 at this rate for one epoch | #5388 at this rate for one epoch |
 |---|---:|---:|---:|---:|---:|
 | Repeat 1 | 3,552 | 107.54 | 47.13 | 8.19 days | 18.68 days |
 | Repeat 2 | 3,978 | 128.75 | 52.71 | 6.84 days | 16.70 days |
@@ -54,12 +56,12 @@ The cold action-window runs directly covered 0.076% of ABC, 0.114% of DROID, and
 
 | Reader and starting state | Constructor (s) | Batch 1 (s) | Batch 125 (s) | Batch 1,000 (s) | Windows/s across refills | Episodes/batch, first 1k / across refills | Peak RAM (GB) | Finite pass (days, est.) |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
-| Pepijn, As published, fresh | 568.1 | 611.6 | 617.3 | 653.7 | 195.0 | 6.95 / 5.94 | 15.93 | 4.52 |
-| Quentin, As published, fresh | 7.5 | — | — | — | — | — / — | 1.09 | — |
-| Pepijn, Private index, fresh | 37.4 | 97.1 | 102.8 | 141.5 | — | 6.95 / — | 15.18 | — |
-| Quentin, Fresh, paired with index recipient | 7.3 | — | — | — | — | — / — | 1.13 | — |
-| Pepijn, Warm restart (2 runs) | 2.0–3.1 | 40.5–41.1 | 45.1–46.0 | 76.6–77.1 | 214.8–220.0 | 6.95 / 5.94 | 15.56–15.58 | 4.00–4.10 |
-| Quentin, Warm restart (2 runs) | 1.5–1.6 | — | — | — | — | — / — | 0.83–0.84 | — |
+| #3917, As published, fresh | 568.1 | 611.6 | 617.3 | 653.7 | 195.0 | 6.95 / 5.94 | 15.93 | 4.52 |
+| #5388, As published, fresh | 7.5 | — | — | — | — | — / — | 1.09 | — |
+| #3917, Private index, fresh | 37.4 | 97.1 | 102.8 | 141.5 | — | 6.95 / — | 15.18 | — |
+| #5388, Fresh, paired with index recipient | 7.3 | — | — | — | — | — / — | 1.13 | — |
+| #3917, Warm restart (2 runs) | 2.0–3.1 | 40.5–41.1 | 45.1–46.0 | 76.6–77.1 | 214.8–220.0 | 6.95 / 5.94 | 15.56–15.58 | 4.00–4.10 |
+| #5388, Warm restart (2 runs) | 1.5–1.6 | — | — | — | — | — / — | 0.83–0.84 | — |
 
 The cold baseline delivered 234,304 distinct windows with 0 duplicates and 2 verified pool refills. At batch 1,000, the largest single-episode share averaged 22.8% of a batch. 0.007% of within-batch pairs were from the same episode and at most 0.2 seconds apart.
 
@@ -69,15 +71,15 @@ The draft raised `TypeError: expected Tensor as element 0 in argument 0, but got
 
 | Reader and starting state | Constructor (s) | Batch 1 (s) | Batch 125 (s) | Batch 1,000 (s) | Windows/s across refills | Episodes/batch, first 1k / across refills | Peak RAM (GB) | Finite pass (days, est.) |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
-| Pepijn, As published, fresh | 2,505.2 | 2,583.9 | 2,586.4 | 2,598.0 | 557.3 | 6.98 / 5.87 | 24.30 | 7.97 |
-| Quentin, As published, fresh | 10.1 | — | — | — | — | — / — | 5.36 | — |
-| Pepijn, Private index, fresh | 149.0 | 261.1 | 263.9 | 278.5 | 520.4 | 6.98 / 5.87 | 24.11 | 8.51 |
-| Quentin, Fresh, paired with index recipient | 8.9 | — | — | — | — | — / — | 4.85 | — |
-| Pepijn, Warm restart (2 runs) | 8.0–11.6 | 88.3–127.6 | 91.0–131.6 | 102.5–149.2 | 379.6–570.4 | 6.98 / 5.87 | 23.96–24.03 | 7.76–11.66 |
-| Quentin, Warm restart (2 runs) | 1.7–1.8 | — | — | — | — | — / — | 4.63–5.27 | — |
-| Pepijn, History, warm | 8.0 | 89.0 | 95.1 | 135.9 | — | 6.98 / — | 22.66 | — |
-| Quentin, History, warm | 0.9 | — | — | — | — | — / — | 4.69 | — |
-| Pepijn, History, private index | 154.9 | 267.8 | 276.0 | 326.7 | 144.3 | 6.98 / 5.87 | 24.09 | 30.68 |
+| #3917, As published, fresh | 2,505.2 | 2,583.9 | 2,586.4 | 2,598.0 | 557.3 | 6.98 / 5.87 | 24.30 | 7.97 |
+| #5388, As published, fresh | 10.1 | — | — | — | — | — / — | 5.36 | — |
+| #3917, Private index, fresh | 149.0 | 261.1 | 263.9 | 278.5 | 520.4 | 6.98 / 5.87 | 24.11 | 8.51 |
+| #5388, Fresh, paired with index recipient | 8.9 | — | — | — | — | — / — | 4.85 | — |
+| #3917, Warm restart (2 runs) | 8.0–11.6 | 88.3–127.6 | 91.0–131.6 | 102.5–149.2 | 379.6–570.4 | 6.98 / 5.87 | 23.96–24.03 | 7.76–11.66 |
+| #5388, Warm restart (2 runs) | 1.7–1.8 | — | — | — | — | — / — | 4.63–5.27 | — |
+| #3917, History, warm | 8.0 | 89.0 | 95.1 | 135.9 | — | 6.98 / — | 22.66 | — |
+| #5388, History, warm | 0.9 | — | — | — | — | — / — | 4.69 | — |
+| #3917, History, private index | 154.9 | 267.8 | 276.0 | 326.7 | 144.3 | 6.98 / 5.87 | 24.09 | 30.68 |
 
 Requesting 0.8 seconds of history means five images per camera, or 15 images per example. The prepared baseline delivered 144.3 distinct windows/s across two refills on the history repeat, versus 520.4 windows/s for one image per camera in the original prepared run. Both averaged 5.87 episodes per batch over the long interval. At the measured history rate a finite ABC pass would take about 30.7 days. These prepared runs used separate CPU XL hosts. The native warm history run stopped after 177,256 anchors at its time cap, before its first verified refill.
 
@@ -89,12 +91,12 @@ The draft raised `TypeError: expected Tensor as element 0 in argument 0, but got
 
 | Reader and starting state | Constructor (s) | Batch 1 (s) | Batch 125 (s) | Batch 1,000 (s) | Windows/s across refills | Episodes/batch, first 1k / across refills | Peak RAM (GB) | Finite pass (days, est.) |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
-| Pepijn, As published, fresh | 195.1 | 296.0 | 302.4 | 325.5 | 269.1 | 6.41 / 5.46 | 5.82 | 1.19 |
-| Quentin, As published, fresh | 6.4 | — | — | — | — | — / — | 4.56 | — |
-| Pepijn, Private index, fresh | 12.1 | 126.2 | 135.1 | 162.2 | 215.1 | 6.41 / 5.46 | 5.64 | 1.49 |
-| Quentin, Fresh, paired with index recipient | 6.3 | — | — | — | — | — / — | 5.02 | — |
-| Pepijn, Warm restart (2 runs) | 2.0–2.5 | 90.5–99.6 | 95.7–105.6 | 115.0–125.0 | 298.1–328.6 | 6.41 / 5.46 | 5.02–5.47 | 0.97–1.07 |
-| Quentin, Warm restart (2 runs) | 0.7 | — | — | — | — | — / — | 4.21–4.25 | — |
+| #3917, As published, fresh | 195.1 | 296.0 | 302.4 | 325.5 | 269.1 | 6.41 / 5.46 | 5.82 | 1.19 |
+| #5388, As published, fresh | 6.4 | — | — | — | — | — / — | 4.56 | — |
+| #3917, Private index, fresh | 12.1 | 126.2 | 135.1 | 162.2 | 215.1 | 6.41 / 5.46 | 5.64 | 1.49 |
+| #5388, Fresh, paired with index recipient | 6.3 | — | — | — | — | — / — | 5.02 | — |
+| #3917, Warm restart (2 runs) | 2.0–2.5 | 90.5–99.6 | 95.7–105.6 | 115.0–125.0 | 298.1–328.6 | 6.41 / 5.46 | 5.02–5.47 | 0.97–1.07 |
+| #5388, Warm restart (2 runs) | 0.7 | — | — | — | — | — / — | 4.21–4.25 | — |
 
 The cold baseline delivered 31,592 distinct windows with 0 duplicates and 2 verified pool refills. At batch 1,000, the largest single-episode share averaged 27.7% of a batch. 0.125% of within-batch pairs were from the same episode and at most 0.2 seconds apart.
 
@@ -106,7 +108,7 @@ At the draft's native 0.1 ms tolerance, its constructor took 6.93 s and its firs
 
 The following pairs used identical **1 ms tolerance, three current camera images, current state and current action**. The starting state refers to the consumer's local disk. Times include construction and, in the published-index simulation, verified index receipt. All arms delivered 8,000 distinct in-bounds examples through batch 1,000. Episode diversity there averaged 6.95 for the baseline and 7.05 for the draft. The two distributions overlapped by 94.4% after grouping batches by episode count, largest episode share and near-frame pairs.
 
-| Starting state | Pepijn to batch 1,000 | Quentin to batch 1,000 | Observed lead change | Last compared batch |
+| Starting state | #3917 to batch 1,000 | #5388 to batch 1,000 | Observed lead change | Last compared batch |
 |---|---:|---:|---|---:|
 | Fresh, no usable index, draft ran first | 616.15 s | 97.67 s | Draft led throughout | 13,300 |
 | Fresh, no usable index, baseline ran first | 802.22 s | 118.65 s | Baseline took the lead near 17,490 | 24,000 |
@@ -123,29 +125,29 @@ The original publisher-index pair includes 10.38 s to receive and checksum the a
 
 For a quick experiment, the difference between seeing one example and receiving enough usable batches to exercise a recipe matters. For a team comparing many recipes on a fixed snapshot, the publisher can pay the index build cost once. Each new machine still has to receive and open the index. We repeated that case three times on one CPU host with fresh application caches, charging the transfer to each new consumer.
 
-| Matching index, fresh disk | Pepijn to batch 1,000 | Quentin to batch 1,000 | Batch where Pepijn caught up | Last batch compared |
+| Matching index, fresh disk | #3917 to batch 1,000 | #5388 to batch 1,000 | Batch where #3917 caught up | Last batch compared |
 |---|---:|---:|---:|---:|
-| Pepijn ran first | 229.54 s | 252.33 s | 762 | 3,552 |
-| Quentin ran first | 181.70 s | 244.02 s | 374 | 3,978 |
-| Pepijn ran first again | 187.45 s | 190.75 s | 940 | 4,000 |
+| #3917 ran first | 229.54 s | 252.33 s | 762 | 3,552 |
+| #5388 ran first | 181.70 s | 244.02 s | 374 | 3,978 |
+| #3917 ran first again | 187.45 s | 190.75 s | 940 | 4,000 |
 
-Each lead held to the end of its paired trace. Quentin reached the per-reader time limit in the first two pairs. Both readers finished the third pair. Longer cold runs of this same current-frame workload imply **4.13 days for Pepijn** and **8.01 to 10.33 days for Quentin** to supply a finite pass at their observed rates. The longest qualifying prefix covers 0.31% of the source. The three new pairs ended before either reader completed two pool refills. [Full-pass arithmetic, rates and paired traces](prepared-repeats.md) · [Repeat on your own HF account](method.md#repeat-the-fresh-disk-comparison-with-a-matching-publisher-index)
+Each lead held to the end of its paired trace. #5388 reached the per-reader time limit in the first two pairs. Both readers finished the third pair. Longer cold runs of this same current-frame workload imply **4.13 days for #3917** and **8.01 to 10.33 days for #5388** to supply a finite pass at their observed rates. The longest qualifying prefix covers 0.31% of the source. The three new pairs ended before either reader completed two pool refills. [Full-pass arithmetic, rates and paired traces](prepared-repeats.md) · [Repeat on your own HF account](method.md#repeat-the-fresh-disk-comparison-with-a-matching-publisher-index)
 
-### Why did Quentin's fresh run time change?
+### Why did fresh runs of #5388 vary?
 
-The prepared-index experiment changed what Pepijn received. Quentin ran the same code with an empty local cache in all six fresh runs. Each time, Quentin returned the same 8,000 sample IDs in the same order and fetched 1,642,613,961 bytes of video blocks from 39 MP4s. But its time to batch 1,000 ranged from **97.67 to 252.33 seconds**.
+The prepared-index experiment changed what #3917 received. #5388 ran the same code with an empty local cache in all six fresh runs. Each time, #5388 returned the same 8,000 sample IDs in the same order and fetched 1,642,613,961 bytes of video blocks from 39 MP4s. But its time to batch 1,000 ranged from **97.67 to 252.33 seconds**.
 
-| Quentin on a fresh disk | Time to batch 1,000 | Time for batches 751 to 1,000 | CPU time summed over threads calling the decoder through batch 1,000 |
+| #5388 on a fresh disk | Time to batch 1,000 | Time for batches 751 to 1,000 | CPU time summed over threads calling the decoder through batch 1,000 |
 |---|---:|---:|---:|
-| Paired with Pepijn building an index, two jobs | 98 / 119 s | 16 / 20 s | 221 / 276 s |
-| Paired with Pepijn receiving an index, original job | 224 s | 36 s | 374 s |
+| Paired with #3917 building an index, two jobs | 98 / 119 s | 16 / 20 s | 221 / 276 s |
+| Paired with #3917 receiving an index, original job | 224 s | 36 s | 374 s |
 | Same receipt, three new pairs on one host | 252 / 244 / 191 s | 42 / 40 / 29 s | 438 / 432 / 348 s |
 
 The HTTP hooks saw no new responses during those last 250 batches in any run. The decode wrapper includes work done to read video, and it records calling-thread CPU time across concurrent calls. The timings show that the spread extends into a part of the run with the video blocks in hand. These counters cannot identify a single cause. [Six ordered-prefix hashes, byte counts and timing counters](measurements/fresh-draft-1000.csv) · [Timing instrumentation](telemetry.py)
 
 ### What a publisher-built index changes
 
-The index can be built once for a dataset revision and reused across consumers. It maps a video timestamp to the corresponding bytes in an MP4. Pepijn's reader validates the matching archive, prepares a local file for random access, and memory-maps that file read-only. The operating system brings pages into memory as the reader uses them. An archive of several gigabytes does not require a private copy of that size in each worker's RAM. Peak process memory here includes the reader, decoded buffers, episode metadata and the portions of the archive it touched. [Pinned index resolver](https://github.com/huggingface/lerobot/blob/fe1c54594f6ba275fccf210b9f7b11f0e2324b89/src/lerobot/datasets/streaming_sidecar.py#L217-L234) · [Mapped archive implementation](https://github.com/huggingface/lerobot/blob/fe1c54594f6ba275fccf210b9f7b11f0e2324b89/src/lerobot/streaming/manifest.py#L447-L466)
+The index can be built once for a dataset revision and reused across consumers. It maps a video timestamp to the corresponding bytes in an MP4. The #3917 reader validates the matching archive, prepares a local file for random access, and memory-maps that file read-only. The operating system brings pages into memory as the reader uses them. An archive of several gigabytes does not require a private copy of that size in each worker's RAM. Peak process memory here includes the reader, decoded buffers, episode metadata and the portions of the archive it touched. [Pinned index resolver](https://github.com/huggingface/lerobot/blob/fe1c54594f6ba275fccf210b9f7b11f0e2324b89/src/lerobot/datasets/streaming_sidecar.py#L217-L234) · [Mapped archive implementation](https://github.com/huggingface/lerobot/blob/fe1c54594f6ba275fccf210b9f7b11f0e2324b89/src/lerobot/streaming/manifest.py#L447-L466)
 
 Molmo lists three older index objects. The two full names point to identical content. The archives use schema 1 and lack the source fingerprints the pinned reader needs. The loader built a schema-3 archive on its first run. In the simulated publication measurements, a fresh process receives a matching archive from private storage. The consumer time includes download and checksum verification before construction. A warm restart instead uses the index and metadata already on the same disk.
 
@@ -190,7 +192,7 @@ The ABC archive and derived map together occupied 26.05 GB on disk. Preparing th
 
 The proposed reader reads groups of episodes from Parquet, shuffles their rows, and decodes the requested video through a shared byte-range cache. This removes the up-front scan of MP4 headers. The same diff also removes sampling, worker partitioning and checkpoint logic that landed after #3917. A reader can therefore initialize faster while delivering different training data. [Pinned draft](https://github.com/huggingface/lerobot/blob/1a60cb4b800c2947834342752c32f064c8bf143c/src/lerobot/datasets/streaming_dataset.py) · [Changes from the baseline](https://github.com/huggingface/lerobot/pull/5388/files)
 
-| Check | Pepijn's baseline | Quentin's draft |
+| Check | the #3917 baseline | the #5388 draft |
 |---|---|---|
 | `lerobot-train`, CPU ACT, one or two ranks, one or four workers | Each topology completed 8 optimizer steps. | The dataset factory passed `max_num_shards`. The constructor rejected it before the DataLoader started. |
 | Three cameras, state, 100 actions, uneven ends and shared MP4 offsets | All 786 anchors appeared once with one and four workers. Every state, action, padding mask and decoded pixel matched the independent fixture. | An action window that includes the current step passed a row dictionary to `torch.stack`. A window with only positive offsets failed on a missing `action_is_pad`. |
