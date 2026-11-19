@@ -51,7 +51,7 @@ def summarize(folder, reference_path):
                     decoder_create=stages["candidate_rgb_torchcodec_create"],
                     frame_read=stages["candidate_rgb_torchcodec_get_frames_at"],
                     video=io["by_purpose"].get("video", {}),
-                    cache=m.get("decoder_cache"),
+                    block_cache=io["candidate_block_cache_totals"], decoder_cache=m.get("decoder_cache"),
                 )
             rows.append(row)
     if len(hosts) != 1 or len(payload_hashes) != 1:

@@ -1,9 +1,9 @@
 {
-  "observed_utc": "2026-11-19T17:06:10.968390+00:00",
+  "observed_utc": "2026-11-19T20:40:51.688187+00:00",
   "rate_reference": "https://huggingface.co/docs/hub/en/jobs-pricing",
   "conservative_billing_rule": "Round total job duration up to a minute, add one minute, and limit to the reservation. A saved terminal observation bounds canceled runs without server duration.",
   "all_running_jobs": [],
-  "conservative_gross_ceiling_usd": 8.968166666666667,
+  "conservative_gross_ceiling_usd": 9.468166666666667,
   "completed_and_canceled_jobs": [
     {
       "run": "preflight",
@@ -124,6 +124,16 @@
       "running_seconds": 3439,
       "total_seconds": 3444,
       "conservative_gross_ceiling_usd": 0.9833333333333333
+    },
+    {
+      "run": "molmo-internvideo01",
+      "flavor": "cpu-xl",
+      "status": "COMPLETED",
+      "usd_per_hour": 1.0,
+      "reserved_minutes": 44,
+      "running_seconds": 1674,
+      "total_seconds": 1682,
+      "conservative_gross_ceiling_usd": 0.5
     }
   ]
 }

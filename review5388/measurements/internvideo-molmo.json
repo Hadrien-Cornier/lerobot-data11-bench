@@ -1,0 +1,1483 @@
+{
+  "environment": {
+    "python": "3.12.16 (main, Nov  5 2026, 07:58:20) [GCC 14.2.0]",
+    "platform": "Linux-6.12.115-140.210.amzn2023.x86_64-x86_64-with-glibc2.41",
+    "packages": {
+      "datasets": "5.2.1.dev0",
+      "huggingface_hub": "2.0.0",
+      "fsspec": "2026.9.0",
+      "torch": "2.11.0+cpu",
+      "torchvision": "0.26.0+cpu",
+      "torchcodec": "0.11.1+cpu",
+      "pyarrow": "26.0.1",
+      "numpy": "2.2.6",
+      "httpx": null,
+      "httpx2": "2.16.2",
+      "hf_xet": "1.8.0",
+      "psutil": "7.2.2",
+      "lerobot": "0.7.1"
+    },
+    "lerobot_revision": "1a60cb4b800c2947834342752c32f064c8bf143c",
+    "lerobot_streaming_module_sha256": "17ec1e996af3e83de1e64b08b4550ff4c25914f41abf06329abbeb5c0f50a656",
+    "datasets_source": {
+      "revision": "464fe790b82a320350c9c686c1b7e409323a1cf3",
+      "cache_module_sha256": "16ab95f92d6d147e0ab15de55d0a4afab2553331fa520df0e6e8ae4b58ab2447"
+    },
+    "hf_hub_disable_xet": "unset"
+  },
+  "reference": "bucket-current-frame-tolerance-1ms-prepared-r03-candidate.events.jsonl.gz",
+  "ordered_anchor_sha256": "fc96b52afef08706deee06effe9bea3d0ca9d54d672be4f60c27f2ea6a786ea4",
+  "measured_examples_per_arm": 8000,
+  "paired_savings": {
+    "internvideo-r01": {
+      "reuse_vs_stock": {
+        "1": {
+          "seconds_saved": 0.7752440949843731,
+          "percent_saved": 2.143296192508558
+        },
+        "1000": {
+          "seconds_saved": 48.67979320601444,
+          "percent_saved": 20.764183529165486
+        }
+      },
+      "grouped_vs_reuse": {
+        "1": {
+          "seconds_saved": 9.374918538000202,
+          "percent_saved": 26.486260446320625
+        },
+        "1000": {
+          "seconds_saved": 54.94972012299695,
+          "percent_saved": 29.580811335350344
+        }
+      },
+      "grouped_vs_stock": {
+        "1": {
+          "seconds_saved": 10.150162632984575,
+          "percent_saved": 28.061877627145293
+        },
+        "1000": {
+          "seconds_saved": 103.62951332901139,
+          "percent_saved": 44.202780909427496
+        }
+      }
+    },
+    "internvideo-r02": {
+      "reuse_vs_stock": {
+        "1": {
+          "seconds_saved": 4.65099561700481,
+          "percent_saved": 13.467325723034325
+        },
+        "1000": {
+          "seconds_saved": 37.94077347399434,
+          "percent_saved": 17.02574469945157
+        }
+      },
+      "grouped_vs_reuse": {
+        "1": {
+          "seconds_saved": 7.669826005003415,
+          "percent_saved": 25.664973490850812
+        },
+        "1000": {
+          "seconds_saved": 56.210314043972176,
+          "percent_saved": 30.399930095495286
+        }
+      },
+      "grouped_vs_stock": {
+        "1": {
+          "seconds_saved": 12.320821622008225,
+          "percent_saved": 35.675913637141846
+        },
+        "1000": {
+          "seconds_saved": 94.15108751796652,
+          "percent_saved": 42.24986030807609
+        }
+      }
+    }
+  },
+  "arms": [
+    {
+      "run": "internvideo-r01-grouped",
+      "mode": "grouped",
+      "constructor_s": 9.694708241993794,
+      "milestones": {
+        "1": {
+          "delivered_s": 26.020484135020524,
+          "prior_consumer_audit_s": 0.0,
+          "process_peak_rss_bytes": 1692499968,
+          "decoder_opens": 35,
+          "frame_read_calls": 39,
+          "decoder_create": {
+            "calls": 35,
+            "errors": 0,
+            "wall_s_sum": 9.621676236041822,
+            "calling_thread_cpu_s_sum": 1.0519263559999998
+          },
+          "frame_read": {
+            "calls": 39,
+            "errors": 0,
+            "wall_s_sum": 15.34062395201181,
+            "calling_thread_cpu_s_sum": 2.1783381249999993
+          },
+          "video": {
+            "files_touched": 27,
+            "http_responses": 204,
+            "http_body_bytes": 105931610,
+            "status_302": 106,
+            "status_206": 98
+          },
+          "block_cache": {
+            "block_size": 1048576,
+            "max_memory": 2147483648,
+            "cached_bytes": 105806458,
+            "cached_blocks": 102,
+            "hits": 119,
+            "misses": 115,
+            "requests": 98,
+            "downloaded_bytes": 105806458,
+            "deduped_waits": 4,
+            "evictions": 0,
+            "evicted_bytes": 0
+          },
+          "decoder_cache": {
+            "capacity": 96,
+            "allocated": 59,
+            "idle": 27,
+            "peak_allocated": 59,
+            "hits": 12,
+            "misses": 59,
+            "evictions": 0
+          }
+        },
+        "125": {
+          "delivered_s": 61.2982321010204,
+          "prior_consumer_audit_s": 1.0724655469239224,
+          "process_peak_rss_bytes": 3587018752,
+          "decoder_opens": 99,
+          "frame_read_calls": 2275,
+          "decoder_create": {
+            "calls": 99,
+            "errors": 0,
+            "wall_s_sum": 16.82401050196495,
+            "calling_thread_cpu_s_sum": 1.852816578000001
+          },
+          "frame_read": {
+            "calls": 2275,
+            "errors": 0,
+            "wall_s_sum": 469.69360487285303,
+            "calling_thread_cpu_s_sum": 51.20125357300016
+          },
+          "video": {
+            "files_touched": 39,
+            "http_responses": 2541,
+            "http_body_bytes": 1367422431,
+            "status_302": 1271,
+            "status_206": 1270
+          },
+          "block_cache": {
+            "block_size": 1048576,
+            "max_memory": 2147483648,
+            "cached_bytes": 1364873355,
+            "cached_blocks": 1304,
+            "hits": 2386,
+            "misses": 1329,
+            "requests": 1269,
+            "downloaded_bytes": 1364873355,
+            "deduped_waits": 21,
+            "evictions": 0,
+            "evicted_bytes": 0
+          },
+          "decoder_cache": {
+            "capacity": 96,
+            "allocated": 96,
+            "idle": 77,
+            "peak_allocated": 96,
+            "hits": 2180,
+            "misses": 99,
+            "evictions": 3
+          }
+        },
+        "1000": {
+          "delivered_s": 130.81164896200062,
+          "prior_consumer_audit_s": 4.165913120988989,
+          "process_peak_rss_bytes": 4090351616,
+          "decoder_opens": 100,
+          "frame_read_calls": 17436,
+          "decoder_create": {
+            "calls": 100,
+            "errors": 0,
+            "wall_s_sum": 16.843324053974357,
+            "calling_thread_cpu_s_sum": 1.8584749250000012
+          },
+          "frame_read": {
+            "calls": 17436,
+            "errors": 0,
+            "wall_s_sum": 708.9841448912339,
+            "calling_thread_cpu_s_sum": 161.2398458640003
+          },
+          "video": {
+            "files_touched": 39,
+            "http_responses": 3066,
+            "http_body_bytes": 1644423749,
+            "status_302": 1533,
+            "status_206": 1533
+          },
+          "block_cache": {
+            "block_size": 1048576,
+            "max_memory": 2147483648,
+            "cached_bytes": 1642613961,
+            "cached_blocks": 1570,
+            "hits": 24335,
+            "misses": 1591,
+            "requests": 1533,
+            "downloaded_bytes": 1642613961,
+            "deduped_waits": 21,
+            "evictions": 0,
+            "evicted_bytes": 0
+          },
+          "decoder_cache": {
+            "capacity": 96,
+            "allocated": 96,
+            "idle": 88,
+            "peak_allocated": 96,
+            "hits": 17340,
+            "misses": 100,
+            "evictions": 4
+          }
+        }
+      },
+      "audit": {
+        "batches_checked": 1000,
+        "reference_batches": 1000,
+        "reference_trace_sha256": "1efe1cf5d05bf9895f48ae0ea0d0ed40e4a273920a0db63b53c3e53a4dd8dc09",
+        "reference_ordered_anchor_sha256": "fc96b52afef08706deee06effe9bea3d0ca9d54d672be4f60c27f2ea6a786ea4",
+        "ordered_anchor_sha256": "fc96b52afef08706deee06effe9bea3d0ca9d54d672be4f60c27f2ea6a786ea4",
+        "payload_xxh3_128_by_field": {
+          "observation.images.left": "e4134f736cbe922ccb3cb2480ede3834",
+          "observation.images.right": "a08f3bdb9ed3b54004f42ec1c77db563",
+          "observation.images.top": "ed5ae309de1a60f3db366b9ea285e543",
+          "action": "30ab4c7017e2a8af3b436d96703ccf28",
+          "observation.state": "da475f8b9b1302fe899fdded1bd27400"
+        },
+        "ordered_output_sha256": "76313c64bf9870e8a60f52d47b8faec13752adffd3af6236900ad5c059bf7c66"
+      },
+      "settings": {
+        "batch_size": 8,
+        "cameras": [
+          "observation.images.right",
+          "observation.images.left",
+          "observation.images.top"
+        ],
+        "pool": 32,
+        "tolerance_s": 0.001,
+        "workers": 0,
+        "action_steps": 1,
+        "decoder_cache_capacity": 96
+      }
+    },
+    {
+      "run": "internvideo-r01-reuse",
+      "mode": "reuse",
+      "constructor_s": 9.016920769005083,
+      "milestones": {
+        "1": {
+          "delivered_s": 35.395402673020726,
+          "prior_consumer_audit_s": 0.0,
+          "process_peak_rss_bytes": 1957916672,
+          "decoder_opens": 108,
+          "frame_read_calls": 135,
+          "decoder_create": {
+            "calls": 108,
+            "errors": 0,
+            "wall_s_sum": 15.87112419703044,
+            "calling_thread_cpu_s_sum": 1.5952163519999987
+          },
+          "frame_read": {
+            "calls": 135,
+            "errors": 0,
+            "wall_s_sum": 19.337093578040367,
+            "calling_thread_cpu_s_sum": 3.814122250000001
+          },
+          "video": {
+            "files_touched": 34,
+            "http_responses": 321,
+            "http_body_bytes": 169963252,
+            "status_302": 164,
+            "status_206": 157
+          },
+          "block_cache": {
+            "block_size": 1048576,
+            "max_memory": 2147483648,
+            "cached_bytes": 168721018,
+            "cached_blocks": 162,
+            "hits": 415,
+            "misses": 202,
+            "requests": 156,
+            "downloaded_bytes": 168721018,
+            "deduped_waits": 31,
+            "evictions": 0,
+            "evicted_bytes": 0
+          },
+          "decoder_cache": {
+            "capacity": 96,
+            "allocated": 96,
+            "idle": 65,
+            "peak_allocated": 96,
+            "hits": 36,
+            "misses": 128,
+            "evictions": 32
+          }
+        },
+        "125": {
+          "delivered_s": 81.98756962700281,
+          "prior_consumer_audit_s": 0.6294937388156541,
+          "process_peak_rss_bytes": 6158512128,
+          "decoder_opens": 353,
+          "frame_read_calls": 3606,
+          "decoder_create": {
+            "calls": 353,
+            "errors": 0,
+            "wall_s_sum": 27.44793107404257,
+            "calling_thread_cpu_s_sum": 3.841891866
+          },
+          "frame_read": {
+            "calls": 3606,
+            "errors": 0,
+            "wall_s_sum": 295.05944613879547,
+            "calling_thread_cpu_s_sum": 56.501113343000036
+          },
+          "video": {
+            "files_touched": 39,
+            "http_responses": 2654,
+            "http_body_bytes": 1428306023,
+            "status_302": 1327,
+            "status_206": 1327
+          },
+          "block_cache": {
+            "block_size": 1048576,
+            "max_memory": 2147483648,
+            "cached_bytes": 1426739339,
+            "cached_blocks": 1363,
+            "hits": 3789,
+            "misses": 1416,
+            "requests": 1327,
+            "downloaded_bytes": 1426739339,
+            "deduped_waits": 53,
+            "evictions": 0,
+            "evicted_bytes": 0
+          },
+          "decoder_cache": {
+            "capacity": 96,
+            "allocated": 96,
+            "idle": 96,
+            "peak_allocated": 96,
+            "hits": 3253,
+            "misses": 353,
+            "evictions": 257
+          }
+        },
+        "1000": {
+          "delivered_s": 185.76136908499757,
+          "prior_consumer_audit_s": 11.03985147253843,
+          "process_peak_rss_bytes": 6478786560,
+          "decoder_opens": 4377,
+          "frame_read_calls": 24108,
+          "decoder_create": {
+            "calls": 4377,
+            "errors": 0,
+            "wall_s_sum": 223.83957946530427,
+            "calling_thread_cpu_s_sum": 32.16702091800007
+          },
+          "frame_read": {
+            "calls": 24108,
+            "errors": 0,
+            "wall_s_sum": 758.4854756045388,
+            "calling_thread_cpu_s_sum": 178.4757759420005
+          },
+          "video": {
+            "files_touched": 39,
+            "http_responses": 3064,
+            "http_body_bytes": 1644422661,
+            "status_302": 1532,
+            "status_206": 1532
+          },
+          "block_cache": {
+            "block_size": 1048576,
+            "max_memory": 2147483648,
+            "cached_bytes": 1642613961,
+            "cached_blocks": 1570,
+            "hits": 41082,
+            "misses": 1629,
+            "requests": 1532,
+            "downloaded_bytes": 1642613961,
+            "deduped_waits": 59,
+            "evictions": 0,
+            "evicted_bytes": 0
+          },
+          "decoder_cache": {
+            "capacity": 96,
+            "allocated": 96,
+            "idle": 95,
+            "peak_allocated": 96,
+            "hits": 19731,
+            "misses": 4377,
+            "evictions": 4281
+          }
+        }
+      },
+      "audit": {
+        "batches_checked": 1000,
+        "reference_batches": 1000,
+        "reference_trace_sha256": "1efe1cf5d05bf9895f48ae0ea0d0ed40e4a273920a0db63b53c3e53a4dd8dc09",
+        "reference_ordered_anchor_sha256": "fc96b52afef08706deee06effe9bea3d0ca9d54d672be4f60c27f2ea6a786ea4",
+        "ordered_anchor_sha256": "fc96b52afef08706deee06effe9bea3d0ca9d54d672be4f60c27f2ea6a786ea4",
+        "payload_xxh3_128_by_field": {
+          "observation.images.left": "e4134f736cbe922ccb3cb2480ede3834",
+          "observation.images.right": "a08f3bdb9ed3b54004f42ec1c77db563",
+          "observation.images.top": "ed5ae309de1a60f3db366b9ea285e543",
+          "action": "30ab4c7017e2a8af3b436d96703ccf28",
+          "observation.state": "da475f8b9b1302fe899fdded1bd27400"
+        },
+        "ordered_output_sha256": "76313c64bf9870e8a60f52d47b8faec13752adffd3af6236900ad5c059bf7c66"
+      },
+      "settings": {
+        "batch_size": 8,
+        "cameras": [
+          "observation.images.right",
+          "observation.images.left",
+          "observation.images.top"
+        ],
+        "pool": 32,
+        "tolerance_s": 0.001,
+        "workers": 0,
+        "action_steps": 1,
+        "decoder_cache_capacity": 96
+      }
+    },
+    {
+      "run": "internvideo-r01-stock",
+      "mode": "stock",
+      "constructor_s": 8.833513877005316,
+      "milestones": {
+        "1": {
+          "delivered_s": 36.1706467680051,
+          "prior_consumer_audit_s": 0.0,
+          "process_peak_rss_bytes": 1958936576,
+          "decoder_opens": 178,
+          "frame_read_calls": 171,
+          "decoder_create": {
+            "calls": 178,
+            "errors": 0,
+            "wall_s_sum": 34.914957163186045,
+            "calling_thread_cpu_s_sum": 2.109798749999998
+          },
+          "frame_read": {
+            "calls": 171,
+            "errors": 0,
+            "wall_s_sum": 38.738510020048125,
+            "calling_thread_cpu_s_sum": 4.846198549000001
+          },
+          "video": {
+            "files_touched": 37,
+            "http_responses": 402,
+            "http_body_bytes": 214051812,
+            "status_302": 205,
+            "status_206": 197
+          },
+          "block_cache": {
+            "block_size": 1048576,
+            "max_memory": 2147483648,
+            "cached_bytes": 213809786,
+            "cached_blocks": 205,
+            "hits": 731,
+            "misses": 247,
+            "requests": 197,
+            "downloaded_bytes": 213809786,
+            "deduped_waits": 34,
+            "evictions": 0,
+            "evicted_bytes": 0
+          },
+          "decoder_cache": null
+        },
+        "125": {
+          "delivered_s": 87.83392467099475,
+          "prior_consumer_audit_s": 0.9947688802785706,
+          "process_peak_rss_bytes": 4963102720,
+          "decoder_opens": 3073,
+          "frame_read_calls": 3064,
+          "decoder_create": {
+            "calls": 3073,
+            "errors": 0,
+            "wall_s_sum": 237.87031771073816,
+            "calling_thread_cpu_s_sum": 23.01311725700001
+          },
+          "frame_read": {
+            "calls": 3064,
+            "errors": 0,
+            "wall_s_sum": 387.9823826214124,
+            "calling_thread_cpu_s_sum": 48.95575262599996
+          },
+          "video": {
+            "files_touched": 39,
+            "http_responses": 2523,
+            "http_body_bytes": 1357974693,
+            "status_302": 1262,
+            "status_206": 1261
+          },
+          "block_cache": {
+            "block_size": 1048576,
+            "max_memory": 2147483648,
+            "cached_bytes": 1356484747,
+            "cached_blocks": 1296,
+            "hits": 14646,
+            "misses": 1353,
+            "requests": 1261,
+            "downloaded_bytes": 1356484747,
+            "deduped_waits": 56,
+            "evictions": 0,
+            "evicted_bytes": 0
+          },
+          "decoder_cache": null
+        },
+        "1000": {
+          "delivered_s": 234.441162291012,
+          "prior_consumer_audit_s": 13.1634314043622,
+          "process_peak_rss_bytes": 6038495232,
+          "decoder_opens": 24104,
+          "frame_read_calls": 24098,
+          "decoder_create": {
+            "calls": 24104,
+            "errors": 0,
+            "wall_s_sum": 1818.6907543586567,
+            "calling_thread_cpu_s_sum": 167.84853859900082
+          },
+          "frame_read": {
+            "calls": 24098,
+            "errors": 0,
+            "wall_s_sum": 948.4119439578208,
+            "calling_thread_cpu_s_sum": 178.12389969700035
+          },
+          "video": {
+            "files_touched": 39,
+            "http_responses": 3064,
+            "http_body_bytes": 1644422623,
+            "status_302": 1532,
+            "status_206": 1532
+          },
+          "block_cache": {
+            "block_size": 1048576,
+            "max_memory": 2147483648,
+            "cached_bytes": 1642613961,
+            "cached_blocks": 1570,
+            "hits": 122732,
+            "misses": 1628,
+            "requests": 1532,
+            "downloaded_bytes": 1642613961,
+            "deduped_waits": 58,
+            "evictions": 0,
+            "evicted_bytes": 0
+          },
+          "decoder_cache": null
+        }
+      },
+      "audit": {
+        "batches_checked": 1000,
+        "reference_batches": 1000,
+        "reference_trace_sha256": "1efe1cf5d05bf9895f48ae0ea0d0ed40e4a273920a0db63b53c3e53a4dd8dc09",
+        "reference_ordered_anchor_sha256": "fc96b52afef08706deee06effe9bea3d0ca9d54d672be4f60c27f2ea6a786ea4",
+        "ordered_anchor_sha256": "fc96b52afef08706deee06effe9bea3d0ca9d54d672be4f60c27f2ea6a786ea4",
+        "payload_xxh3_128_by_field": {
+          "observation.images.left": "e4134f736cbe922ccb3cb2480ede3834",
+          "observation.images.right": "a08f3bdb9ed3b54004f42ec1c77db563",
+          "observation.images.top": "ed5ae309de1a60f3db366b9ea285e543",
+          "action": "30ab4c7017e2a8af3b436d96703ccf28",
+          "observation.state": "da475f8b9b1302fe899fdded1bd27400"
+        },
+        "ordered_output_sha256": "76313c64bf9870e8a60f52d47b8faec13752adffd3af6236900ad5c059bf7c66"
+      },
+      "settings": {
+        "batch_size": 8,
+        "cameras": [
+          "observation.images.right",
+          "observation.images.left",
+          "observation.images.top"
+        ],
+        "pool": 32,
+        "tolerance_s": 0.001,
+        "workers": 0,
+        "action_steps": 1,
+        "decoder_cache_capacity": 0
+      }
+    },
+    {
+      "run": "internvideo-r02-grouped",
+      "mode": "grouped",
+      "constructor_s": 9.169563964009285,
+      "milestones": {
+        "1": {
+          "delivered_s": 22.21458438699483,
+          "prior_consumer_audit_s": 0.0,
+          "process_peak_rss_bytes": 1780404224,
+          "decoder_opens": 47,
+          "frame_read_calls": 52,
+          "decoder_create": {
+            "calls": 47,
+            "errors": 0,
+            "wall_s_sum": 52.96257611809415,
+            "calling_thread_cpu_s_sum": 1.4046227670000002
+          },
+          "frame_read": {
+            "calls": 52,
+            "errors": 0,
+            "wall_s_sum": 59.96424256803584,
+            "calling_thread_cpu_s_sum": 3.135445996999999
+          },
+          "video": {
+            "files_touched": 31,
+            "http_responses": 247,
+            "http_body_bytes": 132167222,
+            "status_302": 124,
+            "status_206": 123
+          },
+          "block_cache": {
+            "block_size": 1048576,
+            "max_memory": 2147483648,
+            "cached_bytes": 132020858,
+            "cached_blocks": 127,
+            "hits": 167,
+            "misses": 150,
+            "requests": 123,
+            "downloaded_bytes": 132020858,
+            "deduped_waits": 13,
+            "evictions": 0,
+            "evicted_bytes": 0
+          },
+          "decoder_cache": {
+            "capacity": 96,
+            "allocated": 53,
+            "idle": 39,
+            "peak_allocated": 53,
+            "hits": 12,
+            "misses": 53,
+            "evictions": 0
+          }
+        },
+        "125": {
+          "delivered_s": 57.4772765180096,
+          "prior_consumer_audit_s": 1.057669309026096,
+          "process_peak_rss_bytes": 3599077376,
+          "decoder_opens": 101,
+          "frame_read_calls": 2248,
+          "decoder_create": {
+            "calls": 101,
+            "errors": 0,
+            "wall_s_sum": 62.33985613807454,
+            "calling_thread_cpu_s_sum": 2.099101556
+          },
+          "frame_read": {
+            "calls": 2248,
+            "errors": 0,
+            "wall_s_sum": 564.6908976739214,
+            "calling_thread_cpu_s_sum": 53.12030710499997
+          },
+          "video": {
+            "files_touched": 39,
+            "http_responses": 2536,
+            "http_body_bytes": 1365321871,
+            "status_302": 1268,
+            "status_206": 1268
+          },
+          "block_cache": {
+            "block_size": 1048576,
+            "max_memory": 2147483648,
+            "cached_bytes": 1363824779,
+            "cached_blocks": 1303,
+            "hits": 2352,
+            "misses": 1334,
+            "requests": 1268,
+            "downloaded_bytes": 1363824779,
+            "deduped_waits": 31,
+            "evictions": 0,
+            "evicted_bytes": 0
+          },
+          "decoder_cache": {
+            "capacity": 96,
+            "allocated": 96,
+            "idle": 95,
+            "peak_allocated": 96,
+            "hits": 2148,
+            "misses": 101,
+            "evictions": 5
+          }
+        },
+        "1000": {
+          "delivered_s": 128.69245996701648,
+          "prior_consumer_audit_s": 4.434901176515268,
+          "process_peak_rss_bytes": 4103450624,
+          "decoder_opens": 102,
+          "frame_read_calls": 17470,
+          "decoder_create": {
+            "calls": 102,
+            "errors": 0,
+            "wall_s_sum": 62.37593181009288,
+            "calling_thread_cpu_s_sum": 2.1062081889999997
+          },
+          "frame_read": {
+            "calls": 17470,
+            "errors": 0,
+            "wall_s_sum": 807.1208044968953,
+            "calling_thread_cpu_s_sum": 164.13051113800105
+          },
+          "video": {
+            "files_touched": 39,
+            "http_responses": 3066,
+            "http_body_bytes": 1644423935,
+            "status_302": 1533,
+            "status_206": 1533
+          },
+          "block_cache": {
+            "block_size": 1048576,
+            "max_memory": 2147483648,
+            "cached_bytes": 1642613961,
+            "cached_blocks": 1570,
+            "hits": 24429,
+            "misses": 1602,
+            "requests": 1533,
+            "downloaded_bytes": 1642613961,
+            "deduped_waits": 32,
+            "evictions": 0,
+            "evicted_bytes": 0
+          },
+          "decoder_cache": {
+            "capacity": 96,
+            "allocated": 96,
+            "idle": 77,
+            "peak_allocated": 96,
+            "hits": 17378,
+            "misses": 102,
+            "evictions": 6
+          }
+        }
+      },
+      "audit": {
+        "batches_checked": 1000,
+        "reference_batches": 1000,
+        "reference_trace_sha256": "1efe1cf5d05bf9895f48ae0ea0d0ed40e4a273920a0db63b53c3e53a4dd8dc09",
+        "reference_ordered_anchor_sha256": "fc96b52afef08706deee06effe9bea3d0ca9d54d672be4f60c27f2ea6a786ea4",
+        "ordered_anchor_sha256": "fc96b52afef08706deee06effe9bea3d0ca9d54d672be4f60c27f2ea6a786ea4",
+        "payload_xxh3_128_by_field": {
+          "observation.images.left": "e4134f736cbe922ccb3cb2480ede3834",
+          "observation.images.right": "a08f3bdb9ed3b54004f42ec1c77db563",
+          "observation.images.top": "ed5ae309de1a60f3db366b9ea285e543",
+          "action": "30ab4c7017e2a8af3b436d96703ccf28",
+          "observation.state": "da475f8b9b1302fe899fdded1bd27400"
+        },
+        "ordered_output_sha256": "76313c64bf9870e8a60f52d47b8faec13752adffd3af6236900ad5c059bf7c66"
+      },
+      "settings": {
+        "batch_size": 8,
+        "cameras": [
+          "observation.images.right",
+          "observation.images.left",
+          "observation.images.top"
+        ],
+        "pool": 32,
+        "tolerance_s": 0.001,
+        "workers": 0,
+        "action_steps": 1,
+        "decoder_cache_capacity": 96
+      }
+    },
+    {
+      "run": "internvideo-r02-reuse",
+      "mode": "reuse",
+      "constructor_s": 8.621595584001625,
+      "milestones": {
+        "1": {
+          "delivered_s": 29.884410391998244,
+          "prior_consumer_audit_s": 0.0,
+          "process_peak_rss_bytes": 1928511488,
+          "decoder_opens": 97,
+          "frame_read_calls": 124,
+          "decoder_create": {
+            "calls": 97,
+            "errors": 0,
+            "wall_s_sum": 26.685805782180978,
+            "calling_thread_cpu_s_sum": 1.5946048519999994
+          },
+          "frame_read": {
+            "calls": 124,
+            "errors": 0,
+            "wall_s_sum": 18.74751016087248,
+            "calling_thread_cpu_s_sum": 3.371727790000002
+          },
+          "video": {
+            "files_touched": 34,
+            "http_responses": 300,
+            "http_body_bytes": 159464444,
+            "status_302": 153,
+            "status_206": 147
+          },
+          "block_cache": {
+            "block_size": 1048576,
+            "max_memory": 2147483648,
+            "cached_bytes": 159283834,
+            "cached_blocks": 153,
+            "hits": 382,
+            "misses": 207,
+            "requests": 147,
+            "downloaded_bytes": 159283834,
+            "deduped_waits": 47,
+            "evictions": 0,
+            "evicted_bytes": 0
+          },
+          "decoder_cache": {
+            "capacity": 96,
+            "allocated": 96,
+            "idle": 65,
+            "peak_allocated": 96,
+            "hits": 33,
+            "misses": 118,
+            "evictions": 22
+          }
+        },
+        "125": {
+          "delivered_s": 77.0449285619834,
+          "prior_consumer_audit_s": 0.6091506720695179,
+          "process_peak_rss_bytes": 6582091776,
+          "decoder_opens": 354,
+          "frame_read_calls": 3644,
+          "decoder_create": {
+            "calls": 354,
+            "errors": 0,
+            "wall_s_sum": 36.71530590878683,
+            "calling_thread_cpu_s_sum": 3.839874424
+          },
+          "frame_read": {
+            "calls": 3644,
+            "errors": 0,
+            "wall_s_sum": 290.6206248944509,
+            "calling_thread_cpu_s_sum": 54.654800457000015
+          },
+          "video": {
+            "files_touched": 39,
+            "http_responses": 2671,
+            "http_body_bytes": 1435656677,
+            "status_302": 1336,
+            "status_206": 1335
+          },
+          "block_cache": {
+            "block_size": 1048576,
+            "max_memory": 2147483648,
+            "cached_bytes": 1434079371,
+            "cached_blocks": 1370,
+            "hits": 3841,
+            "misses": 1438,
+            "requests": 1335,
+            "downloaded_bytes": 1434079371,
+            "deduped_waits": 67,
+            "evictions": 0,
+            "evicted_bytes": 0
+          },
+          "decoder_cache": {
+            "capacity": 96,
+            "allocated": 96,
+            "idle": 95,
+            "peak_allocated": 96,
+            "hits": 3291,
+            "misses": 354,
+            "evictions": 258
+          }
+        },
+        "1000": {
+          "delivered_s": 184.90277401098865,
+          "prior_consumer_audit_s": 11.908477912365925,
+          "process_peak_rss_bytes": 6988808192,
+          "decoder_opens": 4407,
+          "frame_read_calls": 24089,
+          "decoder_create": {
+            "calls": 4407,
+            "errors": 0,
+            "wall_s_sum": 248.53565863668337,
+            "calling_thread_cpu_s_sum": 33.01856449700003
+          },
+          "frame_read": {
+            "calls": 24089,
+            "errors": 0,
+            "wall_s_sum": 757.994110992935,
+            "calling_thread_cpu_s_sum": 177.84532194599973
+          },
+          "video": {
+            "files_touched": 39,
+            "http_responses": 3066,
+            "http_body_bytes": 1644423877,
+            "status_302": 1533,
+            "status_206": 1533
+          },
+          "block_cache": {
+            "block_size": 1048576,
+            "max_memory": 2147483648,
+            "cached_bytes": 1642613961,
+            "cached_blocks": 1570,
+            "hits": 41199,
+            "misses": 1638,
+            "requests": 1533,
+            "downloaded_bytes": 1642613961,
+            "deduped_waits": 68,
+            "evictions": 0,
+            "evicted_bytes": 0
+          },
+          "decoder_cache": {
+            "capacity": 96,
+            "allocated": 96,
+            "idle": 65,
+            "peak_allocated": 96,
+            "hits": 19687,
+            "misses": 4411,
+            "evictions": 4315
+          }
+        }
+      },
+      "audit": {
+        "batches_checked": 1000,
+        "reference_batches": 1000,
+        "reference_trace_sha256": "1efe1cf5d05bf9895f48ae0ea0d0ed40e4a273920a0db63b53c3e53a4dd8dc09",
+        "reference_ordered_anchor_sha256": "fc96b52afef08706deee06effe9bea3d0ca9d54d672be4f60c27f2ea6a786ea4",
+        "ordered_anchor_sha256": "fc96b52afef08706deee06effe9bea3d0ca9d54d672be4f60c27f2ea6a786ea4",
+        "payload_xxh3_128_by_field": {
+          "observation.images.left": "e4134f736cbe922ccb3cb2480ede3834",
+          "observation.images.right": "a08f3bdb9ed3b54004f42ec1c77db563",
+          "observation.images.top": "ed5ae309de1a60f3db366b9ea285e543",
+          "action": "30ab4c7017e2a8af3b436d96703ccf28",
+          "observation.state": "da475f8b9b1302fe899fdded1bd27400"
+        },
+        "ordered_output_sha256": "76313c64bf9870e8a60f52d47b8faec13752adffd3af6236900ad5c059bf7c66"
+      },
+      "settings": {
+        "batch_size": 8,
+        "cameras": [
+          "observation.images.right",
+          "observation.images.left",
+          "observation.images.top"
+        ],
+        "pool": 32,
+        "tolerance_s": 0.001,
+        "workers": 0,
+        "action_steps": 1,
+        "decoder_cache_capacity": 96
+      }
+    },
+    {
+      "run": "internvideo-r02-stock",
+      "mode": "stock",
+      "constructor_s": 8.831742151000071,
+      "milestones": {
+        "1": {
+          "delivered_s": 34.535406009003054,
+          "prior_consumer_audit_s": 0.0,
+          "process_peak_rss_bytes": 2000506880,
+          "decoder_opens": 198,
+          "frame_read_calls": 193,
+          "decoder_create": {
+            "calls": 198,
+            "errors": 0,
+            "wall_s_sum": 14.75051313531003,
+            "calling_thread_cpu_s_sum": 2.2351510520000017
+          },
+          "frame_read": {
+            "calls": 193,
+            "errors": 0,
+            "wall_s_sum": 30.999514022114454,
+            "calling_thread_cpu_s_sum": 5.1785884560000035
+          },
+          "video": {
+            "files_touched": 38,
+            "http_responses": 437,
+            "http_body_bytes": 235042132,
+            "status_302": 221,
+            "status_206": 216
+          },
+          "block_cache": {
+            "block_size": 1048576,
+            "max_memory": 2147483648,
+            "cached_bytes": 234781306,
+            "cached_blocks": 225,
+            "hits": 811,
+            "misses": 248,
+            "requests": 216,
+            "downloaded_bytes": 234781306,
+            "deduped_waits": 17,
+            "evictions": 0,
+            "evicted_bytes": 0
+          },
+          "decoder_cache": null
+        },
+        "125": {
+          "delivered_s": 84.1382617969939,
+          "prior_consumer_audit_s": 1.0121379930933472,
+          "process_peak_rss_bytes": 5373595648,
+          "decoder_opens": 3128,
+          "frame_read_calls": 3121,
+          "decoder_create": {
+            "calls": 3128,
+            "errors": 0,
+            "wall_s_sum": 131.33480845147278,
+            "calling_thread_cpu_s_sum": 22.25130823200009
+          },
+          "frame_read": {
+            "calls": 3121,
+            "errors": 0,
+            "wall_s_sum": 329.63138723466545,
+            "calling_thread_cpu_s_sum": 47.984258801000124
+          },
+          "video": {
+            "files_touched": 39,
+            "http_responses": 2532,
+            "http_body_bytes": 1360080085,
+            "status_302": 1269,
+            "status_206": 1263
+          },
+          "block_cache": {
+            "block_size": 1048576,
+            "max_memory": 2147483648,
+            "cached_bytes": 1358581899,
+            "cached_blocks": 1298,
+            "hits": 14913,
+            "misses": 1345,
+            "requests": 1263,
+            "downloaded_bytes": 1358581899,
+            "deduped_waits": 39,
+            "evictions": 0,
+            "evicted_bytes": 0
+          },
+          "decoder_cache": null
+        },
+        "1000": {
+          "delivered_s": 222.843547484983,
+          "prior_consumer_audit_s": 10.017330699512968,
+          "process_peak_rss_bytes": 6047088640,
+          "decoder_opens": 24094,
+          "frame_read_calls": 24092,
+          "decoder_create": {
+            "calls": 24094,
+            "errors": 0,
+            "wall_s_sum": 2195.9939716417575,
+            "calling_thread_cpu_s_sum": 159.74149784700046
+          },
+          "frame_read": {
+            "calls": 24092,
+            "errors": 0,
+            "wall_s_sum": 1020.5708656022325,
+            "calling_thread_cpu_s_sum": 171.18405273799934
+          },
+          "video": {
+            "files_touched": 39,
+            "http_responses": 3064,
+            "http_body_bytes": 1644422659,
+            "status_302": 1532,
+            "status_206": 1532
+          },
+          "block_cache": {
+            "block_size": 1048576,
+            "max_memory": 2147483648,
+            "cached_bytes": 1642613961,
+            "cached_blocks": 1570,
+            "hits": 122667,
+            "misses": 1612,
+            "requests": 1532,
+            "downloaded_bytes": 1642613961,
+            "deduped_waits": 42,
+            "evictions": 0,
+            "evicted_bytes": 0
+          },
+          "decoder_cache": null
+        }
+      },
+      "audit": {
+        "batches_checked": 1000,
+        "reference_batches": 1000,
+        "reference_trace_sha256": "1efe1cf5d05bf9895f48ae0ea0d0ed40e4a273920a0db63b53c3e53a4dd8dc09",
+        "reference_ordered_anchor_sha256": "fc96b52afef08706deee06effe9bea3d0ca9d54d672be4f60c27f2ea6a786ea4",
+        "ordered_anchor_sha256": "fc96b52afef08706deee06effe9bea3d0ca9d54d672be4f60c27f2ea6a786ea4",
+        "payload_xxh3_128_by_field": {
+          "observation.images.left": "e4134f736cbe922ccb3cb2480ede3834",
+          "observation.images.right": "a08f3bdb9ed3b54004f42ec1c77db563",
+          "observation.images.top": "ed5ae309de1a60f3db366b9ea285e543",
+          "action": "30ab4c7017e2a8af3b436d96703ccf28",
+          "observation.state": "da475f8b9b1302fe899fdded1bd27400"
+        },
+        "ordered_output_sha256": "76313c64bf9870e8a60f52d47b8faec13752adffd3af6236900ad5c059bf7c66"
+      },
+      "settings": {
+        "batch_size": 8,
+        "cameras": [
+          "observation.images.right",
+          "observation.images.left",
+          "observation.images.top"
+        ],
+        "pool": 32,
+        "tolerance_s": 0.001,
+        "workers": 0,
+        "action_steps": 1,
+        "decoder_cache_capacity": 0
+      }
+    },
+    {
+      "run": "internvideo-control-r01-batch_singletons",
+      "mode": "batch_singletons",
+      "constructor_s": 9.346953950996976,
+      "milestones": {
+        "1": {
+          "delivered_s": 23.950308528001187,
+          "prior_consumer_audit_s": 0.0,
+          "process_peak_rss_bytes": 1740566528,
+          "decoder_opens": 38,
+          "frame_read_calls": 69,
+          "decoder_create": {
+            "calls": 38,
+            "errors": 0,
+            "wall_s_sum": 13.071107886062237,
+            "calling_thread_cpu_s_sum": 0.9802187450000002
+          },
+          "frame_read": {
+            "calls": 69,
+            "errors": 0,
+            "wall_s_sum": 14.577286312065553,
+            "calling_thread_cpu_s_sum": 2.0419502930000006
+          },
+          "video": {
+            "files_touched": 28,
+            "http_responses": 197,
+            "http_body_bytes": 102781166,
+            "status_302": 102,
+            "status_206": 95
+          },
+          "block_cache": {
+            "block_size": 1048576,
+            "max_memory": 2147483648,
+            "cached_bytes": 102660730,
+            "cached_blocks": 99,
+            "hits": 127,
+            "misses": 120,
+            "requests": 95,
+            "downloaded_bytes": 102660730,
+            "deduped_waits": 8,
+            "evictions": 0,
+            "evicted_bytes": 0
+          },
+          "decoder_cache": {
+            "capacity": 96,
+            "allocated": 54,
+            "idle": 26,
+            "peak_allocated": 54,
+            "hits": 11,
+            "misses": 54,
+            "evictions": 0
+          }
+        },
+        "125": {
+          "delivered_s": 60.06185318599455,
+          "prior_consumer_audit_s": 1.1055337399884593,
+          "process_peak_rss_bytes": 3675553792,
+          "decoder_opens": 103,
+          "frame_read_calls": 3118,
+          "decoder_create": {
+            "calls": 103,
+            "errors": 0,
+            "wall_s_sum": 17.213708403345663,
+            "calling_thread_cpu_s_sum": 1.825800045999999
+          },
+          "frame_read": {
+            "calls": 3118,
+            "errors": 0,
+            "wall_s_sum": 487.3756926958449,
+            "calling_thread_cpu_s_sum": 52.07077359699992
+          },
+          "video": {
+            "files_touched": 39,
+            "http_responses": 2542,
+            "http_body_bytes": 1368471045,
+            "status_302": 1271,
+            "status_206": 1271
+          },
+          "block_cache": {
+            "block_size": 1048576,
+            "max_memory": 2147483648,
+            "cached_bytes": 1366970507,
+            "cached_blocks": 1306,
+            "hits": 2376,
+            "misses": 1333,
+            "requests": 1271,
+            "downloaded_bytes": 1366970507,
+            "deduped_waits": 27,
+            "evictions": 0,
+            "evicted_bytes": 0
+          },
+          "decoder_cache": {
+            "capacity": 96,
+            "allocated": 96,
+            "idle": 93,
+            "peak_allocated": 96,
+            "hits": 2161,
+            "misses": 103,
+            "evictions": 7
+          }
+        },
+        "1000": {
+          "delivered_s": 139.0093477019982,
+          "prior_consumer_audit_s": 4.6150100766681135,
+          "process_peak_rss_bytes": 4147187712,
+          "decoder_opens": 103,
+          "frame_read_calls": 24107,
+          "decoder_create": {
+            "calls": 103,
+            "errors": 0,
+            "wall_s_sum": 17.213708403345663,
+            "calling_thread_cpu_s_sum": 1.825800045999999
+          },
+          "frame_read": {
+            "calls": 24107,
+            "errors": 0,
+            "wall_s_sum": 747.8604223710718,
+            "calling_thread_cpu_s_sum": 172.91155041999912
+          },
+          "video": {
+            "files_touched": 39,
+            "http_responses": 3066,
+            "http_body_bytes": 1644423867,
+            "status_302": 1533,
+            "status_206": 1533
+          },
+          "block_cache": {
+            "block_size": 1048576,
+            "max_memory": 2147483648,
+            "cached_bytes": 1642613961,
+            "cached_blocks": 1570,
+            "hits": 24371,
+            "misses": 1597,
+            "requests": 1533,
+            "downloaded_bytes": 1642613961,
+            "deduped_waits": 27,
+            "evictions": 0,
+            "evicted_bytes": 0
+          },
+          "decoder_cache": {
+            "capacity": 96,
+            "allocated": 96,
+            "idle": 84,
+            "peak_allocated": 96,
+            "hits": 17349,
+            "misses": 103,
+            "evictions": 7
+          }
+        }
+      },
+      "audit": {
+        "batches_checked": 1000,
+        "reference_batches": 1000,
+        "reference_trace_sha256": "1efe1cf5d05bf9895f48ae0ea0d0ed40e4a273920a0db63b53c3e53a4dd8dc09",
+        "reference_ordered_anchor_sha256": "fc96b52afef08706deee06effe9bea3d0ca9d54d672be4f60c27f2ea6a786ea4",
+        "ordered_anchor_sha256": "fc96b52afef08706deee06effe9bea3d0ca9d54d672be4f60c27f2ea6a786ea4",
+        "payload_xxh3_128_by_field": {
+          "observation.images.left": "e4134f736cbe922ccb3cb2480ede3834",
+          "observation.images.right": "a08f3bdb9ed3b54004f42ec1c77db563",
+          "observation.images.top": "ed5ae309de1a60f3db366b9ea285e543",
+          "action": "30ab4c7017e2a8af3b436d96703ccf28",
+          "observation.state": "da475f8b9b1302fe899fdded1bd27400"
+        },
+        "ordered_output_sha256": "76313c64bf9870e8a60f52d47b8faec13752adffd3af6236900ad5c059bf7c66"
+      },
+      "settings": {
+        "batch_size": 8,
+        "cameras": [
+          "observation.images.right",
+          "observation.images.left",
+          "observation.images.top"
+        ],
+        "pool": 32,
+        "tolerance_s": 0.001,
+        "workers": 0,
+        "action_steps": 1,
+        "decoder_cache_capacity": 96
+      }
+    },
+    {
+      "run": "internvideo-control-r02-batch_singletons",
+      "mode": "batch_singletons",
+      "constructor_s": 8.770603512006346,
+      "milestones": {
+        "1": {
+          "delivered_s": 23.64326260300004,
+          "prior_consumer_audit_s": 0.0,
+          "process_peak_rss_bytes": 1719197696,
+          "decoder_opens": 39,
+          "frame_read_calls": 74,
+          "decoder_create": {
+            "calls": 39,
+            "errors": 0,
+            "wall_s_sum": 14.732782011968084,
+            "calling_thread_cpu_s_sum": 1.032675479
+          },
+          "frame_read": {
+            "calls": 74,
+            "errors": 0,
+            "wall_s_sum": 11.430220164940692,
+            "calling_thread_cpu_s_sum": 2.0816837549999994
+          },
+          "video": {
+            "files_touched": 26,
+            "http_responses": 197,
+            "http_body_bytes": 104875954,
+            "status_302": 100,
+            "status_206": 97
+          },
+          "block_cache": {
+            "block_size": 1048576,
+            "max_memory": 2147483648,
+            "cached_bytes": 104757882,
+            "cached_blocks": 101,
+            "hits": 141,
+            "misses": 111,
+            "requests": 97,
+            "downloaded_bytes": 104757882,
+            "deduped_waits": 0,
+            "evictions": 0,
+            "evicted_bytes": 0
+          },
+          "decoder_cache": {
+            "capacity": 96,
+            "allocated": 54,
+            "idle": 29,
+            "peak_allocated": 54,
+            "hits": 11,
+            "misses": 54,
+            "evictions": 0
+          }
+        },
+        "125": {
+          "delivered_s": 62.24465484599932,
+          "prior_consumer_audit_s": 1.2276169071847107,
+          "process_peak_rss_bytes": 3659059200,
+          "decoder_opens": 103,
+          "frame_read_calls": 3111,
+          "decoder_create": {
+            "calls": 103,
+            "errors": 0,
+            "wall_s_sum": 18.82954285989399,
+            "calling_thread_cpu_s_sum": 1.8207793290000007
+          },
+          "frame_read": {
+            "calls": 3111,
+            "errors": 0,
+            "wall_s_sum": 526.1401708784106,
+            "calling_thread_cpu_s_sum": 54.04462334899999
+          },
+          "video": {
+            "files_touched": 39,
+            "http_responses": 2535,
+            "http_body_bytes": 1361131047,
+            "status_302": 1271,
+            "status_206": 1264
+          },
+          "block_cache": {
+            "block_size": 1048576,
+            "max_memory": 2147483648,
+            "cached_bytes": 1359630475,
+            "cached_blocks": 1299,
+            "hits": 2376,
+            "misses": 1322,
+            "requests": 1264,
+            "downloaded_bytes": 1359630475,
+            "deduped_waits": 16,
+            "evictions": 0,
+            "evicted_bytes": 0
+          },
+          "decoder_cache": {
+            "capacity": 96,
+            "allocated": 96,
+            "idle": 83,
+            "peak_allocated": 96,
+            "hits": 2161,
+            "misses": 103,
+            "evictions": 7
+          }
+        },
+        "1000": {
+          "delivered_s": 146.87981097999727,
+          "prior_consumer_audit_s": 5.276904656930128,
+          "process_peak_rss_bytes": 4152475648,
+          "decoder_opens": 103,
+          "frame_read_calls": 24120,
+          "decoder_create": {
+            "calls": 103,
+            "errors": 0,
+            "wall_s_sum": 18.82954285989399,
+            "calling_thread_cpu_s_sum": 1.8207793290000007
+          },
+          "frame_read": {
+            "calls": 24120,
+            "errors": 0,
+            "wall_s_sum": 795.5173696681741,
+            "calling_thread_cpu_s_sum": 180.17668679200062
+          },
+          "video": {
+            "files_touched": 39,
+            "http_responses": 3066,
+            "http_body_bytes": 1644423905,
+            "status_302": 1533,
+            "status_206": 1533
+          },
+          "block_cache": {
+            "block_size": 1048576,
+            "max_memory": 2147483648,
+            "cached_bytes": 1642613961,
+            "cached_blocks": 1570,
+            "hits": 24385,
+            "misses": 1586,
+            "requests": 1533,
+            "downloaded_bytes": 1642613961,
+            "deduped_waits": 16,
+            "evictions": 0,
+            "evicted_bytes": 0
+          },
+          "decoder_cache": {
+            "capacity": 96,
+            "allocated": 96,
+            "idle": 96,
+            "peak_allocated": 96,
+            "hits": 17349,
+            "misses": 103,
+            "evictions": 7
+          }
+        }
+      },
+      "audit": {
+        "batches_checked": 1000,
+        "reference_batches": 1000,
+        "reference_trace_sha256": "1efe1cf5d05bf9895f48ae0ea0d0ed40e4a273920a0db63b53c3e53a4dd8dc09",
+        "reference_ordered_anchor_sha256": "fc96b52afef08706deee06effe9bea3d0ca9d54d672be4f60c27f2ea6a786ea4",
+        "ordered_anchor_sha256": "fc96b52afef08706deee06effe9bea3d0ca9d54d672be4f60c27f2ea6a786ea4",
+        "payload_xxh3_128_by_field": {
+          "observation.images.left": "e4134f736cbe922ccb3cb2480ede3834",
+          "observation.images.right": "a08f3bdb9ed3b54004f42ec1c77db563",
+          "observation.images.top": "ed5ae309de1a60f3db366b9ea285e543",
+          "action": "30ab4c7017e2a8af3b436d96703ccf28",
+          "observation.state": "da475f8b9b1302fe899fdded1bd27400"
+        },
+        "ordered_output_sha256": "76313c64bf9870e8a60f52d47b8faec13752adffd3af6236900ad5c059bf7c66"
+      },
+      "settings": {
+        "batch_size": 8,
+        "cameras": [
+          "observation.images.right",
+          "observation.images.left",
+          "observation.images.top"
+        ],
+        "pool": 32,
+        "tolerance_s": 0.001,
+        "workers": 0,
+        "action_steps": 1,
+        "decoder_cache_capacity": 96
+      }
+    }
+  ]
+}
