@@ -1,0 +1,308 @@
+{
+  "status": "externally_audited_saved_checkpoint",
+  "scope": "Recorded shared deliveries through the candidate's last atomically saved checkpoint",
+  "native_pair_complete": false,
+  "native_source_valid": false,
+  "source_verification": "Matching pre-run and separately captured post-run inventories. The bucket remained mutable between checks.",
+  "source_root": "hf://buckets/pepijn223/MolmoAct2-BimanualYAM-Dataset-bucket",
+  "manifest_sha256": "aebacc429d54f284e103ff10613b925f5827c347e0678846b0b6f0015dded782",
+  "manifest_before_utc": "2026-11-19T08:16:29.208384+00:00",
+  "external_manifest_after_utc": "2026-11-19T09:28:42.600402+00:00",
+  "job_id": "6afeafd6e41aae15936d3223",
+  "job_finished_utc": "2026-11-19 09:28:18.313000+00:00",
+  "artifact_revision": "ff39258469f126d03d927070fb0229801643eb86",
+  "supervisor": {
+    "baseline": {
+      "cgroup_memory_events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0",
+      "code": 0,
+      "event": "stop",
+      "label": "bucket-current-frame-tolerance-1ms-repeat-baseline",
+      "reader": "baseline",
+      "seconds": 1896.365557636993,
+      "timed_out": false,
+      "utc": "2026-11-19T08:48:13.889084+00:00"
+    },
+    "candidate": {
+      "cgroup_memory_events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0",
+      "code": -9,
+      "event": "stop",
+      "label": "bucket-current-frame-tolerance-1ms-repeat-candidate",
+      "reader": "candidate",
+      "seconds": 2354.348377710994,
+      "timed_out": true,
+      "utc": "2026-11-19T09:27:30.552387+00:00"
+    },
+    "native_pair": {
+      "dataset": "bucket",
+      "event": "pair-done",
+      "fixed_target": 25000,
+      "history": false,
+      "pair": "current-frame-tolerance-1ms-repeat",
+      "single_frame": true,
+      "source_valid": false,
+      "tolerance_s": 0.001,
+      "utc": "2026-11-19T09:27:44.487352+00:00"
+    },
+    "native_after_manifest": {
+      "event": "skipped",
+      "label": "bucket-manifest-current-frame-tolerance-1ms-repeat-after",
+      "reason": "job time exhausted",
+      "utc": "2026-11-19T09:27:44.487159+00:00"
+    }
+  },
+  "workload": "single_frame",
+  "cache": "cold",
+  "tolerance_s": 0.001,
+  "reader_audits": {
+    "baseline": {
+      "native_status": "ok",
+      "first_sample_s": 737.5670496620005,
+      "lerobot_revision": "fe1c54594f6ba275fccf210b9f7b11f0e2324b89",
+      "datasets_revision": "464fe790b82a320350c9c686c1b7e409323a1cf3",
+      "saved_batches": 25000,
+      "in_bounds_unique_samples": 200000,
+      "duplicates": 0,
+      "invalid_batches": 0,
+      "saved_elapsed_process_s": 1893.8632563099964,
+      "last_valid_delivery_elapsed_process_s": 1893.817589,
+      "native_refill_batches": [
+        18557
+      ],
+      "cursor": "verified terminal event",
+      "tail_not_examined_beyond_checkpoint": false
+    },
+    "candidate": {
+      "native_status": "running",
+      "first_sample_s": 15.998210189005476,
+      "lerobot_revision": "1a60cb4b800c2947834342752c32f064c8bf143c",
+      "datasets_revision": "464fe790b82a320350c9c686c1b7e409323a1cf3",
+      "saved_batches": 24000,
+      "in_bounds_unique_samples": 192000,
+      "duplicates": 0,
+      "invalid_batches": 0,
+      "saved_elapsed_process_s": 2289.685896366005,
+      "last_valid_delivery_elapsed_process_s": 2289.685267,
+      "native_refill_batches": [
+        6878,
+        13175
+      ],
+      "cursor": "last atomically saved worker checkpoint",
+      "tail_not_examined_beyond_checkpoint": true
+    }
+  },
+  "last_paired_batch": 24000,
+  "paired_unique_samples_per_reader": 192000,
+  "native_target_batches": 25000,
+  "observed_milestones": {
+    "1": {
+      "batch": 1,
+      "baseline_s": 750.3372050140024,
+      "candidate_s": 17.093843192007625,
+      "baseline_minus_candidate_s": 733.2433618219948,
+      "lead": "candidate"
+    },
+    "125": {
+      "batch": 125,
+      "baseline_s": 757.5703535639914,
+      "candidate_s": 44.06667024100898,
+      "baseline_minus_candidate_s": 713.5036833229824,
+      "lead": "candidate"
+    },
+    "1000": {
+      "batch": 1000,
+      "baseline_s": 802.218905827991,
+      "candidate_s": 118.65021441099816,
+      "baseline_minus_candidate_s": 683.5686914169928,
+      "lead": "candidate"
+    },
+    "13300": {
+      "batch": 13300,
+      "baseline_s": 1457.5180856950028,
+      "candidate_s": 1208.3249982520065,
+      "baseline_minus_candidate_s": 249.19308744299633,
+      "lead": "candidate"
+    },
+    "24000": {
+      "batch": 24000,
+      "baseline_s": 1851.583561263993,
+      "candidate_s": 2286.5808397329965,
+      "baseline_minus_candidate_s": -434.9972784690035,
+      "lead": "baseline"
+    }
+  },
+  "delivery_leads": {
+    "lead_change_count": 1,
+    "lead_changes": [
+      {
+        "reader": "baseline",
+        "first_batch": 17490,
+        "strict_lead_batches": 6511,
+        "previous_leader_last_delivery": {
+          "batch": 17489,
+          "baseline_s": 1613.173177839999,
+          "candidate_s": 1613.0507727259974,
+          "baseline_minus_candidate_s": 0.12240511400159448,
+          "lead": "candidate"
+        },
+        "leader_first_delivery": {
+          "batch": 17490,
+          "baseline_s": 1613.2041848299996,
+          "candidate_s": 1613.2042964520078,
+          "baseline_minus_candidate_s": -0.00011162200826220214,
+          "lead": "baseline"
+        },
+        "last_strict_lead_batch": 24000
+      }
+    ],
+    "initial_lead": {
+      "reader": "candidate",
+      "first_batch": 1,
+      "strict_lead_batches": 17489,
+      "previous_leader_last_delivery": null,
+      "leader_first_delivery": {
+        "batch": 1,
+        "baseline_s": 750.3372050140024,
+        "candidate_s": 17.093843192007625,
+        "baseline_minus_candidate_s": 733.2433618219948,
+        "lead": "candidate"
+      },
+      "last_strict_lead_batch": 17489
+    },
+    "first_durable_lead_change": {
+      "reader": "baseline",
+      "first_batch": 17490,
+      "strict_lead_batches": 6511,
+      "previous_leader_last_delivery": {
+        "batch": 17489,
+        "baseline_s": 1613.173177839999,
+        "candidate_s": 1613.0507727259974,
+        "baseline_minus_candidate_s": 0.12240511400159448,
+        "lead": "candidate"
+      },
+      "leader_first_delivery": {
+        "batch": 17490,
+        "baseline_s": 1613.2041848299996,
+        "candidate_s": 1613.2042964520078,
+        "baseline_minus_candidate_s": -0.00011162200826220214,
+        "lead": "baseline"
+      },
+      "last_strict_lead_batch": 24000
+    },
+    "final_lead_through_checkpoint": {
+      "reader": "baseline",
+      "first_batch": 17490,
+      "strict_lead_batches": 6511,
+      "previous_leader_last_delivery": {
+        "batch": 17489,
+        "baseline_s": 1613.173177839999,
+        "candidate_s": 1613.0507727259974,
+        "baseline_minus_candidate_s": 0.12240511400159448,
+        "lead": "candidate"
+      },
+      "leader_first_delivery": {
+        "batch": 17490,
+        "baseline_s": 1613.2041848299996,
+        "candidate_s": 1613.2042964520078,
+        "baseline_minus_candidate_s": -0.00011162200826220214,
+        "lead": "baseline"
+      },
+      "last_strict_lead_batch": 24000
+    },
+    "durable_lead_threshold_batches": 125,
+    "ties": 0
+  },
+  "diversity_prefix_1000": {
+    "after_batch": 0,
+    "through_batch": 1000,
+    "batches_per_reader": 1000,
+    "distribution_overlap": 0.944,
+    "unconditioned_mean_consumer_wait_s": [
+      0.11148997354329913,
+      0.10589751043703291
+    ],
+    "unconditioned_mean_distinct_episodes_per_batch": [
+      6.947,
+      7.045
+    ],
+    "overlap_weighted_mean_consumer_wait_s": [
+      0.11219483115308049,
+      0.10512480503469405
+    ],
+    "wait_clock": "DataLoader next() wait. Reader construction and prior index receipt are outside this clock."
+  },
+  "diversity_after_125": {
+    "after_batch": 125,
+    "through_batch": 24000,
+    "batches_per_reader": 23875,
+    "distribution_overlap": 0.6677277486910995,
+    "unconditioned_mean_consumer_wait_s": [
+      0.0453591014915469,
+      0.08765250265699293
+    ],
+    "unconditioned_mean_distinct_episodes_per_batch": [
+      6.056460732984293,
+      7.0587225130890054
+    ],
+    "overlap_weighted_mean_consumer_wait_s": [
+      0.04706065056881041,
+      0.08748513227289698
+    ],
+    "wait_clock": "DataLoader next() wait. Reader construction and prior index receipt are outside this clock."
+  },
+  "after_125_samples_per_s": [
+    174.58655769023923,
+    85.17226004563823
+  ],
+  "raw_evidence": [
+    {
+      "path": "data11-bench/review5388/results/downloads/review5388/results/molmo-tol02/run.jsonl",
+      "bytes": 3147,
+      "sha256": "cc51759394621b0cf86a656b13f251ec650f29e09456175b19d1abd679070c1e"
+    },
+    {
+      "path": "data11-bench/review5388/results/downloads/review5388/results/molmo-tol02/host.json",
+      "bytes": 1414,
+      "sha256": "10850cea58599da3c22a2c041543fe25d4fdc410e68560fc46a22ee2e0b0cd5a"
+    },
+    {
+      "path": "data11-bench/review5388/results/molmo-tol02.job.json",
+      "bytes": 778,
+      "sha256": "9e048952a5e651ceb10a3caf4e39f23d427d751904765d6c245306eb16563115"
+    },
+    {
+      "path": "data11-bench/review5388/results/downloads/review5388/results/molmo-tol02/bucket-manifest-current-frame-tolerance-1ms-repeat-before.json",
+      "bytes": 1010,
+      "sha256": "2f1a2bf0f3f7dee39d61cb0f2a4e6ea4fce3d3228a2de641f27e928ad852c79e"
+    },
+    {
+      "path": "data11-bench/review5388/results/molmo-tol02-external-post-manifest.json",
+      "bytes": 1010,
+      "sha256": "7fe54aee0c5b21db2c67cfcebf50979f5ac1c2b59885280762eb81b0ff3a16e3"
+    },
+    {
+      "path": "/tmp/lerobot5388-coverage-metadata/bucket-aebacc429d54f284e103ff10613b925f5827c347e0678846b0b6f0015dded782.json",
+      "bytes": 470929,
+      "sha256": "df4c6b5af23a308bcda2389f6921eae58d94ca4ffef1fd922225f7cd632a7cf4"
+    },
+    {
+      "path": "data11-bench/review5388/results/downloads/review5388/results/molmo-tol02/bucket-current-frame-tolerance-1ms-repeat-baseline.json",
+      "bytes": 34414,
+      "sha256": "089d7ad8a74b59914f52a1a2dc6b02693b160ec0495fbc48eaa6192ea9e9c1c6"
+    },
+    {
+      "path": "data11-bench/review5388/results/downloads/review5388/results/molmo-tol02/bucket-current-frame-tolerance-1ms-repeat-candidate.json",
+      "bytes": 25441,
+      "sha256": "dbdc8c4a21c3abc39e172579184df7f822c89aa2619e933ce2169d4cfa661314"
+    },
+    {
+      "path": "data11-bench/review5388/results/downloads/review5388/results/molmo-tol02/bucket-current-frame-tolerance-1ms-repeat-baseline.events.jsonl.gz",
+      "bytes": 2354318,
+      "sha256": "3f9742975dba954dd8e40d83775e33edde66d19515c7857f98673e6fa13d627a"
+    },
+    {
+      "path": "data11-bench/review5388/results/downloads/review5388/results/molmo-tol02/bucket-current-frame-tolerance-1ms-repeat-candidate.events.jsonl.gz",
+      "bytes": 2402020,
+      "sha256": "9d843c55a30a82afe2832dee89326fdf78703d8e170f9941ff9adc8629184199"
+    }
+  ]
+}

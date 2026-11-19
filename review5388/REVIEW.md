@@ -74,11 +74,18 @@ On the same fresh host at **1 ms**, the draft delivered 1,000 batches in **97.67
 
 Over the longer run, the draft delivered 109.9 unique windows/s across two refills, versus 213.6 for the baseline. Average episode diversity in those longer timing windows was 7.06 and 5.94 respectively. The baseline was still **99.94 s behind** at batch 13,300, the last point observed by both readers. Neither curve crossed in this pair. These elapsed times include construction and the actual sampling order each reader chose. [Matched-prefix data](measurements/cold-current-frame.json)
 
-![Elapsed time to equal batch counts with each reader on fresh Molmo disks at 1 ms](measurements/cold-current-frame.svg)
+[First cold delivery curve, through 13,300 batches](measurements/cold-current-frame.svg)
 
 On a **warm restart**, the first batch again reached the consumer sooner with the draft (10.31 vs 39.78 s). The baseline overtook at **batch 514** (4,112 examples), held the lead through batch 1,000, and finished there at **75.21 vs 91.14 s**. The overlap in first-1,000 episode diversity was again 94.4%. The corresponding diversity-matched average waits were 73.4 ms for the baseline and 83.3 ms for the draft. This repeat ended at 1,000 batches, before either reader's second refill. [Warm time-to-count trace](measurements/warm-current-frame.json) · [Warm delivery curve](measurements/warm-current-frame.svg)
 
 After the first 125 batches, we also compared the 13,175 remaining batches that both cold readers delivered. The same count of 105,400 additional anchors took 519.06 seconds for the baseline and 959.16 for the draft, or 203.1 and 109.9 anchors/s. Batch diversity averaged 6.54 episodes for the baseline and 7.06 for the draft. After reweighting to the 84.1% overlap in episode mix, the baseline consumer waited **39.2 ms per batch** and the draft consumer waited **67.9 ms**. The observed wait difference persisted at comparable diversity. [Matched waits and per-group counts](measurements/cold-matched-after125.json)
+
+
+The reversed-order cold repeat ran longer. The draft reached 1,000 batches at 118.65 seconds and the baseline at 802.22 seconds. Around **batch 17,490** (139,920 anchors), the baseline took the lead. It stayed ahead through the shared 24,000-batch checkpoint, arriving at **30 min 52 s** versus **38 min 7 s** for the draft. This is an observed crossover in one fixed workload. Storage and scheduling varied between runs.
+
+The candidate hit its per-cell deadline before the requested 25,000 batches. Its last complete saved checkpoint contained 24,000 batches and the in-job post-run bucket check was skipped. An independent full inventory taken 24.3 seconds after the job ended matched the pre-run digest. We audited every delivered ID through the saved checkpoint and kept the original incomplete run status in the results. [Checkpoint audit and raw evidence hashes](measurements/molmo-tol02-checkpoint-crossover.json) · [Independent post-run inventory](measurements/molmo-tol02-external-post-manifest.json)
+
+![Elapsed time to equal batch counts on the cold Molmo repeat, including observed crossover](measurements/cold-repeat-checkpoint.svg)
 
 ### What a publisher-built index changes
 
