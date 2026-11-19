@@ -4,6 +4,7 @@ import argparse
 import csv
 import gzip
 import json
+import re
 import sys
 from pathlib import Path
 
@@ -17,6 +18,7 @@ TRACE_SUFFIX = ".events.jsonl"
 ROOT = Path(__file__).resolve().parent
 CATALOG_FIELDS = ("source", "revision", "manifest_sha256", "total_episodes", "total_frames")
 EPISODE_COLUMNS = ("episode_index", "length", "dataset_from_index", "dataset_to_index")
+RECEIPT_FIELDS = ("repo", "revision", "path", "relative_cache_path", "sha256", "size_bytes")
 
 
 def read_json(path):
@@ -75,19 +77,45 @@ def episode_lengths(dataset, catalog, cache):
     return lengths
 
 
-def source_check(summary_path, record, catalog, allow_partial):
+def worker_receipt_check(summary_path, record):
+    sidecar = record.get("sidecar", {})
+    receipt = sidecar.get("private_transfer")
+    path = summary_path.parent / f"{record['dataset']}-private-transfer.json"
+    if not receipt or not path.is_file():
+        return "worker-receipt-missing"
+    transferred = read_json(path)
+    expected = transferred.get("private_transfer", {})
+    if (
+        transferred.get("dataset") != record["dataset"]
+        or any(not expected.get(key) or expected[key] != receipt.get(key) for key in RECEIPT_FIELDS)
+        or not re.fullmatch(r"[0-9a-f]{64}", expected["sha256"])
+        or not re.fullmatch(r"[0-9a-f]{40}", expected["revision"])
+        or sidecar.get("sha256") != expected["sha256"]
+        or sidecar.get("archive_bytes") != expected["size_bytes"]
+        or sidecar.get("archive_name") != Path(expected["relative_cache_path"]).name
+        or sidecar.get("origin") != "verified_prepared_archive"
+    ):
+        return "worker-receipt-mismatch"
+    return "verified"
+
+
+def source_check(summary_path, record, catalog, allow_partial, *, worker_memory=False):
     source = record.get("source", {})
     if source.get("repo") != catalog["source"] or source.get("revision") != catalog["revision"]:
         return "source-mismatch" if source else "source-not-recorded"
-    observed = source.get("observed")
-    if observed and (observed["frames"], observed["episodes"]) != (
+    observed = source if worker_memory and "frames" in source else source.get("observed")
+    if observed and (observed.get("frames"), observed.get("episodes")) != (
         catalog["total_frames"],
         catalog["total_episodes"],
     ):
         return "catalog-count-mismatch"
+    if worker_memory and not observed:
+        return "snapshot-not-opened"
     if catalog["revision"]:
         if not observed:
             return "snapshot-not-opened"
+        if worker_memory:
+            return worker_receipt_check(summary_path, record)
         return (
             "verified"
             if observed["metadata_snapshot"] == catalog["revision"]
@@ -100,6 +128,9 @@ def source_check(summary_path, record, catalog, allow_partial):
     log = summary_path.parent / "run.jsonl"
     events = read_trace(log, allow_partial) if log.is_file() else ()
     for event in events:
+        if worker_memory and event["event"] == "worker-memory-pair-done" and event["dataset"] == "bucket":
+            label = "worker-memory"
+            break
         if event["event"] == "comparison-source" and event["label"] in (name, name.removeprefix("bucket-")):
             label = name.removeprefix("bucket-")
             break
@@ -118,11 +149,9 @@ def source_check(summary_path, record, catalog, allow_partial):
     paths = [summary_path.parent / f"bucket-manifest-{label}-{phase}.json" for phase in ("before", "after")]
     if not all(path.is_file() for path in paths):
         return "bucket-manifest-missing"
-    return (
-        "verified"
-        if all(catalog_key(read_json(path)) == catalog_key(catalog) for path in paths)
-        else "bucket-manifest-mismatch"
-    )
+    if not all(catalog_key(read_json(path)) == catalog_key(catalog) for path in paths):
+        return "bucket-manifest-mismatch"
+    return worker_receipt_check(summary_path, record) if worker_memory else "verified"
 
 
 def trace_files(directory):
@@ -153,10 +182,11 @@ def read_trace(path, allow_partial):
             raise
 
 
-def audit(trace, lengths, total_frames, allow_partial):
+def audit(trace, lengths, total_frames, allow_partial, *, worker_memory=False):
     seen, admitted, delivered = set(), set(), set()
     raw = unique_valid = out_of_range = batches = 0
-    measured = False
+    # The worker-memory harness logs only measured batches and omits the phase and admission events.
+    measured = worker_memory
     terminal = None
     rows = []
 
@@ -169,7 +199,7 @@ def audit(trace, lengths, total_frames, allow_partial):
             "unique_in_bounds": unique_valid,
             "duplicates": raw - len(seen),
             "out_of_range": out_of_range,
-            "admitted_episodes": len(admitted),
+            "admitted_episodes": None if worker_memory else len(admitted),
             "delivered_episodes": len(delivered),
             "source_frames": total_frames,
             "source_episodes": len(lengths),
@@ -213,6 +243,23 @@ def audit(trace, lengths, total_frames, allow_partial):
     return rows, terminal
 
 
+def trace_format(record):
+    """Distinguish native benchmark and worker-memory summaries from unrelated traces."""
+    required = {"dataset", "reader", "workload", "config", "progress"}
+    if not isinstance(record, dict) or not required <= record.keys():
+        return None
+    if {"timings", "contract", "turnover"} <= record.keys():
+        return "native"
+    config = record["config"]
+    if (
+        isinstance(config, dict)
+        and "milestones" in record
+        and {"workers", "sample_interval_s", "maps_interval_s"} <= config.keys()
+    ):
+        return "worker_memory"
+    return None
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("directory", type=Path, help="Job folder, or parent with one or more job folders")
@@ -227,19 +274,23 @@ def main():
     results = []
     for summary_path, trace in trace_files(args.directory):
         if not summary_path.is_file():
-            if args.allow_partial:
-                print(f"Pending summary for {trace.name}", file=sys.stderr)
-                continue
-            raise ValueError(f"{trace}: missing summary JSON")
+            print(f"Skipping {trace.name}: no matching summary", file=sys.stderr)
+            continue
         record = read_json(summary_path)
+        format_name = trace_format(record)
+        if format_name is None or record["dataset"] not in SOURCES:
+            continue
+        worker_memory = format_name == "worker_memory"
         dataset = record["dataset"]
         if dataset not in catalogs:
             catalog = read_json(args.catalog_dir / f"catalog-{dataset}.json")
             lengths[dataset] = episode_lengths(dataset, catalog, args.metadata_cache)
             catalogs[dataset] = catalog
         catalog = catalogs[dataset]
-        checked = source_check(summary_path, record, catalog, args.allow_partial)
-        rows, terminal = audit(trace, lengths[dataset], catalog["total_frames"], args.allow_partial)
+        checked = source_check(summary_path, record, catalog, args.allow_partial, worker_memory=worker_memory)
+        rows, terminal = audit(
+            trace, lengths[dataset], catalog["total_frames"], args.allow_partial, worker_memory=worker_memory
+        )
         context = {
             "run": trace.parent.name,
             "cell": summary_path.stem,

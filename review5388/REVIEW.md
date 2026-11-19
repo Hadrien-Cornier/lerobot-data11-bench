@@ -2,7 +2,7 @@
 
 Quentin's draft avoids the cold MP4 indexing wait. On the reported MolmoAct2 bucket it constructed the reader in 6.93 seconds and yielded its first current-frame sample at 15.13 seconds. With the 100-step action targets used for training, it delivered zero batches on MolmoAct2, ABC-130K and DROID. Pepijn's cold baseline delivered 1,000 batches in 653.7 seconds on MolmoAct2, 2,598.0 seconds on ABC-130K and 325.5 seconds on DROID.
 
-This interim report contains finished CPU runs and local correctness checks. The fresh publisher-index comparison and ABC camera-history runs are scheduled in the ongoing benchmark. The Molmo current-frame comparison below has completed on both cold and warm disks. The reviewed draft opened November 16, 2026 at 19:06 UTC and GitHub shows its last update at 19:09 UTC the same day. The pinned head is `1a60cb4b`. [LeRobot #5388](https://github.com/huggingface/lerobot/pull/5388) · [Prerequisite Datasets #8983](https://github.com/huggingface/datasets/pull/8983)
+This interim report contains finished CPU runs and local correctness checks. Cold starts, simulated publisher-index receipt, local restarts and the first ABC camera-history prefix have completed. A longer Molmo crossover test, worker-memory measurements and a longer ABC history repeat are the remaining experiments. The reviewed draft opened November 16, 2026 at 19:06 UTC and GitHub shows its last update at 19:09 UTC the same day. The pinned head is `1a60cb4b`. [LeRobot #5388](https://github.com/huggingface/lerobot/pull/5388) · [Prerequisite Datasets #8983](https://github.com/huggingface/datasets/pull/8983)
 
 A usable batch here has eight distinct new `(episode, frame)` anchors, the expected tensor shapes and dtypes for the three cameras, state and 100 actions, and the expected camera padding values. Each distinct anchor counts once, including anchors near episode ends where future actions require padding. We checked actual pixels, action and state values and all padding against an independent FFmpeg-backed reader on the finite fixture. The independent episode-length check also verified the cloud anchor bounds. The large-corpus measurements cover prefixes of a finite pass.
 
@@ -10,6 +10,8 @@ Each timed pair ran back-to-back on the same 16-vCPU HF Jobs CPU XL host, with a
 
 
 Times in the tables are seconds from the start of the consumer. Ranges span repeated runs of the same configuration. A dash means that a milestone or a qualified rate was unavailable. Peak RAM is decimal GB of process-tree resident memory across the full observed cell. The table of projections uses rates from batch 125 through two refills. An 8,000-anchor prefix checks identities and tensor structure, and each full-pass estimate assumes the longer measured rate continues across the rest of the source.
+
+The primary pairs used the same pinned Datasets dependency. A DROID baseline control on released Datasets 5.2.0 delivered two valid batches, with its first at 90.08 seconds under warm caches. That short compatibility check is listed separately in the CSV.
 
 ### MolmoAct2
 
@@ -19,8 +21,8 @@ Times in the tables are seconds from the start of the consumer. Ranges span repe
 | Quentin, As published, fresh | 7.5 | — | — | — | — | — / — | 1.09 | — |
 | Pepijn, Private index, fresh | 37.4 | 97.1 | 102.8 | 141.5 | — | 6.95 / — | 15.18 | — |
 | Quentin, Fresh, paired with index recipient | 7.3 | — | — | — | — | — / — | 1.13 | — |
-| Pepijn, Warm restart | 2.0 | 40.5 | 45.1 | 76.6 | 220.0 | 6.95 / 5.94 | 15.58 | 4.00 |
-| Quentin, Warm restart | 1.6 | — | — | — | — | — / — | 0.84 | — |
+| Pepijn, Warm restart (2 runs) | 2.0–3.1 | 40.5–41.1 | 45.1–46.0 | 76.6–77.1 | 214.8–220.0 | 6.95 / 5.94 | 15.56–15.58 | 4.00–4.10 |
+| Quentin, Warm restart (2 runs) | 1.5–1.6 | — | — | — | — | — / — | 0.83–0.84 | — |
 
 The cold baseline delivered 234,304 distinct windows with 0 duplicates and 2 verified pool refills. At batch 1,000, the largest single-episode share averaged 22.8% of a batch. 0.007% of within-batch pairs were from the same episode and at most 0.2 seconds apart.
 
@@ -34,8 +36,8 @@ The draft raised `TypeError: expected Tensor as element 0 in argument 0, but got
 | Quentin, As published, fresh | 10.1 | — | — | — | — | — / — | 5.36 | — |
 | Pepijn, Private index, fresh | 149.0 | 261.1 | 263.9 | 278.5 | 520.4 | 6.98 / 5.87 | 24.11 | 8.51 |
 | Quentin, Fresh, paired with index recipient | 8.9 | — | — | — | — | — / — | 4.85 | — |
-| Pepijn, Warm restart | 8.0 | 88.3 | 91.0 | 102.5 | 570.4 | 6.98 / 5.87 | 23.96 | 7.76 |
-| Quentin, Warm restart | 1.7 | — | — | — | — | — / — | 5.27 | — |
+| Pepijn, Warm restart (2 runs) | 8.0–11.6 | 88.3–127.6 | 91.0–131.6 | 102.5–149.2 | 379.6–570.4 | 6.98 / 5.87 | 23.96–24.03 | 7.76–11.66 |
+| Quentin, Warm restart (2 runs) | 1.7–1.8 | — | — | — | — | — / — | 4.63–5.27 | — |
 | Pepijn, History, warm | 8.0 | 89.0 | 95.1 | 135.9 | — | 6.98 / — | 22.66 | — |
 | Quentin, History, warm | 0.9 | — | — | — | — | — / — | 4.69 | — |
 
@@ -51,8 +53,8 @@ The draft raised `TypeError: expected Tensor as element 0 in argument 0, but got
 | Quentin, As published, fresh | 6.4 | — | — | — | — | — / — | 4.56 | — |
 | Pepijn, Private index, fresh | 12.1 | 126.2 | 135.1 | 162.2 | 215.1 | 6.41 / 5.46 | 5.64 | 1.49 |
 | Quentin, Fresh, paired with index recipient | 6.3 | — | — | — | — | — / — | 5.02 | — |
-| Pepijn, Warm restart | 2.5 | 99.6 | 105.6 | 125.0 | 298.1 | 6.41 / 5.46 | 5.02 | 1.07 |
-| Quentin, Warm restart | 0.7 | — | — | — | — | — / — | 4.25 | — |
+| Pepijn, Warm restart (2 runs) | 2.0–2.5 | 90.5–99.6 | 95.7–105.6 | 115.0–125.0 | 298.1–328.6 | 6.41 / 5.46 | 5.02–5.47 | 0.97–1.07 |
+| Quentin, Warm restart (2 runs) | 0.7 | — | — | — | — | — / — | 4.21–4.25 | — |
 
 The cold baseline delivered 31,592 distinct windows with 0 duplicates and 2 verified pool refills. At batch 1,000, the largest single-episode share averaged 27.7% of a batch. 0.125% of within-batch pairs were from the same episode and at most 0.2 seconds apart.
 
@@ -100,6 +102,17 @@ The wait percentiles cover the first 1,000 batches of each cold baseline cell. E
 | MolmoAct2 | 40.9 / 53.0 / 64.6 | 406.4 | 121.2 | 81.0 |
 | ABC-130K | 12.9 / 15.1 / 30.4 | 284.9 | 36.3 | 123.2 |
 | DROID | 20.8 / 78.6 / 150.7 | 53.7 | 43.8 | 266.2 |
+
+### How much RAM did the published index use?
+
+On a separate CPU XL host we ran fresh one-worker and four-worker baseline processes against the same validated disk index. Both settings consumed 125 batches of eight, with the trainer’s per-worker episode pool, fetch concurrency, and four-batch prefetch. Each table entry is a sampled peak. Linux proportional set size (PSS) apportions a shared page among processes, so summing PSS across the loader counts that page roughly once. Summed RSS counts it once per mapping.
+
+| Dataset | Workers | Archive / local map (GB) | Index PSS (GB) | Whole loader PSS (GB) | Summed RSS (GB) |
+|---|---:|---:|---:|---:|---:|
+| ABC-130K | 1 | 8.56 / 17.49 | 17.45 | 20.91 | 21.11 |
+| ABC-130K | 4 | 8.56 / 17.49 | 17.45 | 24.49 | 72.30 |
+
+The ABC archive and derived map together occupied 26.05 GB on disk. Preparing that map took 143.77 s in this separate run. The 8.56 GB logical archive accounted for 6.52 GB of incoming traffic during the transfer command. The index fit on this 124 GB host and accounted for most of the one-worker PSS. Four workers shared its resident pages. The one-worker run preceded the four-worker run, so metadata and OS page caches could be warmer on the second run. [Worker, receipt and memory measurements](measurements/worker-memory.csv)
 
 ## What changed in the training path
 

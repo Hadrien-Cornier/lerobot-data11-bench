@@ -19,6 +19,11 @@ matrix03,abc-warm-history-baseline,abc,baseline,action100_history_0p8s,0.1,verif
 matrix03,abc-warm-history-baseline,abc,baseline,action100_history_0p8s,0.1,verified,9f705fad4fd6d87dae4dd1141419c8ab8dbc7e1583ccd0401030fce2fac2abbd,ok,batch_1000,1000,8000,8000,8000,0,0,32,32,382468339,129225,0.000020917
 matrix03,abc-warm-history-baseline,abc,baseline,action100_history_0p8s,0.1,verified,9f705fad4fd6d87dae4dd1141419c8ab8dbc7e1583ccd0401030fce2fac2abbd,ok,end,22157,177256,177256,177256,0,0,62,62,382468339,129225,0.000463453
 matrix03,abc-warm-history-candidate,abc,candidate,action100_history_0p8s,0.1,verified,9f705fad4fd6d87dae4dd1141419c8ab8dbc7e1583ccd0401030fce2fac2abbd,error,end,0,0,0,0,0,0,32,0,382468339,129225,0.000000000
+matrix03,abc-warm-reversed-baseline,abc,baseline,action100,0.1,verified,9f705fad4fd6d87dae4dd1141419c8ab8dbc7e1583ccd0401030fce2fac2abbd,ok,batch_1,1,8,8,8,0,0,32,7,382468339,129225,0.000000021
+matrix03,abc-warm-reversed-baseline,abc,baseline,action100,0.1,verified,9f705fad4fd6d87dae4dd1141419c8ab8dbc7e1583ccd0401030fce2fac2abbd,ok,batch_125,125,1000,1000,1000,0,0,32,32,382468339,129225,0.000002615
+matrix03,abc-warm-reversed-baseline,abc,baseline,action100,0.1,verified,9f705fad4fd6d87dae4dd1141419c8ab8dbc7e1583ccd0401030fce2fac2abbd,ok,batch_1000,1000,8000,8000,8000,0,0,32,32,382468339,129225,0.000020917
+matrix03,abc-warm-reversed-baseline,abc,baseline,action100,0.1,verified,9f705fad4fd6d87dae4dd1141419c8ab8dbc7e1583ccd0401030fce2fac2abbd,ok,end,36193,289544,289544,289544,0,0,109,109,382468339,129225,0.000757040
+matrix03,abc-warm-reversed-candidate,abc,candidate,action100,0.1,verified,9f705fad4fd6d87dae4dd1141419c8ab8dbc7e1583ccd0401030fce2fac2abbd,error,end,0,0,0,0,0,0,32,0,382468339,129225,0.000000000
 matrix03,bucket-cold-baseline,bucket,baseline,action100,0.1,verified,aebacc429d54f284e103ff10613b925f5827c347e0678846b0b6f0015dded782,ok,batch_1,1,8,8,8,0,0,32,7,76046658,32246,0.000000105
 matrix03,bucket-cold-baseline,bucket,baseline,action100,0.1,verified,aebacc429d54f284e103ff10613b925f5827c347e0678846b0b6f0015dded782,ok,batch_125,125,1000,1000,1000,0,0,32,32,76046658,32246,0.000013150
 matrix03,bucket-cold-baseline,bucket,baseline,action100,0.1,verified,aebacc429d54f284e103ff10613b925f5827c347e0678846b0b6f0015dded782,ok,batch_1000,1000,8000,8000,8000,0,0,32,32,76046658,32246,0.000105199
@@ -35,6 +40,11 @@ matrix03,bucket-warm-baseline,bucket,baseline,action100,0.1,verified,aebacc429d5
 matrix03,bucket-warm-baseline,bucket,baseline,action100,0.1,verified,aebacc429d54f284e103ff10613b925f5827c347e0678846b0b6f0015dded782,ok,batch_1000,1000,8000,8000,8000,0,0,32,32,76046658,32246,0.000105199
 matrix03,bucket-warm-baseline,bucket,baseline,action100,0.1,verified,aebacc429d54f284e103ff10613b925f5827c347e0678846b0b6f0015dded782,ok,end,29288,234304,234304,234304,0,0,97,97,76046658,32246,0.003081056
 matrix03,bucket-warm-candidate,bucket,candidate,action100,0.1,verified,aebacc429d54f284e103ff10613b925f5827c347e0678846b0b6f0015dded782,error,end,0,0,0,0,0,0,32,0,76046658,32246,0.000000000
+matrix03,bucket-warm-reversed-baseline,bucket,baseline,action100,0.1,verified,aebacc429d54f284e103ff10613b925f5827c347e0678846b0b6f0015dded782,ok,batch_1,1,8,8,8,0,0,32,7,76046658,32246,0.000000105
+matrix03,bucket-warm-reversed-baseline,bucket,baseline,action100,0.1,verified,aebacc429d54f284e103ff10613b925f5827c347e0678846b0b6f0015dded782,ok,batch_125,125,1000,1000,1000,0,0,32,32,76046658,32246,0.000013150
+matrix03,bucket-warm-reversed-baseline,bucket,baseline,action100,0.1,verified,aebacc429d54f284e103ff10613b925f5827c347e0678846b0b6f0015dded782,ok,batch_1000,1000,8000,8000,8000,0,0,32,32,76046658,32246,0.000105199
+matrix03,bucket-warm-reversed-baseline,bucket,baseline,action100,0.1,verified,aebacc429d54f284e103ff10613b925f5827c347e0678846b0b6f0015dded782,ok,end,29288,234304,234304,234304,0,0,97,97,76046658,32246,0.003081056
+matrix03,bucket-warm-reversed-candidate,bucket,candidate,action100,0.1,verified,aebacc429d54f284e103ff10613b925f5827c347e0678846b0b6f0015dded782,error,end,0,0,0,0,0,0,32,0,76046658,32246,0.000000000
 matrix03,bucket-warm-single-frame-baseline,bucket,baseline,single_frame,0.1,verified,aebacc429d54f284e103ff10613b925f5827c347e0678846b0b6f0015dded782,ok,batch_1,1,8,8,8,0,0,32,7,76046658,32246,0.000000105
 matrix03,bucket-warm-single-frame-baseline,bucket,baseline,single_frame,0.1,verified,aebacc429d54f284e103ff10613b925f5827c347e0678846b0b6f0015dded782,ok,batch_125,125,1000,1000,1000,0,0,32,32,76046658,32246,0.000013150
 matrix03,bucket-warm-single-frame-baseline,bucket,baseline,single_frame,0.1,verified,aebacc429d54f284e103ff10613b925f5827c347e0678846b0b6f0015dded782,ok,batch_1000,1000,8000,8000,8000,0,0,32,32,76046658,32246,0.000105199
@@ -54,6 +64,13 @@ matrix03,droid-warm-baseline,droid,baseline,action100,0.1,verified,bffd382e5aad1
 matrix03,droid-warm-baseline,droid,baseline,action100,0.1,verified,bffd382e5aad105c740c9bd7db0c93e903838d1725cd6ceb808e2ff4c2166a04,ok,batch_1000,1000,8000,8000,8000,0,0,40,40,27630375,95658,0.000289536
 matrix03,droid-warm-baseline,droid,baseline,action100,0.1,verified,bffd382e5aad105c740c9bd7db0c93e903838d1725cd6ceb808e2ff4c2166a04,ok,end,3949,31592,31592,31592,0,0,102,102,27630375,95658,0.001143379
 matrix03,droid-warm-candidate,droid,candidate,action100,0.1,verified,bffd382e5aad105c740c9bd7db0c93e903838d1725cd6ceb808e2ff4c2166a04,error,end,0,0,0,0,0,0,32,0,27630375,95658,0.000000000
+matrix03,droid-warm-release-control,droid,baseline,action100,0.1,verified,bffd382e5aad105c740c9bd7db0c93e903838d1725cd6ceb808e2ff4c2166a04,ok,batch_1,1,8,8,8,0,0,32,7,27630375,95658,0.000000290
+matrix03,droid-warm-release-control,droid,baseline,action100,0.1,verified,bffd382e5aad105c740c9bd7db0c93e903838d1725cd6ceb808e2ff4c2166a04,ok,end,2,16,16,16,0,0,32,10,27630375,95658,0.000000579
+matrix03,droid-warm-reversed-baseline,droid,baseline,action100,0.1,verified,bffd382e5aad105c740c9bd7db0c93e903838d1725cd6ceb808e2ff4c2166a04,ok,batch_1,1,8,8,8,0,0,32,7,27630375,95658,0.000000290
+matrix03,droid-warm-reversed-baseline,droid,baseline,action100,0.1,verified,bffd382e5aad105c740c9bd7db0c93e903838d1725cd6ceb808e2ff4c2166a04,ok,batch_125,125,1000,1000,1000,0,0,32,32,27630375,95658,0.000036192
+matrix03,droid-warm-reversed-baseline,droid,baseline,action100,0.1,verified,bffd382e5aad105c740c9bd7db0c93e903838d1725cd6ceb808e2ff4c2166a04,ok,batch_1000,1000,8000,8000,8000,0,0,40,40,27630375,95658,0.000289536
+matrix03,droid-warm-reversed-baseline,droid,baseline,action100,0.1,verified,bffd382e5aad105c740c9bd7db0c93e903838d1725cd6ceb808e2ff4c2166a04,ok,end,3949,31592,31592,31592,0,0,102,102,27630375,95658,0.001143379
+matrix03,droid-warm-reversed-candidate,droid,candidate,action100,0.1,verified,bffd382e5aad105c740c9bd7db0c93e903838d1725cd6ceb808e2ff4c2166a04,error,end,0,0,0,0,0,0,32,0,27630375,95658,0.000000000
 molmo-tol01,bucket-current-frame-tolerance-1ms-baseline,bucket,baseline,single_frame,1.0,verified,aebacc429d54f284e103ff10613b925f5827c347e0678846b0b6f0015dded782,ok,batch_1,1,8,8,8,0,0,32,7,76046658,32246,0.000000105
 molmo-tol01,bucket-current-frame-tolerance-1ms-baseline,bucket,baseline,single_frame,1.0,verified,aebacc429d54f284e103ff10613b925f5827c347e0678846b0b6f0015dded782,ok,batch_125,125,1000,1000,1000,0,0,32,32,76046658,32246,0.000013150
 molmo-tol01,bucket-current-frame-tolerance-1ms-baseline,bucket,baseline,single_frame,1.0,verified,aebacc429d54f284e103ff10613b925f5827c347e0678846b0b6f0015dded782,ok,batch_1000,1000,8000,8000,8000,0,0,32,32,76046658,32246,0.000105199
@@ -73,3 +90,9 @@ molmo-tol01,bucket-current-frame-tolerance-1ms-warm-candidate,bucket,candidate,s
 probe02,droid-cold-baseline,droid,baseline,single_frame,0.1,verified,bffd382e5aad105c740c9bd7db0c93e903838d1725cd6ceb808e2ff4c2166a04,ok,batch_1,1,8,8,8,0,0,32,7,27630375,95658,0.000000290
 probe02,droid-cold-baseline,droid,baseline,single_frame,0.1,verified,bffd382e5aad105c740c9bd7db0c93e903838d1725cd6ceb808e2ff4c2166a04,ok,end,2,16,16,16,0,0,32,10,27630375,95658,0.000000579
 probe02,droid-cold-candidate,droid,candidate,single_frame,0.1,verified,bffd382e5aad105c740c9bd7db0c93e903838d1725cd6ceb808e2ff4c2166a04,error,end,0,0,0,0,0,0,32,0,27630375,95658,0.000000000
+worker-mem01,abc-worker-memory-w1,abc,baseline,action100,0.1,verified,9f705fad4fd6d87dae4dd1141419c8ab8dbc7e1583ccd0401030fce2fac2abbd,ok,batch_1,1,8,8,8,0,0,,7,382468339,129225,0.000000021
+worker-mem01,abc-worker-memory-w1,abc,baseline,action100,0.1,verified,9f705fad4fd6d87dae4dd1141419c8ab8dbc7e1583ccd0401030fce2fac2abbd,ok,batch_125,125,1000,1000,1000,0,0,,32,382468339,129225,0.000002615
+worker-mem01,abc-worker-memory-w1,abc,baseline,action100,0.1,verified,9f705fad4fd6d87dae4dd1141419c8ab8dbc7e1583ccd0401030fce2fac2abbd,ok,end,125,1000,1000,1000,0,0,,32,382468339,129225,0.000002615
+worker-mem01,abc-worker-memory-w4,abc,baseline,action100,0.1,verified,9f705fad4fd6d87dae4dd1141419c8ab8dbc7e1583ccd0401030fce2fac2abbd,ok,batch_1,1,8,8,8,0,0,,4,382468339,129225,0.000000021
+worker-mem01,abc-worker-memory-w4,abc,baseline,action100,0.1,verified,9f705fad4fd6d87dae4dd1141419c8ab8dbc7e1583ccd0401030fce2fac2abbd,ok,batch_125,125,1000,1000,1000,0,0,,32,382468339,129225,0.000002615
+worker-mem01,abc-worker-memory-w4,abc,baseline,action100,0.1,verified,9f705fad4fd6d87dae4dd1141419c8ab8dbc7e1583ccd0401030fce2fac2abbd,ok,end,125,1000,1000,1000,0,0,,32,382468339,129225,0.000002615
