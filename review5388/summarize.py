@@ -11,9 +11,20 @@ def read(path):
     return json.loads(path.read_text())
 
 
-def fixture_passes(directory, reader, workload):
+def fixture_passes(directory, reader, workload, tolerance_s):
     if directory is None:
         return False
+    if tolerance_s != 0.0001:
+        path = directory.parent / f"probe_tolerance.{reader}.json"
+        if not path.is_file():
+            return False
+        probe = read(path)
+        check = probe["fixture"]
+        return (
+            probe["tolerance_s"] == tolerance_s and probe["workload"] == workload
+            and check["coverage_matches"] and check["expected"] == check["unique"] == check["delivered"]
+            and not check["checks_failed"]
+        )
     # The baseline's full temporal fixture includes all the checks for a current frame.
     # The draft's temporal and current-frame cases must qualify independently.
     candidates = ["baseline-w1.json"] if reader == "baseline" else [
@@ -32,15 +43,17 @@ def fixture_passes(directory, reader, workload):
     return False
 
 
-def source_verified(path, record):
+def run_events(path):
+    log = path.parent / "run.jsonl"
+    return [json.loads(line) for line in log.read_text().splitlines()] if log.is_file() else []
+
+
+def source_verified(path, record, events):
     if record["dataset"] != "bucket":
         return bool(record.get("source", {}).get("revision"))
-    events = path.parent / "run.jsonl"
-    if not events.is_file():
-        return None
-    for line in events.read_text().splitlines():
-        event = json.loads(line)
-        if event.get("event") == "comparison-source" and event.get("label") == path.stem:
+    for event in events:
+        if event.get("event") == "comparison-source" and event.get("label") in (
+                path.stem, path.stem.removeprefix("bucket-")):
             return event.get("source_valid")
         if event.get("event") == "pair-done" and event.get("dataset") == "bucket":
             prefix = f"bucket-{event['pair']}-"
@@ -52,8 +65,13 @@ def source_verified(path, record):
 def row(path, record, fixture):
     name = path.stem
     reader, dataset, workload = (record[k] for k in ("reader", "dataset", "workload"))
+    events = run_events(path)
+    paid_transfer = "prepared" in name or (
+        name == "bucket-current-frame-tolerance-1ms-baseline" and
+        any(e.get("event") == "tolerance-control-setup" and e.get("prepared_index") for e in events)
+    )
     prep = 0
-    if "prepared" in name and reader == "baseline":
+    if paid_transfer and reader == "baseline":
         transfer = path.parent / f"{dataset}-private-transfer.json"
         prep = read(transfer)["private_transfer"]["consumer_prep_seconds"] if transfer.exists() else None
 
@@ -82,23 +100,27 @@ def row(path, record, fixture):
         and after_start.get("raw_samples") == after_start.get("usable_unique_samples")
     )
     rate = after_start.get("usable_unique_samples_per_s") if across_refills else None
+    steady_diversity = after_start.get("episode_diversity", {}) if across_refills else {}
     counts = record["progress"]
     milestone = milestones.get("1000", {}).get("io", {})
     io = milestone.get("by_purpose", {})
     size = record.get("source", {}).get("observed", {}).get("frames")
     actual = record.get("source", {}).get("observed", {})
     index_build = record.get("io", {}).get("sidecar", {}).get("sidecar_probe", {})
-    verified = source_verified(path, record)
+    verified = source_verified(path, record, events)
+    tolerance_s = record["config"].get("tolerance_s", 0.0001)
     near_pairs = diversity.get("near_0p2s_pairs")
     pairs = diversity.get("unordered_pairs")
     first = elapsed(1, True)
+    time_125 = elapsed(125, True)
     projection = None
-    if (verified and rate and size and first is not None and counts.get("duplicates") == 0
-            and fixture_passes(fixture, reader, workload)):
-        projection = (first + (size - record["config"]["batch_size"]) / rate) / 86400
+    if (verified and rate and size and time_125 is not None and counts.get("duplicates") == 0
+            and record["status"] == "ok" and not record["contract"].get("invalid_batches")
+            and fixture_passes(fixture, reader, workload, tolerance_s)):
+        projection = (time_125 + (size - 125 * record["config"]["batch_size"]) / rate) / 86400
     return {
         "run": path.parent.name, "cell": name, "dataset": dataset, "reader": reader,
-        "workload": workload, "tolerance_ms": 1000 * record["config"].get("tolerance_s", 0.0001),
+        "workload": workload, "tolerance_ms": 1000 * tolerance_s,
         "cache": record["cache"], "status": record["status"],
         "source_verified": verified,
         "raw_examples": counts["raw_samples"], "usable_unique": counts["usable_unique_samples"],
@@ -106,13 +128,17 @@ def row(path, record, fixture):
         "constructor_s": timing.get("constructor_s"),
         "first_sample_s": (prep + timing["first_sample_s"]
                            if prep is not None and "first_sample_s" in timing else None),
-        "batch_1_raw_s": elapsed(1), "batch_1_valid_s": first, "batch_125_valid_s": elapsed(125, True),
+        "batch_1_raw_s": elapsed(1), "batch_1_valid_s": first, "batch_125_valid_s": time_125,
         "batch_1000_raw_s": elapsed(1000), "batch_1000_valid_s": elapsed(1000, True),
         "episodes_per_batch": diversity.get("distinct_episodes_per_batch_mean"),
         "largest_episode_share": diversity.get("largest_episode_share_mean"),
         "near_sample_pair_share_0p2s": near_pairs / pairs if pairs and near_pairs is not None else None,
         "verified_refills": refills,
         "post_refill_batches": tail.get("batches"), "steady_windows_per_s": rate,
+        "steady_episodes_per_batch": steady_diversity.get("distinct_episodes_per_batch_mean"),
+        "steady_largest_episode_share": steady_diversity.get("largest_episode_share_mean"),
+        "steady_near_pair_share_0p2s": (steady_diversity["near_0p2s_pairs"] / steady_diversity["unordered_pairs"]
+                                      if steady_diversity.get("unordered_pairs") else None),
         "post_refill_tail_windows_per_s": tail.get("usable_unique_samples_per_s") if tail_valid else None,
         "prefix_median_wait_s": initial.get("batch_wait_s", {}).get("p50"),
         "prefix_p95_wait_s": initial.get("batch_wait_s", {}).get("p95"),
