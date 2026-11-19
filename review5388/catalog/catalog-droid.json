@@ -1,0 +1,20 @@
+{
+  "recorded_utc": "2026-11-19T03:15:06.744419+00:00",
+  "source": "lerobot/droid_1.0.1",
+  "revision": "71da9dcba338f53889907ac5762a2ebc6c2e55ff",
+  "manifest_sha256": "bffd382e5aad105c740c9bd7db0c93e903838d1725cd6ceb808e2ff4c2166a04",
+  "files": 981,
+  "video_files": 813,
+  "video_bytes": 399662023064,
+  "data_parquets": 156,
+  "data_parquet_bytes": 14345122263,
+  "sidecars": [],
+  "total_frames": 27630375,
+  "total_episodes": 95658,
+  "fps": 15,
+  "cameras": [
+    "observation.images.wrist_left",
+    "observation.images.exterior_1_left",
+    "observation.images.exterior_2_left"
+  ]
+}

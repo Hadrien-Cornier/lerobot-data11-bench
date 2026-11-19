@@ -1,0 +1,20 @@
+{
+  "recorded_utc": "2026-11-19T03:15:21.392763+00:00",
+  "source": "lerobot/abc_130k_v3_train",
+  "revision": "68651e4929d9fb00f798937b2d62617cab5c771d",
+  "manifest_sha256": "9f705fad4fd6d87dae4dd1141419c8ab8dbc7e1583ccd0401030fce2fac2abbd",
+  "files": 38915,
+  "video_files": 38164,
+  "video_bytes": 3378199512864,
+  "data_parquets": 742,
+  "data_parquet_bytes": 49756360884,
+  "sidecars": [],
+  "total_frames": 382468339,
+  "total_episodes": 129225,
+  "fps": 30,
+  "cameras": [
+    "observation.images.top",
+    "observation.images.left_wrist",
+    "observation.images.right_wrist"
+  ]
+}

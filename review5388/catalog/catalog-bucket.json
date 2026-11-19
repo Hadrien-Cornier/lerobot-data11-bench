@@ -1,0 +1,36 @@
+{
+  "recorded_utc": "2026-11-19T03:15:10.559518+00:00",
+  "source": "pepijn223/MolmoAct2-BimanualYAM-Dataset-bucket",
+  "revision": null,
+  "manifest_sha256": "aebacc429d54f284e103ff10613b925f5827c347e0678846b0b6f0015dded782",
+  "files": 9446,
+  "video_files": 5860,
+  "video_bytes": 2342926854880,
+  "data_parquets": 3576,
+  "data_parquet_bytes": 3284795948,
+  "sidecars": [
+    [
+      "meta/mp4-sidecars/molmoact2-1024.npz",
+      63228707,
+      "f623a2ed9815937f47a44f3d64765eabe9b7b67e7a682b4155280d750060dfe6"
+    ],
+    [
+      "meta/mp4-sidecars/molmoact2-32246.npz",
+      1830276001,
+      "7e2434e7413becff91c42db46cdd45095e99c8e8bbe369831dff300bf054943c"
+    ],
+    [
+      "meta/mp4-sidecars/molmoact2-full.npz",
+      1830276001,
+      "7e2434e7413becff91c42db46cdd45095e99c8e8bbe369831dff300bf054943c"
+    ]
+  ],
+  "total_frames": 76046658,
+  "total_episodes": 32246,
+  "fps": 30,
+  "cameras": [
+    "observation.images.right",
+    "observation.images.left",
+    "observation.images.top"
+  ]
+}
