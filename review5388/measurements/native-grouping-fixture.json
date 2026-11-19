@@ -1,0 +1,102 @@
+{
+  "fixture_generator_commit": "d2d4c61a5c1f770ff128e5ee90761b75f582e734",
+  "datasets_commit": "464fe790b82a320350c9c686c1b7e409323a1cf3",
+  "runtime": {
+    "platform": "macOS arm64",
+    "python": "3.12.12",
+    "torch": "2.15.0",
+    "torchcodec": "0.17.0",
+    "ffmpeg": "9.0.2"
+  },
+  "fixture": {
+    "rows": 786,
+    "episodes": 16,
+    "parquet_files": 8,
+    "cameras": 3,
+    "fps": 25,
+    "episode_buffer_size": 2,
+    "loader_batch_size": 19
+  },
+  "revisions": {
+    "stock": {
+      "commit": "1a60cb4b800c2947834342752c32f064c8bf143c",
+      "streaming_dataset_source_sha256": "17ec1e996af3e83de1e64b08b4550ff4c25914f41abf06329abbeb5c0f50a656",
+      "video_utils_source_sha256": "617c6cd6a06eeaeba7dfce54e57566a0d7815dc6baca11a7befc65dd465f2232"
+    },
+    "reuse": {
+      "commit": "992364e125736f5fefb4c2bf4690c0b3d187b951",
+      "streaming_dataset_source_sha256": "343b44f9c7bd7674bd1f8c0ad2c13dcc33a884c007eb9d724353499af5e05759",
+      "video_utils_source_sha256": "2390350f68b6bec18404c1d2729c42648de9034c63a5dd02ba24fd2d19e62f8a"
+    },
+    "grouped": {
+      "commit": "adbdf5f0218898b187b4d20376a4bdee4a97d388",
+      "streaming_dataset_source_sha256": "f9333662e84823437c18f4d8f49dd2cd60a75cc4420a3a9a6bdacaa00ce74b09",
+      "video_utils_source_sha256": "2390350f68b6bec18404c1d2729c42648de9034c63a5dd02ba24fd2d19e62f8a"
+    }
+  },
+  "revisions_match_stock_in_all_cases": [
+    "reuse",
+    "grouped"
+  ],
+  "cases": {
+    "w0-u8": {
+      "workers": 0,
+      "return_uint8": true,
+      "camera_history": false,
+      "full_batches": 41,
+      "partial_batch_sizes": [
+        7
+      ],
+      "records": 786,
+      "sha256": "ce3bda31ddd8032d8e4bfc08f86a06304e5b520f84a1f5152ec23adf1f1ecd57",
+      "mismatched_images": 0,
+      "max_pixel_difference": 0,
+      "ffmpeg_rgb_frames_checked": 2358
+    },
+    "w4-u8": {
+      "workers": 4,
+      "return_uint8": true,
+      "camera_history": false,
+      "full_batches": 39,
+      "partial_batch_sizes": [
+        7,
+        3,
+        17,
+        18
+      ],
+      "records": 786,
+      "sha256": "2cae9cdea8e8244b84c6b51a853fda5a30beebdbb22fb25aa864f5e723ef0357",
+      "mismatched_images": 0,
+      "max_pixel_difference": 0,
+      "ffmpeg_rgb_frames_checked": 2358
+    },
+    "w0-float": {
+      "workers": 0,
+      "return_uint8": false,
+      "camera_history": false,
+      "full_batches": 41,
+      "partial_batch_sizes": [
+        7
+      ],
+      "records": 786,
+      "sha256": "959a25806936532853c381a1ed7f8993814e84e0e556eae530ec2cf75c6da402",
+      "mismatched_images": 0,
+      "max_pixel_difference": 0,
+      "ffmpeg_rgb_frames_checked": 2358
+    },
+    "w0-history": {
+      "workers": 0,
+      "return_uint8": true,
+      "camera_history": true,
+      "full_batches": 41,
+      "partial_batch_sizes": [
+        7
+      ],
+      "records": 786,
+      "sha256": "d6c2b1dacae9909a95d38227cb6d74a0a31c18bec2f7fe0467587468c4d75a72",
+      "mismatched_images": 0,
+      "max_pixel_difference": null,
+      "ffmpeg_rgb_frames_checked": 0
+    }
+  }
+}

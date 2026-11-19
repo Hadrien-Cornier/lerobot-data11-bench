@@ -1,0 +1,32 @@
+{
+  "stock": "1a60cb4b800c2947834342752c32f064c8bf143c",
+  "reuse": "992364e125736f5fefb4c2bf4690c0b3d187b951",
+  "grouped": "adbdf5f0218898b187b4d20376a4bdee4a97d388",
+  "matching_revisions": [
+    "stock",
+    "reuse",
+    "grouped"
+  ],
+  "software": {
+    "torch": "2.15.0",
+    "torchcodec": "0.17.0",
+    "av": "15.1.0",
+    "datasets": "5.2.0",
+    "platform": "macOS-26.6.2-arm64-arm-64bit"
+  },
+  "result": {
+    "batches_checked": 1000,
+    "reference_batches": 1000,
+    "reference_trace_sha256": "1efe1cf5d05bf9895f48ae0ea0d0ed40e4a273920a0db63b53c3e53a4dd8dc09",
+    "reference_ordered_anchor_sha256": "fc96b52afef08706deee06effe9bea3d0ca9d54d672be4f60c27f2ea6a786ea4",
+    "ordered_anchor_sha256": "fc96b52afef08706deee06effe9bea3d0ca9d54d672be4f60c27f2ea6a786ea4",
+    "payload_xxh3_128_by_field": {
+      "observation.images.left": "817f3fb965ae5f91e82e67f730735395",
+      "observation.images.right": "8b09d439a841ca13fcb0d6be6262b9d6",
+      "observation.images.top": "324681d127618abc741bce2327e15205",
+      "action": "30ab4c7017e2a8af3b436d96703ccf28",
+      "observation.state": "da475f8b9b1302fe899fdded1bd27400"
+    },
+    "ordered_output_sha256": "243896da9cedbc74cae7cef51073629df67f2fc134fb780ca61d479398c14ac4"
+  }
+}
