@@ -1,0 +1,48 @@
+{
+  "source": "pepijn223/MolmoAct2-BimanualYAM-Dataset-bucket",
+  "manifest_sha256": "aebacc429d54f284e103ff10613b925f5827c347e0678846b0b6f0015dded782",
+  "ordered_anchor_sha256": "fc96b52afef08706deee06effe9bea3d0ca9d54d672be4f60c27f2ea6a786ea4",
+  "episode_metadata": {
+    "path": "meta/episodes/chunk-000/file-000.parquet",
+    "bytes": 74697638,
+    "sha256": "56a8adfb5bb41eae0c21e13c0ca69141a2ea51a7331e417167a2bdaf5916d772"
+  },
+  "batch_1": {
+    "frame_requests": 24,
+    "distinct_mp4_paths": 16,
+    "path_groups_by_request_count": {
+      "1": 10,
+      "2": 4,
+      "3": 2
+    }
+  },
+  "batches_checked": 1000,
+  "frame_requests": 24000,
+  "path_groups_summed_over_batches": 17365,
+  "potential_backend_calls_saved": 6635,
+  "distinct_mp4_paths_across_batches": 39,
+  "path_groups_by_request_count": {
+    "1": 12032,
+    "2": 4208,
+    "3": 963,
+    "4": 147,
+    "5": 15
+  },
+  "batches_by_distinct_mp4_count": {
+    "7": 1,
+    "9": 6,
+    "10": 3,
+    "12": 52,
+    "13": 41,
+    "14": 2,
+    "15": 190,
+    "16": 116,
+    "17": 8,
+    "18": 278,
+    "19": 107,
+    "20": 2,
+    "21": 142,
+    "22": 30,
+    "24": 22
+  }
+}

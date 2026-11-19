@@ -32,21 +32,13 @@ def validate_anchors(batches):
     seen = set()
     for number, ids in enumerate(batches, 1):
         if len(ids) != BATCH_SIZE:
-            raise ValueError(
-                f"Reference batch {number} does not contain {BATCH_SIZE} samples"
-            )
+            raise ValueError(f"Reference batch {number} does not contain {BATCH_SIZE} samples")
         for pair in ids:
-            if len(pair) != 2 or any(
-                type(index) is not int or index < 0 for index in pair
-            ):
-                raise ValueError(
-                    f"Invalid sample ID at reference batch {number}: {pair!r}"
-                )
+            if len(pair) != 2 or any(type(index) is not int or index < 0 for index in pair):
+                raise ValueError(f"Invalid sample ID at reference batch {number}: {pair!r}")
             key = tuple(pair)
             if key in seen:
-                raise ValueError(
-                    f"Repeated sample ID at reference batch {number}: {pair!r}"
-                )
+                raise ValueError(f"Repeated sample ID at reference batch {number}: {pair!r}")
             seen.add(key)
 
 
@@ -62,8 +54,7 @@ def export_reference(trace_path, output_path):
             if (
                 record["batch"] != len(batches) + 1
                 or record["contract_errors"]
-                or (record["unique"], record["usable_unique"])
-                != (BATCH_SIZE, BATCH_SIZE)
+                or (record["unique"], record["usable_unique"]) != (BATCH_SIZE, BATCH_SIZE)
             ):
                 raise ValueError(f"Invalid delivery event at batch {record['batch']}")
             batches.append(record["ids"])
@@ -132,7 +123,11 @@ def packed_video_opportunity(reference):
             if not 0 <= frame < row["length"]:
                 raise ValueError(f"Out-of-range frame in batch {number}, episode {episode}: {frame}")
             for camera in cameras:
-                path_key = camera, row[f"videos/{camera}/chunk_index"], row[f"videos/{camera}/file_index"]
+                path_key = (
+                    camera,
+                    row[f"videos/{camera}/chunk_index"],
+                    row[f"videos/{camera}/file_index"],
+                )
                 paths[path_key] += 1
         groups_by_size.update(paths.values())
         groups_per_batch[len(paths)] += 1
@@ -149,7 +144,11 @@ def packed_video_opportunity(reference):
         "source": before["source"],
         "manifest_sha256": MOLMO_MANIFEST,
         "ordered_anchor_sha256": reference["ordered_anchor_sha256"],
-        "episode_metadata": {"path": EPISODE_PARQUET, "bytes": metadata_bytes, "sha256": metadata_sha256},
+        "episode_metadata": {
+            "path": EPISODE_PARQUET,
+            "bytes": metadata_bytes,
+            "sha256": metadata_sha256,
+        },
         "batch_1": first_batch,
         "batches_checked": len(reference["batches"]),
         "frame_requests": requests,
@@ -171,9 +170,7 @@ class BatchAudit:
         self.checked = 0
         self.anchor_hash = sha256()
         self.fields = {
-            **{
-                camera: ("|u1", (BATCH_SIZE, 3, 360, 640)) for camera in sorted(cameras)
-            },
+            **{camera: ("|u1", (BATCH_SIZE, 3, 360, 640)) for camera in sorted(cameras)},
             "action": ("<f4", (BATCH_SIZE, 14)),
             "observation.state": ("<f4", (BATCH_SIZE, 14)),
         }
@@ -183,9 +180,7 @@ class BatchAudit:
         }
 
     def check(self, batch_number, batch):
-        if batch_number != self.checked + 1 or batch_number > len(
-            self.reference["batches"]
-        ):
+        if batch_number != self.checked + 1 or batch_number > len(self.reference["batches"]):
             raise ValueError(f"Unexpected delivered batch number: {batch_number}")
         ids = [
             list(pair)
@@ -197,9 +192,7 @@ class BatchAudit:
         ]
         expected = self.reference["batches"][batch_number - 1]
         if ids != expected:
-            raise ValueError(
-                f"Batch {batch_number} sample order differs: expected {expected!r}, got {ids!r}"
-            )
+            raise ValueError(f"Batch {batch_number} sample order differs: expected {expected!r}, got {ids!r}")
 
         arrays = {}
         for field, (dtype, shape) in self.fields.items():
@@ -220,9 +213,7 @@ class BatchAudit:
         self.checked = batch_number
 
     def summary(self):
-        fields = {
-            field: digest.hexdigest() for field, digest in self.payload_hashes.items()
-        }
+        fields = {field: digest.hexdigest() for field, digest in self.payload_hashes.items()}
         anchors = self.anchor_hash.hexdigest()
         return {
             "batches_checked": self.checked,
@@ -231,29 +222,27 @@ class BatchAudit:
             "reference_ordered_anchor_sha256": self.reference["ordered_anchor_sha256"],
             "ordered_anchor_sha256": anchors,
             "payload_xxh3_128_by_field": fields,
-            "ordered_output_sha256": sha256(
-                canonical_json([self.checked, anchors, fields])
-            ).hexdigest(),
+            "ordered_output_sha256": sha256(canonical_json([self.checked, anchors, fields])).hexdigest(),
         }
 
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     actions = parser.add_subparsers(dest="action", required=True)
-    export = actions.add_parser(
-        "export", help="Save the first 1,000 valid batch identities from a trace"
-    )
+    export = actions.add_parser("export", help="Save the first 1,000 valid batch identities from a trace")
     export.add_argument("trace", type=Path)
     export.add_argument("output", type=Path)
-    opportunity = actions.add_parser(
-        "opportunity", help="Count same-file requests using the public episode metadata"
-    )
+    opportunity = actions.add_parser("opportunity", help="Count same-file requests using the public episode metadata")
     opportunity.add_argument("reference", type=Path)
     opportunity.add_argument("output", type=Path)
     args = parser.parse_args()
     if args.action == "export":
         reference = export_reference(args.trace, args.output)
-        print(reference["trace_file"], reference["ordered_anchor_sha256"], len(reference["batches"]))
+        print(
+            reference["trace_file"],
+            reference["ordered_anchor_sha256"],
+            len(reference["batches"]),
+        )
     else:
         report = packed_video_opportunity(load_reference(args.reference))
         args.output.write_text(json.dumps(report, indent=2) + "\n", encoding="utf-8")

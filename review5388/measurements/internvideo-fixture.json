@@ -1,0 +1,36 @@
+{
+  "stock_streaming_source_sha256": "17ec1e996af3e83de1e64b08b4550ff4c25914f41abf06329abbeb5c0f50a656",
+  "decode_variants_source_sha256": "56a3e1c355661781468130ddf6f7abe0cf7dc31d9f78285e259b98114c064309",
+  "batches": 99,
+  "anchors": 786,
+  "final_batch_anchors": 2,
+  "stock_vs_ffmpeg_oracle_max_rgb8_difference": 0,
+  "variants": {
+    "reuse": {
+      "exact_match_to_stock_for_all_fields": true,
+      "path_request_groups_by_size": {
+        "1": 2358
+      }
+    },
+    "batch_singletons": {
+      "exact_match_to_stock_for_all_fields": true,
+      "path_request_groups_by_size": {
+        "1": 798,
+        "2": 441,
+        "3": 171,
+        "4": 30,
+        "5": 9
+      }
+    },
+    "grouped": {
+      "exact_match_to_stock_for_all_fields": true,
+      "path_request_groups_by_size": {
+        "1": 798,
+        "2": 441,
+        "3": 171,
+        "4": 30,
+        "5": 9
+      }
+    }
+  }
+}
