@@ -1,8 +1,8 @@
 # Does LeRobot #5388 start training faster?
 
-Quentin's draft avoids the cold MP4 indexing wait. On the reported MolmoAct2 bucket it constructed the reader in 6.93 seconds and yielded its first current-frame sample at 15.13 seconds. With the 100-step action targets used for training, it delivered zero batches on MolmoAct2, ABC-130K and DROID. Pepijn's cold baseline delivered 1,000 batches in 653.7 seconds on MolmoAct2 and 325.5 seconds on DROID.
+Quentin's draft avoids the cold MP4 indexing wait. On the reported MolmoAct2 bucket it constructed the reader in 6.93 seconds and yielded its first current-frame sample at 15.13 seconds. With the 100-step action targets used for training, it delivered zero batches on MolmoAct2, ABC-130K and DROID. Pepijn's cold baseline delivered 1,000 batches in 653.7 seconds on MolmoAct2, 2,598.0 seconds on ABC-130K and 325.5 seconds on DROID.
 
-This interim report contains finished CPU runs and local correctness checks. ABC-130K, the fresh publisher-index comparison and the matched 1 ms current-frame control are scheduled in the ongoing benchmark. The reviewed draft opened November 16, 2026 at 19:06 UTC and GitHub shows its last update at 19:09 UTC the same day. The pinned head is `1a60cb4b`. [LeRobot #5388](https://github.com/huggingface/lerobot/pull/5388) · [Prerequisite Datasets #8983](https://github.com/huggingface/datasets/pull/8983)
+This interim report contains finished CPU runs and local correctness checks. The fresh publisher-index comparison and ABC camera-history runs are scheduled in the ongoing benchmark. The Molmo current-frame comparison below has completed on both cold and warm disks. The reviewed draft opened November 16, 2026 at 19:06 UTC and GitHub shows its last update at 19:09 UTC the same day. The pinned head is `1a60cb4b`. [LeRobot #5388](https://github.com/huggingface/lerobot/pull/5388) · [Prerequisite Datasets #8983](https://github.com/huggingface/datasets/pull/8983)
 
 A usable batch here has eight distinct new `(episode, frame)` anchors, the expected tensor shapes and dtypes for the three cameras, state and 100 actions, and the expected camera padding values. Each distinct anchor counts once, including anchors near episode ends where future actions require padding. We checked actual pixels, action and state values and all padding against an independent FFmpeg-backed reader on the finite fixture. The cloud checks cover the observed prefix. A whole training epoch was not run on these sources.
 
@@ -23,7 +23,10 @@ The draft raised `TypeError: expected Tensor as element 0 in argument 0, but got
 
 | Reader and starting state | Constructor (s) | Batch 1 (s) | Batch 125 (s) | Batch 1,000 (s) | Windows/s across refills | Episodes/batch, first 1k / across refills | Peak RAM (GB) | Finite pass (days, est.) |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
+| Pepijn, As published, fresh | 2,505.2 | 2,583.9 | 2,586.4 | 2,598.0 | 557.3 | 6.98 / 5.87 | 24.30 | 7.97 |
 | Quentin, As published, fresh | 10.1 | — | — | — | — | — / — | 5.36 | — |
+
+The cold baseline delivered 289,544 distinct windows with 0 duplicates and 2 verified pool refills. At batch 1,000, the largest single-episode share averaged 22.4% of a batch. 0.018% of within-batch pairs were from the same episode and at most 0.2 seconds apart.
 
 The draft raised `TypeError: expected Tensor as element 0 in argument 0, but got dict`.
 
@@ -51,6 +54,8 @@ Over the longer run, the draft delivered 109.9 unique windows/s across two refil
 
 ![Elapsed time to equal batch counts with each reader on fresh Molmo disks at 1 ms](measurements/cold-current-frame.svg)
 
+On a **warm restart**, the first batch again reached the consumer sooner with the draft (10.31 vs 39.78 s). The baseline overtook at **batch 514** (4,112 examples), held the lead through batch 1,000, and finished there at **75.21 vs 91.14 s**. The overlap in first-1,000 episode diversity was again 94.4%. The corresponding diversity-matched average waits were 73.4 ms for the baseline and 83.3 ms for the draft. This repeat ended at 1,000 batches, before either reader's second refill. [Warm time-to-count trace](measurements/warm-current-frame.json) · [Warm delivery curve](measurements/warm-current-frame.svg)
+
 ### What a publisher-built index changes
 
 The index can be built once for a dataset revision and reused across consumers. It maps a video timestamp to the corresponding bytes in an MP4. Pepijn's reader validates the matching archive, then memory-maps it read-only. The operating system brings pages into memory as the reader uses them. An archive of several gigabytes does not require a private copy of that size in each worker's RAM. Peak process memory here includes the reader, decoded buffers, episode metadata and the portions of the archive it touched. [Pinned index resolver](https://github.com/huggingface/lerobot/blob/fe1c54594f6ba275fccf210b9f7b11f0e2324b89/src/lerobot/datasets/streaming_sidecar.py#L217-L234) · [Mapped archive implementation](https://github.com/huggingface/lerobot/blob/fe1c54594f6ba275fccf210b9f7b11f0e2324b89/src/lerobot/streaming/manifest.py#L447-L466)
@@ -62,6 +67,7 @@ GR00T 2 made a different part of training reusable. Its published sample starts 
 | Dataset | Native cold build (s) | Index on disk (GB) | Private receipt and verification (s) | Index header reads (MB / MP4s) | Training video reads (MB / MP4s) | Parquet reads (MB) |
 |---|---:|---:|---:|---:|---:|---:|
 | MolmoAct2 | 534.2 | 1.834 | — | 3,119.0 / 5,860 | 3,261.4 / 120 | 46.4 |
+| ABC-130K | 2,372.0 | 8.563 | — | 20,020.0 / 38,164 | 1,175.3 / 120 | 230.2 |
 | DROID | 181.7 | 0.630 | — | 513.7 / 784 | 196.9 / 135 | 4,867.7 |
 
 Index header, Parquet and training video bytes above are instrumented HTTP payloads for the cold baseline through batch 1,000, including prefetch. The same MP4 can appear in both the index and training columns. Other Hub/Xet transfers can bypass the HTTP hooks. The resource export records process-namespace receive bytes as a separate measure of total traffic.
@@ -73,6 +79,7 @@ The wait percentiles cover the first 1,000 batches of each cold baseline cell. E
 | Dataset | Wait p50 / p95 / p99 (ms) | Native video range calls (s, summed) | RGB decode calls (s, summed) | Parquet range calls (s, summed) |
 |---|---:|---:|---:|---:|
 | MolmoAct2 | 40.9 / 53.0 / 64.6 | 406.4 | 121.2 | 81.0 |
+| ABC-130K | 12.9 / 15.1 / 30.4 | 284.9 | 36.3 | 123.2 |
 | DROID | 20.8 / 78.6 / 150.7 | 53.7 | 43.8 | 266.2 |
 
 ## What changed in the training path
