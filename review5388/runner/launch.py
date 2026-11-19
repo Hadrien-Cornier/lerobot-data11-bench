@@ -8,6 +8,7 @@ import hashlib
 import io
 import json
 import math
+import os
 import re
 import sys
 import tarfile
@@ -17,7 +18,7 @@ from huggingface_hub import HfApi, get_token
 
 ROOT = Path(__file__).resolve().parents[1]
 LEDGER = ROOT / "results" / "jobs.jsonl"
-REPO = "hadriencornier/lerobot-data11-bench"
+REPO = os.environ.get("REVIEW5388_RESULTS_REPO", "hadriencornier/lerobot-data11-bench")
 RATES = {"cpu-xl": 1.0, "cpu-upgrade": 0.03}
 GROSS_RESERVATION_LIMIT = 9.75
 TERMINAL = {"COMPLETED", "ERROR", "CANCELED", "FAILED", "TIMEOUT"}
@@ -128,7 +129,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("run", help="Unique private result folder and job label suffix.")
     parser.add_argument("--profile", choices=("probe", "matrix", "reverse", "correctness", "tolerance", "tolerance-repeat",
-                                 "worker-memory", "abc-history"), required=True)
+                                 "tolerance-prepared-repeat", "worker-memory", "abc-history"), required=True)
     parser.add_argument("--minutes", type=int, required=True)
     parser.add_argument("--wait-for-job", help="Delay workload until this earlier job stops.")
     parser.add_argument("--prepared-from-run", help="Use verified indexes from this matrix run.")
@@ -137,15 +138,16 @@ def main():
     args = parser.parse_args()
     if not re.fullmatch(r"[a-z0-9][a-z0-9-]{2,39}", args.run):
         parser.error("Run name must use 3 to 40 lower-case letters, numbers, or hyphens.")
-    if args.prepared_from_run and (args.profile not in ("tolerance", "worker-memory", "abc-history") or not re.fullmatch(
+    prepared_profiles = ("tolerance", "tolerance-prepared-repeat", "worker-memory", "abc-history")
+    if args.prepared_from_run and (args.profile not in prepared_profiles or not re.fullmatch(
         r"[a-z0-9][a-z0-9-]{2,39}", args.prepared_from_run
     )):
         parser.error("Invalid prepared-index run name or unsupported profile.")
-    if args.profile in ("tolerance", "tolerance-repeat"):
+    if args.profile in prepared_profiles[1:] and not args.prepared_from_run:
+        parser.error("The selected profile requires --prepared-from-run.")
+    if args.profile in ("tolerance", "tolerance-repeat", "tolerance-prepared-repeat"):
         args.datasets = ["bucket"]
     elif args.profile in ("worker-memory", "abc-history"):
-        if not args.prepared_from_run:
-            parser.error("The selected profile requires --prepared-from-run.")
         args.datasets = ["abc"] if args.profile == "abc-history" else args.datasets or ["abc", "droid"]
     else:
         args.datasets = args.datasets or ["droid", "bucket", "abc"]

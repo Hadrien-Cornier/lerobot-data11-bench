@@ -163,7 +163,8 @@ def verify_bucket(label):
 
 
 def benchmark(dataset, reader, label, cache, timeout, *, single_frame=False,
-              batches=125000, warm_batches=0, cache_state="cold", history=False, release=False, tolerance_s=None, fixed_target=False):
+              batches=125000, warm_batches=0, cache_state="cold", history=False, release=False,
+              tolerance_s=None, fixed_target=False, seed=None):
     out = RESULTS / f"{label}.json"
     args = [
         "benchmark.py", "--dataset", dataset, "--reader", reader, "--output", out,
@@ -180,6 +181,8 @@ def benchmark(dataset, reader, label, cache, timeout, *, single_frame=False,
         args += ["--warm-batches", str(warm_batches)]
     if fixed_target:
         args.append("--continue-to-max-batches")
+    if seed is not None:
+        args += ["--seed", str(seed)]
     return run(label, args, timeout, reader, cache, release=release)
 
 
@@ -199,8 +202,8 @@ def native_archive(cache):
     return None
 
 
-def download_prepared(dataset, cache, reference, timeout=900, *, measure_wire=False):
-    label = f"{dataset}-private-transfer"
+def download_prepared(dataset, cache, reference, timeout=900, *, measure_wire=False, label=None):
+    label = label if label is not None else f"{dataset}-private-transfer"
     out = RESULTS / f"{label}.json"
     command = [
         "runner/publisher.py", "--dataset", dataset, "--out", out, "--private-repo", REPO,
@@ -250,7 +253,7 @@ def capture_transfer(dataset, archive, source_cache, cache):
 
 
 def pair(dataset, state, readers, caps, caches, *, cache_state="cold", max_batches=125000,
-         single_frame=False, history=False, warm_batches=0, tolerance_s=None, fixed_target=False):
+         single_frame=False, history=False, warm_batches=0, tolerance_s=None, fixed_target=False, seed=None):
     checks = {"dataset": dataset, "pair": state, "single_frame": single_frame, "history": history,
               "tolerance_s": tolerance_s or 1e-4, "fixed_target": max_batches if fixed_target else None}
     if dataset == "bucket" and not verify_bucket(f"{state}-before"):
@@ -264,6 +267,7 @@ def pair(dataset, state, readers, caps, caches, *, cache_state="cold", max_batch
             dataset, reader, f"{dataset}-{state}-{reader}", caches[reader], min(caps[reader], remaining),
             single_frame=single_frame, history=history, batches=max_batches,
             warm_batches=warm_batches, cache_state=reader_state, tolerance_s=tolerance_s, fixed_target=fixed_target,
+            seed=seed,
         )
     source_valid = dataset != "bucket" or verify_bucket(f"{state}-after")
     append({"event": "pair-done", "source_valid": source_valid, **checks})
@@ -425,6 +429,41 @@ def tolerance():
          caches, cache_state="warm", single_frame=True, tolerance_s=0.001, max_batches=1000)
 
 
+def tolerance_prepared_repeat():
+    reference = json.loads(os.environ["PREPARED_INDEX"])
+    dataset = "bucket"
+    batches = 4000
+    seed = 42
+    forward = ("baseline", "candidate")
+    orders = (forward, tuple(reversed(forward)), forward)
+    for repeat, order in enumerate(orders, 1):
+        suffix = f"r{repeat:02}"
+        state = f"current-frame-tolerance-1ms-prepared-{suffix}"
+        caches = {reader: CACHE / f"{dataset}-{state}-{reader}" for reader in order}
+        if any(cache.exists() for cache in caches.values()):
+            raise FileExistsError(f"A prepared repetition cache already exists for {state}.")
+        transfer_label = f"{dataset}-private-transfer-{suffix}"
+        before_transfer = f"tolerance-1ms-before-transfer-{suffix}"
+        append({
+            "event": "tolerance-control-setup", "pair": state, "repeat": repeat, "reader_order": order,
+            "tolerance_s": 0.001, "seed_requested": seed, "max_batches": batches, "pool_size": 32,
+            "baseline_start_state": "fresh_metadata_and_verified_private_transfer",
+            "candidate_start_state": "fresh", "prepared_index": reference,
+            "transfer_label": transfer_label, "before_transfer_label": before_transfer,
+            "concurrent_jobs_at_launch": json.loads(os.environ.get("CONCURRENT_JOBS_AT_LAUNCH", "[]")),
+        })
+        if not verify_bucket(before_transfer):
+            raise RuntimeError(f"Molmo inventory check before transfer failed for {state}.")
+        if not download_prepared(dataset, caches["baseline"], reference, timeout=180, label=transfer_label):
+            raise RuntimeError(f"Prepared Molmo index transfer failed for {state}.")
+        if not pair(
+            dataset, state, order, {"baseline": 700, "candidate": 700}, caches,
+            cache_state={"baseline": "unclassified", "candidate": "cold"}, single_frame=True,
+            tolerance_s=0.001, max_batches=batches, fixed_target=True, seed=seed,
+        ):
+            raise RuntimeError(f"Molmo paired inventory check failed for {state}.")
+
+
 def tolerance_repeat():
     order = ("baseline", "candidate")
     caches = {reader: CACHE / f"bucket-tolerance-repeat-{reader}" for reader in order}
@@ -553,6 +592,8 @@ def main():
             tolerance()
         elif PROFILE == "tolerance-repeat":
             tolerance_repeat()
+        elif PROFILE == "tolerance-prepared-repeat":
+            tolerance_prepared_repeat()
         elif PROFILE == "worker-memory":
             worker_memory()
         elif PROFILE == "abc-history":

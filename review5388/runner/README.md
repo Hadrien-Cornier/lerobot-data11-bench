@@ -37,6 +37,18 @@ To test prepared-index receipt, use `--prepared-from-run matrix03 --minutes 27` 
 
 Use `--profile tolerance-repeat --minutes 75` to reverse the cold reader order and attempt 25,000 batches per reader with the same 1 ms setting. This run keeps its first 125 batches after refill two and continues to the fixed target. It saves additional checkpoints at batches 15,000, 17,500, 20,000, and 25,000.
 
+## Repeat the prepared-index control
+
+Use the prepared profile to compare 4,000 batches per reader in three pairs on one CPU XL host. Run the baseline first in pairs one and three. Run the draft first in pair two. Both readers use seed 42, batch size eight, the 32-episode pool, zero DataLoader workers, and the 1 ms setting. Each reader has a new disk cache and a new process. Before each pair, download the same private archive into the baseline cache and verify its SHA-256 checksum. Save receipt time separately and include it in the baseline consumer time.
+
+Each pair has its own transfer receipt and bucket inventory checks. The labels end in `r01`, `r02`, and `r03`. Use the full batch traces to check the first 1,000 batches and the lead through the common verified horizon.
+
+```bash
+uv run --no-project --python 3.12 --with huggingface-hub==2.0.0 runner/launch.py molmo-prepared-repeat01 \
+  --profile tolerance-prepared-repeat --prepared-from-run matrix03 --minutes 95
+uv run --no-project --python 3.12 --with huggingface-hub==2.0.0 runner/collect.py molmo-prepared-repeat01 --logs --sync
+```
+
 ## Measure worker memory
 
 After the main matrix verifies the prepared archives, use them for a separate baseline worker-memory job. The default source order is ABC then DROID. Each source transfers its index once and builds its local memory map before either reader starts. Both arms use fresh Python processes and the same disk cache. The runner starts one worker first and four workers second. The second arm can reuse metadata and pages cached by the operating system. Both arms attempt 125 batches. The runner records the available shared memory and uses the same feasible prefetch factor for both arms.

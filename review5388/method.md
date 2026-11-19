@@ -54,3 +54,30 @@ done
 Use `--single-frame` for the current-frame diagnostic. Use `--dataset abc --history` for camera history. Run a second process with the same cache paths and `--cache-state warm` to measure a restart. The `--cache-state` option labels a run. The cache directories determine its actual state. The accompanying JSONL trace contains batch identities, consumer waits, milestones, and refill events. Run `summarize.py <downloaded-job-directory> --fixture-evidence correctness/evidence` to export the comparison as CSV.
 
 `coverage_audit.py` verifies each traced `(episode, frame)` against the pinned episode-length tables. `resource_summary.py` exports measured I/O, timing and memory at each milestone. `matched_diversity.py` accepts one result file from each reader on the same host, source, workload, cache condition and tolerance. The three utilities read the raw job result folder. The [comparison](measurements/comparison.csv), [ID audit](measurements/coverage.csv) and [compressed resource table](measurements/resources.csv.gz) contain the resulting public aggregates.
+
+### Repeat the fresh-disk comparison with a matching publisher index
+
+Use a fresh checkout of this benchmark, an HF account with CPU Jobs enabled, and a private dataset repository you can write to. Set the repository below to your own. The publisher and both consumers use the public MolmoAct2 bucket. Only the index, benchmark bundle, and result files go in your private repository.
+
+```bash
+# From review5388/, after hf auth login
+export REVIEW5388_RESULTS_REPO="YOUR_HF_ACCOUNT/YOUR_PRIVATE_DATASET"
+export HF_HUB_DISABLE_PROGRESS_BARS=1
+run5388() {
+    uv run --no-project --python 3.12 --with huggingface-hub==2.0.0 "$@"
+}
+run5388 runner/launch.py molmo-publisher --profile matrix --datasets bucket --minutes 120
+```
+
+When the publisher job finishes, confirm it saved a verified transfer receipt. The next job checks that receipt, pins its archive revision and checksum, and starts three pairs on one CPU XL host. Each arm gets a new process and empty application caches. The orders are Pepijn/Quentin, Quentin/Pepijn, and Pepijn/Quentin. Each arm attempts 4,000 batches. The minute limits bound HF compute time.
+
+```bash
+run5388 runner/collect.py molmo-publisher --sync
+test -s results/downloads/review5388/results/molmo-publisher/bucket-private-transfer.json
+run5388 runner/launch.py molmo-consumers --profile tolerance-prepared-repeat \
+    --prepared-from-run molmo-publisher --minutes 95
+# After the consumer job finishes
+run5388 runner/collect.py molmo-consumers --sync
+```
+
+For Pepijn, add each pair's `consumer_prep_seconds` in `bucket-private-transfer-rNN.json` to every delivery timestamp. It includes downloading the archive and checking its SHA-256. The reader clock then includes opening the index and preparing its local memory map. Quentin starts from an empty cache each time and receives no archive. The source inventory is checked before and after each pair.
