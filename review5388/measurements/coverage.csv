@@ -1,0 +1,15 @@
+run,cell,dataset,reader,workload,tolerance_ms,source_check,catalog_manifest_sha256,trace_status,prefix,batches,raw_anchors,unique_anchors,unique_in_bounds,duplicates,out_of_range,admitted_episodes,delivered_episodes,source_frames,source_episodes,source_coverage_fraction
+matrix03,bucket-cold-baseline,bucket,baseline,action100,0.1,verified,aebacc429d54f284e103ff10613b925f5827c347e0678846b0b6f0015dded782,ok,batch_1,1,8,8,8,0,0,32,7,76046658,32246,0.000000105
+matrix03,bucket-cold-baseline,bucket,baseline,action100,0.1,verified,aebacc429d54f284e103ff10613b925f5827c347e0678846b0b6f0015dded782,ok,batch_125,125,1000,1000,1000,0,0,32,32,76046658,32246,0.000013150
+matrix03,bucket-cold-baseline,bucket,baseline,action100,0.1,verified,aebacc429d54f284e103ff10613b925f5827c347e0678846b0b6f0015dded782,ok,batch_1000,1000,8000,8000,8000,0,0,32,32,76046658,32246,0.000105199
+matrix03,bucket-cold-baseline,bucket,baseline,action100,0.1,verified,aebacc429d54f284e103ff10613b925f5827c347e0678846b0b6f0015dded782,ok,end,29288,234304,234304,234304,0,0,97,97,76046658,32246,0.003081056
+matrix03,bucket-cold-candidate,bucket,candidate,action100,0.1,verified,aebacc429d54f284e103ff10613b925f5827c347e0678846b0b6f0015dded782,error,end,0,0,0,0,0,0,32,0,76046658,32246,0.000000000
+matrix03,bucket-cold-single-frame-candidate,bucket,candidate,single_frame,0.1,bucket-check-pending,aebacc429d54f284e103ff10613b925f5827c347e0678846b0b6f0015dded782,error,end,0,0,0,0,0,0,32,0,76046658,32246,0.000000000
+matrix03,droid-cold-baseline,droid,baseline,action100,0.1,verified,bffd382e5aad105c740c9bd7db0c93e903838d1725cd6ceb808e2ff4c2166a04,ok,batch_1,1,8,8,8,0,0,32,7,27630375,95658,0.000000290
+matrix03,droid-cold-baseline,droid,baseline,action100,0.1,verified,bffd382e5aad105c740c9bd7db0c93e903838d1725cd6ceb808e2ff4c2166a04,ok,batch_125,125,1000,1000,1000,0,0,32,32,27630375,95658,0.000036192
+matrix03,droid-cold-baseline,droid,baseline,action100,0.1,verified,bffd382e5aad105c740c9bd7db0c93e903838d1725cd6ceb808e2ff4c2166a04,ok,batch_1000,1000,8000,8000,8000,0,0,40,40,27630375,95658,0.000289536
+matrix03,droid-cold-baseline,droid,baseline,action100,0.1,verified,bffd382e5aad105c740c9bd7db0c93e903838d1725cd6ceb808e2ff4c2166a04,ok,end,3949,31592,31592,31592,0,0,102,102,27630375,95658,0.001143379
+matrix03,droid-cold-candidate,droid,candidate,action100,0.1,verified,bffd382e5aad105c740c9bd7db0c93e903838d1725cd6ceb808e2ff4c2166a04,error,end,0,0,0,0,0,0,32,0,27630375,95658,0.000000000
+probe02,droid-cold-baseline,droid,baseline,single_frame,0.1,verified,bffd382e5aad105c740c9bd7db0c93e903838d1725cd6ceb808e2ff4c2166a04,ok,batch_1,1,8,8,8,0,0,32,7,27630375,95658,0.000000290
+probe02,droid-cold-baseline,droid,baseline,single_frame,0.1,verified,bffd382e5aad105c740c9bd7db0c93e903838d1725cd6ceb808e2ff4c2166a04,ok,end,2,16,16,16,0,0,32,10,27630375,95658,0.000000579
+probe02,droid-cold-candidate,droid,candidate,single_frame,0.1,verified,bffd382e5aad105c740c9bd7db0c93e903838d1725cd6ceb808e2ff4c2166a04,error,end,0,0,0,0,0,0,32,0,27630375,95658,0.000000000
