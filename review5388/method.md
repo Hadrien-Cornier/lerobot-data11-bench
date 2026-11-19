@@ -52,3 +52,5 @@ done
 ```
 
 Use `--single-frame` for the current-frame diagnostic. Use `--dataset abc --history` for camera history. Run a second process with the same cache paths and `--cache-state warm` to measure a restart. The `--cache-state` option labels a run. The cache directories determine its actual state. The accompanying JSONL trace contains batch identities, consumer waits, milestones, and refill events. Run `summarize.py <downloaded-job-directory> --fixture-evidence correctness/evidence` to export the comparison as CSV.
+
+`coverage_audit.py` verifies each traced `(episode, frame)` against the pinned episode-length tables. `resource_summary.py` exports measured I/O, timing and memory at each milestone. `matched_diversity.py` accepts one result file from each reader on the same host, source, workload, cache condition and tolerance. The three utilities read the raw job result folder. The [comparison](measurements/comparison.csv), [ID audit](measurements/coverage.csv) and [compressed resource table](measurements/resources.csv.gz) contain the resulting public aggregates.

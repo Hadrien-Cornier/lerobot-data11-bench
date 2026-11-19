@@ -216,7 +216,8 @@ def audit(trace, lengths, total_frames, allow_partial):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("directory", type=Path, help="Job folder, or parent with one or more job folders")
-    parser.add_argument("--catalog-dir", type=Path, default=ROOT / "results")
+    catalogs_dir = ROOT / "catalog" if (ROOT / "catalog").is_dir() else ROOT / "results"
+    parser.add_argument("--catalog-dir", type=Path, default=catalogs_dir)
     parser.add_argument("--metadata-cache", type=Path, default=Path("/tmp/lerobot5388-coverage-metadata"))
     parser.add_argument("--allow-partial", action="store_true")
     parser.add_argument("--out", type=Path)

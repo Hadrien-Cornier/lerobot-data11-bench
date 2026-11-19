@@ -1,6 +1,6 @@
 # Does LeRobot #5388 start training faster?
 
-Quentin's draft avoids the cold MP4 indexing wait. On the reported MolmoAct2 bucket it constructed the reader in 6.93 seconds and yielded its first current-frame sample at 15.13 seconds. With the 100-step action targets used for training, it delivered zero batches on both MolmoAct2 and DROID. Pepijn's cold baseline delivered 1,000 batches in 653.7 and 325.5 seconds respectively.
+Quentin's draft avoids the cold MP4 indexing wait. On the reported MolmoAct2 bucket it constructed the reader in 6.93 seconds and yielded its first current-frame sample at 15.13 seconds. With the 100-step action targets used for training, it delivered zero batches on MolmoAct2, ABC-130K and DROID. Pepijn's cold baseline delivered 1,000 batches in 653.7 seconds on MolmoAct2 and 325.5 seconds on DROID.
 
 This interim report contains finished CPU runs and local correctness checks. ABC-130K, the fresh publisher-index comparison and the matched 1 ms current-frame control are scheduled in the ongoing benchmark. The reviewed draft opened November 16, 2026 at 19:06 UTC and GitHub shows its last update at 19:09 UTC the same day. The pinned head is `1a60cb4b`. [LeRobot #5388](https://github.com/huggingface/lerobot/pull/5388) · [Prerequisite Datasets #8983](https://github.com/huggingface/datasets/pull/8983)
 
@@ -23,7 +23,9 @@ The draft raised `TypeError: expected Tensor as element 0 in argument 0, but got
 
 | Reader and starting state | Constructor (s) | Batch 1 (s) | Batch 125 (s) | Batch 1,000 (s) | Windows/s across refills | Episodes/batch, first 1k / across refills | Peak RAM (GB) | Finite pass (days, est.) |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
-| Both readers | Pending | — | — | — | — | — | — | — |
+| Quentin, As published, fresh | 10.1 | — | — | — | — | — / — | 5.36 | — |
+
+The draft raised `TypeError: expected Tensor as element 0 in argument 0, but got dict`.
 
 ### DROID
 
@@ -39,6 +41,9 @@ The draft raised `ValueError: too many dimensions 'str'`.
 ### Molmo current-frame control
 
 With the draft at its native 0.1 ms tolerance, the first current-frame sample arrived at 15.13 seconds. A subsequent frame fetch raised `FrameTimestampError`, so the consumer received zero complete batches. Casting an absolute timestamp late in a shared MP4 to float32 moves the query by more than 0.1 ms. Both pinned readers passed all 786 fixture anchors at 1 ms, including pixels. This permits a separate matched test on real Molmo with three current images, state and the current action. Its timings apply to that workload. [Precision checks](correctness/README.md#packed-video-timestamp-precision)
+
+
+At the same native tolerance, a new baseline process with a local index reached its first sample at 33.80 seconds, first batch at 43.01 seconds, and batch 1,000 at 79.64 seconds. It delivered 234,304 distinct anchors and averaged 207.7 windows/s across two refills. That warm baseline and the fresh draft answer different cache questions.
 
 ### What a publisher-built index changes
 
