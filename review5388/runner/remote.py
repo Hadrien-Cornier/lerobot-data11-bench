@@ -1,0 +1,403 @@
+"""Run paired cells sequentially on one CPU host and save private evidence after each cell."""
+
+import datetime as dt
+import gzip
+import hashlib
+import json
+
+import os
+from pathlib import Path
+import shutil
+import signal
+import subprocess
+import time
+
+from huggingface_hub import HfApi
+
+
+ROOT = Path(__file__).resolve().parents[1]
+WORK = Path(os.environ.get("WORK", "/work/review5388"))
+PY = WORK / "venv/bin/python"
+RESULTS = WORK / "results"
+CACHE = WORK / "caches"
+REPO = os.environ["RESULTS_REPO"]
+RUN = os.environ["RUN_NAME"]
+PROFILE = os.environ["PROFILE"]
+JOB_SECONDS = int(os.environ["JOB_HARD_CAP_SECONDS"])
+STARTED = time.monotonic()
+DEADLINE = STARTED + JOB_SECONDS - 240
+API = HfApi()
+DEST = f"review5388/results/{RUN}"
+BUCKET_MANIFEST = "aebacc429d54f284e103ff10613b925f5827c347e0678846b0b6f0015dded782"
+DATASETS = tuple(os.environ.get("RUN_DATASETS", "droid,bucket,abc").split(","))
+COLD_CAP = {"bucket": 2100, "droid": 1000, "abc": 5600}
+
+
+def now():
+    return dt.datetime.now(dt.timezone.utc).isoformat()
+
+
+def write_json(path, data):
+    path.write_text(json.dumps(data, indent=2, sort_keys=True) + "\n")
+
+
+def append(data):
+    with (RESULTS / "run.jsonl").open("a") as stream:
+        stream.write(json.dumps({"utc": now(), **data}, sort_keys=True) + "\n")
+    print(json.dumps(data, sort_keys=True), flush=True)
+
+
+def upload(label):
+    try:
+        commit = API.upload_folder(
+            folder_path=RESULTS,
+            path_in_repo=DEST,
+            repo_id=REPO,
+            repo_type="dataset",
+            commit_message=f"LeRobot #5388 {RUN} {label}",
+            ignore_patterns=["*.tmp"],
+        )
+        print(f"Saved {label} to {DEST} at {commit.oid}", flush=True)
+    except Exception as exc:
+        append({"event": "upload-failed", "label": label, "error_type": type(exc).__name__})
+
+
+def read_file(path):
+    try:
+        return Path(path).read_text().strip()
+    except OSError:
+        return None
+
+
+def env_for(reader, cache, *, release=False):
+    source = WORK / "src" / reader / "src"
+    python_path = f"{source}:{WORK / 'datasets-release'}" if release else str(source)
+    return {
+        **os.environ,
+        "HF_HOME": str(cache / "hub-home"),
+        "HF_HUB_CACHE": str(cache / "hub-home/hub"),
+        "HF_XET_CACHE": str(cache / "hub-home/xet"),
+        "HF_LEROBOT_HOME": str(cache / "lerobot"),
+        "HF_DATASETS_CACHE": str(cache / "datasets"),
+        "TMPDIR": str(cache / "tmp"),
+        "PYTHONPATH": python_path,
+        "PYTHONUNBUFFERED": "1",
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "ARROW_NUM_THREADS": "1",
+        "TOKENIZERS_PARALLELISM": "false",
+        "HF_HUB_DISABLE_PROGRESS_BARS": "1",
+    }
+
+
+def run(label, argv, timeout, reader="baseline", cache=None, *, release=False):
+    time_left = int(DEADLINE - time.monotonic())
+    timeout = min(timeout, time_left)
+    if timeout < 10:
+        append({"event": "skipped", "label": label, "reason": "job time exhausted"})
+        return None
+    cache = cache if cache is not None else CACHE / label
+    (cache / "tmp").mkdir(parents=True, exist_ok=True)
+    logfile = RESULTS / f"{label}.log"
+    started = time.monotonic()
+    append({
+        "event": "start", "label": label, "reader": reader, "argv": [str(x) for x in argv],
+        "cache": str(cache), "timeout_seconds": timeout,
+        "datasets_source": "pypi-5.2.0" if release else "pull-8983",
+    })
+    timed_out = False
+    with logfile.open("w") as stream:
+        child = subprocess.Popen(
+            [str(PY), *map(str, argv)],
+            cwd=ROOT, env=env_for(reader, cache, release=release), stdout=stream, stderr=subprocess.STDOUT,
+            start_new_session=True,
+        )
+        while child.poll() is None:
+            remaining = timeout - (time.monotonic() - started)
+            if remaining <= 0:
+                break
+            try:
+                child.wait(timeout=min(remaining, 55))
+            except subprocess.TimeoutExpired:
+                report = RESULTS / f"{label}.json"
+                details = {}
+                if report.is_file():
+                    try:
+                        row = json.loads(report.read_text())
+                        details = {"status": row.get("status"), "milestones": list(
+                            row.get("timings", {}).get("milestones", {})
+                        ), "progress": row.get("progress")}
+                    except (FileNotFoundError, json.JSONDecodeError):
+                        pass
+                print(json.dumps({"event": "heartbeat", "label": label,
+                                  "seconds": round(time.monotonic() - started, 1), **details}), flush=True)
+        if child.poll() is None:
+            timed_out = True
+            try:
+                os.killpg(child.pid, signal.SIGTERM)
+                child.wait(timeout=10)
+            except subprocess.TimeoutExpired:
+                os.killpg(child.pid, signal.SIGKILL)
+                child.wait()
+            except ProcessLookupError:
+                child.wait()
+        return_code = child.returncode
+    append({
+        "event": "stop", "label": label, "reader": reader, "code": return_code,
+        "timed_out": timed_out, "seconds": time.monotonic() - started,
+        "cgroup_memory_events": read_file("/sys/fs/cgroup/memory.events"),
+    })
+    for path in RESULTS.glob(f"{label}.*"):
+        if path.suffix == ".jsonl" and path.stat().st_size >= 2 * 1024**2:
+            with path.open("rb") as source, gzip.open(f"{path}.gz", "wb", compresslevel=1) as target:
+                shutil.copyfileobj(source, target)
+            path.unlink()
+    upload(label)
+    return return_code
+
+
+def verify_bucket(label):
+    out = RESULTS / f"bucket-manifest-{label}.json"
+    code = run(f"bucket-manifest-{label}", ["catalog.py", "--dataset", "bucket", "--out", out,
+                                          "--expect", BUCKET_MANIFEST], 180)
+    return code == 0
+
+
+def benchmark(dataset, reader, label, cache, timeout, *, single_frame=False,
+              batches=125000, warm_batches=0, cache_state="cold", history=False, release=False):
+    out = RESULTS / f"{label}.json"
+    args = [
+        "benchmark.py", "--dataset", dataset, "--reader", reader, "--output", out,
+        "--max-batches", str(batches), "--workers", "0", "--cache-state", cache_state,
+        "--max-seconds", str(max(10, timeout - 20)),
+    ]
+    if single_frame:
+        args.append("--single-frame")
+    if history:
+        args.append("--history")
+    if warm_batches:
+        args += ["--warm-batches", str(warm_batches)]
+    return run(label, args, timeout, reader, cache, release=release)
+
+
+def publisher_audit(dataset):
+    label = f"{dataset}-publisher-audit"
+    out = RESULTS / f"{label}.json"
+    code = run(label, ["runner/publisher.py", "--dataset", dataset, "--audit", "--out", out], 220)
+    if code == 0 and out.exists():
+        return json.loads(out.read_text())
+    return {}
+
+
+def native_archive(cache):
+    archives = list((cache / "lerobot" / "streaming-sidecars").rglob("mp4-v*.npz"))
+    if len(archives) == 1:
+        return archives[0]
+    return None
+
+
+def capture_transfer(dataset, archive, source_cache, cache):
+    label = f"{dataset}-private-transfer"
+    if time.monotonic() + 180 > DEADLINE:
+        return False
+    path = f"review5388/prepared/{RUN}/{dataset}/{archive.name}"
+    with archive.open("rb") as stream:
+        checksum = hashlib.file_digest(stream, "sha256").hexdigest()
+    relative = archive.relative_to(source_cache / "lerobot")
+    start = time.monotonic()
+    try:
+        commit = API.upload_file(
+            path_or_fileobj=archive, path_in_repo=path, repo_id=REPO, repo_type="dataset",
+            commit_message=f"Native LeRobot #5388 prepared index for {dataset}",
+        )
+    except Exception as exc:
+        append({"event": "transfer-stage-failed", "dataset": dataset, "error_type": type(exc).__name__})
+        return False
+    append({
+        "event": "private-transfer-staged", "dataset": dataset, "revision": commit.oid,
+        "path": path, "sha256": checksum, "bytes": archive.stat().st_size,
+        "seconds": time.monotonic() - start,
+    })
+    out = RESULTS / f"{label}.json"
+    code = run(label, [
+        "runner/publisher.py", "--dataset", dataset, "--out", out, "--private-repo", REPO,
+        "--private-path", path, "--private-revision", commit.oid,
+        "--private-destination", relative, "--private-sha256", checksum,
+    ], 900, cache=cache)
+    if code == 0 and out.exists():
+        observed = json.loads(out.read_text())["private_transfer"]["sha256"]
+        if observed != checksum:
+            raise RuntimeError(f"Prepared-index checksum changed for {dataset}")
+        return True
+    return False
+
+
+def pair(dataset, state, readers, caps, caches, *, cache_state="cold", max_batches=125000,
+         single_frame=False, history=False, warm_batches=0):
+    checks = {"dataset": dataset, "pair": state, "single_frame": single_frame, "history": history}
+    if dataset == "bucket" and not verify_bucket(f"{state}-before"):
+        append({"event": "pair-skipped", "reason": "source manifest", **checks})
+        return
+    for reader in readers:
+        benchmark(
+            dataset, reader, f"{dataset}-{state}-{reader}", caches[reader], caps[reader],
+            single_frame=single_frame, history=history, batches=max_batches,
+            warm_batches=warm_batches, cache_state=cache_state,
+        )
+    source_valid = dataset != "bucket" or verify_bucket(f"{state}-after")
+    append({"event": "pair-done", "source_valid": source_valid, **checks})
+    upload(f"{dataset}-{state}-pair")
+
+
+def correctness():
+    fixture = WORK / "synthetic-v3"
+    code = run("fixture-build", ["correctness/fixture.py", fixture], 180)
+    if code != 0:
+        return
+    for reader in ("baseline", "candidate"):
+        check_variant = "baseline" if reader == "baseline" else "proposal"
+        for mode in ("anchors", "full", "numeric", "positive", "video"):
+            label = f"fixture-{reader}-{mode}"
+            command = [
+                "correctness/check_stream.py", check_variant, fixture, RESULTS / f"{label}.json",
+                "--mode", mode, "--workers", "0",
+            ]
+            if reader == "candidate":
+                command.append("--local-id")
+            run(label, command, 150, reader)
+
+
+def cold_cache(dataset):
+    return {reader: CACHE / f"{dataset}-cold-{reader}" for reader in ("baseline", "candidate")}
+
+
+def matrix():
+    reverse = PROFILE == "reverse"
+    first = ("baseline", "candidate") if reverse else ("candidate", "baseline")
+    second = tuple(reversed(first))
+    archive = {}
+    measurement_caps = {"baseline": 1200, "candidate": 1200}
+
+    # Establish the action-100 comparison on all sources before diagnostics.
+    for dataset in DATASETS:
+        caps = {"baseline": COLD_CAP[dataset], "candidate": 900}
+        pair(dataset, "cold", first, caps, cold_cache(dataset))
+        index = native_archive(cold_cache(dataset)["baseline"])
+        if index is not None:
+            archive[dataset] = index
+
+        if dataset == "bucket":
+            # The native 10-second startup claim uses the current-frame workload.
+            # The candidate gets a fresh metadata cache. Reuse the baseline index
+            # to avoid measuring the same cold index build twice.
+            label = "cold-single-frame-candidate"
+            if verify_bucket(f"{label}-before"):
+                benchmark(dataset, "candidate", f"bucket-{label}", CACHE / f"bucket-{label}",
+                          1200, single_frame=True)
+                valid = verify_bucket(f"{label}-after")
+                append({"event": "comparison-source", "dataset": "bucket", "label": label, "source_valid": valid})
+            if dataset in archive:
+                label = "warm-single-frame-baseline"
+                if verify_bucket(f"{label}-before"):
+                    benchmark(dataset, "baseline", f"bucket-{label}", cold_cache(dataset)["baseline"],
+                              1200, single_frame=True, cache_state="warm")
+                    valid = verify_bucket(f"{label}-after")
+                    append({"event": "comparison-source", "dataset": "bucket", "label": label, "source_valid": valid})
+
+    # Restart in new processes with the same local disk state. No iterator is prewarmed.
+    for dataset in DATASETS:
+        if dataset in archive:
+            pair(dataset, "warm", second, measurement_caps, cold_cache(dataset), cache_state="warm")
+        else:
+            append({"event": "warm-blocked", "dataset": dataset, "reason": "no validated index"})
+
+    if "abc" in DATASETS and "abc" in archive:
+        pair("abc", "warm-history", first, measurement_caps, cold_cache("abc"),
+             cache_state="warm", history=True)
+
+    # Time each transfer separately, then open the consumer on a clean metadata cache.
+    for dataset in DATASETS:
+        audit = publisher_audit(dataset)
+        if dataset not in archive:
+            append({"event": "prepared-blocked", "dataset": dataset, "reason": "no validated index"})
+            continue
+        if any(x["status"] == "matching_header" and x["url"] == audit["expected_url"]
+               for x in audit.get("publisher_files", [])):
+            append({"event": "native-publication-available", "dataset": dataset})
+        prepared = {reader: CACHE / f"{dataset}-prepared-{reader}" for reader in first}
+        if capture_transfer(dataset, archive[dataset], cold_cache(dataset)["baseline"], prepared["baseline"]):
+            pair(dataset, "prepared", first, measurement_caps, prepared, cache_state="unclassified")
+
+    if "droid" in DATASETS and "droid" in archive:
+        label = "droid-warm-release-control"
+        if (WORK / "datasets-release").is_dir():
+            benchmark("droid", "baseline", label, cold_cache("droid")["baseline"], 210, batches=2,
+                      cache_state="warm", release=True)
+        else:
+            append({"event": "release-control-skipped", "reason": "release wheel unavailable"})
+
+    # Reverse the primary warm order on this host, with no repeat of cold indexing.
+    for dataset in DATASETS:
+        if dataset in archive:
+            pair(dataset, "warm-reversed", first, measurement_caps, cold_cache(dataset), cache_state="warm")
+
+
+def probe():
+    dataset = "droid"
+    caps = {"baseline": 600, "candidate": 240}
+    pair(dataset, "probe", ("candidate", "baseline"), caps, cold_cache(dataset),
+         single_frame=True, max_batches=2)
+
+
+def wait_for_previous():
+    job_id = os.environ.get("WAIT_FOR_JOB")
+    if not job_id:
+        return
+    terminal = {"COMPLETED", "ERROR", "CANCELED", "FAILED", "TIMEOUT"}
+    append({"event": "waiting-for-job", "job_id": job_id})
+    while time.monotonic() < DEADLINE:
+        stage = API.inspect_job(job_id=job_id).status.stage
+        if stage in terminal:
+            append({"event": "previous-job-done", "job_id": job_id, "stage": stage})
+            return
+        time.sleep(15)
+    raise TimeoutError("The earlier workload is still active at the comparison deadline.")
+
+
+def main():
+    if API.dataset_info(REPO).private is not True:
+        raise RuntimeError("Evidence destination must be private.")
+    RESULTS.mkdir(parents=True, exist_ok=True)
+    usage = shutil.disk_usage(WORK)
+    metadata = {
+        "profile": PROFILE, "run": RUN, "job_id": os.environ.get("JOB_ID"),
+        "bundle_revision": os.environ["BUNDLE_REVISION"], "bundle_sha256": os.environ["BUNDLE_SHA256"],
+        "hostname": os.uname().nodename, "kernel": os.uname().release,
+        "cpu_model": next((line.partition(":")[2].strip()
+                           for line in (read_file("/proc/cpuinfo") or "").splitlines()
+                           if line.startswith("model name")), None),
+        "cpu_quota": read_file("/sys/fs/cgroup/cpu.max"),
+        "cpu_affinity": sorted(os.sched_getaffinity(0)),
+        "memory_limit_bytes": read_file("/sys/fs/cgroup/memory.max"),
+        "disk_total_bytes": usage.total, "disk_free_bytes": usage.free, "started_utc": now(),
+        "job_cap_seconds": JOB_SECONDS, "source_bucket_sha256": BUCKET_MANIFEST,
+    }
+    write_json(RESULTS / "host.json", metadata)
+    shutil.copyfile(WORK / "requirements-resolved.txt", RESULTS / "requirements-resolved.txt")
+    upload("environment")
+    try:
+        wait_for_previous()
+        if PROFILE == "correctness":
+            correctness()
+        elif PROFILE == "probe":
+            probe()
+        else:
+            matrix()
+    finally:
+        append({"event": "finish", "on_host_seconds": time.monotonic() - STARTED})
+        upload("final")
+
+
+if __name__ == "__main__":
+    main()
