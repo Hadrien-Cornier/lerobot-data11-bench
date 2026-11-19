@@ -17,6 +17,8 @@ Times in the tables are seconds from the start of the consumer. Ranges span repe
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
 | Pepijn, As published, fresh | 568.1 | 611.6 | 617.3 | 653.7 | 195.0 | 6.95 / 5.94 | 15.93 | 4.52 |
 | Quentin, As published, fresh | 7.5 | — | — | — | — | — / — | 1.09 | — |
+| Pepijn, Private index, fresh | 37.4 | 97.1 | 102.8 | 141.5 | — | 6.95 / — | 15.18 | — |
+| Quentin, Fresh, paired with index recipient | 7.3 | — | — | — | — | — / — | 1.13 | — |
 | Pepijn, Warm restart | 2.0 | 40.5 | 45.1 | 76.6 | 220.0 | 6.95 / 5.94 | 15.58 | 4.00 |
 | Quentin, Warm restart | 1.6 | — | — | — | — | — / — | 0.84 | — |
 
@@ -30,6 +32,8 @@ The draft raised `TypeError: expected Tensor as element 0 in argument 0, but got
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
 | Pepijn, As published, fresh | 2,505.2 | 2,583.9 | 2,586.4 | 2,598.0 | 557.3 | 6.98 / 5.87 | 24.30 | 7.97 |
 | Quentin, As published, fresh | 10.1 | — | — | — | — | — / — | 5.36 | — |
+| Pepijn, Private index, fresh | 149.0 | 261.1 | 263.9 | 278.5 | 520.4 | 6.98 / 5.87 | 24.11 | 8.51 |
+| Quentin, Fresh, paired with index recipient | 8.9 | — | — | — | — | — / — | 4.85 | — |
 | Pepijn, Warm restart | 8.0 | 88.3 | 91.0 | 102.5 | 570.4 | 6.98 / 5.87 | 23.96 | 7.76 |
 | Quentin, Warm restart | 1.7 | — | — | — | — | — / — | 5.27 | — |
 | Pepijn, History, warm | 8.0 | 89.0 | 95.1 | 135.9 | — | 6.98 / — | 22.66 | — |
@@ -77,10 +81,12 @@ Molmo lists three older index objects. The two full names point to identical con
 
 GR00T 2 made a different part of training reusable. Its published sample starts say which training windows are eligible. A video seek index says where the bytes live. Sample order and prefetch are runtime choices. Publishing one index does not settle the others. NVIDIA's three-view preparation test and 1,024-GPU overlap experiment motivate measuring CPU decode work separately from consumer wait. The CPU times here do not predict a training cluster's exposed wait. [GR00T 2, §4.7.2 and appendix K.4.3](https://research.nvidia.com/labs/gear/gr00t-2/assets/gr00t2_whitepaper.pdf#page=131)
 
+With a matching published index simulated, 1,000 complete three-view action batches took **141.5 seconds on Molmo, 278.5 seconds on ABC, and 162.2 seconds on DROID**. The same fresh-consumer observations with the sources as actually published were 653.7, 2,598.0 and 325.5 seconds. For ABC, transfer and checksum cost 14.0 seconds. The constructor then took another 149.0 seconds, including its normal work to open metadata and prepare the local index. A later local restart avoids much of that cost. The draft never delivered a 100-step batch in either fresh condition, so these measurements quantify the value of publication for the baseline.
+
 | Dataset | Native cold build (s) | Index on disk (GB) | Private receipt and verification (s) | Index header reads (MB / MP4s) | Training video reads (MB / MP4s) | Parquet reads (MB) |
 |---|---:|---:|---:|---:|---:|---:|
 | MolmoAct2 | 534.2 | 1.834 | 9.0 | 3,119.0 / 5,860 | 3,261.4 / 120 | 46.4 |
-| ABC-130K | 2,372.0 | 8.563 | — | 20,020.0 / 38,164 | 1,175.3 / 120 | 230.2 |
+| ABC-130K | 2,372.0 | 8.563 | 14.0 | 20,020.0 / 38,164 | 1,175.3 / 120 | 230.2 |
 | DROID | 181.7 | 0.630 | 4.3 | 513.7 / 784 | 196.9 / 135 | 4,867.7 |
 
 Index header, Parquet and training video bytes above are instrumented HTTP payloads for the cold baseline through batch 1,000, including prefetch. The same MP4 can appear in both the index and training columns. Other Hub/Xet transfers can bypass the HTTP hooks. The resource export records process-namespace receive bytes as a separate measure of total traffic.

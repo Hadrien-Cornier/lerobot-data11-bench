@@ -4,6 +4,11 @@ matrix03,abc-cold-baseline,abc,baseline,action100,0.1,verified,9f705fad4fd6d87da
 matrix03,abc-cold-baseline,abc,baseline,action100,0.1,verified,9f705fad4fd6d87dae4dd1141419c8ab8dbc7e1583ccd0401030fce2fac2abbd,ok,batch_1000,1000,8000,8000,8000,0,0,32,32,382468339,129225,0.000020917
 matrix03,abc-cold-baseline,abc,baseline,action100,0.1,verified,9f705fad4fd6d87dae4dd1141419c8ab8dbc7e1583ccd0401030fce2fac2abbd,ok,end,36193,289544,289544,289544,0,0,109,109,382468339,129225,0.000757040
 matrix03,abc-cold-candidate,abc,candidate,action100,0.1,verified,9f705fad4fd6d87dae4dd1141419c8ab8dbc7e1583ccd0401030fce2fac2abbd,error,end,0,0,0,0,0,0,32,0,382468339,129225,0.000000000
+matrix03,abc-prepared-baseline,abc,baseline,action100,0.1,verified,9f705fad4fd6d87dae4dd1141419c8ab8dbc7e1583ccd0401030fce2fac2abbd,ok,batch_1,1,8,8,8,0,0,32,7,382468339,129225,0.000000021
+matrix03,abc-prepared-baseline,abc,baseline,action100,0.1,verified,9f705fad4fd6d87dae4dd1141419c8ab8dbc7e1583ccd0401030fce2fac2abbd,ok,batch_125,125,1000,1000,1000,0,0,32,32,382468339,129225,0.000002615
+matrix03,abc-prepared-baseline,abc,baseline,action100,0.1,verified,9f705fad4fd6d87dae4dd1141419c8ab8dbc7e1583ccd0401030fce2fac2abbd,ok,batch_1000,1000,8000,8000,8000,0,0,32,32,382468339,129225,0.000020917
+matrix03,abc-prepared-baseline,abc,baseline,action100,0.1,verified,9f705fad4fd6d87dae4dd1141419c8ab8dbc7e1583ccd0401030fce2fac2abbd,ok,end,36193,289544,289544,289544,0,0,109,109,382468339,129225,0.000757040
+matrix03,abc-prepared-candidate,abc,candidate,action100,0.1,verified,9f705fad4fd6d87dae4dd1141419c8ab8dbc7e1583ccd0401030fce2fac2abbd,error,end,0,0,0,0,0,0,32,0,382468339,129225,0.000000000
 matrix03,abc-warm-baseline,abc,baseline,action100,0.1,verified,9f705fad4fd6d87dae4dd1141419c8ab8dbc7e1583ccd0401030fce2fac2abbd,ok,batch_1,1,8,8,8,0,0,32,7,382468339,129225,0.000000021
 matrix03,abc-warm-baseline,abc,baseline,action100,0.1,verified,9f705fad4fd6d87dae4dd1141419c8ab8dbc7e1583ccd0401030fce2fac2abbd,ok,batch_125,125,1000,1000,1000,0,0,32,32,382468339,129225,0.000002615
 matrix03,abc-warm-baseline,abc,baseline,action100,0.1,verified,9f705fad4fd6d87dae4dd1141419c8ab8dbc7e1583ccd0401030fce2fac2abbd,ok,batch_1000,1000,8000,8000,8000,0,0,32,32,382468339,129225,0.000020917
@@ -20,6 +25,11 @@ matrix03,bucket-cold-baseline,bucket,baseline,action100,0.1,verified,aebacc429d5
 matrix03,bucket-cold-baseline,bucket,baseline,action100,0.1,verified,aebacc429d54f284e103ff10613b925f5827c347e0678846b0b6f0015dded782,ok,end,29288,234304,234304,234304,0,0,97,97,76046658,32246,0.003081056
 matrix03,bucket-cold-candidate,bucket,candidate,action100,0.1,verified,aebacc429d54f284e103ff10613b925f5827c347e0678846b0b6f0015dded782,error,end,0,0,0,0,0,0,32,0,76046658,32246,0.000000000
 matrix03,bucket-cold-single-frame-candidate,bucket,candidate,single_frame,0.1,verified,aebacc429d54f284e103ff10613b925f5827c347e0678846b0b6f0015dded782,error,end,0,0,0,0,0,0,32,0,76046658,32246,0.000000000
+matrix03,bucket-prepared-baseline,bucket,baseline,action100,0.1,verified,aebacc429d54f284e103ff10613b925f5827c347e0678846b0b6f0015dded782,ok,batch_1,1,8,8,8,0,0,32,7,76046658,32246,0.000000105
+matrix03,bucket-prepared-baseline,bucket,baseline,action100,0.1,verified,aebacc429d54f284e103ff10613b925f5827c347e0678846b0b6f0015dded782,ok,batch_125,125,1000,1000,1000,0,0,32,32,76046658,32246,0.000013150
+matrix03,bucket-prepared-baseline,bucket,baseline,action100,0.1,verified,aebacc429d54f284e103ff10613b925f5827c347e0678846b0b6f0015dded782,ok,batch_1000,1000,8000,8000,8000,0,0,32,32,76046658,32246,0.000105199
+matrix03,bucket-prepared-baseline,bucket,baseline,action100,0.1,verified,aebacc429d54f284e103ff10613b925f5827c347e0678846b0b6f0015dded782,ok,end,27102,216816,216816,216816,0,0,92,92,76046658,32246,0.002851092
+matrix03,bucket-prepared-candidate,bucket,candidate,action100,0.1,verified,aebacc429d54f284e103ff10613b925f5827c347e0678846b0b6f0015dded782,error,end,0,0,0,0,0,0,32,0,76046658,32246,0.000000000
 matrix03,bucket-warm-baseline,bucket,baseline,action100,0.1,verified,aebacc429d54f284e103ff10613b925f5827c347e0678846b0b6f0015dded782,ok,batch_1,1,8,8,8,0,0,32,7,76046658,32246,0.000000105
 matrix03,bucket-warm-baseline,bucket,baseline,action100,0.1,verified,aebacc429d54f284e103ff10613b925f5827c347e0678846b0b6f0015dded782,ok,batch_125,125,1000,1000,1000,0,0,32,32,76046658,32246,0.000013150
 matrix03,bucket-warm-baseline,bucket,baseline,action100,0.1,verified,aebacc429d54f284e103ff10613b925f5827c347e0678846b0b6f0015dded782,ok,batch_1000,1000,8000,8000,8000,0,0,32,32,76046658,32246,0.000105199
