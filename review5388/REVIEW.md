@@ -4,9 +4,12 @@ Quentin's draft avoids the cold MP4 indexing wait. On the reported MolmoAct2 buc
 
 This interim report contains finished CPU runs and local correctness checks. The fresh publisher-index comparison and ABC camera-history runs are scheduled in the ongoing benchmark. The Molmo current-frame comparison below has completed on both cold and warm disks. The reviewed draft opened November 16, 2026 at 19:06 UTC and GitHub shows its last update at 19:09 UTC the same day. The pinned head is `1a60cb4b`. [LeRobot #5388](https://github.com/huggingface/lerobot/pull/5388) · [Prerequisite Datasets #8983](https://github.com/huggingface/datasets/pull/8983)
 
-A usable batch here has eight distinct new `(episode, frame)` anchors, the expected tensor shapes and dtypes for the three cameras, state and 100 actions, and the expected camera padding values. Each distinct anchor counts once, including anchors near episode ends where future actions require padding. We checked actual pixels, action and state values and all padding against an independent FFmpeg-backed reader on the finite fixture. The cloud checks cover the observed prefix. A whole training epoch was not run on these sources.
+A usable batch here has eight distinct new `(episode, frame)` anchors, the expected tensor shapes and dtypes for the three cameras, state and 100 actions, and the expected camera padding values. Each distinct anchor counts once, including anchors near episode ends where future actions require padding. We checked actual pixels, action and state values and all padding against an independent FFmpeg-backed reader on the finite fixture. The independent episode-length check also verified the cloud anchor bounds. The large-corpus measurements cover prefixes of a finite pass.
 
-Both readers ran back-to-back on one 16-vCPU HF Jobs CPU XL host, with a 32-episode pool, batch size 8 and no DataLoader subprocesses. Timings start before the constructor. The direct reader ran as fast as the CPU consumer could take batches. The normal trainer and multi-worker resume were exercised separately on the fixture. For each rate, the timing from batch 125 includes two verified pool refills and at least 125 further batches. Those refills can happen well after batch 1,000. [Methods, versions and source inventory](method.md)
+Each timed pair ran back-to-back on the same 16-vCPU HF Jobs CPU XL host, with a 32-episode pool, batch size 8 and no DataLoader subprocesses. Timings start before the constructor. The direct reader ran as fast as the CPU consumer could take batches. The normal trainer and multi-worker resume were exercised separately on the fixture. For each rate, the timing from batch 125 includes two verified pool refills and at least 125 further batches. Those refills can happen well after batch 1,000. [Methods, versions and source inventory](method.md)
+
+
+Times in the tables are seconds from the start of the consumer. Ranges span repeated runs of the same configuration. A dash means that a milestone or a qualified rate was unavailable. Peak RAM is decimal GB of process-tree resident memory across the full observed cell. The table of projections uses rates from batch 125 through two refills. An 8,000-anchor prefix checks identities and tensor structure, and each full-pass estimate assumes the longer measured rate continues across the rest of the source.
 
 ### MolmoAct2
 
@@ -14,6 +17,8 @@ Both readers ran back-to-back on one 16-vCPU HF Jobs CPU XL host, with a 32-epis
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
 | Pepijn, As published, fresh | 568.1 | 611.6 | 617.3 | 653.7 | 195.0 | 6.95 / 5.94 | 15.93 | 4.52 |
 | Quentin, As published, fresh | 7.5 | — | — | — | — | — / — | 1.09 | — |
+| Pepijn, Warm restart | 2.0 | 40.5 | 45.1 | 76.6 | 220.0 | 6.95 / 5.94 | 15.58 | 4.00 |
+| Quentin, Warm restart | 1.6 | — | — | — | — | — / — | 0.84 | — |
 
 The cold baseline delivered 234,304 distinct windows with 0 duplicates and 2 verified pool refills. At batch 1,000, the largest single-episode share averaged 22.8% of a batch. 0.007% of within-batch pairs were from the same episode and at most 0.2 seconds apart.
 
@@ -25,6 +30,10 @@ The draft raised `TypeError: expected Tensor as element 0 in argument 0, but got
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
 | Pepijn, As published, fresh | 2,505.2 | 2,583.9 | 2,586.4 | 2,598.0 | 557.3 | 6.98 / 5.87 | 24.30 | 7.97 |
 | Quentin, As published, fresh | 10.1 | — | — | — | — | — / — | 5.36 | — |
+| Pepijn, Warm restart | 8.0 | 88.3 | 91.0 | 102.5 | 570.4 | 6.98 / 5.87 | 23.96 | 7.76 |
+| Quentin, Warm restart | 1.7 | — | — | — | — | — / — | 5.27 | — |
+| Pepijn, History, warm | 8.0 | 89.0 | 95.1 | 135.9 | — | 6.98 / — | 22.66 | — |
+| Quentin, History, warm | 0.9 | — | — | — | — | — / — | 4.69 | — |
 
 The cold baseline delivered 289,544 distinct windows with 0 duplicates and 2 verified pool refills. At batch 1,000, the largest single-episode share averaged 22.4% of a batch. 0.018% of within-batch pairs were from the same episode and at most 0.2 seconds apart.
 
@@ -36,6 +45,10 @@ The draft raised `TypeError: expected Tensor as element 0 in argument 0, but got
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
 | Pepijn, As published, fresh | 195.1 | 296.0 | 302.4 | 325.5 | 269.1 | 6.41 / 5.46 | 5.82 | 1.19 |
 | Quentin, As published, fresh | 6.4 | — | — | — | — | — / — | 4.56 | — |
+| Pepijn, Private index, fresh | 12.1 | 126.2 | 135.1 | 162.2 | 215.1 | 6.41 / 5.46 | 5.64 | 1.49 |
+| Quentin, Fresh, paired with index recipient | 6.3 | — | — | — | — | — / — | 5.02 | — |
+| Pepijn, Warm restart | 2.5 | 99.6 | 105.6 | 125.0 | 298.1 | 6.41 / 5.46 | 5.02 | 1.07 |
+| Quentin, Warm restart | 0.7 | — | — | — | — | — / — | 4.25 | — |
 
 The cold baseline delivered 31,592 distinct windows with 0 duplicates and 2 verified pool refills. At batch 1,000, the largest single-episode share averaged 27.7% of a batch. 0.125% of within-batch pairs were from the same episode and at most 0.2 seconds apart.
 
@@ -58,7 +71,7 @@ On a **warm restart**, the first batch again reached the consumer sooner with th
 
 ### What a publisher-built index changes
 
-The index can be built once for a dataset revision and reused across consumers. It maps a video timestamp to the corresponding bytes in an MP4. Pepijn's reader validates the matching archive, then memory-maps it read-only. The operating system brings pages into memory as the reader uses them. An archive of several gigabytes does not require a private copy of that size in each worker's RAM. Peak process memory here includes the reader, decoded buffers, episode metadata and the portions of the archive it touched. [Pinned index resolver](https://github.com/huggingface/lerobot/blob/fe1c54594f6ba275fccf210b9f7b11f0e2324b89/src/lerobot/datasets/streaming_sidecar.py#L217-L234) · [Mapped archive implementation](https://github.com/huggingface/lerobot/blob/fe1c54594f6ba275fccf210b9f7b11f0e2324b89/src/lerobot/streaming/manifest.py#L447-L466)
+The index can be built once for a dataset revision and reused across consumers. It maps a video timestamp to the corresponding bytes in an MP4. Pepijn's reader validates the matching archive, prepares a local file for random access, and memory-maps that file read-only. The operating system brings pages into memory as the reader uses them. An archive of several gigabytes does not require a private copy of that size in each worker's RAM. Peak process memory here includes the reader, decoded buffers, episode metadata and the portions of the archive it touched. [Pinned index resolver](https://github.com/huggingface/lerobot/blob/fe1c54594f6ba275fccf210b9f7b11f0e2324b89/src/lerobot/datasets/streaming_sidecar.py#L217-L234) · [Mapped archive implementation](https://github.com/huggingface/lerobot/blob/fe1c54594f6ba275fccf210b9f7b11f0e2324b89/src/lerobot/streaming/manifest.py#L447-L466)
 
 Molmo lists three older index objects. The two full names point to identical content. The archives use schema 1 and lack the source fingerprints the pinned reader needs. The loader built a schema-3 archive on its first run. In the simulated publication measurements, a fresh process receives a matching archive from private storage. The consumer time includes download and checksum verification before construction. A warm restart instead uses the index and metadata already on the same disk.
 
@@ -66,9 +79,9 @@ GR00T 2 made a different part of training reusable. Its published sample starts 
 
 | Dataset | Native cold build (s) | Index on disk (GB) | Private receipt and verification (s) | Index header reads (MB / MP4s) | Training video reads (MB / MP4s) | Parquet reads (MB) |
 |---|---:|---:|---:|---:|---:|---:|
-| MolmoAct2 | 534.2 | 1.834 | — | 3,119.0 / 5,860 | 3,261.4 / 120 | 46.4 |
+| MolmoAct2 | 534.2 | 1.834 | 9.0 | 3,119.0 / 5,860 | 3,261.4 / 120 | 46.4 |
 | ABC-130K | 2,372.0 | 8.563 | — | 20,020.0 / 38,164 | 1,175.3 / 120 | 230.2 |
-| DROID | 181.7 | 0.630 | — | 513.7 / 784 | 196.9 / 135 | 4,867.7 |
+| DROID | 181.7 | 0.630 | 4.3 | 513.7 / 784 | 196.9 / 135 | 4,867.7 |
 
 Index header, Parquet and training video bytes above are instrumented HTTP payloads for the cold baseline through batch 1,000, including prefetch. The same MP4 can appear in both the index and training columns. Other Hub/Xet transfers can bypass the HTTP hooks. The resource export records process-namespace receive bytes as a separate measure of total traffic.
 
