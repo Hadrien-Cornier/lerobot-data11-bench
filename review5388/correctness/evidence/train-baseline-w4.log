@@ -1,0 +1,239 @@
+W1118 21:22:37.623000 95945 torch/distributed/elastic/multiprocessing/redirects.py:29] NOTE: Redirects are currently not supported in Windows or MacOs.
+objc[95945]: Class AVFFrameReceiver is implemented in both ~/Documents/Personal/LeRobot/lerobot/.venv/lib/python3.13/site-packages/cv2/.dylibs/libavdevice.61.3.100.dylib (0x1299b83a8) and ~/Documents/Personal/LeRobot/lerobot/.venv/lib/python3.13/site-packages/av/.dylibs/libavdevice.61.3.100.dylib (0x1373cc3a8). This may cause spurious casting failures and mysterious crashes. One of the duplicates must be removed or renamed.
+objc[95945]: Class AVFAudioReceiver is implemented in both ~/Documents/Personal/LeRobot/lerobot/.venv/lib/python3.13/site-packages/cv2/.dylibs/libavdevice.61.3.100.dylib (0x1299b83f8) and ~/Documents/Personal/LeRobot/lerobot/.venv/lib/python3.13/site-packages/av/.dylibs/libavdevice.61.3.100.dylib (0x1373cc3f8). This may cause spurious casting failures and mysterious crashes. One of the duplicates must be removed or renamed.
+objc[95945]: Class AVFFrameReceiver is implemented in both ~/Documents/Personal/LeRobot/lerobot/.venv/lib/python3.13/site-packages/cv2/.dylibs/libavdevice.61.3.100.dylib (0x1299b83a8) and /opt/homebrew/Cellar/ffmpeg@8/8.1.2/lib/libavdevice.62.3.102.dylib (0x13cd94328). This may cause spurious casting failures and mysterious crashes. One of the duplicates must be removed or renamed.
+objc[95945]: Class AVFAudioReceiver is implemented in both ~/Documents/Personal/LeRobot/lerobot/.venv/lib/python3.13/site-packages/cv2/.dylibs/libavdevice.61.3.100.dylib (0x1299b83f8) and /opt/homebrew/Cellar/ffmpeg@8/8.1.2/lib/libavdevice.62.3.102.dylib (0x13cd94378). This may cause spurious casting failures and mysterious crashes. One of the duplicates must be removed or renamed.
+INFO 2026-11-18 21:22:44 ot_train.py:565 {'accelerator': {'activation_checkpointing': {'mode': <ActivationCheckpointingMode.NONE: 'none'>},
+                 'compile': {'backend': 'inductor',
+                             'enabled': False,
+                             'mode': None,
+                             'regional': True},
+                 'ddp': {'find_unused_parameters': True,
+                         'gradient_as_bucket_view': False,
+                         'static_graph': False},
+                 'fsdp': {'cpu_offload': False,
+                          'ignored_modules': None,
+                          'min_num_params': None,
+                          'mixed_precision_policy': {'cast_forward_inputs': True,
+                                                     'output_dtype': None,
+                                                     'param_dtype': None,
+                                                     'reduce_dtype': None},
+                          'reshard_after_forward': True,
+                          'wrap_modules': None},
+                 'grad_scaler': {'backoff_factor': 0.5,
+                                 'growth_factor': 2.0,
+                                 'growth_interval': 2000,
+                                 'init_scale': 65536.0},
+                 'gradient_accumulation': {'steps': 1,
+                                           'sync_each_batch': False},
+                 'init_process_group': {'backend': 'nccl',
+                                        'init_method': None,
+                                        'timeout': None},
+                 'mixed_precision': 'no'},
+ 'batch_size': 4,
+ 'checkpoint_format': <CheckpointFormat.SAFETENSORS: 'safetensors'>,
+ 'checkpoint_path': None,
+ 'cudnn_deterministic': False,
+ 'dataloader_multiprocessing_context': 'spawn',
+ 'dataset': {'depth_output_unit': 'mm',
+             'episodes': None,
+             'eval_split': 0.0,
+             'exclude_episodes': None,
+             'image_transforms': {'backend': 'dataloader',
+                                  'enable': False,
+                                  'gpu_chunk_size': 32,
+                                  'gpu_compile': True,
+                                  'max_num_transforms': 3,
+                                  'random_order': False,
+                                  'tfs': {'affine': {'kwargs': {'degrees': [-5.0,
+                                                                            5.0],
+                                                                'translate': [0.05,
+                                                                              0.05]},
+                                                     'type': 'RandomAffine',
+                                                     'weight': 1.0},
+                                          'brightness': {'kwargs': {'brightness': [0.8,
+                                                                                   1.2]},
+                                                         'type': 'ColorJitter',
+                                                         'weight': 1.0},
+                                          'contrast': {'kwargs': {'contrast': [0.8,
+                                                                               1.2]},
+                                                       'type': 'ColorJitter',
+                                                       'weight': 1.0},
+                                          'hue': {'kwargs': {'hue': [-0.05,
+                                                                     0.05]},
+                                                  'type': 'ColorJitter',
+                                                  'weight': 1.0},
+                                          'saturation': {'kwargs': {'saturation': [0.5,
+                                                                                   1.5]},
+                                                         'type': 'ColorJitter',
+                                                         'weight': 1.0},
+                                          'sharpness': {'kwargs': {'sharpness': [0.5,
+                                                                                 1.5]},
+                                                        'type': 'SharpnessJitter',
+                                                        'weight': 1.0}}},
+             'repo_id': 'fixture/stream5388',
+             'repo_type': 'dataset',
+             'return_uint8': False,
+             'revision': None,
+             'root': '/tmp/lerobot5388-correct/fixture',
+             'storage_options': None,
+             'streaming': True,
+             'streaming_byte_budget_gb': 8.0,
+             'streaming_decode_threads': 2,
+             'streaming_decoded_queue_size': 8,
+             'streaming_episode_pool_size': None,
+             'streaming_native_http_connections': None,
+             'streaming_native_http_subranges': 1,
+             'streaming_prefetch_episodes': 8,
+             'streaming_sampling_strategy': <StreamingSamplingStrategy.REMAINING: 'remaining'>,
+             'streaming_sidecar_lock_timeout_s': 1800,
+             'use_imagenet_stats': True,
+             'video_backend': 'torchcodec',
+             'video_decoder_cache_size': None},
+ 'ema': None,
+ 'env': None,
+ 'env_eval_freq': 0,
+ 'eval': {'batch_size': 7,
+          'max_episode_steps': None,
+          'n_episodes': 50,
+          'recording': False,
+          'recording_private': False,
+          'recording_repo_id': None,
+          'use_async_envs': True},
+ 'eval_steps': 0,
+ 'job': {'detach': False,
+         'image': 'huggingface/lerobot-gpu:latest',
+         'tags': [],
+         'target': None,
+         'timeout': '2d'},
+ 'job_name': 'act',
+ 'log_freq': 1,
+ 'max_eval_samples': 0,
+ 'num_workers': 4,
+ 'optimizer': {'betas': [0.9, 0.999],
+               'eps': 1e-08,
+               'fused': None,
+               'grad_clip_norm': 10.0,
+               'lr': 1e-05,
+               'type': 'adamw',
+               'weight_decay': 0.0001},
+ 'output_dir': '/tmp/lerobot5388-correct/train-baseline-w4',
+ 'parallelism': {'cfg_parallel': 1,
+                 'context_parallel': {'ring_degree': 1, 'ulysses_degree': 1},
+                 'dp_replicate': 1,
+                 'dp_shard': 1},
+ 'peft': None,
+ 'persistent_workers': True,
+ 'policy': {'chunk_size': 100,
+            'device': 'cpu',
+            'dim_feedforward': 64,
+            'dim_model': 32,
+            'dropout': 0.1,
+            'dtype': None,
+            'feedforward_activation': 'relu',
+            'input_features': {},
+            'kl_weight': 10.0,
+            'latent_dim': 4,
+            'license': None,
+            'n_action_steps': 100,
+            'n_decoder_layers': 1,
+            'n_encoder_layers': 1,
+            'n_heads': 4,
+            'n_obs_steps': 1,
+            'n_vae_encoder_layers': 1,
+            'normalization_mapping': {'ACTION': <NormalizationMode.MEAN_STD: 'MEAN_STD'>,
+                                      'STATE': <NormalizationMode.MEAN_STD: 'MEAN_STD'>,
+                                      'VISUAL': <NormalizationMode.MEAN_STD: 'MEAN_STD'>},
+            'optimizer_fused': None,
+            'optimizer_lr': 1e-05,
+            'optimizer_lr_backbone': 1e-05,
+            'optimizer_weight_decay': 0.0001,
+            'output_features': {},
+            'pre_norm': False,
+            'pretrained_backbone_weights': None,
+            'pretrained_path': None,
+            'pretrained_revision': None,
+            'private': None,
+            'push_to_hub': False,
+            'replace_final_stride_with_dilation': False,
+            'repo_id': None,
+            'tags': None,
+            'temporal_ensemble_coeff': None,
+            'type': 'act',
+            'use_amp': False,
+            'use_peft': False,
+            'use_vae': True,
+            'vision_backbone': 'resnet18'},
+ 'prefetch_factor': 3,
+ 'rename_map': {},
+ 'resume': False,
+ 'reward_model': None,
+ 'sample_weighting': None,
+ 'save_checkpoint': True,
+ 'save_checkpoint_to_hub': False,
+ 'save_freq': 3,
+ 'scheduler': None,
+ 'seed': 1000,
+ 'steps': 8,
+ 'tf32': True,
+ 'tolerance_s': 0.0001,
+ 'trackio': {'capture_console': True,
+             'disable_artifact': True,
+             'enable': False,
+             'private': None,
+             'project': 'lerobot',
+             'resume': None,
+             'run_name': None,
+             'space_id': None},
+ 'use_policy_training_preset': True}
+INFO 2026-11-18 21:22:44 ot_train.py:572 Logs will be saved locally.
+INFO 2026-11-18 21:22:44 ot_train.py:589 Creating dataset
+INFO 2026-11-18 21:22:44 _sidecar.py:256 Resolving training-time MP4 sidecar for fixture/stream5388@v3.0 (24 files)
+INFO 2026-11-18 21:22:44 ot_train.py:628 Creating policy
+INFO 2026-11-18 21:22:44 ot_train.py:723 Creating optimizer and scheduler
+INFO 2026-11-18 21:22:44 ot_train.py:784 Output dir: /tmp/lerobot5388-correct/train-baseline-w4
+INFO 2026-11-18 21:22:44 ot_train.py:791 cfg.steps=8 (8)
+INFO 2026-11-18 21:22:44 ot_train.py:792 dataset.num_frames=786 (786)
+INFO 2026-11-18 21:22:44 ot_train.py:793 dataset.num_episodes=16
+INFO 2026-11-18 21:22:44 ot_train.py:794 Effective batch size: 4 x 1 dp workers x 1 grad accum = 4 (topology: dp_replicate=1, dp_shard=1)
+INFO 2026-11-18 21:22:44 ot_train.py:799 num_learnable_params=11217451 (11M)
+INFO 2026-11-18 21:22:44 ot_train.py:800 num_total_params=11217451 (11M)
+
+Training:   0%|          | 0/8 [00:00<?, ?step/s]INFO 2026-11-18 21:22:44 ot_train.py:848 Start offline training on a fixed dataset, with effective batch size: 4
+W1118 21:22:56.814000 95996 torch/distributed/elastic/multiprocessing/redirects.py:29] NOTE: Redirects are currently not supported in Windows or MacOs.
+W1118 21:22:56.818000 95994 torch/distributed/elastic/multiprocessing/redirects.py:29] NOTE: Redirects are currently not supported in Windows or MacOs.
+W1118 21:22:56.819000 95993 torch/distributed/elastic/multiprocessing/redirects.py:29] NOTE: Redirects are currently not supported in Windows or MacOs.
+W1118 21:22:56.820000 95995 torch/distributed/elastic/multiprocessing/redirects.py:29] NOTE: Redirects are currently not supported in Windows or MacOs.
+objc[95993]: Class AVFFrameReceiver is implemented in both ~/Documents/Personal/LeRobot/lerobot/.venv/lib/python3.13/site-packages/av/.dylibs/libavdevice.61.3.100.dylib (0x12afb83a8) and /opt/homebrew/Cellar/ffmpeg@8/8.1.2/lib/libavdevice.62.3.102.dylib (0x130ccc328). This may cause spurious casting failures and mysterious crashes. One of the duplicates must be removed or renamed.
+objc[95993]: Class AVFAudioReceiver is implemented in both ~/Documents/Personal/LeRobot/lerobot/.venv/lib/python3.13/site-packages/av/.dylibs/libavdevice.61.3.100.dylib (0x12afb83f8) and /opt/homebrew/Cellar/ffmpeg@8/8.1.2/lib/libavdevice.62.3.102.dylib (0x130ccc378). This may cause spurious casting failures and mysterious crashes. One of the duplicates must be removed or renamed.
+objc[95996]: Class AVFFrameReceiver is implemented in both ~/Documents/Personal/LeRobot/lerobot/.venv/lib/python3.13/site-packages/av/.dylibs/libavdevice.61.3.100.dylib (0x12aca03a8) and /opt/homebrew/Cellar/ffmpeg@8/8.1.2/lib/libavdevice.62.3.102.dylib (0x130b0c328). This may cause spurious casting failures and mysterious crashes. One of the duplicates must be removed or renamed.
+objc[95996]: Class AVFAudioReceiver is implemented in both ~/Documents/Personal/LeRobot/lerobot/.venv/lib/python3.13/site-packages/av/.dylibs/libavdevice.61.3.100.dylib (0x12aca03f8) and /opt/homebrew/Cellar/ffmpeg@8/8.1.2/lib/libavdevice.62.3.102.dylib (0x130b0c378). This may cause spurious casting failures and mysterious crashes. One of the duplicates must be removed or renamed.
+objc[95995]: Class AVFFrameReceiver is implemented in both ~/Documents/Personal/LeRobot/lerobot/.venv/lib/python3.13/site-packages/av/.dylibs/libavdevice.61.3.100.dylib (0x12cb8c3a8) and /opt/homebrew/Cellar/ffmpeg@8/8.1.2/lib/libavdevice.62.3.102.dylib (0x132898328). This may cause spurious casting failures and mysterious crashes. One of the duplicates must be removed or renamed.
+objc[95995]: Class AVFAudioReceiver is implemented in both ~/Documents/Personal/LeRobot/lerobot/.venv/lib/python3.13/site-packages/av/.dylibs/libavdevice.61.3.100.dylib (0x12cb8c3f8) and /opt/homebrew/Cellar/ffmpeg@8/8.1.2/lib/libavdevice.62.3.102.dylib (0x132898378). This may cause spurious casting failures and mysterious crashes. One of the duplicates must be removed or renamed.
+objc[95994]: Class AVFFrameReceiver is implemented in both ~/Documents/Personal/LeRobot/lerobot/.venv/lib/python3.13/site-packages/av/.dylibs/libavdevice.61.3.100.dylib (0x12f3d03a8) and /opt/homebrew/Cellar/ffmpeg@8/8.1.2/lib/libavdevice.62.3.102.dylib (0x1350ac328). This may cause spurious casting failures and mysterious crashes. One of the duplicates must be removed or renamed.
+objc[95994]: Class AVFAudioReceiver is implemented in both ~/Documents/Personal/LeRobot/lerobot/.venv/lib/python3.13/site-packages/av/.dylibs/libavdevice.61.3.100.dylib (0x12f3d03f8) and /opt/homebrew/Cellar/ffmpeg@8/8.1.2/lib/libavdevice.62.3.102.dylib (0x1350ac378). This may cause spurious casting failures and mysterious crashes. One of the duplicates must be removed or renamed.
+
+Training:  12%|█▎        | 1/8 [00:14<01:41, 14.43s/step]INFO 2026-11-18 21:22:58 ot_train.py:894 step:1 smpl:4 ep:0 epch:0.01 loss:2.939 grdn:197.464 lr:1.0e-05 data_s:14.224 prep_s:0.002 updt_s:0.208 step_s:14.434 smp/s:0 l1_loss:0.343 kld_loss:0.260
+
+Training:  25%|██▌       | 2/8 [00:14<00:36,  6.03s/step]INFO 2026-11-18 21:22:59 ot_train.py:894 step:2 smpl:8 ep:0 epch:0.01 loss:3.624 grdn:306.753 lr:1.0e-05 data_s:0.000 prep_s:0.000 updt_s:0.145 step_s:0.148 smp/s:27 l1_loss:1.710 kld_loss:0.191
+
+Training:  38%|███▊      | 3/8 [00:14<00:16,  3.34s/step]INFO 2026-11-18 21:22:59 ot_train.py:894 step:3 smpl:12 ep:0 epch:0.02 loss:4.629 grdn:315.182 lr:1.0e-05 data_s:0.000 prep_s:0.000 updt_s:0.138 step_s:0.144 smp/s:28 l1_loss:0.912 kld_loss:0.372
+INFO 2026-11-18 21:22:59 ot_train.py:936 Checkpoint policy after step 3
+INFO 2026-11-18 21:22:59 n/_torch.py:299 Model weights successfully saved to /tmp/lerobot5388-correct/train-baseline-w4/checkpoints/000003/pretrained_model!
+
+Training:  50%|█████     | 4/8 [00:14<00:08,  2.11s/step]INFO 2026-11-18 21:22:59 ot_train.py:894 step:4 smpl:16 ep:0 epch:0.02 loss:3.730 grdn:104.110 lr:1.0e-05 data_s:0.000 prep_s:0.000 updt_s:0.143 step_s:0.146 smp/s:27 l1_loss:0.927 kld_loss:0.280
+
+Training:  62%|██████▎   | 5/8 [00:15<00:04,  1.40s/step]INFO 2026-11-18 21:22:59 ot_train.py:894 step:5 smpl:20 ep:0 epch:0.03 loss:3.008 grdn:244.978 lr:1.0e-05 data_s:0.003 prep_s:0.000 updt_s:0.150 step_s:0.155 smp/s:26 l1_loss:0.374 kld_loss:0.263
+
+Training:  75%|███████▌  | 6/8 [00:15<00:01,  1.02step/s]INFO 2026-11-18 21:22:59 ot_train.py:894 step:6 smpl:24 ep:0 epch:0.03 loss:3.740 grdn:215.718 lr:1.0e-05 data_s:0.000 prep_s:0.000 updt_s:0.154 step_s:0.159 smp/s:25 l1_loss:1.252 kld_loss:0.249
+INFO 2026-11-18 21:22:59 ot_train.py:936 Checkpoint policy after step 6
+INFO 2026-11-18 21:22:59 n/_torch.py:299 Model weights successfully saved to /tmp/lerobot5388-correct/train-baseline-w4/checkpoints/000006/pretrained_model!
+
+Training:  88%|████████▊ | 7/8 [00:15<00:00,  1.34step/s]INFO 2026-11-18 21:22:59 ot_train.py:894 step:7 smpl:28 ep:1 epch:0.04 loss:3.873 grdn:125.118 lr:1.0e-05 data_s:0.000 prep_s:0.000 updt_s:0.151 step_s:0.154 smp/s:26 l1_loss:0.971 kld_loss:0.290
+
+Training: 100%|██████████| 8/8 [00:15<00:00,  1.79step/s]INFO 2026-11-18 21:23:00 ot_train.py:894 step:8 smpl:32 ep:1 epch:0.04 loss:5.122 grdn:166.271 lr:1.0e-05 data_s:0.000 prep_s:0.000 updt_s:0.150 step_s:0.153 smp/s:26 l1_loss:1.376 kld_loss:0.375
+INFO 2026-11-18 21:23:00 ot_train.py:936 Checkpoint policy after step 8
+INFO 2026-11-18 21:23:00 n/_torch.py:299 Model weights successfully saved to /tmp/lerobot5388-correct/train-baseline-w4/checkpoints/000008/pretrained_model!
+
+Training: 100%|██████████| 8/8 [00:15<00:00,  1.97s/step]
+INFO 2026-11-18 21:23:00 t_train.py:1026 End of training

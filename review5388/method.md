@@ -20,7 +20,7 @@ The bucket has mutable names. `catalog.py` sorts the relative path, byte size, a
 
 ## Interpreting the measurements
 
-- Start the consumer clock before constructing the reader. Record delivery of batches 1, 125 and 1,000. For a simulated publisher download that happens before construction, include that interval in consumer wall time. Report reported raw deliveries and validated examples separately whenever they differ.
+- Start the consumer clock before constructing the reader. Record delivery of batches 1, 125 and 1,000. For a simulated publisher download that happens before construction, include that interval in consumer wall time. Report raw deliveries and validated examples separately whenever they differ.
 - Check exact coverage on a finite fixture. On a large source, count unique delivered identities and observed duplicates in the measured prefix. Overlapping action targets from different control steps are legal.
 - Compare batch episode counts and nearby within-episode frame pairs. Interpret speed at the observed sampling diversity. In the original discussion, Pepijn measured about 5.2 distinct episodes per batch of eight from a pool of 11 versus 7.2 from a pool of 32. [Maintainer's review criterion](https://github.com/huggingface/lerobot/pull/3917#issuecomment-6035837027)
 - Report the first 1,000 batches even if they fit inside the first episode pool. Qualify a sustained rate only after verifying two refills and observing subsequent valid batches. A CPU consumer's wait measures input delivery under the stated workload. Fetch and decode can overlap across threads.

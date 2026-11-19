@@ -63,6 +63,7 @@ train_ranks() {
     local variant="$1"
     local workers="$2"
     local out="$scratch/train-$variant-w$workers-ranks"
+    local stage="${3:-uninterrupted}"
     local port
     port="$("$python" -c 'import socket; s = socket.socket(); s.bind(("127.0.0.1", 0)); print(s.getsockname()[1])')"
     local launch=(torchrun --nnodes=1 --nproc-per-node=2 --rdzv-backend=static
@@ -75,6 +76,13 @@ train_ranks() {
         "${launch[@]}" --no-python "$(command -v lerobot-train)" \
             "${train_flags[@]}" "--num_workers=$workers" "--output_dir=$out" \
             >"evidence/train-$variant-w$workers-ranks.log" 2>&1
+        return
+    fi
+    if [[ "$stage" == "resumed" ]]; then
+        STREAM5388_TRAIN_TRACE="$bench/evidence/train-$variant-w$workers-ranks-resumed.jsonl" \
+        "${launch[@]}" train_trace.py --resume=true \
+            "--config_path=$out/checkpoints/000003/pretrained_model/train_config.json" "--output_dir=$out-resumed" \
+            >"evidence/train-$variant-w$workers-ranks-resumed.log" 2>&1
         return
     fi
     STREAM5388_TRAIN_TRACE="$bench/evidence/train-$variant-w$workers-ranks-uninterrupted.jsonl" \
@@ -114,6 +122,14 @@ case "${2:-finite}" in
         check baseline baseline-w1-repeat --workers 1 --mode anchors --repeat-coverage
         check baseline baseline-w4-repeat --workers 4 --mode anchors --repeat-coverage
         ;;
+    shuffle)
+        root="$scratch/fixture-short"
+        if [[ ! -d "$root" ]]; then
+            "$python" fixture.py "$root" --short
+        fi
+        check baseline baseline-shuffle --workers 0 --mode anchors --check-shuffle
+        check proposal proposal-shuffle --workers 0 --mode anchors --local-id --check-shuffle
+        ;;
     train-repeat)
         short_root="$scratch/fixture-short"
         if [[ ! -d "$short_root" ]]; then
@@ -124,6 +140,9 @@ case "${2:-finite}" in
         "$python" train_trace.py "${train_flags[@]}" "--dataset.root=$short_root" \
             --num_workers=4 --steps=23 --save_checkpoint=false "--output_dir=$scratch/train-baseline-w4-repeat" \
             >"evidence/train-baseline-w4-repeat.log" 2>&1
+        ;;
+    train-ranks-resume)
+        train_ranks baseline "${3:?Specify the worker count}" resumed
         ;;
     train-ranks)
         for workers in 1 4; do

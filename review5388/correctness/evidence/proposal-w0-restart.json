@@ -1,0 +1,163 @@
+{
+  "variant": "proposal",
+  "root": "/tmp/lerobot5388-correct/fixture",
+  "out": "evidence/proposal-w0-restart.json",
+  "mode": "anchors",
+  "local_id": true,
+  "selection": false,
+  "workers": 0,
+  "rank": 0,
+  "world": 1,
+  "restart": true,
+  "probe_video": false,
+  "repeat_coverage": false,
+  "datasets": "5.2.1.dev0",
+  "torch": "2.11.0",
+  "has_state_dict": false,
+  "has_load_state_dict": false,
+  "consumed_before_restart": 5,
+  "batch_size": 4,
+  "worker_prefetch_factor": null,
+  "status": "no supported loader state API",
+  "fresh_restart": [
+    [
+      259,
+      647,
+      666,
+      134
+    ],
+    [
+      615,
+      130,
+      254,
+      627
+    ],
+    [
+      598,
+      625,
+      267,
+      609
+    ],
+    [
+      133,
+      597,
+      599,
+      670
+    ],
+    [
+      122,
+      129,
+      120,
+      671
+    ],
+    [
+      272,
+      650,
+      270,
+      668
+    ],
+    [
+      263,
+      663,
+      121,
+      616
+    ],
+    [
+      280,
+      604,
+      624,
+      614
+    ],
+    [
+      262,
+      244,
+      261,
+      277
+    ],
+    [
+      621,
+      126,
+      637,
+      617
+    ],
+    [
+      606,
+      278,
+      275,
+      672
+    ],
+    [
+      269,
+      283,
+      601,
+      641
+    ],
+    [
+      631,
+      253,
+      630,
+      286
+    ],
+    [
+      602,
+      118,
+      620,
+      125
+    ],
+    [
+      276,
+      635,
+      596,
+      274
+    ],
+    [
+      665,
+      249,
+      633,
+      622
+    ],
+    [
+      281,
+      257,
+      651,
+      642
+    ],
+    [
+      605,
+      632,
+      284,
+      629
+    ],
+    [
+      611,
+      608,
+      669,
+      131
+    ],
+    [
+      619,
+      247,
+      667,
+      626
+    ],
+    [
+      127,
+      612,
+      610,
+      658
+    ],
+    [
+      618,
+      648,
+      661,
+      607
+    ],
+    [
+      640,
+      273,
+      279,
+      271
+    ]
+  ],
+  "seconds": 6.401153165999858
+}

@@ -105,9 +105,9 @@ class Oracle:
         return index
 
 
-def dataset(args, repeat=False):
+def dataset(args, repeat=False, *, seed=1000, shuffle=True):
     is_baseline = args.variant == "baseline"
-    kwargs = {"seed": 1000, "return_uint8": True, "buffer_size": 4}
+    kwargs = {"seed": seed, "shuffle": shuffle, "return_uint8": True, "buffer_size": 4}
     if is_baseline:
         kwargs.update(repeat=repeat)
     selection = SELECTION if args.selection else None
@@ -232,6 +232,20 @@ def repeat_coverage(args, result):
         seen.add(index)
 
 
+def check_shuffle(args, result):
+    orders = {}
+    for shuffle in (True, False):
+        for seed in (42, 43):
+            data = dataset(args, seed=seed, shuffle=shuffle)
+            key = f"shuffle_{str(shuffle).lower()}_seed_{seed}"
+            orders[key] = [[int(sample["index"]) for sample in data] for _ in range(2)]
+    result["orders"] = orders
+    result["true_seed_changes_order"] = orders["shuffle_true_seed_42"][0] != orders["shuffle_true_seed_43"][0]
+    result["false_seed_changes_order"] = orders["shuffle_false_seed_42"][0] != orders["shuffle_false_seed_43"][0]
+    result["shuffle_flag_changes_order"] = orders["shuffle_true_seed_42"][0] != orders["shuffle_false_seed_42"][0]
+    result["repeat_changes_order"] = {key: first != second for key, (first, second) in orders.items()}
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("variant", choices=("baseline", "proposal"))
@@ -247,13 +261,16 @@ def main():
     parser.add_argument("--restart", action="store_true")
     parser.add_argument("--probe-video", action="store_true")
     parser.add_argument("--repeat-coverage", action="store_true")
+    parser.add_argument("--check-shuffle", action="store_true")
     args = parser.parse_args()
     os.environ.update(RANK=str(args.rank), WORLD_SIZE=str(args.world))
     torch.set_num_threads(1)
     result = vars(args) | {"datasets": datasets.__version__, "torch": torch.__version__}
     started = time.monotonic()
     try:
-        if args.probe_video:
+        if args.check_shuffle:
+            check_shuffle(args, result)
+        elif args.probe_video:
             probe_video(args, result)
         elif args.repeat_coverage:
             repeat_coverage(args, result)

@@ -1,0 +1,23 @@
+{
+  "variant": "proposal",
+  "root": "/tmp/lerobot5388-correct/fixture",
+  "out": "evidence/proposal-w1-normal-root.json",
+  "mode": "full",
+  "local_id": false,
+  "selection": false,
+  "workers": 1,
+  "rank": 0,
+  "world": 1,
+  "restart": false,
+  "probe_video": false,
+  "repeat_coverage": false,
+  "datasets": "5.2.1.dev0",
+  "torch": "2.11.0",
+  "ids": [],
+  "error": {
+    "type": "ConnectionError",
+    "message": "Couldn't reach 'fixture/stream5388' on the Hub (OfflineModeIsEnabled)",
+    "traceback": "Traceback (most recent call last):\n  File \"~/Documents/Personal/LeRobot/data11-bench/review5388/correctness/check_stream.py\", line 263, in main\n    finite(args, result)\n    ~~~~~~^^^^^^^^^^^^^^\n  File \"~/Documents/Personal/LeRobot/data11-bench/review5388/correctness/check_stream.py\", line 129, in finite\n    data = dataset(args)\n  File \"~/Documents/Personal/LeRobot/data11-bench/review5388/correctness/check_stream.py\", line 115, in dataset\n    return StreamingLeRobotDataset(\n        str(args.root) if args.local_id else \"fixture/stream5388\",\n        root=args.root, episodes=selection, delta_timestamps=offsets or None, **kwargs,\n    )\n  File \"/tmp/lerobot5388-correct/proposal/src/lerobot/datasets/streaming_dataset.py\", line 196, in __init__\n    self.hf_dataset: datasets.IterableDataset = load_dataset(\n                                                ~~~~~~~~~~~~^\n        dataset_path,\n        ^^^^^^^^^^^^^\n    ...<4 lines>...\n        **token_kwargs,\n        ^^^^^^^^^^^^^^^\n    )\n    ^\n  File \"/tmp/lerobot5388-correct/datasets/src/datasets/load.py\", line 1667, in load_dataset\n    builder_instance = load_dataset_builder(\n        path=path,\n    ...<10 lines>...\n        **config_kwargs,\n    )\n  File \"/tmp/lerobot5388-correct/datasets/src/datasets/load.py\", line 1290, in load_dataset_builder\n    dataset_module = dataset_module_factory(\n        path,\n    ...<5 lines>...\n        cache_dir=cache_dir,\n    )\n  File \"/tmp/lerobot5388-correct/datasets/src/datasets/load.py\", line 1182, in dataset_module_factory\n    raise e1 from None\n  File \"/tmp/lerobot5388-correct/datasets/src/datasets/load.py\", line 1125, in dataset_module_factory\n    raise ConnectionError(f\"Couldn't reach '{path}' on the Hub ({e.__class__.__name__})\") from e\nConnectionError: Couldn't reach 'fixture/stream5388' on the Hub (OfflineModeIsEnabled)\n"
+  },
+  "seconds": 0.1361918339971453
+}

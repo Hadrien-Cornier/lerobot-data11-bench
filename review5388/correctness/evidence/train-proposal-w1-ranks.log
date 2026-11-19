@@ -1,0 +1,245 @@
+W1118 21:23:13.326000 96133 /private/tmp/lerobot5388-correct/venv/lib/python3.12/site-packages/torch/distributed/elastic/multiprocessing/redirects.py:35] NOTE: Redirects are currently not supported in MacOs.
+W1118 21:23:41.313000 96166 /private/tmp/lerobot5388-correct/venv/lib/python3.12/site-packages/torch/distributed/elastic/multiprocessing/redirects.py:35] NOTE: Redirects are currently not supported in MacOs.
+W1118 21:23:41.313000 96165 /private/tmp/lerobot5388-correct/venv/lib/python3.12/site-packages/torch/distributed/elastic/multiprocessing/redirects.py:35] NOTE: Redirects are currently not supported in MacOs.
+objc[96165]: Class AVFFrameReceiver is implemented in both /private/tmp/lerobot5388-correct/venv/lib/python3.12/site-packages/cv2/.dylibs/libavdevice.61.3.100.dylib (0x10f0a43a8) and /private/tmp/lerobot5388-correct/venv/lib/python3.12/site-packages/av/.dylibs/libavdevice.61.3.100.dylib (0x11c6703a8). This may cause spurious casting failures and mysterious crashes. One of the duplicates must be removed or renamed.
+objc[96165]: Class AVFAudioReceiver is implemented in both /private/tmp/lerobot5388-correct/venv/lib/python3.12/site-packages/cv2/.dylibs/libavdevice.61.3.100.dylib (0x10f0a43f8) and /private/tmp/lerobot5388-correct/venv/lib/python3.12/site-packages/av/.dylibs/libavdevice.61.3.100.dylib (0x11c6703f8). This may cause spurious casting failures and mysterious crashes. One of the duplicates must be removed or renamed.
+objc[96166]: Class AVFFrameReceiver is implemented in both /private/tmp/lerobot5388-correct/venv/lib/python3.12/site-packages/cv2/.dylibs/libavdevice.61.3.100.dylib (0x10f3a03a8) and /private/tmp/lerobot5388-correct/venv/lib/python3.12/site-packages/av/.dylibs/libavdevice.61.3.100.dylib (0x11e0283a8). This may cause spurious casting failures and mysterious crashes. One of the duplicates must be removed or renamed.
+objc[96166]: Class AVFAudioReceiver is implemented in both /private/tmp/lerobot5388-correct/venv/lib/python3.12/site-packages/cv2/.dylibs/libavdevice.61.3.100.dylib (0x10f3a03f8) and /private/tmp/lerobot5388-correct/venv/lib/python3.12/site-packages/av/.dylibs/libavdevice.61.3.100.dylib (0x11e0283f8). This may cause spurious casting failures and mysterious crashes. One of the duplicates must be removed or renamed.
+objc[96165]: Class AVFFrameReceiver is implemented in both /private/tmp/lerobot5388-correct/venv/lib/python3.12/site-packages/cv2/.dylibs/libavdevice.61.3.100.dylib (0x10f0a43a8) and /opt/homebrew/Cellar/ffmpeg/9.0.2_1/lib/libavdevice.63.1.102.dylib (0x1406d0328). This may cause spurious casting failures and mysterious crashes. One of the duplicates must be removed or renamed.
+objc[96165]: Class AVFAudioReceiver is implemented in both /private/tmp/lerobot5388-correct/venv/lib/python3.12/site-packages/cv2/.dylibs/libavdevice.61.3.100.dylib (0x10f0a43f8) and /opt/homebrew/Cellar/ffmpeg/9.0.2_1/lib/libavdevice.63.1.102.dylib (0x1406d0378). This may cause spurious casting failures and mysterious crashes. One of the duplicates must be removed or renamed.
+objc[96166]: Class AVFFrameReceiver is implemented in both /private/tmp/lerobot5388-correct/venv/lib/python3.12/site-packages/cv2/.dylibs/libavdevice.61.3.100.dylib (0x10f3a03a8) and /opt/homebrew/Cellar/ffmpeg/9.0.2_1/lib/libavdevice.63.1.102.dylib (0x13fe78328). This may cause spurious casting failures and mysterious crashes. One of the duplicates must be removed or renamed.
+objc[96166]: Class AVFAudioReceiver is implemented in both /private/tmp/lerobot5388-correct/venv/lib/python3.12/site-packages/cv2/.dylibs/libavdevice.61.3.100.dylib (0x10f3a03f8) and /opt/homebrew/Cellar/ffmpeg/9.0.2_1/lib/libavdevice.63.1.102.dylib (0x13fe78378). This may cause spurious casting failures and mysterious crashes. One of the duplicates must be removed or renamed.
+INFO 2026-11-18 21:24:49 ot_train.py:509 {'accelerator': {'activation_checkpointing': {'mode': <ActivationCheckpointingMode.NONE: 'none'>},
+                 'compile': {'backend': 'inductor',
+                             'enabled': False,
+                             'mode': None,
+                             'regional': True},
+                 'ddp': {'find_unused_parameters': True,
+                         'gradient_as_bucket_view': False,
+                         'static_graph': False},
+                 'fsdp': {'cpu_offload': False,
+                          'ignored_modules': None,
+                          'min_num_params': None,
+                          'mixed_precision_policy': {'cast_forward_inputs': True,
+                                                     'output_dtype': None,
+                                                     'param_dtype': None,
+                                                     'reduce_dtype': None},
+                          'reshard_after_forward': True,
+                          'wrap_modules': None},
+                 'grad_scaler': {'backoff_factor': 0.5,
+                                 'growth_factor': 2.0,
+                                 'growth_interval': 2000,
+                                 'init_scale': 65536.0},
+                 'gradient_accumulation': {'steps': 1,
+                                           'sync_each_batch': False},
+                 'init_process_group': {'backend': 'nccl',
+                                        'init_method': None,
+                                        'timeout': None},
+                 'mixed_precision': 'no'},
+ 'batch_size': 4,
+ 'checkpoint_format': <CheckpointFormat.SAFETENSORS: 'safetensors'>,
+ 'checkpoint_path': None,
+ 'cudnn_deterministic': False,
+ 'dataloader_multiprocessing_context': 'spawn',
+ 'dataset': {'depth_output_unit': 'mm',
+             'episodes': None,
+             'eval_split': 0.0,
+             'exclude_episodes': None,
+             'image_transforms': {'backend': 'dataloader',
+                                  'enable': False,
+                                  'gpu_chunk_size': 32,
+                                  'gpu_compile': True,
+                                  'max_num_transforms': 3,
+                                  'random_order': False,
+                                  'tfs': {'affine': {'kwargs': {'degrees': [-5.0,
+                                                                            5.0],
+                                                                'translate': [0.05,
+                                                                              0.05]},
+                                                     'type': 'RandomAffine',
+                                                     'weight': 1.0},
+                                          'brightness': {'kwargs': {'brightness': [0.8,
+                                                                                   1.2]},
+                                                         'type': 'ColorJitter',
+                                                         'weight': 1.0},
+                                          'contrast': {'kwargs': {'contrast': [0.8,
+                                                                               1.2]},
+                                                       'type': 'ColorJitter',
+                                                       'weight': 1.0},
+                                          'hue': {'kwargs': {'hue': [-0.05,
+                                                                     0.05]},
+                                                  'type': 'ColorJitter',
+                                                  'weight': 1.0},
+                                          'saturation': {'kwargs': {'saturation': [0.5,
+                                                                                   1.5]},
+                                                         'type': 'ColorJitter',
+                                                         'weight': 1.0},
+                                          'sharpness': {'kwargs': {'sharpness': [0.5,
+                                                                                 1.5]},
+                                                        'type': 'SharpnessJitter',
+                                                        'weight': 1.0}}},
+             'repo_id': 'fixture/stream5388',
+             'repo_type': 'dataset',
+             'return_uint8': False,
+             'revision': None,
+             'root': '/tmp/lerobot5388-correct/fixture',
+             'storage_options': None,
+             'streaming': True,
+             'use_imagenet_stats': True,
+             'video_backend': 'torchcodec'},
+ 'ema': None,
+ 'env': None,
+ 'env_eval_freq': 0,
+ 'eval': {'batch_size': 7,
+          'max_episode_steps': None,
+          'n_episodes': 50,
+          'recording': False,
+          'recording_private': False,
+          'recording_repo_id': None,
+          'use_async_envs': True},
+ 'eval_steps': 0,
+ 'job': {'detach': False,
+         'image': 'huggingface/lerobot-gpu:latest',
+         'tags': [],
+         'target': None,
+         'timeout': '2d'},
+ 'job_name': 'act',
+ 'log_freq': 1,
+ 'max_eval_samples': 0,
+ 'num_workers': 1,
+ 'optimizer': {'betas': [0.9, 0.999],
+               'eps': 1e-08,
+               'fused': None,
+               'grad_clip_norm': 10.0,
+               'lr': 1e-05,
+               'type': 'adamw',
+               'weight_decay': 0.0001},
+ 'output_dir': '/tmp/lerobot5388-correct/train-proposal-w1-ranks',
+ 'parallelism': {'cfg_parallel': 1,
+                 'context_parallel': {'ring_degree': 1, 'ulysses_degree': 1},
+                 'dp_replicate': 2,
+                 'dp_shard': 1},
+ 'peft': None,
+ 'persistent_workers': True,
+ 'policy': {'chunk_size': 100,
+            'device': 'cpu',
+            'dim_feedforward': 64,
+            'dim_model': 32,
+            'dropout': 0.1,
+            'dtype': None,
+            'feedforward_activation': 'relu',
+            'input_features': {},
+            'kl_weight': 10.0,
+            'latent_dim': 4,
+            'license': None,
+            'n_action_steps': 100,
+            'n_decoder_layers': 1,
+            'n_encoder_layers': 1,
+            'n_heads': 4,
+            'n_obs_steps': 1,
+            'n_vae_encoder_layers': 1,
+            'normalization_mapping': {'ACTION': <NormalizationMode.MEAN_STD: 'MEAN_STD'>,
+                                      'STATE': <NormalizationMode.MEAN_STD: 'MEAN_STD'>,
+                                      'VISUAL': <NormalizationMode.MEAN_STD: 'MEAN_STD'>},
+            'optimizer_fused': None,
+            'optimizer_lr': 1e-05,
+            'optimizer_lr_backbone': 1e-05,
+            'optimizer_weight_decay': 0.0001,
+            'output_features': {},
+            'pre_norm': False,
+            'pretrained_backbone_weights': None,
+            'pretrained_path': None,
+            'pretrained_revision': None,
+            'private': None,
+            'push_to_hub': False,
+            'replace_final_stride_with_dilation': False,
+            'repo_id': None,
+            'tags': None,
+            'temporal_ensemble_coeff': None,
+            'type': 'act',
+            'use_amp': False,
+            'use_peft': False,
+            'use_vae': True,
+            'vision_backbone': 'resnet18'},
+ 'prefetch_factor': 3,
+ 'rename_map': {},
+ 'resume': False,
+ 'reward_model': None,
+ 'sample_weighting': None,
+ 'save_checkpoint': True,
+ 'save_checkpoint_to_hub': False,
+ 'save_freq': 3,
+ 'scheduler': None,
+ 'seed': 1000,
+ 'steps': 8,
+ 'tf32': True,
+ 'tolerance_s': 0.0001,
+ 'trackio': {'capture_console': True,
+             'disable_artifact': True,
+             'enable': False,
+             'private': None,
+             'project': 'lerobot',
+             'resume': None,
+             'run_name': None,
+             'space_id': None},
+ 'use_policy_training_preset': True}
+INFO 2026-11-18 21:24:49 ot_train.py:516 Logs will be saved locally.
+INFO 2026-11-18 21:24:49 ot_train.py:533 Creating dataset
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/tmp/lerobot5388-correct/venv/bin/lerobot-train", line 10, in <module>
+[rank0]:     sys.exit(main())
+[rank0]:              ^^^^^^
+[rank0]:   File "/tmp/lerobot5388-correct/proposal/src/lerobot/scripts/lerobot_train.py", line 1009, in main
+[rank0]:     train()
+[rank0]:   File "/tmp/lerobot5388-correct/proposal/src/lerobot/configs/parser.py", line 468, in wrapper_inner
+[rank0]:     response = fn(cfg, *args, **kwargs)
+[rank0]:                ^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/tmp/lerobot5388-correct/proposal/src/lerobot/scripts/lerobot_train.py", line 534, in train
+[rank0]:     dataset, eval_dataset = make_train_eval_datasets(cfg)
+[rank0]:                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/tmp/lerobot5388-correct/proposal/src/lerobot/datasets/factory.py", line 215, in make_train_eval_datasets
+[rank0]:     full_dataset = make_dataset(cfg)
+[rank0]:                    ^^^^^^^^^^^^^^^^^
+[rank0]:   File "/tmp/lerobot5388-correct/proposal/src/lerobot/datasets/factory.py", line 170, in make_dataset
+[rank0]:     dataset = StreamingLeRobotDataset(
+[rank0]:               ^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]: TypeError: StreamingLeRobotDataset.__init__() got an unexpected keyword argument 'max_num_shards'
+W1118 21:24:50.253000 96133 /private/tmp/lerobot5388-correct/venv/lib/python3.12/site-packages/torch/distributed/elastic/multiprocessing/api.py:1028] Sending process 96166 closing signal SIGTERM
+E1118 21:24:50.273000 96133 /private/tmp/lerobot5388-correct/venv/lib/python3.12/site-packages/torch/distributed/elastic/multiprocessing/api.py:1002] failed (exitcode: 1) local_rank: 0 (pid: 96165) of binary: /tmp/lerobot5388-correct/venv/bin/lerobot-train
+Traceback (most recent call last):
+  File "/tmp/lerobot5388-correct/venv/bin/torchrun", line 10, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/tmp/lerobot5388-correct/venv/lib/python3.12/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 384, in wrapper
+    result = f(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^
+  File "/tmp/lerobot5388-correct/venv/lib/python3.12/site-packages/torch/distributed/run.py", line 1138, in main
+    run(args)
+  File "/tmp/lerobot5388-correct/venv/lib/python3.12/site-packages/torch/distributed/run.py", line 1129, in run
+    elastic_launch(
+  File "/tmp/lerobot5388-correct/venv/lib/python3.12/site-packages/torch/distributed/launcher/api.py", line 197, in __call__
+    return launch_agent(
+           ^^^^^^^^^^^^^
+  File "/tmp/lerobot5388-correct/venv/lib/python3.12/site-packages/torch/distributed/launcher/api.py", line 386, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+/tmp/lerobot5388-correct/venv/bin/lerobot-train FAILED
+------------------------------------------------------------
+Failures:
+[1]:
+  time      : 2026-11-18_21:24:50
+  host      : 1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.ip6.arpa
+  rank      : 1 (local_rank: 1)
+  exitcode  : -15 (pid: 96166)  (SIGTERM)
+  error_file: <N/A>
+  traceback : Signal 15 (SIGTERM) received by PID 96166
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2026-11-18_21:24:50
+  host      : 1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.ip6.arpa
+  rank      : 0 (local_rank: 0)
+  exitcode  : 1 (pid: 96165) 
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================

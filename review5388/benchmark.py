@@ -392,7 +392,12 @@ def main():
             return build_reader(args, dataset_class, repo_id, revision, fps, cameras)
 
         def make_iterator(dataset):
-            return iter(DataLoader(dataset, batch_size=BATCH_SIZE, num_workers=0))
+            from lerobot.utils.collate import lerobot_collate_fn
+
+            # Match the training entry point. ABC stores variable-length language events.
+            collate = lerobot_collate_fn if dataset.meta.has_language_columns else None
+            result["config"]["collate"] = "lerobot_collate_fn" if collate else "default_collate"
+            return iter(DataLoader(dataset, batch_size=BATCH_SIZE, num_workers=0, collate_fn=collate))
 
         if args.warm_batches:
             trace.write("phase", phase="prewarm")

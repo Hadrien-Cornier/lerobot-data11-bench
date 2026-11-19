@@ -1,0 +1,133 @@
+{
+  "variant": "proposal",
+  "root": "/tmp/lerobot5388-correct/fixture",
+  "out": "evidence/proposal-video-probes.json",
+  "mode": "video",
+  "local_id": true,
+  "selection": false,
+  "workers": 0,
+  "rank": 0,
+  "world": 1,
+  "restart": false,
+  "probe_video": true,
+  "repeat_coverage": false,
+  "check_shuffle": false,
+  "datasets": "5.2.1.dev0",
+  "torch": "2.11.0",
+  "probes": [
+    {
+      "episode": 0,
+      "frame": 4,
+      "checks_failed": {
+        "observation.images.left_wrist_is_pad": 1,
+        "observation.images.right_wrist_is_pad": 1
+      },
+      "details": {
+        "observation.images.left_wrist_is_pad": {
+          "index": 4,
+          "detail": {
+            "actual": [
+              true,
+              true,
+              true
+            ],
+            "expected": [
+              false,
+              false,
+              false
+            ]
+          }
+        },
+        "observation.images.right_wrist_is_pad": {
+          "index": 4,
+          "detail": {
+            "actual": [
+              true,
+              true,
+              true
+            ],
+            "expected": [
+              false,
+              false,
+              false
+            ]
+          }
+        }
+      }
+    },
+    {
+      "episode": 0,
+      "frame": 106,
+      "checks_failed": {
+        "observation.images.front": 1,
+        "observation.images.left_wrist": 1,
+        "observation.images.left_wrist_is_pad": 1,
+        "observation.images.right_wrist": 1,
+        "observation.images.right_wrist_is_pad": 1
+      },
+      "details": {
+        "observation.images.front": {
+          "index": 106,
+          "detail": {
+            "max_absolute_rgb8_difference": 205
+          }
+        },
+        "observation.images.left_wrist": {
+          "index": 106,
+          "detail": {
+            "max_absolute_rgb8_difference": 200
+          }
+        },
+        "observation.images.left_wrist_is_pad": {
+          "index": 106,
+          "detail": {
+            "actual": [
+              true,
+              true,
+              true
+            ],
+            "expected": [
+              false,
+              false,
+              true
+            ]
+          }
+        },
+        "observation.images.right_wrist": {
+          "index": 106,
+          "detail": {
+            "max_absolute_rgb8_difference": 194
+          }
+        },
+        "observation.images.right_wrist_is_pad": {
+          "index": 106,
+          "detail": {
+            "actual": [
+              true,
+              true,
+              true
+            ],
+            "expected": [
+              false,
+              false,
+              true
+            ]
+          }
+        }
+      }
+    },
+    {
+      "episode": 1,
+      "frame": 10,
+      "error": "IndexError",
+      "detail": "Invalid frame index=118 for streamIndex=0; must be less than 118"
+    },
+    {
+      "episode": 15,
+      "frame": 112,
+      "error": "IndexError",
+      "detail": "Invalid frame index=128 for streamIndex=0; must be less than 128"
+    }
+  ],
+  "seconds": 0.4621824160058168
+}

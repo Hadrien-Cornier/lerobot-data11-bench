@@ -1,0 +1,28 @@
+{
+  "variant": "proposal",
+  "root": "/tmp/lerobot5388-correct/fixture",
+  "out": "evidence/proposal-w4-restart.json",
+  "mode": "anchors",
+  "local_id": true,
+  "selection": false,
+  "workers": 4,
+  "rank": 0,
+  "world": 1,
+  "restart": true,
+  "probe_video": false,
+  "repeat_coverage": false,
+  "datasets": "5.2.1.dev0",
+  "torch": "2.11.0",
+  "has_state_dict": false,
+  "has_load_state_dict": false,
+  "consumed_before_restart": 5,
+  "batch_size": 4,
+  "worker_prefetch_factor": 3,
+  "status": "no supported loader state API",
+  "error": {
+    "type": "RuntimeError",
+    "message": "DataLoader worker (pid 96877) is killed by signal: Abort trap: 6. ",
+    "traceback": "Traceback (most recent call last):\n  File \"~/Documents/Personal/LeRobot/data11-bench/review5388/correctness/check_stream.py\", line 261, in main\n    restart(args, result)\n    ~~~~~~~^^^^^^^^^^^^^^\n  File \"~/Documents/Personal/LeRobot/data11-bench/review5388/correctness/check_stream.py\", line 170, in restart\n    result[\"fresh_restart\"] = batches(loader(dataset(args), args.workers, BATCH_SIZE), total)\n                              ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"~/Documents/Personal/LeRobot/data11-bench/review5388/correctness/check_stream.py\", line 157, in batches\n    iterator._shutdown_workers()\n    ~~~~~~~~~~~~~~~~~~~~~~~~~~^^\n  File \"~/Documents/Personal/LeRobot/lerobot/.venv/lib/python3.13/site-packages/torch/utils/data/dataloader.py\", line 1673, in _shutdown_workers\n    w.join(timeout=_utils.MP_STATUS_CHECK_INTERVAL)\n    ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"~/.local/share/uv/python/cpython-3.13.9-macos-aarch64-none/lib/python3.13/multiprocessing/process.py\", line 149, in join\n    res = self._popen.wait(timeout)\n  File \"~/.local/share/uv/python/cpython-3.13.9-macos-aarch64-none/lib/python3.13/multiprocessing/popen_fork.py\", line 41, in wait\n    if not wait([self.sentinel], timeout):\n           ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"~/.local/share/uv/python/cpython-3.13.9-macos-aarch64-none/lib/python3.13/multiprocessing/connection.py\", line 1148, in wait\n    ready = selector.select(timeout)\n  File \"~/.local/share/uv/python/cpython-3.13.9-macos-aarch64-none/lib/python3.13/selectors.py\", line 398, in select\n    fd_event_list = self._selector.poll(timeout)\n  File \"~/Documents/Personal/LeRobot/lerobot/.venv/lib/python3.13/site-packages/torch/utils/data/_utils/signal_handling.py\", line 73, in handler\n    _error_if_any_worker_fails()\n    ~~~~~~~~~~~~~~~~~~~~~~~~~~^^\nRuntimeError: DataLoader worker (pid 96877) is killed by signal: Abort trap: 6. \n"
+  },
+  "seconds": 29.852065582999785
+}

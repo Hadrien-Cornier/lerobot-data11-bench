@@ -63,6 +63,10 @@ def row(path, record, fixture):
     milestone = milestones.get("1000", {}).get("io", {})
     io = milestone.get("by_purpose", {})
     size = record.get("source", {}).get("observed", {}).get("frames")
+    actual = record.get("source", {}).get("observed", {})
+    index_build = record.get("io", {}).get("sidecar", {}).get("sidecar_probe", {})
+    near_pairs = diversity.get("near_0p2s_pairs")
+    pairs = diversity.get("unordered_pairs")
     first = elapsed(1, True)
     projection = None
     if (rate and size and first is not None and counts.get("duplicates") == 0
@@ -78,17 +82,20 @@ def row(path, record, fixture):
         "batch_1_raw_s": elapsed(1), "batch_125_valid_s": elapsed(125, True),
         "batch_1000_raw_s": elapsed(1000), "batch_1000_valid_s": elapsed(1000, True),
         "episodes_per_batch": diversity.get("distinct_episodes_per_batch_mean"),
-        "near_pairs_0p2s": diversity.get("near_0p2s_pairs"),
-        "total_pairs": diversity.get("unordered_pairs"), "verified_refills": refills,
+        "largest_episode_share": diversity.get("largest_episode_share_mean"),
+        "near_sample_pair_share_0p2s": near_pairs / pairs if pairs and near_pairs is not None else None,
+        "verified_refills": refills,
         "post_refill_batches": tail.get("batches"), "steady_windows_per_s": rate,
         "prefix_median_wait_s": initial.get("batch_wait_s", {}).get("p50"),
         "prefix_p95_wait_s": initial.get("batch_wait_s", {}).get("p95"),
         "prefix_p99_wait_s": initial.get("batch_wait_s", {}).get("p99"),
         "video_files_by_batch_1000": io.get("video", {}).get("files_touched"),
         "http_video_bytes_by_batch_1000": io.get("video", {}).get("http_body_bytes"),
+        "index_archive_bytes": actual.get("baseline_sidecar_bytes"),
+        "native_index_build_s": index_build.get("s") if index_build.get("status") == "ok" else None,
         "rss_peak_bytes": record["resources"].get("rss_sampled_peak_bytes"),
         "full_pass_days_estimate": projection,
-        "stop": record.get("stop_reason") or record.get("error", "").splitlines()[0:1],
+        "stop": record.get("stop_reason") or record.get("error", "").partition("\n")[0],
     }
 
 
