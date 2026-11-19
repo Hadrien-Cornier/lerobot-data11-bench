@@ -219,31 +219,52 @@ def prepared_receipt(paths, rows, events):
     }
 
 
-def read_prefix(path, limit, batch_size):
-    trace = path.with_suffix('.events.jsonl.gz')
+def read_prefix(path, limit, batch_size, after_batch):
+    trace = path.with_suffix(".events.jsonl.gz")
     if not trace.is_file():
-        trace = path.with_suffix('.events.jsonl')
-    open_trace = gzip.open if trace.suffix == '.gz' else open
+        trace = path.with_suffix(".events.jsonl")
+    open_trace = gzip.open if trace.suffix == ".gz" else open
     strata = defaultdict(list)
+    seen = set()
     issues = []
-    with open_trace(trace, 'rt') as stream:
+    observed = 0
+    with open_trace(trace, "rt", encoding="utf-8") as stream:
         for line in stream:
             event = json.loads(line)
-            if event['event'] != 'batch':
+            if event["event"] != "batch":
                 continue
-            if event['batch'] > limit:
+            batch = event["batch"]
+            if batch > limit:
                 break
-            if event['usable_unique'] != batch_size or event['contract_errors']:
-                issues.append(event['batch'])
+            observed += 1
+            ids = event["ids"]
+            malformed = any(len(anchor) != 2 or any(type(value) is not int or value < 0 for value in anchor)
+                            for anchor in ids)
+            if malformed:
+                issues.append(batch)
                 continue
-            # Integer counts avoid grouping on rounded proportions.
-            key = (event['distinct_episodes'], round(event['largest_episode_share'] * batch_size),
-                   event['near_0p2s_pairs'])
-            strata[key].append(event['wait_s'])
-    return strata, issues
+            anchors = set(map(tuple, ids))
+            valid = (
+                type(batch) is int and batch == observed and len(ids) == batch_size
+                and len(anchors - seen) == batch_size
+                and event["unique"] == batch_size and event["usable_unique"] == batch_size
+                and not event["contract_errors"] and math.isfinite(event["wait_s"]) and event["wait_s"] >= 0
+            )
+            seen.update(anchors)
+            if not valid:
+                issues.append(batch)
+                continue
+            if batch > after_batch:
+                # Integer counts avoid grouping on rounded proportions.
+                key = (event["distinct_episodes"], round(event["largest_episode_share"] * batch_size),
+                       event["near_0p2s_pairs"])
+                strata[key].append(event["wait_s"])
+    return strata, issues, observed
 
 
-def compare(left, right, limit, *, prepared=False):
+def compare(left, right, limit, *, prepared=False, after_batch=0):
+    if not 0 <= after_batch < limit:
+        raise ValueError("The interval must satisfy 0 <= after_batch < limit.")
     paths = [left, right]
     rows = [read(p) for p in paths]
     if rows[0]['dataset'] != rows[1]['dataset'] or rows[0]['workload'] != rows[1]['workload']:
@@ -261,26 +282,45 @@ def compare(left, right, limit, *, prepared=False):
         not prepared and rows[0]["cache"] != rows[1]["cache"]
     ):
         raise ValueError("Use runs from the same job with the same initial cache state.")
-    publication = None
-    if prepared:
-        if not hosts[0].get("job_id") or not hosts[0].get("hostname") or hosts[0]["hostname"] != hosts[1].get("hostname"):
-            raise ValueError("The prepared pair must run on the same recorded host.")
-        publication = prepared_receipt(paths, rows, run_events(left))
-    batch_size = rows[0]['config']['batch_size']
-    a, b = [read_prefix(p, limit, batch_size) for p in paths]
-    report = {'cells': [p.stem for p in paths], 'cutoff_batches': limit,
-              'valid_unique_batches': [sum(map(len, v[0].values())) for v in (a, b)],
-              'invalid_or_repeated_batches': [len(a[1]), len(b[1])], 'wait_clock': WAIT_CLOCK}
+    if (prepared or after_batch) and (
+        not hosts[0].get("job_id")
+        or not hosts[0].get("hostname")
+        or hosts[0]["hostname"] != hosts[1].get("hostname")
+    ):
+        raise ValueError("Use results from the same recorded host.")
+    if after_batch and not prepared:
+        sources = [source_metadata(path, row, run_events(path)) for path, row in zip(paths, rows)]
+        required_verification = "bucket_manifest_match" if rows[0]["dataset"] == "bucket" else "revision_verified"
+        if sources[0] != sources[1] or sources[0][1] != required_verification:
+            raise ValueError("Use the same verified source revision or bucket inventory.")
+    publication = prepared_receipt(paths, rows, run_events(left)) if prepared else None
+    batch_size = rows[0]["config"]["batch_size"]
+    prefixes = [read_prefix(path, limit, batch_size, after_batch) for path in paths]
+    a, b = [prefix[0] for prefix in prefixes]
+    included_batches = limit - after_batch
+    report = {
+        "cells": [path.stem for path in paths], "cutoff_batches": limit, "after_batch": after_batch,
+        "included_batches_per_reader": included_batches,
+        "prefix_batches_seen": [prefix[2] for prefix in prefixes],
+        "valid_unique_batches": [sum(map(len, strata.values())) for strata in (a, b)],
+        "invalid_or_repeated_batches": [len(prefix[1]) for prefix in prefixes],
+        "first_invalid_or_repeated_batch": [prefix[1][0] if prefix[1] else None for prefix in prefixes],
+        "wait_clock": WAIT_CLOCK,
+    }
     if publication:
         report["publication"] = publication
-    if report['valid_unique_batches'] != [limit, limit] or a[1] or b[1]:
-        return {**report, 'status': 'incomplete or invalid prefix'}
+    if (
+        report["prefix_batches_seen"] != [limit, limit]
+        or report["valid_unique_batches"] != [included_batches, included_batches]
+        or any(report["invalid_or_repeated_batches"])
+    ):
+        return report | {"status": "incomplete or invalid prefix"}
     strata = []
     weights = []
-    for key in sorted(a[0].keys() & b[0].keys()):
-        waits = [a[0][key], b[0][key]]
+    for key in sorted(a.keys() & b.keys()):
+        waits = [a[key], b[key]]
         counts = [len(s) for s in waits]
-        weight = min(counts) / limit
+        weight = min(counts) / included_batches
         weights.append(weight)
         strata.append({'episodes': key[0], 'largest_episode_examples': key[1],
                        'same_episode_pairs_within_0p2s': key[2], 'batches': counts,
@@ -288,21 +328,32 @@ def compare(left, right, limit, *, prepared=False):
     overlap = sum(weights)
     standardized = [sum(w * s['mean_wait_s'][i] for w, s in zip(weights, strata)) / overlap
                     for i in range(2)] if overlap else None
-    return {**report, 'status': 'complete', 'distribution_overlap': overlap,
-            'overlap_weighted_mean_consumer_wait_s': standardized, 'strata': strata}
+    return {
+        **report, "status": "complete", "distribution_overlap": overlap,
+        "overlap_weighted_mean_consumer_wait_s": standardized,
+        "unconditioned_mean_consumer_wait_s": [
+            mean(wait for waits in distribution.values() for wait in waits) for distribution in (a, b)
+        ],
+        "unconditioned_mean_distinct_episodes_per_batch": [
+            sum(key[0] * len(waits) for key, waits in distribution.items()) / included_batches
+            for distribution in (a, b)
+        ],
+        "strata": strata,
+    }
 
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('baseline', type=Path)
     parser.add_argument('candidate', type=Path)
-    parser.add_argument('--limit', type=int, default=1000)
+    parser.add_argument("--limit", type=int, default=1000, help="Last included batch, inclusive.")
+    parser.add_argument("--after-batch", type=int, default=0, help="Exclude deliveries through this batch from estimates.")
     parser.add_argument("--prepared", action="store_true", help="Verify the simulated-publication transfer and audit.")
     args = parser.parse_args()
     if args.limit <= 0:
         parser.error('The prefix must have a positive batch count.')
     try:
-        result = compare(args.baseline, args.candidate, args.limit, prepared=args.prepared)
+        result = compare(args.baseline, args.candidate, args.limit, prepared=args.prepared, after_batch=args.after_batch)
     except (OSError, ValueError, KeyError, TypeError) as exc:
         parser.error(str(exc))
     print(json.dumps(result, indent=2))

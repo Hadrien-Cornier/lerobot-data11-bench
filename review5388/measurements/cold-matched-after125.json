@@ -1,0 +1,331 @@
+{
+  "cells": [
+    "bucket-current-frame-tolerance-1ms-baseline",
+    "bucket-current-frame-tolerance-1ms-candidate"
+  ],
+  "cutoff_batches": 13300,
+  "after_batch": 125,
+  "included_batches_per_reader": 13175,
+  "prefix_batches_seen": [
+    13300,
+    13300
+  ],
+  "valid_unique_batches": [
+    13175,
+    13175
+  ],
+  "invalid_or_repeated_batches": [
+    0,
+    0
+  ],
+  "first_invalid_or_repeated_batch": [
+    null,
+    null
+  ],
+  "wait_clock": "DataLoader next() wait. Reader construction and prior index receipt are outside this clock.",
+  "status": "complete",
+  "distribution_overlap": 0.8411385199240986,
+  "overlap_weighted_mean_consumer_wait_s": [
+    0.039166489975851065,
+    0.06787318345767358
+  ],
+  "unconditioned_mean_consumer_wait_s": [
+    0.039007312251348576,
+    0.06785290200727156
+  ],
+  "unconditioned_mean_distinct_episodes_per_batch": [
+    6.543453510436432,
+    7.055559772296015
+  ],
+  "strata": [
+    {
+      "episodes": 3,
+      "largest_episode_examples": 3,
+      "same_episode_pairs_within_0p2s": 0,
+      "batches": [
+        67,
+        1
+      ],
+      "mean_wait_s": [
+        0.03795168622841697,
+        0.08476829901337624
+      ],
+      "median_wait_s": [
+        0.035455839009955525,
+        0.08476829901337624
+      ]
+    },
+    {
+      "episodes": 4,
+      "largest_episode_examples": 2,
+      "same_episode_pairs_within_0p2s": 0,
+      "batches": [
+        30,
+        1
+      ],
+      "mean_wait_s": [
+        0.03570405446613829,
+        0.09840969298966229
+      ],
+      "median_wait_s": [
+        0.034926665015518665,
+        0.09840969298966229
+      ]
+    },
+    {
+      "episodes": 4,
+      "largest_episode_examples": 3,
+      "same_episode_pairs_within_0p2s": 0,
+      "batches": [
+        368,
+        25
+      ],
+      "mean_wait_s": [
+        0.03657384565082358,
+        0.06213120259810239
+      ],
+      "median_wait_s": [
+        0.03561426454689354,
+        0.08168310101609677
+      ]
+    },
+    {
+      "episodes": 4,
+      "largest_episode_examples": 4,
+      "same_episode_pairs_within_0p2s": 0,
+      "batches": [
+        177,
+        8
+      ],
+      "mean_wait_s": [
+        0.03753830754134994,
+        0.044189892258145846
+      ],
+      "median_wait_s": [
+        0.03698952205013484,
+        0.042858523956965655
+      ]
+    },
+    {
+      "episodes": 4,
+      "largest_episode_examples": 5,
+      "same_episode_pairs_within_0p2s": 0,
+      "batches": [
+        45,
+        1
+      ],
+      "mean_wait_s": [
+        0.03807975930265255,
+        0.09323440305888653
+      ],
+      "median_wait_s": [
+        0.038736743037588894,
+        0.09323440305888653
+      ]
+    },
+    {
+      "episodes": 5,
+      "largest_episode_examples": 2,
+      "same_episode_pairs_within_0p2s": 0,
+      "batches": [
+        342,
+        159
+      ],
+      "mean_wait_s": [
+        0.03884116080977643,
+        0.06730986429296387
+      ],
+      "median_wait_s": [
+        0.03663495049113408,
+        0.06612619606312364
+      ]
+    },
+    {
+      "episodes": 5,
+      "largest_episode_examples": 2,
+      "same_episode_pairs_within_0p2s": 1,
+      "batches": [
+        3,
+        5
+      ],
+      "mean_wait_s": [
+        0.03334247670136392,
+        0.041070061991922556
+      ],
+      "median_wait_s": [
+        0.032381140044890344,
+        0.03797115199267864
+      ]
+    },
+    {
+      "episodes": 5,
+      "largest_episode_examples": 3,
+      "same_episode_pairs_within_0p2s": 0,
+      "batches": [
+        576,
+        297
+      ],
+      "mean_wait_s": [
+        0.03863234354462798,
+        0.06673626572180615
+      ],
+      "median_wait_s": [
+        0.03747605602256954,
+        0.07079578295815736
+      ]
+    },
+    {
+      "episodes": 5,
+      "largest_episode_examples": 3,
+      "same_episode_pairs_within_0p2s": 1,
+      "batches": [
+        11,
+        6
+      ],
+      "mean_wait_s": [
+        0.038326770437627354,
+        0.08372997748665512
+      ],
+      "median_wait_s": [
+        0.03739866497926414,
+        0.09237063099863008
+      ]
+    },
+    {
+      "episodes": 5,
+      "largest_episode_examples": 4,
+      "same_episode_pairs_within_0p2s": 0,
+      "batches": [
+        121,
+        44
+      ],
+      "mean_wait_s": [
+        0.03941492440298292,
+        0.0763058765891897
+      ],
+      "median_wait_s": [
+        0.0376653679413721,
+        0.07384478044696152
+      ]
+    },
+    {
+      "episodes": 6,
+      "largest_episode_examples": 2,
+      "same_episode_pairs_within_0p2s": 0,
+      "batches": [
+        2141,
+        1844
+      ],
+      "mean_wait_s": [
+        0.03891819810769044,
+        0.06903396712625177
+      ],
+      "median_wait_s": [
+        0.037814551033079624,
+        0.06652607902651653
+      ]
+    },
+    {
+      "episodes": 6,
+      "largest_episode_examples": 2,
+      "same_episode_pairs_within_0p2s": 1,
+      "batches": [
+        14,
+        31
+      ],
+      "mean_wait_s": [
+        0.03714897797908634,
+        0.05887976809660153
+      ],
+      "median_wait_s": [
+        0.03596393548650667,
+        0.0587327090324834
+      ]
+    },
+    {
+      "episodes": 6,
+      "largest_episode_examples": 3,
+      "same_episode_pairs_within_0p2s": 0,
+      "batches": [
+        698,
+        591
+      ],
+      "mean_wait_s": [
+        0.039385639616411,
+        0.0651699191571155
+      ],
+      "median_wait_s": [
+        0.03811059199506417,
+        0.06563361606094986
+      ]
+    },
+    {
+      "episodes": 6,
+      "largest_episode_examples": 3,
+      "same_episode_pairs_within_0p2s": 1,
+      "batches": [
+        5,
+        11
+      ],
+      "mean_wait_s": [
+        0.040908266021870074,
+        0.05957295275716619
+      ],
+      "median_wait_s": [
+        0.03963060909882188,
+        0.060499049024656415
+      ]
+    },
+    {
+      "episodes": 7,
+      "largest_episode_examples": 2,
+      "same_episode_pairs_within_0p2s": 0,
+      "batches": [
+        4841,
+        5769
+      ],
+      "mean_wait_s": [
+        0.03932635948100708,
+        0.06775840434359093
+      ],
+      "median_wait_s": [
+        0.03845605603419244,
+        0.06738214800134301
+      ]
+    },
+    {
+      "episodes": 7,
+      "largest_episode_examples": 2,
+      "same_episode_pairs_within_0p2s": 1,
+      "batches": [
+        20,
+        42
+      ],
+      "mean_wait_s": [
+        0.039067832852015275,
+        0.06311852662890617
+      ],
+      "median_wait_s": [
+        0.038798699039034545,
+        0.07333305850625038
+      ]
+    },
+    {
+      "episodes": 8,
+      "largest_episode_examples": 1,
+      "same_episode_pairs_within_0p2s": 0,
+      "batches": [
+        3222,
+        4340
+      ],
+      "mean_wait_s": [
+        0.0391297014998512,
+        0.06805225773971992
+      ],
+      "median_wait_s": [
+        0.03843815199797973,
+        0.0665502775227651
+      ]
+    }
+  ]
+}
