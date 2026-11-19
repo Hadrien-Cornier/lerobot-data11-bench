@@ -1,0 +1,50 @@
+{
+  "main": "8ec1a474da5f3f90a670d9343386995ec9f81264",
+  "fps": 30,
+  "torch": "2.11.0",
+  "map_style": [
+    {
+      "case": "packed",
+      "index": 54901,
+      "episode": 1,
+      "frame_index": 8,
+      "episode_from_s": 1829.7666666666667,
+      "ideal_pts_s": 1830.0333333333333,
+      "map_query_s": 1830.033333347241,
+      "float32_sum_query_s": 1830.033447265625,
+      "earlier_frame": "blue",
+      "default": "red"
+    },
+    {
+      "case": "packed",
+      "index": 136684,
+      "episode": 4,
+      "frame_index": 2,
+      "episode_from_s": 4556.066666666667,
+      "ideal_pts_s": 4556.133333333333,
+      "map_query_s": 4556.13333333681,
+      "float32_sum_query_s": 4556.1337890625,
+      "earlier_frame": "blue",
+      "default": "red"
+    },
+    {
+      "case": "long_episode",
+      "index": 198139,
+      "episode": 5,
+      "frame_index": 61441,
+      "episode_from_s": 0.0,
+      "ideal_pts_s": 2048.0333333333333,
+      "map_query_s": 2048.033447265625,
+      "float32_sum_query_s": 2048.033447265625,
+      "earlier_frame": "blue",
+      "error_type": "FrameTimestampError",
+      "error_message": "One or several query timestamps unexpectedly violate the tolerance (tensor([0.0001], dtype=torch.float64) >= tolerance_s=0.0001). It means that the closest frame that can be loaded from the video is too far away in time. This might be due to synchronization issues with timestamps during data collection. To be safe, we advise to ignore this item during training.",
+      "relaxed": "red"
+    }
+  ],
+  "packed_streaming": {
+    "samples": 32,
+    "unique": 32,
+    "matches_full_oracle": true
+  }
+}

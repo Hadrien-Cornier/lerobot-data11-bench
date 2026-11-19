@@ -71,3 +71,9 @@ done
 ```
 
 The finite checks and single-rank checkpoint traces used Apple silicon with Python 3.13.9, PyTorch 2.11.0, TorchCodec 0.11.1, Accelerate 1.15.0, Hub 1.33.0 and FFmpeg 8.1.2. The baseline in those runs used Datasets 4.8.5. The proposal used the Datasets pull request revision. The short repeat trainer and the distributed trainer used Python 3.12.12, PyTorch 2.15.0, TorchCodec 0.17.0, Accelerate 1.16.0, Hub 2.4.0 and Homebrew FFmpeg 9.0.2. The shuffle experiment also used this environment. The distributed and short-run baseline used Datasets 5.2.0. These checks measure data correctness and training integration for the local fixture.
+
+## Packed video timestamp precision
+
+The draft's no-delta Molmo run at native 0.1 ms tolerance yielded one sample, then encountered a timestamp error before delivering a complete batch. Controlled real-decoder probes at 1,830.033333 and 4,556.133333 seconds show that rounding the absolute time to float32 exceeds the 0.1 ms tolerance. A 1 ms tolerance returned the intended frames, and both pinned readers passed the complete 786-frame current-image fixture at that setting. [Baseline probe](probe_tolerance.baseline.json) · [Draft probe](probe_tolerance.candidate.json)
+
+The public map-style and streaming readers on main `8ec1a474` can read short episodes at both of these late offsets in a shared MP4 at 0.1 ms. The map-style path adds the local time to the file offset at higher precision. As a separate positive control, a single 30 fps episode whose *local* timestamp reached 2,048.033333 seconds failed at its native tolerance. An existing upstream change addresses that distinct case. [Packed-offset script and measurements](packed-offset) · [Existing PR #4882](https://github.com/huggingface/lerobot/pull/4882)
