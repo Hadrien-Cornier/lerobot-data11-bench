@@ -258,8 +258,10 @@ def pair(dataset, state, readers, caps, caches, *, cache_state="cold", max_batch
         return False
     for reader in readers:
         reader_state = cache_state[reader] if isinstance(cache_state, dict) else cache_state
+        # Leave time to save a capped cell and recheck the mutable source after both readers.
+        remaining = int(DEADLINE - time.monotonic() - (120 if dataset == "bucket" else 0))
         benchmark(
-            dataset, reader, f"{dataset}-{state}-{reader}", caches[reader], caps[reader],
+            dataset, reader, f"{dataset}-{state}-{reader}", caches[reader], min(caps[reader], remaining),
             single_frame=single_frame, history=history, batches=max_batches,
             warm_batches=warm_batches, cache_state=reader_state, tolerance_s=tolerance_s, fixed_target=fixed_target,
         )
@@ -385,9 +387,18 @@ def tolerance():
             raise RuntimeError("Molmo inventory has changed.")
         if not download_prepared("bucket", caches["baseline"], reference, timeout=180):
             raise RuntimeError("Prepared Molmo index could not be transferred.")
-        pair("bucket", "current-frame-tolerance-1ms-prepared", order, {"baseline": 330, "candidate": 330}, caches,
-             cache_state={"baseline": "unclassified", "candidate": "cold"}, single_frame=True,
-             tolerance_s=0.001, max_batches=1000)
+        valid_source = pair(
+            "bucket", "current-frame-tolerance-1ms-prepared", order, {"baseline": 330, "candidate": 330}, caches,
+            cache_state={"baseline": "unclassified", "candidate": "cold"}, single_frame=True,
+            tolerance_s=0.001, max_batches=1000,
+        )
+        if valid_source and verify_bucket("worker-memory-before"):
+            prefetch = worker_prefetch("bucket")
+            if prefetch is not None:
+                append({"event": "worker-memory-cache-reuse", "dataset": "bucket",
+                        "source_cell": "bucket-current-frame-tolerance-1ms-prepared-baseline",
+                        "cache_state": "same prepared archive and mmap, warm metadata and OS pages"})
+                measure_workers("bucket", caches["baseline"], prefetch)
         return
 
     state = "current-frame-tolerance-1ms"
@@ -421,9 +432,42 @@ def tolerance_repeat():
          single_frame=True, tolerance_s=0.001, max_batches=25000, fixed_target=True)
 
 
-def worker_memory():
+def worker_prefetch(dataset):
     from benchmark import BATCH_SIZE, INPUTS
 
+    shm = shutil.disk_usage("/dev/shm") if Path("/dev/shm").is_dir() else None
+    _, _, (channels, height, width), cameras = INPUTS[dataset]
+    image_bytes_per_batch = BATCH_SIZE * len(cameras) * channels * height * width
+    # Allow 128 KiB per batch for actions, state and other tensors. Reserve
+    # two additional batches and 20% of available shared memory.
+    batch_bytes = image_bytes_per_batch + 128 * 1024
+    prefetch = next(
+        (factor for factor in (4, 2, 1) if shm and (4 * factor + 2) * batch_bytes <= 0.8 * shm.free),
+        None,
+    )
+    append({"event": "worker-memory-config", "dataset": dataset, "worker_counts": [1, 4],
+            "prefetch_factor": prefetch, "dev_shm_total_bytes": shm.total if shm else None,
+            "dev_shm_free_bytes": shm.free if shm else None, "image_bytes_per_batch": image_bytes_per_batch})
+    if prefetch is None:
+        append({"event": "worker-memory-skipped", "dataset": dataset,
+                "reason": "shared memory is too small or unavailable for four workers at prefetch factor 1"})
+    return prefetch
+
+
+def measure_workers(dataset, cache, prefetch):
+    for workers in (1, 4):
+        label = f"{dataset}-worker-memory-w{workers}"
+        run(label, ["worker_memory.py", "measure", "--dataset", dataset, "--workers", str(workers),
+                    "--output", RESULTS / f"{label}.json", "--max-batches", "125",
+                    "--prefetch-factor", str(prefetch), "--require-mapped-index",
+                    "--sidecar-manifest", RESULTS / f"{dataset}-private-transfer.json"], 360, cache=cache)
+    valid_source = dataset != "bucket" or verify_bucket("worker-memory-after")
+    append({"event": "worker-memory-pair-done", "dataset": dataset, "source_valid": valid_source,
+            "worker_counts": [1, 4]})
+    upload(f"{dataset}-worker-memory")
+
+
+def worker_memory():
     references = json.loads(os.environ["PREPARED_INDEX"])
     map_index = (
         "from pathlib import Path; import sys; "
@@ -433,24 +477,9 @@ def worker_memory():
     for dataset in DATASETS:
         if dataset == "bucket" and not verify_bucket("worker-memory-before"):
             continue
-        shm = shutil.disk_usage("/dev/shm") if Path("/dev/shm").is_dir() else None
-        _, _, (channels, height, width), cameras = INPUTS[dataset]
-        image_bytes_per_batch = BATCH_SIZE * len(cameras) * channels * height * width
-        # Allow 128 KiB per batch for actions, state and other tensors. Reserve
-        # two additional batches and 20% of available shared memory.
-        batch_bytes = image_bytes_per_batch + 128 * 1024
-        prefetch = next(
-            (factor for factor in (4, 2, 1) if shm and (4 * factor + 2) * batch_bytes <= 0.8 * shm.free),
-            None,
-        )
-        append({"event": "worker-memory-config", "dataset": dataset, "worker_counts": [1, 4],
-                "prefetch_factor": prefetch, "dev_shm_total_bytes": shm.total if shm else None,
-                "dev_shm_free_bytes": shm.free if shm else None, "image_bytes_per_batch": image_bytes_per_batch})
+        prefetch = worker_prefetch(dataset)
         if prefetch is None:
-            append({"event": "worker-memory-skipped", "dataset": dataset,
-                    "reason": "shared memory is too small or unavailable for four workers at prefetch factor 1"})
             continue
-
         cache = CACHE / f"{dataset}-worker-memory"
         reference = references[dataset]
         transfer_cap = 540 if dataset == "abc" else 300
@@ -461,17 +490,7 @@ def worker_memory():
         if run(f"{dataset}-worker-memory-map-index", ["-c", map_index, archive], 300, cache=cache) != 0:
             append({"event": "worker-memory-skipped", "dataset": dataset, "reason": "mapping failed"})
             continue
-
-        for workers in (1, 4):
-            label = f"{dataset}-worker-memory-w{workers}"
-            run(label, ["worker_memory.py", "measure", "--dataset", dataset, "--workers", str(workers),
-                        "--output", RESULTS / f"{label}.json", "--max-batches", "125",
-                        "--prefetch-factor", str(prefetch), "--require-mapped-index",
-                        "--sidecar-manifest", RESULTS / f"{dataset}-private-transfer.json"], 360, cache=cache)
-        valid_source = dataset != "bucket" or verify_bucket("worker-memory-after")
-        append({"event": "worker-memory-pair-done", "dataset": dataset, "source_valid": valid_source,
-                "worker_counts": [1, 4]})
-        upload(f"{dataset}-worker-memory")
+        measure_workers(dataset, cache, prefetch)
 
 
 def abc_history():

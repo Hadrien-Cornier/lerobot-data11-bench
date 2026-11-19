@@ -1,0 +1,119 @@
+{
+  "observed_utc": "2026-11-19T09:43:48.143264+00:00",
+  "rate_reference": "https://huggingface.co/docs/hub/en/jobs-pricing",
+  "conservative_billing_rule": "Round total job duration up to a minute, add one minute, and limit to the reservation. A saved terminal observation bounds canceled runs without server duration.",
+  "all_running_jobs": [],
+  "conservative_gross_ceiling_usd": 7.9848333333333334,
+  "completed_and_canceled_jobs": [
+    {
+      "run": "preflight",
+      "flavor": "cpu-upgrade",
+      "status": "COMPLETED",
+      "usd_per_hour": 0.03,
+      "reserved_minutes": 15,
+      "running_seconds": 99,
+      "total_seconds": 102,
+      "conservative_gross_ceiling_usd": 0.0015
+    },
+    {
+      "run": "probe01",
+      "flavor": "cpu-xl",
+      "status": "CANCELED",
+      "usd_per_hour": 1.0,
+      "reserved_minutes": 39,
+      "running_seconds": null,
+      "total_seconds": null,
+      "conservative_gross_ceiling_usd": 0.05
+    },
+    {
+      "run": "probe02",
+      "flavor": "cpu-xl",
+      "status": "COMPLETED",
+      "usd_per_hour": 1.0,
+      "reserved_minutes": 15,
+      "running_seconds": 463,
+      "total_seconds": 466,
+      "conservative_gross_ceiling_usd": 0.15
+    },
+    {
+      "run": "matrix01",
+      "flavor": "cpu-xl",
+      "status": "CANCELED",
+      "usd_per_hour": 1.0,
+      "reserved_minutes": 430,
+      "running_seconds": null,
+      "total_seconds": null,
+      "conservative_gross_ceiling_usd": 0.05
+    },
+    {
+      "run": "matrix02",
+      "flavor": "cpu-xl",
+      "status": "ERROR",
+      "usd_per_hour": 1.0,
+      "reserved_minutes": 430,
+      "running_seconds": 12,
+      "total_seconds": 15,
+      "conservative_gross_ceiling_usd": 0.03333333333333333
+    },
+    {
+      "run": "matrix03",
+      "flavor": "cpu-xl",
+      "status": "COMPLETED",
+      "usd_per_hour": 1.0,
+      "reserved_minutes": 430,
+      "running_seconds": 15464,
+      "total_seconds": 15467,
+      "conservative_gross_ceiling_usd": 4.316666666666666
+    },
+    {
+      "run": "molmo-tol01",
+      "flavor": "cpu-xl",
+      "status": "COMPLETED",
+      "usd_per_hour": 1.0,
+      "reserved_minutes": 92,
+      "running_seconds": 3176,
+      "total_seconds": 3179,
+      "conservative_gross_ceiling_usd": 0.9
+    },
+    {
+      "run": "worker-mem01",
+      "flavor": "cpu-xl",
+      "status": "COMPLETED",
+      "usd_per_hour": 1.0,
+      "reserved_minutes": 39,
+      "running_seconds": 858,
+      "total_seconds": 861,
+      "conservative_gross_ceiling_usd": 0.26666666666666666
+    },
+    {
+      "run": "molmo-tol02",
+      "flavor": "cpu-xl",
+      "status": "COMPLETED",
+      "usd_per_hour": 1.0,
+      "reserved_minutes": 75,
+      "running_seconds": 4441,
+      "total_seconds": 4443,
+      "conservative_gross_ceiling_usd": 1.2666666666666666
+    },
+    {
+      "run": "abc-history01",
+      "flavor": "cpu-xl",
+      "status": "COMPLETED",
+      "usd_per_hour": 1.0,
+      "reserved_minutes": 43,
+      "running_seconds": 2404,
+      "total_seconds": 2407,
+      "conservative_gross_ceiling_usd": 0.7
+    },
+    {
+      "run": "molmo-prepared01",
+      "flavor": "cpu-xl",
+      "status": "COMPLETED",
+      "usd_per_hour": 1.0,
+      "reserved_minutes": 27,
+      "running_seconds": 805,
+      "total_seconds": 808,
+      "conservative_gross_ceiling_usd": 0.25
+    }
+  ]
+}

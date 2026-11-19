@@ -4,11 +4,9 @@ import argparse
 import datetime as dt
 import json
 import math
-from pathlib import Path
 import re
 
 from huggingface_hub import HfApi
-
 from launch import LEDGER, REPO, ROOT, TERMINAL
 
 
@@ -28,7 +26,7 @@ def main():
     result_dir = ROOT / "results"
     api = HfApi()
     job = api.inspect_job(job_id=job_id)
-    observed = dt.datetime.now(dt.timezone.utc)
+    observed = dt.datetime.now(dt.UTC)
     seconds = job.durations.total_secs if job.durations else None
     duration_source = "hf_server"
     if seconds is None and job.status.stage in TERMINAL and job.created_at:

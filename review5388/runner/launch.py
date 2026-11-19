@@ -49,7 +49,7 @@ def bundle(profile):
         ROOT / "runner" / "remote.py",
     ]
     paths.extend(sorted((ROOT / "correctness").glob("*.py")))
-    if profile == "worker-memory":
+    if profile in ("worker-memory", "tolerance"):
         paths.append(ROOT / "worker_memory.py")
     stream = io.BytesIO()
     with tarfile.open(fileobj=stream, mode="w:gz") as archive:
