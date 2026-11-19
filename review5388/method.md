@@ -81,3 +81,16 @@ run5388 runner/collect.py molmo-consumers --sync
 ```
 
 For #3917, add each pair's `consumer_prep_seconds` in `bucket-private-transfer-rNN.json` to every delivery timestamp. It includes downloading the archive and checking its SHA-256. The reader clock then includes opening the index and preparing its local memory map. #5388 starts from an empty cache each time and receives no archive. The source inventory is checked before and after each pair.
+
+### Run patched #5388 and indexed #3917 through two pool refills
+
+Use the publisher setup above to create a matching MolmoAct2 index in your own private benchmark repository. Keep its verified transfer receipt. From `review5388/`, using the same `run5388` shell function and `REVIEW5388_RESULTS_REPO`, launch the two readers in one job.
+
+```bash
+run5388 runner/launch.py molmo-native-refills --profile native-refills \
+    --prepared-from-run molmo-publisher --minutes 300
+# After the job finishes
+run5388 runner/collect.py molmo-native-refills --sync
+```
+
+The job uses one 8-vCPU CPU Upgrade host. It runs #3917 (`fe1c5459`) first and patched #5388 (`adbdf5f0`) second, each in a fresh process with an empty application cache. Both request 30,000 batches of eight examples, three current camera views, current state and current action. The episode pool size is 32, the seed is 42, and the timestamp tolerance is 1 ms. The runner checks the source inventory before and after each reader. It records batch delivery times, sample IDs, episode admissions and verified pool refills. Add the index download and validation receipt to #3917's elapsed time at each batch.

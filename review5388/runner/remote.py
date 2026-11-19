@@ -107,6 +107,7 @@ def run(label, argv, timeout, reader="baseline", cache=None, *, release=False):
         "datasets_source": "pypi-5.2.0" if release else "pull-8983",
     })
     timed_out = False
+    last_checkpoint = started
     with logfile.open("w") as stream:
         child = subprocess.Popen(
             [str(PY), *map(str, argv)],
@@ -130,6 +131,20 @@ def run(label, argv, timeout, reader="baseline", cache=None, *, release=False):
                         ), "progress": row.get("checked_batches", row.get("progress"))}
                     except (FileNotFoundError, json.JSONDecodeError):
                         pass
+                if PROFILE == "native-refills" and time.monotonic() - last_checkpoint > 600:
+                    live_trace = RESULTS / f"{label}.events.jsonl"
+                    if live_trace.is_file():
+                        checkpoint = WORK / f"{label}.checkpoint.jsonl.gz"
+                        with live_trace.open("rb") as src, gzip.open(checkpoint, "wb", compresslevel=1) as dst:
+                            for line in src:
+                                if line.endswith(b"\n"):
+                                    dst.write(line)
+                        try:
+                            API.upload_file(path_or_fileobj=checkpoint, path_in_repo=f"{DEST}/{checkpoint.name}",
+                                            repo_id=REPO, repo_type="dataset")
+                        except Exception as exc:
+                            append({"event": "checkpoint-error", "label": label, "type": type(exc).__name__})
+                        last_checkpoint = time.monotonic()
                 print(json.dumps({"event": "heartbeat", "label": label,
                                   "seconds": round(time.monotonic() - started, 1), **details}), flush=True)
         if child.poll() is None:
@@ -652,7 +667,10 @@ def main():
     upload("environment")
     try:
         wait_for_previous()
-        if PROFILE == "correctness":
+        if PROFILE == "native-refills":
+            from runner.refill_remote import run_refills
+            run_refills()
+        elif PROFILE == "correctness":
             correctness()
         elif PROFILE == "probe":
             probe()

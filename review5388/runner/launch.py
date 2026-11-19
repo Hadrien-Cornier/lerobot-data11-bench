@@ -20,7 +20,7 @@ ROOT = Path(__file__).resolve().parents[1]
 LEDGER = ROOT / "results" / "jobs.jsonl"
 REPO = os.environ.get("REVIEW5388_RESULTS_REPO", "hadriencornier/lerobot-data11-bench")
 RATES = {"cpu-xl": 1.0, "cpu-upgrade": 0.03}
-GROSS_RESERVATION_LIMIT = 9.75
+GROSS_RESERVATION_LIMIT = 10.00
 TERMINAL = {"COMPLETED", "ERROR", "CANCELED", "FAILED", "TIMEOUT"}
 IMAGE = "python:3.12-slim-trixie"
 BOOT = r"""
@@ -53,6 +53,8 @@ def bundle(profile):
     paths.extend(sorted((ROOT / "correctness").glob("*.py")))
     if profile in ("worker-memory", "tolerance"):
         paths.append(ROOT / "worker_memory.py")
+    if profile == "native-refills":
+        paths.extend(ROOT / "runner" / fn for fn in ("refill_remote.py", "refill_arm.py", "native_molmo_pins.json"))
     if profile == "internvideo":
         paths.extend(ROOT / name for name in (
             "internvideo_bench.py",
@@ -137,7 +139,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("run", help="Unique private result folder and job label suffix.")
     parser.add_argument("--profile", choices=("probe", "matrix", "reverse", "correctness", "tolerance", "tolerance-repeat",
-                                 "tolerance-prepared-repeat", "worker-memory", "abc-history", "internvideo"),
+                                 "tolerance-prepared-repeat", "worker-memory", "abc-history", "internvideo", "native-refills"),
                         required=True)
     parser.add_argument("--minutes", type=int, required=True)
     parser.add_argument("--wait-for-job", help="Delay workload until this earlier job stops.")
@@ -147,14 +149,14 @@ def main():
     args = parser.parse_args()
     if not re.fullmatch(r"[a-z0-9][a-z0-9-]{2,39}", args.run):
         parser.error("Run name must use 3 to 40 lower-case letters, numbers, or hyphens.")
-    prepared_profiles = ("tolerance", "tolerance-prepared-repeat", "worker-memory", "abc-history")
+    prepared_profiles = ("tolerance", "native-refills", "tolerance-prepared-repeat", "worker-memory", "abc-history")
     if args.prepared_from_run and (args.profile not in prepared_profiles or not re.fullmatch(
         r"[a-z0-9][a-z0-9-]{2,39}", args.prepared_from_run
     )):
         parser.error("Invalid prepared-index run name or unsupported profile.")
     if args.profile in prepared_profiles[1:] and not args.prepared_from_run:
         parser.error("The selected profile requires --prepared-from-run.")
-    if args.profile in ("tolerance", "tolerance-repeat", "tolerance-prepared-repeat", "internvideo"):
+    if args.profile in ("tolerance", "tolerance-repeat", "tolerance-prepared-repeat", "internvideo", "native-refills"):
         args.datasets = ["bucket"]
     elif args.profile in ("worker-memory", "abc-history"):
         args.datasets = ["abc"] if args.profile == "abc-history" else args.datasets or ["abc", "droid"]
@@ -164,7 +166,7 @@ def main():
         parser.error("Expected a Hugging Face Job ID.")
     if args.minutes < 5:
         parser.error("A job must have at least 5 minutes for environment setup.")
-    flavor = "cpu-upgrade" if args.profile == "correctness" else "cpu-xl"
+    flavor = "cpu-upgrade" if args.profile in ("correctness", "native-refills") else "cpu-xl"
     reservation = RATES[flavor] * (args.minutes + 1) / 60
     api = HfApi()
     token = get_token()
@@ -219,7 +221,8 @@ def main():
         try:
             job = api.run_job(
                 image=IMAGE,
-                command=["bash", "-c", BOOT],
+                command=["bash", "-c", BOOT.replace("-m runner.remote", "-m runner.refill_remote")
+                         if args.profile == "native-refills" else BOOT],
                 flavor=flavor,
                 name=f"lerobot-review5388-{args.run}",
                 timeout=f"{args.minutes}m",
