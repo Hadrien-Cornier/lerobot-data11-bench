@@ -1,4 +1,8 @@
 run,cell,dataset,reader,workload,tolerance_ms,source_check,catalog_manifest_sha256,trace_status,prefix,batches,raw_anchors,unique_anchors,unique_in_bounds,duplicates,out_of_range,admitted_episodes,delivered_episodes,source_frames,source_episodes,source_coverage_fraction
+abc-history01,abc-prepared-history-baseline,abc,baseline,action100_history_0p8s,0.1,verified,9f705fad4fd6d87dae4dd1141419c8ab8dbc7e1583ccd0401030fce2fac2abbd,ok,batch_1,1,8,8,8,0,0,32,7,382468339,129225,0.000000021
+abc-history01,abc-prepared-history-baseline,abc,baseline,action100_history_0p8s,0.1,verified,9f705fad4fd6d87dae4dd1141419c8ab8dbc7e1583ccd0401030fce2fac2abbd,ok,batch_125,125,1000,1000,1000,0,0,32,32,382468339,129225,0.000002615
+abc-history01,abc-prepared-history-baseline,abc,baseline,action100_history_0p8s,0.1,verified,9f705fad4fd6d87dae4dd1141419c8ab8dbc7e1583ccd0401030fce2fac2abbd,ok,batch_1000,1000,8000,8000,8000,0,0,32,32,382468339,129225,0.000020917
+abc-history01,abc-prepared-history-baseline,abc,baseline,action100_history_0p8s,0.1,verified,9f705fad4fd6d87dae4dd1141419c8ab8dbc7e1583ccd0401030fce2fac2abbd,ok,end,36193,289544,289544,289544,0,0,109,109,382468339,129225,0.000757040
 matrix03,abc-cold-baseline,abc,baseline,action100,0.1,verified,9f705fad4fd6d87dae4dd1141419c8ab8dbc7e1583ccd0401030fce2fac2abbd,ok,batch_1,1,8,8,8,0,0,32,7,382468339,129225,0.000000021
 matrix03,abc-cold-baseline,abc,baseline,action100,0.1,verified,9f705fad4fd6d87dae4dd1141419c8ab8dbc7e1583ccd0401030fce2fac2abbd,ok,batch_125,125,1000,1000,1000,0,0,32,32,382468339,129225,0.000002615
 matrix03,abc-cold-baseline,abc,baseline,action100,0.1,verified,9f705fad4fd6d87dae4dd1141419c8ab8dbc7e1583ccd0401030fce2fac2abbd,ok,batch_1000,1000,8000,8000,8000,0,0,32,32,382468339,129225,0.000020917

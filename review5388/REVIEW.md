@@ -2,7 +2,7 @@
 
 Quentin's draft avoids the cold MP4 indexing wait. On the reported MolmoAct2 bucket it constructed the reader in 6.93 seconds and yielded its first current-frame sample at 15.13 seconds. With the 100-step action targets used for training, it delivered zero batches on MolmoAct2, ABC-130K and DROID. Pepijn's cold baseline delivered 1,000 batches in 653.7 seconds on MolmoAct2, 2,598.0 seconds on ABC-130K and 325.5 seconds on DROID.
 
-This interim report contains finished CPU runs and local correctness checks. Cold starts, simulated publisher-index receipt, local restarts and the first ABC camera-history prefix have completed. A longer Molmo crossover test, worker-memory measurements and a longer ABC history repeat are the remaining experiments. The reviewed draft opened November 16, 2026 at 19:06 UTC and GitHub shows its last update at 19:09 UTC the same day. The pinned head is `1a60cb4b`. [LeRobot #5388](https://github.com/huggingface/lerobot/pull/5388) · [Prerequisite Datasets #8983](https://github.com/huggingface/datasets/pull/8983)
+This interim report contains finished CPU runs and local correctness checks. Cold starts, simulated publisher-index receipt, local restarts, the long ABC camera-history run, and the ABC and DROID worker-memory measurements have completed. The longer Molmo crossover test and fresh index-recipient control remain in progress. The reviewed draft opened November 16, 2026 at 19:06 UTC and GitHub shows its last update at 19:09 UTC the same day. The pinned head is `1a60cb4b`. [LeRobot #5388](https://github.com/huggingface/lerobot/pull/5388) · [Prerequisite Datasets #8983](https://github.com/huggingface/datasets/pull/8983)
 
 For the primary workload, a usable batch has eight distinct new `(episode, frame)` anchors, the expected tensor shapes and dtypes for the three cameras, state and 100 actions, and the expected camera padding values. Each distinct anchor counts once, including anchors near episode ends where future actions require padding. We checked actual pixels, action and state values and all padding against an independent FFmpeg-backed reader on the finite fixture. The independent episode-length check also verified the cloud anchor bounds. The large-corpus measurements cover prefixes of a finite pass.
 
@@ -40,6 +40,9 @@ The draft raised `TypeError: expected Tensor as element 0 in argument 0, but got
 | Quentin, Warm restart (2 runs) | 1.7–1.8 | — | — | — | — | — / — | 4.63–5.27 | — |
 | Pepijn, History, warm | 8.0 | 89.0 | 95.1 | 135.9 | — | 6.98 / — | 22.66 | — |
 | Quentin, History, warm | 0.9 | — | — | — | — | — / — | 4.69 | — |
+| Pepijn, History, private index | 154.9 | 267.8 | 276.0 | 326.7 | 144.3 | 6.98 / 5.87 | 24.09 | 30.68 |
+
+Requesting 0.8 seconds of history means five images per camera, or 15 images per example. The prepared baseline delivered 144.3 distinct windows/s across two refills on the history repeat, versus 520.4 windows/s for one image per camera in the original prepared run. Both averaged 5.87 episodes per batch over the long interval. At the measured history rate a finite ABC pass would take about 30.7 days. These prepared runs used separate CPU XL hosts. The native warm history run stopped after 177,256 anchors at its time cap, before its first verified refill.
 
 The cold baseline delivered 289,544 distinct windows with 0 duplicates and 2 verified pool refills. At batch 1,000, the largest single-episode share averaged 22.4% of a batch. 0.018% of within-batch pairs were from the same episode and at most 0.2 seconds apart.
 
