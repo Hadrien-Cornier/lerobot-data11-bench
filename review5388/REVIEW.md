@@ -6,6 +6,37 @@ At 1 ms on MolmoAct2, Quentin delivered 1,000 three-camera, current-action batch
 
 The reviewed draft opened **November 16, 2026 at 19:06 UTC** and GitHub shows its last update at **19:09 UTC** that day. As checked November 19, the draft was still blocked, with review required. Baseline `fe1c5459`, proposal `1a60cb4b` and Datasets `464fe790` are pinned throughout. [LeRobot #5388](https://github.com/huggingface/lerobot/pull/5388) · [Datasets #8983](https://github.com/huggingface/datasets/pull/8983)
 
+## How long would a full epoch take?
+
+An epoch here means delivering every eligible control step in a pinned dataset once. Near an episode end, the 100-action workload pads missing future actions, so those steps still count. Each batch holds eight examples, each with three cameras. The last batch can be smaller. These are elapsed days for a single input reader on a 16-vCPU host. A model's forward pass, backward pass, and optimizer step add work outside this measurement.
+
+### All three datasets with 100 target actions per example
+
+| Dataset | Examples in one epoch | Batches including the last | Pepijn, fresh disk as published | Pepijn, fresh disk with matching index | Pepijn, warm disk | Quentin |
+|---|---:|---:|---:|---:|---:|---|
+| MolmoAct2 | 76,046,658 | 9,505,833 | 4.52 days | One refill, estimate open | 4.00–4.10 days | Failed before batch one |
+| ABC-130K | 382,468,339 | 47,808,543 | 7.97 days | 8.51 days | 7.76–11.66 days | Failed before batch one |
+| DROID | 27,630,375 | 3,453,797 | 1.19 days | 1.49 days | 0.97–1.07 days | Failed before batch one |
+| **One epoch of each, in sequence** | **486,145,372** | **60,768,173** | **13.69 days** | Missing Molmo rate | **12.84 and 16.73 days in the two warm runs** | **No usable batches** |
+
+For example, Pepijn took 617.26 seconds to deliver the first 1,000 MolmoAct2 examples (125 batches). After that it delivered 194.97 examples/s across two episode-pool refills. Delivering all 76,046,658 examples at that rate would take `617.26 + (76,046,658 - 1,000) / 194.97` seconds, or **108.5 hours**. We apply the same calculation to the other rows. The cold runs directly covered 0.308% of MolmoAct2, 0.076% of ABC-130K and 0.114% of DROID. Each projected epoch assumes its own measured rate continues. The totals sum unrounded times and retain the final batch of each dataset.
+
+In the fresh-index ABC and DROID runs, Pepijn reached batch 1,000 sooner than when it built the index. Those runs also recorded lower rates after batch 125. That difference drives the full-epoch estimates. Its cause remains open. Adding 0.8 seconds of camera history on ABC (five frames per view) changes the fresh-index estimate from **8.51 to 30.68 days**. [Workload and rate measurements](measurements/comparison.csv)
+
+### Both readers on all of MolmoAct2 with the current action only
+
+Only MolmoAct2 has a timed current-action comparison for both readers. At a common 1 ms video timestamp tolerance, the first long cold pair projects **4.13 days for Pepijn** and **8.01 days for Quentin** for the same 9,505,833 batches. Quentin's second qualifying cold run projects **10.33 days**. Pepijn's second cold run reached one refill. These runs tested each reader's own sample order and included cold startup once. [Rates and refill timings](prepared-repeats.md#what-one-full-pass-would-take)
+
+What happens if the three new fresh-index runs keep the speeds seen at the start for the entire dataset? For each pair, we extend the measured delivery rate from batch 126 to the last batch both readers completed and charge the observed startup once.
+
+| Matching index supplied to Pepijn | Last paired batch | Pepijn rate (examples/s) | Quentin rate (examples/s) | Pepijn at this rate for one epoch | Quentin at this rate for one epoch |
+|---|---:|---:|---:|---:|---:|
+| Repeat 1 | 3,552 | 107.54 | 47.13 | 8.19 days | 18.68 days |
+| Repeat 2 | 3,978 | 128.75 | 52.71 | 6.84 days | 16.70 days |
+| Repeat 3 | 4,000 | 127.45 | 67.27 | 6.91 days | 13.09 days |
+
+These are **early-rate scenarios**. The three prefixes cover 0.037–0.042% of MolmoAct2 and finish before the first verified refill. The full epoch under fresh-index conditions remains unmeasured. The longer cold runs above provide the comparison through two refills on the same workload. [Measured paired deliveries](measurements/molmo-prepared-repeats.points.txt) · [Recalculate the epoch tables with Python](full_epoch.py)
+
 ## Three-camera training with a 100-step action target
 
 For the primary workload, a usable batch has eight distinct new `(episode, frame)` anchors, the expected tensor shapes and dtypes for the three cameras, state and 100 actions, and the expected camera padding values. Each distinct anchor counts once, including anchors near episode ends where future actions require padding. We checked actual pixels, action and state values and all padding against an independent FFmpeg-backed reader on the finite fixture. The independent episode-length check also verified the cloud anchor bounds. The large-corpus measurements cover prefixes of a finite pass.
