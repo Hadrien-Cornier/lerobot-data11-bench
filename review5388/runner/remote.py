@@ -24,6 +24,8 @@ PROFILE = os.environ["PROFILE"]
 JOB_SECONDS = int(os.environ["JOB_HARD_CAP_SECONDS"])
 STARTED = time.monotonic()
 DEADLINE = STARTED + JOB_SECONDS - 240
+if PROFILE == "internvideo":
+    DEADLINE -= max(0, time.time() - int(os.environ["JOB_BOOT_STARTED_AT"]))
 API = HfApi()
 DEST = f"review5388/results/{RUN}"
 BUCKET_MANIFEST = "aebacc429d54f284e103ff10613b925f5827c347e0678846b0b6f0015dded782"
@@ -124,8 +126,8 @@ def run(label, argv, timeout, reader="baseline", cache=None, *, release=False):
                     try:
                         row = json.loads(report.read_text())
                         details = {"status": row.get("status"), "milestones": list(
-                            row.get("timings", {}).get("milestones", {})
-                        ), "progress": row.get("progress")}
+                            row.get("milestones", row.get("timings", {}).get("milestones", {}))
+                        ), "progress": row.get("checked_batches", row.get("progress"))}
                     except (FileNotFoundError, json.JSONDecodeError):
                         pass
                 print(json.dumps({"event": "heartbeat", "label": label,
@@ -471,6 +473,72 @@ def tolerance_repeat():
          single_frame=True, tolerance_s=0.001, max_batches=25000, fixed_target=True)
 
 
+def internvideo_arm(label, mode, reference):
+    arm = f"{label}-{mode}"
+    cache = CACHE / arm
+    if cache.exists():
+        raise FileExistsError(f"Cache already exists for {arm}.")
+    out = RESULTS / f"{arm}.json"
+    before = time.monotonic()
+    timeout = min(450, int(DEADLINE - before - 120))
+    code = run(arm, ["internvideo_bench.py", "--mode", mode, "--reference", reference,
+                     "--output", out], timeout, reader="candidate", cache=cache)
+    return code == 0 and out.is_file(), time.monotonic() - before
+
+
+def internvideo():
+    reference = ROOT / "internvideo_reference.json.gz"
+    shutil.copyfile(reference, RESULTS / reference.name)
+    with reference.open("rb") as stream:
+        reference_sha256 = hashlib.file_digest(stream, "sha256").hexdigest()
+    forward = ("stock", "reuse", "grouped")
+    timings = {}
+    for repeat, order in enumerate((forward, tuple(reversed(forward))), 1):
+        label = f"internvideo-r{repeat:02}"
+        if repeat == 2:
+            remaining = DEADLINE - time.monotonic()
+            planned_seconds = 1.25 * sum(timings.values()) + 180
+            if remaining < planned_seconds:
+                append({"event": "reverse-skipped", "label": label, "seconds_remaining": remaining,
+                        "seconds_needed": planned_seconds})
+                return
+        append({"event": "internvideo-setup", "label": label, "arm_order": order,
+                "reference_sha256": reference_sha256, "cache_state": "fresh_per_arm"})
+        if not verify_bucket(f"{label}-before"):
+            raise RuntimeError(f"Source check failed before {label}.")
+        failures = []
+        for mode in order:
+            complete, timings[mode] = internvideo_arm(label, mode, reference)
+            if not complete:
+                failures.append(f"{label}-{mode}")
+        valid_source = verify_bucket(f"{label}-after")
+        append({"event": "internvideo-triplet-done", "label": label, "source_valid": valid_source,
+                "failed_arms": failures, "arm_elapsed_seconds_including_upload": timings})
+        upload(label)
+        if failures or not valid_source:
+            raise RuntimeError(f"Incomplete comparison for {label}. See the private artifacts.")
+
+    control_seconds = max(timings.values())
+    for repeat in (1, 2):
+        label = f"internvideo-control-r{repeat:02}"
+        remaining = DEADLINE - time.monotonic()
+        planned_seconds = 1.25 * control_seconds + 180
+        if remaining < planned_seconds:
+            append({"event": "control-skipped", "label": label, "seconds_remaining": remaining,
+                    "seconds_needed": planned_seconds})
+            break
+        if not verify_bucket(f"{label}-before"):
+            append({"event": "control-skipped", "label": label, "reason": "source manifest"})
+            break
+        complete, control_seconds = internvideo_arm(label, "batch_singletons", reference)
+        valid_source = verify_bucket(f"{label}-after")
+        append({"event": "internvideo-control-done", "label": label, "source_valid": valid_source,
+                "complete": complete, "arm_elapsed_seconds_including_upload": control_seconds})
+        upload(label)
+        if not complete or not valid_source:
+            break
+
+
 def worker_prefetch(dataset):
     from benchmark import BATCH_SIZE, INPUTS
 
@@ -594,6 +662,8 @@ def main():
             tolerance_repeat()
         elif PROFILE == "tolerance-prepared-repeat":
             tolerance_prepared_repeat()
+        elif PROFILE == "internvideo":
+            internvideo()
         elif PROFILE == "worker-memory":
             worker_memory()
         elif PROFILE == "abc-history":

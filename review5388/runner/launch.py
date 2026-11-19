@@ -27,6 +27,7 @@ BOOT = r"""
 set -Eeuo pipefail
 umask 077
 export WORK=/work/review5388
+export JOB_BOOT_STARTED_AT="$(date +%s)"
 mkdir -p "$WORK/input"
 cd "$WORK/input"
 python3 -m pip -q install --root-user-action=ignore 'huggingface-hub==2.0.0'
@@ -52,6 +53,13 @@ def bundle(profile):
     paths.extend(sorted((ROOT / "correctness").glob("*.py")))
     if profile in ("worker-memory", "tolerance"):
         paths.append(ROOT / "worker_memory.py")
+    if profile == "internvideo":
+        paths.extend(ROOT / name for name in (
+            "internvideo_bench.py",
+            "internvideo_variants.py",
+            "internvideo_audit.py",
+            "internvideo_reference.json.gz",
+        ))
     stream = io.BytesIO()
     with tarfile.open(fileobj=stream, mode="w:gz") as archive:
         for path in paths:
@@ -129,7 +137,8 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("run", help="Unique private result folder and job label suffix.")
     parser.add_argument("--profile", choices=("probe", "matrix", "reverse", "correctness", "tolerance", "tolerance-repeat",
-                                 "tolerance-prepared-repeat", "worker-memory", "abc-history"), required=True)
+                                 "tolerance-prepared-repeat", "worker-memory", "abc-history", "internvideo"),
+                        required=True)
     parser.add_argument("--minutes", type=int, required=True)
     parser.add_argument("--wait-for-job", help="Delay workload until this earlier job stops.")
     parser.add_argument("--prepared-from-run", help="Use verified indexes from this matrix run.")
@@ -145,7 +154,7 @@ def main():
         parser.error("Invalid prepared-index run name or unsupported profile.")
     if args.profile in prepared_profiles[1:] and not args.prepared_from_run:
         parser.error("The selected profile requires --prepared-from-run.")
-    if args.profile in ("tolerance", "tolerance-repeat", "tolerance-prepared-repeat"):
+    if args.profile in ("tolerance", "tolerance-repeat", "tolerance-prepared-repeat", "internvideo"):
         args.datasets = ["bucket"]
     elif args.profile in ("worker-memory", "abc-history"):
         args.datasets = ["abc"] if args.profile == "abc-history" else args.datasets or ["abc", "droid"]
