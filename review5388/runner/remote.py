@@ -165,7 +165,7 @@ def verify_bucket(label):
 
 
 def benchmark(dataset, reader, label, cache, timeout, *, single_frame=False,
-              batches=125000, warm_batches=0, cache_state="cold", history=False, release=False):
+              batches=125000, warm_batches=0, cache_state="cold", history=False, release=False, tolerance_s=None):
     out = RESULTS / f"{label}.json"
     args = [
         "benchmark.py", "--dataset", dataset, "--reader", reader, "--output", out,
@@ -176,6 +176,8 @@ def benchmark(dataset, reader, label, cache, timeout, *, single_frame=False,
         args.append("--single-frame")
     if history:
         args.append("--history")
+    if tolerance_s is not None:
+        args += ["--tolerance-s", str(tolerance_s)]
     if warm_batches:
         args += ["--warm-batches", str(warm_batches)]
     return run(label, args, timeout, reader, cache, release=release)
@@ -197,8 +199,23 @@ def native_archive(cache):
     return None
 
 
-def capture_transfer(dataset, archive, source_cache, cache):
+def download_prepared(dataset, cache, reference):
     label = f"{dataset}-private-transfer"
+    out = RESULTS / f"{label}.json"
+    code = run(label, [
+        "runner/publisher.py", "--dataset", dataset, "--out", out, "--private-repo", REPO,
+        "--private-path", reference["path"], "--private-revision", reference["revision"],
+        "--private-destination", reference["relative_cache_path"], "--private-sha256", reference["sha256"],
+    ], 900, cache=cache)
+    if code != 0 or not out.exists():
+        return False
+    observed = json.loads(out.read_text())["private_transfer"]["sha256"]
+    if observed != reference["sha256"]:
+        raise RuntimeError(f"Prepared-index checksum changed for {dataset}")
+    return True
+
+
+def capture_transfer(dataset, archive, source_cache, cache):
     if time.monotonic() + 180 > DEADLINE:
         return False
     path = f"review5388/prepared/{RUN}/{dataset}/{archive.name}"
@@ -219,35 +236,31 @@ def capture_transfer(dataset, archive, source_cache, cache):
         "path": path, "sha256": checksum, "bytes": archive.stat().st_size,
         "seconds": time.monotonic() - start,
     })
-    out = RESULTS / f"{label}.json"
-    code = run(label, [
-        "runner/publisher.py", "--dataset", dataset, "--out", out, "--private-repo", REPO,
-        "--private-path", path, "--private-revision", commit.oid,
-        "--private-destination", relative, "--private-sha256", checksum,
-    ], 900, cache=cache)
-    if code == 0 and out.exists():
-        observed = json.loads(out.read_text())["private_transfer"]["sha256"]
-        if observed != checksum:
-            raise RuntimeError(f"Prepared-index checksum changed for {dataset}")
-        return True
-    return False
+    reference = {
+        "path": path, "revision": commit.oid,
+        "relative_cache_path": str(relative), "sha256": checksum,
+    }
+    return download_prepared(dataset, cache, reference)
 
 
 def pair(dataset, state, readers, caps, caches, *, cache_state="cold", max_batches=125000,
-         single_frame=False, history=False, warm_batches=0):
-    checks = {"dataset": dataset, "pair": state, "single_frame": single_frame, "history": history}
+         single_frame=False, history=False, warm_batches=0, tolerance_s=None):
+    checks = {"dataset": dataset, "pair": state, "single_frame": single_frame, "history": history,
+              "tolerance_s": tolerance_s or 1e-4}
     if dataset == "bucket" and not verify_bucket(f"{state}-before"):
         append({"event": "pair-skipped", "reason": "source manifest", **checks})
-        return
+        return False
     for reader in readers:
+        reader_state = cache_state[reader] if isinstance(cache_state, dict) else cache_state
         benchmark(
             dataset, reader, f"{dataset}-{state}-{reader}", caches[reader], caps[reader],
             single_frame=single_frame, history=history, batches=max_batches,
-            warm_batches=warm_batches, cache_state=cache_state,
+            warm_batches=warm_batches, cache_state=reader_state, tolerance_s=tolerance_s,
         )
     source_valid = dataset != "bucket" or verify_bucket(f"{state}-after")
     append({"event": "pair-done", "source_valid": source_valid, **checks})
     upload(f"{dataset}-{state}-pair")
+    return source_valid
 
 
 def correctness():
@@ -350,6 +363,48 @@ def probe():
          single_frame=True, max_batches=2)
 
 
+def tolerance():
+    raw_reference = os.environ.get("PREPARED_INDEX")
+    reference = json.loads(raw_reference) if raw_reference else None
+    order = ("candidate", "baseline")
+    caches = {reader: CACHE / f"bucket-tolerance-{reader}" for reader in order}
+    append({
+        "event": "tolerance-control-setup", "tolerance_s": 0.001,
+        "baseline_start_state": "fresh_metadata_and_verified_private_transfer" if reference else "fresh",
+        "candidate_start_state": "fresh", "prepared_index": reference,
+        "concurrent_jobs_at_launch": json.loads(os.environ.get("CONCURRENT_JOBS_AT_LAUNCH", "[]")),
+    })
+    cache_state = "cold"
+    if reference:
+        if not verify_bucket("tolerance-1ms-before-transfer"):
+            raise RuntimeError("Molmo inventory has changed.")
+        if not download_prepared("bucket", caches["baseline"], reference):
+            raise RuntimeError("Prepared Molmo index could not be transferred.")
+        cache_state = {"baseline": "unclassified", "candidate": "cold"}
+    state = "current-frame-tolerance-1ms"
+    valid_source = pair("bucket", state, order, {"baseline": 2200, "candidate": 1800}, caches,
+                        cache_state=cache_state, single_frame=True, tolerance_s=0.001)
+    if not valid_source:
+        return
+
+    means = []
+    for reader in order:
+        result_path = RESULTS / f"bucket-{state}-{reader}.json"
+        if not result_path.exists():
+            return
+        summary = json.loads(result_path.read_text())
+        window = summary["windows"].get("to_1000", {})
+        if summary.get("status") != "ok" or window.get("usable_unique_samples", 0) < 8000:
+            return
+        means.append(window["usable_unique_samples_per_s"])
+    seconds = int((DEADLINE - time.monotonic() - 120) / 2)
+    if seconds < 300:
+        return
+    append({"event": "tolerance-warm-repeat", "cold_prefix_valid_samples_per_s": means})
+    pair("bucket", f"{state}-warm", tuple(reversed(order)), {reader: seconds for reader in order},
+         caches, cache_state="warm", single_frame=True, tolerance_s=0.001, max_batches=1000)
+
+
 def wait_for_previous():
     job_id = os.environ.get("WAIT_FOR_JOB")
     if not job_id:
@@ -382,6 +437,7 @@ def main():
         "memory_limit_bytes": read_file("/sys/fs/cgroup/memory.max"),
         "disk_total_bytes": usage.total, "disk_free_bytes": usage.free, "started_utc": now(),
         "job_cap_seconds": JOB_SECONDS, "source_bucket_sha256": BUCKET_MANIFEST,
+        "concurrent_jobs_at_launch": json.loads(os.environ.get("CONCURRENT_JOBS_AT_LAUNCH", "[]")),
     }
     write_json(RESULTS / "host.json", metadata)
     shutil.copyfile(WORK / "requirements-resolved.txt", RESULTS / "requirements-resolved.txt")
@@ -392,6 +448,8 @@ def main():
             correctness()
         elif PROFILE == "probe":
             probe()
+        elif PROFILE == "tolerance":
+            tolerance()
         else:
             matrix()
     finally:

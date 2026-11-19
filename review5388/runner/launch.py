@@ -91,18 +91,49 @@ def prior_reservation(api, rows):
     return total
 
 
+def prepared_index(api, source_run):
+    repo_revision = api.dataset_info(REPO).sha
+    proof_path = f"review5388/results/{source_run}/bucket-private-transfer.json"
+    proof = api.hf_hub_download(REPO, proof_path, repo_type="dataset", revision=repo_revision)
+    transfer = json.loads(Path(proof).read_text())["private_transfer"]
+    expected_prefix = f"review5388/prepared/{source_run}/bucket/"
+    path = transfer["path"]
+    relative = Path(transfer["relative_cache_path"])
+    if transfer["repo"] != REPO or not path.startswith(expected_prefix) or relative.name != Path(path).name:
+        raise ValueError("The private transfer proof points to a different index.")
+    if not re.fullmatch(r"[0-9a-f]{40}", transfer["revision"]) or not re.fullmatch(
+        r"[0-9a-f]{64}", transfer["sha256"]
+    ):
+        raise ValueError("The archive revision and checksum must be exact.")
+    return {
+        "path": path,
+        "revision": transfer["revision"],
+        "sha256": transfer["sha256"],
+        "relative_cache_path": str(relative),
+        "source_run": source_run,
+        "source_proof_revision": repo_revision,
+    }
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("run", help="Unique private result folder and job label suffix.")
-    parser.add_argument("--profile", choices=("probe", "matrix", "reverse", "correctness"), required=True)
+    parser.add_argument("--profile", choices=("probe", "matrix", "reverse", "correctness", "tolerance"), required=True)
     parser.add_argument("--minutes", type=int, required=True)
     parser.add_argument("--wait-for-job", help="Delay workload until this earlier job stops.")
+    parser.add_argument("--prepared-from-run", help="Use the verified Molmo index from this matrix run.")
 
     parser.add_argument("--datasets", nargs="+", choices=("droid", "bucket", "abc"),
                         default=("droid", "bucket", "abc"))
     args = parser.parse_args()
     if not re.fullmatch(r"[a-z0-9][a-z0-9-]{2,39}", args.run):
         parser.error("Run name must use 3 to 40 lower-case letters, numbers, or hyphens.")
+    if args.profile == "tolerance":
+        if args.prepared_from_run and not re.fullmatch(r"[a-z0-9][a-z0-9-]{2,39}", args.prepared_from_run):
+            parser.error("Invalid prepared-index run name.")
+        args.datasets = ["bucket"]
+    elif args.prepared_from_run:
+        parser.error("--prepared-from-run is available with the tolerance profile.")
     if args.wait_for_job and not re.fullmatch(r"[0-9a-f]{24}", args.wait_for_job):
         parser.error("Expected a Hugging Face Job ID.")
     if args.minutes < 5:
@@ -115,6 +146,7 @@ def main():
         raise SystemExit("Hugging Face credentials are unavailable.")
     if api.dataset_info(REPO).private is not True:
         raise SystemExit("The configured artifact dataset must be private.")
+    prepared = prepared_index(api, args.prepared_from_run) if args.prepared_from_run else None
     content, digest = bundle()
     LEDGER.parent.mkdir(parents=True, exist_ok=True)
     with LEDGER.open("a+", encoding="utf-8") as ledger:
@@ -134,6 +166,7 @@ def main():
                                        force_download=True, etag_timeout=12)
         if hashlib.sha256(base64.b64decode(Path(observed).read_bytes())).hexdigest() != digest:
             raise RuntimeError("The stored bundle failed its SHA-256 check before submission.")
+        concurrent = [job.id for job in api.list_jobs(status="RUNNING")]
         append(ledger, {
             "event": "reservation",
             "run": args.run,
@@ -149,6 +182,8 @@ def main():
             "bundle_sha256": digest,
             "bundle_path": path,
             "wait_for_job": args.wait_for_job,
+            "prepared_index": prepared,
+            "concurrent_jobs_at_launch": concurrent,
         })
         try:
             job = api.run_job(
@@ -168,6 +203,8 @@ def main():
                     "RUN_DATASETS": ",".join(dict.fromkeys(args.datasets)),
                     "JOB_HARD_CAP_SECONDS": str(args.minutes * 60),
                     "WAIT_FOR_JOB": args.wait_for_job or "",
+                    "PREPARED_INDEX": json.dumps(prepared) if prepared else "",
+                    "CONCURRENT_JOBS_AT_LAUNCH": json.dumps(concurrent),
                 },
             )
         except Exception as exc:
