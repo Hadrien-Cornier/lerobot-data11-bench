@@ -98,7 +98,8 @@ def row(path, record, fixture):
         projection = (first + (size - record["config"]["batch_size"]) / rate) / 86400
     return {
         "run": path.parent.name, "cell": name, "dataset": dataset, "reader": reader,
-        "workload": workload, "cache": record["cache"], "status": record["status"],
+        "workload": workload, "tolerance_ms": 1000 * record["config"].get("tolerance_s", 0.0001),
+        "cache": record["cache"], "status": record["status"],
         "source_verified": verified,
         "raw_examples": counts["raw_samples"], "usable_unique": counts["usable_unique_samples"],
         "duplicates": counts["duplicates"], "added_consumer_prep_s": prep,

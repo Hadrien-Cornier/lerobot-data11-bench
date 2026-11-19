@@ -8,6 +8,7 @@ from hashlib import sha256
 import importlib.metadata
 import itertools
 import json
+import math
 import os
 from pathlib import Path
 import platform
@@ -23,6 +24,7 @@ from telemetry import IORecorder, ResourceSampler, Trace
 from turnover import PoolTurnover
 
 BATCH_SIZE = 8
+NATIVE_TOLERANCE_S = 1e-4
 MILESTONES = (1, 125, 1000)
 HISTORY_OFFSETS_S = [-0.8, -0.6, -0.4, -0.2, 0.0]
 PINS = {
@@ -94,6 +96,7 @@ def build_reader(args, dataset_class, repo_id, revision, fps, cameras):
         seed=args.seed,
         return_uint8=True,
         delta_timestamps=deltas,
+        tolerance_s=args.tolerance_s,
         **kwargs,
     )
 
@@ -270,7 +273,13 @@ def parse_args():
     parser.add_argument("--pool-size", type=positive_int, default=32)
     parser.add_argument("--workers", type=int, choices=(0,), default=0)
     parser.add_argument("--seed", type=int, default=42)
+    parser.add_argument(
+        "--tolerance-s", type=float, default=NATIVE_TOLERANCE_S,
+        help="Maximum timestamp difference in seconds for decoded frames (default: 0.0001).",
+    )
     args = parser.parse_args()
+    if not math.isfinite(args.tolerance_s) or args.tolerance_s < 0:
+        parser.error("--tolerance-s requires a finite nonnegative value")
     if args.history and args.dataset != "abc":
         parser.error("--history requires --dataset abc")
     if args.warm_batches and args.cache_state != "warm":
@@ -312,6 +321,7 @@ def main():
             "seed_effective": 42 if args.reader == "candidate" else args.seed,
             "camera_offsets_s": HISTORY_OFFSETS_S if args.history else [0.0],
             "action_steps": 1 if args.single_frame else 100,
+            "tolerance_s": args.tolerance_s,
         },
         "progress": progress,
         "contract": contract,

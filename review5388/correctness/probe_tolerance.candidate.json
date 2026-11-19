@@ -1,0 +1,87 @@
+{
+  "reader": "candidate",
+  "workload": "single_frame",
+  "tolerance_s": 0.001,
+  "environment": {
+    "python": "3.13.9 (main, Oct 28 2025, 12:02:14) [Clang 20.1.4 ]",
+    "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+    "packages": {
+      "datasets": "4.8.5",
+      "huggingface_hub": "1.33.0",
+      "fsspec": "2026.2.0",
+      "torch": "2.11.0",
+      "torchvision": "0.26.0",
+      "torchcodec": "0.11.1",
+      "pyarrow": "25.0.1",
+      "numpy": "2.2.6",
+      "httpx": "0.28.1",
+      "httpx2": null,
+      "hf_xet": "1.8.0",
+      "psutil": "7.2.2",
+      "lerobot": "0.6.2"
+    },
+    "lerobot_revision": "1a60cb4b800c2947834342752c32f064c8bf143c",
+    "lerobot_streaming_module_sha256": "17ec1e996af3e83de1e64b08b4550ff4c25914f41abf06329abbeb5c0f50a656",
+    "datasets_source": {
+      "revision": "464fe790b82a320350c9c686c1b7e409323a1cf3",
+      "cache_module_sha256": "16ab95f92d6d147e0ab15de55d0a4afab2553331fa520df0e6e8ae4b58ab2447"
+    },
+    "hf_hub_disable_xet": "unset"
+  },
+  "fixture": {
+    "batches": 99,
+    "expected": 786,
+    "delivered": 786,
+    "unique": 786,
+    "coverage_matches": true,
+    "checks_failed": {},
+    "first_failure": {},
+    "max_decoded_rgb8_difference": 0
+  },
+  "late_timestamp_decode_helper": [
+    {
+      "frame_index": 54901,
+      "episode_anchor": 8,
+      "ideal_s": 1830.0333333333333,
+      "quantized_query_s": 1830.033447265625,
+      "error_s": 0.00011393229169698316,
+      "strict_tolerance_s": 0.0001,
+      "strict_rejects_quantized_timestamp": true,
+      "relaxed_matches_exact": true,
+      "relaxed_selects_red_target": true,
+      "neighbor_is_blue": true,
+      "relaxed_center_rgb": [
+        254,
+        0,
+        0
+      ],
+      "neighbor_center_rgb": [
+        0,
+        0,
+        255
+      ]
+    },
+    {
+      "frame_index": 136684,
+      "episode_anchor": 2,
+      "ideal_s": 4556.133333333333,
+      "quantized_query_s": 4556.1337890625,
+      "error_s": 0.0004557291667879326,
+      "strict_tolerance_s": 0.0001,
+      "strict_rejects_quantized_timestamp": true,
+      "relaxed_matches_exact": true,
+      "relaxed_selects_red_target": true,
+      "neighbor_is_blue": true,
+      "relaxed_center_rgb": [
+        253,
+        0,
+        0
+      ],
+      "neighbor_center_rgb": [
+        0,
+        0,
+        255
+      ]
+    }
+  ]
+}
