@@ -7,8 +7,8 @@ Run the integration probe and inspect its evidence.
 ```bash
 cd /Users/HCornier/Documents/Personal/LeRobot/data11-bench/review5388
 export HF_HUB_DISABLE_PROGRESS_BARS=1
-uv run --no-project --with huggingface-hub==2.0.0 runner/launch.py probe-name --profile probe --minutes 15
-uv run --no-project --with huggingface-hub==2.0.0 runner/collect.py probe-name --logs --sync
+uv run --no-project --python 3.12 --with huggingface-hub==2.0.0 runner/launch.py probe-name --profile probe --minutes 15
+uv run --no-project --python 3.12 --with huggingface-hub==2.0.0 runner/collect.py probe-name --logs --sync
 ```
 
 Use `--profile matrix` to compare both pinned readers on one CPU XL host. The default dataset order is DROID, Molmo, and ABC. Set an explicit subset with `--datasets` if only some sources need another run. A job that changes the order of cold readers uses `--profile reverse`.
@@ -28,9 +28,9 @@ Use `runner/collect.py <run> --logs --sync` to save the status, the container lo
 The separate tolerance control uses the exact Molmo bucket. It passes 0.001 seconds to both readers, keeps batch size eight and the native pool size of 32, and starts with fresh process and disk caches. The native 0.1 ms runs remain separate.
 
 ```bash
-uv run --no-project --with huggingface-hub==2.0.0 runner/launch.py molmo-tol01 \
+uv run --no-project --python 3.12 --with huggingface-hub==2.0.0 runner/launch.py molmo-tol01 \
   --profile tolerance --minutes 92
-uv run --no-project --with huggingface-hub==2.0.0 runner/collect.py molmo-tol01 --logs --sync
+uv run --no-project --python 3.12 --with huggingface-hub==2.0.0 runner/collect.py molmo-tol01 --logs --sync
 ```
 
 To test prepared-index receipt instead, add `--prepared-from-run matrix03` after that matrix saves its verified Molmo transfer. The control downloads and verifies that index before baseline construction.
@@ -39,10 +39,10 @@ Use `--profile tolerance-repeat --minutes 75` to reverse the cold reader order a
 
 ## Measure worker memory
 
-After the main matrix verifies the prepared archives, use them for a separate baseline worker-memory job. The default source order is ABC then DROID. Each source transfers its index once. The runner uses fresh Python processes for one and four native DataLoader workers and attempts 125 batches per cell.
+After the main matrix verifies the prepared archives, use them for a separate baseline worker-memory job. The default source order is ABC then DROID. Each source transfers its index once and builds its local memory map before either reader starts. Both arms use fresh Python processes and the same disk cache. The runner starts one worker first and four workers second. The second arm can reuse metadata and pages cached by the operating system. Both arms attempt 125 batches. The runner records the available shared memory and uses the same feasible prefetch factor for both arms.
 
 ```bash
-uv run --no-project --with huggingface-hub==2.0.0 runner/launch.py worker-mem01 \
+uv run --no-project --python 3.12 --with huggingface-hub==2.0.0 runner/launch.py worker-mem01 \
   --profile worker-memory --prepared-from-run matrix03 --minutes 39
-uv run --no-project --with huggingface-hub==2.0.0 runner/collect.py worker-mem01 --logs --sync
+uv run --no-project --python 3.12 --with huggingface-hub==2.0.0 runner/collect.py worker-mem01 --logs --sync
 ```

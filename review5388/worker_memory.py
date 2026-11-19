@@ -94,6 +94,7 @@ class Monitor:
         self.expected_workers = workers
         self.done = Event()
         self.lock = Lock()
+        self.sample_lock = Lock()
         self.thread = Thread(target=self.run, name="worker-memory-monitor", daemon=True)
         self.worker_pids = set()
         self.observed_pids = set()
@@ -121,7 +122,11 @@ class Monitor:
                 worker.pid for worker in workers if worker.pid is not None
             }
 
-    def sample(self):
+    def sample(self, reason="periodic", *, force_mappings=False):
+        with self.sample_lock:
+            self._sample(reason, force_mappings)
+
+    def _sample(self, reason, force_mappings):
         import psutil
 
         now = perf_counter()
@@ -131,7 +136,7 @@ class Monitor:
         scan_mappings = (
             mapped_path is not None
             and self.maps_interval > 0
-            and now - self.last_mapping >= self.maps_interval
+            and (force_mappings or now - self.last_mapping >= self.maps_interval)
         )
         if scan_mappings:
             self.last_mapping = now
@@ -176,6 +181,8 @@ class Monitor:
             and all(item.get("mapped_sidecar") is not None for item in processes)
         )
         memory = {
+            "sample_reason": reason,
+            "mapped_scan_requested": scan_mappings,
             "rss_sum_bytes": sum(item["rss_bytes"] for item in processes)
             if complete_rss
             else None,
@@ -242,12 +249,15 @@ class Monitor:
                 "last_sample": self.latest,
                 "rss_basis": "process_tree_sum; repeated shared pages can contribute once per process",
                 "pss_basis": "sum of Linux smaps_rollup Pss for a complete sampled process tree",
-                "mapped_basis": "sparse smaps sums for the native derived sidecar path only",
+                "mapped_basis": (
+                    "sampled smaps sums for the native derived sidecar path only; "
+                    "includes batch 125 and the last live sample when mapping scans are enabled"
+                ),
             }
 
     def start(self):
         self.network_start = network_bytes()
-        self.sample()
+        self.sample("start")
         self.thread.start()
 
     def stop(self):
@@ -331,6 +341,11 @@ def verify_batch(batch, specs, lengths):
     return schema, ids, errors
 
 
+def file_generation(path):
+    info = path.stat()
+    return (info.st_dev, info.st_ino, info.st_size, info.st_mtime_ns)
+
+
 def expected_schema(meta):
     def spec(dimensions, dtype):
         return {"shape": [BATCH_SIZE, *dimensions], "dtype": dtype}
@@ -373,6 +388,8 @@ def measure(args):
             "prefetch_factor": args.prefetch_factor,
             "persistent_workers": True,
             "context": "spawn",
+            "cache_scope": "fresh reader process; host filesystem page cache is shared",
+            "require_mapped_index": args.require_mapped_index,
             "tolerance_s": NATIVE_TOLERANCE_S,
             "seed": 42,
             "return_uint8": True,
@@ -398,11 +415,18 @@ def measure(args):
         torch.set_num_threads(1)
         expected_path, sidecar = sidecar_input(args)
         result["sidecar"] = sidecar
+        mapped_before = None
         if expected_path is not None:
             mapped_path = _cache_path(expected_path)
+            if mapped_path.is_file():
+                mapped_before = file_generation(mapped_path)
             result["sidecar"]["mapped_index_existed_before_construction"] = (
-                mapped_path.is_file()
+                mapped_before is not None
             )
+            if args.require_mapped_index and mapped_before is None:
+                raise FileNotFoundError(
+                    f"Required derived MP4 index is missing: {mapped_path}"
+                )
             monitor.mapped_path = str(mapped_path.resolve())
         if args.fixture_root is not None:
             repo, revision, root, repo_type = (
@@ -461,6 +485,8 @@ def measure(args):
                 seed=42,
                 delta_timestamps=deltas,
                 tolerance_s=NATIVE_TOLERANCE_S,
+                max_num_shards=max(1, args.workers),
+                repeat=True,
             )
         result["constructor_s"] = perf_counter() - measurement_start
         actual_path = Path(dataset._sidecar_path).resolve()
@@ -477,6 +503,13 @@ def measure(args):
         ):
             raise ValueError("Source does not match the expected three-camera workload")
         actual_map = _cache_path(actual_path)
+        if mapped_before is not None:
+            reused = mapped_before == file_generation(actual_map)
+            result["sidecar"]["mapped_index_reused"] = reused
+            if args.require_mapped_index and not reused:
+                raise RuntimeError(
+                    "The native reader rebuilt the required derived MP4 index"
+                )
         with monitor.lock:
             monitor.mapped_path = str(actual_map.resolve())
         result["sidecar"].update(
@@ -501,6 +534,7 @@ def measure(args):
             per_worker_byte_budget=max(1, dataset.byte_budget // args.workers),
             collate="lerobot_collate_fn" if collate else "default_collate",
             max_fetch_threads_per_worker=dataset.max_num_shards,
+            repeat=dataset.repeat,
             decode_threads_per_worker=dataset.decode_threads,
             decoded_queue_per_worker=dataset.decoded_queue_size,
         )
@@ -548,6 +582,8 @@ def measure(args):
             trace.write("batch", **event)
             if index == 1:
                 result["first_batch_schema"] = schema
+            if index == 125:
+                monitor.sample("batch_125", force_mappings=True)
             if index in MILESTONES:
                 result["milestones"][str(index)] = {
                     "elapsed_s": event["measurement_elapsed_s"],
@@ -577,7 +613,7 @@ def measure(args):
     finally:
         if started:
             monitor.stop()
-            monitor.sample()
+            monitor.sample("terminal", force_mappings=True)
         result["memory"] = monitor.snapshot()
         trace.write("terminal", status=result["status"], **progress)
         atomic_json(args.output, result)
@@ -643,6 +679,11 @@ def main():
     memory.add_argument("--sidecar-manifest", type=Path)
     memory.add_argument("--sidecar", type=Path)
     memory.add_argument("--sidecar-sha256")
+    memory.add_argument(
+        "--require-mapped-index",
+        action="store_true",
+        help="Require reuse of the already prepared native mapped index.",
+    )
     memory.add_argument("--max-batches", type=int, default=125)
     memory.add_argument("--prefetch-factor", type=int, default=4)
     memory.add_argument("--sample-interval-s", type=float, default=1.0)
@@ -665,6 +706,8 @@ def main():
         parser.error(
             "Supply either --sidecar-manifest or both --sidecar and --sidecar-sha256."
         )
+    if args.require_mapped_index and not args.dataset:
+        parser.error("--require-mapped-index requires --dataset.")
     if args.max_batches < 1 or args.prefetch_factor < 1:
         parser.error("Batch count and prefetch factor must be positive.")
     if not math.isfinite(args.sample_interval_s) or args.sample_interval_s <= 0:

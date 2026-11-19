@@ -8,12 +8,12 @@ import hashlib
 import io
 import json
 import math
-from pathlib import Path
 import re
+import sys
 import tarfile
+from pathlib import Path
 
 from huggingface_hub import HfApi, get_token
-
 
 ROOT = Path(__file__).resolve().parents[1]
 LEDGER = ROOT / "results" / "jobs.jsonl"
@@ -94,8 +94,8 @@ def prior_reservation(api, rows):
                     if seconds is not None and seconds >= 0:
                         billable_minutes_upper_bound = math.ceil(seconds / 60) + 1
                         reservation = min(reservation, row["usd_per_hour"] * billable_minutes_upper_bound / 60)
-            except Exception:
-                pass
+            except Exception as exc:  # noqa: BLE001
+                print(f"Kept full reservation for {job_id} ({type(exc).__name__}).", file=sys.stderr)
         total += reservation
     return total
 
@@ -128,7 +128,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("run", help="Unique private result folder and job label suffix.")
     parser.add_argument("--profile", choices=("probe", "matrix", "reverse", "correctness", "tolerance", "tolerance-repeat",
-                                 "worker-memory"), required=True)
+                                 "worker-memory", "abc-history"), required=True)
     parser.add_argument("--minutes", type=int, required=True)
     parser.add_argument("--wait-for-job", help="Delay workload until this earlier job stops.")
     parser.add_argument("--prepared-from-run", help="Use verified indexes from this matrix run.")
@@ -137,16 +137,16 @@ def main():
     args = parser.parse_args()
     if not re.fullmatch(r"[a-z0-9][a-z0-9-]{2,39}", args.run):
         parser.error("Run name must use 3 to 40 lower-case letters, numbers, or hyphens.")
-    if args.prepared_from_run and (args.profile not in ("tolerance", "worker-memory") or not re.fullmatch(
+    if args.prepared_from_run and (args.profile not in ("tolerance", "worker-memory", "abc-history") or not re.fullmatch(
         r"[a-z0-9][a-z0-9-]{2,39}", args.prepared_from_run
     )):
         parser.error("Invalid prepared-index run name or unsupported profile.")
     if args.profile in ("tolerance", "tolerance-repeat"):
         args.datasets = ["bucket"]
-    elif args.profile == "worker-memory":
+    elif args.profile in ("worker-memory", "abc-history"):
         if not args.prepared_from_run:
-            parser.error("The worker-memory profile requires --prepared-from-run.")
-        args.datasets = args.datasets or ["abc", "droid"]
+            parser.error("The selected profile requires --prepared-from-run.")
+        args.datasets = ["abc"] if args.profile == "abc-history" else args.datasets or ["abc", "droid"]
     else:
         args.datasets = args.datasets or ["droid", "bucket", "abc"]
     if args.wait_for_job and not re.fullmatch(r"[0-9a-f]{24}", args.wait_for_job):
@@ -166,7 +166,7 @@ def main():
         prepared = {dataset: prepared_index(api, args.prepared_from_run, dataset)
                     for dataset in dict.fromkeys(args.datasets)}
     elif args.prepared_from_run:
-        prepared = prepared_index(api, args.prepared_from_run)
+        prepared = prepared_index(api, args.prepared_from_run, args.datasets[0])
     content, digest = bundle(args.profile)
     LEDGER.parent.mkdir(parents=True, exist_ok=True)
     with LEDGER.open("a+", encoding="utf-8") as ledger:
@@ -195,7 +195,7 @@ def main():
             "minutes_reserved": args.minutes,
             "datasets": list(args.datasets),
             "gross_upper_bound_including_reservation": total,
-            "utc": dt.datetime.now(dt.timezone.utc).isoformat(),
+            "utc": dt.datetime.now(dt.UTC).isoformat(),
             "usd_per_hour": RATES[flavor],
             "usd_reserved": reservation,
             "bundle_revision": commit.oid,
@@ -227,7 +227,8 @@ def main():
                     "CONCURRENT_JOBS_AT_LAUNCH": json.dumps(concurrent),
                 },
             )
-        except Exception as exc:
+        # The server can accept a request before a network error reaches this client.
+        except Exception as exc:  # noqa: BLE001
             append(ledger, {"event": "submission_error", "run": args.run, "error_type": type(exc).__name__})
             raise SystemExit(f"Job submission failed ({type(exc).__name__}). Reservation remains counted.") from None
         append(ledger, {"event": "submitted", "run": args.run, "job_id": job.id, "url": job.url})

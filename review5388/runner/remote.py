@@ -4,16 +4,14 @@ import datetime as dt
 import gzip
 import hashlib
 import json
-
 import os
-from pathlib import Path
 import shutil
 import signal
 import subprocess
 import time
+from pathlib import Path
 
 from huggingface_hub import HfApi
-
 
 ROOT = Path(__file__).resolve().parents[1]
 WORK = Path(os.environ.get("WORK", "/work/review5388"))
@@ -34,7 +32,7 @@ COLD_CAP = {"bucket": 2100, "droid": 1000, "abc": 5600}
 
 
 def now():
-    return dt.datetime.now(dt.timezone.utc).isoformat()
+    return dt.datetime.now(dt.UTC).isoformat()
 
 
 def write_json(path, data):
@@ -58,7 +56,7 @@ def upload(label):
             ignore_patterns=["*.tmp"],
         )
         print(f"Saved {label} to {DEST} at {commit.oid}", flush=True)
-    except Exception as exc:
+    except Exception as exc:  # noqa: BLE001
         append({"event": "upload-failed", "label": label, "error_type": type(exc).__name__})
 
 
@@ -236,7 +234,7 @@ def capture_transfer(dataset, archive, source_cache, cache):
             path_or_fileobj=archive, path_in_repo=path, repo_id=REPO, repo_type="dataset",
             commit_message=f"Native LeRobot #5388 prepared index for {dataset}",
         )
-    except Exception as exc:
+    except Exception as exc:  # noqa: BLE001
         append({"event": "transfer-stage-failed", "dataset": dataset, "error_type": type(exc).__name__})
         return False
     append({
@@ -432,6 +430,24 @@ def worker_memory():
     for dataset in DATASETS:
         if dataset == "bucket" and not verify_bucket("worker-memory-before"):
             continue
+        shm = shutil.disk_usage("/dev/shm") if Path("/dev/shm").is_dir() else None
+        _, _, (channels, height, width), cameras = INPUTS[dataset]
+        image_bytes_per_batch = BATCH_SIZE * len(cameras) * channels * height * width
+        # Allow 128 KiB per batch for actions, state and other tensors. Reserve
+        # two additional batches and 20% of available shared memory.
+        batch_bytes = image_bytes_per_batch + 128 * 1024
+        prefetch = next(
+            (factor for factor in (4, 2, 1) if shm and (4 * factor + 2) * batch_bytes <= 0.8 * shm.free),
+            None,
+        )
+        append({"event": "worker-memory-config", "dataset": dataset, "worker_counts": [1, 4],
+                "prefetch_factor": prefetch, "dev_shm_total_bytes": shm.total if shm else None,
+                "dev_shm_free_bytes": shm.free if shm else None, "image_bytes_per_batch": image_bytes_per_batch})
+        if prefetch is None:
+            append({"event": "worker-memory-skipped", "dataset": dataset,
+                    "reason": "shared memory is too small or unavailable for four workers at prefetch factor 1"})
+            continue
+
         cache = CACHE / f"{dataset}-worker-memory"
         reference = references[dataset]
         transfer_cap = 540 if dataset == "abc" else 300
@@ -443,29 +459,26 @@ def worker_memory():
             append({"event": "worker-memory-skipped", "dataset": dataset, "reason": "mapping failed"})
             continue
 
-        shm = shutil.disk_usage("/dev/shm") if Path("/dev/shm").is_dir() else None
-        _, _, (channels, height, width), cameras = INPUTS[dataset]
-        image_bytes_per_batch = BATCH_SIZE * len(cameras) * channels * height * width
-        # Allow 128 KiB per batch for actions, state and other tensors. Reserve
-        # two additional batches and 20% of available shared memory.
-        batch_bytes = image_bytes_per_batch + 128 * 1024
-        prefetch = 4 if shm is None else next(
-            (factor for factor in (4, 2, 1) if (4 * factor + 2) * batch_bytes <= 0.8 * shm.free), 1
-        )
-        append({"event": "worker-memory-config", "dataset": dataset, "worker_counts": [1, 4],
-                "prefetch_factor": prefetch, "dev_shm_total_bytes": shm.total if shm else None,
-                "dev_shm_free_bytes": shm.free if shm else None, "image_bytes_per_batch": image_bytes_per_batch})
-
         for workers in (1, 4):
             label = f"{dataset}-worker-memory-w{workers}"
             run(label, ["worker_memory.py", "measure", "--dataset", dataset, "--workers", str(workers),
                         "--output", RESULTS / f"{label}.json", "--max-batches", "125",
-                        "--prefetch-factor", str(prefetch),
+                        "--prefetch-factor", str(prefetch), "--require-mapped-index",
                         "--sidecar-manifest", RESULTS / f"{dataset}-private-transfer.json"], 360, cache=cache)
         valid_source = dataset != "bucket" or verify_bucket("worker-memory-after")
         append({"event": "worker-memory-pair-done", "dataset": dataset, "source_valid": valid_source,
                 "worker_counts": [1, 4]})
         upload(f"{dataset}-worker-memory")
+
+
+def abc_history():
+    reference = json.loads(os.environ["PREPARED_INDEX"])
+    cache = CACHE / "abc-history-prepared"
+    if not download_prepared("abc", cache, reference, timeout=540):
+        raise RuntimeError("Prepared ABC index could not be transferred.")
+    # The earlier candidate failed before any batch for this exact history workload.
+    benchmark("abc", "baseline", "abc-prepared-history-baseline", cache, 2600,
+              history=True, cache_state="unclassified")
 
 
 def wait_for_previous():
@@ -520,6 +533,8 @@ def main():
             tolerance_repeat()
         elif PROFILE == "worker-memory":
             worker_memory()
+        elif PROFILE == "abc-history":
+            abc_history()
         else:
             matrix()
     finally:
