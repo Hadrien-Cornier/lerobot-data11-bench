@@ -9,6 +9,8 @@ from pathlib import Path
 import sys
 from typing import NamedTuple, Optional
 
+from summarize import prepared_transfer_path
+
 MILESTONES = (1, 125, 1000)
 TERMINAL = {"ok", "invalid_output", "empty", "interrupted", "error"}
 PURPOSES = ("metadata", "parquet", "sidecar_download", "sidecar_probe", "video", "unclassified_http")
@@ -268,7 +270,7 @@ def rows(path, record, run_events):
         yield total("index", name, seconds, "s", measurement=state or archive_state, artifact=artifact)
 
     prepared = reader == "baseline" and "-prepared-" in path.stem
-    transfer_path = path.parent / f"{dataset}-private-transfer.json"
+    transfer_path = prepared_transfer_path(path, dataset, run_events)
     transfer = read(transfer_path).get("private_transfer", {}) if prepared and transfer_path.is_file() else {}
     origin = None
     if archive_size is not None:

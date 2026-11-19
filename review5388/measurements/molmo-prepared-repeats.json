@@ -1,0 +1,3212 @@
+{
+  "full_pass": {
+    "manifest_sha256": "aebacc429d54f284e103ff10613b925f5827c347e0678846b0b6f0015dded782",
+    "anchors": 76046658,
+    "episodes": 32246,
+    "batch_size": 8,
+    "full_batches": 9505832,
+    "final_partial_batch_anchors": 2,
+    "delivered_batches_including_tail": 9505833,
+    "scope": "One finite current-frame iteration, one process, no DataLoader workers, incomplete final batch retained.",
+    "projection_formula": "(consumer time to batch 125 + (source anchors - 1,000) / observed anchors per second) / 86,400",
+    "projection_assumption": "The measured CPU consumer delivery rate holds through this snapshot. No model steps are timed.",
+    "minimum_projection_window": "After batch 125 through two audited pool refills and at least 125 further full batches.",
+    "coverage_percent_per_reader": {
+      "1": 1.0519857427528242e-05,
+      "125": 0.0013149821784410303,
+      "500": 0.005259928713764121,
+      "1000": 0.010519857427528242,
+      "2000": 0.021039714855056485,
+      "3000": 0.03155957228258473,
+      "4000": 0.04207942971011297
+    },
+    "repeating_trainer_fixture": "Four workers delivered 79 unique anchors in the first 86 consumed samples. See correctness/README.md."
+  },
+  "trials": {
+    "cold": {
+      "cells": [
+        "bucket-current-frame-tolerance-1ms-baseline",
+        "bucket-current-frame-tolerance-1ms-candidate"
+      ],
+      "dataset": "bucket",
+      "workload": "single_frame",
+      "cache": "cold",
+      "host_job_id": "6afe8270545f95df1c06facc",
+      "host_name": "j-hadriencornier-6afe8270545f95df1c06facc-iubq28rr-6bb07-cc9m9",
+      "tolerance_s": 0.001,
+      "batch_size": 8,
+      "source_root": "hf://buckets/pepijn223/MolmoAct2-BimanualYAM-Dataset-bucket",
+      "source_bucket_manifest_sha256": "aebacc429d54f284e103ff10613b925f5827c347e0678846b0b6f0015dded782",
+      "trace_checks": {
+        "baseline": {
+          "trace": "bucket-current-frame-tolerance-1ms-baseline.events.jsonl.gz",
+          "snapshot_errors": [],
+          "status": "ok",
+          "error": null,
+          "first_sample_s": 561.0222914370243,
+          "observed_batches": 29288,
+          "full_valid_unique_prefix_batches": 29288,
+          "first_excluded_batch": null,
+          "duplicate_anchors_in_trace": 0
+        },
+        "candidate": {
+          "trace": "bucket-current-frame-tolerance-1ms-candidate.events.jsonl.gz",
+          "snapshot_errors": [],
+          "status": "ok",
+          "error": null,
+          "first_sample_s": 15.39179395698011,
+          "observed_batches": 13300,
+          "full_valid_unique_prefix_batches": 13300,
+          "first_excluded_batch": null,
+          "duplicate_anchors_in_trace": 0
+        }
+      },
+      "anchor_validation": "source_episode_index",
+      "same_sample_ids_required_across_readers": false,
+      "horizon": {
+        "last_shared_batch": 13300,
+        "unique_anchors_per_reader": 106400,
+        "source_coverage_fraction_per_reader": 0.0013991410378612562
+      },
+      "status": "no_observed_crossover",
+      "observed_elapsed_ranges_s": {
+        "baseline": [
+          571.6213080900488,
+          1096.4667034170125
+        ],
+        "candidate": [
+          16.3442301210016,
+          996.5253541119164
+        ]
+      },
+      "first_strict_lead": {
+        "batch": 1,
+        "unique_anchors": 8,
+        "baseline_s": 571.6213080900488,
+        "candidate_s": 16.3442301210016,
+        "baseline_minus_candidate_s": 555.2770779690472,
+        "lead": "candidate"
+      },
+      "first_lead_change": null,
+      "lead_change_count": 0,
+      "lead_changes": [],
+      "final_sustained_lead_within_horizon": {
+        "reader": "candidate",
+        "first_batch": 1,
+        "through_batch": 13300,
+        "strictly_ahead_batches": 13300,
+        "minimum_requested_batches": 125,
+        "meets_minimum": true
+      },
+      "observed_batches": {
+        "1": {
+          "batch": 1,
+          "unique_anchors": 8,
+          "baseline_s": 571.6213080900488,
+          "candidate_s": 16.3442301210016,
+          "baseline_minus_candidate_s": 555.2770779690472,
+          "lead": "candidate"
+        },
+        "125": {
+          "batch": 125,
+          "unique_anchors": 1000,
+          "baseline_s": 577.4044374860823,
+          "candidate_s": 37.36255541292485,
+          "baseline_minus_candidate_s": 540.0418820731575,
+          "lead": "candidate"
+        },
+        "500": {
+          "batch": 500,
+          "unique_anchors": 4000,
+          "baseline_s": 593.6589782349765,
+          "candidate_s": 64.34490674594417,
+          "baseline_minus_candidate_s": 529.3140714890324,
+          "lead": "candidate"
+        },
+        "1000": {
+          "batch": 1000,
+          "unique_anchors": 8000,
+          "baseline_s": 616.1452506290516,
+          "candidate_s": 97.67008858092595,
+          "baseline_minus_candidate_s": 518.4751620481256,
+          "lead": "candidate"
+        },
+        "2000": {
+          "batch": 2000,
+          "unique_anchors": 16000,
+          "baseline_s": 655.9006815900793,
+          "candidate_s": 164.73976333392784,
+          "baseline_minus_candidate_s": 491.1609182561515,
+          "lead": "candidate"
+        },
+        "3000": {
+          "batch": 3000,
+          "unique_anchors": 24000,
+          "baseline_s": 695.9233772309963,
+          "candidate_s": 235.82894458191004,
+          "baseline_minus_candidate_s": 460.09443264908623,
+          "lead": "candidate"
+        },
+        "4000": {
+          "batch": 4000,
+          "unique_anchors": 32000,
+          "baseline_s": 735.2309206640348,
+          "candidate_s": 306.0229073569644,
+          "baseline_minus_candidate_s": 429.20801330707036,
+          "lead": "candidate"
+        },
+        "13300": {
+          "batch": 13300,
+          "unique_anchors": 106400,
+          "baseline_s": 1096.4667034170125,
+          "candidate_s": 996.5253541119164,
+          "baseline_minus_candidate_s": 99.94134930509608,
+          "lead": "candidate"
+        }
+      },
+      "matched_diversity_consumer_wait": {
+        "cells": [
+          "bucket-current-frame-tolerance-1ms-baseline",
+          "bucket-current-frame-tolerance-1ms-candidate"
+        ],
+        "cutoff_batches": 1000,
+        "after_batch": 0,
+        "included_batches_per_reader": 1000,
+        "prefix_batches_seen": [
+          1000,
+          1000
+        ],
+        "valid_unique_batches": [
+          1000,
+          1000
+        ],
+        "invalid_or_repeated_batches": [
+          0,
+          0
+        ],
+        "first_invalid_or_repeated_batch": [
+          null,
+          null
+        ],
+        "wait_clock": "DataLoader next() wait. Reader construction and prior index receipt are outside this clock.",
+        "status": "complete",
+        "distribution_overlap": 0.944,
+        "overlap_weighted_mean_consumer_wait_s": [
+          0.0921861107380631,
+          0.0861548105684208
+        ],
+        "unconditioned_mean_consumer_wait_s": [
+          0.09158453511237166,
+          0.08631410537729971
+        ],
+        "unconditioned_mean_distinct_episodes_per_batch": [
+          6.947,
+          7.045
+        ]
+      },
+      "crossover_conditions": "Observed cumulative delivery time without conditioning on sampling diversity.",
+      "tie_handling": "An exact tie cannot establish or reverse a lead. It does not count as strictly ahead.",
+      "reader_metrics": {
+        "baseline": {
+          "status": "ok",
+          "stop_reason": "milestones_and_steady_window",
+          "supervisor_code": 0,
+          "supervisor_timed_out": false,
+          "delivered_batches": 29288,
+          "delivered_anchors": 234304,
+          "coverage_percent": 0.30810558433744717,
+          "native_refills_replayed": [
+            18557,
+            29163
+          ],
+          "paired_after_125": {
+            "after_batch": 125,
+            "through_batch": 13300,
+            "anchors": 105400,
+            "elapsed_s": 519.0622659309302,
+            "anchors_per_s": 203.05849012346664
+          },
+          "own_after_125": {
+            "after_batch": 125,
+            "through_batch": 29288,
+            "anchors": 233304,
+            "elapsed_s": 1092.252995505929,
+            "anchors_per_s": 213.59886487830977
+          },
+          "post_refill_2_first_125": {
+            "after_batch": 29163,
+            "through_batch": 29288,
+            "anchors": 1000,
+            "elapsed_s": 5.107134809019044,
+            "anchors_per_s": 195.8045043639793
+          },
+          "finite_pass_projection": {
+            "days_at_across_refills_rate": 4.127295075756084,
+            "days_at_short_post_refill_rate": 4.501768882917172,
+            "startup_through_batch_125_s": 577.4044374860823
+          },
+          "ordered_anchor_sha256": {
+            "1": "2b18b1bffd956c2b35ee08ed27d82926401e2e669eebe06382b9af020c19547e",
+            "125": "9bd913b2c04ca739ea6804bdbd9f06622b2c17ef05a19fd0c4d1c8797c12e7c1",
+            "500": "c7fb98e6a25f0166a146972aaa9e14d1b85d8f449e39be45354a5115ba794c9e",
+            "1000": "a27504d0e095abae4285d5f8830122971aec2c3b72e5f6a0e37927fe10bc7669",
+            "2000": "9816cb4100e213c859a4be76bc120bc61e57faa58ff05f705b3138d23c95704e",
+            "3000": "ba9845335e75cb6a3fa785a689e00b66e3dfe8d4ca531d9f71fdd7b05b5db36e",
+            "4000": "f4cbd5563e7a38a1d57eecefe618227d2670d7989790e57a6c7373ecc602812c",
+            "13300": "d3a473e4a6d1e3d703822fe72c23d1f0aef91e08c650135abef3393063f4579b"
+          },
+          "reader_first_sample_s": 561.0222914370243,
+          "reader_constructor_s": 524.0466798379784,
+          "receipt_s": 0,
+          "consumer_milestones_s": {
+            "1": 571.6213080900488,
+            "125": 577.4044374860823,
+            "500": 593.6589782349765,
+            "1000": 616.1452506290516,
+            "2000": 655.9006815900793,
+            "3000": 695.9233772309963,
+            "4000": 735.2309206640348,
+            "13300": 1096.4667034170125,
+            "29288": 1669.6574329920113
+          }
+        },
+        "candidate": {
+          "status": "ok",
+          "stop_reason": "milestones_and_steady_window",
+          "supervisor_code": 0,
+          "supervisor_timed_out": false,
+          "delivered_batches": 13300,
+          "delivered_anchors": 106400,
+          "coverage_percent": 0.13991410378612562,
+          "native_refills_replayed": [
+            6878,
+            13175
+          ],
+          "paired_after_125": {
+            "after_batch": 125,
+            "through_batch": 13300,
+            "anchors": 105400,
+            "elapsed_s": 959.1627986989915,
+            "anchors_per_s": 109.88749787102311
+          },
+          "own_after_125": {
+            "after_batch": 125,
+            "through_batch": 13300,
+            "anchors": 105400,
+            "elapsed_s": 959.1627986989915,
+            "anchors_per_s": 109.88749787102311
+          },
+          "post_refill_2_first_125": {
+            "after_batch": 13175,
+            "through_batch": 13300,
+            "anchors": 1000,
+            "elapsed_s": 18.504634361946955,
+            "anchors_per_s": 54.040516577642094
+          },
+          "finite_pass_projection": {
+            "days_at_across_refills_rate": 8.010061337050091,
+            "days_at_short_post_refill_rate": 16.287435864109714,
+            "startup_through_batch_125_s": 37.36255541292485
+          },
+          "ordered_anchor_sha256": {
+            "1": "0c9c2d3a8a61bcf1ab3d332b539c046a7ebccb2a33171d8e5916b918685af98c",
+            "125": "6ee931ca34e27ec68521a05efe658c8f0b9a9c05956f2761a7c240f238cca10d",
+            "500": "77ae3f0d66526ecc81b41f52afde558b188e43e16e22e9b41413025c7a34a1e5",
+            "1000": "fc96b52afef08706deee06effe9bea3d0ca9d54d672be4f60c27f2ea6a786ea4",
+            "2000": "8479ed1d8fca69893204ece8692f359bfa5da5b8314806fe2d9e5200684f715b",
+            "3000": "5da7cb0c2c3926c6d2d42474f9cf750d789cd78539de608f156ab8c43198139b",
+            "4000": "52b5bba4c42a61946f14ca2c5f058b9715d43cb5ce647135b3b8b4e4da703a7d",
+            "13300": "73901afec65f3f49ee54555c803cf3547d2144d5e5f69c78012a669965ef67f5"
+          },
+          "reader_first_sample_s": 15.39179395698011,
+          "reader_constructor_s": 7.224546808982268,
+          "receipt_s": 0,
+          "consumer_milestones_s": {
+            "1": 16.3442301210016,
+            "125": 37.36255541292485,
+            "500": 64.34490674594417,
+            "1000": 97.67008858092595,
+            "2000": 164.73976333392784,
+            "3000": 235.82894458191004,
+            "4000": 306.0229073569644,
+            "13300": 996.5253541119164
+          }
+        }
+      },
+      "reader_order": [
+        "candidate",
+        "baseline"
+      ],
+      "target_batches": null,
+      "censored_before_target": false
+    },
+    "warm": {
+      "cells": [
+        "bucket-current-frame-tolerance-1ms-warm-baseline",
+        "bucket-current-frame-tolerance-1ms-warm-candidate"
+      ],
+      "dataset": "bucket",
+      "workload": "single_frame",
+      "cache": "warm",
+      "host_job_id": "6afe8270545f95df1c06facc",
+      "host_name": "j-hadriencornier-6afe8270545f95df1c06facc-iubq28rr-6bb07-cc9m9",
+      "tolerance_s": 0.001,
+      "batch_size": 8,
+      "source_root": "hf://buckets/pepijn223/MolmoAct2-BimanualYAM-Dataset-bucket",
+      "source_bucket_manifest_sha256": "aebacc429d54f284e103ff10613b925f5827c347e0678846b0b6f0015dded782",
+      "trace_checks": {
+        "baseline": {
+          "trace": "bucket-current-frame-tolerance-1ms-warm-baseline.events.jsonl",
+          "snapshot_errors": [],
+          "status": "ok",
+          "error": null,
+          "first_sample_s": 32.249621402006596,
+          "observed_batches": 1000,
+          "full_valid_unique_prefix_batches": 1000,
+          "first_excluded_batch": null,
+          "duplicate_anchors_in_trace": 0
+        },
+        "candidate": {
+          "trace": "bucket-current-frame-tolerance-1ms-warm-candidate.events.jsonl",
+          "snapshot_errors": [],
+          "status": "ok",
+          "error": null,
+          "first_sample_s": 9.316201464971527,
+          "observed_batches": 1000,
+          "full_valid_unique_prefix_batches": 1000,
+          "first_excluded_batch": null,
+          "duplicate_anchors_in_trace": 0
+        }
+      },
+      "anchor_validation": "source_episode_index",
+      "same_sample_ids_required_across_readers": false,
+      "horizon": {
+        "last_shared_batch": 1000,
+        "unique_anchors_per_reader": 8000,
+        "source_coverage_fraction_per_reader": 0.00010519857427528242
+      },
+      "status": "observed_crossover",
+      "observed_elapsed_ranges_s": {
+        "baseline": [
+          39.77604931301903,
+          75.20824373897631
+        ],
+        "candidate": [
+          10.310772144934162,
+          91.13511395896785
+        ]
+      },
+      "first_strict_lead": {
+        "batch": 1,
+        "unique_anchors": 8,
+        "baseline_s": 39.77604931301903,
+        "candidate_s": 10.310772144934162,
+        "baseline_minus_candidate_s": 29.465277168084867,
+        "lead": "candidate"
+      },
+      "first_lead_change": {
+        "last_batch_with_old_lead": {
+          "batch": 513,
+          "unique_anchors": 4104,
+          "baseline_s": 58.0211653750157,
+          "candidate_s": 57.96301395702176,
+          "baseline_minus_candidate_s": 0.05815141799394041,
+          "lead": "candidate"
+        },
+        "first_batch_with_new_lead": {
+          "batch": 514,
+          "unique_anchors": 4112,
+          "baseline_s": 58.05979918304365,
+          "candidate_s": 58.07628755597398,
+          "baseline_minus_candidate_s": -0.016488372930325568,
+          "lead": "baseline"
+        }
+      },
+      "lead_change_count": 1,
+      "lead_changes": [
+        {
+          "last_batch_with_old_lead": {
+            "batch": 513,
+            "unique_anchors": 4104,
+            "baseline_s": 58.0211653750157,
+            "candidate_s": 57.96301395702176,
+            "baseline_minus_candidate_s": 0.05815141799394041,
+            "lead": "candidate"
+          },
+          "first_batch_with_new_lead": {
+            "batch": 514,
+            "unique_anchors": 4112,
+            "baseline_s": 58.05979918304365,
+            "candidate_s": 58.07628755597398,
+            "baseline_minus_candidate_s": -0.016488372930325568,
+            "lead": "baseline"
+          }
+        }
+      ],
+      "final_sustained_lead_within_horizon": {
+        "reader": "baseline",
+        "first_batch": 514,
+        "through_batch": 1000,
+        "strictly_ahead_batches": 487,
+        "minimum_requested_batches": 125,
+        "meets_minimum": true
+      },
+      "observed_batches": {
+        "1": {
+          "batch": 1,
+          "unique_anchors": 8,
+          "baseline_s": 39.77604931301903,
+          "candidate_s": 10.310772144934162,
+          "baseline_minus_candidate_s": 29.465277168084867,
+          "lead": "candidate"
+        },
+        "125": {
+          "batch": 125,
+          "unique_anchors": 1000,
+          "baseline_s": 44.43498010595795,
+          "candidate_s": 29.824862892040983,
+          "baseline_minus_candidate_s": 14.610117213916965,
+          "lead": "candidate"
+        },
+        "500": {
+          "batch": 500,
+          "unique_anchors": 4000,
+          "baseline_s": 57.55293706501834,
+          "candidate_s": 57.09587477194145,
+          "baseline_minus_candidate_s": 0.4570622930768877,
+          "lead": "candidate"
+        },
+        "1000": {
+          "batch": 1000,
+          "unique_anchors": 8000,
+          "baseline_s": 75.20824373897631,
+          "candidate_s": 91.13511395896785,
+          "baseline_minus_candidate_s": -15.926870219991542,
+          "lead": "baseline"
+        },
+        "2000": null,
+        "3000": null,
+        "4000": null
+      },
+      "matched_diversity_consumer_wait": {
+        "cells": [
+          "bucket-current-frame-tolerance-1ms-warm-baseline",
+          "bucket-current-frame-tolerance-1ms-warm-candidate"
+        ],
+        "cutoff_batches": 1000,
+        "after_batch": 0,
+        "included_batches_per_reader": 1000,
+        "prefix_batches_seen": [
+          1000,
+          1000
+        ],
+        "valid_unique_batches": [
+          1000,
+          1000
+        ],
+        "invalid_or_repeated_batches": [
+          0,
+          0
+        ],
+        "first_invalid_or_repeated_batch": [
+          null,
+          null
+        ],
+        "wait_clock": "DataLoader next() wait. Reader construction and prior index receipt are outside this clock.",
+        "status": "complete",
+        "distribution_overlap": 0.944,
+        "overlap_weighted_mean_consumer_wait_s": [
+          0.07340098282903035,
+          0.08334287923628511
+        ],
+        "unconditioned_mean_consumer_wait_s": [
+          0.07296573115407955,
+          0.08424170031480026
+        ],
+        "unconditioned_mean_distinct_episodes_per_batch": [
+          6.947,
+          7.045
+        ]
+      },
+      "crossover_conditions": "Observed cumulative delivery time without conditioning on sampling diversity.",
+      "tie_handling": "An exact tie cannot establish or reverse a lead. It does not count as strictly ahead.",
+      "reader_metrics": {
+        "baseline": {
+          "status": "ok",
+          "stop_reason": "max_batches",
+          "supervisor_code": 0,
+          "supervisor_timed_out": false,
+          "delivered_batches": 1000,
+          "delivered_anchors": 8000,
+          "coverage_percent": 0.010519857427528242,
+          "native_refills_replayed": [],
+          "paired_after_125": {
+            "after_batch": 125,
+            "through_batch": 1000,
+            "anchors": 7000,
+            "elapsed_s": 30.77326363301836,
+            "anchors_per_s": 227.4701859210444
+          },
+          "own_after_125": {
+            "after_batch": 125,
+            "through_batch": 1000,
+            "anchors": 7000,
+            "elapsed_s": 30.77326363301836,
+            "anchors_per_s": 227.4701859210444
+          },
+          "post_refill_2_first_125": null,
+          "finite_pass_projection": null,
+          "ordered_anchor_sha256": {
+            "1": "2b18b1bffd956c2b35ee08ed27d82926401e2e669eebe06382b9af020c19547e",
+            "125": "9bd913b2c04ca739ea6804bdbd9f06622b2c17ef05a19fd0c4d1c8797c12e7c1",
+            "500": "c7fb98e6a25f0166a146972aaa9e14d1b85d8f449e39be45354a5115ba794c9e",
+            "1000": "a27504d0e095abae4285d5f8830122971aec2c3b72e5f6a0e37927fe10bc7669"
+          },
+          "reader_first_sample_s": 32.249621402006596,
+          "reader_constructor_s": 1.9799586109584197,
+          "receipt_s": 0,
+          "consumer_milestones_s": {
+            "1": 39.77604931301903,
+            "125": 44.43498010595795,
+            "500": 57.55293706501834,
+            "1000": 75.20824373897631
+          }
+        },
+        "candidate": {
+          "status": "ok",
+          "stop_reason": "max_batches",
+          "supervisor_code": 0,
+          "supervisor_timed_out": false,
+          "delivered_batches": 1000,
+          "delivered_anchors": 8000,
+          "coverage_percent": 0.010519857427528242,
+          "native_refills_replayed": [],
+          "paired_after_125": {
+            "after_batch": 125,
+            "through_batch": 1000,
+            "anchors": 7000,
+            "elapsed_s": 61.31025106692687,
+            "anchors_per_s": 114.17340294951218
+          },
+          "own_after_125": {
+            "after_batch": 125,
+            "through_batch": 1000,
+            "anchors": 7000,
+            "elapsed_s": 61.31025106692687,
+            "anchors_per_s": 114.17340294951218
+          },
+          "post_refill_2_first_125": null,
+          "finite_pass_projection": null,
+          "ordered_anchor_sha256": {
+            "1": "0c9c2d3a8a61bcf1ab3d332b539c046a7ebccb2a33171d8e5916b918685af98c",
+            "125": "6ee931ca34e27ec68521a05efe658c8f0b9a9c05956f2761a7c240f238cca10d",
+            "500": "77ae3f0d66526ecc81b41f52afde558b188e43e16e22e9b41413025c7a34a1e5",
+            "1000": "fc96b52afef08706deee06effe9bea3d0ca9d54d672be4f60c27f2ea6a786ea4"
+          },
+          "reader_first_sample_s": 9.316201464971527,
+          "reader_constructor_s": 1.4713859780458733,
+          "receipt_s": 0,
+          "consumer_milestones_s": {
+            "1": 10.310772144934162,
+            "125": 29.824862892040983,
+            "500": 57.09587477194145,
+            "1000": 91.13511395896785
+          }
+        }
+      },
+      "reader_order": [
+        "baseline",
+        "candidate"
+      ],
+      "target_batches": null,
+      "censored_before_target": false
+    },
+    "prepared 1k": {
+      "cells": [
+        "bucket-current-frame-tolerance-1ms-prepared-baseline",
+        "bucket-current-frame-tolerance-1ms-prepared-candidate"
+      ],
+      "dataset": "bucket",
+      "workload": "single_frame",
+      "host_job_id": "6afec18ee41aae15936d40f7",
+      "host_name": "j-hadriencornier-6afec18ee41aae15936d40f7-3ttt88qe-612fb-brdmz",
+      "tolerance_s": 0.001,
+      "batch_size": 8,
+      "publication": {
+        "mode": "simulated_publication",
+        "metadata_start_state": "fresh isolated reader caches; the baseline cache initially contains the transferred index",
+        "public_archive_status_at_audit": "absent",
+        "baseline_consumer_prep_seconds": 10.383803928969428,
+        "baseline_transfer_and_link_seconds": 8.695346435066313,
+        "baseline_archive_bytes": 1833903820,
+        "baseline_archive_sha256": "681cbf6e34f764f219d32e7c6b55cf9079de78f42ea5967f658c46cb261456ad",
+        "private_archive_revision": "d958815e552acc6aa444ab932caf5949b4e51e7e",
+        "audit": "results/downloads/review5388/results/matrix03/bucket-publisher-audit.json",
+        "receipt": "results/downloads/review5388/results/molmo-prepared01/bucket-private-transfer.json"
+      },
+      "cache_states": {
+        "baseline": "unclassified",
+        "candidate": "cold"
+      },
+      "source_root": "hf://buckets/pepijn223/MolmoAct2-BimanualYAM-Dataset-bucket",
+      "source_bucket_manifest_sha256": "aebacc429d54f284e103ff10613b925f5827c347e0678846b0b6f0015dded782",
+      "trace_checks": {
+        "baseline": {
+          "trace": "bucket-current-frame-tolerance-1ms-prepared-baseline.events.jsonl",
+          "snapshot_errors": [],
+          "status": "ok",
+          "error": null,
+          "first_sample_s": 122.16355148993898,
+          "observed_batches": 1000,
+          "full_valid_unique_prefix_batches": 1000,
+          "first_excluded_batch": null,
+          "duplicate_anchors_in_trace": 0,
+          "reader_first_sample_s": 111.77974756096955
+        },
+        "candidate": {
+          "trace": "bucket-current-frame-tolerance-1ms-prepared-candidate.events.jsonl",
+          "snapshot_errors": [],
+          "status": "ok",
+          "error": null,
+          "first_sample_s": 27.950975195039064,
+          "observed_batches": 1000,
+          "full_valid_unique_prefix_batches": 1000,
+          "first_excluded_batch": null,
+          "duplicate_anchors_in_trace": 0,
+          "reader_first_sample_s": 27.950975195039064
+        }
+      },
+      "anchor_validation": "source_episode_index",
+      "same_sample_ids_required_across_readers": false,
+      "timing_breakdown": {
+        "baseline": {
+          "consumer_prep_seconds": 10.383803928969428,
+          "reader_constructor_s": 53.64952833391726,
+          "reader_first_sample_s": 111.77974756096955,
+          "consumer_first_sample_s": 122.16355148993898,
+          "milestones": {
+            "1": {
+              "reader_elapsed_s": 128.2265935309697,
+              "consumer_elapsed_s": 138.61039745993912
+            },
+            "125": {
+              "reader_elapsed_s": 136.61230015801266,
+              "consumer_elapsed_s": 146.9961040869821
+            },
+            "500": {
+              "reader_elapsed_s": 159.8134719049558,
+              "consumer_elapsed_s": 170.19727583392523
+            },
+            "1000": {
+              "reader_elapsed_s": 189.3399640149437,
+              "consumer_elapsed_s": 199.72376794391312
+            }
+          }
+        },
+        "candidate": {
+          "consumer_prep_seconds": 0.0,
+          "reader_constructor_s": 8.268837891053408,
+          "reader_first_sample_s": 27.950975195039064,
+          "consumer_first_sample_s": 27.950975195039064,
+          "milestones": {
+            "1": {
+              "reader_elapsed_s": 34.660656707012095,
+              "consumer_elapsed_s": 34.660656707012095
+            },
+            "125": {
+              "reader_elapsed_s": 89.92786565294955,
+              "consumer_elapsed_s": 89.92786565294955
+            },
+            "500": {
+              "reader_elapsed_s": 151.31036748294719,
+              "consumer_elapsed_s": 151.31036748294719
+            },
+            "1000": {
+              "reader_elapsed_s": 224.33973061095458,
+              "consumer_elapsed_s": 224.33973061095458
+            }
+          }
+        }
+      },
+      "horizon": {
+        "last_shared_batch": 1000,
+        "unique_anchors_per_reader": 8000,
+        "source_coverage_fraction_per_reader": 0.00010519857427528242
+      },
+      "status": "observed_crossover",
+      "observed_elapsed_ranges_s": {
+        "baseline": [
+          138.61039745993912,
+          199.72376794391312
+        ],
+        "candidate": [
+          34.660656707012095,
+          224.33973061095458
+        ]
+      },
+      "first_strict_lead": {
+        "batch": 1,
+        "unique_anchors": 8,
+        "baseline_s": 138.61039745993912,
+        "candidate_s": 34.660656707012095,
+        "baseline_minus_candidate_s": 103.94974075292703,
+        "lead": "candidate",
+        "baseline_reader_s": 128.2265935309697,
+        "baseline_consumer_prep_s": 10.383803928969428
+      },
+      "first_lead_change": {
+        "last_batch_with_old_lead": {
+          "batch": 701,
+          "unique_anchors": 5608,
+          "baseline_s": 182.12641551997513,
+          "candidate_s": 182.11520749598276,
+          "baseline_minus_candidate_s": 0.011208023992367089,
+          "lead": "candidate",
+          "baseline_reader_s": 171.7426115910057,
+          "baseline_consumer_prep_s": 10.383803928969428
+        },
+        "first_batch_with_new_lead": {
+          "batch": 702,
+          "unique_anchors": 5616,
+          "baseline_s": 182.18076487490907,
+          "candidate_s": 182.25464161194395,
+          "baseline_minus_candidate_s": -0.07387673703487962,
+          "lead": "baseline",
+          "baseline_reader_s": 171.79696094593965,
+          "baseline_consumer_prep_s": 10.383803928969428
+        }
+      },
+      "lead_change_count": 1,
+      "lead_changes": [
+        {
+          "last_batch_with_old_lead": {
+            "batch": 701,
+            "unique_anchors": 5608,
+            "baseline_s": 182.12641551997513,
+            "candidate_s": 182.11520749598276,
+            "baseline_minus_candidate_s": 0.011208023992367089,
+            "lead": "candidate",
+            "baseline_reader_s": 171.7426115910057,
+            "baseline_consumer_prep_s": 10.383803928969428
+          },
+          "first_batch_with_new_lead": {
+            "batch": 702,
+            "unique_anchors": 5616,
+            "baseline_s": 182.18076487490907,
+            "candidate_s": 182.25464161194395,
+            "baseline_minus_candidate_s": -0.07387673703487962,
+            "lead": "baseline",
+            "baseline_reader_s": 171.79696094593965,
+            "baseline_consumer_prep_s": 10.383803928969428
+          }
+        }
+      ],
+      "final_sustained_lead_within_horizon": {
+        "reader": "baseline",
+        "first_batch": 702,
+        "through_batch": 1000,
+        "strictly_ahead_batches": 299,
+        "minimum_requested_batches": 125,
+        "meets_minimum": true
+      },
+      "observed_batches": {
+        "1": {
+          "batch": 1,
+          "unique_anchors": 8,
+          "baseline_s": 138.61039745993912,
+          "candidate_s": 34.660656707012095,
+          "baseline_minus_candidate_s": 103.94974075292703,
+          "lead": "candidate",
+          "baseline_reader_s": 128.2265935309697,
+          "baseline_consumer_prep_s": 10.383803928969428
+        },
+        "125": {
+          "batch": 125,
+          "unique_anchors": 1000,
+          "baseline_s": 146.9961040869821,
+          "candidate_s": 89.92786565294955,
+          "baseline_minus_candidate_s": 57.06823843403254,
+          "lead": "candidate",
+          "baseline_reader_s": 136.61230015801266,
+          "baseline_consumer_prep_s": 10.383803928969428
+        },
+        "500": {
+          "batch": 500,
+          "unique_anchors": 4000,
+          "baseline_s": 170.19727583392523,
+          "candidate_s": 151.31036748294719,
+          "baseline_minus_candidate_s": 18.886908350978047,
+          "lead": "candidate",
+          "baseline_reader_s": 159.8134719049558,
+          "baseline_consumer_prep_s": 10.383803928969428
+        },
+        "1000": {
+          "batch": 1000,
+          "unique_anchors": 8000,
+          "baseline_s": 199.72376794391312,
+          "candidate_s": 224.33973061095458,
+          "baseline_minus_candidate_s": -24.615962667041458,
+          "lead": "baseline",
+          "baseline_reader_s": 189.3399640149437,
+          "baseline_consumer_prep_s": 10.383803928969428
+        },
+        "2000": null,
+        "3000": null,
+        "4000": null
+      },
+      "matched_diversity_consumer_wait": {
+        "cells": [
+          "bucket-current-frame-tolerance-1ms-prepared-baseline",
+          "bucket-current-frame-tolerance-1ms-prepared-candidate"
+        ],
+        "cutoff_batches": 1000,
+        "after_batch": 0,
+        "included_batches_per_reader": 1000,
+        "prefix_batches_seen": [
+          1000,
+          1000
+        ],
+        "valid_unique_batches": [
+          1000,
+          1000
+        ],
+        "invalid_or_repeated_batches": [
+          0,
+          0
+        ],
+        "first_invalid_or_repeated_batch": [
+          null,
+          null
+        ],
+        "wait_clock": "DataLoader next() wait. Reader construction and prior index receipt are outside this clock.",
+        "publication": {
+          "mode": "simulated_publication",
+          "metadata_start_state": "fresh isolated reader caches; the baseline cache initially contains the transferred index",
+          "public_archive_status_at_audit": "absent",
+          "baseline_consumer_prep_seconds": 10.383803928969428,
+          "baseline_transfer_and_link_seconds": 8.695346435066313,
+          "baseline_archive_bytes": 1833903820,
+          "baseline_archive_sha256": "681cbf6e34f764f219d32e7c6b55cf9079de78f42ea5967f658c46cb261456ad",
+          "private_archive_revision": "d958815e552acc6aa444ab932caf5949b4e51e7e",
+          "audit": "results/downloads/review5388/results/matrix03/bucket-publisher-audit.json",
+          "receipt": "results/downloads/review5388/results/molmo-prepared01/bucket-private-transfer.json"
+        },
+        "status": "complete",
+        "distribution_overlap": 0.944,
+        "overlap_weighted_mean_consumer_wait_s": [
+          0.1355530646242612,
+          0.20722904859876942
+        ],
+        "unconditioned_mean_consumer_wait_s": [
+          0.1347212675367482,
+          0.20671510317793582
+        ],
+        "unconditioned_mean_distinct_episodes_per_batch": [
+          6.947,
+          7.045
+        ]
+      },
+      "crossover_conditions": "Observed cumulative delivery time without conditioning on sampling diversity.",
+      "tie_handling": "An exact tie cannot establish or reverse a lead. It does not count as strictly ahead.",
+      "reader_metrics": {
+        "baseline": {
+          "status": "ok",
+          "stop_reason": "max_batches",
+          "supervisor_code": 0,
+          "supervisor_timed_out": false,
+          "delivered_batches": 1000,
+          "delivered_anchors": 8000,
+          "coverage_percent": 0.010519857427528242,
+          "native_refills_replayed": [],
+          "paired_after_125": {
+            "after_batch": 125,
+            "through_batch": 1000,
+            "anchors": 7000,
+            "elapsed_s": 52.72766385693103,
+            "anchors_per_s": 132.75763589666136
+          },
+          "own_after_125": {
+            "after_batch": 125,
+            "through_batch": 1000,
+            "anchors": 7000,
+            "elapsed_s": 52.72766385693103,
+            "anchors_per_s": 132.75763589666136
+          },
+          "post_refill_2_first_125": null,
+          "finite_pass_projection": null,
+          "ordered_anchor_sha256": {
+            "1": "2b18b1bffd956c2b35ee08ed27d82926401e2e669eebe06382b9af020c19547e",
+            "125": "9bd913b2c04ca739ea6804bdbd9f06622b2c17ef05a19fd0c4d1c8797c12e7c1",
+            "500": "c7fb98e6a25f0166a146972aaa9e14d1b85d8f449e39be45354a5115ba794c9e",
+            "1000": "a27504d0e095abae4285d5f8830122971aec2c3b72e5f6a0e37927fe10bc7669"
+          },
+          "reader_first_sample_s": 111.77974756096955,
+          "reader_constructor_s": 53.64952833391726,
+          "receipt_s": 10.383803928969428,
+          "consumer_milestones_s": {
+            "1": 138.61039745993912,
+            "125": 146.9961040869821,
+            "500": 170.19727583392523,
+            "1000": 199.72376794391312
+          }
+        },
+        "candidate": {
+          "status": "ok",
+          "stop_reason": "max_batches",
+          "supervisor_code": 0,
+          "supervisor_timed_out": false,
+          "delivered_batches": 1000,
+          "delivered_anchors": 8000,
+          "coverage_percent": 0.010519857427528242,
+          "native_refills_replayed": [],
+          "paired_after_125": {
+            "after_batch": 125,
+            "through_batch": 1000,
+            "anchors": 7000,
+            "elapsed_s": 134.41186495800503,
+            "anchors_per_s": 52.07873577371347
+          },
+          "own_after_125": {
+            "after_batch": 125,
+            "through_batch": 1000,
+            "anchors": 7000,
+            "elapsed_s": 134.41186495800503,
+            "anchors_per_s": 52.07873577371347
+          },
+          "post_refill_2_first_125": null,
+          "finite_pass_projection": null,
+          "ordered_anchor_sha256": {
+            "1": "0c9c2d3a8a61bcf1ab3d332b539c046a7ebccb2a33171d8e5916b918685af98c",
+            "125": "6ee931ca34e27ec68521a05efe658c8f0b9a9c05956f2761a7c240f238cca10d",
+            "500": "77ae3f0d66526ecc81b41f52afde558b188e43e16e22e9b41413025c7a34a1e5",
+            "1000": "fc96b52afef08706deee06effe9bea3d0ca9d54d672be4f60c27f2ea6a786ea4"
+          },
+          "reader_first_sample_s": 27.950975195039064,
+          "reader_constructor_s": 8.268837891053408,
+          "receipt_s": 0,
+          "consumer_milestones_s": {
+            "1": 34.660656707012095,
+            "125": 89.92786565294955,
+            "500": 151.31036748294719,
+            "1000": 224.33973061095458
+          }
+        }
+      },
+      "reader_order": [
+        "baseline",
+        "candidate"
+      ],
+      "target_batches": null,
+      "censored_before_target": false,
+      "matched_diversity_after_125": {
+        "cells": [
+          "bucket-current-frame-tolerance-1ms-prepared-baseline",
+          "bucket-current-frame-tolerance-1ms-prepared-candidate"
+        ],
+        "cutoff_batches": 1000,
+        "after_batch": 125,
+        "included_batches_per_reader": 875,
+        "prefix_batches_seen": [
+          1000,
+          1000
+        ],
+        "valid_unique_batches": [
+          875,
+          875
+        ],
+        "invalid_or_repeated_batches": [
+          0,
+          0
+        ],
+        "first_invalid_or_repeated_batch": [
+          null,
+          null
+        ],
+        "wait_clock": "DataLoader next() wait. Reader construction and prior index receipt are outside this clock.",
+        "status": "complete",
+        "distribution_overlap": 0.9405714285714285,
+        "overlap_weighted_mean_consumer_wait_s": [
+          0.059300618762813104,
+          0.14352074349971802
+        ],
+        "unconditioned_mean_consumer_wait_s": [
+          0.05939166690675276,
+          0.14323448711487333
+        ],
+        "unconditioned_mean_distinct_episodes_per_batch": [
+          6.937142857142857,
+          7.042285714285715
+        ]
+      },
+      "raw_evidence": [
+        {
+          "path": "results/downloads/review5388/results/molmo-prepared01/host.json",
+          "bytes": 1377,
+          "sha256": "45d14002a06296a266eb704d2c01f7663a78480bb788c3fddac2b4be4459007d"
+        },
+        {
+          "path": "results/downloads/review5388/results/molmo-prepared01/run.jsonl",
+          "bytes": 10061,
+          "sha256": "ce1a3e6d712f6855d9c1cfcc1beb623c64042fbf9546596eff259d1d4e6343c8"
+        },
+        {
+          "path": "results/downloads/review5388/results/molmo-prepared01/bucket-manifest-current-frame-tolerance-1ms-prepared-before.json",
+          "bytes": 1010,
+          "sha256": "90b3c739ba694d813940482c724b7982b5338f064bb4437f94a21a13a6a2696c"
+        },
+        {
+          "path": "results/downloads/review5388/results/molmo-prepared01/bucket-manifest-current-frame-tolerance-1ms-prepared-after.json",
+          "bytes": 1010,
+          "sha256": "b9820213b770574dd85c7eb1052dae5bbaae0cd6d182f4d41676f37d1ef48ac4"
+        },
+        {
+          "path": "results/downloads/review5388/results/molmo-prepared01/bucket-current-frame-tolerance-1ms-prepared-baseline.json",
+          "bytes": 16817,
+          "sha256": "9de5aca54c1b8ce91eb46fdb11e852af6767bb93c103cbc45f14f26a05442027"
+        },
+        {
+          "path": "results/downloads/review5388/results/molmo-prepared01/bucket-current-frame-tolerance-1ms-prepared-candidate.json",
+          "bytes": 16439,
+          "sha256": "7d921023ffa6bc38da68ae3ca964cda13a2abcaefc30565ad87e3b6160775909"
+        },
+        {
+          "path": "results/downloads/review5388/results/molmo-prepared01/bucket-current-frame-tolerance-1ms-prepared-baseline.events.jsonl",
+          "bytes": 595485,
+          "sha256": "43dd7f8c19b6d198224df14e2c4ec5fc4c61bfae85bba16dc978fd7bfaa1c963"
+        },
+        {
+          "path": "results/downloads/review5388/results/molmo-prepared01/bucket-current-frame-tolerance-1ms-prepared-candidate.events.jsonl",
+          "bytes": 688326,
+          "sha256": "60aac79eb85b1992b3d0b24ca18d8a3b1de35f190a67be9fae012198e547186f"
+        },
+        {
+          "path": "results/downloads/review5388/results/molmo-prepared01/bucket-private-transfer.json",
+          "bytes": 600,
+          "sha256": "1567a67a6ccecc913896303f5be54e449ab9356f8f4c363724667ae15141a296"
+        },
+        {
+          "path": "results/downloads/review5388/results/matrix03/bucket-publisher-audit.json",
+          "bytes": 2268,
+          "sha256": "f510b856e2d24bc9fc14480cb66d3bd98523f4d3ee434fca531d81cb0db950eb"
+        }
+      ]
+    },
+    "r01": {
+      "cells": [
+        "bucket-current-frame-tolerance-1ms-prepared-r01-baseline",
+        "bucket-current-frame-tolerance-1ms-prepared-r01-candidate"
+      ],
+      "dataset": "bucket",
+      "workload": "single_frame",
+      "host_job_id": "6aff1ec64fdc5ab3c559f1ab",
+      "host_name": "j-hadriencornier-6aff1ec64fdc5ab3c559f1ab-ej5z0jp0-71b82-lfndk",
+      "tolerance_s": 0.001,
+      "batch_size": 8,
+      "publication": {
+        "mode": "simulated_publication",
+        "metadata_start_state": "fresh isolated reader caches; the baseline cache initially contains the transferred index",
+        "public_archive_status_at_audit": "absent",
+        "baseline_consumer_prep_seconds": 10.499813799000549,
+        "baseline_transfer_and_link_seconds": 8.856592559997807,
+        "baseline_archive_bytes": 1833903820,
+        "baseline_archive_sha256": "681cbf6e34f764f219d32e7c6b55cf9079de78f42ea5967f658c46cb261456ad",
+        "private_archive_revision": "d958815e552acc6aa444ab932caf5949b4e51e7e",
+        "audit": "results/downloads/review5388/results/matrix03/bucket-publisher-audit.json",
+        "receipt": "results/downloads/review5388/results/molmo-prepared-repeat01/bucket-private-transfer-r01.json"
+      },
+      "cache_states": {
+        "baseline": "unclassified",
+        "candidate": "cold"
+      },
+      "source_root": "hf://buckets/pepijn223/MolmoAct2-BimanualYAM-Dataset-bucket",
+      "source_bucket_manifest_sha256": "aebacc429d54f284e103ff10613b925f5827c347e0678846b0b6f0015dded782",
+      "trace_checks": {
+        "baseline": {
+          "trace": "bucket-current-frame-tolerance-1ms-prepared-r01-baseline.events.jsonl.gz",
+          "snapshot_errors": [],
+          "status": "ok",
+          "error": null,
+          "first_sample_s": 136.17794030399818,
+          "observed_batches": 4000,
+          "full_valid_unique_prefix_batches": 4000,
+          "first_excluded_batch": null,
+          "duplicate_anchors_in_trace": 0,
+          "reader_first_sample_s": 125.67812650499764
+        },
+        "candidate": {
+          "trace": "bucket-current-frame-tolerance-1ms-prepared-r01-candidate.events.jsonl.gz",
+          "snapshot_errors": [],
+          "status": "ok",
+          "error": null,
+          "first_sample_s": 34.71733085000233,
+          "observed_batches": 3552,
+          "full_valid_unique_prefix_batches": 3552,
+          "first_excluded_batch": null,
+          "duplicate_anchors_in_trace": 0,
+          "reader_first_sample_s": 34.71733085000233
+        }
+      },
+      "anchor_validation": "source_episode_index",
+      "same_sample_ids_required_across_readers": false,
+      "timing_breakdown": {
+        "baseline": {
+          "consumer_prep_seconds": 10.499813799000549,
+          "reader_constructor_s": 56.57899624399943,
+          "reader_first_sample_s": 125.67812650499764,
+          "consumer_first_sample_s": 136.17794030399818,
+          "milestones": {
+            "1": {
+              "reader_elapsed_s": 142.5976108779978,
+              "consumer_elapsed_s": 153.09742467699834
+            },
+            "125": {
+              "reader_elapsed_s": 153.20876266499909,
+              "consumer_elapsed_s": 163.70857646399963
+            },
+            "500": {
+              "reader_elapsed_s": 182.2193312829986,
+              "consumer_elapsed_s": 192.71914508199916
+            },
+            "1000": {
+              "reader_elapsed_s": 219.04275070099902,
+              "consumer_elapsed_s": 229.54256449999957
+            },
+            "2000": {
+              "reader_elapsed_s": 294.06777143399813,
+              "consumer_elapsed_s": 304.5675852329987
+            },
+            "3000": {
+              "reader_elapsed_s": 366.5403872229981,
+              "consumer_elapsed_s": 377.04020102199866
+            },
+            "4000": {
+              "reader_elapsed_s": 441.2302104269984,
+              "consumer_elapsed_s": 451.73002422599893
+            }
+          }
+        },
+        "candidate": {
+          "consumer_prep_seconds": 0.0,
+          "reader_constructor_s": 9.111886674003472,
+          "reader_first_sample_s": 34.71733085000233,
+          "consumer_first_sample_s": 34.71733085000233,
+          "milestones": {
+            "1": {
+              "reader_elapsed_s": 38.56078803700075,
+              "consumer_elapsed_s": 38.56078803700075
+            },
+            "125": {
+              "reader_elapsed_s": 98.36934074500095,
+              "consumer_elapsed_s": 98.36934074500095
+            },
+            "500": {
+              "reader_elapsed_s": 167.19571230400106,
+              "consumer_elapsed_s": 167.19571230400106
+            },
+            "1000": {
+              "reader_elapsed_s": 252.32716286900177,
+              "consumer_elapsed_s": 252.32716286900177
+            },
+            "2000": {
+              "reader_elapsed_s": 424.74169807900034,
+              "consumer_elapsed_s": 424.74169807900034
+            },
+            "3000": {
+              "reader_elapsed_s": 591.0227576540019,
+              "consumer_elapsed_s": 591.0227576540019
+            }
+          }
+        }
+      },
+      "horizon": {
+        "last_shared_batch": 3552,
+        "unique_anchors_per_reader": 28416,
+        "source_coverage_fraction_per_reader": 0.00037366533582580317
+      },
+      "status": "observed_crossover",
+      "observed_elapsed_ranges_s": {
+        "baseline": [
+          153.09742467699834,
+          418.6418538809994
+        ],
+        "candidate": [
+          38.56078803700075,
+          680.0586898470028
+        ]
+      },
+      "first_strict_lead": {
+        "batch": 1,
+        "unique_anchors": 8,
+        "baseline_s": 153.09742467699834,
+        "candidate_s": 38.56078803700075,
+        "baseline_minus_candidate_s": 114.5366366399976,
+        "lead": "candidate",
+        "baseline_reader_s": 142.5976108779978,
+        "baseline_consumer_prep_s": 10.499813799000549
+      },
+      "first_lead_change": {
+        "last_batch_with_old_lead": {
+          "batch": 761,
+          "unique_anchors": 6088,
+          "baseline_s": 211.97524662399883,
+          "candidate_s": 211.9514458110025,
+          "baseline_minus_candidate_s": 0.023800812996341847,
+          "lead": "candidate",
+          "baseline_reader_s": 201.47543282499828,
+          "baseline_consumer_prep_s": 10.499813799000549
+        },
+        "first_batch_with_new_lead": {
+          "batch": 762,
+          "unique_anchors": 6096,
+          "baseline_s": 212.05708035699718,
+          "candidate_s": 212.22696471000017,
+          "baseline_minus_candidate_s": -0.16988435300299898,
+          "lead": "baseline",
+          "baseline_reader_s": 201.55726655799663,
+          "baseline_consumer_prep_s": 10.499813799000549
+        }
+      },
+      "lead_change_count": 1,
+      "lead_changes": [
+        {
+          "last_batch_with_old_lead": {
+            "batch": 761,
+            "unique_anchors": 6088,
+            "baseline_s": 211.97524662399883,
+            "candidate_s": 211.9514458110025,
+            "baseline_minus_candidate_s": 0.023800812996341847,
+            "lead": "candidate",
+            "baseline_reader_s": 201.47543282499828,
+            "baseline_consumer_prep_s": 10.499813799000549
+          },
+          "first_batch_with_new_lead": {
+            "batch": 762,
+            "unique_anchors": 6096,
+            "baseline_s": 212.05708035699718,
+            "candidate_s": 212.22696471000017,
+            "baseline_minus_candidate_s": -0.16988435300299898,
+            "lead": "baseline",
+            "baseline_reader_s": 201.55726655799663,
+            "baseline_consumer_prep_s": 10.499813799000549
+          }
+        }
+      ],
+      "final_sustained_lead_within_horizon": {
+        "reader": "baseline",
+        "first_batch": 762,
+        "through_batch": 3552,
+        "strictly_ahead_batches": 2791,
+        "minimum_requested_batches": 125,
+        "meets_minimum": true
+      },
+      "observed_batches": {
+        "1": {
+          "batch": 1,
+          "unique_anchors": 8,
+          "baseline_s": 153.09742467699834,
+          "candidate_s": 38.56078803700075,
+          "baseline_minus_candidate_s": 114.5366366399976,
+          "lead": "candidate",
+          "baseline_reader_s": 142.5976108779978,
+          "baseline_consumer_prep_s": 10.499813799000549
+        },
+        "125": {
+          "batch": 125,
+          "unique_anchors": 1000,
+          "baseline_s": 163.70857646399963,
+          "candidate_s": 98.36934074500095,
+          "baseline_minus_candidate_s": 65.33923571899868,
+          "lead": "candidate",
+          "baseline_reader_s": 153.20876266499909,
+          "baseline_consumer_prep_s": 10.499813799000549
+        },
+        "500": {
+          "batch": 500,
+          "unique_anchors": 4000,
+          "baseline_s": 192.71914508199916,
+          "candidate_s": 167.19571230400106,
+          "baseline_minus_candidate_s": 25.523432777998096,
+          "lead": "candidate",
+          "baseline_reader_s": 182.2193312829986,
+          "baseline_consumer_prep_s": 10.499813799000549
+        },
+        "1000": {
+          "batch": 1000,
+          "unique_anchors": 8000,
+          "baseline_s": 229.54256449999957,
+          "candidate_s": 252.32716286900177,
+          "baseline_minus_candidate_s": -22.784598369002197,
+          "lead": "baseline",
+          "baseline_reader_s": 219.04275070099902,
+          "baseline_consumer_prep_s": 10.499813799000549
+        },
+        "2000": {
+          "batch": 2000,
+          "unique_anchors": 16000,
+          "baseline_s": 304.5675852329987,
+          "candidate_s": 424.74169807900034,
+          "baseline_minus_candidate_s": -120.17411284600166,
+          "lead": "baseline",
+          "baseline_reader_s": 294.06777143399813,
+          "baseline_consumer_prep_s": 10.499813799000549
+        },
+        "3000": {
+          "batch": 3000,
+          "unique_anchors": 24000,
+          "baseline_s": 377.04020102199866,
+          "candidate_s": 591.0227576540019,
+          "baseline_minus_candidate_s": -213.98255663200325,
+          "lead": "baseline",
+          "baseline_reader_s": 366.5403872229981,
+          "baseline_consumer_prep_s": 10.499813799000549
+        },
+        "3552": {
+          "batch": 3552,
+          "unique_anchors": 28416,
+          "baseline_s": 418.6418538809994,
+          "candidate_s": 680.0586898470028,
+          "baseline_minus_candidate_s": -261.4168359660034,
+          "lead": "baseline",
+          "baseline_reader_s": 408.14204008199886,
+          "baseline_consumer_prep_s": 10.499813799000549
+        },
+        "4000": null
+      },
+      "matched_diversity_consumer_wait": {
+        "cells": [
+          "bucket-current-frame-tolerance-1ms-prepared-r01-baseline",
+          "bucket-current-frame-tolerance-1ms-prepared-r01-candidate"
+        ],
+        "cutoff_batches": 1000,
+        "after_batch": 0,
+        "included_batches_per_reader": 1000,
+        "prefix_batches_seen": [
+          1000,
+          1000
+        ],
+        "valid_unique_batches": [
+          1000,
+          1000
+        ],
+        "invalid_or_repeated_batches": [
+          0,
+          0
+        ],
+        "first_invalid_or_repeated_batch": [
+          null,
+          null
+        ],
+        "wait_clock": "DataLoader next() wait. Reader construction and prior index receipt are outside this clock.",
+        "publication": {
+          "mode": "simulated_publication",
+          "metadata_start_state": "fresh isolated reader caches; the baseline cache initially contains the transferred index",
+          "public_archive_status_at_audit": "absent",
+          "baseline_consumer_prep_seconds": 10.499813799000549,
+          "baseline_transfer_and_link_seconds": 8.856592559997807,
+          "baseline_archive_bytes": 1833903820,
+          "baseline_archive_sha256": "681cbf6e34f764f219d32e7c6b55cf9079de78f42ea5967f658c46cb261456ad",
+          "private_archive_revision": "d958815e552acc6aa444ab932caf5949b4e51e7e",
+          "audit": "results/downloads/review5388/results/matrix03/bucket-publisher-audit.json",
+          "receipt": "results/downloads/review5388/results/molmo-prepared-repeat01/bucket-private-transfer-r01.json"
+        },
+        "status": "complete",
+        "distribution_overlap": 0.944,
+        "overlap_weighted_mean_consumer_wait_s": [
+          0.16223670322141936,
+          0.2335563071123477
+        ],
+        "unconditioned_mean_consumer_wait_s": [
+          0.16127987296906576,
+          0.23575649543103283
+        ],
+        "unconditioned_mean_distinct_episodes_per_batch": [
+          6.947,
+          7.045
+        ]
+      },
+      "crossover_conditions": "Observed cumulative delivery time without conditioning on sampling diversity.",
+      "tie_handling": "An exact tie cannot establish or reverse a lead. It does not count as strictly ahead.",
+      "reader_metrics": {
+        "baseline": {
+          "status": "ok",
+          "stop_reason": "max_batches",
+          "supervisor_code": 0,
+          "supervisor_timed_out": false,
+          "delivered_batches": 4000,
+          "delivered_anchors": 32000,
+          "coverage_percent": 0.04207942971011297,
+          "native_refills_replayed": [],
+          "paired_after_125": {
+            "after_batch": 125,
+            "through_batch": 3552,
+            "anchors": 27416,
+            "elapsed_s": 254.93327741699977,
+            "anchors_per_s": 107.54186459210293
+          },
+          "own_after_125": {
+            "after_batch": 125,
+            "through_batch": 4000,
+            "anchors": 31000,
+            "elapsed_s": 288.0214477619993,
+            "anchors_per_s": 107.63087346750727
+          },
+          "post_refill_2_first_125": null,
+          "finite_pass_projection": null,
+          "ordered_anchor_sha256": {
+            "1": "2b18b1bffd956c2b35ee08ed27d82926401e2e669eebe06382b9af020c19547e",
+            "125": "9bd913b2c04ca739ea6804bdbd9f06622b2c17ef05a19fd0c4d1c8797c12e7c1",
+            "500": "c7fb98e6a25f0166a146972aaa9e14d1b85d8f449e39be45354a5115ba794c9e",
+            "1000": "a27504d0e095abae4285d5f8830122971aec2c3b72e5f6a0e37927fe10bc7669",
+            "2000": "9816cb4100e213c859a4be76bc120bc61e57faa58ff05f705b3138d23c95704e",
+            "3000": "ba9845335e75cb6a3fa785a689e00b66e3dfe8d4ca531d9f71fdd7b05b5db36e",
+            "3552": "dfc5835ec119bd6ff5edfd348f1278011969d96ed323e7c87e27ab8c1161b66d",
+            "4000": "f4cbd5563e7a38a1d57eecefe618227d2670d7989790e57a6c7373ecc602812c"
+          },
+          "reader_first_sample_s": 125.67812650499764,
+          "reader_constructor_s": 56.57899624399943,
+          "receipt_s": 10.499813799000549,
+          "consumer_milestones_s": {
+            "1": 153.09742467699834,
+            "125": 163.70857646399963,
+            "500": 192.71914508199916,
+            "1000": 229.54256449999957,
+            "2000": 304.5675852329987,
+            "3000": 377.04020102199866,
+            "3552": 418.6418538809994,
+            "4000": 451.73002422599893
+          }
+        },
+        "candidate": {
+          "status": "ok",
+          "stop_reason": "max_seconds",
+          "supervisor_code": 0,
+          "supervisor_timed_out": false,
+          "delivered_batches": 3552,
+          "delivered_anchors": 28416,
+          "coverage_percent": 0.03736653358258032,
+          "native_refills_replayed": [],
+          "paired_after_125": {
+            "after_batch": 125,
+            "through_batch": 3552,
+            "anchors": 27416,
+            "elapsed_s": 581.6893491020019,
+            "anchors_per_s": 47.13168642734161
+          },
+          "own_after_125": {
+            "after_batch": 125,
+            "through_batch": 3552,
+            "anchors": 27416,
+            "elapsed_s": 581.6893491020019,
+            "anchors_per_s": 47.13168642734161
+          },
+          "post_refill_2_first_125": null,
+          "finite_pass_projection": null,
+          "ordered_anchor_sha256": {
+            "1": "0c9c2d3a8a61bcf1ab3d332b539c046a7ebccb2a33171d8e5916b918685af98c",
+            "125": "6ee931ca34e27ec68521a05efe658c8f0b9a9c05956f2761a7c240f238cca10d",
+            "500": "77ae3f0d66526ecc81b41f52afde558b188e43e16e22e9b41413025c7a34a1e5",
+            "1000": "fc96b52afef08706deee06effe9bea3d0ca9d54d672be4f60c27f2ea6a786ea4",
+            "2000": "8479ed1d8fca69893204ece8692f359bfa5da5b8314806fe2d9e5200684f715b",
+            "3000": "5da7cb0c2c3926c6d2d42474f9cf750d789cd78539de608f156ab8c43198139b",
+            "3552": "6921387d92f98b58dd6e4430751c85e3c5a871ed8c6bdfe4488938b6466852c9"
+          },
+          "reader_first_sample_s": 34.71733085000233,
+          "reader_constructor_s": 9.111886674003472,
+          "receipt_s": 0,
+          "consumer_milestones_s": {
+            "1": 38.56078803700075,
+            "125": 98.36934074500095,
+            "500": 167.19571230400106,
+            "1000": 252.32716286900177,
+            "2000": 424.74169807900034,
+            "3000": 591.0227576540019,
+            "3552": 680.0586898470028
+          }
+        }
+      },
+      "reader_order": [
+        "baseline",
+        "candidate"
+      ],
+      "target_batches": 4000,
+      "censored_before_target": true,
+      "matched_diversity_after_125": {
+        "cells": [
+          "bucket-current-frame-tolerance-1ms-prepared-r01-baseline",
+          "bucket-current-frame-tolerance-1ms-prepared-r01-candidate"
+        ],
+        "cutoff_batches": 3552,
+        "after_batch": 125,
+        "included_batches_per_reader": 3427,
+        "prefix_batches_seen": [
+          3552,
+          3552
+        ],
+        "valid_unique_batches": [
+          3427,
+          3427
+        ],
+        "invalid_or_repeated_batches": [
+          0,
+          0
+        ],
+        "first_invalid_or_repeated_batch": [
+          null,
+          null
+        ],
+        "wait_clock": "DataLoader next() wait. Reader construction and prior index receipt are outside this clock.",
+        "status": "complete",
+        "distribution_overlap": 0.9722789611905456,
+        "overlap_weighted_mean_consumer_wait_s": [
+          0.07336913191181679,
+          0.1580129795033866
+        ],
+        "unconditioned_mean_consumer_wait_s": [
+          0.0734056937587,
+          0.15818219132303202
+        ],
+        "unconditioned_mean_distinct_episodes_per_batch": [
+          6.988327983659177,
+          7.038225853516195
+        ]
+      },
+      "raw_evidence": [
+        {
+          "path": "results/downloads/review5388/results/molmo-prepared-repeat01/host.json",
+          "bytes": 1401,
+          "sha256": "4b712c1f96f117598f287adb8ecafe5de3d6c714fc4c234e346ff1ea21897eed"
+        },
+        {
+          "path": "results/downloads/review5388/results/molmo-prepared-repeat01/run.jsonl",
+          "bytes": 20346,
+          "sha256": "90683377177db6653c531b83f9309e3c8cadcd692420da6f90b41a88995d3c66"
+        },
+        {
+          "path": "results/downloads/review5388/results/molmo-prepared-repeat01/bucket-manifest-current-frame-tolerance-1ms-prepared-r01-before.json",
+          "bytes": 1010,
+          "sha256": "8d2f691c60074bc06348384b8a03b6a8cd4e2156119cdc8c19301ebbba5ed326"
+        },
+        {
+          "path": "results/downloads/review5388/results/molmo-prepared-repeat01/bucket-manifest-current-frame-tolerance-1ms-prepared-r01-after.json",
+          "bytes": 1010,
+          "sha256": "f8d93630233eab3829d3c2041f2e49b9451852e523d7e06e0fcc247d41febaf3"
+        },
+        {
+          "path": "results/downloads/review5388/results/molmo-prepared-repeat01/bucket-manifest-tolerance-1ms-before-transfer-r01.json",
+          "bytes": 1010,
+          "sha256": "31ff0a9793203321643207c2cafabc0f2dfa696e121fbfcf6034b2dc1995f252"
+        },
+        {
+          "path": "results/downloads/review5388/results/molmo-prepared-repeat01/bucket-current-frame-tolerance-1ms-prepared-r01-baseline.json",
+          "bytes": 16852,
+          "sha256": "d78a4c6f0b2f238eb9c64cb4e73158b3ecfaa301a42bf87971f39416ad7cba7e"
+        },
+        {
+          "path": "results/downloads/review5388/results/molmo-prepared-repeat01/bucket-current-frame-tolerance-1ms-prepared-r01-candidate.json",
+          "bytes": 16454,
+          "sha256": "3589de130bae5df504a4e53993164ecb42552e177cd969814203cf5fbe0d94ef"
+        },
+        {
+          "path": "results/downloads/review5388/results/molmo-prepared-repeat01/bucket-current-frame-tolerance-1ms-prepared-r01-baseline.events.jsonl.gz",
+          "bytes": 389247,
+          "sha256": "b9b33fbb25bc30c25ad5c21d2133cab8acc3aa754d0a416fc4a4a92701bd20a1"
+        },
+        {
+          "path": "results/downloads/review5388/results/molmo-prepared-repeat01/bucket-current-frame-tolerance-1ms-prepared-r01-candidate.events.jsonl.gz",
+          "bytes": 395890,
+          "sha256": "9f7644ff3570b2c63cb763dc339b4f064c9bb8e14051708976a656877b8cd495"
+        },
+        {
+          "path": "results/downloads/review5388/results/molmo-prepared-repeat01/bucket-private-transfer-r01.json",
+          "bytes": 600,
+          "sha256": "64ea27be9249975e9a09c6a8468d886cf1059220414a452167e184bc5da170ae"
+        },
+        {
+          "path": "results/downloads/review5388/results/matrix03/bucket-publisher-audit.json",
+          "bytes": 2268,
+          "sha256": "f510b856e2d24bc9fc14480cb66d3bd98523f4d3ee434fca531d81cb0db950eb"
+        }
+      ]
+    },
+    "r02": {
+      "cells": [
+        "bucket-current-frame-tolerance-1ms-prepared-r02-baseline",
+        "bucket-current-frame-tolerance-1ms-prepared-r02-candidate"
+      ],
+      "dataset": "bucket",
+      "workload": "single_frame",
+      "host_job_id": "6aff1ec64fdc5ab3c559f1ab",
+      "host_name": "j-hadriencornier-6aff1ec64fdc5ab3c559f1ab-ej5z0jp0-71b82-lfndk",
+      "tolerance_s": 0.001,
+      "batch_size": 8,
+      "publication": {
+        "mode": "simulated_publication",
+        "metadata_start_state": "fresh isolated reader caches; the baseline cache initially contains the transferred index",
+        "public_archive_status_at_audit": "absent",
+        "baseline_consumer_prep_seconds": 10.424334826999257,
+        "baseline_transfer_and_link_seconds": 8.959607330001745,
+        "baseline_archive_bytes": 1833903820,
+        "baseline_archive_sha256": "681cbf6e34f764f219d32e7c6b55cf9079de78f42ea5967f658c46cb261456ad",
+        "private_archive_revision": "d958815e552acc6aa444ab932caf5949b4e51e7e",
+        "audit": "results/downloads/review5388/results/matrix03/bucket-publisher-audit.json",
+        "receipt": "results/downloads/review5388/results/molmo-prepared-repeat01/bucket-private-transfer-r02.json"
+      },
+      "cache_states": {
+        "baseline": "unclassified",
+        "candidate": "cold"
+      },
+      "source_root": "hf://buckets/pepijn223/MolmoAct2-BimanualYAM-Dataset-bucket",
+      "source_bucket_manifest_sha256": "aebacc429d54f284e103ff10613b925f5827c347e0678846b0b6f0015dded782",
+      "trace_checks": {
+        "baseline": {
+          "trace": "bucket-current-frame-tolerance-1ms-prepared-r02-baseline.events.jsonl",
+          "snapshot_errors": [],
+          "status": "ok",
+          "error": null,
+          "first_sample_s": 106.40706329800014,
+          "observed_batches": 4000,
+          "full_valid_unique_prefix_batches": 4000,
+          "first_excluded_batch": null,
+          "duplicate_anchors_in_trace": 0,
+          "reader_first_sample_s": 95.98272847100088
+        },
+        "candidate": {
+          "trace": "bucket-current-frame-tolerance-1ms-prepared-r02-candidate.events.jsonl.gz",
+          "snapshot_errors": [],
+          "status": "ok",
+          "error": null,
+          "first_sample_s": 31.713839396001276,
+          "observed_batches": 3978,
+          "full_valid_unique_prefix_batches": 3978,
+          "first_excluded_batch": null,
+          "duplicate_anchors_in_trace": 0,
+          "reader_first_sample_s": 31.713839396001276
+        }
+      },
+      "anchor_validation": "source_episode_index",
+      "same_sample_ids_required_across_readers": false,
+      "timing_breakdown": {
+        "baseline": {
+          "consumer_prep_seconds": 10.424334826999257,
+          "reader_constructor_s": 44.03942950400233,
+          "reader_first_sample_s": 95.98272847100088,
+          "consumer_first_sample_s": 106.40706329800014,
+          "milestones": {
+            "1": {
+              "reader_elapsed_s": 107.71577272500144,
+              "consumer_elapsed_s": 118.1401075520007
+            },
+            "125": {
+              "reader_elapsed_s": 116.26927539000098,
+              "consumer_elapsed_s": 126.69361021700024
+            },
+            "500": {
+              "reader_elapsed_s": 140.59234223300155,
+              "consumer_elapsed_s": 151.0166770600008
+            },
+            "1000": {
+              "reader_elapsed_s": 171.27213618000314,
+              "consumer_elapsed_s": 181.6964710070024
+            },
+            "2000": {
+              "reader_elapsed_s": 232.67445563700312,
+              "consumer_elapsed_s": 243.09879046400238
+            },
+            "3000": {
+              "reader_elapsed_s": 295.57100936100323,
+              "consumer_elapsed_s": 305.9953441880025
+            },
+            "4000": {
+              "reader_elapsed_s": 357.0380667770005,
+              "consumer_elapsed_s": 367.46240160399975
+            }
+          }
+        },
+        "candidate": {
+          "consumer_prep_seconds": 0.0,
+          "reader_constructor_s": 9.367574481999327,
+          "reader_first_sample_s": 31.713839396001276,
+          "consumer_first_sample_s": 31.713839396001276,
+          "milestones": {
+            "1": {
+              "reader_elapsed_s": 37.00622377000036,
+              "consumer_elapsed_s": 37.00622377000036
+            },
+            "125": {
+              "reader_elapsed_s": 95.3062317690019,
+              "consumer_elapsed_s": 95.3062317690019
+            },
+            "500": {
+              "reader_elapsed_s": 163.96623098700002,
+              "consumer_elapsed_s": 163.96623098700002
+            },
+            "1000": {
+              "reader_elapsed_s": 244.02334953600075,
+              "consumer_elapsed_s": 244.02334953600075
+            },
+            "2000": {
+              "reader_elapsed_s": 395.2823319650015,
+              "consumer_elapsed_s": 395.2823319650015
+            },
+            "3000": {
+              "reader_elapsed_s": 537.4786736060014,
+              "consumer_elapsed_s": 537.4786736060014
+            }
+          }
+        }
+      },
+      "horizon": {
+        "last_shared_batch": 3978,
+        "unique_anchors_per_reader": 31824,
+        "source_coverage_fraction_per_reader": 0.0004184799284670735
+      },
+      "status": "observed_crossover",
+      "observed_elapsed_ranges_s": {
+        "baseline": [
+          118.1401075520007,
+          366.1092874550013
+        ],
+        "candidate": [
+          37.00622377000036,
+          680.0807355139987
+        ]
+      },
+      "first_strict_lead": {
+        "batch": 1,
+        "unique_anchors": 8,
+        "baseline_s": 118.1401075520007,
+        "candidate_s": 37.00622377000036,
+        "baseline_minus_candidate_s": 81.13388378200034,
+        "lead": "candidate",
+        "baseline_reader_s": 107.71577272500144,
+        "baseline_consumer_prep_s": 10.424334826999257
+      },
+      "first_lead_change": {
+        "last_batch_with_old_lead": {
+          "batch": 373,
+          "unique_anchors": 2984,
+          "baseline_s": 142.46602302800238,
+          "candidate_s": 142.3691270820018,
+          "baseline_minus_candidate_s": 0.09689594600058626,
+          "lead": "candidate",
+          "baseline_reader_s": 132.04168820100313,
+          "baseline_consumer_prep_s": 10.424334826999257
+        },
+        "first_batch_with_new_lead": {
+          "batch": 374,
+          "unique_anchors": 2992,
+          "baseline_s": 142.5362046070004,
+          "candidate_s": 142.5917639319996,
+          "baseline_minus_candidate_s": -0.05555932499919436,
+          "lead": "baseline",
+          "baseline_reader_s": 132.11186978000114,
+          "baseline_consumer_prep_s": 10.424334826999257
+        }
+      },
+      "lead_change_count": 1,
+      "lead_changes": [
+        {
+          "last_batch_with_old_lead": {
+            "batch": 373,
+            "unique_anchors": 2984,
+            "baseline_s": 142.46602302800238,
+            "candidate_s": 142.3691270820018,
+            "baseline_minus_candidate_s": 0.09689594600058626,
+            "lead": "candidate",
+            "baseline_reader_s": 132.04168820100313,
+            "baseline_consumer_prep_s": 10.424334826999257
+          },
+          "first_batch_with_new_lead": {
+            "batch": 374,
+            "unique_anchors": 2992,
+            "baseline_s": 142.5362046070004,
+            "candidate_s": 142.5917639319996,
+            "baseline_minus_candidate_s": -0.05555932499919436,
+            "lead": "baseline",
+            "baseline_reader_s": 132.11186978000114,
+            "baseline_consumer_prep_s": 10.424334826999257
+          }
+        }
+      ],
+      "final_sustained_lead_within_horizon": {
+        "reader": "baseline",
+        "first_batch": 374,
+        "through_batch": 3978,
+        "strictly_ahead_batches": 3605,
+        "minimum_requested_batches": 125,
+        "meets_minimum": true
+      },
+      "observed_batches": {
+        "1": {
+          "batch": 1,
+          "unique_anchors": 8,
+          "baseline_s": 118.1401075520007,
+          "candidate_s": 37.00622377000036,
+          "baseline_minus_candidate_s": 81.13388378200034,
+          "lead": "candidate",
+          "baseline_reader_s": 107.71577272500144,
+          "baseline_consumer_prep_s": 10.424334826999257
+        },
+        "125": {
+          "batch": 125,
+          "unique_anchors": 1000,
+          "baseline_s": 126.69361021700024,
+          "candidate_s": 95.3062317690019,
+          "baseline_minus_candidate_s": 31.387378447998344,
+          "lead": "candidate",
+          "baseline_reader_s": 116.26927539000098,
+          "baseline_consumer_prep_s": 10.424334826999257
+        },
+        "500": {
+          "batch": 500,
+          "unique_anchors": 4000,
+          "baseline_s": 151.0166770600008,
+          "candidate_s": 163.96623098700002,
+          "baseline_minus_candidate_s": -12.949553926999215,
+          "lead": "baseline",
+          "baseline_reader_s": 140.59234223300155,
+          "baseline_consumer_prep_s": 10.424334826999257
+        },
+        "1000": {
+          "batch": 1000,
+          "unique_anchors": 8000,
+          "baseline_s": 181.6964710070024,
+          "candidate_s": 244.02334953600075,
+          "baseline_minus_candidate_s": -62.32687852899835,
+          "lead": "baseline",
+          "baseline_reader_s": 171.27213618000314,
+          "baseline_consumer_prep_s": 10.424334826999257
+        },
+        "2000": {
+          "batch": 2000,
+          "unique_anchors": 16000,
+          "baseline_s": 243.09879046400238,
+          "candidate_s": 395.2823319650015,
+          "baseline_minus_candidate_s": -152.18354150099913,
+          "lead": "baseline",
+          "baseline_reader_s": 232.67445563700312,
+          "baseline_consumer_prep_s": 10.424334826999257
+        },
+        "3000": {
+          "batch": 3000,
+          "unique_anchors": 24000,
+          "baseline_s": 305.9953441880025,
+          "candidate_s": 537.4786736060014,
+          "baseline_minus_candidate_s": -231.4833294179989,
+          "lead": "baseline",
+          "baseline_reader_s": 295.57100936100323,
+          "baseline_consumer_prep_s": 10.424334826999257
+        },
+        "3978": {
+          "batch": 3978,
+          "unique_anchors": 31824,
+          "baseline_s": 366.1092874550013,
+          "candidate_s": 680.0807355139987,
+          "baseline_minus_candidate_s": -313.97144805899734,
+          "lead": "baseline",
+          "baseline_reader_s": 355.68495262800207,
+          "baseline_consumer_prep_s": 10.424334826999257
+        },
+        "4000": null
+      },
+      "matched_diversity_consumer_wait": {
+        "cells": [
+          "bucket-current-frame-tolerance-1ms-prepared-r02-baseline",
+          "bucket-current-frame-tolerance-1ms-prepared-r02-candidate"
+        ],
+        "cutoff_batches": 1000,
+        "after_batch": 0,
+        "included_batches_per_reader": 1000,
+        "prefix_batches_seen": [
+          1000,
+          1000
+        ],
+        "valid_unique_batches": [
+          1000,
+          1000
+        ],
+        "invalid_or_repeated_batches": [
+          0,
+          0
+        ],
+        "first_invalid_or_repeated_batch": [
+          null,
+          null
+        ],
+        "wait_clock": "DataLoader next() wait. Reader construction and prior index receipt are outside this clock.",
+        "publication": {
+          "mode": "simulated_publication",
+          "metadata_start_state": "fresh isolated reader caches; the baseline cache initially contains the transferred index",
+          "public_archive_status_at_audit": "absent",
+          "baseline_consumer_prep_seconds": 10.424334826999257,
+          "baseline_transfer_and_link_seconds": 8.959607330001745,
+          "baseline_archive_bytes": 1833903820,
+          "baseline_archive_sha256": "681cbf6e34f764f219d32e7c6b55cf9079de78f42ea5967f658c46cb261456ad",
+          "private_archive_revision": "d958815e552acc6aa444ab932caf5949b4e51e7e",
+          "audit": "results/downloads/review5388/results/matrix03/bucket-publisher-audit.json",
+          "receipt": "results/downloads/review5388/results/molmo-prepared-repeat01/bucket-private-transfer-r02.json"
+        },
+        "status": "complete",
+        "distribution_overlap": 0.944,
+        "overlap_weighted_mean_consumer_wait_s": [
+          0.12717255764434926,
+          0.22664214891188042
+        ],
+        "unconditioned_mean_consumer_wait_s": [
+          0.1264040507959471,
+          0.2265574558620101
+        ],
+        "unconditioned_mean_distinct_episodes_per_batch": [
+          6.947,
+          7.045
+        ]
+      },
+      "crossover_conditions": "Observed cumulative delivery time without conditioning on sampling diversity.",
+      "tie_handling": "An exact tie cannot establish or reverse a lead. It does not count as strictly ahead.",
+      "reader_metrics": {
+        "baseline": {
+          "status": "ok",
+          "stop_reason": "max_batches",
+          "supervisor_code": 0,
+          "supervisor_timed_out": false,
+          "delivered_batches": 4000,
+          "delivered_anchors": 32000,
+          "coverage_percent": 0.04207942971011297,
+          "native_refills_replayed": [],
+          "paired_after_125": {
+            "after_batch": 125,
+            "through_batch": 3978,
+            "anchors": 30824,
+            "elapsed_s": 239.41567723800108,
+            "anchors_per_s": 128.7467903338599
+          },
+          "own_after_125": {
+            "after_batch": 125,
+            "through_batch": 4000,
+            "anchors": 31000,
+            "elapsed_s": 240.7687913869995,
+            "anchors_per_s": 128.75422857513198
+          },
+          "post_refill_2_first_125": null,
+          "finite_pass_projection": null,
+          "ordered_anchor_sha256": {
+            "1": "2b18b1bffd956c2b35ee08ed27d82926401e2e669eebe06382b9af020c19547e",
+            "125": "9bd913b2c04ca739ea6804bdbd9f06622b2c17ef05a19fd0c4d1c8797c12e7c1",
+            "500": "c7fb98e6a25f0166a146972aaa9e14d1b85d8f449e39be45354a5115ba794c9e",
+            "1000": "a27504d0e095abae4285d5f8830122971aec2c3b72e5f6a0e37927fe10bc7669",
+            "2000": "9816cb4100e213c859a4be76bc120bc61e57faa58ff05f705b3138d23c95704e",
+            "3000": "ba9845335e75cb6a3fa785a689e00b66e3dfe8d4ca531d9f71fdd7b05b5db36e",
+            "3978": "c2fde849bd34f4c5a39754103b9f551fc5d3d5bb0c3759d4e73644dc8736b5c5",
+            "4000": "f4cbd5563e7a38a1d57eecefe618227d2670d7989790e57a6c7373ecc602812c"
+          },
+          "reader_first_sample_s": 95.98272847100088,
+          "reader_constructor_s": 44.03942950400233,
+          "receipt_s": 10.424334826999257,
+          "consumer_milestones_s": {
+            "1": 118.1401075520007,
+            "125": 126.69361021700024,
+            "500": 151.0166770600008,
+            "1000": 181.6964710070024,
+            "2000": 243.09879046400238,
+            "3000": 305.9953441880025,
+            "3978": 366.1092874550013,
+            "4000": 367.46240160399975
+          }
+        },
+        "candidate": {
+          "status": "ok",
+          "stop_reason": "max_seconds",
+          "supervisor_code": 0,
+          "supervisor_timed_out": false,
+          "delivered_batches": 3978,
+          "delivered_anchors": 31824,
+          "coverage_percent": 0.04184799284670735,
+          "native_refills_replayed": [],
+          "paired_after_125": {
+            "after_batch": 125,
+            "through_batch": 3978,
+            "anchors": 30824,
+            "elapsed_s": 584.7745037449968,
+            "anchors_per_s": 52.71091643462187
+          },
+          "own_after_125": {
+            "after_batch": 125,
+            "through_batch": 3978,
+            "anchors": 30824,
+            "elapsed_s": 584.7745037449968,
+            "anchors_per_s": 52.71091643462187
+          },
+          "post_refill_2_first_125": null,
+          "finite_pass_projection": null,
+          "ordered_anchor_sha256": {
+            "1": "0c9c2d3a8a61bcf1ab3d332b539c046a7ebccb2a33171d8e5916b918685af98c",
+            "125": "6ee931ca34e27ec68521a05efe658c8f0b9a9c05956f2761a7c240f238cca10d",
+            "500": "77ae3f0d66526ecc81b41f52afde558b188e43e16e22e9b41413025c7a34a1e5",
+            "1000": "fc96b52afef08706deee06effe9bea3d0ca9d54d672be4f60c27f2ea6a786ea4",
+            "2000": "8479ed1d8fca69893204ece8692f359bfa5da5b8314806fe2d9e5200684f715b",
+            "3000": "5da7cb0c2c3926c6d2d42474f9cf750d789cd78539de608f156ab8c43198139b",
+            "3978": "790bc512221258bdf24b04d21b0e2f44d71713b2e482d15ee08b8681d50350c7"
+          },
+          "reader_first_sample_s": 31.713839396001276,
+          "reader_constructor_s": 9.367574481999327,
+          "receipt_s": 0,
+          "consumer_milestones_s": {
+            "1": 37.00622377000036,
+            "125": 95.3062317690019,
+            "500": 163.96623098700002,
+            "1000": 244.02334953600075,
+            "2000": 395.2823319650015,
+            "3000": 537.4786736060014,
+            "3978": 680.0807355139987
+          }
+        }
+      },
+      "reader_order": [
+        "candidate",
+        "baseline"
+      ],
+      "target_batches": 4000,
+      "censored_before_target": true,
+      "matched_diversity_after_125": {
+        "cells": [
+          "bucket-current-frame-tolerance-1ms-prepared-r02-baseline",
+          "bucket-current-frame-tolerance-1ms-prepared-r02-candidate"
+        ],
+        "cutoff_batches": 3978,
+        "after_batch": 125,
+        "included_batches_per_reader": 3853,
+        "prefix_batches_seen": [
+          3978,
+          3978
+        ],
+        "valid_unique_batches": [
+          3853,
+          3853
+        ],
+        "invalid_or_repeated_batches": [
+          0,
+          0
+        ],
+        "first_invalid_or_repeated_batch": [
+          null,
+          null
+        ],
+        "wait_clock": "DataLoader next() wait. Reader construction and prior index receipt are outside this clock.",
+        "status": "complete",
+        "distribution_overlap": 0.9678172852322866,
+        "overlap_weighted_mean_consumer_wait_s": [
+          0.061388798711744186,
+          0.14498352702164463
+        ],
+        "unconditioned_mean_consumer_wait_s": [
+          0.06141383972590946,
+          0.14485521637322288
+        ],
+        "unconditioned_mean_distinct_episodes_per_batch": [
+          6.99013755515183,
+          7.046197767973008
+        ]
+      },
+      "raw_evidence": [
+        {
+          "path": "results/downloads/review5388/results/molmo-prepared-repeat01/host.json",
+          "bytes": 1401,
+          "sha256": "4b712c1f96f117598f287adb8ecafe5de3d6c714fc4c234e346ff1ea21897eed"
+        },
+        {
+          "path": "results/downloads/review5388/results/molmo-prepared-repeat01/run.jsonl",
+          "bytes": 20346,
+          "sha256": "90683377177db6653c531b83f9309e3c8cadcd692420da6f90b41a88995d3c66"
+        },
+        {
+          "path": "results/downloads/review5388/results/molmo-prepared-repeat01/bucket-manifest-current-frame-tolerance-1ms-prepared-r02-before.json",
+          "bytes": 1010,
+          "sha256": "98f4922a3dedb331e26fc55d41c97d9a1a55f489ebdcb7f64a1c2a6de4e2df93"
+        },
+        {
+          "path": "results/downloads/review5388/results/molmo-prepared-repeat01/bucket-manifest-current-frame-tolerance-1ms-prepared-r02-after.json",
+          "bytes": 1010,
+          "sha256": "3ab5e654fdb5ead150f203478f9c825a8351152e7a9e3210a67c67af235245a8"
+        },
+        {
+          "path": "results/downloads/review5388/results/molmo-prepared-repeat01/bucket-manifest-tolerance-1ms-before-transfer-r02.json",
+          "bytes": 1010,
+          "sha256": "31c9a6acb58ea025b2d079556511eaafd5b40ff3023381af6ef76e4cd7fa6eec"
+        },
+        {
+          "path": "results/downloads/review5388/results/molmo-prepared-repeat01/bucket-current-frame-tolerance-1ms-prepared-r02-baseline.json",
+          "bytes": 16801,
+          "sha256": "9aca20aff6b291d62e45da4077a4bdc702dcb7f6dcae80a308575b6de419be81"
+        },
+        {
+          "path": "results/downloads/review5388/results/molmo-prepared-repeat01/bucket-current-frame-tolerance-1ms-prepared-r02-candidate.json",
+          "bytes": 16443,
+          "sha256": "4df1f483c2c0dc48d52244c8505c9aeaa8027df74df50436ec75fbf5d8a6a25f"
+        },
+        {
+          "path": "results/downloads/review5388/results/molmo-prepared-repeat01/bucket-current-frame-tolerance-1ms-prepared-r02-baseline.events.jsonl",
+          "bytes": 2076692,
+          "sha256": "e81db6f5f1277bc3431399fd3f59d88d3722069a5183ac8748e74430734ad790"
+        },
+        {
+          "path": "results/downloads/review5388/results/molmo-prepared-repeat01/bucket-current-frame-tolerance-1ms-prepared-r02-candidate.events.jsonl.gz",
+          "bytes": 433818,
+          "sha256": "b9351f6e2bea7da313e657b6e89c548fa640fe7670fa1838d82d01b074ed044f"
+        },
+        {
+          "path": "results/downloads/review5388/results/molmo-prepared-repeat01/bucket-private-transfer-r02.json",
+          "bytes": 600,
+          "sha256": "63056070967e297d671f496bd7f8bc21ec8bc8a86e3482ee038391798745e27f"
+        },
+        {
+          "path": "results/downloads/review5388/results/matrix03/bucket-publisher-audit.json",
+          "bytes": 2268,
+          "sha256": "f510b856e2d24bc9fc14480cb66d3bd98523f4d3ee434fca531d81cb0db950eb"
+        }
+      ]
+    },
+    "r03": {
+      "cells": [
+        "bucket-current-frame-tolerance-1ms-prepared-r03-baseline",
+        "bucket-current-frame-tolerance-1ms-prepared-r03-candidate"
+      ],
+      "dataset": "bucket",
+      "workload": "single_frame",
+      "host_job_id": "6aff1ec64fdc5ab3c559f1ab",
+      "host_name": "j-hadriencornier-6aff1ec64fdc5ab3c559f1ab-ej5z0jp0-71b82-lfndk",
+      "tolerance_s": 0.001,
+      "batch_size": 8,
+      "publication": {
+        "mode": "simulated_publication",
+        "metadata_start_state": "fresh isolated reader caches; the baseline cache initially contains the transferred index",
+        "public_archive_status_at_audit": "absent",
+        "baseline_consumer_prep_seconds": 9.879479778999666,
+        "baseline_transfer_and_link_seconds": 8.449460462998104,
+        "baseline_archive_bytes": 1833903820,
+        "baseline_archive_sha256": "681cbf6e34f764f219d32e7c6b55cf9079de78f42ea5967f658c46cb261456ad",
+        "private_archive_revision": "d958815e552acc6aa444ab932caf5949b4e51e7e",
+        "audit": "results/downloads/review5388/results/matrix03/bucket-publisher-audit.json",
+        "receipt": "results/downloads/review5388/results/molmo-prepared-repeat01/bucket-private-transfer-r03.json"
+      },
+      "cache_states": {
+        "baseline": "unclassified",
+        "candidate": "cold"
+      },
+      "source_root": "hf://buckets/pepijn223/MolmoAct2-BimanualYAM-Dataset-bucket",
+      "source_bucket_manifest_sha256": "aebacc429d54f284e103ff10613b925f5827c347e0678846b0b6f0015dded782",
+      "trace_checks": {
+        "baseline": {
+          "trace": "bucket-current-frame-tolerance-1ms-prepared-r03-baseline.events.jsonl",
+          "snapshot_errors": [],
+          "status": "ok",
+          "error": null,
+          "first_sample_s": 111.03817357099979,
+          "observed_batches": 4000,
+          "full_valid_unique_prefix_batches": 4000,
+          "first_excluded_batch": null,
+          "duplicate_anchors_in_trace": 0,
+          "reader_first_sample_s": 101.15869379200012
+        },
+        "candidate": {
+          "trace": "bucket-current-frame-tolerance-1ms-prepared-r03-candidate.events.jsonl.gz",
+          "snapshot_errors": [],
+          "status": "ok",
+          "error": null,
+          "first_sample_s": 27.851710535000166,
+          "observed_batches": 4000,
+          "full_valid_unique_prefix_batches": 4000,
+          "first_excluded_batch": null,
+          "duplicate_anchors_in_trace": 0,
+          "reader_first_sample_s": 27.851710535000166
+        }
+      },
+      "anchor_validation": "source_episode_index",
+      "same_sample_ids_required_across_readers": false,
+      "timing_breakdown": {
+        "baseline": {
+          "consumer_prep_seconds": 9.879479778999666,
+          "reader_constructor_s": 46.70055319200037,
+          "reader_first_sample_s": 101.15869379200012,
+          "consumer_first_sample_s": 111.03817357099979,
+          "milestones": {
+            "1": {
+              "reader_elapsed_s": 114.06415865800227,
+              "consumer_elapsed_s": 123.94363843700194
+            },
+            "125": {
+              "reader_elapsed_s": 122.26361965999968,
+              "consumer_elapsed_s": 132.14309943899934
+            },
+            "500": {
+              "reader_elapsed_s": 146.71727108900086,
+              "consumer_elapsed_s": 156.59675086800053
+            },
+            "1000": {
+              "reader_elapsed_s": 177.56796607700016,
+              "consumer_elapsed_s": 187.44744585599983
+            },
+            "2000": {
+              "reader_elapsed_s": 241.63847472700218,
+              "consumer_elapsed_s": 251.51795450600184
+            },
+            "3000": {
+              "reader_elapsed_s": 304.5113187870011,
+              "consumer_elapsed_s": 314.39079856600074
+            },
+            "4000": {
+              "reader_elapsed_s": 365.4982006550017,
+              "consumer_elapsed_s": 375.3776804340014
+            }
+          }
+        },
+        "candidate": {
+          "consumer_prep_seconds": 0.0,
+          "reader_constructor_s": 8.724719723999442,
+          "reader_first_sample_s": 27.851710535000166,
+          "consumer_first_sample_s": 27.851710535000166,
+          "milestones": {
+            "1": {
+              "reader_elapsed_s": 29.720862873000442,
+              "consumer_elapsed_s": 29.720862873000442
+            },
+            "125": {
+              "reader_elapsed_s": 78.04908570000043,
+              "consumer_elapsed_s": 78.04908570000043
+            },
+            "500": {
+              "reader_elapsed_s": 131.20853015900138,
+              "consumer_elapsed_s": 131.20853015900138
+            },
+            "1000": {
+              "reader_elapsed_s": 190.75493443600135,
+              "consumer_elapsed_s": 190.75493443600135
+            },
+            "2000": {
+              "reader_elapsed_s": 303.3599826589998,
+              "consumer_elapsed_s": 303.3599826589998
+            },
+            "3000": {
+              "reader_elapsed_s": 419.68396622900036,
+              "consumer_elapsed_s": 419.68396622900036
+            },
+            "4000": {
+              "reader_elapsed_s": 538.8901763249996,
+              "consumer_elapsed_s": 538.8901763249996
+            }
+          }
+        }
+      },
+      "horizon": {
+        "last_shared_batch": 4000,
+        "unique_anchors_per_reader": 32000,
+        "source_coverage_fraction_per_reader": 0.00042079429710112966
+      },
+      "status": "observed_crossover",
+      "observed_elapsed_ranges_s": {
+        "baseline": [
+          123.94363843700194,
+          375.3776804340014
+        ],
+        "candidate": [
+          29.720862873000442,
+          538.8901763249996
+        ]
+      },
+      "first_strict_lead": {
+        "batch": 1,
+        "unique_anchors": 8,
+        "baseline_s": 123.94363843700194,
+        "candidate_s": 29.720862873000442,
+        "baseline_minus_candidate_s": 94.2227755640015,
+        "lead": "candidate",
+        "baseline_reader_s": 114.06415865800227,
+        "baseline_consumer_prep_s": 9.879479778999666
+      },
+      "first_lead_change": {
+        "last_batch_with_old_lead": {
+          "batch": 939,
+          "unique_anchors": 7512,
+          "baseline_s": 183.36897952900108,
+          "candidate_s": 183.35876342700067,
+          "baseline_minus_candidate_s": 0.01021610200041323,
+          "lead": "candidate",
+          "baseline_reader_s": 173.48949975000141,
+          "baseline_consumer_prep_s": 9.879479778999666
+        },
+        "first_batch_with_new_lead": {
+          "batch": 940,
+          "unique_anchors": 7520,
+          "baseline_s": 183.4403401080017,
+          "candidate_s": 183.52957287699974,
+          "baseline_minus_candidate_s": -0.08923276899804478,
+          "lead": "baseline",
+          "baseline_reader_s": 173.56086032900203,
+          "baseline_consumer_prep_s": 9.879479778999666
+        }
+      },
+      "lead_change_count": 1,
+      "lead_changes": [
+        {
+          "last_batch_with_old_lead": {
+            "batch": 939,
+            "unique_anchors": 7512,
+            "baseline_s": 183.36897952900108,
+            "candidate_s": 183.35876342700067,
+            "baseline_minus_candidate_s": 0.01021610200041323,
+            "lead": "candidate",
+            "baseline_reader_s": 173.48949975000141,
+            "baseline_consumer_prep_s": 9.879479778999666
+          },
+          "first_batch_with_new_lead": {
+            "batch": 940,
+            "unique_anchors": 7520,
+            "baseline_s": 183.4403401080017,
+            "candidate_s": 183.52957287699974,
+            "baseline_minus_candidate_s": -0.08923276899804478,
+            "lead": "baseline",
+            "baseline_reader_s": 173.56086032900203,
+            "baseline_consumer_prep_s": 9.879479778999666
+          }
+        }
+      ],
+      "final_sustained_lead_within_horizon": {
+        "reader": "baseline",
+        "first_batch": 940,
+        "through_batch": 4000,
+        "strictly_ahead_batches": 3061,
+        "minimum_requested_batches": 125,
+        "meets_minimum": true
+      },
+      "observed_batches": {
+        "1": {
+          "batch": 1,
+          "unique_anchors": 8,
+          "baseline_s": 123.94363843700194,
+          "candidate_s": 29.720862873000442,
+          "baseline_minus_candidate_s": 94.2227755640015,
+          "lead": "candidate",
+          "baseline_reader_s": 114.06415865800227,
+          "baseline_consumer_prep_s": 9.879479778999666
+        },
+        "125": {
+          "batch": 125,
+          "unique_anchors": 1000,
+          "baseline_s": 132.14309943899934,
+          "candidate_s": 78.04908570000043,
+          "baseline_minus_candidate_s": 54.09401373899891,
+          "lead": "candidate",
+          "baseline_reader_s": 122.26361965999968,
+          "baseline_consumer_prep_s": 9.879479778999666
+        },
+        "500": {
+          "batch": 500,
+          "unique_anchors": 4000,
+          "baseline_s": 156.59675086800053,
+          "candidate_s": 131.20853015900138,
+          "baseline_minus_candidate_s": 25.388220708999143,
+          "lead": "candidate",
+          "baseline_reader_s": 146.71727108900086,
+          "baseline_consumer_prep_s": 9.879479778999666
+        },
+        "1000": {
+          "batch": 1000,
+          "unique_anchors": 8000,
+          "baseline_s": 187.44744585599983,
+          "candidate_s": 190.75493443600135,
+          "baseline_minus_candidate_s": -3.307488580001518,
+          "lead": "baseline",
+          "baseline_reader_s": 177.56796607700016,
+          "baseline_consumer_prep_s": 9.879479778999666
+        },
+        "2000": {
+          "batch": 2000,
+          "unique_anchors": 16000,
+          "baseline_s": 251.51795450600184,
+          "candidate_s": 303.3599826589998,
+          "baseline_minus_candidate_s": -51.842028152997955,
+          "lead": "baseline",
+          "baseline_reader_s": 241.63847472700218,
+          "baseline_consumer_prep_s": 9.879479778999666
+        },
+        "3000": {
+          "batch": 3000,
+          "unique_anchors": 24000,
+          "baseline_s": 314.39079856600074,
+          "candidate_s": 419.68396622900036,
+          "baseline_minus_candidate_s": -105.29316766299962,
+          "lead": "baseline",
+          "baseline_reader_s": 304.5113187870011,
+          "baseline_consumer_prep_s": 9.879479778999666
+        },
+        "4000": {
+          "batch": 4000,
+          "unique_anchors": 32000,
+          "baseline_s": 375.3776804340014,
+          "candidate_s": 538.8901763249996,
+          "baseline_minus_candidate_s": -163.51249589099825,
+          "lead": "baseline",
+          "baseline_reader_s": 365.4982006550017,
+          "baseline_consumer_prep_s": 9.879479778999666
+        }
+      },
+      "matched_diversity_consumer_wait": {
+        "cells": [
+          "bucket-current-frame-tolerance-1ms-prepared-r03-baseline",
+          "bucket-current-frame-tolerance-1ms-prepared-r03-candidate"
+        ],
+        "cutoff_batches": 1000,
+        "after_batch": 0,
+        "included_batches_per_reader": 1000,
+        "prefix_batches_seen": [
+          1000,
+          1000
+        ],
+        "valid_unique_batches": [
+          1000,
+          1000
+        ],
+        "invalid_or_repeated_batches": [
+          0,
+          0
+        ],
+        "first_invalid_or_repeated_batch": [
+          null,
+          null
+        ],
+        "wait_clock": "DataLoader next() wait. Reader construction and prior index receipt are outside this clock.",
+        "publication": {
+          "mode": "simulated_publication",
+          "metadata_start_state": "fresh isolated reader caches; the baseline cache initially contains the transferred index",
+          "public_archive_status_at_audit": "absent",
+          "baseline_consumer_prep_seconds": 9.879479778999666,
+          "baseline_transfer_and_link_seconds": 8.449460462998104,
+          "baseline_archive_bytes": 1833903820,
+          "baseline_archive_sha256": "681cbf6e34f764f219d32e7c6b55cf9079de78f42ea5967f658c46cb261456ad",
+          "private_archive_revision": "d958815e552acc6aa444ab932caf5949b4e51e7e",
+          "audit": "results/downloads/review5388/results/matrix03/bucket-publisher-audit.json",
+          "receipt": "results/downloads/review5388/results/molmo-prepared-repeat01/bucket-private-transfer-r03.json"
+        },
+        "status": "complete",
+        "distribution_overlap": 0.944,
+        "overlap_weighted_mean_consumer_wait_s": [
+          0.1309114106369926,
+          0.17048790057646102
+        ],
+        "unconditioned_mean_consumer_wait_s": [
+          0.13014050793298157,
+          0.17300600542595565
+        ],
+        "unconditioned_mean_distinct_episodes_per_batch": [
+          6.947,
+          7.045
+        ]
+      },
+      "crossover_conditions": "Observed cumulative delivery time without conditioning on sampling diversity.",
+      "tie_handling": "An exact tie cannot establish or reverse a lead. It does not count as strictly ahead.",
+      "reader_metrics": {
+        "baseline": {
+          "status": "ok",
+          "stop_reason": "max_batches",
+          "supervisor_code": 0,
+          "supervisor_timed_out": false,
+          "delivered_batches": 4000,
+          "delivered_anchors": 32000,
+          "coverage_percent": 0.04207942971011297,
+          "native_refills_replayed": [],
+          "paired_after_125": {
+            "after_batch": 125,
+            "through_batch": 4000,
+            "anchors": 31000,
+            "elapsed_s": 243.23458099500203,
+            "anchors_per_s": 127.44898308944396
+          },
+          "own_after_125": {
+            "after_batch": 125,
+            "through_batch": 4000,
+            "anchors": 31000,
+            "elapsed_s": 243.23458099500203,
+            "anchors_per_s": 127.44898308944396
+          },
+          "post_refill_2_first_125": null,
+          "finite_pass_projection": null,
+          "ordered_anchor_sha256": {
+            "1": "2b18b1bffd956c2b35ee08ed27d82926401e2e669eebe06382b9af020c19547e",
+            "125": "9bd913b2c04ca739ea6804bdbd9f06622b2c17ef05a19fd0c4d1c8797c12e7c1",
+            "500": "c7fb98e6a25f0166a146972aaa9e14d1b85d8f449e39be45354a5115ba794c9e",
+            "1000": "a27504d0e095abae4285d5f8830122971aec2c3b72e5f6a0e37927fe10bc7669",
+            "2000": "9816cb4100e213c859a4be76bc120bc61e57faa58ff05f705b3138d23c95704e",
+            "3000": "ba9845335e75cb6a3fa785a689e00b66e3dfe8d4ca531d9f71fdd7b05b5db36e",
+            "4000": "f4cbd5563e7a38a1d57eecefe618227d2670d7989790e57a6c7373ecc602812c"
+          },
+          "reader_first_sample_s": 101.15869379200012,
+          "reader_constructor_s": 46.70055319200037,
+          "receipt_s": 9.879479778999666,
+          "consumer_milestones_s": {
+            "1": 123.94363843700194,
+            "125": 132.14309943899934,
+            "500": 156.59675086800053,
+            "1000": 187.44744585599983,
+            "2000": 251.51795450600184,
+            "3000": 314.39079856600074,
+            "4000": 375.3776804340014
+          }
+        },
+        "candidate": {
+          "status": "ok",
+          "stop_reason": "max_batches",
+          "supervisor_code": 0,
+          "supervisor_timed_out": false,
+          "delivered_batches": 4000,
+          "delivered_anchors": 32000,
+          "coverage_percent": 0.04207942971011297,
+          "native_refills_replayed": [],
+          "paired_after_125": {
+            "after_batch": 125,
+            "through_batch": 4000,
+            "anchors": 31000,
+            "elapsed_s": 460.8410906249992,
+            "anchors_per_s": 67.26830708163928
+          },
+          "own_after_125": {
+            "after_batch": 125,
+            "through_batch": 4000,
+            "anchors": 31000,
+            "elapsed_s": 460.8410906249992,
+            "anchors_per_s": 67.26830708163928
+          },
+          "post_refill_2_first_125": null,
+          "finite_pass_projection": null,
+          "ordered_anchor_sha256": {
+            "1": "0c9c2d3a8a61bcf1ab3d332b539c046a7ebccb2a33171d8e5916b918685af98c",
+            "125": "6ee931ca34e27ec68521a05efe658c8f0b9a9c05956f2761a7c240f238cca10d",
+            "500": "77ae3f0d66526ecc81b41f52afde558b188e43e16e22e9b41413025c7a34a1e5",
+            "1000": "fc96b52afef08706deee06effe9bea3d0ca9d54d672be4f60c27f2ea6a786ea4",
+            "2000": "8479ed1d8fca69893204ece8692f359bfa5da5b8314806fe2d9e5200684f715b",
+            "3000": "5da7cb0c2c3926c6d2d42474f9cf750d789cd78539de608f156ab8c43198139b",
+            "4000": "52b5bba4c42a61946f14ca2c5f058b9715d43cb5ce647135b3b8b4e4da703a7d"
+          },
+          "reader_first_sample_s": 27.851710535000166,
+          "reader_constructor_s": 8.724719723999442,
+          "receipt_s": 0,
+          "consumer_milestones_s": {
+            "1": 29.720862873000442,
+            "125": 78.04908570000043,
+            "500": 131.20853015900138,
+            "1000": 190.75493443600135,
+            "2000": 303.3599826589998,
+            "3000": 419.68396622900036,
+            "4000": 538.8901763249996
+          }
+        }
+      },
+      "reader_order": [
+        "baseline",
+        "candidate"
+      ],
+      "target_batches": 4000,
+      "censored_before_target": false,
+      "matched_diversity_after_125": {
+        "cells": [
+          "bucket-current-frame-tolerance-1ms-prepared-r03-baseline",
+          "bucket-current-frame-tolerance-1ms-prepared-r03-candidate"
+        ],
+        "cutoff_batches": 4000,
+        "after_batch": 125,
+        "included_batches_per_reader": 3875,
+        "prefix_batches_seen": [
+          4000,
+          4000
+        ],
+        "valid_unique_batches": [
+          3875,
+          3875
+        ],
+        "invalid_or_repeated_batches": [
+          0,
+          0
+        ],
+        "first_invalid_or_repeated_batch": [
+          null,
+          null
+        ],
+        "wait_clock": "DataLoader next() wait. Reader construction and prior index receipt are outside this clock.",
+        "status": "complete",
+        "distribution_overlap": 0.967741935483871,
+        "overlap_weighted_mean_consumer_wait_s": [
+          0.06207062025517051,
+          0.11179995171580046
+        ],
+        "unconditioned_mean_consumer_wait_s": [
+          0.06211250546349742,
+          0.11183430083021578
+        ],
+        "unconditioned_mean_distinct_episodes_per_batch": [
+          6.990193548387097,
+          7.045419354838709
+        ]
+      },
+      "raw_evidence": [
+        {
+          "path": "results/downloads/review5388/results/molmo-prepared-repeat01/host.json",
+          "bytes": 1401,
+          "sha256": "4b712c1f96f117598f287adb8ecafe5de3d6c714fc4c234e346ff1ea21897eed"
+        },
+        {
+          "path": "results/downloads/review5388/results/molmo-prepared-repeat01/run.jsonl",
+          "bytes": 20346,
+          "sha256": "90683377177db6653c531b83f9309e3c8cadcd692420da6f90b41a88995d3c66"
+        },
+        {
+          "path": "results/downloads/review5388/results/molmo-prepared-repeat01/bucket-manifest-current-frame-tolerance-1ms-prepared-r03-before.json",
+          "bytes": 1010,
+          "sha256": "13109ca7d38add8dadea0ea15edf97d950f4398dba3f06f3feb27f6afb4bb86d"
+        },
+        {
+          "path": "results/downloads/review5388/results/molmo-prepared-repeat01/bucket-manifest-current-frame-tolerance-1ms-prepared-r03-after.json",
+          "bytes": 1010,
+          "sha256": "dd73515df22616d4b72a395ea3a35157950d6c196f1a2f613c63135c6e3f4040"
+        },
+        {
+          "path": "results/downloads/review5388/results/molmo-prepared-repeat01/bucket-manifest-tolerance-1ms-before-transfer-r03.json",
+          "bytes": 1010,
+          "sha256": "2c6395e6f5177847f9d4499d2b87db16a6a361a6558e4521943fa469419f18d5"
+        },
+        {
+          "path": "results/downloads/review5388/results/molmo-prepared-repeat01/bucket-current-frame-tolerance-1ms-prepared-r03-baseline.json",
+          "bytes": 16860,
+          "sha256": "4fd028d6da67659d2961136b45b59497e18bb3f2d5aafc45ef4aa999f1a144cd"
+        },
+        {
+          "path": "results/downloads/review5388/results/molmo-prepared-repeat01/bucket-current-frame-tolerance-1ms-prepared-r03-candidate.json",
+          "bytes": 16452,
+          "sha256": "89617456ad5267376e412595192a61679be6bf47f90fb008cecc2be89b79385f"
+        },
+        {
+          "path": "results/downloads/review5388/results/molmo-prepared-repeat01/bucket-current-frame-tolerance-1ms-prepared-r03-baseline.events.jsonl",
+          "bytes": 2086695,
+          "sha256": "91d5e508c6b4371b9bd0e97ca2d59bf7b5d532685aa995a53f353e3eef7405d2"
+        },
+        {
+          "path": "results/downloads/review5388/results/molmo-prepared-repeat01/bucket-current-frame-tolerance-1ms-prepared-r03-candidate.events.jsonl.gz",
+          "bytes": 418231,
+          "sha256": "1efe1cf5d05bf9895f48ae0ea0d0ed40e4a273920a0db63b53c3e53a4dd8dc09"
+        },
+        {
+          "path": "results/downloads/review5388/results/molmo-prepared-repeat01/bucket-private-transfer-r03.json",
+          "bytes": 599,
+          "sha256": "25742196e1155034e30d0504ba0b418d6fa726b58ac3cdf493d6ed027842a48d"
+        },
+        {
+          "path": "results/downloads/review5388/results/matrix03/bucket-publisher-audit.json",
+          "bytes": 2268,
+          "sha256": "f510b856e2d24bc9fc14480cb66d3bd98523f4d3ee434fca531d81cb0db950eb"
+        }
+      ]
+    }
+  },
+  "prepared_repeats": {
+    "attempts": 3,
+    "audited_pairs": 3,
+    "audited_hosts": 1,
+    "censored_pairs": 2,
+    "receipt_seconds": [
+      10.499813799000549,
+      10.424334826999257,
+      9.879479778999666
+    ],
+    "last_batch_shared_across_audited_pairs": {
+      "batch": 3552,
+      "points": {
+        "r01": {
+          "batch": 3552,
+          "unique_anchors": 28416,
+          "baseline_s": 418.6418538809994,
+          "candidate_s": 680.0586898470028,
+          "baseline_minus_candidate_s": -261.4168359660034,
+          "lead": "baseline",
+          "baseline_reader_s": 408.14204008199886,
+          "baseline_consumer_prep_s": 10.499813799000549
+        },
+        "r02": {
+          "batch": 3552,
+          "unique_anchors": 28416,
+          "baseline_s": 339.8303019420018,
+          "candidate_s": 620.2294281460017,
+          "baseline_minus_candidate_s": -280.3991262039999,
+          "lead": "baseline",
+          "baseline_reader_s": 329.40596711500257,
+          "baseline_consumer_prep_s": 10.424334826999257
+        },
+        "r03": {
+          "batch": 3552,
+          "unique_anchors": 28416,
+          "baseline_s": 348.5407179390022,
+          "candidate_s": 484.5901329219996,
+          "baseline_minus_candidate_s": -136.0494149829974,
+          "lead": "baseline",
+          "baseline_reader_s": 338.66123816000254,
+          "baseline_consumer_prep_s": 9.879479778999666
+        }
+      }
+    },
+    "prepared_timing_s": {
+      "1000": {
+        "pairs": 3,
+        "baseline": {
+          "min": 181.6964710070024,
+          "median": 187.44744585599983,
+          "max": 229.54256449999957
+        },
+        "candidate": {
+          "min": 190.75493443600135,
+          "median": 244.02334953600075,
+          "max": 252.32716286900177
+        }
+      },
+      "4000": {
+        "pairs": 1,
+        "baseline": {
+          "min": 375.3776804340014,
+          "median": 375.3776804340014,
+          "max": 375.3776804340014
+        },
+        "candidate": {
+          "min": 538.8901763249996,
+          "median": 538.8901763249996,
+          "max": 538.8901763249996
+        }
+      }
+    },
+    "same_ordered_ids_between_pairs_at_batch": {
+      "1000": {
+        "baseline": true,
+        "candidate": true
+      }
+    }
+  },
+  "cold_checkpoint_repeat": {
+    "status": "externally_audited_saved_checkpoint",
+    "scope": "Recorded shared deliveries through the candidate's last atomically saved checkpoint",
+    "native_pair_complete": false,
+    "native_source_valid": false,
+    "source_verification": "Matching pre-run and separately captured post-run inventories. The bucket remained mutable between checks.",
+    "source_root": "hf://buckets/pepijn223/MolmoAct2-BimanualYAM-Dataset-bucket",
+    "manifest_sha256": "aebacc429d54f284e103ff10613b925f5827c347e0678846b0b6f0015dded782",
+    "manifest_before_utc": "2026-11-19T08:16:29.208384+00:00",
+    "external_manifest_after_utc": "2026-11-19T09:28:42.600402+00:00",
+    "job_id": "6afeafd6e41aae15936d3223",
+    "job_finished_utc": "2026-11-19 09:28:18.313000+00:00",
+    "artifact_revision": "ff39258469f126d03d927070fb0229801643eb86",
+    "supervisor": {
+      "baseline": {
+        "cgroup_memory_events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0",
+        "code": 0,
+        "event": "stop",
+        "label": "bucket-current-frame-tolerance-1ms-repeat-baseline",
+        "reader": "baseline",
+        "seconds": 1896.365557636993,
+        "timed_out": false,
+        "utc": "2026-11-19T08:48:13.889084+00:00"
+      },
+      "candidate": {
+        "cgroup_memory_events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0",
+        "code": -9,
+        "event": "stop",
+        "label": "bucket-current-frame-tolerance-1ms-repeat-candidate",
+        "reader": "candidate",
+        "seconds": 2354.348377710994,
+        "timed_out": true,
+        "utc": "2026-11-19T09:27:30.552387+00:00"
+      },
+      "native_pair": {
+        "dataset": "bucket",
+        "event": "pair-done",
+        "fixed_target": 25000,
+        "history": false,
+        "pair": "current-frame-tolerance-1ms-repeat",
+        "single_frame": true,
+        "source_valid": false,
+        "tolerance_s": 0.001,
+        "utc": "2026-11-19T09:27:44.487352+00:00"
+      },
+      "native_after_manifest": {
+        "event": "skipped",
+        "label": "bucket-manifest-current-frame-tolerance-1ms-repeat-after",
+        "reason": "job time exhausted",
+        "utc": "2026-11-19T09:27:44.487159+00:00"
+      }
+    },
+    "workload": "single_frame",
+    "cache": "cold",
+    "tolerance_s": 0.001,
+    "reader_audits": {
+      "baseline": {
+        "native_status": "ok",
+        "first_sample_s": 737.5670496620005,
+        "lerobot_revision": "fe1c54594f6ba275fccf210b9f7b11f0e2324b89",
+        "datasets_revision": "464fe790b82a320350c9c686c1b7e409323a1cf3",
+        "saved_batches": 25000,
+        "in_bounds_unique_samples": 200000,
+        "duplicates": 0,
+        "invalid_batches": 0,
+        "saved_elapsed_process_s": 1893.8632563099964,
+        "last_valid_delivery_elapsed_process_s": 1893.817589,
+        "native_refill_batches": [
+          18557
+        ],
+        "cursor": "verified terminal event",
+        "tail_not_examined_beyond_checkpoint": false
+      },
+      "candidate": {
+        "native_status": "running",
+        "first_sample_s": 15.998210189005476,
+        "lerobot_revision": "1a60cb4b800c2947834342752c32f064c8bf143c",
+        "datasets_revision": "464fe790b82a320350c9c686c1b7e409323a1cf3",
+        "saved_batches": 24000,
+        "in_bounds_unique_samples": 192000,
+        "duplicates": 0,
+        "invalid_batches": 0,
+        "saved_elapsed_process_s": 2289.685896366005,
+        "last_valid_delivery_elapsed_process_s": 2289.685267,
+        "native_refill_batches": [
+          6878,
+          13175
+        ],
+        "cursor": "last atomically saved worker checkpoint",
+        "tail_not_examined_beyond_checkpoint": true
+      }
+    },
+    "last_paired_batch": 24000,
+    "paired_unique_samples_per_reader": 192000,
+    "native_target_batches": 25000,
+    "observed_milestones": {
+      "1": {
+        "batch": 1,
+        "baseline_s": 750.3372050140024,
+        "candidate_s": 17.093843192007625,
+        "baseline_minus_candidate_s": 733.2433618219948,
+        "lead": "candidate"
+      },
+      "125": {
+        "batch": 125,
+        "baseline_s": 757.5703535639914,
+        "candidate_s": 44.06667024100898,
+        "baseline_minus_candidate_s": 713.5036833229824,
+        "lead": "candidate"
+      },
+      "1000": {
+        "batch": 1000,
+        "baseline_s": 802.218905827991,
+        "candidate_s": 118.65021441099816,
+        "baseline_minus_candidate_s": 683.5686914169928,
+        "lead": "candidate"
+      },
+      "13300": {
+        "batch": 13300,
+        "baseline_s": 1457.5180856950028,
+        "candidate_s": 1208.3249982520065,
+        "baseline_minus_candidate_s": 249.19308744299633,
+        "lead": "candidate"
+      },
+      "24000": {
+        "batch": 24000,
+        "baseline_s": 1851.583561263993,
+        "candidate_s": 2286.5808397329965,
+        "baseline_minus_candidate_s": -434.9972784690035,
+        "lead": "baseline"
+      }
+    },
+    "delivery_leads": {
+      "lead_change_count": 1,
+      "lead_changes": [
+        {
+          "reader": "baseline",
+          "first_batch": 17490,
+          "strict_lead_batches": 6511,
+          "previous_leader_last_delivery": {
+            "batch": 17489,
+            "baseline_s": 1613.173177839999,
+            "candidate_s": 1613.0507727259974,
+            "baseline_minus_candidate_s": 0.12240511400159448,
+            "lead": "candidate"
+          },
+          "leader_first_delivery": {
+            "batch": 17490,
+            "baseline_s": 1613.2041848299996,
+            "candidate_s": 1613.2042964520078,
+            "baseline_minus_candidate_s": -0.00011162200826220214,
+            "lead": "baseline"
+          },
+          "last_strict_lead_batch": 24000
+        }
+      ],
+      "initial_lead": {
+        "reader": "candidate",
+        "first_batch": 1,
+        "strict_lead_batches": 17489,
+        "previous_leader_last_delivery": null,
+        "leader_first_delivery": {
+          "batch": 1,
+          "baseline_s": 750.3372050140024,
+          "candidate_s": 17.093843192007625,
+          "baseline_minus_candidate_s": 733.2433618219948,
+          "lead": "candidate"
+        },
+        "last_strict_lead_batch": 17489
+      },
+      "first_durable_lead_change": {
+        "reader": "baseline",
+        "first_batch": 17490,
+        "strict_lead_batches": 6511,
+        "previous_leader_last_delivery": {
+          "batch": 17489,
+          "baseline_s": 1613.173177839999,
+          "candidate_s": 1613.0507727259974,
+          "baseline_minus_candidate_s": 0.12240511400159448,
+          "lead": "candidate"
+        },
+        "leader_first_delivery": {
+          "batch": 17490,
+          "baseline_s": 1613.2041848299996,
+          "candidate_s": 1613.2042964520078,
+          "baseline_minus_candidate_s": -0.00011162200826220214,
+          "lead": "baseline"
+        },
+        "last_strict_lead_batch": 24000
+      },
+      "final_lead_through_checkpoint": {
+        "reader": "baseline",
+        "first_batch": 17490,
+        "strict_lead_batches": 6511,
+        "previous_leader_last_delivery": {
+          "batch": 17489,
+          "baseline_s": 1613.173177839999,
+          "candidate_s": 1613.0507727259974,
+          "baseline_minus_candidate_s": 0.12240511400159448,
+          "lead": "candidate"
+        },
+        "leader_first_delivery": {
+          "batch": 17490,
+          "baseline_s": 1613.2041848299996,
+          "candidate_s": 1613.2042964520078,
+          "baseline_minus_candidate_s": -0.00011162200826220214,
+          "lead": "baseline"
+        },
+        "last_strict_lead_batch": 24000
+      },
+      "durable_lead_threshold_batches": 125,
+      "ties": 0
+    },
+    "diversity_prefix_1000": {
+      "after_batch": 0,
+      "through_batch": 1000,
+      "batches_per_reader": 1000,
+      "distribution_overlap": 0.944,
+      "unconditioned_mean_consumer_wait_s": [
+        0.11148997354329913,
+        0.10589751043703291
+      ],
+      "unconditioned_mean_distinct_episodes_per_batch": [
+        6.947,
+        7.045
+      ],
+      "overlap_weighted_mean_consumer_wait_s": [
+        0.11219483115308049,
+        0.10512480503469405
+      ],
+      "wait_clock": "DataLoader next() wait. Reader construction and prior index receipt are outside this clock."
+    },
+    "diversity_after_125": {
+      "after_batch": 125,
+      "through_batch": 24000,
+      "batches_per_reader": 23875,
+      "distribution_overlap": 0.6677277486910995,
+      "unconditioned_mean_consumer_wait_s": [
+        0.0453591014915469,
+        0.08765250265699293
+      ],
+      "unconditioned_mean_distinct_episodes_per_batch": [
+        6.056460732984293,
+        7.0587225130890054
+      ],
+      "overlap_weighted_mean_consumer_wait_s": [
+        0.04706065056881041,
+        0.08748513227289698
+      ],
+      "wait_clock": "DataLoader next() wait. Reader construction and prior index receipt are outside this clock."
+    },
+    "after_125_samples_per_s": [
+      174.58655769023923,
+      85.17226004563823
+    ],
+    "raw_evidence": [
+      {
+        "path": "results/downloads/review5388/results/molmo-tol02/run.jsonl",
+        "bytes": 3147,
+        "sha256": "cc51759394621b0cf86a656b13f251ec650f29e09456175b19d1abd679070c1e"
+      },
+      {
+        "path": "results/downloads/review5388/results/molmo-tol02/host.json",
+        "bytes": 1414,
+        "sha256": "10850cea58599da3c22a2c041543fe25d4fdc410e68560fc46a22ee2e0b0cd5a"
+      },
+      {
+        "path": "results/molmo-tol02.job.json",
+        "bytes": 778,
+        "sha256": "9e048952a5e651ceb10a3caf4e39f23d427d751904765d6c245306eb16563115"
+      },
+      {
+        "path": "results/downloads/review5388/results/molmo-tol02/bucket-manifest-current-frame-tolerance-1ms-repeat-before.json",
+        "bytes": 1010,
+        "sha256": "2f1a2bf0f3f7dee39d61cb0f2a4e6ea4fce3d3228a2de641f27e928ad852c79e"
+      },
+      {
+        "path": "results/molmo-tol02-external-post-manifest.json",
+        "bytes": 1010,
+        "sha256": "7fe54aee0c5b21db2c67cfcebf50979f5ac1c2b59885280762eb81b0ff3a16e3"
+      },
+      {
+        "path": "/tmp/lerobot5388-coverage-metadata/bucket-aebacc429d54f284e103ff10613b925f5827c347e0678846b0b6f0015dded782.json",
+        "bytes": 470929,
+        "sha256": "df4c6b5af23a308bcda2389f6921eae58d94ca4ffef1fd922225f7cd632a7cf4"
+      },
+      {
+        "path": "results/downloads/review5388/results/molmo-tol02/bucket-current-frame-tolerance-1ms-repeat-baseline.json",
+        "bytes": 34414,
+        "sha256": "089d7ad8a74b59914f52a1a2dc6b02693b160ec0495fbc48eaa6192ea9e9c1c6"
+      },
+      {
+        "path": "results/downloads/review5388/results/molmo-tol02/bucket-current-frame-tolerance-1ms-repeat-candidate.json",
+        "bytes": 25441,
+        "sha256": "dbdc8c4a21c3abc39e172579184df7f822c89aa2619e933ce2169d4cfa661314"
+      },
+      {
+        "path": "results/downloads/review5388/results/molmo-tol02/bucket-current-frame-tolerance-1ms-repeat-baseline.events.jsonl.gz",
+        "bytes": 2354318,
+        "sha256": "3f9742975dba954dd8e40d83775e33edde66d19515c7857f98673e6fa13d627a"
+      },
+      {
+        "path": "results/downloads/review5388/results/molmo-tol02/bucket-current-frame-tolerance-1ms-repeat-candidate.events.jsonl.gz",
+        "bytes": 2402020,
+        "sha256": "9d843c55a30a82afe2832dee89326fdf78703d8e170f9941ff9adc8629184199"
+      }
+    ],
+    "reader_metrics": {
+      "baseline": {
+        "status": "ok",
+        "stop_reason": "max_batches",
+        "supervisor_code": 0,
+        "supervisor_timed_out": false,
+        "delivered_batches": 25000,
+        "delivered_anchors": 200000,
+        "coverage_percent": 0.2629964356882061,
+        "native_refills_replayed": [
+          18557
+        ],
+        "paired_after_125": {
+          "after_batch": 125,
+          "through_batch": 24000,
+          "anchors": 191000,
+          "elapsed_s": 1094.0132077000017,
+          "anchors_per_s": 174.58655769023923
+        },
+        "own_after_125": {
+          "after_batch": 125,
+          "through_batch": 25000,
+          "anchors": 199000,
+          "elapsed_s": 1131.1209625280026,
+          "anchors_per_s": 175.93167007995703
+        },
+        "post_refill_2_first_125": null,
+        "finite_pass_projection": null,
+        "ordered_anchor_sha256": {
+          "1": "2b18b1bffd956c2b35ee08ed27d82926401e2e669eebe06382b9af020c19547e",
+          "125": "9bd913b2c04ca739ea6804bdbd9f06622b2c17ef05a19fd0c4d1c8797c12e7c1",
+          "500": "c7fb98e6a25f0166a146972aaa9e14d1b85d8f449e39be45354a5115ba794c9e",
+          "1000": "a27504d0e095abae4285d5f8830122971aec2c3b72e5f6a0e37927fe10bc7669",
+          "2000": "9816cb4100e213c859a4be76bc120bc61e57faa58ff05f705b3138d23c95704e",
+          "3000": "ba9845335e75cb6a3fa785a689e00b66e3dfe8d4ca531d9f71fdd7b05b5db36e",
+          "4000": "f4cbd5563e7a38a1d57eecefe618227d2670d7989790e57a6c7373ecc602812c",
+          "24000": "bc4c939d2239114ac065c5082dcee3ca203005630c6a7f189d36475360ed3753"
+        },
+        "reader_first_sample_s": 737.5670496620005,
+        "reader_constructor_s": 690.2244679909927,
+        "receipt_s": 0,
+        "consumer_milestones_s": {
+          "1": 750.3372050140024,
+          "125": 757.5703535639914,
+          "500": 776.6494561360014,
+          "1000": 802.218905827991,
+          "2000": 853.9453460899967,
+          "3000": 906.5779740379949,
+          "4000": 958.2463896019908,
+          "24000": 1851.583561263993,
+          "25000": 1888.691316091994
+        }
+      },
+      "candidate": {
+        "status": "running",
+        "stop_reason": null,
+        "supervisor_code": -9,
+        "supervisor_timed_out": true,
+        "delivered_batches": 24000,
+        "delivered_anchors": 192000,
+        "coverage_percent": 0.2524765782606778,
+        "native_refills_replayed": [
+          6878,
+          13175
+        ],
+        "paired_after_125": {
+          "after_batch": 125,
+          "through_batch": 24000,
+          "anchors": 191000,
+          "elapsed_s": 2242.5141694919876,
+          "anchors_per_s": 85.17226004563823
+        },
+        "own_after_125": {
+          "after_batch": 125,
+          "through_batch": 24000,
+          "anchors": 191000,
+          "elapsed_s": 2242.5141694919876,
+          "anchors_per_s": 85.17226004563823
+        },
+        "post_refill_2_first_125": {
+          "after_batch": 13175,
+          "through_batch": 13300,
+          "anchors": 1000,
+          "elapsed_s": 19.60086956899613,
+          "anchors_per_s": 51.018144704241074
+        },
+        "finite_pass_projection": {
+          "days_at_across_refills_rate": 10.33436847533436,
+          "days_at_short_post_refill_rate": 17.252373731675096,
+          "startup_through_batch_125_s": 44.06667024100898
+        },
+        "ordered_anchor_sha256": {
+          "1": "0c9c2d3a8a61bcf1ab3d332b539c046a7ebccb2a33171d8e5916b918685af98c",
+          "125": "6ee931ca34e27ec68521a05efe658c8f0b9a9c05956f2761a7c240f238cca10d",
+          "500": "77ae3f0d66526ecc81b41f52afde558b188e43e16e22e9b41413025c7a34a1e5",
+          "1000": "fc96b52afef08706deee06effe9bea3d0ca9d54d672be4f60c27f2ea6a786ea4",
+          "2000": "8479ed1d8fca69893204ece8692f359bfa5da5b8314806fe2d9e5200684f715b",
+          "3000": "5da7cb0c2c3926c6d2d42474f9cf750d789cd78539de608f156ab8c43198139b",
+          "4000": "52b5bba4c42a61946f14ca2c5f058b9715d43cb5ce647135b3b8b4e4da703a7d",
+          "24000": "401e9c5a0d391c6c540b17f855c81c0714b47081e7b061d245dfb5418d90edb0"
+        },
+        "reader_first_sample_s": 15.998210189005476,
+        "reader_constructor_s": 7.0444814060028875,
+        "receipt_s": 0,
+        "consumer_milestones_s": {
+          "1": 17.093843192007625,
+          "125": 44.06667024100898,
+          "500": 78.15242622500227,
+          "1000": 118.65021441099816,
+          "2000": 200.76214924899978,
+          "3000": 286.38697646300716,
+          "4000": 366.65576337999664,
+          "24000": 2286.5808397329965
+        }
+      }
+    },
+    "censored_before_target": true
+  }
+}

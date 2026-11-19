@@ -2,7 +2,7 @@
 
 **The fast constructor reproduces. The 100-step training workload fails before batch one.** On Quentin's exact MolmoAct2 bucket, the draft constructed its reader in **6.93 seconds** and yielded the first current-frame sample at **15.13 seconds**. A timestamp error then prevented the consumer from receiving a complete batch at the default tolerance. With three current cameras and 100 target actions, the draft delivered zero batches on MolmoAct2, ABC-130K and DROID. The normal `lerobot-train` path failed in the dataset factory on the small fixture.
 
-When both readers delivered the same current-frame workload at 1 ms, Quentin won the first 1,000 batches on fresh disks. With a matching publisher-built index, Pepijn took the lead at **batch 702**. With local caches already populated, he took the lead at **batch 514**. With a full cold index build, one longer run crossed near **batch 17,490**. These are observations at batch size eight on the tested CPU hosts.
+At 1 ms on MolmoAct2, Quentin delivered 1,000 three-camera, current-action batches sooner in both runs where Pepijn built an index from scratch. In three new pairs with a matching publisher-built index, Quentin delivered **batch one** sooner every time. Pepijn caught up at **batch 762, 374 and 940** and delivered **batch 1,000** sooner every time. The original index-supplied pair crossed at 702. Molmo has about 9.51 million batches of eight in a finite pass. The new crossovers all happened before 0.01% of it. [Repeat measurements, episode diversity and full-pass estimates](prepared-repeats.md)
 
 The reviewed draft opened **November 16, 2026 at 19:06 UTC** and GitHub shows its last update at **19:09 UTC** that day. As checked November 19, the draft was still blocked, with review required. Baseline `fe1c5459`, proposal `1a60cb4b` and Datasets `464fe790` are pinned throughout. [LeRobot #5388](https://github.com/huggingface/lerobot/pull/5388) · [Datasets #8983](https://github.com/huggingface/datasets/pull/8983)
 
@@ -77,9 +77,9 @@ The following pairs used identical **1 ms tolerance, three current camera images
 
 | Starting state | Pepijn to batch 1,000 | Quentin to batch 1,000 | Observed lead change | Last compared batch |
 |---|---:|---:|---|---:|
-| Fresh, draft ran first | 616.15 s | 97.67 s | Draft led throughout | 13,300 |
-| Fresh, baseline ran first | 802.22 s | 118.65 s | Baseline took the lead near 17,490 | 24,000 |
-| Fresh, simulated publisher index | 199.72 s | 224.34 s | Baseline took the lead at 702 | 1,000 |
+| Fresh, no usable index, draft ran first | 616.15 s | 97.67 s | Draft led throughout | 13,300 |
+| Fresh, no usable index, baseline ran first | 802.22 s | 118.65 s | Baseline took the lead near 17,490 | 24,000 |
+| Fresh, simulated publisher index, original pair | 199.72 s | 224.34 s | Baseline took the lead at 702 | 1,000 |
 | Warm restart | 75.21 s | 91.14 s | Baseline took the lead at 514 | 1,000 |
 
 Construction explains much of the early cold gap. In the first pair it took 524.05 s for the baseline and 7.23 s for the draft. Across two refills each, their longer windows yielded 213.6 and 109.9 distinct examples/s. Sampling diversity over those windows differed, averaging 5.94 and 7.06 episodes per batch. To compare a common segment, we looked at batches 126 through 13,300. The same count of 105,400 additional examples took 519.06 s for the baseline and 959.16 s for the draft. Within the 84.1% overlap in episode mix, average consumer waits were **39.2 ms** and **67.9 ms** respectively. [Matched waits and per-group counts](measurements/cold-matched-after125.json) · [First cold delivery curve](measurements/cold-current-frame.svg)
@@ -88,7 +88,29 @@ The second cold pair reached the crossover after about 26.9 minutes and 139,920 
 
 ![Measured time to equal batch counts on the cold Molmo repeat](measurements/cold-repeat-checkpoint.svg)
 
-The published-index simulation includes 10.38 s to receive and checksum the archive. The baseline's first batch took 138.61 s and the draft's took 34.66 s. The warm pair's first batches took 39.78 and 10.31 s. Both controls stopped at batch 1,000. Their crossovers are measured milestones on those hosts, and the fresh draft's 1,000-batch time varied from 97.67 to 224.34 s across jobs. [Published-index control](measurements/prepared-current-frame.json) · [Warm control](measurements/warm-current-frame.json)
+The original publisher-index pair includes 10.38 s to receive and checksum the archive. The baseline's first batch took 138.61 s and the draft's took 34.66 s. The warm pair's first batches took 39.78 and 10.31 s. Both controls stopped at batch 1,000. [Original publisher-index control](measurements/prepared-current-frame.json) · [Warm control](measurements/warm-current-frame.json)
+
+For a quick experiment, the difference between seeing one example and receiving enough usable batches to exercise a recipe matters. For a team comparing many recipes on a fixed snapshot, the publisher can pay the index build cost once. Each new machine still has to receive and open the index. We repeated that case three times on one CPU host with fresh application caches, charging the transfer to each new consumer.
+
+| Matching index, fresh disk | Pepijn to batch 1,000 | Quentin to batch 1,000 | Batch where Pepijn caught up | Last batch compared |
+|---|---:|---:|---:|---:|
+| Pepijn ran first | 229.54 s | 252.33 s | 762 | 3,552 |
+| Quentin ran first | 181.70 s | 244.02 s | 374 | 3,978 |
+| Pepijn ran first again | 187.45 s | 190.75 s | 940 | 4,000 |
+
+Each lead held to the end of its paired trace. Quentin reached the per-reader time limit in the first two pairs. Both readers finished the third pair. Longer cold runs of this same current-frame workload imply **4.13 days for Pepijn** and **8.01 to 10.33 days for Quentin** to supply a finite pass at their observed rates. The longest qualifying prefix covers 0.31% of the source. The three new pairs ended before either reader completed two pool refills. [Full-pass arithmetic, rates and paired traces](prepared-repeats.md) · [Repeat on your own HF account](method.md#repeat-the-fresh-disk-comparison-with-a-matching-publisher-index)
+
+### Why did Quentin's fresh run time change?
+
+The prepared-index experiment changed what Pepijn received. Quentin ran the same code with an empty local cache in all six fresh runs. Each time, Quentin returned the same 8,000 sample IDs in the same order and fetched 1,642,613,961 bytes of video blocks from 39 MP4s. But its time to batch 1,000 ranged from **97.67 to 252.33 seconds**.
+
+| Quentin on a fresh disk | Time to batch 1,000 | Time for batches 751 to 1,000 | CPU time summed over threads calling the decoder through batch 1,000 |
+|---|---:|---:|---:|
+| Paired with Pepijn building an index, two jobs | 98 / 119 s | 16 / 20 s | 221 / 276 s |
+| Paired with Pepijn receiving an index, original job | 224 s | 36 s | 374 s |
+| Same receipt, three new pairs on one host | 252 / 244 / 191 s | 42 / 40 / 29 s | 438 / 432 / 348 s |
+
+The HTTP hooks saw no new responses during those last 250 batches in any run. The decode wrapper includes work done to read video, and it records calling-thread CPU time across concurrent calls. The timings show that the spread extends into a part of the run with the video blocks in hand. These counters cannot identify a single cause. [Six ordered-prefix hashes, byte counts and timing counters](measurements/fresh-draft-1000.csv) · [Timing instrumentation](telemetry.py)
 
 ### What a publisher-built index changes
 
@@ -155,4 +177,4 @@ The per-cell CSV includes milestones, error reasons, diversity, sustained rates 
 
 For a maintainer review, I would keep the existing window-selection and checkpoint tests when trying the proposed byte cache. A version that passes those tests can be timed with exactly the same three inputs and manifests. That would let us attribute a speed change to the reader while holding the training examples constant.
 
-All Hugging Face Jobs are terminal. A conservative upper bound for CPU compute, including setup jobs, failed starts and retries, is **$7.99 gross** against the $10 cap. The ledger uses rounded job durations with a billing margin. It excludes any deduction for subscription credits. [Per-job calculation](measurements/compute-cost.json) · [HF Jobs pricing](https://huggingface.co/docs/hub/jobs-pricing)
+All Hugging Face Jobs are terminal. A conservative upper bound for CPU compute, including setup jobs, failed starts, retries and the three fresh-index repeats, is **$8.97 gross** against the $10 cap. The repeat job used 3,444 seconds including scheduling and adds at most $0.99. The ledger rounds billed minutes up and allows an extra minute. It excludes any deduction for subscription credits. [Per-job calculation](measurements/compute-cost.json) · [HF Jobs pricing](https://huggingface.co/docs/hub/jobs-pricing)

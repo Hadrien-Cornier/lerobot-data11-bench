@@ -52,6 +52,15 @@ def run_events(path):
     return [json.loads(line) for line in log.read_text().splitlines()] if log.is_file() else []
 
 
+def prepared_transfer_path(path, dataset, events):
+    for event in events:
+        if event.get("event") != "tolerance-control-setup" or not event.get("transfer_label"):
+            continue
+        if path.stem == f"{dataset}-{event.get('pair')}-baseline":
+            return path.parent / f"{event['transfer_label']}.json"
+    return path.parent / f"{dataset}-private-transfer.json"
+
+
 def source_verified(path, record, events):
     if record["dataset"] != "bucket":
         return bool(record.get("source", {}).get("revision"))
@@ -76,7 +85,7 @@ def row(path, record, fixture):
     )
     prep = 0
     if paid_transfer and reader == "baseline":
-        transfer = path.parent / f"{dataset}-private-transfer.json"
+        transfer = prepared_transfer_path(path, dataset, events)
         prep = read(transfer)["private_transfer"]["consumer_prep_seconds"] if transfer.exists() else None
 
     timing = record["timings"]

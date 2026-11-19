@@ -1,0 +1,7 @@
+run,cell,batch1000_seconds,ordered_batch_ids_sha256,block_cache_downloaded_video_bytes,video_files,decode_calls,summed_caller_cpu_seconds,batches751_to_1000_seconds,http_response_increase_from_sample_before_batch750
+molmo-tol01,bucket-current-frame-tolerance-1ms-candidate,97.67,fc96b52afef08706deee06effe9bea3d0ca9d54d672be4f60c27f2ea6a786ea4,1642613961,39,24086,220.598,16.225,0
+molmo-tol02,bucket-current-frame-tolerance-1ms-repeat-candidate,118.65,fc96b52afef08706deee06effe9bea3d0ca9d54d672be4f60c27f2ea6a786ea4,1642613961,39,24090,276.324,19.882,0
+molmo-prepared01,bucket-current-frame-tolerance-1ms-prepared-candidate,224.34,fc96b52afef08706deee06effe9bea3d0ca9d54d672be4f60c27f2ea6a786ea4,1642613961,39,24058,374.281,36.461,0
+molmo-prepared-repeat01,bucket-current-frame-tolerance-1ms-prepared-r01-candidate,252.327,fc96b52afef08706deee06effe9bea3d0ca9d54d672be4f60c27f2ea6a786ea4,1642613961,39,24111,438.281,42.124,0
+molmo-prepared-repeat01,bucket-current-frame-tolerance-1ms-prepared-r02-candidate,244.023,fc96b52afef08706deee06effe9bea3d0ca9d54d672be4f60c27f2ea6a786ea4,1642613961,39,24046,432.4,39.545,0
+molmo-prepared-repeat01,bucket-current-frame-tolerance-1ms-prepared-r03-candidate,190.755,fc96b52afef08706deee06effe9bea3d0ca9d54d672be4f60c27f2ea6a786ea4,1642613961,39,24065,348.343,29.408,0

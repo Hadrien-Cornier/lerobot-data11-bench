@@ -30,7 +30,7 @@ def argument_values(arguments, option):
     return arguments[arguments.index(option) + 1:arguments.index(option) + 2] if arguments.count(option) == 1 else []
 
 
-def verify_receipt_arguments(start, transfer, dataset):
+def verify_receipt_arguments(start, transfer, dataset, receipt_name):
     arguments = start.get("argv", [])
     required = {
         "--dataset": dataset,
@@ -46,7 +46,7 @@ def verify_receipt_arguments(start, transfer, dataset):
         if argument_values(arguments, option) != [value]:
             raise ValueError(f"Private receipt disagrees with the publisher argument {option}.")
     output = argument_values(arguments, "--out")
-    if not output or Path(output[0]).name != f"{dataset}-private-transfer.json":
+    if not output or Path(output[0]).name != receipt_name:
         raise ValueError("The recorded publisher command wrote a different receipt.")
 
 
@@ -74,15 +74,16 @@ def prepared_receipt(paths, rows, events):
     if directory.resolve() != candidate_path.parent.resolve():
         raise ValueError("Use both prepared pair cells from the same run directory.")
     pair = base_path.stem.removeprefix(f"{dataset}-").removesuffix("-baseline")
+    repeat = re.fullmatch(r"current-frame-tolerance-1ms-prepared-(r[0-9]{2})", pair)
     states = {
         "prepared": ("unclassified", "unclassified"),
         "current-frame-tolerance-1ms-prepared": ("unclassified", "cold"),
     }
+    expected_states = states["current-frame-tolerance-1ms-prepared"] if repeat else states.get(pair)
     if (
-        pair not in states
-        or base_path.stem != f"{dataset}-{pair}-baseline"
+        base_path.stem != f"{dataset}-{pair}-baseline"
         or candidate_path.stem != f"{dataset}-{pair}-candidate"
-        or (base["cache"], candidate["cache"]) != states[pair]
+        or (base["cache"], candidate["cache"]) != expected_states
         or any(row["config"].get("warm_batches", 0) for row in rows)
     ):
         raise ValueError("Use the logged prepared baseline and fresh stock candidate pair.")
@@ -104,7 +105,8 @@ def prepared_receipt(paths, rows, events):
     if any(source[1] != verification for source in sources) or sources[0] != sources[1]:
         raise ValueError("The prepared pair did not verify one shared source revision or bucket inventory.")
 
-    label = f"{dataset}-private-transfer"
+    suffix = f"-{repeat[1]}" if repeat else ""
+    label = f"{dataset}-private-transfer{suffix}"
     receipt_path = directory / f"{label}.json"
     receipt = read(receipt_path)
     transfer = receipt["private_transfer"]
@@ -154,7 +156,7 @@ def prepared_receipt(paths, rows, events):
         for event in events[:events.index(candidate_start)]
     ):
         raise ValueError("A prior stage already used a reader cache.")
-    verify_receipt_arguments(start, transfer, dataset)
+    verify_receipt_arguments(start, transfer, dataset, receipt_path.name)
     verify_reader_command(base_start, base_path, base)
     verify_reader_command(candidate_start, candidate_path, candidate)
 
@@ -169,7 +171,10 @@ def prepared_receipt(paths, rows, events):
         ):
             raise ValueError("The receipt does not match the native index staged by this job.")
     else:
-        setups = [event for event in events[:events.index(start)] if event.get("event") == "tolerance-control-setup"]
+        setups = [
+            event for event in events[:events.index(start)]
+            if event.get("event") == "tolerance-control-setup" and event.get("pair") in (None, pair)
+        ]
         if len(setups) != 1:
             raise ValueError("The tolerance prepared-control provenance is absent.")
         setup = setups[0]
@@ -184,10 +189,44 @@ def prepared_receipt(paths, rows, events):
             or any(reference.get(key) != transfer[key] for key in TRANSFER_FIELDS)
         ):
             raise ValueError("The fresh transfer does not match the pinned publisher control.")
-        if read(directory / "bucket-manifest-tolerance-1ms-before-transfer.json")["manifest_sha256"] != sources[0][2]:
+        pre_receipt_label = f"bucket-manifest-tolerance-1ms-before-transfer{suffix}"
+        if read(directory / f"{pre_receipt_label}.json")["manifest_sha256"] != sources[0][2]:
             raise ValueError("The bucket inventory before receipt differs from the paired inventory.")
+        if repeat:
+            order = sorted((base_start, candidate_start), key=events.index)
+            stops_by_label = {event["label"]: event for event in completed_rows}
+            if (
+                setup.get("pair") != pair
+                or setup.get("repeat") != int(repeat[1][1:])
+                or setup.get("reader_order") != [event["reader"] for event in order]
+                or events.index(stops_by_label[order[0]["label"]]) >= events.index(order[1])
+                or tuple(event.get("reader") for event in (base_start, candidate_start)) != ("baseline", "candidate")
+            ):
+                raise ValueError("The fresh reader stages overlap or differ from the declared order.")
+            fixed_batches = completed[0].get("fixed_target")
+            if (
+                not fixed_batches or setup.get("max_batches") != fixed_batches
+                or setup.get("transfer_label") != label
+                or setup.get("before_transfer_label") != pre_receipt_label.removeprefix("bucket-manifest-")
+                or any(row["config"].get("max_batches") != fixed_batches
+                       or row["config"].get("continue_to_max_batches") is not True
+                       or row["config"].get("seed_requested") != setup.get("seed_requested")
+                       or row["config"].get("pool_size") != setup.get("pool_size") for row in rows)
+            ):
+                raise ValueError("The fresh repeat differs from the declared benchmark settings.")
+            before = one_event(events, "stop", f"bucket-manifest-{pair}-before")
+            after = one_event(events, "stop", f"bucket-manifest-{pair}-after")
+            pre_receipt = one_event(events, "stop", pre_receipt_label)
+            if (
+                any(event.get("code") != 0 or event.get("timed_out") is not False
+                    for event in (before, after, pre_receipt))
+                or not events.index(pre_receipt) < events.index(start) < events.index(stop)
+                < events.index(before) < events.index(order[0])
+                or not max(map(events.index, completed_rows)) < events.index(after) < events.index(completed[0])
+            ):
+                raise ValueError("The three successful bucket inventories do not bracket receipt and delivery.")
         audit_directory = directory.parent / source_run
-        original = read(audit_directory / receipt_path.name)["private_transfer"]
+        original = read(audit_directory / f"{dataset}-private-transfer.json")["private_transfer"]
         if any(original.get(key) != transfer[key] for key in (*TRANSFER_FIELDS, "repo", "size_bytes")):
             raise ValueError("The original publisher receipt identifies a different private archive.")
         for phase in ("before", "after"):
