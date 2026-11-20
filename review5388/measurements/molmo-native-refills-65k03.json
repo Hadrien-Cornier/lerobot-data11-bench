@@ -1,0 +1,695 @@
+{
+  "source": "pepijn223/MolmoAct2-BimanualYAM-Dataset-bucket",
+  "source_manifest_sha256": "aebacc429d54f284e103ff10613b925f5827c347e0678846b0b6f0015dded782",
+  "matching_inventories": [
+    "bucket-manifest-after-baseline.json",
+    "bucket-manifest-after-candidate.json",
+    "bucket-manifest-before-baseline.json",
+    "bucket-manifest-before-candidate.json",
+    "bucket-manifest-before-transfer.json"
+  ],
+  "run": "molmo-native-refills-65k03",
+  "host": {
+    "cpu_model": "AMD EPYC 7R13 Processor",
+    "cpu_quota": "800000 100000",
+    "memory_limit_bytes": "32000000000",
+    "job_id": "6affcf814fdc5ab3c55addad",
+    "bundle_revision": "6456e0d2ce07772371e4b8a0bfcb69e66aa6f8bd",
+    "vcpus": 8.0,
+    "reader_order": [
+      "baseline",
+      "candidate"
+    ]
+  },
+  "settings": {
+    "batch_size": 8,
+    "workers": 0,
+    "pool_size": 32,
+    "seed_effective": 42,
+    "torch_num_threads": 1,
+    "tolerance_s": 0.001,
+    "action_steps": 1,
+    "camera_offsets_s": [
+      0.0
+    ],
+    "warm_batches": 0,
+    "collate": "default_collate"
+  },
+  "matching_index": {
+    "mode": "simulated_publication",
+    "bytes": 1833903820,
+    "sha256": "681cbf6e34f764f219d32e7c6b55cf9079de78f42ea5967f658c46cb261456ad",
+    "consumer_receipt_s": 10.711535951995756
+  },
+  "source_examples": 76046658,
+  "batches_per_epoch": 9505833,
+  "final_batch_size": 2,
+  "last_shared_batch": 65000,
+  "shared_fraction_of_epoch": 0.006837907327893357,
+  "readers": {
+    "baseline": {
+      "lerobot_revision": "fe1c54594f6ba275fccf210b9f7b11f0e2324b89",
+      "batches": 65000,
+      "first_batch_s": 165.43241880799178,
+      "last_batch_s": 4087.0773853759747,
+      "status": "ok",
+      "stop_reason": "max_batches",
+      "refill_batches": [
+        18557,
+        29163,
+        39611,
+        51592,
+        58160
+      ],
+      "native_refill_events": [
+        18557,
+        29163
+      ],
+      "refill_elapsed_s": [
+        1862.2132811949705,
+        2600.7172959219897,
+        3061.857168570976,
+        3549.881583046983,
+        3818.9285644299816
+      ],
+      "distinct_usable_examples": 520000,
+      "shared_prefix_episode_diversity": {
+        "batches": 65000,
+        "unique_episodes": 218,
+        "ordered_anchor_sha256": "47643a62998e07d2ebb09c023a4a145af88822523f31d32bd0a5cc55f4ad89f9",
+        "mean_distinct_episodes_per_batch": 5.596846153846154,
+        "mean_largest_episode_share": 0.3299673076923077,
+        "batches_by_distinct_episode_count": {
+          "1": 60,
+          "2": 560,
+          "3": 3194,
+          "4": 9665,
+          "5": 16599,
+          "6": 17783,
+          "7": 12432,
+          "8": 4707
+        },
+        "batches_with_a_same_episode_pair_within_0p2s": 909
+      },
+      "invalid_batches": 0,
+      "duplicates": 0,
+      "after_batch_125": {
+        "batches": 64875,
+        "batch_wait_s": {
+          "p50": 0.04772684897761792,
+          "p95": 0.11176613701391035,
+          "p99": 0.14709906206000606
+        },
+        "episode_diversity": {
+          "distinct_episodes_per_batch_mean": 5.594111753371869,
+          "distinct_episodes_per_batch": {
+            "p50": 6.0,
+            "p95": 8.0,
+            "p99": 8.0
+          },
+          "largest_episode_share_mean": 0.33017726396917146,
+          "largest_episode_share": {
+            "p50": 0.25,
+            "p95": 0.625,
+            "p99": 0.75
+          },
+          "unordered_pairs": 1816500,
+          "same_episode_pairs": 227232,
+          "near_0p2s_pairs": 917,
+          "near_1p0s_pairs": 4640
+        }
+      },
+      "first_1000_match_saved_id_order": true,
+      "order_check_against_long_stock_run": {
+        "1": {
+          "sha256": "2b18b1bffd956c2b35ee08ed27d82926401e2e669eebe06382b9af020c19547e",
+          "matches_stock": true
+        },
+        "125": {
+          "sha256": "9bd913b2c04ca739ea6804bdbd9f06622b2c17ef05a19fd0c4d1c8797c12e7c1",
+          "matches_stock": true
+        },
+        "500": {
+          "sha256": "c7fb98e6a25f0166a146972aaa9e14d1b85d8f449e39be45354a5115ba794c9e",
+          "matches_stock": true
+        },
+        "1000": {
+          "sha256": "a27504d0e095abae4285d5f8830122971aec2c3b72e5f6a0e37927fe10bc7669",
+          "matches_stock": true
+        },
+        "2000": {
+          "sha256": "9816cb4100e213c859a4be76bc120bc61e57faa58ff05f705b3138d23c95704e",
+          "matches_stock": true
+        },
+        "3000": {
+          "sha256": "ba9845335e75cb6a3fa785a689e00b66e3dfe8d4ca531d9f71fdd7b05b5db36e",
+          "matches_stock": true
+        },
+        "4000": {
+          "sha256": "f4cbd5563e7a38a1d57eecefe618227d2670d7989790e57a6c7373ecc602812c",
+          "matches_stock": true
+        },
+        "24000": {
+          "sha256": "bc4c939d2239114ac065c5082dcee3ca203005630c6a7f189d36475360ed3753",
+          "matches_stock": true
+        }
+      },
+      "window_sensitivity": {
+        "through_both_refills": {
+          "after_batch": 125,
+          "through_batch": 65000,
+          "anchors": 519000,
+          "elapsed_s": 3909.344675778004,
+          "anchors_per_s": 132.7588235480191,
+          "cpu_epoch_days": 6.6318091124004575
+        },
+        "before_first_refill": {
+          "after_batch": 125,
+          "through_batch": 18557,
+          "anchors": 147456,
+          "elapsed_s": 1684.4805715969997,
+          "anchors_per_s": 87.53796421659047,
+          "cpu_epoch_days": 10.033270135070197
+        },
+        "between_refills": {
+          "after_batch": 18557,
+          "through_batch": 29163,
+          "anchors": 84848,
+          "elapsed_s": 738.5040147270192,
+          "anchors_per_s": 114.89172476789206,
+          "cpu_epoch_days": 7.655781909936785
+        },
+        "all_after_second_refill": {
+          "after_batch": 29163,
+          "through_batch": 65000,
+          "anchors": 286696,
+          "elapsed_s": 1486.360089453985,
+          "anchors_per_s": 192.88461930198753,
+          "cpu_epoch_days": 4.579293972725848
+        },
+        "refill_2_to_3": {
+          "after_batch": 29163,
+          "through_batch": 39611,
+          "anchors": 83584,
+          "elapsed_s": 461.13987264898606,
+          "anchors_per_s": 181.25520033619625,
+          "cpu_epoch_days": 4.870068573716759
+        },
+        "refill_3_to_4": {
+          "after_batch": 39611,
+          "through_batch": 51592,
+          "anchors": 95848,
+          "elapsed_s": 488.0244144760072,
+          "anchors_per_s": 196.40001023906188,
+          "cpu_epoch_days": 4.498175260063238
+        },
+        "refill_4_to_5": {
+          "after_batch": 51592,
+          "through_batch": 58160,
+          "anchors": 52544,
+          "elapsed_s": 269.04698138299864,
+          "anchors_per_s": 195.29674605492642,
+          "cpu_epoch_days": 4.523318980059239
+        }
+      }
+    },
+    "candidate": {
+      "lerobot_revision": "adbdf5f0218898b187b4d20376a4bdee4a97d388",
+      "batches": 65000,
+      "first_batch_s": 14.288183316006325,
+      "last_batch_s": 2270.241757993994,
+      "status": "ok",
+      "stop_reason": "max_batches",
+      "refill_batches": [
+        6878,
+        13175,
+        20358,
+        27756,
+        35350,
+        44871,
+        52515,
+        60388
+      ],
+      "native_refill_events": [
+        6878,
+        13175
+      ],
+      "refill_elapsed_s": [
+        235.31738113902975,
+        415.3111214680248,
+        628.4667177780066,
+        844.3450103430077,
+        1066.7279125030036,
+        1660.5835148069891,
+        1886.4169540210278,
+        2120.440181376005
+      ],
+      "distinct_usable_examples": 520000,
+      "shared_prefix_episode_diversity": {
+        "batches": 65000,
+        "unique_episodes": 288,
+        "ordered_anchor_sha256": "70d110095fe8ae673ade132b0376e8121695ed2540d6c540cac9b828844094ce",
+        "mean_distinct_episodes_per_batch": 7.050246153846154,
+        "mean_largest_episode_share": 0.21855,
+        "batches_by_distinct_episode_count": {
+          "3": 4,
+          "4": 171,
+          "5": 2430,
+          "6": 12573,
+          "7": 28594,
+          "8": 21228
+        },
+        "batches_with_a_same_episode_pair_within_0p2s": 340
+      },
+      "invalid_batches": 0,
+      "duplicates": 0,
+      "after_batch_125": {
+        "batches": 64875,
+        "batch_wait_s": {
+          "p50": 0.025273330975323915,
+          "p95": 0.06807039194391111,
+          "p99": 0.14090278176008747
+        },
+        "episode_diversity": {
+          "distinct_episodes_per_batch_mean": 7.050219653179191,
+          "distinct_episodes_per_batch": {
+            "p50": 7.0,
+            "p95": 8.0,
+            "p99": 8.0
+          },
+          "largest_episode_share_mean": 0.2185568400770713,
+          "largest_episode_share": {
+            "p50": 0.25,
+            "p95": 0.375,
+            "p99": 0.375
+          },
+          "unordered_pairs": 1816500,
+          "same_episode_pairs": 66790,
+          "near_0p2s_pairs": 340,
+          "near_1p0s_pairs": 1805
+        }
+      },
+      "first_1000_match_saved_id_order": true,
+      "order_check_against_long_stock_run": {
+        "1": {
+          "sha256": "0c9c2d3a8a61bcf1ab3d332b539c046a7ebccb2a33171d8e5916b918685af98c",
+          "matches_stock": true
+        },
+        "125": {
+          "sha256": "6ee931ca34e27ec68521a05efe658c8f0b9a9c05956f2761a7c240f238cca10d",
+          "matches_stock": true
+        },
+        "500": {
+          "sha256": "77ae3f0d66526ecc81b41f52afde558b188e43e16e22e9b41413025c7a34a1e5",
+          "matches_stock": true
+        },
+        "1000": {
+          "sha256": "fc96b52afef08706deee06effe9bea3d0ca9d54d672be4f60c27f2ea6a786ea4",
+          "matches_stock": true
+        },
+        "2000": {
+          "sha256": "8479ed1d8fca69893204ece8692f359bfa5da5b8314806fe2d9e5200684f715b",
+          "matches_stock": true
+        },
+        "3000": {
+          "sha256": "5da7cb0c2c3926c6d2d42474f9cf750d789cd78539de608f156ab8c43198139b",
+          "matches_stock": true
+        },
+        "4000": {
+          "sha256": "52b5bba4c42a61946f14ca2c5f058b9715d43cb5ce647135b3b8b4e4da703a7d",
+          "matches_stock": true
+        },
+        "24000": {
+          "sha256": "401e9c5a0d391c6c540b17f855c81c0714b47081e7b061d245dfb5418d90edb0",
+          "matches_stock": true
+        }
+      },
+      "window_sensitivity": {
+        "through_both_refills": {
+          "after_batch": 125,
+          "through_batch": 65000,
+          "anchors": 519000,
+          "elapsed_s": 2235.73403639195,
+          "anchors_per_s": 232.13852432893464,
+          "cpu_epoch_days": 3.7919203466855165
+        },
+        "before_first_refill": {
+          "after_batch": 125,
+          "through_batch": 6878,
+          "anchors": 54024,
+          "elapsed_s": 200.80965953698615,
+          "anchors_per_s": 269.03088289958276,
+          "cpu_epoch_days": 3.2755353801260347
+        },
+        "between_refills": {
+          "after_batch": 6878,
+          "through_batch": 13175,
+          "anchors": 50376,
+          "elapsed_s": 179.99374032899505,
+          "anchors_per_s": 279.87639963435424,
+          "cpu_epoch_days": 3.1496230216295493
+        },
+        "all_after_second_refill": {
+          "after_batch": 13175,
+          "through_batch": 65000,
+          "anchors": 414600,
+          "elapsed_s": 1854.930636525969,
+          "anchors_per_s": 223.51240086070766,
+          "cpu_epoch_days": 3.937249703850082
+        },
+        "refill_2_to_3": {
+          "after_batch": 13175,
+          "through_batch": 20358,
+          "anchors": 57464,
+          "elapsed_s": 213.15559630998177,
+          "anchors_per_s": 269.5871044194069,
+          "cpu_epoch_days": 3.26883139469434
+        },
+        "refill_3_to_4": {
+          "after_batch": 20358,
+          "through_batch": 27756,
+          "anchors": 59184,
+          "elapsed_s": 215.87829256500117,
+          "anchors_per_s": 274.1544751757736,
+          "cpu_epoch_days": 3.2148109271403396
+        },
+        "refill_4_to_5": {
+          "after_batch": 27756,
+          "through_batch": 35350,
+          "anchors": 60752,
+          "elapsed_s": 222.38290215999587,
+          "anchors_per_s": 273.18646986759484,
+          "cpu_epoch_days": 3.2261091396334005
+        },
+        "refill_5_to_6": {
+          "after_batch": 35350,
+          "through_batch": 44871,
+          "anchors": 76168,
+          "elapsed_s": 593.8556023039855,
+          "anchors_per_s": 128.26013546810117,
+          "cpu_epoch_days": 6.841730577354958
+        },
+        "refill_6_to_7": {
+          "after_batch": 44871,
+          "through_batch": 52515,
+          "anchors": 61152,
+          "elapsed_s": 225.83343921403866,
+          "anchors_per_s": 270.78363688223266,
+          "cpu_epoch_days": 3.254503265782193
+        },
+        "refill_7_to_8": {
+          "after_batch": 52515,
+          "through_batch": 60388,
+          "anchors": 62984,
+          "elapsed_s": 234.02322735497728,
+          "anchors_per_s": 269.13567816267636,
+          "cpu_epoch_days": 3.274270192992339
+        }
+      }
+    }
+  },
+  "delivery_leads": {
+    "lead_change_count": 0,
+    "lead_changes": [],
+    "initial_lead": {
+      "reader": "candidate",
+      "first_batch": 1,
+      "strict_lead_batches": 65000,
+      "previous_leader_last_delivery": null,
+      "leader_first_delivery": {
+        "batch": 1,
+        "baseline_s": 165.43241880799178,
+        "candidate_s": 14.288183316006325,
+        "baseline_minus_candidate_s": 151.14423549198546,
+        "lead": "candidate"
+      },
+      "last_strict_lead_batch": 65000
+    },
+    "first_durable_lead_change": null,
+    "final_lead_through_checkpoint": {
+      "reader": "candidate",
+      "first_batch": 1,
+      "strict_lead_batches": 65000,
+      "previous_leader_last_delivery": null,
+      "leader_first_delivery": {
+        "batch": 1,
+        "baseline_s": 165.43241880799178,
+        "candidate_s": 14.288183316006325,
+        "baseline_minus_candidate_s": 151.14423549198546,
+        "lead": "candidate"
+      },
+      "last_strict_lead_batch": 65000
+    },
+    "durable_lead_threshold_batches": 125,
+    "ties": 0
+  },
+  "crossover_rate_window_sensitivity": {
+    "30000": {
+      "observed_leader": "candidate",
+      "baseline_minus_candidate_s": 1719.6134568199632,
+      "observed_first_opposite_leader_after_checkpoint": null,
+      "observed_through_batch": 65000,
+      "rate_windows": [
+        {
+          "from_batch": 125,
+          "through_batch": 30000,
+          "baseline_minus_candidate_seconds_per_batch": 0.05276614121586731,
+          "extrapolated_first_strict_lead_reversal_batch": null
+        },
+        {
+          "from_batch": 20000,
+          "through_batch": 30000,
+          "baseline_minus_candidate_seconds_per_batch": 0.034104740268900056,
+          "extrapolated_first_strict_lead_reversal_batch": null
+        },
+        {
+          "from_batch": 25000,
+          "through_batch": 30000,
+          "baseline_minus_candidate_seconds_per_batch": 0.02293195462439908,
+          "extrapolated_first_strict_lead_reversal_batch": null
+        },
+        {
+          "from_batch": 29000,
+          "through_batch": 30000,
+          "baseline_minus_candidate_seconds_per_batch": 0.018841681246994993,
+          "extrapolated_first_strict_lead_reversal_batch": null
+        },
+        {
+          "from_batch": 29875,
+          "through_batch": 30000,
+          "baseline_minus_candidate_seconds_per_batch": 0.01842192661575973,
+          "extrapolated_first_strict_lead_reversal_batch": null
+        }
+      ]
+    },
+    "65000": {
+      "observed_leader": "candidate",
+      "baseline_minus_candidate_s": 1816.8356273819809,
+      "observed_first_opposite_leader_after_checkpoint": null,
+      "observed_through_batch": 65000,
+      "rate_windows": [
+        {
+          "from_batch": 125,
+          "through_batch": 65000,
+          "baseline_minus_candidate_seconds_per_batch": 0.025797466503060557,
+          "extrapolated_first_strict_lead_reversal_batch": null
+        },
+        {
+          "from_batch": 55000,
+          "through_batch": 65000,
+          "baseline_minus_candidate_seconds_per_batch": 0.010204404103802517,
+          "extrapolated_first_strict_lead_reversal_batch": null
+        },
+        {
+          "from_batch": 60000,
+          "through_batch": 65000,
+          "baseline_minus_candidate_seconds_per_batch": 0.003964328957803082,
+          "extrapolated_first_strict_lead_reversal_batch": null
+        },
+        {
+          "from_batch": 64000,
+          "through_batch": 65000,
+          "baseline_minus_candidate_seconds_per_batch": 0.009539036614994984,
+          "extrapolated_first_strict_lead_reversal_batch": null
+        },
+        {
+          "from_batch": 64875,
+          "through_batch": 65000,
+          "baseline_minus_candidate_seconds_per_batch": 0.009566653744317592,
+          "extrapolated_first_strict_lead_reversal_batch": null
+        }
+      ]
+    }
+  },
+  "milestones": [
+    {
+      "batch": 1,
+      "baseline_s": 165.43241880799178,
+      "candidate_s": 14.288183316006325,
+      "baseline_minus_candidate_s": 151.14423549198546,
+      "lead": "candidate"
+    },
+    {
+      "batch": 125,
+      "baseline_s": 177.73270959797082,
+      "candidate_s": 34.5077216020436,
+      "baseline_minus_candidate_s": 143.22498799592722,
+      "lead": "candidate"
+    },
+    {
+      "batch": 1000,
+      "baseline_s": 255.36185516801197,
+      "candidate_s": 64.55961656098953,
+      "baseline_minus_candidate_s": 190.80223860702245,
+      "lead": "candidate"
+    },
+    {
+      "batch": 4000,
+      "baseline_s": 518.4270582449972,
+      "candidate_s": 149.6193869980052,
+      "baseline_minus_candidate_s": 368.80767124699196,
+      "lead": "candidate"
+    },
+    {
+      "batch": 6878,
+      "baseline_s": 769.5697896559723,
+      "candidate_s": 235.31738113902975,
+      "baseline_minus_candidate_s": 534.2524085169425,
+      "lead": "candidate"
+    },
+    {
+      "batch": 10000,
+      "baseline_s": 1043.478917603963,
+      "candidate_s": 328.2434697159915,
+      "baseline_minus_candidate_s": 715.2354478879715,
+      "lead": "candidate"
+    },
+    {
+      "batch": 13175,
+      "baseline_s": 1366.0566546689952,
+      "candidate_s": 415.3111214680248,
+      "baseline_minus_candidate_s": 950.7455332009704,
+      "lead": "candidate"
+    },
+    {
+      "batch": 18557,
+      "baseline_s": 1862.2132811949705,
+      "candidate_s": 574.8594364289893,
+      "baseline_minus_candidate_s": 1287.3538447659812,
+      "lead": "candidate"
+    },
+    {
+      "batch": 20000,
+      "baseline_s": 1990.4620963549824,
+      "candidate_s": 611.8960422240198,
+      "baseline_minus_candidate_s": 1378.5660541309626,
+      "lead": "candidate"
+    },
+    {
+      "batch": 20358,
+      "baseline_s": 2022.0117817919818,
+      "candidate_s": 628.4667177780066,
+      "baseline_minus_candidate_s": 1393.5450640139752,
+      "lead": "candidate"
+    },
+    {
+      "batch": 27756,
+      "baseline_s": 2534.7356908659567,
+      "candidate_s": 844.3450103430077,
+      "baseline_minus_candidate_s": 1690.390680522949,
+      "lead": "candidate"
+    },
+    {
+      "batch": 29163,
+      "baseline_s": 2600.7172959219897,
+      "candidate_s": 896.4203671520227,
+      "baseline_minus_candidate_s": 1704.296928769967,
+      "lead": "candidate"
+    },
+    {
+      "batch": 30000,
+      "baseline_s": 2637.7073629319784,
+      "candidate_s": 918.0939061120152,
+      "baseline_minus_candidate_s": 1719.6134568199632,
+      "lead": "candidate"
+    },
+    {
+      "batch": 35350,
+      "baseline_s": 2865.6762372669764,
+      "candidate_s": 1066.7279125030036,
+      "baseline_minus_candidate_s": 1798.9483247639728,
+      "lead": "candidate"
+    },
+    {
+      "batch": 39611,
+      "baseline_s": 3061.857168570976,
+      "candidate_s": 1326.8073723110138,
+      "baseline_minus_candidate_s": 1735.049796259962,
+      "lead": "candidate"
+    },
+    {
+      "batch": 40000,
+      "baseline_s": 3081.651591581991,
+      "candidate_s": 1350.1452508990187,
+      "baseline_minus_candidate_s": 1731.5063406829722,
+      "lead": "candidate"
+    },
+    {
+      "batch": 44871,
+      "baseline_s": 3296.479819005006,
+      "candidate_s": 1660.5835148069891,
+      "baseline_minus_candidate_s": 1635.8963041980169,
+      "lead": "candidate"
+    },
+    {
+      "batch": 50000,
+      "baseline_s": 3490.719404721982,
+      "candidate_s": 1809.9003905610298,
+      "baseline_minus_candidate_s": 1680.819014160952,
+      "lead": "candidate"
+    },
+    {
+      "batch": 51592,
+      "baseline_s": 3549.881583046983,
+      "candidate_s": 1850.682033293997,
+      "baseline_minus_candidate_s": 1699.199549752986,
+      "lead": "candidate"
+    },
+    {
+      "batch": 52515,
+      "baseline_s": 3584.799584892986,
+      "candidate_s": 1886.4169540210278,
+      "baseline_minus_candidate_s": 1698.382630871958,
+      "lead": "candidate"
+    },
+    {
+      "batch": 58160,
+      "baseline_s": 3818.9285644299816,
+      "candidate_s": 2051.695308352995,
+      "baseline_minus_candidate_s": 1767.2332560769864,
+      "lead": "candidate"
+    },
+    {
+      "batch": 60000,
+      "baseline_s": 3898.4869322219747,
+      "candidate_s": 2101.4729496290092,
+      "baseline_minus_candidate_s": 1797.0139825929655,
+      "lead": "candidate"
+    },
+    {
+      "batch": 60388,
+      "baseline_s": 3913.464927285968,
+      "candidate_s": 2120.440181376005,
+      "baseline_minus_candidate_s": 1793.0247459099628,
+      "lead": "candidate"
+    },
+    {
+      "batch": 65000,
+      "baseline_s": 4087.0773853759747,
+      "candidate_s": 2270.241757993994,
+      "baseline_minus_candidate_s": 1816.8356273819809,
+      "lead": "candidate"
+    }
+  ],
+  "epoch_method": "Observed time to the final delivery plus remaining examples / measured examples per second. Primary rate spans batches after 125 through the final delivery. Other windows test sensitivity. Two verified cohort refills and 125 further batches are required."
+}

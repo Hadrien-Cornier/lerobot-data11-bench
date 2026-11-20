@@ -1,0 +1,159 @@
+{
+  "clock": "DataLoader next() wait. Reader construction and prior index receipt are outside this clock.",
+  "method": "Match on distinct episodes, largest same-episode sample count, and number of same-episode pairs within 0.2 s. Weight each class by the smaller observed count across the two readers. Overlap is the sum of those counts divided by the number of batches per reader.",
+  "pairs": [
+    {
+      "run": "molmo-native-refills-r01",
+      "vcpus": 8.0,
+      "valid_shared_batches": 30000,
+      "full_prefix_mean_distinct_episodes": {
+        "baseline": 5.907466666666667,
+        "candidate": 7.055
+      },
+      "intervals": [
+        {
+          "from_batch": 126,
+          "through_batch": 30000,
+          "overlap_batches_per_reader": 18315,
+          "batches_per_reader": 29875,
+          "overlap_fraction": 0.6130543933054393,
+          "matched_mean_distinct_episodes": 6.762271362271362,
+          "reader_results": {
+            "baseline": {
+              "mean_distinct_episodes": 5.902828451882845,
+              "mean_wait_ms": 75.29965476072529,
+              "mean_wall_ms_per_delivery": 76.30003794329436,
+              "mean_ms_between_next_calls": 1.0003831825690668,
+              "episode_mix_matched_mean_wait_ms": 75.36952988787232
+            },
+            "candidate": {
+              "mean_distinct_episodes": 7.054962343096235,
+              "mean_wait_ms": 75.39045318121784,
+              "mean_wall_ms_per_delivery": 79.35281881111358,
+              "mean_ms_between_next_calls": 3.962365629895743,
+              "episode_mix_matched_mean_wait_ms": 75.65309732619569
+            }
+          }
+        }
+      ]
+    },
+    {
+      "run": "molmo-native-refills-xl02",
+      "vcpus": 16.0,
+      "valid_shared_batches": 30000,
+      "full_prefix_mean_distinct_episodes": {
+        "baseline": 5.907466666666667,
+        "candidate": 7.055
+      },
+      "intervals": [
+        {
+          "from_batch": 126,
+          "through_batch": 30000,
+          "overlap_batches_per_reader": 18315,
+          "batches_per_reader": 29875,
+          "overlap_fraction": 0.6130543933054393,
+          "matched_mean_distinct_episodes": 6.762271362271362,
+          "reader_results": {
+            "baseline": {
+              "mean_distinct_episodes": 5.902828451882845,
+              "mean_wait_ms": 67.9248352998782,
+              "mean_wall_ms_per_delivery": 68.74246950383262,
+              "mean_ms_between_next_calls": 0.8176342039544267,
+              "episode_mix_matched_mean_wait_ms": 67.07862827762641
+            },
+            "candidate": {
+              "mean_distinct_episodes": 7.054962343096235,
+              "mean_wait_ms": 61.15723769689586,
+              "mean_wall_ms_per_delivery": 64.19419768060241,
+              "mean_ms_between_next_calls": 3.036959983706552,
+              "episode_mix_matched_mean_wait_ms": 61.3630825544728
+            }
+          }
+        }
+      ]
+    },
+    {
+      "run": "molmo-native-refills-65k03",
+      "vcpus": 8.0,
+      "valid_shared_batches": 65000,
+      "full_prefix_mean_distinct_episodes": {
+        "baseline": 5.596846153846154,
+        "candidate": 7.050246153846154
+      },
+      "intervals": [
+        {
+          "from_batch": 126,
+          "through_batch": 65000,
+          "overlap_batches_per_reader": 32195,
+          "batches_per_reader": 64875,
+          "overlap_fraction": 0.49626204238921,
+          "matched_mean_distinct_episodes": 6.588134803540923,
+          "reader_results": {
+            "baseline": {
+              "mean_distinct_episodes": 5.594111753371869,
+              "mean_wait_ms": 59.42739475036116,
+              "mean_wall_ms_per_delivery": 60.259648181549196,
+              "mean_ms_between_next_calls": 0.8322534311880361,
+              "episode_mix_matched_mean_wait_ms": 63.44949940059613
+            },
+            "candidate": {
+              "mean_distinct_episodes": 7.050219653179191,
+              "mean_wait_ms": 32.646182802902366,
+              "mean_wall_ms_per_delivery": 34.46218167848863,
+              "mean_ms_between_next_calls": 1.815998875586267,
+              "episode_mix_matched_mean_wait_ms": 32.67977738892074
+            }
+          }
+        },
+        {
+          "from_batch": 126,
+          "through_batch": 30000,
+          "overlap_batches_per_reader": 18315,
+          "batches_per_reader": 29875,
+          "overlap_fraction": 0.6130543933054393,
+          "matched_mean_distinct_episodes": 6.762271362271362,
+          "reader_results": {
+            "baseline": {
+              "mean_distinct_episodes": 5.902828451882845,
+              "mean_wait_ms": 81.0530833808752,
+              "mean_wall_ms_per_delivery": 82.34224781034335,
+              "mean_ms_between_next_calls": 1.2891644294681583,
+              "episode_mix_matched_mean_wait_ms": 82.36917004279204
+            },
+            "candidate": {
+              "mean_distinct_episodes": 7.054962343096235,
+              "mean_wait_ms": 28.214331286104013,
+              "mean_wall_ms_per_delivery": 29.576106594476038,
+              "mean_ms_between_next_calls": 1.3617753083720245,
+              "episode_mix_matched_mean_wait_ms": 28.2984657621581
+            }
+          }
+        },
+        {
+          "from_batch": 30001,
+          "through_batch": 65000,
+          "overlap_batches_per_reader": 13863,
+          "batches_per_reader": 35000,
+          "overlap_fraction": 0.39608571428571426,
+          "matched_mean_distinct_episodes": 6.3587967972300365,
+          "reader_results": {
+            "baseline": {
+              "mean_distinct_episodes": 5.3306,
+              "mean_wait_ms": 40.968324812172376,
+              "mean_wall_ms_per_delivery": 41.41057206982847,
+              "mean_ms_between_next_calls": 0.4422472576560921,
+              "episode_mix_matched_mean_wait_ms": 39.93073651956564
+            },
+            "candidate": {
+              "mean_distinct_episodes": 7.046171428571428,
+              "mean_wait_ms": 36.42908463331239,
+              "mean_wall_ms_per_delivery": 38.63279576805653,
+              "mean_ms_between_next_calls": 2.2037111347441396,
+              "episode_mix_matched_mean_wait_ms": 36.30917640353693
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

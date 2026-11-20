@@ -53,7 +53,7 @@ class RefillEvents:
             self.refills.append(fields)
 
 
-def reader_metrics(path, row, lengths, *, offset, paired_horizon, fixture, stop):
+def reader_metrics(path, row, lengths, *, offset, paired_horizon, fixture, stop, all_refills=False):
     """Take counts from audited delivery events and replay native pool admissions."""
     batch_size = row["config"]["batch_size"]
     delivered_batches = row["progress"]["batches"]
@@ -61,7 +61,7 @@ def reader_metrics(path, row, lengths, *, offset, paired_horizon, fixture, stop)
     trace = trace_path(path)
     opener = gzip.open if trace.suffix == ".gz" else open
     replay_events = RefillEvents()
-    pool = PoolTurnover(row["reader"], replay_events)
+    pool = PoolTurnover(row["reader"], replay_events, refill_limit=None if all_refills else 2)
     digest = sha256()
     times, reported_refills, signatures = [], [], {}
     first_sample = None
@@ -92,9 +92,12 @@ def reader_metrics(path, row, lengths, *, offset, paired_horizon, fixture, stop)
                 first_sample = event["measurement_elapsed_s"]
 
     refills = pool.refill_batches
-    require(len(times) == delivered_batches and replay_events.refills == reported_refills
-            and refills == row["turnover"]["refill_batches"]
-            and len(refills) == row["turnover"]["refills_verified"],
+    # The original native benchmark stops writing verified-refill events after two. Replay
+    # all recorded admissions and deliveries offline, and check every native marker.
+    checked = slice(2 if all_refills and len(reported_refills) <= 2 else None)
+    require(len(times) == delivered_batches and replay_events.refills[checked] == reported_refills
+            and refills[checked] == row["turnover"]["refill_batches"]
+            and len(refills[checked]) == row["turnover"]["refills_verified"],
             f"Replayed coverage or refills disagree for {path.name}")
     require(first_sample == row["timings"]["first_sample_s"] and 0 <= first_sample <= times[0],
             f"First-sample trace and worker summary disagree for {path.name}")
@@ -104,7 +107,7 @@ def reader_metrics(path, row, lengths, *, offset, paired_horizon, fixture, stop)
     across = window(times, START_BATCH, delivered_batches, batch_size)
     tail = None
     projection = None
-    qualifies = (row["status"] == "ok" or stop["timed_out"]) and len(refills) == 2
+    qualifies = (row["status"] == "ok" or stop["timed_out"]) and len(refills) >= 2
     qualifies = qualifies and refills[0] > START_BATCH and delivered_batches >= refills[1] + TAIL_BATCHES
     if qualifies:
         tail = window(times, refills[1], refills[1] + TAIL_BATCHES, batch_size)

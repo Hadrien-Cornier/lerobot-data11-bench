@@ -248,23 +248,67 @@ def delivery_curve(baseline, candidate, receipt_seconds):
     return series
 
 
+def crossover_sensitivity(series, stop):
+    """Extrapolate from the measured gap at this batch with several trailing slopes."""
+    point = series[stop - 1]
+    gap = point["baseline_minus_candidate_s"]
+    starting_leader = point["lead"]
+    reverse = next(
+        (
+            later["batch"]
+            for later in series[stop:]
+            if later["lead"] not in (starting_leader, "tie")
+        ),
+        None,
+    )
+    estimates = []
+    for start in sorted(
+        {START_BATCH, stop - 10000, stop - 5000, stop - 1000, stop - 125}
+    ):
+        if not 0 < start < stop:
+            continue
+        start_gap = series[start - 1]["baseline_minus_candidate_s"]
+        slope = (gap - start_gap) / (stop - start)
+        crossing = None
+        if gap * slope < 0:
+            crossing = stop + math.floor(abs(gap / slope)) + 1
+        estimates.append(
+            {
+                "from_batch": start,
+                "through_batch": stop,
+                "baseline_minus_candidate_seconds_per_batch": slope,
+                "extrapolated_first_strict_lead_reversal_batch": crossing,
+            }
+        )
+    return {
+        "observed_leader": starting_leader,
+        "baseline_minus_candidate_s": gap,
+        "observed_first_opposite_leader_after_checkpoint": reverse,
+        "observed_through_batch": len(series),
+        "rate_windows": estimates,
+    }
+
+
 def epoch_windows(times, refills, source_total, offset):
     # Hold observed delivery through the last batch fixed in every scenario.
     # Vary only the rate for the remaining examples.
     last = len(times)
     if (
-        len(refills) != 2
+        len(refills) < 2
         or refills[0] <= START_BATCH
         or last < refills[1] + TAIL_BATCHES
     ):
         return {}
-    first, second = refills
+    first, second = refills[:2]
     intervals = {
         "through_both_refills": (START_BATCH, last),
         "before_first_refill": (START_BATCH, first),
         "between_refills": (first, second),
         "all_after_second_refill": (second, last),
     }
+    for i in range(2, len(refills)):
+        if refills[i] > refills[i - 1]:
+            intervals[f"refill_{i}_to_{i + 1}"] = (refills[i - 1], refills[i])
     projections = {}
     for name, (start, stop) in intervals.items():
         rate = window(times, start, stop, SETTINGS["batch_size"])
@@ -326,6 +370,7 @@ def audit_pair(directory, episode_index):
             paired_horizon=min(end, stock_reference["last_paired_batch"]),
             fixture=ROOT / "correctness/evidence",
             stop={"code": None, "timed_out": False},
+            all_refills=True,
         )
         refills = metrics["native_refills_replayed"]
         expected_hashes = stock_reference["reader_metrics"][reader][
@@ -339,6 +384,7 @@ def audit_pair(directory, episode_index):
             "status": row["status"],
             "stop_reason": row.get("stop_reason"),
             "refill_batches": refills,
+            "native_refill_events": row["turnover"]["refill_batches"],
             "refill_elapsed_s": [times[n - 1] + receipts[reader] for n in refills],
             "distinct_usable_examples": row["progress"]["usable_unique_samples"],
             "shared_prefix_episode_diversity": episode_mix(
@@ -373,7 +419,7 @@ def audit_pair(directory, episode_index):
             else {},
         }
     transitions = lead_changes(series, TAIL_BATCHES)
-    milestones = {1, 125, 1000, 4000, 10000, 20000, end}
+    milestones = {1, 125, 1000, 4000, 10000, 20000, 30000, 40000, 50000, 60000, end}
     milestones.update(n for arm in result.values() for n in arm["refill_batches"])
     return {
         "source": catalog["source"],
@@ -395,6 +441,10 @@ def audit_pair(directory, episode_index):
         "shared_fraction_of_epoch": end * 8 / catalog["total_frames"],
         "readers": result,
         "delivery_leads": transitions,
+        "crossover_rate_window_sensitivity": {
+            str(stop): crossover_sensitivity(series, stop)
+            for stop in sorted({min(30000, end), end})
+        },
         "milestones": [series[n - 1] for n in sorted(milestones) if n <= end],
         "epoch_method": "Observed time to the final delivery plus remaining examples / measured examples per second. "
         "Primary rate spans batches after 125 through the final delivery. Other windows test sensitivity. "
@@ -422,9 +472,7 @@ def plot(series, path):
     ax.xaxis.set_major_formatter(StrMethodFormatter("{x:,.0f}"))
     ax.grid(axis="y", color="#dedede", lw=0.6)
     ax.spines[["top", "right"]].set_visible(False)
-    ax.set_title(
-        "Patched #5388 leads above zero. #3917 leads below zero.", fontsize=12
-    )
+    ax.set_title("Patched #5388 leads above zero. #3917 leads below zero.", fontsize=12)
     fig.savefig(path, dpi=180)
     plt.close(fig)
 

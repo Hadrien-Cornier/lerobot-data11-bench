@@ -6,7 +6,8 @@ from threading import Lock
 
 
 class PoolTurnover:
-    def __init__(self, reader, trace):
+    def __init__(self, reader, trace, *, refill_limit=2):
+        self.refill_limit = refill_limit
         self.reader = reader
         self.trace = trace
         self.lock = Lock()
@@ -61,7 +62,7 @@ class PoolTurnover:
             self.verify_refills(batch_index)
 
     def verify_refills(self, batch_index):
-        while len(self.refill_batches) < 2:
+        while self.refill_limit is None or len(self.refill_batches) < self.refill_limit:
             prior = len(self.refill_batches)
             current = prior + 1
             if current >= len(self.sizes):
