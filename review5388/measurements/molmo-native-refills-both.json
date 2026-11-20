@@ -1,0 +1,179 @@
+{
+  "common_batches_per_reader": 30000,
+  "common_source_examples": 76046658,
+  "same_ordered_ids_for_each_reader_across_hosts": {
+    "baseline": {
+      "through_batch": 30000,
+      "matches": true
+    },
+    "candidate": {
+      "through_batch": 30000,
+      "matches": true
+    }
+  },
+  "pairs": [
+    {
+      "run": "molmo-native-refills-r01",
+      "vcpus": 8.0,
+      "order": [
+        "baseline",
+        "candidate"
+      ],
+      "receipt_s": 10.297469564015046,
+      "horizon": 30000,
+      "baseline_ahead_from_first_batch": false,
+      "first_baseline_ahead_batch": null,
+      "lead_changes": 0,
+      "final_leader": "candidate",
+      "final_lead_from_batch": 1,
+      "final_gap_baseline_minus_candidate_s": 9.485591618926264,
+      "milestone_seconds_baseline_then_candidate": {
+        "1": [
+          144.49107882694807,
+          20.280044515035115
+        ],
+        "125": [
+          156.41073672601487,
+          55.72331668098923
+        ],
+        "1000": [
+          235.99373927596025,
+          116.21415602299385
+        ],
+        "4000": [
+          509.12778571795207,
+          298.28377032699063
+        ],
+        "6878": [
+          726.4798749819165,
+          487.43279057194013
+        ],
+        "10000": [
+          937.7651238900144,
+          697.2547832679702
+        ],
+        "13175": [
+          1180.4119537660154,
+          905.8182375669712
+        ],
+        "18557": [
+          1573.0163078439655,
+          1330.445698054973
+        ],
+        "20000": [
+          1673.9570119439159,
+          1457.4113500090316
+        ],
+        "29163": [
+          2365.635586265009,
+          2353.2532045400003
+        ],
+        "30000": [
+          2435.874370281934,
+          2426.3887786630075
+        ]
+      },
+      "epoch_days_by_reader": {
+        "baseline": 8.396322159601555,
+        "candidate": 8.731023013859025
+      },
+      "epoch_days_saved_by_baseline": 0.33470085425746987,
+      "refill_batches_by_reader": {
+        "baseline": [
+          18557,
+          29163
+        ],
+        "candidate": [
+          6878,
+          13175
+        ]
+      },
+      "mean_distinct_episodes_per_batch": {
+        "baseline": 5.907466666666667,
+        "candidate": 7.055
+      }
+    },
+    {
+      "run": "molmo-native-refills-xl02",
+      "vcpus": 16.0,
+      "order": [
+        "candidate",
+        "baseline"
+      ],
+      "receipt_s": 9.41252628195798,
+      "horizon": 30000,
+      "baseline_ahead_from_first_batch": false,
+      "first_baseline_ahead_batch": null,
+      "lead_changes": 0,
+      "final_leader": "candidate",
+      "final_lead_from_batch": 1,
+      "final_gap_baseline_minus_candidate_s": 216.58401378296549,
+      "milestone_seconds_baseline_then_candidate": {
+        "1": [
+          133.20482781896135,
+          24.425022429029923
+        ],
+        "125": [
+          142.65775620896602,
+          61.953363145003095
+        ],
+        "1000": [
+          203.31420910696033,
+          122.46053075901
+        ],
+        "4000": [
+          400.87277174793417,
+          296.99006385501707
+        ],
+        "6878": [
+          591.3257358889678,
+          475.9785568420193
+        ],
+        "10000": [
+          795.2553602989647,
+          679.1743212250294
+        ],
+        "13175": [
+          1025.6777988839312,
+          876.2963204760454
+        ],
+        "18557": [
+          1409.8100163879571,
+          1216.7807511300198
+        ],
+        "20000": [
+          1514.404870120925,
+          1299.8980165380053
+        ],
+        "29163": [
+          2139.032572520955,
+          1930.6748848780408
+        ],
+        "30000": [
+          2196.339032635966,
+          1979.7550188530004
+        ]
+      },
+      "epoch_days_by_reader": {
+        "baseline": 7.564681116917763,
+        "candidate": 7.063347264624776
+      },
+      "epoch_days_saved_by_baseline": -0.5013338522929871,
+      "refill_batches_by_reader": {
+        "baseline": [
+          18557,
+          29163
+        ],
+        "candidate": [
+          6878,
+          13175
+        ]
+      },
+      "mean_distinct_episodes_per_batch": {
+        "baseline": 5.907466666666667,
+        "candidate": 7.055
+      }
+    }
+  ],
+  "limits": "CPU host size and reader order both changed between runs. Each host had one pair. Epoch times project measured CPU batch delivery; no model steps were timed."
+}

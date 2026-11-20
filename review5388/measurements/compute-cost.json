@@ -1,9 +1,9 @@
 {
-  "observed_utc": "2026-11-19T21:39:08.749335+00:00",
+  "observed_utc": "2026-11-20T04:40:59.931938+00:00",
   "rate_reference": "https://huggingface.co/docs/hub/en/jobs-pricing",
   "conservative_billing_rule": "Round total job duration up to a minute, add one minute, and limit to the reservation. A saved terminal observation bounds canceled runs without server duration.",
   "all_running_jobs": [],
-  "conservative_gross_ceiling_usd": 9.668166666666666,
+  "conservative_gross_ceiling_usd": 10.961166666666667,
   "completed_and_canceled_jobs": [
     {
       "run": "preflight",
@@ -144,6 +144,26 @@
       "running_seconds": 629,
       "total_seconds": 635,
       "conservative_gross_ceiling_usd": 0.2
+    },
+    {
+      "run": "molmo-native-refills-r01",
+      "flavor": "cpu-upgrade",
+      "status": "COMPLETED",
+      "usd_per_hour": 0.03,
+      "reserved_minutes": 300,
+      "running_seconds": 5083,
+      "total_seconds": 5095,
+      "conservative_gross_ceiling_usd": 0.043000000000000003
+    },
+    {
+      "run": "molmo-native-refills-xl02",
+      "flavor": "cpu-xl",
+      "status": "COMPLETED",
+      "usd_per_hour": 1.0,
+      "reserved_minutes": 240,
+      "running_seconds": 4392,
+      "total_seconds": 4405,
+      "conservative_gross_ceiling_usd": 1.25
     }
   ]
 }

@@ -1,0 +1,428 @@
+{
+  "source": "pepijn223/MolmoAct2-BimanualYAM-Dataset-bucket",
+  "source_manifest_sha256": "aebacc429d54f284e103ff10613b925f5827c347e0678846b0b6f0015dded782",
+  "matching_inventories": [
+    "bucket-manifest-after-baseline.json",
+    "bucket-manifest-after-candidate.json",
+    "bucket-manifest-before-baseline.json",
+    "bucket-manifest-before-candidate.json",
+    "bucket-manifest-before-transfer.json"
+  ],
+  "run": "molmo-native-refills-xl02",
+  "host": {
+    "cpu_model": "AMD EPYC 7R13 Processor",
+    "cpu_quota": "1600000 100000",
+    "memory_limit_bytes": "133999996928",
+    "job_id": "6aff7de4efaf5e14f4b22cea",
+    "bundle_revision": "bb2b2af541c00c693b8271a326f2472a0c8bba4e",
+    "vcpus": 16.0,
+    "reader_order": [
+      "candidate",
+      "baseline"
+    ]
+  },
+  "settings": {
+    "batch_size": 8,
+    "workers": 0,
+    "pool_size": 32,
+    "seed_effective": 42,
+    "torch_num_threads": 1,
+    "tolerance_s": 0.001,
+    "action_steps": 1,
+    "camera_offsets_s": [
+      0.0
+    ],
+    "warm_batches": 0,
+    "collate": "default_collate"
+  },
+  "matching_index": {
+    "mode": "simulated_publication",
+    "bytes": 1833903820,
+    "sha256": "681cbf6e34f764f219d32e7c6b55cf9079de78f42ea5967f658c46cb261456ad",
+    "consumer_receipt_s": 9.41252628195798
+  },
+  "source_examples": 76046658,
+  "batches_per_epoch": 9505833,
+  "final_batch_size": 2,
+  "last_shared_batch": 30000,
+  "shared_fraction_of_epoch": 0.0031559572282584725,
+  "readers": {
+    "baseline": {
+      "lerobot_revision": "fe1c54594f6ba275fccf210b9f7b11f0e2324b89",
+      "batches": 30000,
+      "first_batch_s": 133.20482781896135,
+      "last_batch_s": 2196.339032635966,
+      "status": "ok",
+      "stop_reason": "max_batches",
+      "refill_batches": [
+        18557,
+        29163
+      ],
+      "refill_elapsed_s": [
+        1409.8100163879571,
+        2139.032572520955
+      ],
+      "distinct_usable_examples": 240000,
+      "shared_prefix_episode_diversity": {
+        "batches": 30000,
+        "unique_episodes": 101,
+        "ordered_anchor_sha256": "b2aed823560906cd48b5aff70cbbbcb93ec19163ffa0e7fea085d06c841c3198",
+        "mean_distinct_episodes_per_batch": 5.907466666666667,
+        "mean_largest_episode_share": 0.30785,
+        "batches_by_distinct_episode_count": {
+          "1": 49,
+          "2": 337,
+          "3": 1425,
+          "4": 3344,
+          "5": 5580,
+          "6": 7726,
+          "7": 7718,
+          "8": 3821
+        },
+        "batches_with_a_same_episode_pair_within_0p2s": 363
+      },
+      "invalid_batches": 0,
+      "duplicates": 0,
+      "after_batch_125": {
+        "batches": 29875,
+        "batch_wait_s": {
+          "p50": 0.06543254101416096,
+          "p95": 0.08990777210565283,
+          "p99": 0.12075183740467729
+        },
+        "episode_diversity": {
+          "distinct_episodes_per_batch_mean": 5.902828451882845,
+          "distinct_episodes_per_batch": {
+            "p50": 6.0,
+            "p95": 8.0,
+            "p99": 8.0
+          },
+          "largest_episode_share_mean": 0.3082133891213389,
+          "largest_episode_share": {
+            "p50": 0.25,
+            "p95": 0.5,
+            "p99": 0.75
+          },
+          "unordered_pairs": 836500,
+          "same_episode_pairs": 91000,
+          "near_0p2s_pairs": 367,
+          "near_1p0s_pairs": 1798
+        }
+      },
+      "first_1000_match_saved_id_order": true,
+      "order_check_against_long_stock_run": {
+        "1": {
+          "sha256": "2b18b1bffd956c2b35ee08ed27d82926401e2e669eebe06382b9af020c19547e",
+          "matches_stock": true
+        },
+        "125": {
+          "sha256": "9bd913b2c04ca739ea6804bdbd9f06622b2c17ef05a19fd0c4d1c8797c12e7c1",
+          "matches_stock": true
+        },
+        "500": {
+          "sha256": "c7fb98e6a25f0166a146972aaa9e14d1b85d8f449e39be45354a5115ba794c9e",
+          "matches_stock": true
+        },
+        "1000": {
+          "sha256": "a27504d0e095abae4285d5f8830122971aec2c3b72e5f6a0e37927fe10bc7669",
+          "matches_stock": true
+        },
+        "2000": {
+          "sha256": "9816cb4100e213c859a4be76bc120bc61e57faa58ff05f705b3138d23c95704e",
+          "matches_stock": true
+        },
+        "3000": {
+          "sha256": "ba9845335e75cb6a3fa785a689e00b66e3dfe8d4ca531d9f71fdd7b05b5db36e",
+          "matches_stock": true
+        },
+        "4000": {
+          "sha256": "f4cbd5563e7a38a1d57eecefe618227d2670d7989790e57a6c7373ecc602812c",
+          "matches_stock": true
+        },
+        "24000": {
+          "sha256": "bc4c939d2239114ac065c5082dcee3ca203005630c6a7f189d36475360ed3753",
+          "matches_stock": true
+        }
+      },
+      "window_sensitivity": {
+        "through_both_refills": {
+          "after_batch": 125,
+          "through_batch": 30000,
+          "anchors": 239000,
+          "elapsed_s": 2053.681276427,
+          "anchors_per_s": 116.37638359142701,
+          "cpu_epoch_days": 7.564681116917763
+        },
+        "before_first_refill": {
+          "after_batch": 125,
+          "through_batch": 18557,
+          "anchors": 147456,
+          "elapsed_s": 1267.1522601789911,
+          "anchors_per_s": 116.36802035074392,
+          "cpu_epoch_days": 7.565222955218043
+        },
+        "between_refills": {
+          "after_batch": 18557,
+          "through_batch": 29163,
+          "anchors": 84848,
+          "elapsed_s": 729.2225561329979,
+          "anchors_per_s": 116.35405307529346,
+          "cpu_epoch_days": 7.566128041836723
+        },
+        "all_after_second_refill": {
+          "after_batch": 29163,
+          "through_batch": 30000,
+          "anchors": 6696,
+          "elapsed_s": 57.30646011501085,
+          "anchors_per_s": 116.84546535524099,
+          "cpu_epoch_days": 7.534414391420457
+        }
+      }
+    },
+    "candidate": {
+      "lerobot_revision": "adbdf5f0218898b187b4d20376a4bdee4a97d388",
+      "batches": 30000,
+      "first_batch_s": 24.425022429029923,
+      "last_batch_s": 1979.7550188530004,
+      "status": "ok",
+      "stop_reason": "max_batches",
+      "refill_batches": [
+        6878,
+        13175
+      ],
+      "refill_elapsed_s": [
+        475.9785568420193,
+        876.2963204760454
+      ],
+      "distinct_usable_examples": 240000,
+      "shared_prefix_episode_diversity": {
+        "batches": 30000,
+        "unique_episodes": 160,
+        "ordered_anchor_sha256": "d2d2dabe3e8f464a106624e6b37480dbbb3a0066be1376f0490971d5c8be3e0d",
+        "mean_distinct_episodes_per_batch": 7.055,
+        "mean_largest_episode_share": 0.21837916666666668,
+        "batches_by_distinct_episode_count": {
+          "3": 1,
+          "4": 68,
+          "5": 1133,
+          "6": 5713,
+          "7": 13248,
+          "8": 9837
+        },
+        "batches_with_a_same_episode_pair_within_0p2s": 179
+      },
+      "invalid_batches": 0,
+      "duplicates": 0,
+      "after_batch_125": {
+        "batches": 29875,
+        "batch_wait_s": {
+          "p50": 0.05490185198141262,
+          "p95": 0.08538649989059194,
+          "p99": 0.20635075216297988
+        },
+        "episode_diversity": {
+          "distinct_episodes_per_batch_mean": 7.054962343096235,
+          "distinct_episodes_per_batch": {
+            "p50": 7.0,
+            "p95": 8.0,
+            "p99": 8.0
+          },
+          "largest_episode_share_mean": 0.21839330543933055,
+          "largest_episode_share": {
+            "p50": 0.25,
+            "p95": 0.375,
+            "p99": 0.375
+          },
+          "unordered_pairs": 836500,
+          "same_episode_pairs": 30610,
+          "near_0p2s_pairs": 179,
+          "near_1p0s_pairs": 910
+        }
+      },
+      "first_1000_match_saved_id_order": true,
+      "order_check_against_long_stock_run": {
+        "1": {
+          "sha256": "0c9c2d3a8a61bcf1ab3d332b539c046a7ebccb2a33171d8e5916b918685af98c",
+          "matches_stock": true
+        },
+        "125": {
+          "sha256": "6ee931ca34e27ec68521a05efe658c8f0b9a9c05956f2761a7c240f238cca10d",
+          "matches_stock": true
+        },
+        "500": {
+          "sha256": "77ae3f0d66526ecc81b41f52afde558b188e43e16e22e9b41413025c7a34a1e5",
+          "matches_stock": true
+        },
+        "1000": {
+          "sha256": "fc96b52afef08706deee06effe9bea3d0ca9d54d672be4f60c27f2ea6a786ea4",
+          "matches_stock": true
+        },
+        "2000": {
+          "sha256": "8479ed1d8fca69893204ece8692f359bfa5da5b8314806fe2d9e5200684f715b",
+          "matches_stock": true
+        },
+        "3000": {
+          "sha256": "5da7cb0c2c3926c6d2d42474f9cf750d789cd78539de608f156ab8c43198139b",
+          "matches_stock": true
+        },
+        "4000": {
+          "sha256": "52b5bba4c42a61946f14ca2c5f058b9715d43cb5ce647135b3b8b4e4da703a7d",
+          "matches_stock": true
+        },
+        "24000": {
+          "sha256": "401e9c5a0d391c6c540b17f855c81c0714b47081e7b061d245dfb5418d90edb0",
+          "matches_stock": true
+        }
+      },
+      "window_sensitivity": {
+        "through_both_refills": {
+          "after_batch": 125,
+          "through_batch": 30000,
+          "anchors": 239000,
+          "elapsed_s": 1917.8016557079973,
+          "anchors_per_s": 124.62185507487638,
+          "cpu_epoch_days": 7.063347264624776
+        },
+        "before_first_refill": {
+          "after_batch": 125,
+          "through_batch": 6878,
+          "anchors": 54024,
+          "elapsed_s": 414.0251936970162,
+          "anchors_per_s": 130.4848130559291,
+          "cpu_epoch_days": 6.7470057347437455
+        },
+        "between_refills": {
+          "after_batch": 6878,
+          "through_batch": 13175,
+          "anchors": 50376,
+          "elapsed_s": 400.31776363402605,
+          "anchors_per_s": 125.84003153568317,
+          "cpu_epoch_days": 6.995193353840047
+        },
+        "all_after_second_refill": {
+          "after_batch": 13175,
+          "through_batch": 30000,
+          "anchors": 134600,
+          "elapsed_s": 1103.458698376955,
+          "anchors_per_s": 121.98009784868178,
+          "cpu_epoch_days": 7.215823908161063
+        }
+      }
+    }
+  },
+  "delivery_leads": {
+    "lead_change_count": 0,
+    "lead_changes": [],
+    "initial_lead": {
+      "reader": "candidate",
+      "first_batch": 1,
+      "strict_lead_batches": 30000,
+      "previous_leader_last_delivery": null,
+      "leader_first_delivery": {
+        "batch": 1,
+        "baseline_s": 133.20482781896135,
+        "candidate_s": 24.425022429029923,
+        "baseline_minus_candidate_s": 108.77980538993143,
+        "lead": "candidate"
+      },
+      "last_strict_lead_batch": 30000
+    },
+    "first_durable_lead_change": null,
+    "final_lead_through_checkpoint": {
+      "reader": "candidate",
+      "first_batch": 1,
+      "strict_lead_batches": 30000,
+      "previous_leader_last_delivery": null,
+      "leader_first_delivery": {
+        "batch": 1,
+        "baseline_s": 133.20482781896135,
+        "candidate_s": 24.425022429029923,
+        "baseline_minus_candidate_s": 108.77980538993143,
+        "lead": "candidate"
+      },
+      "last_strict_lead_batch": 30000
+    },
+    "durable_lead_threshold_batches": 125,
+    "ties": 0
+  },
+  "milestones": [
+    {
+      "batch": 1,
+      "baseline_s": 133.20482781896135,
+      "candidate_s": 24.425022429029923,
+      "baseline_minus_candidate_s": 108.77980538993143,
+      "lead": "candidate"
+    },
+    {
+      "batch": 125,
+      "baseline_s": 142.65775620896602,
+      "candidate_s": 61.953363145003095,
+      "baseline_minus_candidate_s": 80.70439306396293,
+      "lead": "candidate"
+    },
+    {
+      "batch": 1000,
+      "baseline_s": 203.31420910696033,
+      "candidate_s": 122.46053075901,
+      "baseline_minus_candidate_s": 80.85367834795034,
+      "lead": "candidate"
+    },
+    {
+      "batch": 4000,
+      "baseline_s": 400.87277174793417,
+      "candidate_s": 296.99006385501707,
+      "baseline_minus_candidate_s": 103.8827078929171,
+      "lead": "candidate"
+    },
+    {
+      "batch": 6878,
+      "baseline_s": 591.3257358889678,
+      "candidate_s": 475.9785568420193,
+      "baseline_minus_candidate_s": 115.34717904694844,
+      "lead": "candidate"
+    },
+    {
+      "batch": 10000,
+      "baseline_s": 795.2553602989647,
+      "candidate_s": 679.1743212250294,
+      "baseline_minus_candidate_s": 116.08103907393524,
+      "lead": "candidate"
+    },
+    {
+      "batch": 13175,
+      "baseline_s": 1025.6777988839312,
+      "candidate_s": 876.2963204760454,
+      "baseline_minus_candidate_s": 149.38147840788588,
+      "lead": "candidate"
+    },
+    {
+      "batch": 18557,
+      "baseline_s": 1409.8100163879571,
+      "candidate_s": 1216.7807511300198,
+      "baseline_minus_candidate_s": 193.02926525793737,
+      "lead": "candidate"
+    },
+    {
+      "batch": 20000,
+      "baseline_s": 1514.404870120925,
+      "candidate_s": 1299.8980165380053,
+      "baseline_minus_candidate_s": 214.50685358291958,
+      "lead": "candidate"
+    },
+    {
+      "batch": 29163,
+      "baseline_s": 2139.032572520955,
+      "candidate_s": 1930.6748848780408,
+      "baseline_minus_candidate_s": 208.35768764291424,
+      "lead": "candidate"
+    },
+    {
+      "batch": 30000,
+      "baseline_s": 2196.339032635966,
+      "candidate_s": 1979.7550188530004,
+      "baseline_minus_candidate_s": 216.58401378296549,
+      "lead": "candidate"
+    }
+  ],
+  "epoch_method": "Observed time to the final delivery plus remaining examples / measured examples per second. Primary rate spans batches after 125 through the final delivery. Other windows test sensitivity. Two verified cohort refills and 125 further batches are required."
+}
