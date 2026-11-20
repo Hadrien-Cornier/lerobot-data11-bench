@@ -142,6 +142,8 @@ def main():
                                  "tolerance-prepared-repeat", "worker-memory", "abc-history", "internvideo", "native-refills"),
                         required=True)
     parser.add_argument("--refill-flavor", choices=("cpu-xl","cpu-upgrade"), help="CPU flavor for the native-refills profile.")
+    parser.add_argument("--refill-batches", type=int, help="Full batches per native-refills reader (default 30000).")
+    parser.add_argument("--refill-arm-seconds", type=int, help="Maximum seconds per native-refills reader (default 8400).")
     parser.add_argument("--patched-first", action="store_true", help="Run the patched reader before the indexed reader.")
     parser.add_argument("--minutes", type=int, required=True)
     parser.add_argument("--wait-for-job", help="Delay workload until this earlier job stops.")
@@ -168,8 +170,13 @@ def main():
         parser.error("Expected a Hugging Face Job ID.")
     if args.minutes < 5:
         parser.error("A job must have at least 5 minutes for environment setup.")
-    if (args.refill_flavor or args.patched_first) and args.profile != "native-refills":
-        parser.error("--refill-flavor and --patched-first apply to native-refills only.")
+    if (args.refill_flavor or args.patched_first or args.refill_batches is not None or args.refill_arm_seconds is not None) and args.profile != "native-refills":
+        parser.error("Refill configuration options apply to native-refills only.")
+    if args.refill_batches is not None and args.refill_batches < 1:
+        parser.error("--refill-batches must be positive.")
+    if args.refill_arm_seconds is not None and args.refill_arm_seconds < 60:
+        parser.error("--refill-arm-seconds must be at least 60.")
+
     flavor = "cpu-upgrade" if args.profile in ("correctness", "native-refills") else "cpu-xl"
     flavor = args.refill_flavor or flavor
     reservation = RATES[flavor] * (args.minutes + 1) / 60
@@ -222,6 +229,8 @@ def main():
             "wait_for_job": args.wait_for_job,
             "prepared_index": prepared,
             "patched_first": args.patched_first,
+            "refill_batches": args.refill_batches,
+            "refill_arm_seconds": args.refill_arm_seconds,
             "concurrent_jobs_at_launch": concurrent,
         })
         try:
@@ -240,6 +249,8 @@ def main():
                     "BUNDLE_SHA256": digest,
                     "RUN_NAME": args.run,
                     "PROFILE": args.profile,
+                    "REFILL_BATCHES": str(args.refill_batches or 30000),
+                    "REFILL_ARM_SECONDS": str(args.refill_arm_seconds or 8400),
                     "REFILL_PATCHED_FIRST": "1" if args.patched_first else "0",
                     "RUN_DATASETS": ",".join(dict.fromkeys(args.datasets)),
                     "JOB_HARD_CAP_SECONDS": str(args.minutes * 60),

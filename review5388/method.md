@@ -103,3 +103,12 @@ run5388 runner/launch.py molmo-native-refills-xl --profile native-refills \
 # After the job finishes
 run5388 runner/collect.py molmo-native-refills-xl --sync
 ```
+
+For the longer fresh 8-vCPU repetition, start each reader again at batch 1. This run uses the same order as the first 8-vCPU pair.
+
+```bash
+run5388 runner/launch.py molmo-native-refills-65k --profile native-refills \
+    --prepared-from-run molmo-publisher --refill-batches 65000 \
+    --refill-arm-seconds 14700 --minutes 540
+run5388 runner/collect.py molmo-native-refills-65k --sync  # after completion
+```
