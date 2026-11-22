@@ -1,0 +1,272 @@
+{
+  "starts": [
+    0,
+    240,
+    480,
+    60,
+    960,
+    245,
+    1440,
+    10
+  ],
+  "offsets": [
+    6,
+    0,
+    8,
+    2,
+    1,
+    4,
+    3,
+    7
+  ],
+  "rows": [
+    {
+      "dataset": "MolmoAct2",
+      "block_MiB": 1,
+      "path": "buckets/pepijn223/MolmoAct2-BimanualYAM-Dataset-bucket/videos/observation.images.right/chunk-000/file-000.mp4",
+      "object_hash": "9b85f78ee61d2a6a6cb1e8009b670ac519a21483af268dd567f28f1bea2d4f85",
+      "first_group_seconds": 1.1173177919990849,
+      "cumulative_decode_seconds": 2.5323133330239216,
+      "rgb_and_frame_id_sha256": "1d88800ef9c2a5e6a10701538bc883e159b584d0a80ee8fa07d35a5febcc1af9",
+      "cache": {
+        "block_size": 1048576,
+        "max_memory": 2147483648,
+        "cached_bytes": 5242880,
+        "cached_blocks": 5,
+        "hits": 9,
+        "misses": 5,
+        "requests": 5,
+        "downloaded_bytes": 5242880,
+        "deduped_waits": 0,
+        "evictions": 0,
+        "evicted_bytes": 0
+      },
+      "software": {
+        "datasets": "5.2.1.dev0",
+        "fsspec": "2026.9.0",
+        "huggingface_hub": "2.0.0",
+        "torch": "2.11.0",
+        "torchcodec": "0.11.1"
+      },
+      "hardware": "arm64",
+      "platform": "Darwin"
+    },
+    {
+      "dataset": "MolmoAct2",
+      "block_MiB": 4,
+      "path": "buckets/pepijn223/MolmoAct2-BimanualYAM-Dataset-bucket/videos/observation.images.right/chunk-000/file-000.mp4",
+      "object_hash": "9b85f78ee61d2a6a6cb1e8009b670ac519a21483af268dd567f28f1bea2d4f85",
+      "first_group_seconds": 1.0966997079958674,
+      "cumulative_decode_seconds": 2.315154165989952,
+      "rgb_and_frame_id_sha256": "1d88800ef9c2a5e6a10701538bc883e159b584d0a80ee8fa07d35a5febcc1af9",
+      "cache": {
+        "block_size": 4194304,
+        "max_memory": 2147483648,
+        "cached_bytes": 12582912,
+        "cached_blocks": 3,
+        "hits": 11,
+        "misses": 3,
+        "requests": 3,
+        "downloaded_bytes": 12582912,
+        "deduped_waits": 0,
+        "evictions": 0,
+        "evicted_bytes": 0
+      },
+      "software": {
+        "datasets": "5.2.1.dev0",
+        "fsspec": "2026.9.0",
+        "huggingface_hub": "2.0.0",
+        "torch": "2.11.0",
+        "torchcodec": "0.11.1"
+      },
+      "hardware": "arm64",
+      "platform": "Darwin"
+    },
+    {
+      "dataset": "ABC-130K",
+      "block_MiB": 1,
+      "path": "datasets/lerobot/abc_130k_v3_train@68651e4929d9fb00f798937b2d62617cab5c771d/videos/observation.images.top/chunk-000/file-000.mp4",
+      "object_hash": "b774e019e32f38a84c193ab262e96cba05ed6b5842a0b6c114762b3ea0aaf4b7",
+      "first_group_seconds": 1.1288609579933109,
+      "cumulative_decode_seconds": 2.3361709160235478,
+      "rgb_and_frame_id_sha256": "c16d2ece31b459dabee1983cf9ad9ede27ca987133eaed2891dfcc075b57ba56",
+      "cache": {
+        "block_size": 1048576,
+        "max_memory": 2147483648,
+        "cached_bytes": 6291456,
+        "cached_blocks": 6,
+        "hits": 6,
+        "misses": 6,
+        "requests": 5,
+        "downloaded_bytes": 6291456,
+        "deduped_waits": 0,
+        "evictions": 0,
+        "evicted_bytes": 0
+      },
+      "software": {
+        "datasets": "5.2.1.dev0",
+        "fsspec": "2026.9.0",
+        "huggingface_hub": "2.0.0",
+        "torch": "2.11.0",
+        "torchcodec": "0.11.1"
+      },
+      "hardware": "arm64",
+      "platform": "Darwin"
+    },
+    {
+      "dataset": "ABC-130K",
+      "block_MiB": 4,
+      "path": "datasets/lerobot/abc_130k_v3_train@68651e4929d9fb00f798937b2d62617cab5c771d/videos/observation.images.top/chunk-000/file-000.mp4",
+      "object_hash": "b774e019e32f38a84c193ab262e96cba05ed6b5842a0b6c114762b3ea0aaf4b7",
+      "first_group_seconds": 1.2794730410096236,
+      "cumulative_decode_seconds": 1.926190622994909,
+      "rgb_and_frame_id_sha256": "c16d2ece31b459dabee1983cf9ad9ede27ca987133eaed2891dfcc075b57ba56",
+      "cache": {
+        "block_size": 4194304,
+        "max_memory": 2147483648,
+        "cached_bytes": 8388608,
+        "cached_blocks": 2,
+        "hits": 10,
+        "misses": 2,
+        "requests": 2,
+        "downloaded_bytes": 8388608,
+        "deduped_waits": 0,
+        "evictions": 0,
+        "evicted_bytes": 0
+      },
+      "software": {
+        "datasets": "5.2.1.dev0",
+        "fsspec": "2026.9.0",
+        "huggingface_hub": "2.0.0",
+        "torch": "2.11.0",
+        "torchcodec": "0.11.1"
+      },
+      "hardware": "arm64",
+      "platform": "Darwin"
+    },
+    {
+      "dataset": "MolmoAct2",
+      "block_MiB": 4,
+      "path": "buckets/pepijn223/MolmoAct2-BimanualYAM-Dataset-bucket/videos/observation.images.right/chunk-000/file-000.mp4",
+      "object_hash": "9b85f78ee61d2a6a6cb1e8009b670ac519a21483af268dd567f28f1bea2d4f85",
+      "first_group_seconds": 1.11102004199347,
+      "cumulative_decode_seconds": 2.2660867500089807,
+      "rgb_and_frame_id_sha256": "1d88800ef9c2a5e6a10701538bc883e159b584d0a80ee8fa07d35a5febcc1af9",
+      "cache": {
+        "block_size": 4194304,
+        "max_memory": 2147483648,
+        "cached_bytes": 12582912,
+        "cached_blocks": 3,
+        "hits": 11,
+        "misses": 3,
+        "requests": 3,
+        "downloaded_bytes": 12582912,
+        "deduped_waits": 0,
+        "evictions": 0,
+        "evicted_bytes": 0
+      },
+      "software": {
+        "datasets": "5.2.1.dev0",
+        "fsspec": "2026.9.0",
+        "huggingface_hub": "2.0.0",
+        "torch": "2.11.0",
+        "torchcodec": "0.11.1"
+      },
+      "hardware": "arm64",
+      "platform": "Darwin"
+    },
+    {
+      "dataset": "MolmoAct2",
+      "block_MiB": 1,
+      "path": "buckets/pepijn223/MolmoAct2-BimanualYAM-Dataset-bucket/videos/observation.images.right/chunk-000/file-000.mp4",
+      "object_hash": "9b85f78ee61d2a6a6cb1e8009b670ac519a21483af268dd567f28f1bea2d4f85",
+      "first_group_seconds": 0.8343129999993835,
+      "cumulative_decode_seconds": 2.3403758740023477,
+      "rgb_and_frame_id_sha256": "1d88800ef9c2a5e6a10701538bc883e159b584d0a80ee8fa07d35a5febcc1af9",
+      "cache": {
+        "block_size": 1048576,
+        "max_memory": 2147483648,
+        "cached_bytes": 5242880,
+        "cached_blocks": 5,
+        "hits": 9,
+        "misses": 5,
+        "requests": 5,
+        "downloaded_bytes": 5242880,
+        "deduped_waits": 0,
+        "evictions": 0,
+        "evicted_bytes": 0
+      },
+      "software": {
+        "datasets": "5.2.1.dev0",
+        "fsspec": "2026.9.0",
+        "huggingface_hub": "2.0.0",
+        "torch": "2.11.0",
+        "torchcodec": "0.11.1"
+      },
+      "hardware": "arm64",
+      "platform": "Darwin"
+    },
+    {
+      "dataset": "ABC-130K",
+      "block_MiB": 4,
+      "path": "datasets/lerobot/abc_130k_v3_train@68651e4929d9fb00f798937b2d62617cab5c771d/videos/observation.images.top/chunk-000/file-000.mp4",
+      "object_hash": "b774e019e32f38a84c193ab262e96cba05ed6b5842a0b6c114762b3ea0aaf4b7",
+      "first_group_seconds": 1.1624866670026677,
+      "cumulative_decode_seconds": 1.6964470409875503,
+      "rgb_and_frame_id_sha256": "c16d2ece31b459dabee1983cf9ad9ede27ca987133eaed2891dfcc075b57ba56",
+      "cache": {
+        "block_size": 4194304,
+        "max_memory": 2147483648,
+        "cached_bytes": 8388608,
+        "cached_blocks": 2,
+        "hits": 10,
+        "misses": 2,
+        "requests": 2,
+        "downloaded_bytes": 8388608,
+        "deduped_waits": 0,
+        "evictions": 0,
+        "evicted_bytes": 0
+      },
+      "software": {
+        "datasets": "5.2.1.dev0",
+        "fsspec": "2026.9.0",
+        "huggingface_hub": "2.0.0",
+        "torch": "2.11.0",
+        "torchcodec": "0.11.1"
+      },
+      "hardware": "arm64",
+      "platform": "Darwin"
+    },
+    {
+      "dataset": "ABC-130K",
+      "block_MiB": 1,
+      "path": "datasets/lerobot/abc_130k_v3_train@68651e4929d9fb00f798937b2d62617cab5c771d/videos/observation.images.top/chunk-000/file-000.mp4",
+      "object_hash": "b774e019e32f38a84c193ab262e96cba05ed6b5842a0b6c114762b3ea0aaf4b7",
+      "first_group_seconds": 0.7510509999992792,
+      "cumulative_decode_seconds": 1.9440155400079675,
+      "rgb_and_frame_id_sha256": "c16d2ece31b459dabee1983cf9ad9ede27ca987133eaed2891dfcc075b57ba56",
+      "cache": {
+        "block_size": 1048576,
+        "max_memory": 2147483648,
+        "cached_bytes": 6291456,
+        "cached_blocks": 6,
+        "hits": 6,
+        "misses": 6,
+        "requests": 5,
+        "downloaded_bytes": 6291456,
+        "deduped_waits": 0,
+        "evictions": 0,
+        "evicted_bytes": 0
+      },
+      "software": {
+        "datasets": "5.2.1.dev0",
+        "fsspec": "2026.9.0",
+        "huggingface_hub": "2.0.0",
+        "torch": "2.11.0",
+        "torchcodec": "0.11.1"
+      },
+      "hardware": "arm64",
+      "platform": "Darwin"
+    }
+  ]
+}
