@@ -5,7 +5,7 @@ On one camera MP4 from each dataset, switching from 1 MiB to 4 MiB reduced the n
 | Dataset and camera | Block | Range fetches | Data fetched | Time for 64 RGB images, two runs |
 |---|---:|---:|---:|---:|
 | MolmoAct2 right | 1 MiB | 5 | 5 MiB | 2.34–2.53 s |
-| MolmoAct2 right | 4 MiB | 3 | 12 MiB | 2.27–2.31 s |
+| MolmoAct2 right | 4 MiB | 3 | 12 MiB | 2.27–2.32 s |
 | ABC-130K top | 1 MiB | 5 | 6 MiB | 1.94–2.34 s |
 | ABC-130K top | 4 MiB | 2 | 8 MiB | 1.70–1.93 s |
 
