@@ -1,0 +1,38 @@
+[
+  {
+    "grouped": false,
+    "consumed": 1001,
+    "remaining": 6999,
+    "resumed": 6976,
+    "position_matches": 62,
+    "duplicates": 0,
+    "missing": 23
+  },
+  {
+    "grouped": false,
+    "consumed": 4096,
+    "remaining": 3904,
+    "resumed": 3888,
+    "position_matches": 39,
+    "duplicates": 0,
+    "missing": 16
+  },
+  {
+    "grouped": true,
+    "consumed": 1001,
+    "remaining": 6999,
+    "resumed": 6939,
+    "position_matches": 15,
+    "duplicates": 33,
+    "missing": 93
+  },
+  {
+    "grouped": true,
+    "consumed": 4096,
+    "remaining": 3904,
+    "resumed": 3840,
+    "position_matches": 9,
+    "duplicates": 24,
+    "missing": 88
+  }
+]
