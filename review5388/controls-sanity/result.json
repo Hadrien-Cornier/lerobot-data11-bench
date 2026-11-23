@@ -1,0 +1,219 @@
+{
+  "grouped": {
+    "start": {
+      "arm": "grouped",
+      "event": "start",
+      "mode": "measure",
+      "revision": "adbdf5f0218898b187b4d20376a4bdee4a97d388",
+      "settings": {
+        "batch_size": 8,
+        "buffer_size": 32,
+        "repo_type": "bucket",
+        "return_uint8": true,
+        "seed": 42,
+        "tolerance_s": 0.001,
+        "workers": 0
+      },
+      "software": {
+        "av": "15.1.0",
+        "datasets": "5.2.1.dev0",
+        "fsspec": "2026.9.0",
+        "huggingface_hub": "2.0.0",
+        "pyarrow": "26.0.1",
+        "torch": "2.11.0+cpu",
+        "torchcodec": "0.11.1+cpu"
+      }
+    },
+    "milestones": {
+      "1": {
+        "arm": "grouped",
+        "constructor_s": 11.081699810980354,
+        "delivery_less_consumer_s": 29.59860020002816,
+        "distinct_episodes_in_batch": 8,
+        "episode_mix": {
+          "8": 1
+        },
+        "event": "batch",
+        "number": 1,
+        "unique_anchors": 8,
+        "wall_s": 29.59860020002816
+      },
+      "125": {
+        "arm": "grouped",
+        "constructor_s": 11.081699810980354,
+        "delivery_less_consumer_s": 70.32601916982094,
+        "distinct_episodes_in_batch": 7,
+        "episode_mix": {
+          "5": 6,
+          "6": 23,
+          "7": 53,
+          "8": 43
+        },
+        "event": "batch",
+        "number": 125,
+        "unique_anchors": 1000,
+        "wall_s": 71.8146192249842
+      },
+      "1000": {
+        "arm": "grouped",
+        "constructor_s": 11.081699810980354,
+        "delivery_less_consumer_s": 150.0865146946162,
+        "distinct_episodes_in_batch": 7,
+        "episode_mix": {
+          "3": 1,
+          "4": 3,
+          "5": 37,
+          "6": 198,
+          "7": 431,
+          "8": 330
+        },
+        "event": "batch",
+        "number": 1000,
+        "unique_anchors": 8000,
+        "wall_s": 154.52602553600445
+      }
+    },
+    "finish": {
+      "arm": "grouped",
+      "count": 8000,
+      "episode_mix": {
+        "3": 1,
+        "4": 3,
+        "5": 37,
+        "6": 198,
+        "7": 431,
+        "8": 330
+      },
+      "episodes": 32,
+      "event": "finish",
+      "mean_distinct_episodes": 7.045,
+      "ordered_anchor_sha256": "fc96b52afef08706deee06effe9bea3d0ca9d54d672be4f60c27f2ea6a786ea4"
+    }
+  },
+  "controls": {
+    "start": {
+      "arm": "controls",
+      "event": "start",
+      "mode": "measure",
+      "revision": "8b6f1bdb33bdc556d51feb90beb2e9f563cf19c3",
+      "settings": {
+        "batch_size": 8,
+        "episode_pool_size": 32,
+        "prefetch_episodes": 8,
+        "repo_type": "bucket",
+        "return_uint8": true,
+        "seed": 42,
+        "tolerance_s": 0.001,
+        "video_cache_bytes": 2147483648,
+        "workers": 0
+      },
+      "software": {
+        "av": "15.1.0",
+        "datasets": "5.2.1.dev0",
+        "fsspec": "2026.9.0",
+        "huggingface_hub": "2.0.0",
+        "pyarrow": "26.0.1",
+        "torch": "2.11.0+cpu",
+        "torchcodec": "0.11.1+cpu"
+      }
+    },
+    "milestones": {
+      "1": {
+        "arm": "controls",
+        "constructor_s": 7.316047800006345,
+        "delivery_less_consumer_s": 26.063324849004857,
+        "distinct_episodes_in_batch": 7,
+        "episode_mix": {
+          "7": 1
+        },
+        "event": "batch",
+        "number": 1,
+        "unique_anchors": 8,
+        "wall_s": 26.063324849004857
+      },
+      "125": {
+        "arm": "controls",
+        "constructor_s": 7.316047800006345,
+        "delivery_less_consumer_s": 68.52436380035942,
+        "distinct_episodes_in_batch": 6,
+        "episode_mix": {
+          "4": 2,
+          "5": 7,
+          "6": 17,
+          "7": 56,
+          "8": 43
+        },
+        "event": "batch",
+        "number": 125,
+        "unique_anchors": 1000,
+        "wall_s": 69.66078446398024
+      },
+      "1000": {
+        "arm": "controls",
+        "constructor_s": 7.316047800006345,
+        "delivery_less_consumer_s": 153.54130082309712,
+        "distinct_episodes_in_batch": 6,
+        "episode_mix": {
+          "4": 4,
+          "5": 25,
+          "6": 186,
+          "7": 440,
+          "8": 345
+        },
+        "event": "batch",
+        "number": 1000,
+        "unique_anchors": 8000,
+        "wall_s": 159.17201013996964
+      }
+    },
+    "finish": {
+      "arm": "controls",
+      "count": 8000,
+      "episode_mix": {
+        "4": 4,
+        "5": 25,
+        "6": 186,
+        "7": 440,
+        "8": 345
+      },
+      "episodes": 32,
+      "event": "finish",
+      "mean_distinct_episodes": 7.097,
+      "ordered_anchor_sha256": "40402c4b8b3a299b38e593836079f044a243374a1b1a08f7cb9e7d7505cf95e2"
+    }
+  },
+  "parity": {
+    "anchors": 11,
+    "arm": "grouped",
+    "camera_frames": 33,
+    "event": "parity",
+    "mismatches": []
+  },
+  "manifest": {
+    "event": "summary",
+    "before": "aebacc429d54f284e103ff10613b925f5827c347e0678846b0b6f0015dded782",
+    "after": "aebacc429d54f284e103ff10613b925f5827c347e0678846b0b6f0015dded782",
+    "grouped_status": 0,
+    "controls_status": 0,
+    "parity_status": 0
+  },
+  "old_order_matches_saved_trace": true,
+  "changed_order": true,
+  "compute": {
+    "provider": "Hugging Face Jobs",
+    "hardware": "cpu-upgrade",
+    "cpu_model": "AMD EPYC 7R13",
+    "vcpus": 8,
+    "status": "COMPLETED",
+    "timeout_minutes": 25,
+    "duration_seconds": {
+      "scheduling_secs": 5,
+      "running_secs": 522,
+      "total_secs": 527
+    },
+    "watched_at_utc": "2026-11-23T21:45:12.582379+00:00",
+    "hourly_rate_usd": 0.03,
+    "job_gross_upper_bound_usd": 0.005,
+    "review_gross_upper_bound_usd": 11.022166666666665
+  }
+}
